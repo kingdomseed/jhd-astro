@@ -1,3 +1,44 @@
 @layer base {
   /* Base element styles (html, body, a, focus-visible, reduced motion, etc.) */
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    height: auto;
+  }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+      sans-serif;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Accessible focus styles (global) */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Smooth scrolling that respects reduced motion */
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Anchor offset for sticky header when navigating to in-page IDs */
+  [id] {
+    scroll-margin-top: 80px;
+  }
 }
