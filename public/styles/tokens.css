@@ -1,0 +1,25 @@
+@layer tokens {
+  /* Neo‑Brutalist tokens (flat, high contrast) */
+  :root {
+    --bg: #ffffff; /* canvas */
+    --panel: #ffffff; /* cards/panels */
+    --panel-2: #f9f9f9; /* subtle alt */
+    --ink: #1a1a1a; /* main text */
+    --muted: #444444; /* secondary text */
+    --stroke: #000000; /* structural border */
+    --primary: #0066ff; /* primary blue */
+    --accent: #ffd700; /* accent yellow */
+
+    /* Geometry: square corners */
+    --radius: 0;
+    --r-lg: 0;
+    --r-pill: 0;
+
+    /* Hard offset shadow (no blur) */
+    --sh-base: 6px 6px 0 0 rgba(0, 0, 0, 0.12);
+    --sh-lift: 10px 10px 0 0 rgba(0, 0, 0, 0.18);
+
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --max: 1140px;
+  }
+}
