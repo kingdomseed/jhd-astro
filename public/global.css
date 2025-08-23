@@ -90,6 +90,12 @@ header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px);background
 .strip{border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);background:rgba(255,255,255,.02)}
 .strip p{margin:0;padding:14px 0;text-align:center;color:var(--muted)}
 
+/* Reviews rotator (buttons + quote) */
+.reviews-rotator{display:flex;align-items:center;justify-content:center;gap:12px}
+.reviews-rotator p{margin:0;text-align:center;color:var(--muted)}
+.reviews-rotator button{background:transparent;border:1px solid var(--stroke);color:var(--ink);border-radius:12px;width:36px;height:36px}
+.reviews-rotator button:hover{background:rgba(255,255,255,.05)}
+
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .card{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);padding:16px;box-shadow:var(--sh-base);transition:transform .15s var(--ease), box-shadow .15s var(--ease)}
