@@ -1,0 +1,27 @@
+---
+// Site header containing the logo, primary navigation and download
+// call‑to‑action.  This component drops the interactive drop‑down
+// menu from the original design in favour of a single download
+// button linking to the mobile store.  The sticky behaviour is
+// achieved through CSS defined in the global stylesheet.
+---
+<header>
+  <div class="container row" style="justify-content: space-between">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">JH</div>
+      <strong>Jason Holt Digital</strong>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#apps">Apps</a>
+      <a href="#resources">Resources</a>
+      <a href="#support">Support</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <!-- Download call to action: direct link to the App Store -->
+      <a class="cta" href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147" target="_blank" rel="noopener">
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+        <span>Download&nbsp;Now</span>
+      </a>
+    </nav>
+  </div>
+</header>

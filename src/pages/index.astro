@@ -1,0 +1,54 @@
+---
+// Page component that assembles all of the individual
+// pieces of the landing page.  Each section of the design lives
+// in its own component to promote reusability and clarity.  When
+// consumed within an Astro project, these components render
+// static HTML that closely mirrors the original design.
+import UtilBar from '../components/UtilBar.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Billboard from '../components/Billboard.astro';
+import CoreBenefits from '../components/CoreBenefits.astro';
+import CommunitySupport from '../components/CommunitySupport.astro';
+import PopularResources from '../components/PopularResources.astro';
+import MakersNote from '../components/MakersNote.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Official Mythic GME 2e Apps — Jason Holt Digital</title>
+    <meta name="description" content="GM‑less play at your fingertips. The licensed companion for oracle‑style solo RPG." />
+    <!-- Global stylesheet: variables, layout and component styles -->
+    <link rel="stylesheet" href="/global.css" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Atmospheric background gradients -->
+    <div id="bg-atmo" aria-hidden="true"></div>
+    <div id="site">
+      <!-- Top utility bar announcing the official licensee status -->
+      <UtilBar />
+      <!-- Main site header with navigation and call‑to‑action -->
+      <Header />
+      <main id="main">
+        <!-- Hero section introduces the product and invites download -->
+        <Hero />
+        <!-- Billboard preview of the application screenshot -->
+        <Billboard />
+        <!-- Core benefits of using the Mythic GME apps -->
+        <CoreBenefits />
+        <!-- Community and support channels -->
+        <CommunitySupport />
+        <!-- Teaser list of documentation resources -->
+        <PopularResources />
+        <!-- Personal note from the maker of the product -->
+        <MakersNote />
+      </main>
+      <!-- Footer with navigation and social links -->
+      <Footer />
+    </div>
+  </body>
+</html>
