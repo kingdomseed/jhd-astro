@@ -27,6 +27,7 @@ import ReviewsRotator from '../components/ReviewsRotator.astro';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   </head>
   <body>
+    <a class="skip" href="#main">Skip to main content</a>
     <!-- Atmospheric background gradients -->
     <div id="bg-atmo" aria-hidden="true"></div>
     <div id="site">
@@ -34,7 +35,7 @@ import ReviewsRotator from '../components/ReviewsRotator.astro';
       <UtilBar />
       <!-- Main site header with navigation and call‑to‑action -->
       <Header />
-      <main id="main">
+      <main id="main" tabindex="-1">
         <!-- Hero section introduces the product and invites download -->
         <Hero />
         <!-- Billboard preview of the application screenshot -->

@@ -47,13 +47,14 @@
 <script>
   // Accessible toggle for the Download dropdown.
   // Uses vanilla JS and runs on the client when the header renders.
-  const btn = document.querySelector('.cta-download');
+  const btn = document.querySelector<HTMLButtonElement>('.cta-download');
   const menu = document.getElementById('downloadMenu');
   if (btn && menu) {
     const items = Array.from(menu.querySelectorAll('a')) as HTMLAnchorElement[];
     const close = () => {
       menu.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
     };
     const open = () => {
       menu.classList.add('open');

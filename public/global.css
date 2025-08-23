@@ -32,11 +32,29 @@ html,body{height:auto}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:inherit;text-decoration:none}
 
+/* Accessible focus styles (global) */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* Smooth scrolling that respects reduced motion */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+}
+
+/* Anchor offset for sticky header when navigating to in-page IDs */
+[id]{scroll-margin-top:80px}
+
 .container{max-width:var(--max);margin:0 auto;padding:28px}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .hidden{display:none}
 .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip:focus{left:12px;top:12px;background:var(--panel);border:1px solid var(--stroke);padding:6px 10px;z-index:99}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* === Site-wide atmosphere & stacking === */
 #bg-atmo{position:fixed;inset:0;z-index:0;pointer-events:none;background:none}
@@ -82,6 +100,16 @@ header{position:sticky;top:0;background:#FFFFFF;border-bottom:4px solid var(--st
 .billboard{margin-top:6px}
 .billboard-plate{margin:0 auto;padding:12px;border:4px solid var(--stroke);border-radius:0;background:#FFFFFF;box-shadow:var(--sh-lift);max-width:980px}
 .billboard-img{display:block;width:100%;height:auto;border-radius:0;box-shadow:10px 10px 0 0 rgba(0,0,0,0.18)}
+/* Stacked stage for carousel */
+.bb-stage{position:relative}
+.bb-stage .billboard-img{position:absolute;inset:0;width:100%;height:auto;opacity:0;transition:opacity .35s var(--ease)}
+.bb-stage .billboard-img.is-active{opacity:1}
+/* Sizer image keeps height but is not visible */
+.bb-stage .billboard-img.bb-sizer{position:static;opacity:0;visibility:hidden;box-shadow:none}
+/* Controls */
+.bb-controls{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.bb-controls button{background:#FFFFFF;border:4px solid var(--stroke);color:#000;border-radius:0;width:36px;height:36px;box-shadow:var(--sh-base)}
+.bb-controls button:hover{transform:translate(-2px,-2px)}
 
 /* Strip (social proof) */
 .strip{border-top:4px solid var(--stroke);border-bottom:4px solid var(--stroke);background:#F5F5F5}
@@ -142,4 +170,5 @@ header{position:sticky;top:0;background:#FFFFFF;border-bottom:4px solid var(--st
 
 @media (prefers-reduced-motion: reduce){
   .pill,.card,.btn-glow,.links li,.ico{transition:none}
+  .bb-stage .billboard-img{transition:none}
 }
