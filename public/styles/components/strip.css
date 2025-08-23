@@ -1,3 +1,14 @@
 @layer components {
-  /* Strip (social proof) component styles (to be migrated) */
+  /* Strip (social proof) */
+  .strip {
+    border-top: 4px solid var(--color-border);
+    border-bottom: 4px solid var(--color-border);
+    background: #f5f5f5;
+  }
+  .strip p {
+    margin: 0;
+    padding: 14px 0;
+    text-align: center;
+    color: #000;
+  }
 }
