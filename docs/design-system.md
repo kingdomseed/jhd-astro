@@ -1,6 +1,7 @@
 # Neo-Brutalist Hard-Edge Geometric Design System Documentation
 
 ## Table of Contents
+
 1. [Visual Design Guide](#visual-design-guide)
 2. [Component Architecture Guide](#component-architecture-guide)
 3. [AI-Assisted Development Guide](#ai-assisted-development-guide)
@@ -41,6 +42,7 @@ The Neo-Brutalist design system uses a bold, high-contrast color palette with sp
 ```
 
 **Critical Usage Rules:**
+
 - **Black (#000000)**: Primary structural element for borders, outlines, and geometric shapes
 - **Primary Blue (#0066FF)**: Primary UI elements, buttons, and interactive components
 - **Secondary Blue (#00D4FF)**: Secondary UI elements and accents
@@ -105,11 +107,13 @@ The distinctive Tron-style energy grid features differential opacity and a large
 ### Geometric Design Elements
 
 #### Shape Library
+
 - **Triangles**: Dynamic directional elements
 - **Hexagons**: Structural grid components  
 - **Parallelograms**: Motion and speed indicators
 
 #### Layering Pattern
+
 ```css
 .neo-brutalist-layer {
   position: relative;
@@ -136,6 +140,7 @@ The distinctive Tron-style energy grid features differential opacity and a large
 ```
 
 #### Neo-Brutalist Shapes
+
 ```css
 /* Trapezoid (for buttons) */
 .clip-trapezoid {
@@ -171,6 +176,7 @@ The distinctive Tron-style energy grid features differential opacity and a large
 ```
 
 #### Geometric Shapes Specifications
+
 ```typescript
 // Generate path strings for SVG shapes
 export const generateShapePath = (type: string, angle: number = 8) => {
@@ -198,6 +204,7 @@ export const generateShapePath = (type: string, angle: number = 8) => {
 ```
 
 #### Content Movement Integration
+
 ```typescript
 // Synchronize content movement with container
 const getSafeContentStyle = () => {
@@ -254,6 +261,7 @@ App (Server Component)
 ### Core Component Examples
 
 #### GeometricButton
+
 ```typescript
 interface GeometricButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -325,6 +333,7 @@ export const GeometricButton: React.FC<GeometricButtonProps> = ({
 ```
 
 #### GeometricCard
+
 ```typescript
 interface GeometricCardProps {
   children: ReactNode;
@@ -383,6 +392,7 @@ export const GeometricCard: React.FC<GeometricCardProps> = ({
   );
 };
 ```
+
 ```
 
 ### Additional Geometric Components
@@ -428,6 +438,7 @@ export const EnergyGrid: React.FC<EnergyGridProps> = ({
 ```
 
 #### StatsCounter
+
 ```typescript
 interface StatsCounterProps {
   value: string;
@@ -522,6 +533,7 @@ Uses CSS custom properties with Tailwind classes for the Neo-Brutalist approach:
 ## AI-Assisted Development Guide
 
 ### File Structure
+
 ```
 jhd-website/
 ├── src/
@@ -563,6 +575,7 @@ jhd-website/
 ### AI Tool Instructions
 
 When creating components, use this prompt template:
+
 ```
 Create a geometric component for Neo-Brutalist design system:
 - Component: [Name]
@@ -574,6 +587,7 @@ Create a geometric component for Neo-Brutalist design system:
 ```
 
 ### Component Template
+
 ```typescript
 interface [ComponentName]Props {
   variant?: 'primary' | 'secondary' | 'accent';
@@ -637,6 +651,7 @@ export const [ComponentName]: React.FC<[ComponentName]Props> = ({
 ```
 
 ### Design Tokens (Complete)
+
 ```css
 :root {
   /* Neo-Brutalist Color Palette */
@@ -687,17 +702,20 @@ export const [ComponentName]: React.FC<[ComponentName]Props> = ({
 ## Implementation Roadmap
 
 ### Phase 1: Foundation (Weeks 1-2)
+
 - [ ] Set up Next.js 13+ with TypeScript
 - [ ] Configure design tokens in CSS
 - [ ] Implement base grid system
 - [ ] Create typography components
 
 ### Phase 2: Core Components (Weeks 3-5)
+
 - [ ] Week 3: Button, Input, Card
 - [ ] Week 4: Navigation, Grid layouts
 - [ ] Week 5: Form components, Modals
 
 ### Phase 3: Interactive Features (Weeks 6-8)
+
 - [ ] Particle effect system
 - [ ] Geometric animations
 - [ ] Hover state transformations
@@ -706,6 +724,7 @@ export const [ComponentName]: React.FC<[ComponentName]Props> = ({
 ### Migration from Glassmorphism
 
 **Step 1**: Audit current components
+
 ```typescript
 const migrationMap = {
   'GlassButton': {
@@ -716,6 +735,7 @@ const migrationMap = {
 ```
 
 **Step 2**: Create compatibility wrappers
+
 ```typescript
 export const LegacyGlassButton = (props) => {
   console.warn('Use GeometricButton instead');
@@ -724,6 +744,7 @@ export const LegacyGlassButton = (props) => {
 ```
 
 **Step 3**: Component-by-component migration
+
 - Week 1: Buttons and inputs
 - Week 2: Cards and containers
 - Week 3: Complex layouts
@@ -732,6 +753,7 @@ export const LegacyGlassButton = (props) => {
 ### Performance Guidelines
 
 **Next.js Optimizations:**
+
 ```javascript
 // next.config.js
 module.exports = {
@@ -745,12 +767,14 @@ module.exports = {
 ```
 
 **Animation Best Practices:**
+
 - Use `transform` and `opacity` only
 - Implement `will-change` strategically
 - Lazy load particle effects
 - Use CSS containment
 
 ### Accessibility Checklist
+
 - [ ] Color contrast 4.5:1 minimum
 - [ ] Keyboard navigation support
 - [ ] Screen reader compatibility
@@ -758,6 +782,7 @@ module.exports = {
 - [ ] Focus indicators visible
 
 ### Testing Strategy
+
 - Unit tests for each component
 - Visual regression with Chromatic
 - Performance monitoring
@@ -768,6 +793,7 @@ module.exports = {
 ## Quick Reference
 
 ### Key Design Principles
+
 1. **Neo-Brutalist** heavy black borders and geometric shapes
 2. **Hard-edge design** with angular forms and sharp transitions
 3. **Exaggerated offsets** for layered elements (8-16px)
@@ -776,6 +802,7 @@ module.exports = {
 6. **Raw, honest aesthetic** celebrating digital construction
 
 ### Component Checklist
+
 - [ ] TypeScript interfaces defined
 - [ ] Design tokens applied
 - [ ] Animations performant
