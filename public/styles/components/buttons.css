@@ -31,4 +31,11 @@
     outline: 3px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .btn {
+      transition: none;
+    }
+  }
 }

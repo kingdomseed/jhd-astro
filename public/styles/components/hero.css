@@ -16,7 +16,7 @@
     z-index: 1;
   }
   .lead-accent {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     margin: 0.25rem 0 1.1rem;
     color: #222;
   }
@@ -32,5 +32,19 @@
     justify-content: center;
     color: var(--color-text-muted);
     margin-top: 2rem;
+  }
+  /* Base display title size (desktop-first). Mobile overrides below. */
+  .display-title {
+    font-size: 4rem; /* 64px */
+  }
+  
+  /* Responsive adjustments (Hero) */
+  @media (max-width: 980px) {
+    .display-title {
+      font-size: 3rem; /* 42px */
+    }
+    .lead-accent {
+      font-size: 1.5rem; /* 18px */
+    }
   }
 }

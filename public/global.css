@@ -1,9 +1,14 @@
 /*
- * Global stylesheet extracted from the original design.  These
- * variables, colours and component styles provide the dark
- * atmospheric aesthetic and responsive layout used across the
- * components.  Should you wish to customise the theme, adjust
- * the CSS variables defined under :root.
+ * Global stylesheet entrypoint
+ *
+ * Layer order: tokens → base → utilities → components → overrides
+ * - tokens: CSS variables, palettes, sizing scales.
+ * - base: element defaults, typography, global a11y (focus/scroll).
+ * - utilities: layout helpers (.container, .row, etc.).
+ * - components: per-component styles. All responsive and
+ *   prefers-reduced-motion rules live in their respective
+ *   files under /styles/components/.
+ * - overrides: small one-off fixes (prefer changing source component first).
  */
 @layer tokens, base, utilities, components, overrides;
 @import url("/styles/tokens.css") layer(tokens);
@@ -20,38 +25,3 @@
 @import url("/styles/components/makers-note.css") layer(components);
 @import url("/styles/components/footer.css") layer(components);
 @import url("/styles/overrides.css") layer(overrides);
-
-/* Responsive adjustments */
-@media (max-width: 980px) {
-  .display-title {
-    font-size: 42px;
-  }
-  .lead-accent {
-    font-size: 18px;
-  }
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-  .twoup {
-    grid-template-columns: 1fr;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .billboard-plate {
-    max-width: 100%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pill,
-  .card,
-  .btn,
-  .links li,
-  .ico {
-    transition: none;
-  }
-  .bb-stage .billboard-img {
-    transition: none;
-  }
-}

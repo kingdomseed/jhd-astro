@@ -57,4 +57,18 @@
   .bb-controls button:hover {
     transform: translate(-2px, -2px);
   }
+
+  /* Responsive adjustments (Billboard) */
+  @media (max-width: 980px) {
+    .billboard-plate {
+      max-width: 100%;
+    }
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .bb-stage .billboard-img {
+      transition: none;
+    }
+  }
 }
