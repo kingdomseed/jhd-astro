@@ -1,9 +1,7 @@
 ---
-// Site header containing the logo, primary navigation and download
-// call‑to‑action.  This component drops the interactive drop‑down
-// menu from the original design in favour of a single download
-// button linking to the mobile store.  The sticky behaviour is
-// achieved through CSS defined in the global stylesheet.
+// Site header containing the logo, primary navigation and an
+// accessible Download dropdown menu with platform links. The sticky
+// behaviour is achieved through CSS defined in the global stylesheet.
 ---
 <header>
   <div class="container row" style="justify-content: space-between">
@@ -17,11 +15,75 @@
       <a href="#support">Support</a>
       <a href="#blog">Blog</a>
       <a href="#about">About</a>
-      <!-- Download call to action: direct link to the App Store -->
-      <a class="cta" href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147" target="_blank" rel="noopener">
-        <i class="fa-solid fa-download" aria-hidden="true"></i>
-        <span>Download&nbsp;Now</span>
-      </a>
+      <!-- Download call to action: dropdown menu with platform links -->
+      <span class="cta-download-wrap">
+        <button class="cta cta-download" aria-haspopup="menu" aria-expanded="false" aria-controls="downloadMenu">
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>Download&nbsp;Now</span>
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div id="downloadMenu" class="menu" role="menu" aria-label="Choose a platform">
+          <a role="menuitem" href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147" target="_blank" rel="noopener">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i> Apple App Store
+          </a>
+          <a role="menuitem" href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e" target="_blank" rel="noopener">
+            <i class="fa-brands fa-google-play" aria-hidden="true"></i> Google Play
+          </a>
+          <a role="menuitem" href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9" target="_blank" rel="noopener">
+            <i class="fa-brands fa-amazon" aria-hidden="true"></i> Amazon Appstore
+          </a>
+          <a role="menuitem" href="https://apps.microsoft.com/detail/9n39b8hj3cdg" target="_blank" rel="noopener">
+            <i class="fa-brands fa-windows" aria-hidden="true"></i> Microsoft Store
+          </a>
+          <a role="menuitem" href="https://jasonholtdigital.itch.io/mythic-gme-digital" target="_blank" rel="noopener">
+            <i class="fa-brands fa-itch-io" aria-hidden="true"></i> itch.io (Desktop)
+          </a>
+        </div>
+      </span>
     </nav>
   </div>
 </header>
+
+<script>
+  // Accessible toggle for the Download dropdown.
+  // Uses vanilla JS and runs on the client when the header renders.
+  const btn = document.querySelector('.cta-download');
+  const menu = document.getElementById('downloadMenu');
+  if (btn && menu) {
+    const items = Array.from(menu.querySelectorAll('a')) as HTMLAnchorElement[];
+    const close = () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      items[0]?.focus();
+    };
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) items[0]?.focus();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+    document.addEventListener('click', (e) => {
+      const target = e.target as Node | null;
+      if (target && !menu.contains(target) && !btn.contains(target)) close();
+    });
+    menu.addEventListener('keydown', (e) => {
+      const active = document.activeElement as Element | null;
+      const i = active ? items.indexOf(active as HTMLAnchorElement) : -1;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        (items[(i + 1) % items.length] || items[0])?.focus();
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        (items[i - 1] || items[items.length - 1])?.focus();
+      }
+    });
+  }
+</script>
