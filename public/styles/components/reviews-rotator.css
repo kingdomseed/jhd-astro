@@ -1,12 +1,15 @@
 @layer components {
   /* Reviews rotator (buttons + quote) */
   .reviews-rotator {
-    margin: 0 auto;
+    margin: 32px auto; /* more space above/below the strip */
   }
   /* Cross-fade stage */
   .rev-stage {
     position: relative;
     min-height: 48px; /* stable layout to avoid jump on varying quote length */
+    max-width: 68ch;   /* readable line length */
+    margin-inline: auto;
+    padding-inline: 8px; /* small breathing room on narrow screens */
   }
   .rev-stage .rev-quote {
     position: absolute;
@@ -14,6 +17,8 @@
     margin: 0;
     text-align: center;
     color: #000;
+    line-height: 1.5;
+    overflow-wrap: anywhere; /* avoid overflow from long URLs */
     opacity: 0;
     transition: opacity 5s ease-in-out;
     will-change: opacity;

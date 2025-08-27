@@ -4,6 +4,7 @@
     border-top: 4px solid var(--color-border);
     border-bottom: 4px solid var(--color-border);
     background: #f5f5f5;
+    padding-block: 32px; /* add vertical space above/below content */
   }
   .strip p {
     margin: 0;
