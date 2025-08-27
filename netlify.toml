@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Astro outputs static files to dist/; no functions required.
+# For previewing 404 locally on Netlify, Astro already ships a 404 page.
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
