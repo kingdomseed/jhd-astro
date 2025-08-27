@@ -1,5 +1,6 @@
 // Reviews rotator logic extracted to a TS module
 // Cross-fade between quotes with accessible controls and reduced-motion respect.
+import quotesData from './reviews-data.ts';
 
 function initReviewsRotator() {
   const container = document.querySelector<HTMLElement>('.reviews-rotator');
@@ -23,26 +24,20 @@ function initReviewsRotator() {
   stageEl.appendChild(qB);
 
   type Quote = { text: string; src: string; href: string; icon: string };
-  const quotes: Quote[] = [
-    // App Store
-    { text: 'The app brings another order of magnitude ease of use to solo gaming RPGs… I focus more on the unfolding story than the mechanics.', src: 'App Store reviewer', href: 'https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147', icon: 'fa-apple' },
-    { text: 'If you use the Second Edition of the Mythic Gamemaster Emulator, this app comes in very handy.', src: 'App Store reviewer', href: 'https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147', icon: 'fa-apple' },
-    { text: 'Clean design and everything you need in one place… perfect companion for Mythic GME 2e.', src: 'App Store reviewer', href: 'https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147', icon: 'fa-apple' },
-    // Google Play
-    { text: 'Exactly what I needed for solo RPG sessions… fast, organized, and stays out of the way.', src: 'Google Play reviewer', href: 'https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e', icon: 'fa-google-play' },
-    { text: 'Works offline and the dice/oracle tools are super convenient.', src: 'Google Play reviewer', href: 'https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e', icon: 'fa-google-play' },
-    { text: 'Developer is responsive and updates keep improving the app.', src: 'Google Play reviewer', href: 'https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e', icon: 'fa-google-play' },
-    // Reddit
-    { text: 'The app is looking better than ever :)', src: 'r/mythic_gme', href: 'https://www.reddit.com/r/mythic_gme/comments/1gwr9ho/the_mythic_gme_app_is_back/', icon: 'fa-reddit' },
-    { text: 'Glad to see active development—this will help a lot of solo players.', src: 'r/mythic_gme', href: 'https://www.reddit.com/r/mythic_gme/comments/1gwr9ho/the_mythic_gme_app_is_back/', icon: 'fa-reddit' },
-    // itch.io
-    { text: 'Desktop version runs smoothly on my setup; great for campaign logging.', src: 'itch.io commenter', href: 'https://jasonholtdigital.itch.io/mythic-gme-digital', icon: 'fa-itch-io' },
-    { text: 'Love having dice, oracle, and chaos meter together in a clean interface.', src: 'itch.io commenter', href: 'https://jasonholtdigital.itch.io/mythic-gme-digital', icon: 'fa-itch-io' },
-  ];
+  // Shuffle helper (Fisher–Yates)
+  function shuffle<T>(arr: T[]): T[] {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+  const MAX_QUOTES = 20; // target a readable set per session
+  const quotes: Quote[] = shuffle([...quotesData as Quote[]]).slice(0, Math.min(MAX_QUOTES, (quotesData as Quote[]).length));
 
   if (!quotes.length) return;
 
-  let i = 0;
+  let i = Math.floor(Math.random() * quotes.length);
   let paused = false;
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let timer: number | null = null;
