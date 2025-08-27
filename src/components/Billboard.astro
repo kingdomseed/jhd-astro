@@ -1,24 +1,32 @@
 ---
-// Billboard section shows a screenshot of the application.  The image
-// now rotates through multiple screenshots found in /public as
+// Billboard section shows a screenshot of the application. The image
+// now rotates through multiple screenshots found in src/assets/billboard as
 // billboard-1.jpeg .. billboard-7.jpeg, using the same styling as the
 // original design. Minimal TypeScript provides accessible controls and
 // auto-rotation that respects reduced motion.
+import { Image } from 'astro:assets';
+import b1 from '../assets/billboard/billboard-1.jpeg';
+import b2 from '../assets/billboard/billboard-2.jpeg';
+import b3 from '../assets/billboard/billboard-3.jpeg';
+import b4 from '../assets/billboard/billboard-4.jpeg';
+import b5 from '../assets/billboard/billboard-5.jpeg';
+import b6 from '../assets/billboard/billboard-6.jpeg';
+import b7 from '../assets/billboard/billboard-7.jpeg';
 ---
 <section class="container billboard" aria-label="App preview">
-  <figure class="billboard-plate" aria-roledescription="carousel" aria-label="Billboard screenshots" tabindex="0">
+  <figure class="billboard-plate" aria-roledescription="carousel" aria-label="Billboard screenshots">
     <div class="bb-stage">
       <!-- Sizing image keeps height without visual output -->
-      <img class="billboard-img bb-sizer" src="/billboard-1.jpeg" alt="" aria-hidden="true" loading="eager" decoding="async" />
+      <Image class="billboard-img bb-sizer" src={b1} alt="" aria-hidden="true" loading="eager" decoding="async" />
 
-      <!-- Slides (first active/eager; others lazy) -->
-      <img class="billboard-img is-active" src="/billboard-1.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <img class="billboard-img" src="/billboard-2.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
-      <img class="billboard-img" src="/billboard-3.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
-      <img class="billboard-img" src="/billboard-4.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
-      <img class="billboard-img" src="/billboard-5.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
-      <img class="billboard-img" src="/billboard-6.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
-      <img class="billboard-img" src="/billboard-7.jpeg" alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <!-- Slides (first active/eager; others eager to avoid pop-in during cross-fade) -->
+      <Image class="billboard-img is-active" src={b1} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b2} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b3} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b4} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b5} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b6} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img" src={b7} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
     </div>
     <p id="bb-status" class="sr-only" aria-live="polite">Slide 1 of 7</p>
     <div class="bb-controls" aria-label="Billboard controls">

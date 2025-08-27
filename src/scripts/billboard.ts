@@ -10,8 +10,9 @@ function initBillboard() {
   const btnPrev = plate.querySelector<HTMLButtonElement>('.bb-prev');
   const btnNext = plate.querySelector<HTMLButtonElement>('.bb-next');
   const btnPause = plate.querySelector<HTMLButtonElement>('.bb-pause');
+  const controls = plate.querySelector<HTMLElement>('.bb-controls');
 
-  if (!stage || !imgs.length || !btnPrev || !btnNext || !btnPause) return;
+  if (!stage || !imgs.length || !btnPrev || !btnNext || !btnPause || !controls) return;
 
   let i = 0;
   let paused = false;
@@ -30,7 +31,7 @@ function initBillboard() {
   function prev() { i = (i - 1 + imgs.length) % imgs.length; setActive(i); }
 
   function stop() { if (timer !== null) { window.clearInterval(timer); timer = null; } }
-  function start() { if (prefersReduced || paused) return; stop(); timer = window.setInterval(next, 5000); }
+  function start() { if (prefersReduced || paused) return; stop(); timer = window.setInterval(next, 7000); }
 
   function togglePause() {
     paused = !paused;
@@ -46,8 +47,8 @@ function initBillboard() {
   btnNext.addEventListener('click', next);
   btnPause.addEventListener('click', togglePause);
 
-  // Keyboard support on the plate
-  plate.addEventListener('keydown', (e: KeyboardEvent) => {
+  // Keyboard support on the controls container (focus is on the buttons)
+  controls.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
     if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
   });
