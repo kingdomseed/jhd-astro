@@ -27,72 +27,8 @@
       <button type="button" class="bb-next" aria-label="Next screenshot">›</button>
     </div>
   </figure>
-  <script type="module">
-    /** @type {HTMLElement|null} */
-    const plate = document.querySelector('.billboard-plate');
-    /** @type {HTMLElement|null} */
-    const stage = plate ? plate.querySelector('.bb-stage') : null;
-    /** @type {HTMLImageElement[]} */
-    const imgs = stage ? Array.from(stage.querySelectorAll('.billboard-img:not(.bb-sizer)')) : [];
-    /** @type {HTMLElement|null} */
-    const statusEl = document.getElementById('bb-status');
-    /** @type {HTMLButtonElement|null} */
-    const btnPrev = plate ? plate.querySelector('.bb-prev') : null;
-    /** @type {HTMLButtonElement|null} */
-    const btnNext = plate ? plate.querySelector('.bb-next') : null;
-    /** @type {HTMLButtonElement|null} */
-    const btnPause = plate ? plate.querySelector('.bb-pause') : null;
-
-    let i = 0;
-    let paused = false;
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    /** @type {number|null} */
-    let timer = null;
-
-    /** @param {number} index */
-    function setActive(index){
-      imgs.forEach((im, idx) => {
-        if (idx === index) im.classList.add('is-active');
-        else im.classList.remove('is-active');
-      });
-      if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
-    }
-
-    function next(){ i = (i + 1) % imgs.length; setActive(i); }
-    function prev(){ i = (i - 1 + imgs.length) % imgs.length; setActive(i); }
-
-    function stop(){ if (timer !== null) { window.clearInterval(timer); timer = null; } }
-    function start(){ if (prefersReduced || paused) return; stop(); timer = window.setInterval(next, 5000); }
-
-    function togglePause(){
-      paused = !paused;
-      if (btnPause) {
-        btnPause.setAttribute('aria-pressed', String(paused));
-        btnPause.setAttribute('aria-label', paused ? 'Play autoplay' : 'Pause autoplay');
-        btnPause.textContent = paused ? '▶' : '⏸';
-      }
-      if (paused) stop(); else start();
-    }
-
-    btnPrev && btnPrev.addEventListener('click', prev);
-    btnNext && btnNext.addEventListener('click', next);
-    btnPause && btnPause.addEventListener('click', togglePause);
-
-    // Keyboard support on the plate
-    plate && plate.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
-    });
-
-    // Pause on hover/focus
-    const hoverPause = () => { if (!paused) stop(); };
-    const hoverResume = () => { if (!paused) start(); };
-    plate && plate.addEventListener('mouseenter', hoverPause);
-    plate && plate.addEventListener('mouseleave', hoverResume);
-    plate && plate.addEventListener('focusin', hoverPause);
-    plate && plate.addEventListener('focusout', hoverResume);
-
-    if (imgs.length) setActive(0);
-    if (!prefersReduced) start();
+  <script>
+    import '../scripts/billboard.ts';
+    // Hoisted import: processed by Astro/Vite (TS supported)
   </script>
 </section>
