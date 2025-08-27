@@ -10,11 +10,11 @@
       <strong>Jason Holt Digital</strong>
     </div>
     <nav class="nav" aria-label="Primary">
-      <a href="#apps">Apps</a>
-      <a href="#resources">Resources</a>
-      <a href="#support">Support</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">About</a>
+      <a href="/apps">Apps</a>
+      <a href="/resources">Resources</a>
+      <a href="/support">Support</a>
+      <a href="/blog">Blog</a>
+      <a href="/about">About</a>
       <!-- Download call to action: dropdown menu with platform links -->
       <span class="cta-download-wrap">
         <button class="btn btn--secondary cta-download" aria-haspopup="menu" aria-expanded="false" aria-controls="downloadMenu">
@@ -43,48 +43,8 @@
     </nav>
   </div>
 </header>
-
 <script>
-  // Accessible toggle for the Download dropdown.
-  // Uses vanilla JS and runs on the client when the header renders.
-  const btn = document.querySelector<HTMLButtonElement>('.cta-download');
-  const menu = document.getElementById('downloadMenu');
-  if (btn && menu) {
-    const items = Array.from(menu.querySelectorAll('a')) as HTMLAnchorElement[];
-    const close = () => {
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.focus();
-    };
-    const open = () => {
-      menu.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-      items[0]?.focus();
-    };
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isOpen = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(isOpen));
-      if (isOpen) items[0]?.focus();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
-    });
-    document.addEventListener('click', (e) => {
-      const target = e.target as Node | null;
-      if (target && !menu.contains(target) && !btn.contains(target)) close();
-    });
-    menu.addEventListener('keydown', (e) => {
-      const active = document.activeElement as Element | null;
-      const i = active ? items.indexOf(active as HTMLAnchorElement) : -1;
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        (items[(i + 1) % items.length] || items[0])?.focus();
-      }
-      if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        (items[i - 1] || items[items.length - 1])?.focus();
-      }
-    });
-  }
+  import '../scripts/header-dropdown.ts';
+  // Hoisted import: processed by Astro/Vite, supports TS and npm deps.
+  // See: https://docs.astro.build/en/guides/client-side-scripts/#hoisted-scripts
 </script>
