@@ -1,0 +1,7 @@
+# robots.txt for Mythic GME Apps
+# Update the Sitemap URL once the canonical domain is known.
+
+User-agent: *
+Allow: /
+
+# Sitemap: https://your-domain.example/sitemap.xml
