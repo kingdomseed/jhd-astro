@@ -31,7 +31,7 @@ function initBillboard() {
   function prev() { i = (i - 1 + imgs.length) % imgs.length; setActive(i); }
 
   function stop() { if (timer !== null) { window.clearInterval(timer); timer = null; } }
-  function start() { if (prefersReduced || paused) return; stop(); timer = window.setInterval(next, 7000); }
+  function start() { if (prefersReduced || paused) return; stop(); timer = window.setInterval(next, 10000); }
 
   function togglePause() {
     paused = !paused;
