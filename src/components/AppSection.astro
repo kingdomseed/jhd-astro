@@ -1,0 +1,326 @@
+---
+// App section component with alternating layout support
+interface Props {
+  title: string;
+  whoItsFor: string;
+  features: string[];
+  officialContent: string;
+  storeLinks: Array<{
+    name: string;
+    url: string;
+    icon: string;
+    available?: boolean;
+  }>;
+  reverse?: boolean;
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+const { 
+  title, 
+  whoItsFor, 
+  features, 
+  officialContent, 
+  storeLinks, 
+  reverse = false,
+  imageSrc,
+  imageAlt = ""
+} = Astro.props;
+---
+
+<section class={`app-section ${reverse ? 'app-section--reverse' : ''}`}>
+  <div class="container">
+    <div class="app-section-grid">
+      <!-- Content Column -->
+      <div class="app-content">
+        <div class="app-content-inner">
+          <h2 class="app-title">{title}</h2>
+          
+          <div class="app-details">
+            <div class="detail-block">
+              <h3>Who it's for</h3>
+              <p>{whoItsFor}</p>
+            </div>
+            
+            <div class="detail-block">
+              <h3>What it does</h3>
+              <ul class="feature-list">
+                {features.map(feature => (
+                  <li class="feature-item">
+                    <i class="fa-solid fa-check feature-check" aria-hidden="true"></i>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div class="detail-block">
+              <h3>Official content</h3>
+              <p>{officialContent}</p>
+            </div>
+            
+            <div class="detail-block">
+              <h3>Download now</h3>
+              <div class="store-links">
+                {storeLinks.map(store => (
+                  store.available !== false ? (
+                    <a href={store.url} target="_blank" rel="noopener" class="store-link">
+                      <i class={store.icon} aria-hidden="true"></i>
+                      {store.name}
+                    </a>
+                  ) : (
+                    <span class="store-link store-link--disabled">
+                      <i class={store.icon} aria-hidden="true"></i>
+                      {store.name} — Coming soon
+                    </span>
+                  )
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image/Screenshot Column -->
+      <div class="app-visual">
+        <div class="app-image-container">
+          {imageSrc ? (
+            <img src={imageSrc} alt={imageAlt} class="app-image" />
+          ) : (
+            <div class="app-placeholder">
+              <i class="fa-solid fa-image placeholder-icon" aria-hidden="true"></i>
+              <p class="placeholder-text">Screenshots<br/>Coming Soon</p>
+            </div>
+          )}
+          
+          <!-- Decorative geometric elements -->
+          <div class="geometric-accent geometric-accent--1" aria-hidden="true"></div>
+          <div class="geometric-accent geometric-accent--2" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .app-section {
+    padding: 4rem 0;
+    position: relative;
+  }
+  
+  .app-section:nth-child(even) {
+    background: var(--color-surface-2);
+  }
+  
+  .app-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .app-section--reverse .app-section-grid {
+    direction: rtl;
+  }
+  
+  .app-section--reverse .app-content {
+    direction: ltr;
+  }
+  
+  .app-content-inner {
+    max-width: 500px;
+    margin-left: auto;
+  }
+  
+  .app-section--reverse .app-content-inner {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  .app-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-text);
+    margin: 0 0 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  .detail-block {
+    margin-bottom: 2rem;
+  }
+  
+  .detail-block h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .detail-block p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+  
+  .feature-check {
+    color: var(--color-primary);
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+  }
+  
+  .store-links {
+    display: grid;
+    gap: 0.75rem;
+  }
+  
+  .store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: var(--border-base);
+    transition: transform 0.15s var(--easing-standard);
+  }
+  
+  .store-link:hover {
+    transform: translate(-2px, -2px);
+  }
+  
+  .store-link--disabled {
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+  }
+  
+  .store-link--disabled:hover {
+    transform: none;
+  }
+  
+  .app-visual {
+    position: relative;
+  }
+  
+  .app-image-container {
+    position: relative;
+    border: var(--border-thick);
+    background: var(--color-surface);
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  
+  .app-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .app-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+  
+  .placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  
+  .placeholder-text {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  /* Geometric accents */
+  .geometric-accent {
+    position: absolute;
+    border: var(--border-base);
+    z-index: -1;
+  }
+  
+  .geometric-accent--1 {
+    width: 40px;
+    height: 40px;
+    background: var(--color-accent);
+    top: -20px;
+    right: -20px;
+    transform: rotate(45deg);
+  }
+  
+  .geometric-accent--2 {
+    width: 24px;
+    height: 24px;
+    background: var(--color-primary);
+    bottom: -12px;
+    left: -12px;
+    opacity: 0.7;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 968px) {
+    .app-section-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .app-section--reverse .app-section-grid {
+      direction: ltr;
+    }
+    
+    .app-content-inner {
+      margin-left: 0;
+      max-width: none;
+    }
+    
+    .app-section--reverse .app-content-inner {
+      margin-right: 0;
+    }
+    
+    .app-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .app-section {
+      padding: 3rem 0;
+    }
+    
+    .store-links {
+      gap: 0.5rem;
+    }
+    
+    .store-link {
+      padding: 0.625rem 0.875rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
