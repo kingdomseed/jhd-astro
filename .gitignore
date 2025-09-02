@@ -16,3 +16,4 @@
 
 # Optional: VS Code settings
 .vscode/
+/.worktrees/
