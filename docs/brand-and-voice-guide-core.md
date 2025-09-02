@@ -38,7 +38,7 @@
 **Microcopy patterns**
 
 - Buttons: **Download Now**, **Get Mobile**, **Get Desktop**, **Join Discord**, **Support & FAQ**
-- Stats: **4.7★ avg rating · 50k+ installs · 200+ in Discord**
+- Stats: **4.7★ avg rating · 5k+ installs · 2k+ community members**
 - Social proof: One‑line quotes with a source and link.
 
 ---
@@ -80,7 +80,7 @@
 **Primary CTA:** Download Now\
 **Alt CTA pair:** Get Mobile · Get Desktop
 
-**Stats row:** 4.7★ avg rating · 50k+ installs · 200+ in Discord
+**Stats row:** 4.7★ avg rating · 5k+ installs · 2k+ community members
 
 > **Why**: Puts the license and use‑case first. Stats establish trust. Short, scannable, zero jargon.
 
@@ -274,7 +274,7 @@ Use either separate pages (**/mobile**, **/desktop**) or anchors (**#mobile**, *
 
 **Stats**
 
-> 4.7★ avg rating · 50k+ installs · 200+ in Discord
+> 4.7★ avg rating · 5k+ installs · 2k+ community members
 
 **Benefits**
 
@@ -325,7 +325,7 @@ Use either separate pages (**/mobile**, **/desktop**) or anchors (**#mobile**, *
 
 - **Hero headline ≤ 5 words**; subheadline ≤ 14 words; matches *official Mythic GME 2e apps* positioning.
 - Primary CTA = **Download Now**; secondary pair = **Get Mobile · Get Desktop**; both visible on mobile/desktop.
-- **Stats row** accurate (4.7★ avg, 50k+ installs, 200+ in Discord).
+- **Stats row** accurate (4.7★ avg, 5k+ installs, 2k+ community members).
 - **Billboard** uses a desktop screenshot; clear alt text; optional caption OK.
 - **Social proof**: 3–5 one-line quotes; each has a linked source.
 - **Four benefits**: verbs first; ≤ 9 words each; no feature sprawl.
