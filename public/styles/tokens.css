@@ -11,6 +11,12 @@
     --color-primary: #0066ff; /* primary blue */
     --color-accent: #ffd700; /* accent yellow (secondary) */
 
+    /* border tokens - strategic thickness */
+    --border-subtle: 1px solid var(--color-border); /* for secondary elements */
+    --border-base: 2px solid var(--color-border); /* standard structural */
+    --border-thick: 3px solid var(--color-border); /* primary CTAs only */
+    --border-heavy: 4px solid var(--color-border); /* hero elements only */
+
     /* radius */
     --radius-base: 0;
     --radius-lg: 0;

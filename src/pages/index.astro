@@ -20,12 +20,60 @@ import ReviewsRotator from '../components/ReviewsRotator.astro';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Official Mythic GME 2e Apps — Jason Holt Digital</title>
-    <meta name="description" content="GM‑less play at your fingertips. The licensed companion for oracle‑style solo RPG." />
+    <meta name="description" content="GM‑less play at your fingertips. Official, licensed Mythic GME 2e companion apps by Jason Holt Digital. Download for mobile and desktop." />
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Official Mythic GME 2e Apps — Jason Holt Digital" />
+    <meta property="og:description" content="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jasonholtdigital.com/" />
+    <meta property="og:site_name" content="Jason Holt Digital" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Official Mythic GME 2e Apps — Jason Holt Digital" />
+    <meta name="twitter:description" content="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
     <!-- Global stylesheet: variables, layout and component styles -->
     <link rel="stylesheet" href="/global.css" />
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
     <link rel="canonical" href="https://jasonholtdigital.com/" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mythic GME 2e Apps",
+      "description": "Official licensed companion apps for Mythic GME 2e oracle-style solo RPG",
+      "applicationCategory": "Game",
+      "operatingSystem": ["iOS", "Android", "Windows", "macOS", "Linux"],
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
+        }
+      ],
+      "publisher": {
+        "@type": "Person",
+        "name": "Jason Holt",
+        "url": "https://jasonholtdigital.com"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "100"
+      }
+    }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to main content</a>
