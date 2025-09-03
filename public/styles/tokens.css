@@ -29,5 +29,11 @@
     /* motion & layout */
     --easing-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
     --container-max: 1140px;
+
+    /* background grid tokens */
+    --grid-size: 30px;
+    --grid-color: #e5e5e5;
+    --grid-opacity: 0.4;
+    --grid-size-mobile: 40px;
   }
 }
