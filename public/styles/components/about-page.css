@@ -92,21 +92,23 @@
   }
   
   .about-cta {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-    color: #000;
+    background: var(--color-surface-2);
+    color: var(--color-text);
     padding: 2rem;
     border: var(--border-thick);
+    border-left: 6px solid var(--color-primary);
     text-align: center;
     margin: 2rem 0;
+    box-shadow: var(--shadow-base);
   }
   
   .about-cta h2 {
-    color: #000;
+    color: var(--color-text);
     margin: 0 0 1rem 0;
   }
   
   .about-cta p {
-    color: #000;
+    color: var(--color-text-muted);
     margin: 0 0 1.5rem 0;
   }
   

@@ -79,45 +79,269 @@ import PageHeader from '../components/PageHeader.astro';
           </section>
 
           <section id="faqs" aria-labelledby="faqs-title" style="margin-top:2rem">
-            <h2 id="faqs-title">Top FAQs</h2>
+            <h2 id="faqs-title">Comprehensive FAQ</h2>
 
-            <h3>General</h3>
-            <dl>
-              <dt><strong>What is Mythic GME?</strong></dt>
-              <dd>Mythic GME 2e is an oracle‑style system for GM‑less play by Word Mill Creative. The apps are the official companions for using the system at the table.</dd>
-              <dt><strong>Do I need the book?</strong></dt>
-              <dd>The book is recommended for full context and examples. The apps streamline play and include helpful references.</dd>
-              <dt><strong>Which platforms are supported?</strong></dt>
-              <dd>Mobile: iOS, Android, Amazon Fire. Desktop: Windows, macOS, Linux.</dd>
-            </dl>
+            <!-- General & Platforms Section -->
+            <div class="faq-section">
+              <button class="faq-section-header" aria-expanded="true" aria-controls="general-section">
+                <h3>General & Platforms</h3>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="general-section" class="faq-section-content">
+                
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="what-is-mythic">
+                    <strong>What is Mythic GME Mobile / Digital?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="what-is-mythic" class="faq-answer">
+                    <p>The officially licensed companion for Mythic Game Master Emulator 2e by Word Mill Creative. It streamlines Fate Chart/Check, Random Events, Scene Checks, Meaning Tables, lists, scenes, and more—offline‑first on every platform we ship.</p>
+                  </div>
+                </div>
 
-            <h3>Features</h3>
-            <dl>
-              <dt><strong>What can I do with the app?</strong></dt>
-              <dd>Fate Chart/Check, Meaning tables, Scenes, Characters, Threads, Dice roller, Custom tables, Export/Import.</dd>
-              <dt><strong>How do I create a custom dice formula?</strong></dt>
-              <dd>Open Dice → "+" → Add formula using supported notation. See the <a href="/resources">Dice Roller Formula Guide</a>.</dd>
-            </dl>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="who-makes">
+                    <strong>Who makes it?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="who-makes" class="faq-answer">
+                    <p>Built by Jason Holt, the solo developer of Jason Holt Digital under an exclusive mobile/desktop partnership with Word Mill Creative.</p>
+                  </div>
+                </div>
 
-            <h3>Purchasing</h3>
-            <dl>
-              <dt><strong>Is there a subscription?</strong></dt>
-              <dd>No. Check each store page for pricing and regional availability.</dd>
-              <dt><strong>What's the difference between Mobile and Digital?</strong></dt>
-              <dd>Mobile is optimized for phones/tablets. Digital is a desktop layout for longer sessions with everything included.</dd>
-            </dl>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="where-get">
+                    <strong>Where can I get it?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="where-get" class="faq-answer">
+                    <ul>
+                      <li><strong>Apple App Store:</strong> iPhone • iPad • macOS (Universal purchase)</li>
+                      <li><strong>Google Play:</strong> Android phones & tablets</li>
+                      <li><strong>Amazon Appstore:</strong> Fire tablets</li>
+                      <li><strong>Windows Store:</strong> Windows 10 and 11</li>
+                      <li><strong>Itch.io:</strong> Windows, macOS, and Linux (Flatpak) DRM-free versions (Universal purchase)</li>
+                      <li><strong>Steam:</strong> planned</li>
+                    </ul>
+                  </div>
+                </div>
 
-            <h3>Accessibility</h3>
-            <dl>
-              <dt><strong>What accessibility options exist?</strong></dt>
-              <dd>Screen reader support, color‑blind modes, large font support. See each platform's settings.</dd>
-            </dl>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="worldwide">
+                    <strong>Is it available worldwide?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="worldwide" class="faq-answer">
+                    <p>Yes. Availability and pricing vary by store/region.</p>
+                  </div>
+                </div>
 
-            <h3>Reporting Issues</h3>
-            <dl>
-              <dt><strong>How do I report a bug?</strong></dt>
-              <dd>Use in‑app feedback (Settings → Report an Issue), email Support, or post in Discord #bug‑reports.</dd>
-            </dl>
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="cross-platform">
+                    <strong>If I purchased the app on one platform, do I need to purchase it on another?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="cross-platform" class="faq-answer">
+                    <p>Yes. Each platform requires its own development costs and time investment. The only exception to this is the Apple App Store's universal purchase system and the Itch.io platform which allows you to purchase the app on one platform and have access to download the app for other platforms as well.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="need-book">
+                    <strong>Do I need the Mythic GME 2e rulebook?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="need-book" class="faq-answer">
+                    <p>The app is a companion app to the book so the book is highly recommended and effectively required. The app implements/accelerates Mythic, but the book teaches the system, variants, and includes many examples and alternative rules that you can apply.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features & Data Section -->
+            <div class="faq-section">
+              <button class="faq-section-header" aria-expanded="false" aria-controls="features-section">
+                <h3>Features & Data</h3>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="features-section" class="faq-section-content">
+                
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="core-features">
+                    <strong>Core features</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="core-features" class="faq-answer">
+                    <ul>
+                      <li>Fate Chart / Fate Check with Chaos Factor</li>
+                      <li>Random Events & Event Focus (roll independently when desired)</li>
+                      <li>Scene Checks & Scene Adjustments as written</li>
+                      <li>Meaning Tables: all official tables included for rolling (plus additional tables spanning the entire Mythic timeline available via IAP)</li>
+                      <li>Adventure Lists: Characters • Threads • Features (integrated with events) allowing both Mythic with and without Prepared (Pre-made) Adventures</li>
+                      <li>Scenes: titles, summaries, chaos; unlimited scenes</li>
+                      <li>Dice Roller: supports notations like 1d6, 2d10+3, 4d6kh3 and a lot more and save your formulas for common dice rolls</li>
+                      <li>Logs and Journal System: for keeping track of your games and switching between different adventures</li>
+                      <li>Import/Export Adventures: Journals export to JSON and MD so you can import and share them</li>
+                      <li>iCloud Sync (with more cloud syncing options coming): For Apple devices you can sync your journals and formulas. For other platforms you can select your own storage location</li>
+                      <li>Mythic Magazines Content (IAP REQUIRED)</li>
+                      <li>Custom Tables (v1.5+) (IAP REQUIRED): Create, edit, import, export your own oracles: CSV/JSON, tags, paired rolls, entry‑level linking, and more</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="accessibility">
+                    <strong>Accessibility</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="accessibility" class="faq-answer">
+                    <p>Screen reader support, color‑blind modes, very‑large text, left‑handed mode.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="languages">
+                    <strong>Languages</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="languages" class="faq-answer">
+                    <p>We include the official Brazilian Portuguese localization from RetroPunk Publicações and unofficial translations in Italian, French, German, and Spanish. I hope to add more of the official localizations as time goes on!</p>
+                    <p><strong>NOTE:</strong> Only the Portuguese meaning and event focus tables are localized out of the box. With the custom tables editor, you can localize the other language tables yourself. I hope to offer official language translations from other language publishers in the future!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Purchases, Pricing & Upgrades Section -->
+            <div class="faq-section">
+              <button class="faq-section-header" aria-expanded="false" aria-controls="pricing-section">
+                <h3>Purchases, Pricing & Upgrades</h3>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="pricing-section" class="faq-section-content">
+                <p><em>Last updated: 2025‑08‑30</em></p>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="new-app">
+                    <strong>Why a new app listing?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="new-app" class="faq-answer">
+                    <p>The original developer closed their business and stopped work on the legacy app. A few months later I restarted development under Jason Holt Digital. Because the store accounts changed and the codebase was rebuilt, Apple/Google/Amazon treat this as a new product, so it cannot be delivered as a free update to the old listing.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="pricing-store">
+                    <strong>Pricing (by store)</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="pricing-store" class="faq-answer">
+                    <ul>
+                      <li><strong>Apple App Store (Universal):</strong> ~$2.99 base app + ~$8.99 one‑time Expanded Features unlock (not a subscription). One purchase covers iOS/iPadOS/macOS.</li>
+                      <li><strong>Google Play & Amazon Appstore:</strong> ~$2.99 base + ~$8.99 Expanded Features IAP.</li>
+                      <li><strong>Microsoft Store (Windows):</strong> $12.99 one‑time; no IAP.</li>
+                      <li><strong>itch.io (DRM‑free):</strong> $12.99 one‑time; no IAP. (Includes downloads for supported desktop platforms.)</li>
+                    </ul>
+                    <p>Prices convert to your local currency and may vary by region/taxes. Store pages show the current price in your country.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="subscription">
+                    <strong>Is this a subscription?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="subscription" class="faq-answer">
+                    <p>No. Mobile stores use a one‑time Expanded Features unlock. Desktop stores are one‑time purchases with no IAP.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="expanded-features">
+                    <strong>How the Expanded Features unlock works (not a subscription)</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="expanded-features" class="faq-answer">
+                    <ul>
+                      <li>When you buy the unlock, you keep all current expanded features forever.</li>
+                      <li>For the next 12 months, any new expanded features we add are also yours permanently.</li>
+                      <li>After 12 months, the app continues to get bug fixes and improvements, but brand‑new expanded features will appear locked until you choose to buy a new unlock.</li>
+                      <li>This model gives you the freedom to decide when it's worth it to you to purchase an upgrade while compensating me for the ongoing work on this project and allowing me to continue supporting it.</li>
+                      <li>With this pricing model your existing features never expire. Whatever you unlock, you keep forever.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="included-today">
+                    <strong>What's included today (Expanded Features)</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="included-today" class="faq-answer">
+                    <ul>
+                      <li>50+ additional Meaning Tables from Mythic Magazines & Variations.</li>
+                      <li>12+ extra Event Focus tables from Magazines & Variations.</li>
+                      <li>Custom Tables toolkit — build, link, tag, categorize, import/export your own oracles (Meaning & Event Focus), and modify included tables.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="planned-premium">
+                    <strong>Planned premium additions (subject to change)</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="planned-premium" class="faq-answer">
+                    <ul>
+                      <li>Progress Tracks & Keyed Scenes</li>
+                      <li>Custom Lists</li>
+                      <li>Hybrid Play (use real dice)</li>
+                      <li>Advanced journaling & note‑taking</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="old-app-questions">
+                    <strong>Questions about the old app vs this one?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="old-app-questions" class="faq-answer">
+                    <p>If you have questions about your original purchase or how it relates to this new version, reach out to me in a DM or email support@jasonholtdigital.com. I'm happy to answer your questions and concerns.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="cross-platform-note">
+                    <strong>Cross‑platform note</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="cross-platform-note" class="faq-answer">
+                    <p>Purchases generally don't transfer between stores (each platform is separate). Apple is an exception via Universal Purchase (iOS/iPadOS/macOS). itch.io provides multi‑platform desktop downloads under a single purchase.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bug Reporting Section -->
+            <div class="faq-section">
+              <button class="faq-section-header" aria-expanded="false" aria-controls="support-section">
+                <h3>Getting Help</h3>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="support-section" class="faq-section-content">
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="report-bug">
+                    <strong>How do I report a bug?</strong>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="report-bug" class="faq-answer">
+                    <p>Use in‑app feedback (Settings → Report an Issue), email Support, or post in Discord #bug‑reports.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
           <p style="margin-top:2rem; color: var(--color-text-muted)"><small>See latest known issues in <a href="/blog">Release Notes</a>.</small></p>
@@ -324,10 +548,81 @@ import PageHeader from '../components/PageHeader.astro';
         });
       }
 
+      // FAQ Accordion functionality
+      function initFAQAccordion() {
+        // Handle section headers
+        const sectionHeaders = document.querySelectorAll('.faq-section-header');
+        sectionHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            const targetId = header.getAttribute('aria-controls');
+            const content = document.getElementById(targetId);
+            
+            // Toggle section
+            header.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+              content.classList.remove('open');
+              // Collapse all Q&A items in this section
+              const questions = content.querySelectorAll('.faq-question');
+              const answers = content.querySelectorAll('.faq-answer');
+              questions.forEach(q => q.setAttribute('aria-expanded', 'false'));
+              answers.forEach(a => a.classList.remove('open'));
+            } else {
+              content.classList.add('open');
+            }
+          });
+          
+          // Handle keyboard navigation for section headers
+          header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              header.click();
+            }
+          });
+        });
+
+        // Handle individual FAQ questions
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+          question.addEventListener('click', () => {
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            const targetId = question.getAttribute('aria-controls');
+            const answer = document.getElementById(targetId);
+            
+            // Toggle Q&A
+            question.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+              answer.classList.remove('open');
+            } else {
+              answer.classList.add('open');
+            }
+          });
+          
+          // Handle keyboard navigation for questions
+          question.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              question.click();
+            }
+          });
+        });
+
+        // Initialize: First section open by default
+        const firstSection = document.querySelector('.faq-section-header[aria-expanded="true"]');
+        if (firstSection) {
+          const targetId = firstSection.getAttribute('aria-controls');
+          const content = document.getElementById(targetId);
+          if (content) {
+            content.classList.add('open');
+          }
+        }
+      }
+
       // Initialize everything when DOM is loaded
       document.addEventListener('DOMContentLoaded', function() {
         initTabs();
         initContactForm();
+        initFAQAccordion();
       });
     </script>
   </body>
