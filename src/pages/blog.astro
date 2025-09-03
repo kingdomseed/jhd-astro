@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 <html lang="en">
   <head>
@@ -17,10 +18,18 @@ import Footer from '../components/Footer.astro';
     <div id="bg-atmo" aria-hidden="true"></div>
     <div id="site">
       <Header />
+      
+      <PageHeader 
+        title="Release Notes & Behind-the-Scenes"
+        subtitle="Updates, insights, and the craft behind the apps"
+        description="Plain-language release notes first. Occasional deep dives on design and development."
+        accent="Blog"
+        layout="center"
+        icon="fa-solid fa-newspaper"
+        colorScheme="secondary"
+      />
+      
       <main id="main" class="container" style="min-height:40vh; padding: 3rem 0;">
-        <h1>Blog — Release Notes &amp; Behind‑the‑Scenes</h1>
-        <p style="margin-top:.25rem; color: var(--muted)">Plain‑language release notes first. Occasional deep dives on design and craft.</p>
-
         <section class="panel" aria-labelledby="latest-title" style="margin-top:1rem">
           <h2 id="latest-title">Latest</h2>
           <h3>v1.5.x — Highlights</h3>

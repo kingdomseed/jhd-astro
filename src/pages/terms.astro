@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 <html lang="en">
   <head>
@@ -17,10 +18,19 @@ import Footer from '../components/Footer.astro';
     <div id="bg-atmo" aria-hidden="true"></div>
     <div id="site">
       <Header />
+      
+      <PageHeader 
+        title="Terms of Service"
+        subtitle="Clear terms for fair use"
+        description="License terms, purchases and refunds, acceptable use, and limitations. Last updated: August 27, 2025"
+        accent="Legal"
+        layout="left"
+        icon="fa-solid fa-gavel"
+        visualElement="shapes"
+        colorScheme="primary"
+      />
+      
       <main id="main" class="container" style="min-height:40vh; padding: 3rem 0;">
-        <h1>Terms of Service</h1>
-        <p class="muted" style="margin:.25rem 0 1rem; color: var(--muted)">Last Updated: August 27, 2025</p>
-
         <section class="panel" aria-labelledby="acceptance-title" style="margin-top:1rem">
           <h2 id="acceptance-title">1) Agreement to Terms</h2>
           <p>

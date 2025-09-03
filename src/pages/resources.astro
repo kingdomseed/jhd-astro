@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 <html lang="en">
   <head>
@@ -17,10 +18,19 @@ import Footer from '../components/Footer.astro';
     <div id="bg-atmo" aria-hidden="true"></div>
     <div id="site">
       <Header />
+      
+      <PageHeader 
+        title="Guides & Documentation"
+        subtitle="Learn, create, and troubleshoot"
+        description="Task-focused guides: getting started, table import/export, dice formulas, and troubleshooting."
+        accent="Resources"
+        layout="right"
+        icon="fa-solid fa-book-open"
+        visualElement="shapes"
+        colorScheme="primary"
+      />
+      
       <main id="main" class="container" style="min-height:40vh; padding: 3rem 0;">
-        <h1>Resources — Guides & Docs</h1>
-        <p style="margin-top:.25rem; color: var(--muted)">Teach fast. Goal → Steps → Notes → Examples → Related.</p>
-
         <section aria-labelledby="guides-title" style="margin-top:1rem">
           <h2 id="guides-title">Guides</h2>
           <ul class="links" style="margin-top:10px">
