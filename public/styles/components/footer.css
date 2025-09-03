@@ -19,14 +19,30 @@
   .f-brand .logo {
     width: 36px;
     height: 36px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #ffffff;
     color: #000;
     border: 4px solid var(--color-border);
     border-radius: 0;
     font-weight: 800;
     margin-right: 6px;
+    padding: 3px 2px;
+  }
+  .f-brand .logo-main {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .f-brand .logo-sub {
+    font-size: 5px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    font-variant: small-caps;
+    font-weight: 700;
+    margin-top: 1px;
   }
   .f-brand strong {
     display: block;

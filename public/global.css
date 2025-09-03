@@ -24,5 +24,8 @@
 @import url("/styles/components/buttons.css") layer(components);
 @import url("/styles/components/forms.css") layer(components);
 @import url("/styles/components/makers-note.css") layer(components);
+@import url("/styles/components/page-header.css") layer(components);
+@import url("/styles/components/about-page.css") layer(components);
+@import url("/styles/components/support-tabs.css") layer(components);
 @import url("/styles/components/footer.css") layer(components);
 @import url("/styles/overrides.css") layer(overrides);

@@ -1,0 +1,166 @@
+@layer components {
+  /* About Page Specific Styles */
+  .about-photo-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--color-surface-2);
+    border: var(--border-base);
+  }
+  
+  .about-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-base);
+    margin: 0 auto 1rem;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .photo-caption {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .photo-caption strong {
+    color: var(--color-text);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Section Variations for Visual Hierarchy */
+  .about-intro {
+    background: var(--color-bg);
+    padding: 2rem;
+    border-left: 6px solid var(--color-primary);
+    margin: 2rem 0;
+  }
+  
+  .about-partnership {
+    background: var(--color-accent);
+    color: #000;
+    padding: 2rem;
+    border: var(--border-thick);
+    margin: 2rem 0;
+    position: relative;
+  }
+  
+  .about-partnership::before {
+    content: "✓";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+  }
+  
+  .about-background {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .background-card {
+    background: var(--color-surface);
+    border: var(--border-base);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-base);
+    transition: transform 0.15s var(--easing-standard);
+  }
+  
+  .background-card:hover {
+    transform: translate(-2px, -2px);
+  }
+  
+  .background-card h3 {
+    color: var(--color-primary);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .background-card p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .about-cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    color: #000;
+    padding: 2rem;
+    border: var(--border-thick);
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .about-cta h2 {
+    color: #000;
+    margin: 0 0 1rem 0;
+  }
+  
+  .about-cta p {
+    color: #000;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border: var(--border-base);
+    font-weight: 600;
+    transition: transform 0.15s var(--easing-standard);
+  }
+  
+  .social-link:hover {
+    transform: translate(-2px, -2px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-photo-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+    }
+    
+    .about-photo {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .about-intro,
+    .about-partnership,
+    .about-cta {
+      padding: 1.5rem;
+    }
+    
+    .social-links {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .social-link {
+      width: 100%;
+      max-width: 200px;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@layer components {
+  /* Support Page Tabs */
+  .support-tabs {
+    border-bottom: var(--border-thick);
+    margin-bottom: 2rem;
+  }
+  
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .tab-button {
+    background: var(--color-surface-2);
+    border: var(--border-base);
+    border-bottom: none;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.15s var(--easing-standard);
+    position: relative;
+  }
+  
+  .tab-button:first-child {
+    border-top-left-radius: 0;
+  }
+  
+  .tab-button:last-child {
+    border-top-right-radius: 0;
+  }
+  
+  .tab-button:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+    transform: translate(-1px, -1px);
+  }
+  
+  .tab-button.active {
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-bottom-color: var(--color-bg);
+    z-index: 1;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-bg);
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .tab-content h2:first-child {
+    margin-top: 0;
+  }
+
+  /* Form styles for contact tab */
+  .contact-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 12px;
+    border: var(--border-base);
+    background: var(--color-surface);
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color-text);
+    transition: border-color 0.15s var(--easing-standard);
+  }
+  
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+  
+  .form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .form-messages {
+    margin-top: 1rem;
+  }
+  
+  .form-success {
+    display: none;
+    padding: 1rem;
+    background: var(--color-accent);
+    border: var(--border-base);
+    color: #000;
+  }
+  
+  .form-error {
+    display: none;
+    padding: 1rem;
+    background: #ffe6e6;
+    border: var(--border-base);
+    color: #d00;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .tab-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .support-tabs {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
