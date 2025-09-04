@@ -1,5 +1,7 @@
 # Repository Guidelines
 
+See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.md).
+
 ## Project Structure & Module Organization
 - `src/pages/`: Route files (`index.astro`, `about.astro`, etc.). Keep page filenames lowercase.
 - `src/components/`: Reusable UI in PascalCase (e.g., `Header.astro`, `Billboard.astro`).

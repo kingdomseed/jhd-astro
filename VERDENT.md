@@ -1,5 +1,7 @@
 **Scope & assumptions**
 
+For a concise contributor-facing overview (structure, commands, PR checklist), see [AGENTS.md](AGENTS.md). This file remains the canonical, detailed playbook.
+
 * This repository folder is `astro_project/`.
 * Site is a **static** Astro v5 site (no SSR, no Actions, no Content Layer, no islands) unless a PLAN explicitly introduces them.
 * Goal: small, safe, incremental changes that preserve semantics, a11y, and visual intent.
