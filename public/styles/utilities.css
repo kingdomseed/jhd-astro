@@ -16,34 +16,6 @@
     display: none;
   }
 
-  /* Section spacing hierarchy */
-  .section-large {
-    padding: 5rem 0;
-  }
-  
-  .section-medium {
-    padding: 3.5rem 0;
-  }
-  
-  .section-small {
-    padding: 2.5rem 0;
-  }
-  
-  /* Responsive spacing adjustments */
-  @media (max-width: 768px) {
-    .section-large {
-      padding: 3.5rem 0;
-    }
-    
-    .section-medium {
-      padding: 2rem 0;
-    }
-    
-    .section-small {
-      padding: 1rem 0;
-    }
-  }
-
   /* Accessibility helpers */
   .skip {
     position: absolute;
@@ -79,38 +51,8 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    
-    /* Neo-brutalist grid background */
-    background-image: 
-      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-    background-size: var(--grid-size) var(--grid-size);
-    opacity: var(--grid-opacity);
+    background: none;
   }
-  
-  /* Responsive grid sizing */
-  @media (max-width: 768px) {
-    #bg-atmo {
-      background-size: var(--grid-size-mobile) var(--grid-size-mobile);
-      opacity: calc(var(--grid-opacity) * 0.7);
-    }
-  }
-  
-  /* Reduced motion - static grid */
-  @media (prefers-reduced-motion: reduce) {
-    #bg-atmo {
-      opacity: calc(var(--grid-opacity) * 0.5);
-    }
-  }
-  
-  /* High contrast mode */
-  @media (prefers-contrast: high) {
-    #bg-atmo {
-      --grid-color: #999999;
-      --grid-opacity: 0.6;
-    }
-  }
-  
   #site {
     position: relative;
     z-index: 1;

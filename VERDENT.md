@@ -113,7 +113,7 @@ If any cheap test fails: stop, revise the PLAN, seek re‑approval.
 ## PR requirements
 
 * Title: `[astro] <concise summary>`
-* Body: what & why, files touched, screenshots (desktop + mobile), Lighthouse scores, `node -v`, and `npx astro check` output summary. Include rollback notes.
+* Body: what & why, files touched, linked issues, screenshots (desktop + mobile), Lighthouse scores, `node -v`, and `npx astro check` output summary. Include rollback notes.
 
 ---
 

@@ -1,49 +1,251 @@
 @layer components {
-  /* Hero */
-  .hero-centered {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    grid-template-columns: 1fr;
-    z-index: 1;
+  /* Hero - Full Width Transformation */
+  .hero-fullwidth {
+    /* Full viewport width technique */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    z-index: 2;
+    
+    /* Subtle gradient background - no white box */
+    background: var(--hero-bg-primary);
+    
+    /* Remove ugly borders */
+    border: none;
+    
+    /* Generous spacing for breathing room */
+    padding: 6rem 0 7rem 0;
+    
+    /* Keep gradient overlays but remove white box effect */
+    background-image: 
+      radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+    
+    /* Remove box shadow that was creating container appearance */
+    box-shadow: none;
   }
+
+  /* Hero content container - constrained width within full-width section */
+  .hero-content {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hero header container */
   .hero-head {
     max-width: 60rem;
     margin: 0 auto;
+    position: relative;
     background: transparent;
-    border: 0;
-    z-index: 1;
+    border: none !important;
+    box-shadow: none !important;
   }
-  .lead-accent {
-    font-size: 1.25rem; /* 20px */
-    margin: 0.25rem 0 1.1rem;
-    color: #222;
-  }
-  .cta-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  }
-  .stats {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    color: var(--color-text-muted);
-    margin-top: 2rem;
-  }
-  /* Base display title size (desktop-first). Mobile overrides below. */
+
+  /* Display title with enhanced impact */
   .display-title {
-    font-size: 4rem; /* 64px */
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    
+    /* Enhanced text shadow for readability and impact */
+    text-shadow: var(--hero-text-shadow);
+    
+    /* Subtle gradient text effect */
+    background: linear-gradient(135deg, var(--color-text) 0%, #333333 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
-  
-  /* Responsive adjustments (Hero) */
-  @media (max-width: 980px) {
+
+  /* Fallback for browsers that don't support background-clip: text */
+  @supports not (background-clip: text) {
     .display-title {
-      font-size: 3rem; /* 42px */
+      color: var(--color-text);
+      background: none;
     }
+  }
+
+  /* Lead accent text */
+  .lead-accent {
+    font-size: 1.375rem;
+    line-height: 1.5;
+    color: #2d3748;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* CTA button row */
+  .cta-row {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Enhanced stats display */
+  .stats {
+    display: inline-flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    
+    /* Remove all borders and backgrounds */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 1.25rem 2.5rem;
+    box-shadow: none;
+    
+    /* Typography */
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    
+    /* Backdrop effect for browsers that support it */
+    backdrop-filter: blur(10px);
+    
+    /* Subtle hover effect */
+    transition: transform 0.3s var(--easing-standard);
+  }
+
+  .stats:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Individual stat styling */
+  .stats span {
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .stats span:not(:last-child)::after {
+    content: '•';
+    position: absolute;
+    right: -1.25rem;
+    color: var(--color-accent);
+    font-weight: 800;
+  }
+
+  /* Grid layer integration */
+  .grid-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    
+    /* Enhanced grid effect within hero */
+    background-image: 
+      linear-gradient(to right, rgba(0, 102, 255, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 102, 255, 0.2) 1px, transparent 1px);
+    background-size: calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
+    opacity: 0.3;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .hero-fullwidth {
+      padding: 5rem 0 6rem 0;
+    }
+    
+    .display-title {
+      font-size: 3.75rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-fullwidth {
+      padding: 4rem 0 5rem 0;
+      /* Maintain full-width on mobile */
+      margin-left: calc(-50vw + 50%);
+    }
+    
+    .hero-content {
+      padding: 0 1.5rem;
+    }
+    
+    .display-title {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+    }
+    
     .lead-accent {
-      font-size: 1.5rem; /* 18px */
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stats {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+    }
+    
+    .stats span:not(:last-child)::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .display-title {
+      font-size: 2.25rem;
+    }
+    
+    .hero-content {
+      padding: 0 1rem;
+    }
+  }
+
+  /* High contrast mode adjustments */
+  @media (prefers-contrast: high) {
+    .hero-fullwidth {
+      background: rgba(255, 255, 255, 0.98);
+      border-color: #000000;
+    }
+    
+    .display-title {
+      color: #000000;
+      text-shadow: none;
+      background: none;
+      -webkit-text-fill-color: #000000;
+    }
+    
+    .stats {
+      background: #ffffff;
+      border-color: #000000;
+    }
+    
+    .grid-layer {
+      background-image: 
+        linear-gradient(to right, #666666 1px, transparent 1px),
+        linear-gradient(to bottom, #666666 1px, transparent 1px);
+    }
+  }
+
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-fullwidth {
+      background-image: var(--hero-bg-primary);
+    }
+    
+    .stats {
+      transition: none;
+    }
+    
+    .stats:hover {
+      transform: none;
     }
   }
 }
