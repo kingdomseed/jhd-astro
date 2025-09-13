@@ -24,6 +24,12 @@
     background: var(--color-accent);
     color: #000;
   }
+  /* Brand variant: Discord */
+  .btn--discord {
+    background: #5865F2; /* Discord blurple */
+    color: #fff;
+    border: var(--border-heavy);
+  }
   .btn--tertiary {
     background: var(--color-surface);
     color: #000;
