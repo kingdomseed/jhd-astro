@@ -21,7 +21,15 @@
     font-weight: 700;
     opacity: 0.9;
   }
+  .tag i {
+    margin-right: 6px;
+    color: var(--color-primary);
+  }
   .util a {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+  }
+  .util a i {
+    margin-left: 6px;
+    color: var(--color-primary);
   }
 }
