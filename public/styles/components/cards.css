@@ -1,10 +1,27 @@
 @layer components {
   /* Cards */
+  /* Section header styling (mirrors page header/strip pattern) */
+  .benefits-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
+  .benefits-grid { margin-top: 12px; }
   .card {
     background: #ffffff;
     border: var(--border-base); /* Reduced from 4px to 2px for less overwhelm */
@@ -13,8 +30,25 @@
     box-shadow: var(--shadow-base);
     transition: transform 0.15s var(--easing-standard);
   }
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: var(--border-base);
+    box-shadow: var(--shadow-base);
+    margin-bottom: 10px;
+  }
+  .card-icon i {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+  }
   .card h3 {
     margin: 0.2rem 0 0.3rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
   }
   .card p {
     margin: 0;
