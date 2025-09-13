@@ -1,7 +1,7 @@
 @layer components {
   /* Reviews rotator (buttons + quote) */
   .reviews-rotator {
-    margin: 32px auto; /* more space above/below the strip */
+    margin: 0.5rem auto 0; /* tighter top gap under the heading */
   }
   /* Cross-fade stage */
   .rev-stage {
@@ -18,12 +18,15 @@
     text-align: center;
     color: #000;
     line-height: 1.5;
+    padding: 0; /* neutralize .strip p padding */
     font-size: 1.2rem; /* bump type, keep line-height */
     overflow-wrap: anywhere; /* avoid overflow from long URLs */
     opacity: 0;
     transition: opacity 5s ease-in-out; /* timing unchanged by request */
     will-change: opacity;
   }
+  /* Ensure initial #quote also has no extra padding before JS initializes */
+  .rev-stage p { padding: 0; }
   .rev-stage .rev-quote.is-active {
     opacity: 1;
   }
