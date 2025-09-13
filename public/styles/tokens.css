@@ -30,12 +30,6 @@
     --easing-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
     --container-max: 1140px;
 
-    /* background grid tokens */
-    --grid-size: 30px;
-    --grid-color: #e5e5e5;
-    --grid-opacity: 0.4;
-    --grid-size-mobile: 40px;
-
     /* hero-specific tokens */
     --hero-bg-primary: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(255, 215, 0, 0.05) 100%);
     --hero-bg-accent: rgba(255, 255, 255, 0.95);

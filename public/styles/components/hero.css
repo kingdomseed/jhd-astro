@@ -140,20 +140,7 @@
     font-weight: 800;
   }
 
-  /* Grid layer integration */
-  .grid-layer {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    
-    /* Enhanced grid effect within hero */
-    background-image: 
-      linear-gradient(to right, rgba(0, 102, 255, 0.2) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 102, 255, 0.2) 1px, transparent 1px);
-    background-size: calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
-    opacity: 0.3;
-  }
+  /* Grid layer removed for cleaner hero */
 
   /* Responsive adjustments */
   @media (max-width: 1200px) {
@@ -226,12 +213,7 @@
       background: #ffffff;
       border-color: #000000;
     }
-    
-    .grid-layer {
-      background-image: 
-        linear-gradient(to right, #666666 1px, transparent 1px),
-        linear-gradient(to bottom, #666666 1px, transparent 1px);
-    }
+    /* Grid layer override removed */
   }
 
   /* Reduced motion preferences */

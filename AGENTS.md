@@ -6,7 +6,8 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - `src/pages/`: Route files (`index.astro`, `about.astro`, etc.). Keep page filenames lowercase.
 - `src/components/`: Reusable UI in PascalCase (e.g., `Header.astro`, `Billboard.astro`).
 - `src/scripts/`: Small TypeScript utilities used by components.
-- `public/`: Static assets and global CSS (`/global.css`, images). Refer with root paths (e.g., `/billboard-1.jpeg`).
+- `src/assets/`: Processed assets for components (use `astro:assets`). Example: `import shot from '../assets/billboard/billboard-1.jpeg'` and render with `<Image src={shot} />`.
+- `public/`: Truly static assets and global CSS (`/global.css`, favicons, robots.txt). Reference with root paths (e.g., `/global.css`). Avoid duplicating images that are imported via `astro:assets`.
 - `astro.config.mjs`: Minimal Astro config; prefer defaults.
 - `dist/`: Build output (generated).
 - `docs/`: Project content docs (design, copy).
@@ -24,7 +25,7 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - Pages: lowercase in `src/pages/` (e.g., `privacy.astro`).
 - CSS: Prefer `public/global.css` over inline styles; scope selectors narrowly.
 - Client JS: Keep inline, minimal, colocated with the component; use `data-*` selectors and guard against nulls.
-- Assets: Place in `public/`; do not import unprocessed assets from `src/`.
+- Assets: Prefer `src/assets` + `astro:assets` for images used by components; keep non-processed files (favicons, txt/xml) in `public/`. Do not import unprocessed assets from `src/` outside of `astro:assets`.
 
 ## Testing Guidelines
 - Current stack has no formal test runner. Before opening a PR:

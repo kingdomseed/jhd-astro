@@ -11,7 +11,7 @@ import PageHeader from '../components/PageHeader.astro';
     <meta name="description" content="Get in touch with Jason Holt for Flutter and cross-platform app development services. Contact via form, email, or join our community Discord." />
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="canonical" href="https://jasonholtdigital.com/contact/" />
   </head>
   <body>
@@ -143,13 +143,14 @@ import PageHeader from '../components/PageHeader.astro';
     
     <script>
       // Turnstile callback function
-      function onTurnstileSuccess(token) {
-        // Enable the submit button when Turnstile is completed
-        document.getElementById('submit-btn').disabled = false;
-        
+      function onTurnstileSuccess(token: string) {
+        const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+        if (submitBtn) submitBtn.disabled = false;
+
         // Add the token to the form as a hidden input
-        const form = document.getElementById('contact-form');
-        let tokenInput = document.getElementById('cf-turnstile-response');
+        const form = document.getElementById('contact-form') as HTMLFormElement | null;
+        if (!form) return;
+        let tokenInput = document.getElementById('cf-turnstile-response') as HTMLInputElement | null;
         if (!tokenInput) {
           tokenInput = document.createElement('input');
           tokenInput.type = 'hidden';
@@ -159,19 +160,22 @@ import PageHeader from '../components/PageHeader.astro';
         }
         tokenInput.value = token;
       }
+      ;(window as any).onTurnstileSuccess = onTurnstileSuccess;
 
       // Handle form submission
-      document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      const formEl = document.getElementById('contact-form') as HTMLFormElement | null;
+      formEl?.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        const submitBtn = document.getElementById('submit-btn');
-        const turnstileToken = document.getElementById('cf-turnstile-response');
-        const successDiv = document.getElementById('form-success');
-        const errorDiv = document.getElementById('form-error');
+        const form = e.currentTarget as HTMLFormElement;
+
+        const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+        const turnstileToken = document.getElementById('cf-turnstile-response') as HTMLInputElement | null;
+        const successDiv = document.getElementById('form-success') as HTMLElement | null;
+        const errorDiv = document.getElementById('form-error') as HTMLElement | null;
         
         // Hide previous messages
-        successDiv.style.display = 'none';
-        errorDiv.style.display = 'none';
+        if (successDiv) successDiv.style.display = 'none';
+        if (errorDiv) errorDiv.style.display = 'none';
         
         if (!turnstileToken || !turnstileToken.value) {
           alert('Please complete the security verification.');
@@ -179,36 +183,38 @@ import PageHeader from '../components/PageHeader.astro';
         }
         
         // Show loading state
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
-        submitBtn.disabled = true;
+        const originalText = submitBtn?.innerHTML ?? '';
+        if (submitBtn) {
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+          submitBtn.disabled = true;
+        }
         
         try {
-          const formData = new FormData(this);
-          const response = await fetch(this.action, {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
             method: 'POST',
             body: formData
           });
           
           if (response.ok) {
             // Success
-            successDiv.style.display = 'block';
-            this.reset();
+            if (successDiv) successDiv.style.display = 'block';
+            form.reset();
             // Reset Turnstile
-            if (window.turnstile) {
-              window.turnstile.reset();
-            }
+            (window as any).turnstile?.reset();
           } else {
             // Error
-            errorDiv.style.display = 'block';
+            if (errorDiv) errorDiv.style.display = 'block';
           }
         } catch (error) {
           console.error('Form submission error:', error);
-          errorDiv.style.display = 'block';
+          if (errorDiv) errorDiv.style.display = 'block';
         } finally {
           // Reset button
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = true; // Disabled until Turnstile is completed again
+          if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = true; // Disabled until Turnstile is completed again
+          }
         }
       });
     </script>
