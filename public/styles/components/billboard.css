@@ -55,6 +55,16 @@
     height: 36px;
     box-shadow: var(--shadow-base);
     cursor: pointer;
+    transition: transform 0.15s var(--easing-standard), box-shadow 0.15s var(--easing-standard);
+  }
+  .bb-controls button:hover {
+    transform: translate(-2px, -2px);
+    /* Anchor the shadow visually as the button lifts */
+    box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 0.12);
+  }
+  .bb-controls button:active {
+    transform: translate(-1px, -1px);
+    box-shadow: 7px 7px 0 0 rgba(0, 0, 0, 0.12);
   }
   .bb-controls button:hover {
     transform: translate(-2px, -2px);

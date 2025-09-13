@@ -77,8 +77,6 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    /* Slightly darkened accent for partner icons */
-    --partner-icon-color: color-mix(in srgb, var(--color-accent) 94%, black);
   }
   .partner-link {
     display: inline-flex;
@@ -94,8 +92,8 @@
     font-size: 1.1rem;
   }
   .partner-btn i {
-    color: var(--partner-icon-color);
+    color: var(--color-primary);
     font-size: 1.15rem; /* subtle bump */
-    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.16));
+    filter: none;
   }
 }
