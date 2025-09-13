@@ -8,6 +8,17 @@
     z-index: 10;
     transition: background-color 160ms var(--easing-standard), backdrop-filter 160ms var(--easing-standard);
   }
+  /* Restore vertical breathing room inside header */
+  header.header-nav .container {
+    padding-block: 0.5rem;
+  }
+
+  /* Tighter header padding on mobile */
+  @media (max-width: 768px) {
+    header.header-nav .container {
+      padding-block: 1rem;
+    }
+  }
 
   /* Becomes partially transparent on scroll */
   header.header-nav.is-scrolled {
