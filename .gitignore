@@ -17,3 +17,6 @@
 # Optional: VS Code settings
 .vscode/
 /.worktrees/
+
+# Local Netlify folder
+.netlify
