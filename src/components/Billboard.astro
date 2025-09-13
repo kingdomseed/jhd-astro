@@ -17,10 +17,10 @@ import b7 from '../assets/billboard/billboard-7.jpeg';
   <figure class="billboard-plate" aria-roledescription="carousel" aria-label="Billboard screenshots">
     <div class="bb-stage">
       <!-- Sizing image keeps height without visual output -->
-      <Image class="billboard-img bb-sizer" src={b1} alt="" aria-hidden="true" loading="eager" decoding="async" />
+      <Image class="billboard-img bb-sizer" src={b1} alt="" aria-hidden="true" loading="lazy" fetchpriority="low" decoding="async" />
 
       <!-- Slides (first active/eager; others eager to avoid pop-in during cross-fade) -->
-      <Image class="billboard-img is-active" src={b1} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" fetchpriority="high" decoding="async" />
+      <Image class="billboard-img is-active" src={b1} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
       <Image class="billboard-img" src={b2} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
       <Image class="billboard-img" src={b3} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
       <Image class="billboard-img" src={b4} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
