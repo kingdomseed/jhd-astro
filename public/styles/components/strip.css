@@ -1,10 +1,38 @@
 @layer components {
   /* Strip (social proof) */
   .strip {
+    position: relative;
+    overflow: hidden;
     border-top: 4px solid var(--color-border);
     border-bottom: 4px solid var(--color-border);
-    background: #f5f5f5;
-    padding-block: 32px; /* add vertical space above/below content */
+    /* Subtle gradient akin to page headers, varied direction for contrast */
+    background: linear-gradient(315deg, var(--color-bg) 0%, var(--color-surface-2) 100%);
+    padding-block: 32px; /* vertical space above/below content */
+  }
+  /* Faint grid overlay, sits under content */
+  .strip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--color-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .strip .container {
+    position: relative;
+    z-index: 1;
+  }
+  /* Small section label row (reuses page header tokens) */
+  .strip-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
   }
   .strip p {
     margin: 0;

@@ -18,9 +18,10 @@
     text-align: center;
     color: #000;
     line-height: 1.5;
+    font-size: 1.2rem; /* bump type, keep line-height */
     overflow-wrap: anywhere; /* avoid overflow from long URLs */
     opacity: 0;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 5s ease-in-out; /* timing unchanged by request */
     will-change: opacity;
   }
   .rev-stage .rev-quote.is-active {
