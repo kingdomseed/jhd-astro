@@ -7,8 +7,8 @@
     position: relative;
     z-index: 2;
     
-    /* Subtle gradient background - no white box */
-    background: var(--hero-bg-primary);
+    /* Unified gradient now lives on #bg-atmo; keep section transparent */
+    background: transparent;
     
     /* Remove ugly borders */
     border: none;
@@ -16,10 +16,8 @@
     /* Generous spacing for breathing room */
     padding: 4rem 0 4rem 0;
     
-    /* Keep gradient overlays but remove white box effect */
-    background-image: 
-      radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+    /* Remove local overlays (moved to #bg-atmo) */
+    background-image: none;
     
     /* Remove box shadow that was creating container appearance */
     box-shadow: none;
