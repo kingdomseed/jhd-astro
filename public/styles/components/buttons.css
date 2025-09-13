@@ -29,6 +29,11 @@
     color: #000;
     border: var(--border-base); /* Tertiary buttons get lighter border */
   }
+  /* Compact size variant for tighter contexts */
+  .btn--compact {
+    padding: 8px 12px;
+    gap: 8px;
+  }
   .btn:focus-visible {
     outline: 3px solid var(--color-accent);
     outline-offset: 2px;

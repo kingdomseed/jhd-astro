@@ -12,11 +12,13 @@
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: var(--border-thick);
+    border: var(--border-base);
     box-shadow: var(--shadow-base);
     margin: 0 auto 1rem;
     display: block;
     object-fit: cover;
+    -webkit-mask: url('/images/jason-photo.svg') no-repeat center / cover;
+            mask: url('/images/jason-photo.svg') no-repeat center / cover;
   }
   
   .photo-caption {
