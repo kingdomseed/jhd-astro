@@ -54,6 +54,7 @@
     width: 36px;
     height: 36px;
     box-shadow: var(--shadow-base);
+    cursor: pointer;
   }
   .bb-controls button:hover {
     transform: translate(-2px, -2px);
