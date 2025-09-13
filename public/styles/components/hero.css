@@ -14,7 +14,7 @@
     border: none;
     
     /* Generous spacing for breathing room */
-    padding: 4rem 0 2rem 0;
+    padding: 3rem 0 0rem 0;
     
     /* Remove local overlays (moved to #bg-atmo) */
     background-image: none;

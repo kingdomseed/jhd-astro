@@ -1,4 +1,12 @@
 @layer components {
+  /* Reusable small section header (accent-line + badge-text) */
+  .section-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
   /* Page Header Component */
   .page-header {
     position: relative;

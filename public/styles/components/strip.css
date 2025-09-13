@@ -22,6 +22,32 @@
     pointer-events: none;
     z-index: 0;
   }
+  /* Generic banded section treatment for separation */
+  .section-band {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(315deg, var(--color-bg) 0%, var(--color-surface-2) 100%);
+  }
+  .section-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--color-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* Opt-out of grid texture for specific sections */
+  .section-band.no-grid::before {
+    content: none;
+  }
+  .section-band .container {
+    position: relative;
+    z-index: 1;
+  }
   .strip .container {
     position: relative;
     z-index: 1;
@@ -39,5 +65,28 @@
     padding: 14px 0;
     text-align: center;
     color: #000;
+  }
+
+  /* Partners strip (styled like reviews) */
+  .partners-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 8px 0 2px;
+  }
+  .partner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+  }
+  .partner-link i {
+    color: var(--color-primary);
+    font-size: 1.1rem;
   }
 }

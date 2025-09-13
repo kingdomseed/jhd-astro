@@ -66,6 +66,21 @@
     padding: 16px;
     box-shadow: var(--shadow-base);
   }
+  .panel-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: var(--border-base);
+    box-shadow: var(--shadow-base);
+    margin-bottom: 10px;
+  }
+  .panel-icon i {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+  }
   .twoup {
     display: grid;
     grid-template-columns: 1fr 1fr;
