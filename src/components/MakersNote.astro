@@ -2,6 +2,8 @@
 // Maker’s note provides a personal introduction from Jason.  The
 // layout uses the avatar monogram and muted text colours to
 // complement the rest of the page.
+import { Image } from 'astro:assets';
+import headshot from '../assets/people/jason-school.jpg';
 ---
 <section class="container section note" id="about" aria-labelledby="about-title">
   <header class="section-head" aria-hidden="true">
@@ -11,15 +13,7 @@
   <h2 id="about-title" class="section-title" style="margin-bottom: 10px">Maker’s Note</h2>
   <div class="row" style="align-items: center; justify-content: center">
     <div class="avatar">
-      <img
-        class="avatar-img"
-        src="/images/jason-school.JPG"
-        alt="Jason Holt"
-        width="80"
-        height="80"
-        loading="lazy"
-        decoding="async"
-      />
+      <Image class="avatar-img" src={headshot} alt="Jason Holt" width={80} height={80} loading="lazy" decoding="async" />
     </div>
     <div>
       <p style="margin: .3rem 0; color: var(--muted)">

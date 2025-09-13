@@ -20,13 +20,13 @@ import b7 from '../assets/billboard/billboard-7.jpeg';
       <Image class="billboard-img bb-sizer" src={b1} alt="" aria-hidden="true" loading="eager" decoding="async" />
 
       <!-- Slides (first active/eager; others eager to avoid pop-in during cross-fade) -->
-      <Image class="billboard-img is-active" src={b1} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b2} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b3} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b4} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b5} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b6} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
-      <Image class="billboard-img" src={b7} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" decoding="async" />
+      <Image class="billboard-img is-active" src={b1} alt="Mythic GME Digital — desktop layout showing panels and log" loading="eager" fetchpriority="high" decoding="async" />
+      <Image class="billboard-img" src={b2} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <Image class="billboard-img" src={b3} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <Image class="billboard-img" src={b4} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <Image class="billboard-img" src={b5} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <Image class="billboard-img" src={b6} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
+      <Image class="billboard-img" src={b7} alt="Mythic GME Digital — desktop layout showing panels and log" loading="lazy" decoding="async" />
     </div>
     <p id="bb-status" class="sr-only" aria-live="polite">Slide 1 of 7</p>
     <div class="bb-controls" aria-label="Billboard controls">
