@@ -52,14 +52,14 @@ astro_project/
 
 1. **Small diffs only.** One concern per PR; announce files you’ll touch before editing.
 2. **Semantics & a11y.** Preserve landmarks (`header`, `main`, `footer`), headings order, ARIA labels, and focus order. Add `aria-*` only when necessary.
-3. **Global CSS policy.** Prefer adding classes/selectors in `public/global.css` over inline styles. Keep selectors specific to avoid regressions.
-4. **Assets.** Add images/fonts to `public/` and reference by root path (`/image.png`). Do not import unprocessed assets from `src/`.
+3. **Global CSS policy.** Prefer adding classes/selectors in `public/global.css` and files under `/styles` over inline styles. Keep selectors specific to avoid regressions.
+4. **Assets.** Use `src/assets` + `astro:assets` `<Image />` for component images (e.g., headshots, billboard). Keep true static files (favicons, robots.txt, svg masks) in `public/`.
 5. **Client JS pattern.** Inline, minimal vanilla JS inside the same `.astro` file as the markup it controls (see `Header.astro`).
 
    * Use **data‑attributes** for selectors (e.g., `data-cta="download"`, `data-menu="downloads"`).
    * Guard against nulls and duplicates; support multiple component instances on a page.
    * Keep to **\~20 lines** per component. Anything bigger → propose `client:*` directive + small module via PLAN.
-6. **Fonts & icons.** Font Awesome via CDN in `<head>` of `index.astro`; don’t change CDN without PLAN.
+6. **Fonts & icons.** Use the Font Awesome Kit (v7) with Slab icons for UI; keep brand icons for social. Avoid placing icons inside extra boxed tiles when the control is already a box.
 7. **External links.** Product/store links live in `Header.astro`/`Footer.astro`. Treat as content edits; keep `rel="noopener noreferrer"` for `target="_blank"`.
 
 ---
@@ -74,6 +74,7 @@ astro_project/
   * Footer year correct.
 * **A11y spot‑check:** Tab through interactive elements; visible focus; color contrast not reduced.
 * **Perf spot‑check:** Lighthouse ≥90 for Performance/Best Practices/SEO on home page locally.
+  * Lazy‑load billboard slides and sizer; keep only true LCP candidates eager.
 
 ---
 
@@ -111,6 +112,55 @@ If any cheap test fails: stop, revise the PLAN, seek re‑approval.
 * `public/` assets — verify referenced paths exist after your edits.
 
 ---
+
+## Patterns reference (shared learnings)
+
+### Spacing & layout
+- `.container` provides width and horizontal gutters only (no block padding).
+- `.section` applies vertical spacing (default 4rem desktop, 2rem ≤768px).
+- Header container padding-block: 0.5rem desktop, 1rem mobile.
+
+### Section headers
+- `.section-head` (accent line + badge text) is visual only; mark with `aria-hidden="true"`.
+- Keep a unique H2 per section via `.section-title`.
+
+### Hero
+- Eyebrow + H1; CTAs: Primary "Learn More" → `/apps`, Tertiary "Get Resources" → `/resources`.
+- Stats are icon chips (star, download, users); no bullet separators; slightly larger type on chips.
+- Right-side faint grid layer on desktop; hidden on mobile.
+
+### Billboard
+- Inner images: no inner box shadow; `border-radius: 15px`.
+- Controls: lighter borders, pointer cursor, anchored shadow lift on hover/active.
+- Images: lazy-load sizer and non-active slides to avoid below-the-fold warnings.
+
+### Community & Partners
+- Community: Discord button uses `.btn--discord`; Support & FAQ is tertiary with Slab arrow.
+- Partners strip styled like reviews; tertiary buttons, brand-blue icons (no icon shadow).
+
+### Resources
+- Guide bars: inline Slab icon + label + arrow; avoid icon tiles inside the bar.
+
+### Footer
+- Footer logo matches header badge (48×48, accent background, thick border, lift hover).
+- Footer nav links include Slab icons; legal row includes a Back-to-Top link.
+- Optional half-grid background for subtle separation.
+
+### Buttons
+- Global anchored-shadow hover/active for `.btn`; colored-shadow variants available:
+  - `btn--shadow-primary`, `btn--shadow-accent`, `btn--shadow-discord`.
+
+### Icons
+- Prefer Slab icons for UI (`fa-slab fa-regular ...`); keep brand icons for social.
+- Mobile nav shows icons; hide nav icons on desktop for a cleaner look.
+
+### A11y & semantics
+- Eyebrow labels are `aria-hidden`; ensure unique H2 per section.
+- Use semantic `ul/li` for lists; never assign `role=list/listitem` to anchors or buttons.
+
+### Performance
+- Use `astro:assets` `<Image />` for local images (e.g., headshot in Maker’s Note and About).
+- Set `fetchpriority="high"` only for true LCP images.
 
 ## PR requirements
 
