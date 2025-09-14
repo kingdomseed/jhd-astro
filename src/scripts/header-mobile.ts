@@ -7,15 +7,31 @@ function initHeaderMobile() {
   if (!toggle || !nav) return;
   const closeBtn = nav.querySelector<HTMLButtonElement>('.nav-close');
 
+  // Lazy-created overlay to capture outside clicks
+  let overlay: HTMLDivElement | null = null;
+  const ensureOverlay = () => {
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.addEventListener('click', () => close());
+    }
+    return overlay;
+  };
+
   const open = () => {
     nav.classList.add('is-open');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('aria-label', 'Close menu');
+    document.body.classList.add('has-nav-open');
+    const ov = ensureOverlay();
+    if (!ov.isConnected) document.body.appendChild(ov);
   };
   const close = () => {
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('has-nav-open');
+    if (overlay && overlay.isConnected) overlay.remove();
   };
   const isOpen = () => nav.classList.contains('is-open');
 
@@ -28,20 +44,11 @@ function initHeaderMobile() {
   // Close button inside the panel
   closeBtn?.addEventListener('click', (e) => {
     e.preventDefault();
-    if (isOpen()) {
-      close();
-      toggle.focus();
-    }
+    close();
+    toggle.focus();
   });
 
-  // Close when clicking outside the nav when open
-  document.addEventListener('click', (e) => {
-    const t = e.target as Node | null;
-    if (!t) return;
-    if (isOpen() && !nav.contains(t) && !toggle.contains(t)) {
-      close();
-    }
-  });
+  // Outside clicks are handled by overlay now (added on open)
 
   // Close on Escape and return focus to the toggle
   document.addEventListener('keydown', (e) => {

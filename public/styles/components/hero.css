@@ -181,6 +181,17 @@
     .stat-chip { padding: 6px 8px; }
   }
 
+  /* Use dynamic viewport units when available to avoid scrollbar-width overflow */
+  @supports (width: 100dvw) {
+    .hero-fullwidth {
+      width: 100dvw;
+      margin-left: calc(-50dvw + 50%);
+    }
+    @media (max-width: 768px) {
+      .hero-fullwidth { margin-left: calc(-50dvw + 50%); }
+    }
+  }
+
   @media (max-width: 480px) {
     .display-title {
       font-size: 2.25rem;

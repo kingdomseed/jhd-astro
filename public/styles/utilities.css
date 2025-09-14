@@ -72,5 +72,7 @@
   #site {
     position: relative;
     z-index: 1;
+    /* Clip any horizontal overflow from full-bleed sections */
+    overflow-x: clip;
   }
 }

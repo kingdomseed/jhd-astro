@@ -1,6 +1,6 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- Anchored shadow plate (brand blue) -->
-<rect x="6" y="6" width="250" height="250" fill="#0066FF"/>
+<svg width="258" height="258" viewBox="0 0 258 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Anchored shadow plate (brand blue) with 8px offset -->
+<rect x="8" y="8" width="250" height="250" fill="#0066FF"/>
 <!-- Foreground plate (white) -->
 <rect width="250" height="250" fill="white"/>
 <mask id="path-1-outside-1_2007_57" maskUnits="userSpaceOnUse" x="36" y="37" width="54" height="129" fill="black">

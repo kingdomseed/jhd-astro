@@ -140,16 +140,26 @@
       width: 78vw;
       max-width: 300px;
       background: #ffffff;
-      border-left: var(--border-thick); /* Keep thick for mobile panel importance */
-      box-shadow: var(--shadow-lift);
+      /* Hide visual edge entirely when closed */
+      border-left: none;
+      box-shadow: none;
       padding: 16px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 8px;
-      transform: translateX(100%);
+      /* Move fully off-canvas including border thickness to avoid a clickable sliver */
+      transform: translateX(calc(100% + 4px));
       transition: transform 300ms var(--easing-standard);
       z-index: 15;
+      pointer-events: none; /* prevent accidental triggers when off-canvas */
+    }
+    /* Overlay sits below the panel, blocks page interaction */
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: transparent; /* click target only */
+      z-index: 14;
     }
     /* Close button at top-right of panel */
     .nav .nav-close {
@@ -160,6 +170,9 @@
     }
     .nav.is-open {
       transform: translateX(0);
+      border-left: var(--border-thick);
+      box-shadow: var(--shadow-lift);
+      pointer-events: auto; /* enable interaction only when open */
     }
     .nav a {
       width: 100%;
@@ -172,6 +185,14 @@
       margin-top: 8px;
       width: 100%;
     }
+  }
+
+  /* Prevent background scroll when nav is open */
+  body.has-nav-open { overflow: hidden; }
+
+  /* Reduce accidental horizontal gesture interpretation */
+  @media (max-width: 900px) {
+    body { touch-action: pan-y; }
   }
 
   @media (min-width: 901px) {

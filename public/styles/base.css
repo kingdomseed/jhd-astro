@@ -13,6 +13,14 @@
     color: var(--color-text);
     font: 16px/1.65 var(--font-body);
   }
+
+  /* Prevent horizontal scroll caused by full-bleed sections */
+  @supports (overflow-x: clip) {
+    html, body { overflow-x: clip; }
+  }
+  @supports not (overflow-x: clip) {
+    html, body { overflow-x: hidden; }
+  }
   /* Normalize heading defaults (UA styles add large margins) */
   h1 {
     margin-top: 1rem;
