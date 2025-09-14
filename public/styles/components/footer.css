@@ -129,6 +129,13 @@
     align-items: center;
     gap: 12px;
   }
+  /* Keep icon + label together when the legal links wrap */
+  .f-legal small a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
   .top-link {
     display: inline-flex;
     align-items: center;
