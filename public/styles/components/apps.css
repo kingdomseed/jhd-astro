@@ -1,0 +1,46 @@
+@layer components {
+  .app-info-section {
+    padding: 4rem 0;
+    background: var(--color-surface-2);
+    border-top: var(--border-base);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .info-card {
+    background: var(--color-surface);
+    border: var(--border-base);
+    padding: 2rem;
+    transition: transform 0.15s var(--easing-standard);
+  }
+  .info-card:hover { transform: translate(-2px, -2px); }
+  .info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 1rem;
+  }
+  .info-card h3 i { color: var(--color-primary); font-size: 1.125rem; }
+  .info-card p { color: var(--color-text-muted); line-height: 1.6; margin: 0; }
+  .info-card a { color: var(--color-primary); text-decoration: underline; }
+  .info-card a:hover { text-decoration: none; }
+  .last-updated {
+    text-align: center;
+    color: var(--color-text-muted);
+    border-top: var(--border-subtle);
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .app-info-section { padding: 3rem 0; }
+    .info-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .info-card { padding: 1.5rem; }
+  }
+}
+
