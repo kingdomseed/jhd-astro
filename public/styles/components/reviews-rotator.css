@@ -1,7 +1,7 @@
 @layer components {
   /* Reviews rotator (buttons + quote) */
   .reviews-rotator {
-    margin: 0.5rem auto 0; /* tighter top gap under the heading */
+    margin: 0.5rem auto 1rem; /* add breathing room before strip bottom border */
   }
   /* Cross-fade stage */
   .rev-stage {

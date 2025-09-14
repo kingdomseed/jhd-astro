@@ -1,6 +1,7 @@
 @layer components {
   /* Buttons (shared across pages) */
   .btn {
+    font-family: var(--font-display);
     display: inline-flex;
     align-items: center;
     gap: 10px;

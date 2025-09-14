@@ -50,16 +50,15 @@ The Neo-Brutalist design system uses a bold, high-contrast color palette with sp
 
 ### Typography System
 
-Uses mathematical progression with 1.25 ratio:
+Font pairing centers clarity and punch:
 
 ```css
 :root {
-  /* Font Stack */
-  --font-primary: 'Inter', -apple-system, sans-serif;
-  --font-display: 'Orbitron', 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  
-  /* Type Scale */
+  /* Font stacks (tokens) */
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  --font-display: "Epilogue", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+
+  /* Type Scale (1.25 ratio) */
   --text-xs: 0.8rem;     /* 12.8px */
   --text-sm: 1rem;       /* 16px */
   --text-md: 1.25rem;    /* 20px */
@@ -69,7 +68,17 @@ Uses mathematical progression with 1.25 ratio:
   --text-3xl: 3.052rem;  /* 48.8px */
   --text-4xl: 3.815rem;  /* 61px */
 }
+
+/* Application */
+body { font: 16px/1.65 var(--font-body); }
+.display-title { font-family: var(--font-display); }
+.btn { font-family: var(--font-display); }
 ```
+
+Usage:
+
+- Epilogue for hero headlines, punchy statements, and CTAs.
+- Plus Jakarta Sans for body text, smaller headings, nav, and UI.
 
 ### Grid System & Energy Particles
 

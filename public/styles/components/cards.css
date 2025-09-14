@@ -140,6 +140,13 @@
     }
   }
 
+  /* Very narrow screens: use single column to avoid asymmetric widths in Safari */
+  @media (max-width: 560px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     .card,

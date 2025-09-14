@@ -43,6 +43,38 @@
 
 ---
 
+## 3.1) Brand Typography
+
+**Primary fonts**
+
+- Display: Epilogue (700/800/900) — hero headlines, punchy statements, buttons/CTAs.
+- Body/UI: Plus Jakarta Sans (400/500/600/700) — body copy, small headings, navigation, UI labels.
+
+**Usage rules**
+
+- Keep Epilogue for short, high‑impact lines. Avoid long paragraphs in Epilogue.
+- Use Plus Jakarta Sans everywhere else for readability and calm tone.
+- Button labels use Epilogue (heavy weight) to match the neo‑brutalist styling.
+- Page titles may stay in Plus Jakarta Sans unless a page needs extra punch.
+
+**Implementation (CSS tokens)**
+
+- Tokens: `--font-display` = Epilogue stack; `--font-body` = Plus Jakarta Sans stack.
+- Applied: `body { font: 16px/1.65 var(--font-body) }`, `.display-title { font-family: var(--font-display) }`, `.btn { font-family: var(--font-display) }`.
+- Delivery: Google Fonts with `display=swap`. Consider preconnect to fonts domains if needed.
+
+**Do**
+
+- Keep lines short in Epilogue, increase letter‑spacing slightly if you tighten sizes.
+- Use consistent weights per context (e.g., 900 for hero title, 800 for buttons).
+
+**Don’t**
+
+- Don’t mix Epilogue and Plus Jakarta Sans within the same sentence.
+- Don’t use Epilogue for dense or lengthy body content.
+
+---
+
 ## 4) Information Architecture (public site)
 
 **Global nav:** Apps · Resources · Support · Blog · About

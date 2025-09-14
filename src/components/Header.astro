@@ -2,14 +2,12 @@
 // Site header containing the logo, primary navigation and an
 // accessible Download dropdown menu with platform links. The sticky
 // behaviour is achieved through CSS defined in the global stylesheet.
+import brandLogoUrl from '../assets/logo/logo.svg?url';
 ---
 <header class="header-nav">
   <div class="container row" style="justify-content: space-between">
     <a class="brand" href="/" aria-label="Jason Holt Digital home">
-      <div class="logo" aria-hidden="true">
-        <span class="logo-main">JH</span>
-        <span class="logo-sub">DIGITAL</span>
-      </div>
+      <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" />
       <strong>Jason Holt Digital</strong>
     </a>
     <button class="nav-toggle btn btn--secondary" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">

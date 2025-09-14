@@ -3,15 +3,13 @@
 // connections and legal text.  The current year is computed
 // dynamically so that the copyright notice always remains up to
 // date.
+import brandLogoUrl from '../assets/logo/logo.svg?url';
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
     <div class="f-brand">
-      <div class="logo" aria-hidden="true">
-        <span class="logo-main">JH</span>
-        <span class="logo-sub">DIGITAL</span>
-      </div>
+      <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" />
       <div>
         <strong>Jason Holt Digital</strong>
         <small>Official Mythic GME&nbsp;2e apps</small>

@@ -55,6 +55,7 @@
 
   /* Display title with enhanced impact */
   .display-title {
+    font-family: var(--font-display);
     font-size: 4.5rem;
     font-weight: 900;
     line-height: 1.1;
