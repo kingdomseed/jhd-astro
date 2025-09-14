@@ -1,5 +1,7 @@
 ---
 // App section component with alternating layout support
+import { Image } from 'astro:assets';
+
 interface Props {
   title: string;
   whoItsFor: string;
@@ -14,6 +16,7 @@ interface Props {
   reverse?: boolean;
   imageSrc?: string;
   imageAlt?: string;
+  images?: any[]; // optional array of astro:assets images (e.g., mobile device shots)
 }
 
 const { 
@@ -24,7 +27,8 @@ const {
   storeLinks, 
   reverse = false,
   imageSrc,
-  imageAlt = ""
+  imageAlt = "",
+  images
 } = Astro.props;
 ---
 
@@ -83,20 +87,39 @@ const {
       
       <!-- Image/Screenshot Column -->
       <div class="app-visual">
-        <div class="app-image-container">
-          {imageSrc ? (
-            <img src={imageSrc} alt={imageAlt} class="app-image" />
-          ) : (
-            <div class="app-placeholder">
-              <i class="fa-solid fa-image placeholder-icon" aria-hidden="true"></i>
-              <p class="placeholder-text">Screenshots<br/>Coming Soon</p>
+        {Array.isArray(images) && images.length > 0 ? (
+          <figure class="device-carousel" aria-roledescription="carousel" aria-label={`${title} screenshots`}>
+            <div class="device-stage">
+              {images.map((img, idx) => (
+                <div class={`device-frame ${idx === 0 ? 'is-active' : ''}`} role="group" aria-roledescription="slide" aria-label={`Slide ${idx + 1} of ${images.length}`}>
+                  <Image class="device-shot" src={img} alt={imageAlt || `${title} screenshot ${idx + 1}`} loading="lazy" decoding="async" />
+                </div>
+              ))}
             </div>
-          )}
-          
-          <!-- Decorative geometric elements -->
-          <div class="geometric-accent geometric-accent--1" aria-hidden="true"></div>
-          <div class="geometric-accent geometric-accent--2" aria-hidden="true"></div>
-        </div>
+            <p class="sr-only device-status" aria-live="polite">Slide 1 of {images.length}</p>
+            <div class="device-controls" aria-label="Screenshot controls">
+              <button type="button" class="dc-prev" aria-label="Previous screenshot"><i class="fa-slab fa-regular fa-angle-left" aria-hidden="true"></i></button>
+              <button type="button" class="dc-next" aria-label="Next screenshot"><i class="fa-slab fa-regular fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+            <script>
+              import '../scripts/device-carousel.ts';
+            </script>
+          </figure>
+        ) : (
+          <div class="app-image-container">
+            {imageSrc ? (
+              <img src={imageSrc} alt={imageAlt} class="app-image" />
+            ) : (
+              <div class="app-placeholder">
+                <i class="fa-solid fa-image placeholder-icon" aria-hidden="true"></i>
+                <p class="placeholder-text">Screenshots<br/>Coming Soon</p>
+              </div>
+            )}
+            <!-- Decorative geometric elements -->
+            <div class="geometric-accent geometric-accent--1" aria-hidden="true"></div>
+            <div class="geometric-accent geometric-accent--2" aria-hidden="true"></div>
+          </div>
+        )}
       </div>
     </div>
   </div>
@@ -227,6 +250,41 @@ const {
     font-weight: 600;
     line-height: 1.4;
   }
+
+  /* Device carousel (uses transparency + anchored drop shadow) */
+  .device-carousel { position: relative; }
+  .device-stage {
+    position: relative;
+    min-height: 600px;
+    display: grid;
+  }
+  .device-frame {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: opacity 400ms var(--easing-standard);
+  }
+  .device-frame.is-active { opacity: 1; }
+  .device-shot {
+    display: block;
+    height: 600px;
+    width: auto;
+    background: transparent; /* keep transparency; no drop shadow for screenshots */
+  }
+  .device-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .device-controls button {
+    border: var(--border-base);
+    background: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
   
   /* Geometric accents */
   .geometric-accent {
@@ -277,6 +335,8 @@ const {
     .app-title {
       font-size: 2rem;
     }
+    .device-stage { min-height: 520px; }
+    .device-shot { height: 520px; }
   }
   
   @media (max-width: 640px) {
@@ -292,5 +352,7 @@ const {
       padding: 0.625rem 0.875rem;
       font-size: 0.9rem;
     }
+    .device-stage { min-height: 420px; }
+    .device-shot { height: 420px; }
   }
 </style>
