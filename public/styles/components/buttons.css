@@ -66,6 +66,23 @@
   }
   .btn--shadow-discord:hover { box-shadow: 8px 8px 0 0 #5865F2; }
   .btn--shadow-discord:active { box-shadow: 7px 7px 0 0 #5865F2; }
+  /* Partner-specific shadow variants */
+  .btn--shadow-wordmill {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #EF81DD; /* Word Mill Creative */
+  }
+  .btn--shadow-wordmill:hover { box-shadow: 8px 8px 0 0 #EF81DD; }
+  .btn--shadow-wordmill:active { box-shadow: 7px 7px 0 0 #EF81DD; }
+  .btn--shadow-retropunk {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #D80809; /* Retropunk */
+  }
+  .btn--shadow-retropunk:hover { box-shadow: 8px 8px 0 0 #D80809; }
+  .btn--shadow-retropunk:active { box-shadow: 7px 7px 0 0 #D80809; }
   /* Compact size variant for tighter contexts */
   .btn--compact {
     padding: 8px 12px;
