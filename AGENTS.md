@@ -60,6 +60,35 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - Performance:
   - Prefer `<Image />` from `astro:assets` for local images (e.g., headshot). Lazy‑load non‑critical images.
 
+## New Shared Learnings (2025-09)
+
+- Fonts loading
+  - Do not `@import` Google Fonts inside `public/global.css` (can break layer ordering and cascade). Use head `<link>` tags.
+  - Centralize in `src/components/HeadFonts.astro` and include in each page (or a base layout).
+- Off‑canvas mobile nav
+  - Keep closed panel fully off‑canvas: `transform: translateX(calc(100% + borderWidth))`, remove border/shadow when closed, and `pointer-events: none`.
+  - When open: restore border/shadow and `pointer-events: auto`.
+  - Add a body‑level overlay to capture outside clicks and add `body.has-nav-open { overflow: hidden; }` to prevent background scroll.
+  - Optionally add `touch-action: pan-y` at mobile widths to reduce unintended horizontal gestures.
+  - If external code toggles classes, a small MutationObserver can normalize overlay/aria/scroll‑lock.
+- Full‑bleed sections and horizontal overflow
+  - `100vw` includes scrollbar width and can trigger horizontal scroll. Prefer `100dvw` + `margin-left: calc(-50dvw + 50%)` when supported.
+  - Guard with `html, body { overflow-x: clip; }` (fallback `hidden`) and `#site { overflow-x: clip; }`.
+- Images & caching
+  - Replacing a file with the same name doesn’t always invalidate astro:assets cache.
+  - For a clean re‑opt: remove `.astro/`, `dist/`, `node_modules/.astro/`, and `node_modules/.vite/`, then rebuild.
+  - Consider renaming changed assets (e.g., `logo-v2.jpg`) to force new transforms.
+- SVG vs raster
+  - Use `logo.svg?url` for crisp, cache‑safe logos (avoid raster transforms). Use `<Image />` for raster assets to leverage optimization.
+- Lazy‑loading
+  - Lazy‑load below‑the‑fold images. Keep likely LCP imagery eager (e.g., hero, header logo) unless measurements show otherwise.
+- Page headers
+  - Default header text alignment is left. Vary right‑side visuals per page (shapes/grid/particles) for balanced contrast.
+- Minor a11y/UX polish
+  - Footer legal links use `inline-flex` + `white-space: nowrap` to keep icon+label together.
+  - Reviews rotator includes bottom margin so quotes don’t collide with strip borders.
+  - Very narrow screens (<560px): switch 2‑col card grids to a single column to avoid asymmetric widths.
+
 ## Testing Guidelines
 - Current stack has no formal test runner. Before opening a PR:
   - Build/type check: `npx astro check && npm run build` — no errors or warnings introduced.

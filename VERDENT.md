@@ -76,6 +76,23 @@ astro_project/
 * **Perf spot‑check:** Lighthouse ≥90 for Performance/Best Practices/SEO on home page locally.
   * Lazy‑load billboard slides and sizer; keep only true LCP candidates eager.
 
+### New performance/layout learnings
+- Fonts
+  - Don’t `@import` remote Google Fonts inside `public/global.css`. Use `<link rel="preconnect">` + `<link rel="stylesheet">` in the head (via a small `HeadFonts.astro` component) to avoid layer/import pitfalls and improve paint.
+- Full‑bleed sections
+  - `100vw` can include scrollbar width and cause horizontal scroll. Prefer `100dvw` + `calc(-50dvw + 50%)` when available.
+  - Add `overflow-x: clip` (fallback `hidden`) on `html, body`, and clip on `#site` to prevent accidental horizontal scrolling.
+- Off‑canvas mobile nav
+  - Closed: fully off‑screen (`translateX(calc(100% + borderWidth))`), no border/shadow, `pointer-events: none`.
+  - Open: restore border/shadow, `pointer-events: auto`, append a body‑level overlay to capture outside clicks, and set `body.has-nav-open { overflow: hidden; }`.
+  - Consider `touch-action: pan-y` at mobile widths to reduce unintended horizontal gestures.
+  - If classes are toggled externally, a MutationObserver can normalize overlay/aria/scroll‑lock.
+- Images & caching
+  - astro:assets caches transforms. To force re‑optimization: delete `.astro/`, `dist/`, `node_modules/.astro/`, and `node_modules/.vite/`, then rebuild.
+  - Renaming an asset also guarantees fresh transforms.
+- Lazy‑loading guidance
+  - Lazy‑load below‑the‑fold images; keep above‑the‑fold/LCP images eager unless data shows otherwise.
+
 ---
 
 ## SEO & meta
@@ -161,6 +178,16 @@ If any cheap test fails: stop, revise the PLAN, seek re‑approval.
 ### Performance
 - Use `astro:assets` `<Image />` for local images (e.g., headshot in Maker’s Note and About).
 - Set `fetchpriority="high"` only for true LCP images.
+ - Use `logo.svg?url` for vector brand marks to avoid raster pipelines and caching complexity.
+ - Beware `100vw` overflow; prefer `100dvw` where available and clip overflow.
+
+### Page headers
+- Left‑align header text by default across pages; vary right‑side visuals (shapes/grid/particles) for balanced visual interest.
+
+### Minor UX polish
+- Footer legal links should keep icon + text together (`inline-flex`, `white-space: nowrap`).
+- Reviews rotator needs bottom spacing to avoid colliding with strip border.
+- On very narrow screens (<560px), reduce card grids to a single column to avoid uneven widths.
 
 ## PR requirements
 
