@@ -66,8 +66,8 @@ const getStoreShadowClass = (storeName: string) => {
 
           <div class="app-details">
             <div class="detail-block">
-              <h3>What it does</h3>
               <div class="feature-card">
+                <h3>What it does</h3>
                 <ul class="feature-list">
                   {features.map(feature => (
                     <li class="feature-item">
@@ -80,9 +80,9 @@ const getStoreShadowClass = (storeName: string) => {
             </div>
             
             <div class="detail-block">
-              <h3>Official content</h3>
               {Array.isArray(officialContent) ? (
                 <div class="feature-card">
+                  <h3>Official content</h3>
                   <ul class="feature-list">
                     {officialContent.map(item => (
                       <li class="feature-item">
@@ -93,7 +93,10 @@ const getStoreShadowClass = (storeName: string) => {
                   </ul>
                 </div>
               ) : (
-                <p>{officialContent}</p>
+                <div class="feature-card">
+                  <h3>Official content</h3>
+                  <p>{officialContent}</p>
+                </div>
               )}
               {iapInfo && (
                 <div class="iap-notice collapsed" onclick="this.classList.toggle('collapsed')">
@@ -232,17 +235,21 @@ const getStoreShadowClass = (storeName: string) => {
     margin: 0 0 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    position: relative;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .detail-block h3::before {
+  .feature-card h3 {
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .feature-card h3::before {
     content: '';
     position: absolute;
     width: 4px;
     height: 100%;
     background: var(--color-accent);
-    left: -12px;
+    left: 0;
     top: 0;
     border-radius: 0;
   }
@@ -319,6 +326,7 @@ const getStoreShadowClass = (storeName: string) => {
     border-radius: 0;
     cursor: pointer;
     transition: all 0.2s var(--easing-standard);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
   }
 
   .iap-notice i {
@@ -367,6 +375,7 @@ const getStoreShadowClass = (storeName: string) => {
     border-radius: 0;
     cursor: pointer;
     transition: all 0.2s var(--easing-standard);
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
   }
 
   .disclaimer-notice i {
