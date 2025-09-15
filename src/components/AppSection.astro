@@ -159,10 +159,6 @@ const getStoreShadowClass = (storeName: string) => {
               ))}
             </div>
             <p class="sr-only device-status" aria-live="polite">Slide 1 of {images.length}</p>
-            <div class="device-controls" aria-label="Screenshot controls">
-              <button type="button" class="dc-prev" aria-label="Previous screenshot"><i class="fa-slab fa-regular fa-angle-left" aria-hidden="true"></i></button>
-              <button type="button" class="dc-next" aria-label="Next screenshot"><i class="fa-slab fa-regular fa-angle-right" aria-hidden="true"></i></button>
-            </div>
             <script>
               import '../scripts/device-carousel.ts';
             </script>
@@ -434,6 +430,7 @@ const getStoreShadowClass = (storeName: string) => {
     position: relative;
     min-height: 600px;
     display: grid;
+    place-items: center;
   }
   .device-frame {
     position: absolute;
@@ -446,21 +443,26 @@ const getStoreShadowClass = (storeName: string) => {
   .device-frame.is-active { opacity: 1; }
   .device-shot {
     display: block;
-    height: 600px;
+    max-height: 800px;
+    max-width: 100%;
     width: auto;
+    height: auto;
     background: transparent; /* keep transparency; no drop shadow for screenshots */
   }
-  .device-controls {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 8px;
+
+  /* Make desktop screenshots larger - allow overflow */
+  .app-section--reverse .device-carousel .device-shot {
+    max-height: 1500px !important;
+    max-width: none !important; /* Remove width constraint */
+    width: 1200px; /* Fixed width that can overflow */
   }
-  .device-controls button {
-    border: var(--border-base);
-    background: #fff;
-    padding: 6px 10px;
-    cursor: pointer;
+
+  .app-section--reverse .device-carousel .device-stage {
+    min-height: 900px !important;
+  }
+
+  .app-section--reverse .device-carousel {
+    overflow: visible; /* Allow overflow */
   }
   /* Lightbox */
   .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: grid; place-items: center; z-index: 50; }

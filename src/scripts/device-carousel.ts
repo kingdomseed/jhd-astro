@@ -5,7 +5,7 @@ function initDeviceCarousel(root: HTMLElement) {
   const status = root.querySelector<HTMLElement>('.device-status');
   const btnPrev = root.querySelector<HTMLButtonElement>('.dc-prev');
   const btnNext = root.querySelector<HTMLButtonElement>('.dc-next');
-  if (!stage || frames.length === 0 || !btnPrev || !btnNext) return;
+  if (!stage || frames.length === 0) return;
 
   let i = 0;
   const stageEl = stage as HTMLElement;
@@ -27,8 +27,8 @@ function initDeviceCarousel(root: HTMLElement) {
   const next = () => setActive((i + 1) % frames.length);
   const prev = () => setActive((i - 1 + frames.length) % frames.length);
 
-  btnPrev.addEventListener('click', prev);
-  btnNext.addEventListener('click', next);
+  if (btnPrev) btnPrev.addEventListener('click', prev);
+  if (btnNext) btnNext.addEventListener('click', next);
 
   root.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
