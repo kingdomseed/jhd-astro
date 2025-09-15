@@ -91,7 +91,7 @@ function initDeviceCarousel(root: HTMLElement) {
   const openLightbox = (src: string, alt: string) => {
     const ov = document.createElement('div');
     ov.className = 'lightbox';
-    ov.innerHTML = `<div class="lb-inner"><img src="${src}" alt="${alt}"><button class="lb-close" aria-label="Close">×</button></div>`;
+  ov.innerHTML = `<div class="lb-inner"><img src="${src}" alt="${alt}" loading="lazy" decoding="async"><button class="lb-close" aria-label="Close">×</button></div>`;
     const closeLb = () => { document.body.classList.remove('lb-open'); ov.remove(); };
     ov.addEventListener('click', (e) => { if (e.target === ov) closeLb(); });
     ov.querySelector('.lb-close')?.addEventListener('click', closeLb);

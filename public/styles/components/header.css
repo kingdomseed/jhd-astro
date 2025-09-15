@@ -31,6 +31,15 @@
     align-items: center;
     gap: 12px;
   }
+  /* Hide the brand wordmark earlier on medium widths to preserve space */
+  .brand strong {
+    white-space: nowrap;
+  }
+  @media (max-width: 1024px) {
+    .brand strong {
+      display: none;
+    }
+  }
   .logo {
     width: 48px;
     height: 48px;
@@ -101,6 +110,21 @@
     opacity: 1;
     transform: scale(1);
   }
+
+  /* CTA Download: make it pop a bit more than other nav items */
+  .cta-download {
+    position: relative;
+    z-index: 1;
+  }
+  /* Blue anchored shadow specifically for the header CTA */
+  .cta-download.btn {
+    box-shadow: 6px 6px 0 0 var(--color-primary);
+  }
+  .cta-download.btn:hover { box-shadow: 8px 8px 0 0 var(--color-primary); }
+  .cta-download.btn:active { box-shadow: 7px 7px 0 0 var(--color-primary); }
+  /* Rotate caret when menu is open (aria-expanded=true) */
+  .cta-download[aria-expanded="true"] i { transition: transform 0.18s var(--easing-standard); transform: rotate(180deg); }
+  .cta-download i { transition: transform 0.18s var(--easing-standard); }
 
   /* Header download menu */
   .cta-download-wrap {

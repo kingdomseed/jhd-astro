@@ -1,0 +1,295 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeadFonts from '../../components/HeadFonts.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const entries = await getCollection('resources');
+type ResourceEntry = CollectionEntry<'resources'>;
+
+const categoryLabels = {
+  'start-here': 'Start Here',
+  'adventure-journals': 'Adventure Journals',
+  'dice-roller': 'Dice Roller',
+  'custom-tables': 'Custom Tables',
+  advanced: 'Schemas & Deep Dives',
+};
+
+const sortByOrder = (items: ResourceEntry[]) =>
+  [...items].sort((a, b) =>
+    a.data.order === b.data.order
+      ? a.data.title.localeCompare(b.data.title)
+      : a.data.order - b.data.order
+  );
+
+const sectionBlueprint = [
+  {
+    id: 'start-here',
+    badge: 'Start Here',
+    title: 'Get Up and Running Quickly',
+    description: 'Install the apps, learn the workspace, and get comfortable with the Mythic flow.',
+    category: 'start-here',
+  },
+  {
+    id: 'adventure-journals',
+    badge: 'Journals',
+    title: 'Share and Safeguard Your Journals',
+    description: 'Capture stories, share exports, and fix issues fast when something feels off.',
+    category: 'adventure-journals',
+  },
+  {
+    id: 'dice-roller',
+    badge: 'Dice',
+    title: 'Master the Dice Roller Toolkit',
+    description: 'Roll smarter with presets, custom formulas, and portable collections.',
+    category: 'dice-roller',
+  },
+  {
+    id: 'custom-tables',
+    badge: 'Tables',
+    title: 'Build Powerful Custom Tables',
+    description: 'Build, organise, and share powerful tables for improvising on the fly.',
+    category: 'custom-tables',
+  },
+];
+
+const guideSections = sectionBlueprint
+  .map((section) => ({
+    ...section,
+    items: sortByOrder(entries.filter((entry: ResourceEntry) => entry.data.category === section.category)),
+  }))
+  .filter((section) => section.items.length > 0);
+
+const advancedItems = sortByOrder(entries.filter((entry: ResourceEntry) => entry.data.category === 'advanced'));
+
+const searchEntries = sortByOrder(entries).map((entry) => ({
+  slug: entry.slug,
+  title: entry.data.title,
+  summary: entry.data.summary,
+  category: entry.data.category,
+  duration: entry.data.duration ?? null,
+  updated: entry.data.updated ?? null,
+}));
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <HeadFonts />
+    <title>Resources — Guides &amp; Docs for Mythic GME 2e Apps</title>
+    <meta name="description" content="Guides for Mythic Apps: onboarding, dice formulas, custom tables, schema references, and troubleshooting." />
+    <link rel="stylesheet" href="/global.css" />
+  <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://jasonholtdigital.com/resources/" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <div id="bg-atmo" aria-hidden="true"></div>
+    <div id="site">
+      <Header />
+
+      <PageHeader 
+        title="Guides &amp; Documentation"
+        subtitle="Learn, create, and troubleshoot"
+        description="Task-focused guides for every Mythic tool: onboarding, journals, dice, custom tables, and schema references."
+        accent="Resources"
+        layout="left"
+        icon="fa-solid fa-book-open"
+        visualElement="grid"
+        colorScheme="primary"
+      />
+
+      <main id="main" class="resources-main">
+        {guideSections.map((section) => (
+          <section class="section" id={section.id} aria-labelledby={`${section.id}-title`}>
+            <div class="container">
+              <header class="section-head" aria-hidden="true">
+                <span class="accent-line" aria-hidden="true"></span>
+                <span class="badge-text">{section.badge}</span>
+              </header>
+              <div class="resource-section-heading">
+                <h2 id={`${section.id}-title`} class="section-title">
+                  {section.title}
+                </h2>
+                <p class="resource-section-summary">{section.description}</p>
+              </div>
+              <ul class="resource-list" role="list">
+                {section.items.map((item) => (
+                  <li>
+                    <a class="resource-card" href={`/resources/${item.slug}/`}>
+                      <span class="resource-card__icon" aria-hidden="true">
+                        <i class={item.data.icon}></i>
+                      </span>
+                      <span class="resource-card__body">
+                        <span class="resource-card__title">{item.data.title}</span>
+                        <span class="resource-card__summary">{item.data.summary}</span>
+                        <span class="resource-card__meta">
+                          {item.data.duration && (
+                            <span class="resource-card__meta-item">{item.data.duration}</span>
+                          )}
+                          <span class="resource-card__meta-item">{categoryLabels[item.data.category]}</span>
+                          {item.data.updated && (
+                            <span class="resource-card__meta-item">Updated {item.data.updated}</span>
+                          )}
+                        </span>
+                      </span>
+                      <span class="resource-card__arrow" aria-hidden="true">
+                        <i class="fa-slab fa-regular fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        ))}
+
+        {advancedItems.length > 0 && (
+          <section class="section" id="schemas" aria-labelledby="schemas-title">
+            <div class="container">
+              <header class="section-head" aria-hidden="true">
+                <span class="accent-line" aria-hidden="true"></span>
+                <span class="badge-text">Deep Dives</span>
+              </header>
+              <div class="resource-section-heading">
+                <h2 id="schemas-title" class="section-title">
+                  Schemas &amp; Deep Dives
+                </h2>
+                <p class="resource-section-summary">Reference docs, JSON exports, and schema notes for tooling and integrations.</p>
+              </div>
+              <ul class="resource-list" role="list">
+                {advancedItems.map((item) => (
+                  <li>
+                    <a class="resource-card" href={`/resources/${item.slug}/`}>
+                      <span class="resource-card__icon" aria-hidden="true">
+                        <i class={item.data.icon}></i>
+                      </span>
+                      <span class="resource-card__body">
+                        <span class="resource-card__title">{item.data.title}</span>
+                        <span class="resource-card__summary">{item.data.summary}</span>
+                        <span class="resource-card__meta">
+                          <span class="resource-card__meta-item">{categoryLabels[item.data.category]}</span>
+                          {item.data.duration && (
+                            <span class="resource-card__meta-item">{item.data.duration}</span>
+                          )}
+                          {item.data.updated && (
+                            <span class="resource-card__meta-item">Updated {item.data.updated}</span>
+                          )}
+                        </span>
+                      </span>
+                      <span class="resource-card__arrow" aria-hidden="true">
+                        <i class="fa-slab fa-regular fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {searchEntries.length > 0 && (
+          <section class="section" id="index-search" aria-labelledby="index-title">
+            <div class="container">
+              <header class="section-head" aria-hidden="true">
+                <span class="accent-line" aria-hidden="true"></span>
+                <span class="badge-text">Index</span>
+              </header>
+              <div class="resource-section-heading">
+                <h2 id="index-title" class="section-title">
+                  Index &amp; Search
+                </h2>
+                <p class="resource-section-summary">Search every guide at once or browse the quick index below.</p>
+              </div>
+              <div class="resource-search" data-resource-search-root>
+                <label class="resource-search__label" for="resource-search-input">Search resources</label>
+                <input id="resource-search-input" class="resource-search__input" type="search" name="resource-search" placeholder="Try &quot;dice&quot;, &quot;export&quot;, or &quot;schema&quot;" data-resource-search-input />
+                <p class="resource-search__hint" id="resource-search-hint">Results update as you type.</p>
+                <ul class="resource-search__results" role="list" data-resource-search-list aria-describedby="resource-search-hint">
+                  {searchEntries.map((entry) => (
+                    <li
+                      data-resource-search-item
+                      data-title={entry.title}
+                      data-summary={entry.summary}
+                      data-category={categoryLabels[entry.category]}
+                    >
+                      <a href={`/resources/${entry.slug}/`}>
+                        <span class="resource-search__result-title">{entry.title}</span>
+                        <span class="resource-search__result-summary">{entry.summary}</span>
+                        <span class="resource-search__result-meta">{categoryLabels[entry.category]}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <p class="resource-search__empty" data-resource-search-empty hidden>No matches yet. Try a different keyword.</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section class="section section-band" id="resources-support" aria-labelledby="resources-support-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Need Help?</span>
+            </header>
+            <div class="resource-support">
+              <div class="resource-support__copy">
+                <h2 id="resources-support-title" class="section-title">
+                  Can’t find what you’re looking for?
+                </h2>
+                <p class="resource-support__summary">Send us a note or hop into Discord—real humans are ready to help keep your adventures rolling.</p>
+              </div>
+              <div class="resource-support__actions">
+                <a class="btn btn--shadow-primary" href="/support">
+                  Contact Support
+                  <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn--shadow-discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                  Join Discord
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+
+    <script type="module" is:inline>
+      const root = document.querySelector('[data-resource-search-root]');
+      if (root) {
+        const input = root.querySelector('[data-resource-search-input]');
+        const items = Array.from(root.querySelectorAll('[data-resource-search-item]'));
+        const emptyState = root.querySelector('[data-resource-search-empty]');
+        const list = root.querySelector('[data-resource-search-list]');
+
+        const filterList = () => {
+          const query = (input?.value ?? '').trim().toLowerCase();
+          let visibleCount = 0;
+
+          items.forEach((item) => {
+            const haystack = `${item.dataset.title ?? ''} ${item.dataset.summary ?? ''} ${item.dataset.category ?? ''}`.toLowerCase();
+            const matches = query.length === 0 || haystack.includes(query);
+            item.toggleAttribute('hidden', !matches);
+            if (matches) {
+              visibleCount += 1;
+            }
+          });
+
+          if (emptyState) {
+            emptyState.toggleAttribute('hidden', visibleCount !== 0);
+          }
+          if (list) {
+            list.toggleAttribute('data-has-results', visibleCount !== 0);
+          }
+        };
+
+        input?.addEventListener('input', filterList);
+        filterList();
+      }
+    </script>
+  </body>
+</html>
