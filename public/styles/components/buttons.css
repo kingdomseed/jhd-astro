@@ -139,6 +139,15 @@
   }
   .btn--shadow-steam:hover { box-shadow: 8px 8px 0 0 #1B2838; }
   .btn--shadow-steam:active { box-shadow: 7px 7px 0 0 #1B2838; }
+  
+  .btn--shadow-github {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #000; /* GitHub black */
+  }
+  .btn--shadow-github:hover { box-shadow: 8px 8px 0 0 #000; }
+  .btn--shadow-github:active { box-shadow: 7px 7px 0 0 #000; }
   /* Compact size variant for tighter contexts */
   .btn--compact {
     padding: 8px 12px;

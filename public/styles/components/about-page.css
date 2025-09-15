@@ -23,6 +23,7 @@
     border: var(--border-thick);
     box-shadow: var(--shadow-base);
     object-fit: cover;
+    border-radius: 50%;
   }
 
   .about-portrait__caption {
@@ -43,6 +44,7 @@
     gap: 1rem;
     color: #333;
     max-width: 64ch;
+    text-align: left;
   }
 
   .about-intro p {
@@ -127,6 +129,27 @@
     margin: 0;
     color: #333;
     line-height: 1.5;
+  }
+
+  .about-mythic__summary {
+    margin: 0;
+    max-width: 64ch;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .about-mythic__list {
+    margin: 2rem 0 0;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 0.6rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .about-mythic__note {
+    margin: 1.5rem 0 0;
+    color: #555;
   }
 
   .about-connect {

@@ -13,6 +13,8 @@
     max-width: 66ch;
     color: #333;
     line-height: 1.6;
+    text-align: center;
+    margin-inline: auto;
   }
 
   .legal-article {

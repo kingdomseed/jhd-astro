@@ -7,6 +7,13 @@
     gap: 12px;
     margin-bottom: 8px;
   }
+  .section-head.section-head--left {
+    justify-content: flex-start;
+  }
+  .section-head.section-head--left .badge-text,
+  .section-head.section-head--left .accent-line {
+    margin-inline: 0;
+  }
   /* Page Header Component */
   .page-header {
     position: relative;

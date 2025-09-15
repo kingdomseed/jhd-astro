@@ -11,19 +11,25 @@ const backgroundHighlights = [
     icon: 'fa-slab fa-regular fa-graduation-cap',
     title: 'Educator roots',
     description:
-      'Former CS instructor focused on clarity, documentation, and giving players confidence through great onboarding.',
+      'Nine years teaching computer science and digital design—unlocking student creativity, coaching teams, and learning how to explain complex systems simply.',
   },
   {
-    icon: 'fa-slab fa-regular fa-mobile-notch',
-    title: 'Cross-platform craft',
+    icon: 'fa-slab fa-regular fa-heart',
+    title: 'Formed by service',
     description:
-      'Flutter-first builds that feel native on iOS, Android, macOS, Windows, Linux, and the web—one codebase, polished everywhere.',
+      'Two-year practicum in Anaheim focused on leadership, mentorship, and practical service. Staying organized and serving others still guide my work today.',
   },
   {
     icon: 'fa-slab fa-regular fa-dice-d20',
-    title: 'Player-first UX',
+    title: 'Community-first shipping',
     description:
-      'Design that keeps Mythic moving: fast inputs, helpful defaults, and zero friction between an idea and a roll.',
+      'Hundreds of Mythic players in the beta loop, 200+ testers, and updates shaped directly by the questions they ask at the table.',
+  },
+  {
+    icon: 'fa-slab fa-regular fa-robot',
+    title: 'Mobile × NLP next',
+    description:
+      'Starting the M.Sc. in Computational Linguistics at the University of Stuttgart (Oct 2025) to explore practical ways mobile and language tech can work together.',
   },
 ];
 
@@ -39,7 +45,7 @@ const socialLinks = [
     href: 'https://github.com/kingdomseed',
     label: 'Follow on GitHub',
     icon: 'fa-brands fa-github',
-    className: 'btn--shadow-primary',
+    className: 'btn--shadow-github',
     external: true,
   },
   {
@@ -48,6 +54,14 @@ const socialLinks = [
     icon: 'fa-slab fa-regular fa-newspaper',
     className: 'btn--shadow-accent',
   },
+];
+
+const mythicHighlights = [
+  'Fate Chart & Check fully implemented with Chaos Factor, Random Events, and scene adjustments ready in one tap.',
+  'JSON adventure journals and markdown exports keep campaigns portable between desktop and mobile.',
+  'Lists for Characters, Threads, and Features stay linked to scenes so nothing falls through the cracks.',
+  'Custom Table builder with CSV/JSON import/export, 3,000+ icons, and support for multiple languages.',
+  'Accessibility first: screen reader support, adjustable typography, color-blind and left-handed modes.',
 ];
 ---
 <html lang="en">
@@ -81,10 +95,6 @@ const socialLinks = [
       <main id="main" class="about-main">
         <section class="section" id="about-overview" aria-labelledby="about-overview-title">
           <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Profile</span>
-            </header>
             <div class="about-overview">
               <figure class="about-portrait">
                 <Image
@@ -102,15 +112,21 @@ const socialLinks = [
                 </figcaption>
               </figure>
               <div class="about-intro">
-                <h2 id="about-overview-title" class="section-title">Hi, I'm Jason</h2>
+                <header class="section-head section-head--left" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true"></span>
+                  <span class="badge-text">Profile</span>
+                </header>
+                <h2 id="about-overview-title" class="section-title section-title--left">Hi, I'm Jason</h2>
                 <p>
-                  I build the <strong>official Mythic GME&nbsp;2e apps</strong> in partnership with Word Mill Creative. Every release is a
-                  small, deliberate upgrade designed to cut friction for solo GMs and storytellers. When a feature saves your session
-                  from stalling, that’s the win.
+                  Former educator turned indie dev. I’ve been building since 2014 and shipping production, cross-platform Flutter apps
+                  since 2024. Today I run Jason Holt Digital and, in licensed partnership with Word Mill Creative, build the
+                  <strong>official Mythic GME&nbsp;2e apps</strong> with a community of players who expect polish, performance, and respect
+                  for the rules.
                 </p>
                 <p>
-                  After years teaching computer science, I went full-time indie in 2024 to focus on software that respects tabletop
-                  creativity. Mythic has been my notebook and co-GM for decades—these apps are my way of giving back to the community.
+                  The educator in me still drives the work: clear onboarding, meticulous documentation, and software that teaches while
+                  you play. Starting October 13, 2025, I begin the M.Sc. in Computational Linguistics at the University of Stuttgart to
+                  explore how mobile apps and practical NLP can work together.
                 </p>
               </div>
             </div>
@@ -124,18 +140,42 @@ const socialLinks = [
               <span class="badge-text">Official</span>
             </header>
             <div class="about-license">
-              <h2 id="about-license-title" class="section-title">Licensed With Word Mill Creative</h2>
+              <h2 id="about-license-title" class="section-title">Licensed with Word Mill Creative</h2>
               <p class="about-license__summary">
-                Jason Holt Digital develops the sanctioned digital companions for Mythic GME&nbsp;2e. The apps stay faithful to the text,
-                capture the cadence of solo play, and evolve with feedback from the community.
+                Mythic GME has been my go-to oracle for years. In 2024 I partnered with Word Mill Creative to translate Mythic GME&nbsp;2e
+                into an accessible, cross-platform experience. The launch shipped after months of close collaboration, 200+ beta
+                testers, and dozens of player-led iterations.
               </p>
               <ul class="about-license__list">
-                <li>All official Mythic content: Fate Chart/Check, Meaning Tables, Random Events, and more</li>
-                <li>Cross-platform builds—mobile, desktop, and web—with feature parity</li>
-                <li>Community-driven roadmap prioritising real GM pain points</li>
-                <li>Licensed content ensures accuracy and respects the source material</li>
+                <li>Every official Mythic table and mechanic recreated faithfully, including Fate Chart/Check and Random Events</li>
+                <li>Cross-platform releases with feature parity across iOS, Android, macOS, Windows, Linux, and the web</li>
+                <li>Offline-first design, JSON journals, and markdown exports so your campaigns stay portable</li>
+                <li>Accessibility-focused UI with screen reader support, left-handed mode, and adjustable typography</li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        <section class="section" id="about-mythic" aria-labelledby="about-mythic-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Product</span>
+            </header>
+            <h2 id="about-mythic-title" class="section-title">Why Mythic players choose the apps</h2>
+            <p class="about-mythic__summary">
+              Mythic GME Digital streamlines oracle-style play so you can stay in the story. Whether you solo, run GM-less groups, or
+              use Mythic as an inspiration engine, the toolkit keeps pace with your imagination.
+            </p>
+            <ul class="about-mythic__list">
+              {mythicHighlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <p class="about-mythic__note">
+              More than half of every update comes straight from community feedback. If there’s a feature you want, stop by the Mythic
+              Discord and add it to the list.
+            </p>
           </div>
         </section>
 
