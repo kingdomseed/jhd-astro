@@ -3,7 +3,16 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import HeadFonts from '../../components/HeadFonts.astro';
 import PageHeader from '../../components/PageHeader.astro';
-import { getEntryBySlug } from 'astro:content';
+import { getEntryBySlug, getCollection, type CollectionEntry } from 'astro:content';
+
+type ResourceEntry = CollectionEntry<'resources'>;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('resources');
+  return entries.map((entry: ResourceEntry) => ({
+    params: { slug: entry.slug },
+  }));
+}
 
 const { slug } = Astro.params;
 
