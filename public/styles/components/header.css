@@ -164,6 +164,13 @@
     transform: translate(-50%, -50%) rotate(0deg) scale(1);
   }
 
+  /* Body scroll lock when mobile menu is open */
+  .mobile-nav-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
+
   /* Mobile overlay */
   .mobile-overlay {
     position: fixed;
@@ -191,6 +198,7 @@
     width: 100%;
     max-width: 320px;
     height: 100vh;
+    height: 100dvh; /* Better mobile viewport handling */
     background: #ffffff;
     border-left: var(--border-thick);
     box-shadow: var(--shadow-lift);
@@ -200,6 +208,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
 
   .nav--mobile-open {
@@ -262,10 +271,12 @@
   .nav-mobile-section-title {
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--muted);
+    color: #000;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-shadow: 2px 2px 0 var(--color-accent);
+    transition: text-shadow 0.15s var(--easing-standard);
   }
 
   .nav-mobile-downloads {
@@ -283,9 +294,36 @@
     text-decoration: none;
     font-size: 0.875rem;
     border-radius: 4px;
-    transition: background-color 0.15s var(--easing-standard);
+    transition: background-color 0.15s var(--easing-standard), color 0.15s var(--easing-standard);
   }
 
+  /* Brand-specific hover colors for download links */
+  .nav-mobile-downloads a[href*="apps.apple.com"]:hover {
+    background: rgba(0, 122, 255, 0.1); /* Apple Blue */
+    color: #007AFF;
+  }
+
+  .nav-mobile-downloads a[href*="play.google.com"]:hover {
+    background: rgba(52, 168, 83, 0.1); /* Google Green */
+    color: #34A853;
+  }
+
+  .nav-mobile-downloads a[href*="amazon"]:hover {
+    background: rgba(255, 153, 0, 0.1); /* Amazon Orange */
+    color: #FF9900;
+  }
+
+  .nav-mobile-downloads a[href*="apps.microsoft.com"]:hover {
+    background: rgba(0, 120, 212, 0.1); /* Microsoft Blue */
+    color: #0078D4;
+  }
+
+  .nav-mobile-downloads a[href*="itch.io"]:hover {
+    background: rgba(250, 92, 92, 0.1); /* itch.io Red */
+    color: #FA5C5C;
+  }
+
+  /* Fallback for any other download links */
   .nav-mobile-downloads a:hover {
     background: #f2f6ff;
   }

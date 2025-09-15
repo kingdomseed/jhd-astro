@@ -19,6 +19,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **static Astro v5 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
 
+**🏆 GOLD STANDARD:** The homepage (`src/pages/index.astro`) represents our gold standard for design quality, voice, user experience, and component implementation. Reference it for:
+- Component composition and structure
+- Visual design patterns and spacing
+- Voice and content approach
+- Accessibility implementation
+- Performance optimization
+- Mobile responsiveness
+All other pages should match or aspire to this level of polish.
+
 - **Component-driven:** Main page `src/pages/index.astro` composes small, single-purpose components from `src/components/`
 - **Static assets:** All assets served from `public/` (referenced as `/filename.ext`)
 - **Single stylesheet:** `public/global.css` contains all styles - prefer adding classes here over inline styles

@@ -28,13 +28,10 @@ function initMobileNavigation() {
     nav.setAttribute('aria-hidden', 'false');
     overlay.setAttribute('aria-hidden', 'false');
 
-    // Add CSS classes for animation
+    // Add CSS classes for animation and scroll lock
     document.body.classList.add('mobile-nav-open');
     nav.classList.add('nav--mobile-open');
     overlay.classList.add('mobile-overlay--visible');
-
-    // Prevent body scroll
-    document.body.style.overflow = 'hidden';
 
     // Focus the first focusable element
     const focusableElements = getFocusableElements();
@@ -49,13 +46,10 @@ function initMobileNavigation() {
     nav.setAttribute('aria-hidden', 'true');
     overlay.setAttribute('aria-hidden', 'true');
 
-    // Remove CSS classes
+    // Remove CSS classes (includes scroll lock restoration)
     document.body.classList.remove('mobile-nav-open');
     nav.classList.remove('nav--mobile-open');
     overlay.classList.remove('mobile-overlay--visible');
-
-    // Restore body scroll
-    document.body.style.overflow = '';
 
     // Return focus to toggle button
     if (lastActiveElement) {

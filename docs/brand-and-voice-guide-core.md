@@ -33,6 +33,8 @@
 
 **Key principle:** We don't talk to players about our development craft—they experience the results of it through smoother storytelling.
 
+**🏆 GOLD STANDARD:** The homepage (`src/pages/index.astro`) is our gold standard for design quality, voice, user experience, and component implementation. All other pages should match or aspire to this level of polish and intentionality.
+
 ---
 
 ## 3) Voice & Tone
