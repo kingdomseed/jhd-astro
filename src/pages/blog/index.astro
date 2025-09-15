@@ -1,54 +1,19 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import HeadFonts from '../components/HeadFonts.astro';
-import PageHeader from '../components/PageHeader.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeadFonts from '../../components/HeadFonts.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-interface Post {
-  title: string;
-  slug: string;
-  summary: string;
-  category: string;
-  date: string;
-  readTime: string;
-}
+type BlogEntry = CollectionEntry<'blog'>;
 
-const posts: Post[] = [
-  {
-    title: 'Mythic Apps v1.5 Release Highlights',
-    slug: 'mythic-apps-v1-5-release-highlights',
-    summary: 'Refreshed dashboards, smarter dice queues, and streamlined journal exports for solo play.',
-    category: 'Release Notes',
-    date: '2025-08-12',
-    readTime: '6 min read',
-  },
-  {
-    title: 'Designing Lists for Flow State',
-    slug: 'designing-lists-for-flow-state',
-    summary: 'Behind-the-scenes on how we rebuilt list navigation to keep improv scenes moving.',
-    category: 'Behind the Scenes',
-    date: '2025-07-28',
-    readTime: '7 min read',
-  },
-  {
-    title: 'How GMs Use Meaning Tables in Play',
-    slug: 'how-gms-use-meaning-tables-in-play',
-    summary: 'We sat down with power users to map out inspiration workflows and shared their shortcuts.',
-    category: 'Community',
-    date: '2025-07-08',
-    readTime: '5 min read',
-  },
-  {
-    title: 'Draft to Done: Building Custom Tables Fast',
-    slug: 'draft-to-done-building-custom-tables-fast',
-    summary: 'Step-by-step look at creating reliable table packs, plus tips from the Mythic team.',
-    category: 'Guides',
-    date: '2025-06-19',
-    readTime: '8 min read',
-  },
-];
+const posts = (await getCollection('blog'))
+  .slice()
+  .sort((a: BlogEntry, b: BlogEntry) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-const featuredPost = posts[0];
+const featuredEntry: BlogEntry | undefined = posts[0];
+const moreEntries: BlogEntry[] = posts.slice(1);
+const listEntries: BlogEntry[] = moreEntries.length > 0 ? moreEntries : posts;
 
 const categories = [
   {
@@ -112,34 +77,55 @@ const formatDate = (value: string) =>
       />
 
       <main id="main" class="blog-main">
-        <section class="section section--feature" aria-labelledby="feature-title">
-          <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Latest</span>
-            </header>
-            <article class="blog-feature" id="feature">
-              <div class="blog-feature__flag" aria-hidden="true">New</div>
-              <div class="blog-feature__body">
-                <h2 id="feature-title" class="blog-feature__title">
-                  <a href={`/blog/${featuredPost.slug}/`}>{featuredPost.title}</a>
-                </h2>
-                <p class="blog-feature__summary">{featuredPost.summary}</p>
-                <div class="blog-feature__meta" aria-label="Post details">
-                  <span class="blog-pill">{featuredPost.category}</span>
-                  <span class="blog-pill">{formatDate(featuredPost.date)}</span>
-                  <span class="blog-pill">{featuredPost.readTime}</span>
+        {featuredEntry ? (
+          <section class="section section--feature" aria-labelledby="feature-title">
+            <div class="container">
+              <header class="section-head" aria-hidden="true">
+                <span class="accent-line" aria-hidden="true"></span>
+                <span class="badge-text">Latest</span>
+              </header>
+              <article class="blog-feature" id="feature">
+                <div class="blog-feature__flag" aria-hidden="true">New</div>
+                <div class="blog-feature__body">
+                  <h2 id="feature-title" class="blog-feature__title">
+                    <a href={`/blog/${featuredEntry.slug}/`}>{featuredEntry.data.title}</a>
+                  </h2>
+                  <p class="blog-feature__summary">{featuredEntry.data.summary}</p>
+                  {featuredEntry.data.isSample && (
+                    <p class="blog-sample-note">Sample placeholder — replace with the real article before publishing.</p>
+                  )}
+                  <div class="blog-feature__meta" aria-label="Post details">
+                    <span class="blog-pill">{featuredEntry.data.category}</span>
+                    <span class="blog-pill">{formatDate(featuredEntry.data.date)}</span>
+                    <span class="blog-pill">{featuredEntry.data.readTime}</span>
+                    {featuredEntry.data.isSample && <span class="blog-pill blog-pill--sample">Sample</span>}
+                  </div>
+                  <p class="blog-feature__cta">
+                    <a class="blog-feature__link" href={`/blog/${featuredEntry.slug}/`}>
+                      Read release notes
+                      <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </p>
                 </div>
-                <p class="blog-feature__cta">
-                  <a class="blog-feature__link" href={`/blog/${featuredPost.slug}/`}>
-                    Read release notes
-                    <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
+              </article>
+            </div>
+          </section>
+        ) : (
+          <section class="section section--feature" aria-labelledby="feature-title">
+            <div class="container">
+              <header class="section-head" aria-hidden="true">
+                <span class="accent-line" aria-hidden="true"></span>
+                <span class="badge-text">Latest</span>
+              </header>
+              <article class="blog-feature" id="feature">
+                <div class="blog-feature__body">
+                  <h2 id="feature-title" class="blog-feature__title">Blog posts coming soon</h2>
+                  <p class="blog-feature__summary">Add markdown files to `src/content/blog/` and rebuild to populate this section.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        )}
 
         <section class="section" aria-labelledby="recent-title">
           <div class="container">
@@ -152,20 +138,28 @@ const formatDate = (value: string) =>
               <p class="blog-section-summary">Stay current with Mythic updates, process insights, and community voices.</p>
             </div>
             <ul class="blog-posts" role="list">
-              {posts.map((post) => (
+              {listEntries.map((entry) => (
                 <li>
                   <article class="blog-card">
                     <header class="blog-card__header">
-                      <span class="blog-pill">{post.category}</span>
-                      <span class="blog-card__date">{formatDate(post.date)}</span>
+                      <span class="blog-pill">{entry.data.category}</span>
+                      <span class="blog-card__date">{formatDate(entry.data.date)}</span>
                     </header>
                     <h3 class="blog-card__title">
-                      <a href={`/blog/${post.slug}/`}>{post.title}</a>
+                      <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
                     </h3>
-                    <p class="blog-card__summary">{post.summary}</p>
+                    <p class="blog-card__summary">{entry.data.summary}</p>
+                    {entry.data.isSample && (
+                      <p class="blog-sample-note blog-sample-note--card">Sample placeholder — swap in the real article before launch.</p>
+                    )}
                     <footer class="blog-card__footer">
-                      <span class="blog-card__readtime">{post.readTime}</span>
-                      <a class="blog-card__link" href={`/blog/${post.slug}/`}>
+                      <span class="blog-card__readtime">{entry.data.readTime}</span>
+                      {entry.data.isSample && (
+                        <div class="blog-card__meta">
+                          <span class="blog-pill blog-pill--sample">Sample</span>
+                        </div>
+                      )}
+                      <a class="blog-card__link" href={`/blog/${entry.slug}/`}>
                         Read post
                         <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
                       </a>

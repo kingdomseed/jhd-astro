@@ -1,0 +1,98 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HeadFonts from '../../components/HeadFonts.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getCollection, getEntryBySlug, type CollectionEntry } from 'astro:content';
+
+type BlogEntry = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('blog');
+  return entries.map((entry: BlogEntry) => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+if (!slug || Array.isArray(slug)) {
+  throw new Error('Invalid blog slug');
+}
+
+const entry = await getEntryBySlug('blog', slug);
+
+if (!entry) {
+  throw new Error(`Blog post not found for slug: ${slug}`);
+}
+
+const { Content } = await entry.render();
+const post = entry.data;
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date(value));
+
+const canonicalUrl = `https://jasonholtdigital.com/blog/${entry.slug}/`;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <HeadFonts />
+    <title>{post.title} — Mythic Blog</title>
+    <meta name="description" content={post.summary} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="stylesheet" href="/global.css" />
+    <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <div id="bg-atmo" aria-hidden="true"></div>
+    <div id="site">
+      <Header />
+
+      <PageHeader
+        title={post.title}
+        subtitle={post.category}
+        description={post.summary}
+        accent="Blog"
+        layout="left"
+        icon="fa-solid fa-newspaper"
+        colorScheme="secondary"
+      />
+
+      <main id="main" class="blog-detail-main">
+        <article class="container section blog-detail" aria-labelledby="blog-detail-heading">
+          <div class="blog-detail__inner">
+            <p class="blog-detail__back">
+              <a class="blog-back-link" href="/blog#recent-title">
+                <i class="fa-slab fa-regular fa-arrow-left" aria-hidden="true"></i>
+                Back to blog
+              </a>
+            </p>
+            <header class="blog-detail__header">
+              <h2 id="blog-detail-heading" class="blog-detail__title">{post.title}</h2>
+              <div class="blog-detail__meta" aria-label="Post details">
+                <span class="blog-pill">{post.category}</span>
+                <span class="blog-pill">{formatDate(post.date)}</span>
+                <span class="blog-pill">{post.readTime}</span>
+                {post.isSample && <span class="blog-pill blog-pill--sample">Sample</span>}
+              </div>
+              {post.isSample && (
+                <p class="blog-sample-note blog-sample-note--detail">Sample placeholder — replace this entry before publishing to production.</p>
+              )}
+            </header>
+            <div class="blog-detail__content">
+              <Content />
+            </div>
+          </div>
+        </article>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

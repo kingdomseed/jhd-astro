@@ -20,4 +20,21 @@ const resources = defineCollection({
   }),
 });
 
-export const collections = { resources };
+const blog = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    category: z.enum([
+      "Release Notes",
+      "Behind the Scenes",
+      "Guides",
+      "Community",
+    ]),
+    date: z.string(),
+    readTime: z.string(),
+    isSample: z.boolean().default(true),
+  }),
+});
+
+export const collections = { resources, blog };

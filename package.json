@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@awesome.me/kit-9f0db3cdf4": "^1.0.10",
+    "@sentry/astro": "^10.11.0",
+    "@spotlightjs/astro": "^3.2.6",
     "astro": "^5.13.3",
     "tslib": "^2.8.1"
   },
