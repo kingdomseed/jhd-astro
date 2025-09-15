@@ -29,8 +29,9 @@ This is a **static Astro v5 site** with no SSR, no server actions, and no comple
 All other pages should match or aspire to this level of polish.
 
 - **Component-driven:** Main page `src/pages/index.astro` composes small, single-purpose components from `src/components/`
+- **Content collections:** Blog and Resources pull from `src/content/`. Each Markdown entry includes metadata (e.g., `isSample`). Pages use `getCollection()` and `getStaticPaths()`.
 - **Static assets:** All assets served from `public/` (referenced as `/filename.ext`)
-- **Single stylesheet:** `public/global.css` contains all styles - prefer adding classes here over inline styles
+- **Single stylesheet:** `public/global.css` plus component layer files under `public/styles/components/` contain all styles - prefer adding classes there over inline styles
 - **Minimal JS:** Small vanilla JS snippets inline within `.astro` components (see `Header.astro` download menu toggle)
 
 ## Key Files & Patterns
@@ -55,7 +56,7 @@ All other pages should match or aspire to this level of polish.
 - For larger client code, use Astro client directives (`client:load`, `client:idle`)
 
 **Styling:**
-- Prefer adding to `public/global.css` over inline styles
+- Prefer adding to `public/global.css` or `public/styles/components/*.css` over inline styles
 - Keep selectors specific to avoid regressions
 - Use `astro:assets` `<Image />` for component images
 - Keep static files (favicons, robots.txt) in `public/`
@@ -63,6 +64,7 @@ All other pages should match or aspire to this level of polish.
 **External dependencies:**
 - Font Awesome loaded via CDN in `index.astro` head
 - External product/store links in `Header.astro` and `Footer.astro`
+- Contact/support routing consolidates on `/support#contact-panel`; links should point there so the contact tab opens automatically.
 
 ## Before Committing
 
@@ -83,7 +85,7 @@ All other pages should match or aspire to this level of polish.
 **Component conventions:**
 - `.container`: width and horizontal gutters only
 - `.section`: vertical spacing (4rem desktop, 2rem mobile)
-- Section headers use `.section-head` (visual only, `aria-hidden="true"`) + unique H2 with `.section-title`
+- Section headers use `.section-head` (visual only, `aria-hidden="true"`) + unique H2 with `.section-title`; use `.section-head--left` + `.section-title--left` when badge/title align with column content (e.g., About profile).
 
 **Interactive elements:**
 - Use semantic HTML (`ul/li` for lists, proper button/anchor elements)

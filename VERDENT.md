@@ -47,6 +47,8 @@ astro_project/
 
 * Keep the component boundaries as they are; prefer CSS tweaks and micro‑copy edits over structural rewrites.
 * Do **not** add SSR or dynamic data access without an approved PLAN.
+* Blog and Resources pages read from Astro content collections (`src/content/`). When adding entries, update frontmatter to include `isSample` only for placeholder content.
+* All contact/support links should point to `/support#contact-panel`; the page script will auto-open the contact tab based on the hash.
 
 ---
 
@@ -143,6 +145,7 @@ If any cheap test fails: stop, revise the PLAN, seek re‑approval.
 ### Section headers
 - `.section-head` (accent line + badge text) is visual only; mark with `aria-hidden="true"`.
 - Keep a unique H2 per section via `.section-title`.
+- Use `.section-head--left` and `.section-title--left` when the badge/title need to align with column content (e.g., About profile section).
 
 ### Hero
 - Eyebrow + H1; CTAs: Primary "Learn More" → `/apps`, Tertiary "Get Resources" → `/resources`.
@@ -157,6 +160,7 @@ If any cheap test fails: stop, revise the PLAN, seek re‑approval.
 ### Community & Partners
 - Community: Discord button uses `.btn--discord`; Support & FAQ is tertiary with Slab arrow.
 - Partners strip styled like reviews; tertiary buttons, brand-blue icons (no icon shadow).
+- Footer “Contact” links route to `/support#contact-panel` so the contact tab opens automatically.
 
 ### Resources
 - Guide bars: inline Slab icon + label + arrow; avoid icon tiles inside the bar.

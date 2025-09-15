@@ -55,10 +55,10 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
   - Discord button uses brand color variant `.btn--discord`; Support & FAQ is tertiary with Slab arrow.
 - Footer:
   - Footer logo matches header badge (48×48, accent background, thick border, lift hover).
-  - Footer nav links include Slab icons; legal row has Back‑to‑Top link.
+  - Footer nav links include Slab icons. Contact routes to `/support#contact-panel` and auto-opens the contact tab.
   - Optional half‑grid background applied to footer for subtle structure.
 - Buttons:
-  - Global “anchored shadow” lift on hover/active; colored‑shadow variants available: `btn--shadow-primary`, `btn--shadow-accent`, `btn--shadow-discord`.
+  - Global “anchored shadow” lift on hover/active; colored‑shadow variants available (`btn--shadow-primary`, `btn--shadow-accent`, `btn--shadow-discord`, `btn--shadow-github`, etc.).
 - A11y & semantics:
   - Eyebrow labels are visual only (`aria-hidden`); keep unique H2 per section.
   - Use semantic lists instead of `role=list/listitem` on anchors; avoid non‑interactive roles on interactive elements.
@@ -90,6 +90,14 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
   - Lazy‑load below‑the‑fold images. Keep likely LCP imagery eager (e.g., hero, header logo) unless measurements show otherwise.
 - Page headers
   - Default header text alignment is left. Vary right‑side visuals per page (shapes/grid/particles) for balanced contrast.
+  - Section badges can align left via `.section-head--left`; pair with `.section-title--left` to keep eyebrow/title on the same column.
+
+- Content collections
+  - Blog uses an Astro content collection (`src/content/blog/`). Markdown entries include `isSample` to mark placeholder posts. Index and `[slug].astro` should read from the collection and surface “Sample” badges when relevant.
+  - Resources page also pulls from a collection; detail pages rely on `getStaticPaths()` exports.
+
+- Single support hub
+  - `contact.astro` redirects to `/support#contact-panel`. All CTAs should link there rather than a standalone contact page.
 - Minor a11y/UX polish
   - Footer legal links use `inline-flex` + `white-space: nowrap` to keep icon+label together.
   - Reviews rotator includes bottom margin so quotes don’t collide with strip borders.
