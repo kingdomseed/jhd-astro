@@ -10,7 +10,9 @@ import brandLogoUrl from '../assets/logo/logo.svg?url';
       <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" loading="eager" fetchpriority="high" />
       <strong>Jason Holt Digital</strong>
     </a>
-    <nav id="siteNav" class="nav" aria-label="Primary">
+
+    <!-- Desktop Navigation -->
+    <nav id="siteNav" class="nav nav--desktop" aria-label="Primary">
       <a href="/"><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span>Home</span></a>
       <a href="/apps"><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span>Apps</span></a>
       <a href="/resources"><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i><span>Resources</span></a>
@@ -41,10 +43,60 @@ import brandLogoUrl from '../assets/logo/logo.svg?url';
         </div>
       </span>
     </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav" data-mobile-toggle>
+      <span class="mobile-toggle-icons" aria-hidden="true">
+        <i class="fa-slab fa-regular fa-bars mobile-toggle-icon mobile-toggle-icon--bars"></i>
+        <i class="fa-slab fa-regular fa-xmark mobile-toggle-icon mobile-toggle-icon--x"></i>
+      </span>
+    </button>
   </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-overlay" data-mobile-overlay aria-hidden="true"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav id="mobileNav" class="nav nav--mobile" aria-label="Mobile navigation" data-mobile-nav>
+    <div class="nav-mobile-content">
+      <header class="nav-mobile-header">
+        <strong>Navigation</strong>
+      </header>
+
+      <div class="nav-mobile-links">
+        <a href="/"><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span>Home</span></a>
+        <a href="/apps"><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span>Apps</span></a>
+        <a href="/resources"><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i><span>Resources</span></a>
+        <a href="/support"><i class="fa-slab fa-regular fa-life-ring" aria-hidden="true"></i><span>Support</span></a>
+        <a href="/blog"><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i><span>Blog</span></a>
+      </div>
+
+      <div class="nav-mobile-cta">
+        <div class="nav-mobile-section-title">Download Apps</div>
+        <div class="nav-mobile-downloads">
+          <a href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147" target="_blank" rel="noopener">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i> Apple App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e" target="_blank" rel="noopener">
+            <i class="fa-brands fa-google-play" aria-hidden="true"></i> Google Play
+          </a>
+          <a href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9" target="_blank" rel="noopener">
+            <i class="fa-brands fa-amazon" aria-hidden="true"></i> Amazon Appstore
+          </a>
+          <a href="https://apps.microsoft.com/detail/9n39b8hj3cdg" target="_blank" rel="noopener">
+            <i class="fa-brands fa-windows" aria-hidden="true"></i> Microsoft Store
+          </a>
+          <a href="https://jasonholtdigital.itch.io/mythic-gme-digital" target="_blank" rel="noopener">
+            <i class="fa-brands fa-itch-io" aria-hidden="true"></i> itch.io (Desktop)
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
 <script>
   import '../scripts/header-dropdown.ts';
+  import '../scripts/header-mobile.ts';
   import '../scripts/header-sticky.ts';
   import '../scripts/skip-link-focus.ts';
   // Hoisted import: processed by Astro/Vite, supports TS and npm deps.

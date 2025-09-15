@@ -16,24 +16,33 @@
 
 ---
 
-## 2) Brand Pillars (for copy)
+## 2) Brand Pillars
 
+### Internal Philosophy (What we embody)
+- **Craft & cadence** — Small, steady improvements; quality over noise.
+- **Clear & quiet** — Friendly voice, restrained visuals, no hype.
+
+### External Messaging (What we communicate to players)
 1. **Official** — Licensed Mythic GME 2e companion apps.
 2. **Player‑first** — Speed to story: ask, roll, move on.
-3. **Craft & cadence** — Small, steady improvements; quality over noise.
+3. **Story flow** — Remove friction from adventures, enhance creativity.
 4. **Community‑driven** — Features shaped with players (Discord, reviews).
-5. **Clear & quiet** — Friendly voice, restrained visuals, no hype.
+5. **Inclusive experience** — Whether starting out or seasoned veteran.
 
 > **House line:** *GM‑less play at your fingertips.*
+
+**Key principle:** We don't talk to players about our development craft—they experience the results of it through smoother storytelling.
 
 ---
 
 ## 3) Voice & Tone
 
 - **Default voice:** Helpful, direct, friendly. Avoid marketing fluff. Avoid over‑explaining.
-- **Pronouns:** Use **we** on product pages; use **I** in the Maker’s Note.
-- **Rhythm:** Benefit → action. Keep lines scannable. One idea per sentence.
+- **Focus:** Talk about player outcomes (faster stories, smoother adventures, enhanced creativity) not development process.
+- **Pronouns:** Use **we** on product pages; use **I** in the Maker's Note.
+- **Rhythm:** Player benefit → action. Keep lines scannable. One idea per sentence.
 - **Technical depth:** Keep it out of the homepage. Move deep dives to **Resources/Blog**.
+- **Craft philosophy:** Internal compass only—players experience the results, not the process.
 
 **Microcopy patterns**
 
