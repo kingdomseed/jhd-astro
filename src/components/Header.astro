@@ -2,13 +2,12 @@
 // Site header containing the logo, primary navigation and an
 // accessible Download dropdown menu with platform links. The sticky
 // behaviour is achieved through CSS defined in the global stylesheet.
-import { Image } from 'astro:assets';
-import brandLogo from '../assets/logo/logo.svg';
+import brandLogoUrl from '../assets/logo/logo.svg?url';
 ---
 <header class="header-nav">
   <div class="container row" style="justify-content: space-between">
     <a class="brand" href="/" aria-label="Jason Holt Digital home">
-      <Image class="brand-logo" src={brandLogo} alt="Jason Holt Digital" width={48} height={48} decoding="async" loading="eager" fetchpriority="high" />
+      <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" loading="lazy" />
       <strong>Jason Holt Digital</strong>
     </a>
 

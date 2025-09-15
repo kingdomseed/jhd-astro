@@ -12,6 +12,9 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - `dist/`: Build output (generated).
 - `docs/`: Project content docs (design, copy).
 
+## Quality Benchmark
+- Treat `src/pages/index.astro` as the gold-standard reference for component composition, voice, accessibility, performance, and responsive behavior. Mirror its polish when introducing or updating other pages.
+
 ## Build, Test, and Development Commands
 - `npm install`: Install dependencies.
 - `npm run dev`: Start Astro dev server.
@@ -26,6 +29,8 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - CSS: Prefer `public/global.css` (and files under `/styles`) over inline styles; scope selectors narrowly.
 - Client JS: Keep inline, minimal, colocated with the component; use `data-*` selectors and guard against nulls.
 - Assets: Prefer `src/assets` + `astro:assets` for images used by components; keep non-processed files (favicons, txt/xml) in `public/`. Do not import unprocessed assets from `src/` outside of `astro:assets`.
+- Font Awesome Kit (v7) loads via CDN in `src/pages/index.astro`; keep icon usage consistent with the existing Slab icon pattern.
+- Product and store links live in `Header.astro` and `Footer.astro`; when they open in a new tab, keep `rel="noopener noreferrer"` intact.
 
 ## Recent UI Patterns & Decisions (shared learnings)
 - Spacing system:
@@ -58,7 +63,8 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
   - Eyebrow labels are visual only (`aria-hidden`); keep unique H2 per section.
   - Use semantic lists instead of `role=list/listitem` on anchors; avoid non‑interactive roles on interactive elements.
 - Performance:
-  - Prefer `<Image />` from `astro:assets` for local images (e.g., headshot). Lazy‑load non‑critical images.
+  - Prefer `<Image />` from `astro:assets` for local images (e.g., headshot). Lazy-load non-critical images.
+  - Reserve `fetchpriority="high"` for true LCP imagery so other assets can defer correctly.
 
 ## New Shared Learnings (2025-09)
 
@@ -110,3 +116,8 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 - Node: use active LTS (≥18; prefer 20). Keep `package-lock.json` committed.
 - Private registries/tokens are configured via `.npmrc`. Do not commit secrets elsewhere.
 - This site is static; avoid SSR/external data unless explicitly planned and approved.
+
+## Guardrails
+- Do not add analytics or tracking scripts unless explicitly approved.
+- Avoid editing Webflow-generated files unless there is a clear requirement.
+- Favor incremental, small diffs over large structural rewrites.

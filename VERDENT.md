@@ -41,6 +41,8 @@ astro_project/
       Footer.astro        # dynamic year via new Date().getFullYear()
 ```
 
+* `src/pages/index.astro` sets the quality bar for composition, copy, accessibility, performance, and responsiveness—treat it as the reference pattern for other pages.
+
 **Rules**
 
 * Keep the component boundaries as they are; prefer CSS tweaks and micro‑copy edits over structural rewrites.
@@ -59,8 +61,9 @@ astro_project/
    * Use **data‑attributes** for selectors (e.g., `data-cta="download"`, `data-menu="downloads"`).
    * Guard against nulls and duplicates; support multiple component instances on a page.
    * Keep to **\~20 lines** per component. Anything bigger → propose `client:*` directive + small module via PLAN.
-6. **Fonts & icons.** Use the Font Awesome Kit (v7) with Slab icons for UI; keep brand icons for social. Avoid placing icons inside extra boxed tiles when the control is already a box.
+6. **Fonts & icons.** Use the Font Awesome Kit (v7) with Slab icons for UI; keep brand icons for social. Avoid placing icons inside extra boxed tiles when the control is already a box. The kit loads via CDN in `src/pages/index.astro`; keep it centralized there.
 7. **External links.** Product/store links live in `Header.astro`/`Footer.astro`. Treat as content edits; keep `rel="noopener noreferrer"` for `target="_blank"`.
+8. **Guardrails.** Skip analytics/tracking scripts unless approved, avoid touching Webflow-generated files without a requirement, and favor incremental diffs over sweeping rewrites.
 
 ---
 
