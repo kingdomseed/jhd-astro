@@ -1,5 +1,5 @@
 // Reviews rotator logic extracted to a TS module
-// Cross-fade between quotes with accessible controls and reduced-motion respect.
+// Slide transitions between quotes with accessible controls and reduced-motion respect.
 import quotesData from './reviews-data.ts';
 
 function initReviewsRotator() {
@@ -11,7 +11,7 @@ function initReviewsRotator() {
   if (!stage) return;
   const stageEl = stage as HTMLElement;
 
-  // Use existing <p id="quote"> as one buffer; create a second for cross-fade
+  // Use existing <p id="quote"> as one buffer; create a second to alternate transitions
   let qA = stage.querySelector<HTMLParagraphElement>('#quote');
   if (!qA) {
     qA = document.createElement('p');

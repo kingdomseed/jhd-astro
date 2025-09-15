@@ -19,6 +19,8 @@
   /* Stacked stage for carousel */
   .bb-stage {
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
   }
   .bb-stage .billboard-img {
     position: absolute;
@@ -26,11 +28,15 @@
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 5s ease-in-out;
-    will-change: opacity;
+    transform: translate3d(-24px, 0, 0);
+    transition: transform 0.7s var(--easing-standard), opacity 0.55s var(--easing-standard);
+    will-change: transform, opacity;
+    z-index: 0;
   }
   .bb-stage .billboard-img.is-active {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
   }
   /* Sizer image keeps height but is not visible */
   .bb-stage .billboard-img.bb-sizer {
@@ -38,6 +44,7 @@
     opacity: 0;
     visibility: hidden;
     box-shadow: none;
+    transform: none;
   }
   /* Controls */
   .bb-controls {
@@ -83,6 +90,7 @@
   @media (prefers-reduced-motion: reduce) {
     .bb-stage .billboard-img {
       transition: none;
+      transform: none;
     }
   }
 }
