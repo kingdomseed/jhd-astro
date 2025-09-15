@@ -84,6 +84,61 @@
   }
   .btn--shadow-retropunk:hover { box-shadow: 8px 8px 0 0 #D80809; }
   .btn--shadow-retropunk:active { box-shadow: 7px 7px 0 0 #D80809; }
+  
+  /* App store brand shadow variants */
+  .btn--shadow-apple {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #007AFF; /* Apple Blue */
+  }
+  .btn--shadow-apple:hover { box-shadow: 8px 8px 0 0 #007AFF; }
+  .btn--shadow-apple:active { box-shadow: 7px 7px 0 0 #007AFF; }
+  
+  .btn--shadow-google {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #34A853; /* Google Green */
+  }
+  .btn--shadow-google:hover { box-shadow: 8px 8px 0 0 #34A853; }
+  .btn--shadow-google:active { box-shadow: 7px 7px 0 0 #34A853; }
+  
+  .btn--shadow-amazon {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #FF9900; /* Amazon Orange */
+  }
+  .btn--shadow-amazon:hover { box-shadow: 8px 8px 0 0 #FF9900; }
+  .btn--shadow-amazon:active { box-shadow: 7px 7px 0 0 #FF9900; }
+  
+  .btn--shadow-itch {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #FA5C5C; /* itch.io Red */
+  }
+  .btn--shadow-itch:hover { box-shadow: 8px 8px 0 0 #FA5C5C; }
+  .btn--shadow-itch:active { box-shadow: 7px 7px 0 0 #FA5C5C; }
+  
+  .btn--shadow-microsoft {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #0078D4; /* Microsoft Blue */
+  }
+  .btn--shadow-microsoft:hover { box-shadow: 8px 8px 0 0 #0078D4; }
+  .btn--shadow-microsoft:active { box-shadow: 7px 7px 0 0 #0078D4; }
+  
+  .btn--shadow-steam {
+    background: #fff;
+    color: #000;
+    border: var(--border-thick);
+    box-shadow: 6px 6px 0 0 #1B2838; /* Steam Dark Blue */
+  }
+  .btn--shadow-steam:hover { box-shadow: 8px 8px 0 0 #1B2838; }
+  .btn--shadow-steam:active { box-shadow: 7px 7px 0 0 #1B2838; }
   /* Compact size variant for tighter contexts */
   .btn--compact {
     padding: 8px 12px;

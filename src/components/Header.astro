@@ -10,15 +10,7 @@ import brandLogoUrl from '../assets/logo/logo.svg?url';
       <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" loading="eager" fetchpriority="high" />
       <strong>Jason Holt Digital</strong>
     </a>
-    <button class="nav-toggle btn btn--secondary" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
-      <i class="fa-slab fa-regular fa-bars" aria-hidden="true"></i>
-      <span class="sr-only">Menu</span>
-    </button>
     <nav id="siteNav" class="nav" aria-label="Primary">
-      <button class="nav-close btn btn--tertiary" aria-label="Close menu">
-        <i class="fa-slab fa-regular fa-xmark" aria-hidden="true"></i>
-        <span class="sr-only">Close</span>
-      </button>
       <a href="/"><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span>Home</span></a>
       <a href="/apps"><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span>Apps</span></a>
       <a href="/resources"><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i><span>Resources</span></a>
@@ -53,7 +45,6 @@ import brandLogoUrl from '../assets/logo/logo.svg?url';
 </header>
 <script>
   import '../scripts/header-dropdown.ts';
-  import '../scripts/header-mobile.ts';
   import '../scripts/header-sticky.ts';
   import '../scripts/skip-link-focus.ts';
   // Hoisted import: processed by Astro/Vite, supports TS and npm deps.

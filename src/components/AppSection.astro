@@ -30,6 +30,19 @@ const {
   imageAlt = "",
   images
 } = Astro.props;
+
+// Map store names to brand shadow classes
+const getStoreShadowClass = (storeName: string) => {
+  const storeMap: Record<string, string> = {
+    'Apple App Store': 'btn--shadow-apple',
+    'Google Play': 'btn--shadow-google', 
+    'Amazon Appstore': 'btn--shadow-amazon',
+    'itch.io (DRM‑free)': 'btn--shadow-itch',
+    'Microsoft Store': 'btn--shadow-microsoft',
+    'Steam': 'btn--shadow-steam'
+  };
+  return storeMap[storeName] || 'btn--shadow-primary';
+};
 ---
 
 <section class={`app-section ${reverse ? 'app-section--reverse' : ''}`}>
@@ -68,7 +81,7 @@ const {
               <div class="store-links">
                 {storeLinks.map(store => (
                   store.available !== false ? (
-                    <a href={store.url} target="_blank" rel="noopener" class="btn btn--shadow-primary">
+                    <a href={store.url} target="_blank" rel="noopener" class={`btn ${getStoreShadowClass(store.name)}`}>
                       <i class={store.icon} aria-hidden="true"></i>
                       {store.name}
                     </a>

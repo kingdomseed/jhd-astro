@@ -71,8 +71,10 @@
   }
   #site {
     position: relative;
-    z-index: 1;
-    /* Clip any horizontal overflow from full-bleed sections */
+    /* Remove z-index to avoid creating a stacking context that can place
+       the mobile nav panel beneath the overlay. The header/nav and overlay
+       will now share the root stacking context, ensuring .nav (z:15) sits
+       above .nav-overlay (z:14) while the page content stays below. */
     overflow-x: clip;
   }
 }
