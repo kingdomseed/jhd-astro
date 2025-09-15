@@ -43,24 +43,26 @@
     letter-spacing: 0.1em;
     color: var(--color-primary);
   }
-  
-  .page-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    font-weight: 900;
-    line-height: 1.1;
-    color: var(--color-text);
-    margin: 0 0 1rem;
-    letter-spacing: -0.02em;
+
+
+  .lead-accent--with-pipe {
+    position: relative;
+    padding-left: 8px;
+  }
+
+  .lead-accent--with-pipe::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: var(--color-accent);
+    left: -12px;
+    top: 0;
+    border-radius: 0;
   }
   
-  .page-subtitle {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin: 0 0 1rem;
-    line-height: 1.4;
-  }
+  /* Removed .page-title - now using .display-title from hero.css */
+  /* Removed .page-subtitle - now using .lead-accent from hero.css */
   
   .page-description {
     font-size: 1.125rem;

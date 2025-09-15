@@ -20,12 +20,18 @@ const mobileApp = {
   title: "Mythic GME Mobile",
   whoItsFor: "Solo role‑players who want less lookup and more story, anywhere.",
   features: [
-    "Quick Fate checks & Meaning prompts",
-    "Smooth notes, scenes, threads, logs", 
-    "Custom tables & dice formulas",
-    "iOS, Android, Amazon Fire"
+    "Fate Chart & Check Systems",
+    "Characters, Threads, Features, & Scenes", 
+    "Adventure log for tracking your story",
+    "Custom tables, dice roller, & more",
   ],
-  officialContent: "Licensed Mythic GME 2e content (Fate Chart/Check, Meaning tables).",
+  officialContent: [
+    "All 52 official tables from Mythic GME 2e",
+    "Random & Prepared Adventure Event Focus tables",
+    "Additional tables via permanent IAP unlock",
+    "New official content added with major releases"
+  ],
+  iapInfo: "IAP unlocks are permanent (not subscription). Features you unlock plus any new pro features added within 12 months stay unlocked forever. Like Working Copy's model.",
   storeLinks: [
     {
       name: "Apple App Store",
@@ -49,12 +55,17 @@ const desktopApp = {
   title: "Mythic GME Digital",
   whoItsFor: "PC/Mac/Linux players who want a focused, extended‑session layout.",
   features: [
+    "All mobile features and systems",
     "Full desktop layout for long sessions",
     "Everything included (no in‑app unlocks)",
-    "Import/export adventures and tables",
-    "Windows, macOS, Linux"
+    "Custom tables, dice roller, & more",
   ],
-  officialContent: "Licensed Mythic GME 2e content included.",
+  officialContent: [
+    "All official content spanning the Mythic-verse",
+    "No in-app purchases or subscriptions",
+    "All tables and features unlocked up front"
+  ],
+  disclaimer: "macOS App Store version is a mobile + desktop bundle and includes in-app unlocks for additional content and features.",
   storeLinks: [
     {
       name: "itch.io (DRM‑free)",
@@ -100,63 +111,113 @@ const desktopApp = {
   </head>
   <body>
     <a class="skip" href="#main">Skip to main content</a>
+    <!-- Atmospheric background gradients -->
     <div id="bg-atmo" aria-hidden="true"></div>
     <div id="site">
       <Header />
       
-      <PageHeader 
+      <PageHeader
         title="Mythic GME Apps"
         subtitle="Mobile & Desktop, with you wherever you play."
         description="Official licensed companion apps for Mythic GME 2nd Edition."
         accent="Apps"
+        visualElement="grid"
       />
       
       <main id="main">
         <!-- Mobile App Section (Left-aligned content) -->
-        <AppSection 
+        <AppSection
           title={mobileApp.title}
           whoItsFor={mobileApp.whoItsFor}
           features={mobileApp.features}
           officialContent={mobileApp.officialContent}
+          iapInfo={mobileApp.iapInfo}
           storeLinks={mobileApp.storeLinks}
           images={[m1, m2, m3, m4, m5, m6, m7, m8, m9, m10]}
           imageAlt="Mythic GME Mobile screenshots"
           reverse={false}
         />
-        
-        <!-- Desktop App Section (Right-aligned content) -->
-        <AppSection 
+
+        <!-- Adventure Crafter Divider Section -->
+        <section class="adventure-crafter-divider" style="border-top: 4px solid var(--color-border); border-bottom: 4px solid var(--color-border); padding: 3rem 0;">
+          <div class="container">
+            <header class="section-head" style="justify-content: center; margin-bottom: 1.5rem;" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Coming Soon</span>
+            </header>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Adventure Crafter</h2>
+            <p class="lead-accent" style="text-align: center; margin-bottom: 0;">
+              Solo players who want guided adventure creation with hooks and twists — Stay tuned for updates!
+            </p>
+          </div>
+        </section>
+
+        <!-- Desktop App Section (Left-aligned content) -->
+        <AppSection
           title={desktopApp.title}
           whoItsFor={desktopApp.whoItsFor}
           features={desktopApp.features}
           officialContent={desktopApp.officialContent}
+          disclaimer={desktopApp.disclaimer}
           storeLinks={desktopApp.storeLinks}
           reverse={true}
         />
-        
+
+        <!-- Buy the Books Section -->
+        <section class="books-section">
+          <div class="container">
+            <header class="section-head" style="justify-content: center; margin-bottom: 2rem;" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Physical Books</span>
+            </header>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Get the Original Books</h2>
+            <p class="lead-accent" style="text-align: center; margin-bottom: 2rem;">
+              Experience the full Mythic system with the official physical books by Tana Pigeon.
+            </p>
+            <div class="books-grid">
+              <div class="book-card">
+                <h3>Mythic GME 2e</h3>
+                <p>The complete solo RPG system that started it all.</p>
+                <a href="https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition" target="_blank" rel="noopener" class="btn btn--shadow-primary">
+                  <i class="fa-slab fa-regular fa-book" aria-hidden="true"></i>
+                  Buy on DriveThruRPG
+                </a>
+              </div>
+              <div class="book-card">
+                <h3>Adventure Crafter</h3>
+                <p>Adventure generation system for dynamic storylines.</p>
+                <a href="https://www.drivethrurpg.com/product/261479/The-Adventure-Crafter" target="_blank" rel="noopener" class="btn btn--shadow-accent">
+                  <i class="fa-slab fa-regular fa-book" aria-hidden="true"></i>
+                  Buy on DriveThruRPG
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Additional Info Section -->
         <section class="app-info-section">
           <div class="container">
             <div class="info-grid">
               <div class="info-card">
                 <h3>
-                  <i class="fa-slab fa-regular fa-shield-check" aria-hidden="true"></i>
+                  <i class="fa-slab fa-regular fa-shield" aria-hidden="true"></i>
                   Privacy & Permissions
                 </h3>
                 <p>Both apps respect your privacy with minimal data collection. Read our complete <a href="/privacy">Privacy Policy</a> for details.</p>
               </div>
-              
+
               <div class="info-card">
                 <h3>
-                  <i class="fa-slab fa-regular fa-clock-rotate-left" aria-hidden="true"></i>
+                  <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
                   Updates & Roadmap
                 </h3>
                 <p>Regular updates with new features and improvements. Check the <a href="/blog">Blog</a> for release notes and roadmap.</p>
               </div>
-              
+
               <div class="info-card">
                 <h3>
-                  <i class="fa-slab fa-regular fa-life-ring" aria-hidden="true"></i>
+                  <i class="fa-slab fa-regular fa-circle-question" aria-hidden="true"></i>
                   Support & Community
                 </h3>
                 <p>Get help through our <a href="/support">Support page</a> or join the community on <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a>.</p>

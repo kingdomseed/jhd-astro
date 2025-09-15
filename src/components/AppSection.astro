@@ -6,7 +6,9 @@ interface Props {
   title: string;
   whoItsFor: string;
   features: string[];
-  officialContent: string;
+  officialContent: string | string[];
+  iapInfo?: string;
+  disclaimer?: string;
   storeLinks: Array<{
     name: string;
     url: string;
@@ -19,12 +21,14 @@ interface Props {
   images?: any[]; // optional array of astro:assets images (e.g., mobile device shots)
 }
 
-const { 
-  title, 
-  whoItsFor, 
-  features, 
-  officialContent, 
-  storeLinks, 
+const {
+  title,
+  whoItsFor,
+  features,
+  officialContent,
+  iapInfo,
+  disclaimer,
+  storeLinks,
   reverse = false,
   imageSrc,
   imageAlt = "",
@@ -46,52 +50,94 @@ const getStoreShadowClass = (storeName: string) => {
 ---
 
 <section class={`app-section ${reverse ? 'app-section--reverse' : ''}`}>
+  <!-- Layer reserved for future decoration; hidden by default -->
+  <div class="grid-layer" aria-hidden="true"></div>
   <div class="container">
     <div class="app-section-grid">
       <!-- Content Column -->
       <div class="app-content">
         <div class="app-content-inner">
-          <h2 class="app-title">{title}</h2>
-          
+          <header class="section-head" aria-hidden="true">
+            <span class="accent-line" aria-hidden="true"></span>
+            <span class="badge-text">{title.includes('Mobile') ? 'Mobile App' : title.includes('Adventure') ? 'Coming Soon' : 'Desktop App'}</span>
+          </header>
+          <h2 class="section-title">{title}</h2>
+          <p class="lead-accent" style="text-align: center; margin-bottom: 2rem;">{whoItsFor}</p>
+
           <div class="app-details">
             <div class="detail-block">
-              <h3>Who it's for</h3>
-              <p>{whoItsFor}</p>
-            </div>
-            
-            <div class="detail-block">
               <h3>What it does</h3>
-              <ul class="feature-list">
-                {features.map(feature => (
-                  <li class="feature-item">
-                    <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div class="feature-card">
+                <ul class="feature-list">
+                  {features.map(feature => (
+                    <li class="feature-item">
+                      <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             
             <div class="detail-block">
               <h3>Official content</h3>
-              <p>{officialContent}</p>
+              {Array.isArray(officialContent) ? (
+                <div class="feature-card">
+                  <ul class="feature-list">
+                    {officialContent.map(item => (
+                      <li class="feature-item">
+                        <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <p>{officialContent}</p>
+              )}
+              {iapInfo && (
+                <div class="iap-notice collapsed" onclick="this.classList.toggle('collapsed')">
+                  <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
+                  <span class="iap-text">
+                    <span class="collapsed-text">More details...</span>
+                    <span class="full-text">{iapInfo}</span>
+                  </span>
+                </div>
+              )}
+              {disclaimer && (
+                <div class="disclaimer-notice collapsed" onclick="this.classList.toggle('collapsed')">
+                  <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
+                  <span class="disclaimer-text">
+                    <span class="collapsed-text">More details...</span>
+                    <span class="full-text">{disclaimer}</span>
+                  </span>
+                </div>
+              )}
             </div>
-            
+
             <div class="detail-block">
-              <h3>Download now</h3>
+              <h3>{storeLinks.length === 0 ? 'Availability' : 'Download now'}</h3>
               <div class="store-links">
-                {storeLinks.map(store => (
-                  store.available !== false ? (
-                    <a href={store.url} target="_blank" rel="noopener" class={`btn ${getStoreShadowClass(store.name)}`}>
-                      <i class={store.icon} aria-hidden="true"></i>
-                      {store.name}
-                    </a>
-                  ) : (
-                    <span class="btn btn--tertiary" aria-disabled="true">
-                      <i class={store.icon} aria-hidden="true"></i>
-                      {store.name} — Coming soon
-                    </span>
-                  )
-                ))}
+                {storeLinks.length === 0 ? (
+                  <div class="coming-soon-notice">
+                    <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
+                    <span>Coming soon — Stay tuned for updates!</span>
+                  </div>
+                ) : (
+                  storeLinks.map(store => (
+                    store.available !== false ? (
+                      <a href={store.url} target="_blank" rel="noopener" class={`btn ${getStoreShadowClass(store.name)}`}>
+                        <i class={store.icon} aria-hidden="true"></i>
+                        {store.name}
+                      </a>
+                    ) : (
+                      <span class="btn btn--tertiary" aria-disabled="true">
+                        <i class={store.icon} aria-hidden="true"></i>
+                        {store.name} — Coming soon
+                      </span>
+                    )
+                  ))
+                )}
               </div>
             </div>
           </div>
@@ -173,15 +219,7 @@ const getStoreShadowClass = (storeName: string) => {
     margin-right: auto;
   }
   
-  .app-title {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--color-text);
-    margin: 0 0 2rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-  }
+  /* Removed .app-title - now using .section-title from cards.css */
   
   .detail-block {
     margin-bottom: 2rem;
@@ -190,10 +228,23 @@ const getStoreShadowClass = (storeName: string) => {
   .detail-block h3 {
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text);
     margin: 0 0 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .detail-block h3::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: var(--color-accent);
+    left: -12px;
+    top: 0;
+    border-radius: 0;
   }
   
   .detail-block p {
@@ -202,29 +253,133 @@ const getStoreShadowClass = (storeName: string) => {
     margin: 0;
   }
   
+  .feature-card {
+    background: var(--color-surface);
+    border: var(--border-base);
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
+  }
+
   .feature-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
   }
-  
+
   .feature-item {
     display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    color: var(--color-text-muted);
-    line-height: 1.5;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    color: var(--color-text);
+    font-weight: 500;
   }
-  
+
   .feature-check {
     color: var(--color-primary);
-    margin-top: 0.125rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
+    filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.12));
   }
   
   .store-links { display: grid; gap: 0.75rem; }
+
+  .coming-soon-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface-2);
+    border: var(--border-base);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border-radius: 0;
+    box-shadow: 2px 2px 0 0 var(--color-border);
+  }
+
+  .coming-soon-notice i {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+  }
+
+  .iap-notice {
+    background: var(--color-surface-2);
+    border: var(--border-base);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s var(--easing-standard);
+  }
+
+  .iap-notice i {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+  }
+
+  .iap-notice:hover {
+    opacity: 0.8;
+  }
+
+  .iap-notice.collapsed .full-text,
+  .disclaimer-notice.collapsed .full-text {
+    display: none;
+  }
+
+  .iap-notice:not(.collapsed) .collapsed-text,
+  .disclaimer-notice:not(.collapsed) .collapsed-text {
+    display: none;
+  }
+
+  .iap-text,
+  .disclaimer-text {
+    overflow: hidden;
+    transition: all 0.3s var(--easing-standard);
+  }
+
+  .collapsed-text {
+    font-style: italic;
+    color: var(--color-primary);
+  }
+
+  .disclaimer-notice {
+    background: var(--color-surface-2);
+    border: var(--border-base);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s var(--easing-standard);
+  }
+
+  .disclaimer-notice i {
+    color: var(--color-accent);
+    font-size: 1rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+  }
+
+
+  .disclaimer-notice:hover {
+    opacity: 0.8;
+  }
   
   .app-visual {
     position: relative;
@@ -305,6 +460,22 @@ const getStoreShadowClass = (storeName: string) => {
   .lightbox .lb-close { position: absolute; top: -12px; right: -12px; border: var(--border-base); background: #fff; padding: 4px 8px; cursor: pointer; }
   body.lb-open { overflow: hidden; }
   
+  /* Grid layer for visual texture */
+  .app-section .grid-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image:
+      linear-gradient(var(--color-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.08;
+    z-index: -2;
+    pointer-events: none;
+  }
+
   /* Geometric accents */
   .geometric-accent {
     position: absolute;
@@ -312,27 +483,52 @@ const getStoreShadowClass = (storeName: string) => {
     z-index: -1;
   }
   
-  .geometric-accent { box-shadow: var(--shadow-base); }
-  .geometric-accent--1 {
-    width: 60px;
-    height: 60px;
-    background: var(--color-accent);
-    top: -20px;
-    right: -20px;
-    transform: rotate(45deg);
+  .geometric-accent {
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s var(--easing-standard);
   }
-  
+
+  .geometric-accent--1 {
+    width: 80px;
+    height: 80px;
+    background: var(--color-accent);
+    top: -30px;
+    right: -30px;
+    transform: rotate(45deg);
+    border: var(--border-thick);
+  }
+
   .geometric-accent--2 {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     background: var(--color-primary);
-    bottom: -12px;
+    bottom: -20px;
+    left: -20px;
+    border: var(--border-base);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Add more geometric elements for visual interest */
+  .app-image-container::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--color-accent);
+    border: var(--border-base);
+    top: 50%;
     left: -12px;
-    opacity: 0.7;
+    transform: translateY(-50%) rotate(45deg);
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
   
   /* Responsive design */
   @media (max-width: 968px) {
+    .app-section .grid-layer {
+      display: none;
+    }
+
     .app-section-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -354,6 +550,26 @@ const getStoreShadowClass = (storeName: string) => {
     .app-title {
       font-size: 2rem;
     }
+
+    .geometric-accent--1 {
+      width: 60px;
+      height: 60px;
+      top: -20px;
+      right: -20px;
+    }
+
+    .geometric-accent--2 {
+      width: 36px;
+      height: 36px;
+      bottom: -12px;
+      left: -12px;
+    }
+
+    .feature-item {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.9rem;
+    }
+
     .device-stage { min-height: 520px; }
     .device-shot { height: 520px; }
   }
