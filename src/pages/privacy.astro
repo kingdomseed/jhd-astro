@@ -32,26 +32,35 @@ import PageHeader from '../components/PageHeader.astro';
         colorScheme="primary"
       />
       
-      <main id="main" class="container" style="min-height:40vh; padding: 3rem 0;">
-        <h2>Hi, I'm Jason</h2>
-        <p>I built the Mythic GME apps because I love solo RPGs and wanted better digital tools for the community. Your privacy matters to me as much as it matters to you. This policy explains exactly what data I collect, why, and how you control it.</p>
-        <p><strong>Jason Holt Digital LLC</strong> is the data controller for both Mythic GME Mobile and Mythic GME Digital. For any privacy questions:</p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a></li>
-          <li><strong>Data Protection Officer:</strong> Jason Holt (that's me)</li>
-        </ul>
+      <main id="main" class="legal-main">
+        <section class="section" aria-labelledby="privacy-body">
+          <div class="container legal-container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Policy</span>
+            </header>
+            <h2 id="privacy-body" class="section-title">Transparency first</h2>
+            <p class="legal-summary">
+              I built the Mythic GME apps because I love solo RPGs and wanted better digital tools for the community. This policy lays
+              out exactly what data I collect, why, and how you stay in control.
+            </p>
+            <article class="legal-article">
+              <p>
+                <strong>Jason Holt Digital LLC</strong> is the data controller for both Mythic GME Mobile and Mythic GME Digital. For any
+                privacy questions reach me at <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a>.
+              </p>
 
-        <h2>What Apps This Covers</h2>
+              <h2>What Apps This Covers</h2>
         <p>This privacy policy applies to:</p>
         <ul>
           <li><strong>Mythic GME Mobile</strong> — iOS, Android, macOS, and Web versions</li>
           <li><strong>Mythic GME Digital</strong> — Windows, macOS, and Linux desktop versions</li>
         </ul>
 
-        <h2>What Data I Actually Collect</h2>
+              <h2>What Data I Actually Collect</h2>
         <p>I collect minimal data, and only what's necessary to make the apps work better. Here's exactly what I collect by platform:</p>
 
-        <h3>Mobile Platforms (iOS, Android, macOS, Web)</h3>
+              <h3>Mobile Platforms (iOS, Android, macOS, Web)</h3>
         <ul>
           <li><strong>Analytics (opt‑in):</strong> PostHog and Firebase capture app usage such as screen views, feature interactions, and events like dice rolls, table searches, list actions, settings changes, and support actions.</li>
           <li><strong>Technical data:</strong> app_version, platform, locale, build_channel, and current_screen; a pseudonymous per‑install identifier (PostHog distinct_id).</li>
@@ -61,14 +70,14 @@ import PageHeader from '../components/PageHeader.astro';
           <li><strong>Country/region inference:</strong> Providers may infer rough location (e.g., country) from IP for product localization; precise GPS location is not collected.</li>
         </ul>
 
-        <h3>Desktop Platforms (Windows, Linux)</h3>
+              <h3>Desktop Platforms (Windows, Linux)</h3>
         <ul>
           <li><strong>Analytics (opt‑in):</strong> Similar pseudonymous usage analytics as mobile when enabled.</li>
           <li><strong>No advertising IDs:</strong> Desktop builds do not use mobile advertising identifiers.</li>
           <li><strong>Local‑first:</strong> Journals, scenes, and custom tables remain on your device unless you export/share them.</li>
         </ul>
 
-        <h3>What I DON'T Collect</h3>
+              <h3>What I DON'T Collect</h3>
         <ul>
           <li>Personal information (name, email, phone number)</li>
           <li>Precise location data (GPS coordinates, exact address)</li>
@@ -78,7 +87,7 @@ import PageHeader from '../components/PageHeader.astro';
           <li>Social media connections</li>
         </ul>
 
-        <h2>Your Analytics Choice</h2>
+              <h2>Your Analytics Choice</h2>
         <p>When you first open the app, you'll see a consent dialog that explains analytics and lets you choose. <strong>Analytics is off by default</strong> until you opt in. <strong>Crash and error reporting</strong> is <strong>on by default</strong> to help diagnose issues and keep the app stable. <strong>Session Replay</strong> is treated separately as described below. You can:</p>
         <ul>
           <li>Enable or disable analytics any time in Settings (controls PostHog and Firebase).</li>
@@ -130,7 +139,7 @@ import PageHeader from '../components/PageHeader.astro';
         <h2>Your Privacy Rights</h2>
         <p>No matter where you live, you have important rights regarding your data:</p>
 
-        <h3>Universal Rights</h3>
+              <h3>Universal Rights</h3>
         <ul>
           <li><strong>Know:</strong> What data I collect and why (it's all in this policy)</li>
           <li><strong>Access:</strong> Request a copy of any data I have about you</li>
@@ -140,23 +149,23 @@ import PageHeader from '../components/PageHeader.astro';
           <li><strong>Export:</strong> Get your game data in portable formats</li>
         </ul>
 
-        <h3>Regional Privacy Laws</h3>
+              <h3>Regional Privacy Laws</h3>
         <p>If you live in certain regions, you have additional rights:</p>
-        <h4>European Union (GDPR)</h4>
+              <h4>European Union (GDPR)</h4>
         <ul>
           <li>Withdraw consent for analytics processing</li>
           <li>Object to data processing based on legitimate interests</li>
           <li>Request restriction of processing</li>
           <li>File complaints with your local data protection authority</li>
         </ul>
-        <h4>California (CCPA/CPRA)</h4>
+              <h4>California (CCPA/CPRA)</h4>
         <ul>
           <li>Detailed disclosure of data collection practices</li>
           <li>Right to opt-out of data "sales" (though I don't sell data)</li>
           <li>Non-discrimination for exercising privacy rights</li>
           <li>Right to limit use of sensitive personal information</li>
         </ul>
-        <h4>Virginia, Colorado, Connecticut (State Privacy Laws)</h4>
+              <h4>Virginia, Colorado, Connecticut (State Privacy Laws)</h4>
         <ul>
           <li>Confirm what personal data I process</li>
           <li>Access, correct, delete, or port your data</li>
@@ -265,14 +274,17 @@ import PageHeader from '../components/PageHeader.astro';
           <li><strong>Security practices:</strong> Data encrypted in transit; minimal collection.</li>
           <li><strong>User controls:</strong> Analytics is optional and controlled by an in‑app toggle.</li>
         </ul>
-        <h3>Apple Privacy Nutrition Labels</h3>
-        <p>For App Store compliance, this policy supports Apple's Privacy Nutrition Label requirements:</p>
-        <ul>
-          <li><strong>Data not linked to you:</strong> Usage Data (App Interactions, Screen Views) and Diagnostics (including crash reports and session replays with text redaction) where applicable.</li>
-          <li><strong>Tracking across apps/websites:</strong> Not used.</li>
-          <li><strong>Third‑party partners:</strong> Firebase (Google) and PostHog process analytics data as described.</li>
-          <li><strong>User control:</strong> Analytics is opt‑in and can be turned off any time in Settings.</li>
-        </ul>
+              <h3>Apple Privacy Nutrition Labels</h3>
+              <p>For App Store compliance, this policy supports Apple's Privacy Nutrition Label requirements:</p>
+              <ul>
+                <li><strong>Data not linked to you:</strong> Usage Data (App Interactions, Screen Views) and Diagnostics (including crash reports and session replays with text redaction) where applicable.</li>
+                <li><strong>Tracking across apps/websites:</strong> Not used.</li>
+                <li><strong>Third‑party partners:</strong> Firebase (Google) and PostHog process analytics data as described.</li>
+                <li><strong>User control:</strong> Analytics is opt‑in and can be turned off any time in Settings.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

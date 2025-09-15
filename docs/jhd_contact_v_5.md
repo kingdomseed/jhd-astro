@@ -20,5 +20,5 @@
 ---
 
 ## Location
-Born in Texas, based in Frankfurt. Working with players worldwide.
+Working with players worldwide.
 

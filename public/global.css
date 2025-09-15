@@ -29,6 +29,7 @@
 @import url("/styles/components/support-tabs.css") layer(components);
 @import url("/styles/components/resources.css") layer(components);
 @import url("/styles/components/blog.css") layer(components);
+@import url("/styles/components/legal.css") layer(components);
 @import url("/styles/components/footer.css") layer(components);
 @import url("/styles/components/apps.css") layer(components);
 @import url("/styles/overrides.css") layer(overrides);

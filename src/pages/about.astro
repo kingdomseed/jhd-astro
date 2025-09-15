@@ -5,6 +5,50 @@ import PageHeader from '../components/PageHeader.astro';
 import { Image } from 'astro:assets';
 import headshotMain from '../assets/people/jason-school.jpg';
 import HeadFonts from '../components/HeadFonts.astro';
+
+const backgroundHighlights = [
+  {
+    icon: 'fa-slab fa-regular fa-graduation-cap',
+    title: 'Educator roots',
+    description:
+      'Former CS instructor focused on clarity, documentation, and giving players confidence through great onboarding.',
+  },
+  {
+    icon: 'fa-slab fa-regular fa-mobile-notch',
+    title: 'Cross-platform craft',
+    description:
+      'Flutter-first builds that feel native on iOS, Android, macOS, Windows, Linux, and the web—one codebase, polished everywhere.',
+  },
+  {
+    icon: 'fa-slab fa-regular fa-dice-d20',
+    title: 'Player-first UX',
+    description:
+      'Design that keeps Mythic moving: fast inputs, helpful defaults, and zero friction between an idea and a roll.',
+  },
+];
+
+const socialLinks = [
+  {
+    href: 'https://discord.gg/PEDHrhzcnk',
+    label: 'Join Discord',
+    icon: 'fa-brands fa-discord',
+    className: 'btn--shadow-discord',
+    external: true,
+  },
+  {
+    href: 'https://github.com/kingdomseed',
+    label: 'Follow on GitHub',
+    icon: 'fa-brands fa-github',
+    className: 'btn--shadow-primary',
+    external: true,
+  },
+  {
+    href: '/blog',
+    label: 'Read the Blog',
+    icon: 'fa-slab fa-regular fa-newspaper',
+    className: 'btn--shadow-accent',
+  },
+];
 ---
 <html lang="en">
   <head>
@@ -34,87 +78,129 @@ import HeadFonts from '../components/HeadFonts.astro';
         colorScheme="secondary"
       />
       
-      <main id="main" class="container" style="min-height:40vh; padding: 3rem 0;">
-        
-        <!-- Photo Section -->
-        <section class="about-photo-section">
-          <Image src={headshotMain} alt="Jason Holt" class="about-photo" width={320} height={320} loading="lazy" decoding="async" />
-          <p class="photo-caption">
-            <strong>Jason Holt</strong>
-            Indie Developer & Founder<br>
-            Born in Texas, based in Frankfurt
-          </p>
-        </section>
-
-        <!-- Personal Introduction -->
-        <section class="about-intro" aria-labelledby="intro-title">
-          <h2 id="intro-title">Hi, I'm Jason</h2>
-          <p>
-            I'm an indie developer focused on tools that respect and amplify tabletop creativity. I build the
-            <strong>official Mythic GME&nbsp;2e apps</strong> in partnership with Word Mill Creative, and I ship small, steady improvements
-            because craft matters. When players tell me a feature cut friction from their session, that's the win.
-          </p>
-          <p>
-            After years as a CS educator, I went full-time indie in 2024 to focus on what I love: creating software that enhances
-            the tabletop experience without getting in the way. If that sounds like your kind of software, welcome.
-          </p>
-        </section>
-
-        <!-- Partnership Highlight -->
-        <section class="about-partnership" aria-labelledby="partnership-title">
-          <h2 id="partnership-title">Word Mill Creative Partnership</h2>
-          <p><strong>Official Licensee.</strong> Jason Holt Digital builds the licensed digital companions for Mythic GME&nbsp;2e. Our focus is player‑first, faithful to the system, and respectful of the text.</p>
-          <ul style="margin: 1rem 0 0 0;">
-            <li>Official Mythic content implemented (Fate Chart/Check, Meaning tables)</li>
-            <li>Cross‑platform releases (mobile + desktop)</li>
-            <li>Community‑driven improvements and feedback integration</li>
-            <li>Licensed content ensures authenticity and system integrity</li>
-          </ul>
-        </section>
-
-        <!-- Background Cards -->
-        <section class="about-background" aria-labelledby="background-title">
-          <h2 id="background-title" style="grid-column: 1 / -1; margin: 0 0 1rem 0;">Background & Approach</h2>
-          
-          <div class="background-card">
-            <h3><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
-            <p>Former CS educator with a passion for clear documentation and examples. I believe good software teaches users as they use it.</p>
-          </div>
-          
-          <div class="background-card">
-            <h3><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Cross-Platform</h3>
-            <p>Flutter expert building for iOS, Android, macOS, Windows, and Linux. One codebase, consistent experience everywhere.</p>
-          </div>
-          
-          <div class="background-card">
-            <h3><i class="fa-solid fa-dice-d20" aria-hidden="true"></i> Player-First Design</h3>
-            <p>Clean architecture, strong testing, and simple UX. Features that reduce friction in your sessions, not add complexity.</p>
+      <main id="main" class="about-main">
+        <section class="section" id="about-overview" aria-labelledby="about-overview-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Profile</span>
+            </header>
+            <div class="about-overview">
+              <figure class="about-portrait">
+                <Image
+                  src={headshotMain}
+                  alt="Jason Holt"
+                  class="about-portrait__image"
+                  width={320}
+                  height={320}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="about-portrait__caption">
+                  <strong>Jason Holt</strong>
+                  Indie developer &amp; founder
+                </figcaption>
+              </figure>
+              <div class="about-intro">
+                <h2 id="about-overview-title" class="section-title">Hi, I'm Jason</h2>
+                <p>
+                  I build the <strong>official Mythic GME&nbsp;2e apps</strong> in partnership with Word Mill Creative. Every release is a
+                  small, deliberate upgrade designed to cut friction for solo GMs and storytellers. When a feature saves your session
+                  from stalling, that’s the win.
+                </p>
+                <p>
+                  After years teaching computer science, I went full-time indie in 2024 to focus on software that respects tabletop
+                  creativity. Mythic has been my notebook and co-GM for decades—these apps are my way of giving back to the community.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="about-cta" aria-labelledby="cta-title">
-          <h2 id="cta-title">Let's Connect</h2>
-          <p>Interested in the apps, have feedback, or just want to chat about tabletop gaming? I'd love to hear from you.</p>
-          
-          <div class="row" style="gap: 1rem; justify-content: center; margin: 1.5rem 0;">
-            <a class="cta-brick" href="/apps">Try the Apps&nbsp;→</a>
-            <a class="cta-brick" href="/support">Get Support&nbsp;→</a>
-          </div>
-          
-          <div class="social-links">
-            <a class="social-link" href="https://github.com/kingdomseed" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-            </a>
-            <a class="social-link" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">
-              <i class="fa-brands fa-discord" aria-hidden="true"></i> Discord
-            </a>
-            <a class="social-link" href="/blog">
-              <i class="fa-solid fa-blog" aria-hidden="true"></i> Blog
-            </a>
+        <section class="section section-band" id="about-license" aria-labelledby="about-license-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Official</span>
+            </header>
+            <div class="about-license">
+              <h2 id="about-license-title" class="section-title">Licensed With Word Mill Creative</h2>
+              <p class="about-license__summary">
+                Jason Holt Digital develops the sanctioned digital companions for Mythic GME&nbsp;2e. The apps stay faithful to the text,
+                capture the cadence of solo play, and evolve with feedback from the community.
+              </p>
+              <ul class="about-license__list">
+                <li>All official Mythic content: Fate Chart/Check, Meaning Tables, Random Events, and more</li>
+                <li>Cross-platform builds—mobile, desktop, and web—with feature parity</li>
+                <li>Community-driven roadmap prioritising real GM pain points</li>
+                <li>Licensed content ensures accuracy and respects the source material</li>
+              </ul>
+            </div>
           </div>
         </section>
 
+        <section class="section" id="about-background" aria-labelledby="about-background-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Approach</span>
+            </header>
+            <h2 id="about-background-title" class="section-title">What Shapes the Work</h2>
+            <p class="about-background__summary">
+              Craft comes from repetition, honest playtesting, and being in the trenches with with my players every week. These principles
+              guide every build.
+            </p>
+            <div class="about-background-grid">
+              {backgroundHighlights.map((item) => (
+                <article class="about-background-card">
+                  <span class="about-background-card__icon" aria-hidden="true">
+                    <i class={item.icon}></i>
+                  </span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about-connect" aria-labelledby="about-connect-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Connect</span>
+            </header>
+            <div class="about-connect">
+              <h2 id="about-connect-title" class="section-title">Let’s keep the conversation going</h2>
+              <p class="about-connect__summary">
+                Feedback, bug reports, play stories—everything you share helps Mythic get sharper. Pick a lane below or drop into the
+                community.
+              </p>
+              <div class="about-connect__actions">
+                <a class="btn btn--shadow-primary" href="/apps">
+                  <i class="fa-slab fa-regular fa-rocket" aria-hidden="true"></i>
+                  Try the apps
+                </a>
+                <a class="btn btn--shadow-accent" href="/support">
+                  <i class="fa-slab fa-regular fa-life-ring" aria-hidden="true"></i>
+                  Get support
+                </a>
+              </div>
+              <div class="about-social">
+                {socialLinks.map((link) => (
+                  <a
+                    class={`btn ${link.className}`}
+                    href={link.href}
+                    {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+                  >
+                    <i class={link.icon} aria-hidden="true"></i>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
