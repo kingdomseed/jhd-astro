@@ -154,7 +154,7 @@ const getStoreShadowClass = (storeName: string) => {
             <div class="device-stage">
               {images.map((img, idx) => (
                 <div class={`device-frame ${idx === 0 ? 'is-active' : ''}`} role="group" aria-roledescription="slide" aria-label={`Slide ${idx + 1} of ${images.length}`}>
-                  <Image class="device-shot" src={img} alt={imageAlt || `${title} screenshot ${idx + 1}`} loading={idx === 0 ? 'eager' : 'lazy'} decoding="async" fetchpriority={idx === 0 ? 'high' : 'auto'} />
+                  <Image class="device-shot" src={img} alt={imageAlt || `${title} screenshot ${idx + 1}`} loading="lazy" decoding="async" fetchpriority="auto" />
                 </div>
               ))}
             </div>
@@ -166,7 +166,7 @@ const getStoreShadowClass = (storeName: string) => {
         ) : (
           <div class="app-image-container">
             {imageSrc ? (
-              <img src={imageSrc} alt={imageAlt} class="app-image" />
+              <img src={imageSrc} alt={imageAlt} class="app-image" loading="lazy" decoding="async" />
             ) : (
               <div class="app-placeholder">
                 <i class="fa-solid fa-image placeholder-icon" aria-hidden="true"></i>
@@ -452,9 +452,10 @@ const getStoreShadowClass = (storeName: string) => {
 
   /* Make desktop screenshots larger - allow overflow */
   .app-section--reverse .device-carousel .device-shot {
-    max-height: 1500px !important;
+    max-height: none !important; /* Remove height constraint */
     max-width: none !important; /* Remove width constraint */
-    width: 1200px; /* Fixed width that can overflow */
+    width: 1400px; /* Large fixed width for desktop overflow */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .app-section--reverse .device-carousel .device-stage {
@@ -542,7 +543,7 @@ const getStoreShadowClass = (storeName: string) => {
 
     .app-section-grid {
       grid-template-columns: 1fr;
-      gap: 3rem;
+      gap: 1rem; /* Further reduced gap */
     }
     
     .app-section--reverse .app-section-grid {
@@ -553,9 +554,24 @@ const getStoreShadowClass = (storeName: string) => {
       margin-left: 0;
       max-width: none;
     }
-    
+
     .app-section--reverse .app-content-inner {
       margin-right: 0;
+    }
+
+    /* Reset desktop image overflow on mobile */
+    .app-section--reverse .device-carousel .device-shot {
+      max-width: 100% !important;
+      width: auto !important;
+      max-height: 400px !important; /* Smaller on mobile */
+    }
+
+    .app-section--reverse .device-carousel .device-stage {
+      min-height: 350px !important;
+    }
+
+    .app-section--reverse .device-carousel {
+      overflow: hidden; /* Prevent overflow on mobile */
     }
     
     .app-title {
@@ -600,5 +616,14 @@ const getStoreShadowClass = (storeName: string) => {
     }
     .device-stage { min-height: 420px; }
     .device-shot { height: 420px; }
+
+    /* Mobile overrides for all carousels */
+    .device-carousel .device-stage {
+      min-height: 250px !important; /* Further reduced padding */
+    }
+
+    .device-carousel .device-shot {
+      max-height: 300px !important; /* Even smaller on mobile */
+    }
   }
 </style>
