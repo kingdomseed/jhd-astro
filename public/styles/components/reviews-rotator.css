@@ -5,16 +5,14 @@
   }
   /* Cross-fade stage */
   .rev-stage {
-    position: relative;
-    min-height: 48px; /* stable layout to avoid jump on varying quote length */
+    display: grid; /* overlay quotes in the same cell while preserving natural height */
     max-width: 68ch;   /* readable line length */
     margin-inline: auto;
     padding-inline: 8px; /* small breathing room on narrow screens */
     overflow: hidden;
   }
   .rev-stage .rev-quote {
-    position: absolute;
-    inset: 0;
+    grid-area: 1 / 1; /* stack quotes in the same grid cell */
     margin: 0;
     text-align: center;
     color: #000;
@@ -26,14 +24,12 @@
     transform: translate3d(-18px, 0, 0);
     transition: transform 0.6s var(--easing-standard), opacity 0.5s var(--easing-standard);
     will-change: transform, opacity;
-    z-index: 0;
   }
   /* Ensure initial #quote also has no extra padding before JS initializes */
   .rev-stage p { padding: 0; }
   .rev-stage .rev-quote.is-active {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    z-index: 1;
   }
 
   /* Respect reduced motion preferences */

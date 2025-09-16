@@ -66,8 +66,6 @@ function initReviewsRotator() {
     const active = qA!.classList.contains('is-active') ? qA! : (qB as HTMLParagraphElement);
     const other = active === qA ? qB : qA!;
     other.innerHTML = renderHTML(quotes[toIndex]);
-    // Ensure stage has a stable height based on incoming content
-    stageEl.style.height = `${other.offsetHeight}px`;
     requestAnimationFrame(() => {
       active.classList.remove('is-active');
       other.classList.add('is-active');
@@ -92,8 +90,6 @@ function initReviewsRotator() {
   // Initial render
   qA!.innerHTML = renderHTML(quotes[i]);
   qA!.classList.add('is-active');
-  // Set initial stage height to avoid layout jump
-  stageEl.style.height = `${qA!.offsetHeight}px`;
   setStatus(i);
   if (!prefersReduced) start();
 }
