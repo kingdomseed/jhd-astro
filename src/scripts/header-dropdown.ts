@@ -8,26 +8,46 @@ function initHeaderDropdown() {
 
   const items = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
 
-  const close = () => {
-    menu.classList.remove('open');
-    btn.setAttribute('aria-expanded', 'false');
-    btn.focus();
+  let lastInput: 'keyboard' | 'pointer' = 'pointer';
+  const markKeyboard = () => {
+    lastInput = 'keyboard';
   };
-  const open = () => {
-    menu.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-    items[0]?.focus();
+  const markPointer = () => {
+    lastInput = 'pointer';
   };
 
+  const close = (restoreFocus = lastInput === 'keyboard') => {
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) btn.focus();
+  };
+
+  document.addEventListener('pointerdown', markPointer, true);
+
   btn.addEventListener('click', (e) => {
+    if (e.detail === 0) markKeyboard();
     e.preventDefault();
     const isOpen = menu.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(isOpen));
-    if (isOpen) items[0]?.focus();
+    if (isOpen) {
+      if (lastInput === 'keyboard') {
+        items[0]?.focus();
+      }
+    } else if (lastInput === 'keyboard') {
+      btn.focus();
+    }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
+    const key = e.key;
+    if (key === 'Escape') {
+      markKeyboard();
+      close(true);
+      return;
+    }
+    if (key === 'Tab' || key === 'Enter' || key === ' ' || key === 'ArrowDown' || key === 'ArrowUp') {
+      markKeyboard();
+    }
   });
 
   document.addEventListener('click', (e) => {
@@ -36,6 +56,7 @@ function initHeaderDropdown() {
   });
 
   menu.addEventListener('keydown', (e) => {
+    markKeyboard();
     const active = document.activeElement as Element | null;
     const i = active ? items.indexOf(active as HTMLAnchorElement) : -1;
     if (e.key === 'ArrowDown') {
