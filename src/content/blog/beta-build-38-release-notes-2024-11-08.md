@@ -5,7 +5,7 @@ category: "Release Notes"
 date: "2024-11-08"
 readTime: "3 min read"
 isSample: false
-tags: ["beta", "series:beta-to-first-release", "build-38", "navigation", "performance", "ui"]
+tags: ["beta", "series:beta-to-first-release", "product:apps", "build-38", "navigation", "performance", "ui"]
 ---
 
 Released November 8, 2024

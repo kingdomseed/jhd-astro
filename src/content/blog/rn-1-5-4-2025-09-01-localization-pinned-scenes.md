@@ -1,6 +1,6 @@
 ---
 title: "Release Notes — v1.5.4"
-summary: "What's New"
+summary: "Localization improvements, pinned scenes, backup protection, and performance/stability"
 category: "Release Notes"
 date: "2025-09-01"
 readTime: "2 min read"

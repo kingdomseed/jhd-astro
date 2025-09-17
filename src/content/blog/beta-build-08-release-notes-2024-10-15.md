@@ -5,7 +5,7 @@ category: "Release Notes"
 date: "2024-10-15"
 readTime: "4 min read"
 isSample: false
-tags: ["beta", "series:beta-to-first-release", "build-08", "fate", "lists", "journal", "settings"]
+tags: ["beta", "series:beta-to-first-release", "product:apps", "build-08", "fate", "lists", "journal", "settings"]
 ---
 
 Released October 15, 2024

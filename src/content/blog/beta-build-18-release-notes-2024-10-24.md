@@ -5,7 +5,7 @@ category: "Release Notes"
 date: "2024-10-24"
 readTime: "3 min read"
 isSample: false
-tags: ["beta", "series:beta-to-first-release", "build-18", "create-load", "fate", "lists", "scenes"]
+tags: ["beta", "series:beta-to-first-release", "product:apps", "build-18", "create-load", "fate", "lists", "scenes"]
 ---
 
 Released October 24, 2024

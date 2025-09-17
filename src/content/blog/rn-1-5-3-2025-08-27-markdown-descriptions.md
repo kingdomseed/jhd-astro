@@ -1,6 +1,6 @@
 ---
 title: "Release Notes — v1.5.2–v1.5.3"
-summary: "🇺🇸 English"
+summary: "Entry descriptions in results, Markdown in logs, smarter custom tables, localization updates, storage recovery"
 category: "Release Notes"
 date: "2025-08-27"
 readTime: "8 min read"
