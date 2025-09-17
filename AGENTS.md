@@ -1,8 +1,15 @@
 # Repository Guidelines
 
-See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.md).
+This file is the canonical, detailed playbook for this repository. The previous VERDENT.md has been merged here and will be removed.
+
+## Scope & assumptions
+
+- This repository folder is `astro_project/`.
+- Site is a static Astro v5 site (no SSR, no Actions, no Content Layer, no islands) unless a PLAN explicitly introduces them.
+- Goal: small, safe, incremental changes that preserve semantics, a11y, and visual intent.
 
 ## Project Structure & Module Organization
+
 - `src/pages/`: Route files (`index.astro`, `about.astro`, etc.). Keep page filenames lowercase.
 - `src/components/`: Reusable UI in PascalCase (e.g., `Header.astro`, `Billboard.astro`).
 - `src/scripts/`: Small TypeScript utilities used by components.
@@ -13,9 +20,11 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - `docs/`: Project content docs (design, copy).
 
 ## Quality Benchmark
+
 - Treat `src/pages/index.astro` as the gold-standard reference for component composition, voice, accessibility, performance, and responsive behavior. Mirror its polish when introducing or updating other pages.
 
 ## Build, Test, and Development Commands
+
 - `npm install`: Install dependencies.
 - `npm run dev`: Start Astro dev server.
 - `npm run build`: Create production build in `dist/`.
@@ -23,6 +32,7 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - `npx astro check`: Type/diagnostics and config validation. Run before PRs.
 
 ## Coding Style & Naming Conventions
+
 - Indentation: 2 spaces; use semantically correct HTML in `.astro` files.
 - Components: PascalCase in `src/components/`; one concern per file.
 - Pages: lowercase in `src/pages/` (e.g., `privacy.astro`).
@@ -33,6 +43,7 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 - Product and store links live in `Header.astro` and `Footer.astro`; when they open in a new tab, keep `rel="noopener noreferrer"` intact.
 
 ## Recent UI Patterns & Decisions (shared learnings)
+
 - Spacing system:
   - `.container` provides width + horizontal gutters only (no block padding).
   - Use `.section` for vertical rhythm (default: 4rem desktop, 2rem ≤768px).
@@ -104,6 +115,7 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
   - Very narrow screens (<560px): switch 2‑col card grids to a single column to avoid asymmetric widths.
 
 ## Testing Guidelines
+
 - Current stack has no formal test runner. Before opening a PR:
   - Build/type check: `npx astro check && npm run build` — no errors or warnings introduced.
   - Manual QA (desktop + mobile):
@@ -113,7 +125,35 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
   - A11y spot-check: tab through interactive elements; visible focus; color contrast not reduced.
   - Perf spot-check: Lighthouse ≥90 for Performance/Best Practices/SEO on home page locally.
 
+## SEO & meta
+
+- Keep existing `<title>`, meta description, canonical, and OG/Twitter tags. If adding a new image, export at appropriate dimensions and update `og:image` path (absolute or root‑relative).
+- Don’t add analytics or trackers without a PLAN.
+
+## Pre‑mortem (Wrongness Check — mandatory)
+
+Before implementation, list three ways your change could be wrong, how you’d detect them early, and a cheap test:
+
+1. **Selector fragility** — Query breaks if markup shifts. *Signal:* menu stops toggling. *Test:* run page, click cta, verify open/close; then rename a class locally to simulate and ensure data‑selectors isolate behavior.
+2. **CSS regression** — New selector leaks styles to other components. *Signal:* unintended color/spacing changes elsewhere. *Test:* scan critical sections (header, hero, footer) before/after; constrain selector to the component root.
+3. **Accessibility regression** — Focus lost on toggle; screen reader label mismatch. *Signal:* keyboard can’t reach menu items; VoiceOver/NVDA announces wrong label. *Test:* tab‑order run and quick SR readout on macOS.
+
+If any cheap test fails: stop, revise the PLAN, seek re‑approval.
+
+## If you need to extend
+
+- For behavior > ~20 lines or reused across components, propose a `client:*` directive approach with a tiny module (e.g., `src/components/header-menu.ts`) and hydration mode (`client:idle` preferred for non‑critical).
+- If you introduce content collections or loaders, you must add: `content.config.ts`, schemas, and `npx astro sync` to the validation playbook — this requires explicit PLAN approval.
+
+## Files to review before changing behavior
+
+- `src/components/Header.astro` — inline toggle script + related markup.
+- `src/pages/index.astro` — page assembly and head tags.
+- `public/global.css` — global styles; ensure additions don’t cascade unexpectedly.
+- `public/` assets — verify referenced paths exist after your edits.
+
 ## Commit & Pull Request Guidelines
+
 - Commits: Follow Conventional Commits (`feat:`, `fix:`, `docs:`, `refactor:`, `chore:`). Examples exist in `git log`.
 - Title: `[astro] <concise summary>`
 - PR body must include: what & why, files touched, linked issues, screenshots (desktop + mobile), Lighthouse scores, `node -v`, and `npx astro check` output summary. Include rollback notes.
@@ -121,11 +161,13 @@ See the detailed validation playbook and editing rules in [VERDENT.md](VERDENT.m
 Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add JavaScript only when necessary and keep it local to the component.
 
 ## Security & Configuration Tips
+
 - Node: use active LTS (≥18; prefer 20). Keep `package-lock.json` committed.
 - Private registries/tokens are configured via `.npmrc`. Do not commit secrets elsewhere.
 - This site is static; avoid SSR/external data unless explicitly planned and approved.
 
 ## Guardrails
+
 - Do not add analytics or tracking scripts unless explicitly approved.
 - Avoid editing Webflow-generated files unless there is a clear requirement.
 - Favor incremental, small diffs over large structural rewrites.
