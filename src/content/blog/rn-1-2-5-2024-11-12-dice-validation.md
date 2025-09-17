@@ -5,7 +5,7 @@ category: "Release Notes"
 date: "2024-11-12"
 readTime: "4 min read"
 isSample: false
-tags: ["pre-release", "series:beta-to-first-release", "v1.2.5", "dice-roller", "journal", "accessibility", "support"]
+tags: ["pre-release", "series:beta-to-first-release", "product:apps", "v1.2.5", "dice-roller", "journal", "accessibility", "support"]
 ---
 
 Released November 12, 2024 (Getting close to launch!)
