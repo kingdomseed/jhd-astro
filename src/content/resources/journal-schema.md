@@ -9,4 +9,4 @@ externalUrl: "https://www.jasonholtdigital.com/table-schemas-unified.html#journa
 updated: "2025-02-01"
 ---
 
-Use this schema when building tooling around the Adventure Journal export. It covers validation tips, required IDs, and how Mythic stores timestamps for synchronisation.
+Coming soon.

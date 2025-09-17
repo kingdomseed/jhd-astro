@@ -9,4 +9,4 @@ externalUrl: "https://www.jasonholtdigital.com/resources/unified-table-v3-schema
 updated: "2025-02-01"
 ---
 
-Covers the unified table definition used across Mythic Apps, including lookup columns, dice expressions, and localization fields.
+Coming soon.

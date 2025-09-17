@@ -8,4 +8,4 @@ duration: "12 min read"
 updated: "2025-02-01"
 ---
 
-Deep dive into the Mythic formula language with annotated examples for branching logic, advantage/disadvantage, and mixing percentile and fate dice.
+Coming soon.

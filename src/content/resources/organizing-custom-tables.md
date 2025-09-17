@@ -8,4 +8,4 @@ duration: "7 min read"
 updated: "2025-02-01"
 ---
 
-Tips for structuring growing table libraries, linking related resources, and keeping collaborative tables from stepping on each other.
+Coming soon.

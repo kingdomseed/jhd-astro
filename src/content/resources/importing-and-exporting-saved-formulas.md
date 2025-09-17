@@ -8,4 +8,4 @@ duration: "6 min read"
 updated: "2025-02-01"
 ---
 
-Learn how to package formulas into collections, validate them before sharing, and re-import without creating duplicates.
+Coming soon.

@@ -9,4 +9,4 @@ externalUrl: "https://www.jasonholtdigital.com/resources/categories_schema.jsonc
 updated: "2025-02-01"
 ---
 
-Breakdown of the categories definition, including hierarchy rules and how to register new categories safely.
+Coming soon.
