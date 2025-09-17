@@ -1,5 +1,5 @@
 ---
-title: "Release Notes — v1.5.4"
+title: "v1.5.4 — Pinned Scenes & Localization"
 summary: "Localization improvements, pinned scenes, backup protection, and performance/stability"
 category: "Release Notes"
 date: "2025-09-01"

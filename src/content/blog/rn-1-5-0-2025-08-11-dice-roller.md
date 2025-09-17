@@ -1,5 +1,5 @@
 ---
-title: "Release Notes — v1.5"
+title: "v1.5 — Dice Roller 2.0 & Custom Tables"
 summary: "Random Events rework, Dice Roller 2.0, Custom Tables builder, a11y upgrades, stability, localization"
 category: "Release Notes"
 date: "2025-08-11"

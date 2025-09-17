@@ -1,5 +1,5 @@
 ---
-title: "v1.4.5 — Release Notes"
+title: "v1.4.5 — Portuguese & iCloud Sync"
 summary: "Full Portuguese, iCloud sync rebuilt, content from MM49, accessibility and stability across platforms"
 category: "Release Notes"
 date: "2025-03-03"

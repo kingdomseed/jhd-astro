@@ -1,7 +1,7 @@
 ---
 title: "Mythic GME Digital - Official DRM-free Release"
 summary: "Official DRM-Free Companion App Now Available for Windows, Linux & macOS"
-category: "Release Notes"
+category: "Announcement"
 date: "2025-03-26"
 readTime: "4 min read"
 isSample: false

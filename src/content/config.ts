@@ -54,6 +54,7 @@ const blog = defineCollection({
         "Behind the Scenes",
         "Guides",
         "Community",
+        "Announcement",
       ]),
       date: z.string(),
       readTime: z.string(),

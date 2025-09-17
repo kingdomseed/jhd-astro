@@ -1,5 +1,5 @@
 ---
-title: "Upcoming Release — v1.2.5"
+title: "v1.2.5 — App Relaunch"
 summary: "Dice notation validation, journal safety, support options, and clarity pass"
 category: "Release Notes"
 date: "2024-11-12"

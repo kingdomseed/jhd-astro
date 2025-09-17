@@ -1,7 +1,7 @@
 ---
 title: "Linux Packaging Changes — Flatpak Going Forward"
 summary: "Flatpak becomes primary; AppImage discontinued; DEB/RPM discontinued"
-category: "Release Notes"
+category: "Announcement"
 date: "2025-08-22"
 readTime: "4 min read"
 isSample: false

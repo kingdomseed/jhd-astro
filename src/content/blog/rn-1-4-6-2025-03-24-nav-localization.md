@@ -1,5 +1,5 @@
 ---
-title: "v1.4.6 — Release Notes"
+title: "v1.4.6 — Navigation & Localization"
 summary: "Navigation and localization fixes, launcher URL scheme, stability, and performance"
 category: "Release Notes"
 date: "2025-03-24"

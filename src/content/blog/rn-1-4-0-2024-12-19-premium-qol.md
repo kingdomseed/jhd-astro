@@ -1,9 +1,9 @@
 ---
-title: "Planned Launch — v1.4 Changelog"
+title: "v1.4 — Premium Unlock & QoL"
 summary: "Premium unlock IAP, Fate/Meaning table QoL, modern Dice Roller UI, and streamlined settings"
 category: "Release Notes"
 date: "2024-12-19"
-readTime: "3 min read"
+readTime: "6 min read"
 isSample: false
 tags: [
   "pre-release",
