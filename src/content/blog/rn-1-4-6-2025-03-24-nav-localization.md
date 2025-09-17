@@ -8,6 +8,7 @@ isSample: false
 tags: [
   "release",
   "v1.4.6",
+  "product:apps",
   "stability",
   "performance",
   "localization",

@@ -5,7 +5,7 @@ category: "Release Notes"
 date: "2024-11-04"
 readTime: "5 min read"
 isSample: false
-tags: ["beta", "series:beta-to-first-release", "rc1", "accessibility", "dice-roller", "platform"]
+tags: ["beta", "series:beta-to-first-release", "rc1", "product:apps", "accessibility", "dice-roller", "platform"]
 ---
 
 Released November 4, 2024

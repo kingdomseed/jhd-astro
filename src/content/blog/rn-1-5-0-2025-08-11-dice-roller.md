@@ -1,10 +1,11 @@
 ---
-title: "v1.5 is here!"
+title: "Release Notes — v1.5"
 summary: "Highlights"
 category: "Release Notes"
 date: "2025-08-11"
 readTime: "2 min read"
 isSample: false
+tags: ["release", "v1.5", "product:apps", "dice-roller", "custom-tables", "accessibility", "localization", "stability"]
 ---
 
 **Overview**
@@ -14,7 +15,7 @@ v1.5 is our biggest update yet. This release focuses on smarter Random Events, a
 - **Random Events reworked:** No default auto-roll on Meaning Tables. Choose tables manually via the slide-out panel for tighter narrative control.
 - **Ask a Question:** Add a short prompt before a Fate roll to anchor results in story context.
 - **Dice Roller 2.0:** Rewritten engine with complex formulas, parentheses, rerolls, exploding dice, drag-to-reorder layout, and import/export of saved formulas.
-- **Custom Tables & Oracle Builder:** Create, edit, link, and organize Meaning Tables, Event Focus, and Scene Adjustments. Import/export *CSV, JSON, PSV, TXT, Foundry VTT*; 3,000+ icons included.
+- **Custom Tables & Oracle Builder:** Create, edit, link, and organize Meaning Tables, Event Focus, and Scene Adjustments. Import/export *CSV, JSON, PSV, TXT, Foundry VTT*; 3,000+ icons included (from FontAwesome!).
 - **Search / Like / Filter Meaning Tables:** Realtime search, favorites, and tag filters for faster lookups.
 - **User Tables folder (included):** Drop properly formatted *JSON* into `user_tables/` and it loads on next app launch. Import also available in-app.
 - **Tablet/Desktop layout:** Draggable panels and split views on key screens for better multi-pane workflows.

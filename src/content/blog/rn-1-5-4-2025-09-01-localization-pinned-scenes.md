@@ -1,10 +1,11 @@
 ---
-title: "v1.5.4 - Localization Improvements & Pinned Scenes"
+title: "Release Notes — v1.5.4"
 summary: "What's New"
 category: "Release Notes"
 date: "2025-09-01"
 readTime: "2 min read"
 isSample: false
+tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performance", "accessibility"]
 ---
 
 *Released September 1, 2025*

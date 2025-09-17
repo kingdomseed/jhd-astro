@@ -1,10 +1,23 @@
 ---
-title: "Update to v1.5.3"
+title: "Release Notes — v1.5.2–v1.5.3"
 summary: "🇺🇸 English"
 category: "Release Notes"
 date: "2025-08-27"
 readTime: "8 min read"
 isSample: false
+tags: [
+  "release",
+  "v1.5.3",
+  "v1.5.2",
+  "product:apps",
+  "custom-tables",
+  "markdown",
+  "localization",
+  "storage",
+  "analytics",
+  "accessibility",
+  "performance"
+]
 ---
 
 Mythic GME 2e v1.5.2-1.5.3 Release Notes

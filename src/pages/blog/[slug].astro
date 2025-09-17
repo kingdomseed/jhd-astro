@@ -29,6 +29,18 @@ if (!entry) {
 const { Content } = await entry.render();
 const post = entry.data;
 
+// Derive product label from tags
+const tagList: string[] = Array.isArray((post as any)?.tags) ? ((post as any).tags as unknown as string[]) : [];
+const hasMobile = tagList.includes('product:mobile');
+const hasDigital = tagList.includes('product:digital');
+const productLabel = hasMobile && hasDigital
+  ? 'Mythic GME Apps'
+  : hasMobile
+    ? 'Mythic GME Mobile'
+    : hasDigital
+      ? 'Mythic GME Digital'
+      : 'Mythic GME Apps';
+
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en-US', {
     month: 'short',
@@ -57,7 +69,7 @@ const canonicalUrl = `https://jasonholtdigital.com/blog/${entry.slug}/`;
 
       <PageHeader
         title={post.title}
-        subtitle={post.category}
+        subtitle={`${post.category} • ${productLabel}`}
         description={post.summary}
         accent="Blog"
         layout="left"

@@ -8,6 +8,7 @@ isSample: false
 tags: [
   "release",
   "v1.4.5",
+  "product:apps",
   "localization",
   "portuguese",
   "icloud",
