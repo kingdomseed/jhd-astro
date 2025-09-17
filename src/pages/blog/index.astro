@@ -15,6 +15,24 @@ const featuredEntry: BlogEntry | undefined = posts[0];
 const moreEntries: BlogEntry[] = posts.slice(1);
 const listEntries: BlogEntry[] = moreEntries.length > 0 ? moreEntries : posts;
 
+// Series chips: gather series tags (tags that start with 'series:') safely
+const extractSeriesTags = (entry: BlogEntry): string[] => {
+  const tags = Array.isArray((entry as any).data?.tags) ? ((entry as any).data.tags as unknown[]) : [];
+  return (tags as string[]).filter((t) => typeof t === 'string' && t.startsWith('series:'));
+};
+const seriesTags: string[] = Array.from(new Set<string>(posts.flatMap(extractSeriesTags) as string[])).sort();
+
+// Selected series comes from the query string (?series=name)
+const selectedSeries = Astro.url.searchParams.get('series');
+const selectedTag = selectedSeries ? `series:${selectedSeries}` : undefined;
+
+// Filter entries by selected series if present (safe access)
+const hasTag = (entry: BlogEntry, tag: string) => {
+  const tags = Array.isArray((entry as any).data?.tags) ? ((entry as any).data.tags as unknown[]) : [];
+  return (tags as string[]).includes(tag);
+};
+const filteredEntries: BlogEntry[] = selectedTag ? listEntries.filter((e) => hasTag(e, selectedTag)) : listEntries;
+
 const categories = [
   {
     name: 'Release Notes',
@@ -137,8 +155,32 @@ const formatDate = (value: string) =>
               <h2 id="recent-title" class="section-title">Recent Posts</h2>
               <p class="blog-section-summary">Stay current with Mythic updates, process insights, and community voices.</p>
             </div>
+            {seriesTags.length > 0 && (
+              <nav class="blog-chips" aria-label="Filter by series">
+                <ul class="blog-chips__list" role="list">
+                  <li>
+                    <a
+                      class={`blog-pill ${!selectedSeries ? 'blog-pill--active' : ''}`}
+                      href="/blog/"
+                    >All</a>
+                  </li>
+                  {seriesTags.map((tag) => {
+                    const name = tag.replace('series:', '');
+                    const active = selectedSeries === name;
+                    return (
+                      <li>
+                        <a
+                          class={`blog-pill ${active ? 'blog-pill--active' : ''}`}
+                          href={`/blog/?series=${encodeURIComponent(name)}`}
+                        >{name}</a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            )}
             <ul class="blog-posts" role="list">
-              {listEntries.map((entry) => (
+              {filteredEntries.map((entry) => (
                 <li>
                   <article class="blog-card">
                     <header class="blog-card__header">
