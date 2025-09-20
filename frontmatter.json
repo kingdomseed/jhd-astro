@@ -1,0 +1,99 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "resources",
+      "previewPath": "'resources'",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": []
+    },
+    {
+      "name": "blog",
+      "previewPath": "'blog'",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "category",
+          "type": "choice",
+          "choices": [
+            "Release Notes",
+            "Behind the Scenes",
+            "Guides",
+            "Community",
+            "Announcement"
+          ],
+          "required": true
+        },
+        {
+          "name": "date",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "readTime",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "name": "isSample",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "tags",
+          "type": "tags",
+          "default": []
+        },
+        {
+          "name": "hero",
+          "type": "string",
+          "single": true
+        },
+        {
+          "name": "heroAlt",
+          "type": "string",
+          "single": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "resources",
+      "path": "[[workspace]]/src/content/resources",
+      "contentTypes": [
+        "resources"
+      ]
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog",
+      "contentTypes": [
+        "blog"
+      ]
+    }
+  ],
+  "frontMatter.content.publicFolder": {
+    "path": "src/assets",
+    "relative": true
+  },
+  "frontMatter.git.enabled": true
+}
