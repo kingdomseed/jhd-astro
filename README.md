@@ -90,6 +90,10 @@ public/
 └── favicon.ico         # Site favicon
 ```
 
+## 📚 Documentation
+
+- Project docs index: [docs/README.md](docs/README.md)
+
 ## 🎨 Design System
 
 - **Primary Brand Colors**: Custom gradient schemes

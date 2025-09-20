@@ -13,7 +13,12 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   // Site is used for absolute URLs (e.g., in RSS) and canonical generation in some contexts
   site: 'https://jasonholtdigital.com',
-  integrations: [sentry(), spotlightjs()],
+  integrations: [sentry({
+    project: "jhd-astro-ej",
+    org: "jason-holt-digital-llc",
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+  },
+), spotlightjs()],
   // Cloudflare adapter
   // Note: The adapter may log an informational message about a `SESSION` KV binding for sessions.
   // If you don't use sessions, this can be safely ignored. If you do, add a KV namespace binding

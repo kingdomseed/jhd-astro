@@ -106,6 +106,7 @@ steps:
 - Detail page: `src/pages/resources/[slug].astro` renders Resources.
   - If `hero` is provided, it is rendered via `<Image />` responsively.
   - If `steps` are provided, each step renders with an optional `<Image />` and caption.
+- ShareBar: a compact share bar is automatically rendered beneath the header (Copy, Share, Email, Reddit, Facebook, Bluesky). Icons are neutral by default with brand tints on hover.
 - Index page: `src/pages/resources/index.astro` groups entries by category and uses `order` for sorting.
 
 ## Accessibility & performance
@@ -113,6 +114,7 @@ steps:
 - Provide `heroAlt` when `hero` exists; provide `imageAlt` when a step image exists.
 - Non-critical images are lazy-loaded; hero is treated as likely LCP.
 - Keep images reasonably sized; Astro will generate optimized variants automatically.
+- Store hero and step images alongside the Markdown file (folder‑per‑resource). Use relative paths in frontmatter so images are validated and optimized.
 
 ## Validation & build
 
