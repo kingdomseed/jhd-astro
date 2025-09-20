@@ -16,6 +16,10 @@ import MakersNote from '../components/MakersNote.astro';
 import Footer from '../components/Footer.astro';
 import ReviewsRotator from '../components/ReviewsRotator.astro';
 import HeadFonts from '../components/HeadFonts.astro';
+import defaultOg from '../assets/logo/logo.jpg?url'; // Default site OG image
+
+// Absolute OG image URL for social previews
+const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.com').toString();
 ---
 <html lang="en">
   <head>
@@ -31,11 +35,13 @@ import HeadFonts from '../components/HeadFonts.astro';
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jasonholtdigital.com/" />
     <meta property="og:site_name" content="Jason Holt Digital" />
+    <meta property="og:image" content={ogImageUrl} />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Official Mythic GME 2e Apps — Jason Holt Digital" />
     <meta name="twitter:description" content="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop." />
+    <meta name="twitter:image" content={ogImageUrl} />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

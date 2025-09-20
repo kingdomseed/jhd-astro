@@ -20,6 +20,9 @@ import d4 from '../assets/desktop/desktop-4.png';
 import d5 from '../assets/desktop/desktop-5.png';
 import d6 from '../assets/desktop/desktop-6.png';
 import HeadFonts from '../components/HeadFonts.astro';
+import defaultOg from '../assets/logo/logo.jpg?url'; // Default site OG image
+
+const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.com').toString();
 
 // App data
 const mobileApp = {
@@ -105,11 +108,13 @@ const desktopApp = {
     <meta property="og:description" content="Official licensed companion apps for Mythic GME 2e. Available on mobile (iOS, Android) and desktop (Windows, macOS, Linux)." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jasonholtdigital.com/apps/" />
+    <meta property="og:image" content={ogImageUrl} />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mythic GME 2e Apps — Mobile & Desktop" />
     <meta name="twitter:description" content="Official licensed companion apps for Mythic GME 2e. Available on mobile and desktop platforms." />
+    <meta name="twitter:image" content={ogImageUrl} />
     
     <link rel="stylesheet" href="/global.css" />
   <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>

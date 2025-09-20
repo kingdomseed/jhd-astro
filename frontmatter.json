@@ -3,14 +3,47 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "resources",
-      "previewPath": "'resources'",
+      "previewPath": "/resources/{{slug}}",
       "pageBundle": false,
       "clearEmpty": true,
-      "fields": []
+      "fields": [
+        { "name": "title", "type": "string", "single": true, "required": true },
+        { "name": "summary", "type": "string", "single": true, "required": true },
+        {
+          "name": "category",
+          "type": "choice",
+          "choices": [
+            "start-here",
+            "adventure-journals",
+            "dice-roller",
+            "custom-tables",
+            "advanced"
+          ],
+          "required": true
+        },
+        { "name": "order", "type": "number", "single": true, "required": true },
+        { "name": "icon", "type": "string", "single": true, "default": "fa-slab fa-regular fa-book-open" },
+        { "name": "duration", "type": "string", "single": true },
+        { "name": "externalUrl", "type": "string", "single": true },
+        { "name": "updated", "type": "date", "single": true },
+        { "name": "hero", "type": "string", "single": true },
+        { "name": "heroAlt", "type": "string", "single": true },
+        {
+          "name": "steps",
+          "type": "list",
+          "description": "Structured steps (title, body, optional image & alt)",
+          "fields": [
+            { "name": "title", "type": "string", "single": true, "required": true },
+            { "name": "body", "type": "string", "single": true },
+            { "name": "image", "type": "string", "single": true },
+            { "name": "imageAlt", "type": "string", "single": true }
+          ]
+        }
+      ]
     },
     {
       "name": "blog",
-      "previewPath": "'blog'",
+      "previewPath": "/blog/{{slug}}",
       "pageBundle": false,
       "clearEmpty": true,
       "fields": [
@@ -40,7 +73,7 @@
         },
         {
           "name": "date",
-          "type": "string",
+          "type": "date",
           "single": true,
           "required": true
         },
@@ -69,6 +102,16 @@
           "name": "heroAlt",
           "type": "string",
           "single": true
+        },
+        {
+          "name": "socialImage",
+          "type": "string",
+          "single": true
+        },
+        {
+          "name": "socialImageAlt",
+          "type": "string",
+          "single": true
         }
       ]
     }
@@ -89,11 +132,56 @@
       "contentTypes": [
         "blog"
       ]
+    },
+    {
+      "title": "Multilingual",
+      "path": "[[workspace]]/src/content/resources",
+      "filePrefix": "{{date|yyyy-MM-dd}}",
+      "defaultLocale": "en"
+    },
+    {
+      "title": "Multilingual",
+      "path": "[[workspace]]/src/content/blog",
+      "filePrefix": "{{date|yyyy-MM-dd}}",
+      "defaultLocale": "en"
+    }
+  ],
+  "frontMatter.content.i18n": [
+    {
+      "title": "English",
+      "locale": "en",
+      "path": "en"
+    },
+    {
+      "title": "German",
+      "locale": "de",
+      "path": "de"
+    },
+    {
+      "title": "Portuguese",
+      "locale": "pt",
+      "path": "pt"
+    },
+    {
+      "title": "Italian",
+      "locale": "pt",
+      "path": "pt"
+    },
+    {
+      "title": "French",
+      "locale": "fr",
+      "path": "fr"
+    },
+    {
+      "title": "Spanish",
+      "locale": "es",
+      "path": "es"
     }
   ],
   "frontMatter.content.publicFolder": {
     "path": "src/assets",
     "relative": true
   },
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.panel.openOnSupportedFile": true
 }

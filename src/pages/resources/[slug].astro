@@ -4,9 +4,13 @@ import Footer from '../../components/Footer.astro';
 import HeadFonts from '../../components/HeadFonts.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { Image } from 'astro:assets';
+import { formatDate } from '../../scripts/format-date';
+import defaultOg from '../../assets/logo/logo.jpg?url'; // Default site OG image
 import { getEntryBySlug, getCollection, type CollectionEntry } from 'astro:content';
 
 type ResourceEntry = CollectionEntry<'resources'>;
+// Narrow the type of individual steps for stronger typing in map callback
+type ResourceStep = ResourceEntry['data']['steps'][number];
 
 export async function getStaticPaths() {
   const entries = await getCollection('resources');
@@ -49,6 +53,11 @@ const sectionAnchors = {
 const parentAnchor = sectionAnchors[resource.category] ?? '';
 const backHref = `/resources${parentAnchor}`;
 const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
+// Compute absolute OG image URL using resource hero or default site image
+const ogSrcPath = resource.hero?.src ?? defaultOg;
+const ogImageUrl = new URL(ogSrcPath, Astro.site ?? 'https://jasonholtdigital.com').toString();
+const ogImageAlt = resource.heroAlt ?? resource.title;
+
 ---
 <html lang="en">
   <head>
@@ -60,6 +69,10 @@ const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
     <link rel="canonical" href={canonicalUrl} />
     <link rel="stylesheet" href="/global.css" />
   <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <meta property="og:image" content={ogImageUrl} />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
   </head>
   <body>
     <a class="skip" href="#main">Skip to main content</a>
@@ -92,7 +105,7 @@ const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
               <div class="resource-detail__meta" aria-label="Resource metadata">
                 <span class="resource-pill">{categoryLabels[resource.category]}</span>
                 {resource.duration && <span class="resource-pill">{resource.duration}</span>}
-                {resource.updated && <span class="resource-pill">Updated {resource.updated}</span>}
+                {resource.updated && <span class="resource-pill">Updated {formatDate(resource.updated)}</span>}
               </div>
               {resource.externalUrl && (
                 <p class="resource-detail__download">
@@ -103,6 +116,7 @@ const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
                 </p>
               )}
             </header>
+            {/** Optional hero image at the top of the guide. Alt text is enforced by schema when hero is present. */}
             {resource.hero && (
               <figure class="resource-hero">
                 <Image
@@ -122,6 +136,7 @@ const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
               <Content />
             </div>
             {Array.isArray(resource.steps) && resource.steps.length > 0 && (
+              // Structured steps: present a scannable, accessible sequence
               <section class="section" aria-labelledby="resource-steps-title">
                 <header class="section-head" aria-hidden="true">
                   <span class="accent-line" aria-hidden="true"></span>
@@ -129,7 +144,7 @@ const canonicalUrl = `https://jasonholtdigital.com/resources/${entry.slug}/`;
                 </header>
                 <h3 id="resource-steps-title" class="section-title">Step-by-step</h3>
                 <ol class="resource-steps">
-                  {resource.steps.map((s, i) => (
+                  {resource.steps.map((s: ResourceStep, i: number) => (
                     <li class="resource-step" data-step-index={i + 1}>
                       <h4 class="resource-step__title">{s.title}</h4>
                       {s.body && <p class="resource-step__body">{s.body}</p>}

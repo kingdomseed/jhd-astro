@@ -1,0 +1,228 @@
+---
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import HeadFonts from '../../../components/HeadFonts.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { formatDate } from '../../../scripts/format-date';
+
+type BlogEntry = CollectionEntry<'blog'>;
+type CategoryName = BlogEntry['data']['category'];
+
+// Generate static paths for all unique categories (case-insensitive)
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  // Get unique categories and normalize to lowercase for URLs
+  const uniqueCategories = [...new Set<CategoryName>(posts.map((post: BlogEntry) => post.data.category))];
+
+  return uniqueCategories.map((category: CategoryName) => ({
+    params: {
+      category: category.toLowerCase().replace(/\s+/g, '-'),
+    },
+    props: {
+      originalCategory: category,
+    },
+  }));
+}
+
+const { category } = Astro.params as { category: string };
+const { originalCategory } = Astro.props as { originalCategory: CategoryName };
+
+// Get all posts for this category
+const allPosts = await getCollection('blog');
+const categoryPosts = allPosts
+  .filter((post: BlogEntry) => post.data.category === originalCategory)
+  .sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime());
+
+// Category metadata for display
+const categoryMeta = {
+  'Release Notes': {
+    description: 'Version highlights and detailed changelogs for Mythic Apps.',
+    icon: 'fa-slab fa-regular fa-rocket',
+  },
+  'Behind the Scenes': {
+    description: 'Design explorations and development process breakdowns.',
+    icon: 'fa-slab fa-regular fa-palette',
+  },
+  'Guides': {
+    description: 'Play-tested tips and workflows for Mythic tools.',
+    icon: 'fa-slab fa-regular fa-compass',
+  },
+  'Community': {
+    description: 'Spotlights, interviews, and play reports from the community.',
+    icon: 'fa-slab fa-regular fa-users',
+  },
+  'Announcement': {
+    description: 'Important updates and news about Mythic Apps.',
+    icon: 'fa-slab fa-regular fa-bullhorn',
+  },
+};
+
+const currentMeta = categoryMeta[originalCategory as keyof typeof categoryMeta] || {
+  description: `All posts in the ${originalCategory} category.`,
+  icon: 'fa-slab fa-regular fa-folder',
+};
+
+const canonicalUrl = `https://jasonholtdigital.com/blog/category/${category}/`;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <HeadFonts />
+    <title>{originalCategory} — Mythic Blog</title>
+    <meta name="description" content={currentMeta.description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="stylesheet" href="/global.css" />
+    <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <div id="bg-atmo" aria-hidden="true"></div>
+    <div id="site">
+      <Header />
+
+      <PageHeader 
+        title={originalCategory}
+        subtitle={`${categoryPosts.length} ${categoryPosts.length === 1 ? 'post' : 'posts'}`}
+        description={currentMeta.description}
+        accent="Blog"
+        layout="left"
+        icon={currentMeta.icon}
+        colorScheme="secondary"
+      />
+
+      <main id="main" class="blog-main">
+        <section class="section" aria-labelledby="category-posts-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">{originalCategory}</span>
+            </header>
+            <div class="blog-section-heading">
+              <h2 id="category-posts-title" class="section-title sr-only">
+                {originalCategory} Posts
+              </h2>
+              <p class="blog-category-nav">
+                <a href="/blog" class="blog-back-link">
+                  <i class="fa-slab fa-regular fa-arrow-left" aria-hidden="true"></i>
+                  Back to all posts
+                </a>
+              </p>
+            </div>
+            
+            {categoryPosts.length > 0 ? (
+              <ul class="blog-posts" role="list">
+                {categoryPosts.map((entry: BlogEntry) => (
+                  <li>
+                    <article class="blog-card">
+                      <header class="blog-card__header">
+                        <span class="blog-pill">{entry.data.category}</span>
+                        <span class="blog-card__date">{formatDate(entry.data.date)}</span>
+                      </header>
+                      <h3 class="blog-card__title">
+                        <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
+                      </h3>
+                      <p class="blog-card__summary">{entry.data.summary}</p>
+                      {entry.data.isSample && (
+                        <p class="blog-sample-note blog-sample-note--card">Sample placeholder — swap in the real article before launch.</p>
+                      )}
+                      <footer class="blog-card__footer">
+                        <span class="blog-card__readtime">{entry.data.readTime}</span>
+                        {entry.data.isSample && (
+                          <div class="blog-card__meta">
+                            <span class="blog-pill blog-pill--sample">Sample</span>
+                          </div>
+                        )}
+                        <a class="blog-card__link" href={`/blog/${entry.slug}/`}>
+                          Read post
+                          <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                      </footer>
+                    </article>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div class="blog-empty">
+                <p>No posts in this category yet.</p>
+                <p>
+                  <a href="/blog" class="btn btn--shadow-primary">
+                    View all posts
+                    <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section class="section section-band" aria-labelledby="other-categories-title">
+          <div class="container">
+            <header class="section-head" aria-hidden="true">
+              <span class="accent-line" aria-hidden="true"></span>
+              <span class="badge-text">Browse</span>
+            </header>
+            <div class="blog-section-heading blog-section-heading--center">
+              <h2 id="other-categories-title" class="section-title">Other Categories</h2>
+              <p class="blog-section-summary">Explore more content from the Mythic blog.</p>
+            </div>
+            <ul class="blog-categories" role="list">
+              {Object.entries(categoryMeta)
+                .filter(([cat]) => cat !== originalCategory)
+                .map(([catName, meta]) => (
+                  <li>
+                    <a 
+                      class="blog-category" 
+                      href={`/blog/category/${catName.toLowerCase().replace(/\s+/g, '-')}/`}
+                    >
+                      <span class="blog-category__icon" aria-hidden="true">
+                        <i class={meta.icon}></i>
+                      </span>
+                      <span class="blog-category__body">
+                        <span class="blog-category__name">{catName}</span>
+                        <span class="blog-category__description">{meta.description}</span>
+                      </span>
+                      <span class="blog-category__arrow" aria-hidden="true">
+                        <i class="fa-slab fa-regular fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  .blog-category-nav {
+    margin: 1rem 0 2rem;
+  }
+  
+  .blog-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .blog-back-link:hover {
+    color: var(--color-primary);
+  }
+  
+  .blog-empty {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .blog-empty p {
+    margin: 1rem 0;
+  }
+</style>

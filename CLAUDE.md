@@ -2,19 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Important: `AGENTS.md` is the canonical repository playbook. The former VERDENT.md content has been merged there. This file tailors those rules for Claude-specific workflows.
+Important: `AGENTS.md` is the canonical repository playbook. This file tailors those rules for Claude-specific workflows.
 
 ## Commands
 
 **Development:**
-
-- `npm install` - Install dependencies
+- `npm install` - Install dependencies (Node.js >=20 <21 required)
 - `npm run dev` - Start development server (runs `astro dev`)
 - `npm run build` - Build static site to `dist/`
 - `npm run preview` - Preview the built site
 
 **Health checks before commits:**
-
 - `npx astro check` - Type checking and linting
 - `npm run build` - Ensure build passes
 - Combined: `npx astro check && npm run build`
@@ -24,133 +22,129 @@ Important: `AGENTS.md` is the canonical repository playbook. The former VERDENT.
 This is a **static Astro v5 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
 
 **🏆 GOLD STANDARD:** The homepage (`src/pages/index.astro`) represents our gold standard for design quality, voice, user experience, and component implementation. Reference it for:
-
 - Component composition and structure
 - Visual design patterns and spacing
 - Voice and content approach
 - Accessibility implementation
 - Performance optimization
 - Mobile responsiveness
+
 All other pages should match or aspire to this level of polish.
 
-- **Component-driven:** Main page `src/pages/index.astro` composes small, single-purpose components from `src/components/`
-- **Content collections:** Blog and Resources pull from `src/content/`. Each Markdown entry includes metadata (e.g., `isSample`). Pages use `getCollection()` and `getStaticPaths()`.
-- **Static assets:** All assets served from `public/` (referenced as `/filename.ext`)
-- **Single stylesheet:** `public/global.css` plus component layer files under `public/styles/components/` contain all styles - prefer adding classes there over inline styles
-- **Minimal JS:** Small vanilla JS snippets inline within `.astro` components (see `Header.astro` download menu toggle)
+### Core Structure
+- **Component-driven:** Pages compose small, single-purpose components from `src/components/`
+- **Content collections:** Blog and Resources pull from `src/content/` with schemas defined in `src/content/config.ts`
+- **Static assets:** Served from `public/` (referenced as `/filename.ext`)
+- **Layered CSS:** `public/global.css` imports layer files: tokens → base → utilities → components → overrides
+- **Minimal JS:** TypeScript modules in `src/scripts/` for interactions, hoisted in Astro components
+
+### CSS Layer Architecture
+```css
+@layer tokens, base, utilities, components, overrides;
+```
+- `tokens.css`: CSS variables, color palette, sizing scales
+- `base.css`: Element defaults, typography
+- `utilities.css`: Layout helpers (.container, .row, .section)
+- `components/*.css`: Component-specific styles
+- `overrides.css`: Small one-off fixes
 
 ## Key Files & Patterns
 
-- **`src/pages/index.astro`**: Main page assembly and global head tags
-- **`src/components/Header.astro`**: Contains inline JS for download menu toggle (`.cta-download`, `#downloadMenu`)
-- **`src/components/Footer.astro`**: Dynamic copyright year via `new Date().getFullYear()`
-- **`public/global.css`**: Global stylesheet - add component-specific classes here
-- **`astro.config.mjs`**: Minimal config - keep defaults unless explicitly required
+- **`src/pages/index.astro`**: Gold standard page assembly and global head tags
+- **`src/components/Header.astro`**: Navigation with accessible dropdown menu
+- **`src/scripts/header-dropdown.ts`**: TypeScript module for dropdown behavior
+- **`public/global.css`**: CSS entrypoint with layer imports
+- **`src/content/config.ts`**: Content collection schemas with validation
+- **`astro.config.mjs`**: Minimal config with Cloudflare adapter
 
 ## Editing Guidelines
 
 **Safety & scope:**
+- Make single, targeted changes preserving existing boundaries
+- Keep diffs minimal and focused
+- Preserve ARIA attributes and accessibility features
+- Reference AGENTS.md for detailed standards
 
-- Make single, small changes preserving existing component boundaries
-- Keep diffs minimal and targeted
-- Preserve ARIA attributes, semantic tags, and accessibility features
-
-**Client-side JS conventions:**
-
-- Use inline vanilla JS within `.astro` components (keep ≤20 lines)
-- Use data-attributes for selectors (`data-cta="download"`, `data-menu="downloads"`)
-- Guard against nulls and support multiple component instances
-- For larger client code, use Astro client directives (`client:load`, `client:idle`)
+**Client-side TypeScript conventions:**
+- Use hoisted script modules in `.astro` components
+- Import from `src/scripts/` for reusable behaviors
+- Use data attributes for selectors (`data-dropdown`, `data-menu`)
+- Guard against nulls and support multiple instances
+- Add proper TypeScript types
 
 **Styling:**
+- Add component styles to appropriate layer file in `public/styles/`
+- Keep selectors scoped to avoid regressions
+- Follow neo-brutalist design system (thick borders, flat design, high contrast)
+- Use existing CSS variables from tokens.css
 
-- Prefer adding to `public/global.css` or `public/styles/components/*.css` over inline styles
-- Keep selectors specific to avoid regressions
-- Use `astro:assets` `<Image />` for component images
-- Keep static files (favicons, robots.txt) in `public/`
-
-**External dependencies:**
-
-- Font Awesome loaded via CDN in `index.astro` head
-- External product/store links in `Header.astro` and `Footer.astro`
-- Contact/support routing consolidates on `/support#contact-panel`; links should point there so the contact tab opens automatically.
+**Content Management:**
+- Blog posts in `src/content/blog/` with required frontmatter
+- Resources in `src/content/resources/` with category organization
+- Use `isSample: true` for placeholder content
+- Images require alt text for accessibility
 
 ## Before Committing
 
 **Required checks:**
-
 1. Run `npx astro check && npm run build` (no errors/warnings)
-2. Manual QA: Header menu toggles, images render, footer year correct
-3. Accessibility: Tab through interactive elements, check focus visibility
+2. Manual QA per AGENTS.md checklist:
+   - Header dropdown functionality
+   - Image paths resolve without 404s
+   - No console errors
+   - Mobile viewport renders correctly
+3. Accessibility: Keyboard navigation works, focus visible
 4. Performance: Lighthouse ≥90 for Performance/Best Practices/SEO
 
-**Validation checklist:**
+## Design System
 
-- Header download menu opens/closes correctly
-- All image paths resolve without 404s
-- No console errors in browser
-- Mobile viewport renders correctly
+**Neo-Brutalist Aesthetic:**
+- Primary: #0066ff (blue)
+- Accent: #ffd700 (yellow)
+- Structure: #000000 (black)
+- Background: #f9f9f9 (off-white)
+- Typography: Epilogue (display), Plus Jakarta Sans (body)
+- Borders: 1-4px based on hierarchy
+- Shadows: Anchored offset (4px, 4px)
 
-## Content & Design Patterns
-
-**Component conventions:**
-
-- `.container`: width and horizontal gutters only
-- `.section`: vertical spacing (4rem desktop, 2rem mobile)
-- Section headers use `.section-head` (visual only, `aria-hidden="true"`) + unique H2 with `.section-title`; use `.section-head--left` + `.section-title--left` when badge/title align with column content (e.g., About profile).
-
-**Interactive elements:**
-
-- Use semantic HTML (`ul/li` for lists, proper button/anchor elements)
-- Preserve existing ARIA labels and focus management
-- Keep external links with `rel="noopener noreferrer"` for `target="_blank"`
+**Component Conventions:**
+- `.container`: Width constraints and gutters
+- `.section`: Vertical spacing (4rem desktop, 2rem mobile)
+- `.section-head`: Visual badge (aria-hidden)
+- `.section-title`: Actual heading for screen readers
 
 ## Performance Notes
 
-- Use `astro:assets` `<Image />` for local images with proper lazy loading
+- Use `astro:assets` `<Image />` for local images
 - Set `fetchpriority="high"` only for LCP images
-- Avoid `100vw` (use `100dvw` + `calc(-50dvw + 50%)` for full-bleed)
-- Add `overflow-x: clip` on html/body to prevent horizontal scroll
+- Lazy load below-the-fold content
+- Keep JavaScript minimal - prefer CSS solutions
+- Cache static assets aggressively (`_astro/*` for 1 year)
 
 ## What NOT to do
 
-- Do not add SSR, server actions, or dynamic data access without explicit approval
-- Do not introduce build tooling, frameworks, or package managers beyond what exists
-- Do not edit Webflow-generated files unless absolutely necessary
-- Do not add analytics or trackers
-- Do not create large structural rewrites - prefer incremental changes
+- Do not add SSR, server actions, or dynamic data fetching
+- Do not introduce new build tools or frameworks
+- Do not create files unless absolutely necessary
+- Do not add analytics without explicit approval
+- Do not make large structural changes - prefer incremental updates
 
-## SEO & meta
+## Content Collections
 
-- Keep existing `<title>`, meta description, canonical, and OG/Twitter tags. If adding a new image, export at appropriate dimensions and update `og:image` path (absolute or root‑relative).
-- Don’t add analytics or trackers without a PLAN.
+**Blog Schema (`src/content/blog/`):**
+- Required: title, summary, date, category, readTime, tags
+- Optional: heroImage (with required alt), isSample
+- Categories: Release Notes, Behind the Scenes, Guides, Community, Announcement
 
-## Pre‑mortem (Wrongness Check — mandatory)
+**Resources Schema (`src/content/resources/`):**
+- Required: title, summary, category, order, icon, duration
+- Optional: steps array with images
+- Categories: start-here, adventure-journals, dice-roller, custom-tables, advanced
 
-Before implementation, list three ways your change could be wrong, how you’d detect them early, and a cheap test:
+## Deployment
 
-1. **Selector fragility** — Query breaks if markup shifts. Signal: menu stops toggling. Test: run page, click CTA, verify open/close; then rename a class locally to ensure data‑selectors isolate behavior.
-2. **CSS regression** — New selector leaks to other components. Signal: unintended color/spacing changes elsewhere. Test: scan header, hero, footer before/after; scope selectors to component root.
-3. **Accessibility regression** — Focus lost or label mismatch. Signal: keyboard can’t reach items; SR announces wrong label. Test: tab‑order run and quick VoiceOver/NVDA readout.
-
-If any cheap test fails: stop, revise the PLAN, seek re‑approval.
-
-## If you need to extend
-
-- For behavior > ~20 lines or reused across components, propose a `client:*` directive + tiny module (e.g., `src/components/header-menu.ts`) with `client:idle` for non‑critical features.
-- If you introduce content collections or loaders, add `content.config.ts`, schemas, and run `npx astro sync`. Update the validation playbook accordingly (requires explicit PLAN approval).
-
-## Files to review before changing behavior
-
-- `src/components/Header.astro` — inline toggle script + related markup.
-- `src/pages/index.astro` — page assembly and head tags.
-- `public/global.css` — global styles; ensure additions don’t cascade unexpectedly.
-- `public/` assets — verify referenced paths exist after your edits.
-
-## Images & caching tips
-
-- astro:assets caches transforms. For a clean re‑opt: delete `.astro/`, `dist/`, `node_modules/.astro/`, and `node_modules/.vite/`, then rebuild.
-- Consider renaming changed assets (e.g., `logo-v2.jpg`) to force fresh transforms.
-- Prefer `logo.svg?url` for crisp, cache‑safe logos; use `<Image />` for raster assets to leverage optimization.
-- Lazy‑load below‑the‑fold images; keep only true LCP imagery eager.
-- Avoid `100vw` overflow; prefer `100dvw` and clip horizontal overflow on `html, body, #site`.
+- **Production**: Cloudflare (uses Cloudflare adapter in `astro.config.mjs`)
+- **Preview**: Netlify (configured in `netlify.toml`)
+- Build output: Static files to `dist/`
+- Node version: 20 (strict requirement)
+- Environment: Production builds with Sentry monitoring
