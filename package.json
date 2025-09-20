@@ -12,6 +12,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.8",
     "@awesome.me/kit-9f0db3cdf4": "^1.0.10",
     "@sentry/astro": "^10.11.0",
     "@spotlightjs/astro": "^3.2.6",
@@ -22,6 +23,7 @@
     "@astrojs/check": "^0.9.4",
     "esbuild": "^0.25.10",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "wrangler": "^4.38.0"
   }
 }
