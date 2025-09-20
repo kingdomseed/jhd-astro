@@ -17,14 +17,14 @@
     align-items: center;
     padding: 4px 8px;
     background: rgba(255, 255, 255, 0.04);
-    border-radius: var(--radius-pill);
+    border-radius: 4px; /* Subtle rounding instead of pill shape */
     font-weight: 700;
     opacity: 0.9;
     /* Remove default border, will use pseudo-element */
     border: none;
   }
 
-  /* Animated gradient border */
+  /* Animated gradient border using conic gradient technique */
   .tag::before {
     content: '';
     position: absolute;
@@ -36,21 +36,54 @@
     padding: 1px; /* This creates the border thickness */
     background: linear-gradient(
       90deg,
-      #000000,
-      #000000 30%,
-      #ffd700 50%,
-      #000000 70%,
-      #000000
+      #000000 0%,
+      #000000 20%,
+      rgba(0, 102, 255, 0.6) 28%,
+      #ffd700 33%,
+      rgba(0, 102, 255, 0.6) 38%,
+      #000000 46%,
+      #000000 100%
     );
-    background-size: 300% 100%;
+    background-size: 300% 300%;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
-    animation: gradient-move 4s linear infinite;
+    animation: gradient-move-slow 10s linear infinite;
   }
 
-  @keyframes gradient-move {
+  /* Second gradient layer with offset for top/bottom effect */
+  .tag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      270deg,
+      #000000 0%,
+      #000000 20%,
+      rgba(0, 102, 255, 0.6) 28%,
+      #ffd700 33%,
+      rgba(0, 102, 255, 0.6) 38%,
+      #000000 46%,
+      #000000 100%
+    );
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: gradient-move-slow 10s linear infinite;
+    animation-delay: -3s; /* Offset timing */
+    mix-blend-mode: screen; /* Blend the two gradients */
+    opacity: 0.6;
+  }
+
+  @keyframes gradient-move-slow {
     0% {
       background-position: 0% 0%;
     }
