@@ -142,6 +142,7 @@
   .ico--github  { --c: #000000; }
   .ico--itch    { --c: #FA5C5C; }
   .ico--instagram { --c: #E4405F;}
+  .ico--blog { --c: var(--color-accent); }
   /* .ico--linkedin { --c: #0A66C2;} */
   /* On hover, fill with brand color and invert icon for clarity */
   .ico:hover {

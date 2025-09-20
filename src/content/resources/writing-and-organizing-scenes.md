@@ -3,7 +3,7 @@ title: "Writing and Organizing Scenes"
 summary: "Use scene templates, quick capture, and archive tools to keep Mythic adventures flowing."
 category: "start-here"
 order: 3
-icon: "fa-slab fa-regular fa-scroll"
+icon: "fa-slab fa-regular fa-film"
 duration: "9 min read"
 updated: "2025-02-01"
 ---

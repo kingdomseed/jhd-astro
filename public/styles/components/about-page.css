@@ -66,6 +66,7 @@
     color: #333;
     line-height: 1.6;
   }
+  .about-license__summary p { margin: 0; }
 
   .about-license__list {
     margin: 0;
@@ -83,6 +84,7 @@
     text-align: center;
     margin-inline: auto;
   }
+  .about-background__summary p { margin: 0; }
 
   .about-background-grid {
     margin-top: 2rem;
@@ -133,10 +135,10 @@
 
   .about-mythic__summary {
     margin: 0;
-    max-width: 64ch;
     color: #333;
     line-height: 1.6;
   }
+  .about-mythic__summary p { margin: 0; }
 
   .about-mythic__list {
     margin: 2rem 0 0;
@@ -150,6 +152,18 @@
   .about-mythic__note {
     margin: 1.5rem 0 0;
     color: #555;
+  }
+  .about-mythic__note p { margin: 0; }
+
+  .about-mythic__note a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .about-mythic__note a:hover {
+    text-decoration-thickness: 2px;
   }
 
   .about-connect {
@@ -167,6 +181,7 @@
     color: #333;
     line-height: 1.6;
   }
+  .about-connect__summary p { margin: 0; }
 
   .about-connect__actions {
     display: flex;
@@ -182,9 +197,24 @@
     flex-wrap: wrap;
   }
 
-  .about-social .btn {
-    min-width: 190px;
+  .about-connect__support {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.95em;
+    color: var(--color-text-muted);
   }
+
+  .about-connect__support a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .about-connect__support a:hover {
+    text-decoration-thickness: 2px;
+  }
+
 
   @media (max-width: 900px) {
     .about-overview {

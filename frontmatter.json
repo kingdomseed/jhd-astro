@@ -114,6 +114,58 @@
           "single": true
         }
       ]
+    },
+    {
+      "name": "pages",
+      "previewPath": "/{{slug}}",
+      "pageBundle": false,
+      "clearEmpty": true,
+      "fields": [
+        { "name": "title", "type": "string", "single": true, "required": true },
+        { "name": "subtitle", "type": "string", "single": true, "required": true },
+        { "name": "description", "type": "string", "single": true, "required": true },
+        {
+          "name": "pageHeader",
+          "type": "fields",
+          "fields": [
+            { "name": "accent", "type": "string", "single": true, "required": true },
+            { "name": "icon", "type": "string", "single": true, "required": true },
+            { "name": "layout", "type": "string", "single": true, "required": true },
+            { "name": "visualElement", "type": "string", "single": true, "required": true },
+            { "name": "colorScheme", "type": "string", "single": true, "required": true }
+          ]
+        },
+        {
+          "name": "backgroundHighlights",
+          "type": "list",
+          "description": "Background highlight cards",
+          "fields": [
+            { "name": "icon", "type": "string", "single": true, "required": true },
+            { "name": "title", "type": "string", "single": true, "required": true },
+            { "name": "description", "type": "string", "single": true, "required": true }
+          ]
+        },
+        {
+          "name": "socialLinks",
+          "type": "list",
+          "description": "Social media and external links",
+          "fields": [
+            { "name": "href", "type": "string", "single": true, "required": true },
+            { "name": "label", "type": "string", "single": true, "required": true },
+            { "name": "icon", "type": "string", "single": true, "required": true },
+            { "name": "className", "type": "string", "single": true, "required": true },
+            { "name": "external", "type": "boolean" }
+          ]
+        },
+        {
+          "name": "mythicHighlights",
+          "type": "list",
+          "description": "List of product highlights",
+          "fields": [
+            { "name": "text", "type": "string", "single": true, "required": true }
+          ]
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "astro",
@@ -131,6 +183,13 @@
       "path": "[[workspace]]/src/content/blog",
       "contentTypes": [
         "blog"
+      ]
+    },
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/content/pages",
+      "contentTypes": [
+        "pages"
       ]
     },
     {

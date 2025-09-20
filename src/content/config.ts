@@ -90,4 +90,36 @@ const blog = defineCollection({
       ),
 });
 
-export const collections = { resources, blog };
+const pages = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    description: z.string(),
+    pageHeader: z.object({
+      accent: z.string(),
+      icon: z.string(),
+      layout: z.string(),
+      visualElement: z.string(),
+      colorScheme: z.string(),
+    }),
+    backgroundHighlights: z.array(z.object({
+      icon: z.string(),
+      title: z.string(),
+      description: z.string(),
+    })).optional(),
+    socialLinks: z.array(z.object({
+      href: z.string(),
+      label: z.string(),
+      icon: z.string(),
+      className: z.string(),
+      external: z.boolean().optional(),
+    })).optional(),
+    mythicHighlights: z.array(z.object({
+      label: z.string(),
+      description: z.string(),
+    })).optional(),
+  }),
+});
+
+export const collections = { resources, blog, pages };
