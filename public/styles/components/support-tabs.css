@@ -60,7 +60,9 @@
     gap: 2rem;
   }
 
-  .support-container .panel + .panel {
+  /* Add top margin only when panels are stacked outside of the two‑column grid.
+     Prevents offset/mismatched heights in the "How to Get Help" twoup panels. */
+  .support-container :not(.twoup) > .panel + .panel {
     margin-top: 1.5rem;
   }
 
@@ -313,7 +315,18 @@
   .faq-answer p,
   .faq-answer ul {
     margin: 0 0 1rem 0;
-    padding: 0 1.5rem 1rem 1.5rem;
+    padding: 0.75rem 1.5rem 1rem 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* Ensure any loose content inside a section (e.g., a "Last updated" note)
+     has the same inner padding as answers. Targets only direct children so
+     Q&A items keep their own spacing. */
+  .faq-section-content > p,
+  .faq-section-content > ul {
+    margin: 0 0 1rem 0;
+    padding: 0.75rem 1.5rem 1rem 1.5rem;
     color: var(--color-text-muted);
     line-height: 1.6;
   }
@@ -353,7 +366,11 @@
     
     .faq-answer p,
     .faq-answer ul {
-      padding: 0 1rem 1rem 1rem;
+      padding: 0.75rem 1rem 1rem 1rem;
+    }
+    .faq-section-content > p,
+    .faq-section-content > ul {
+      padding: 0.75rem 1rem 1rem 1rem;
     }
     
     .faq-answer ul {

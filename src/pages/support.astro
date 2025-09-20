@@ -3,6 +3,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PageHeader from '../components/PageHeader.astro';
 import HeadFonts from '../components/HeadFonts.astro';
+// Public constants per request (safe to expose client-side)
+const FORMSPARK_FORM_ID = 'BrXEDLTap';
+const TURNSTILE_SITE_KEY = '0x4AAAAAABhU6Cccio-kREUw';
 ---
 <html lang="en">
   <head>
@@ -210,7 +213,12 @@ import HeadFonts from '../components/HeadFonts.astro';
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                   </button>
                   <div id="accessibility" class="faq-answer">
-                    <p>Screen reader support, color‑blind modes, very‑large text, left‑handed mode.</p>
+                    <ul>
+                      <li><strong>Screen reader</strong> support across major platforms.</li>
+                      <li><strong>Color‑blind</strong> friendly palettes for improved contrast.</li>
+                      <li><strong>Large/very‑large text</strong> options that scale key UI.</li>
+                      <li><strong>Left‑handed mode</strong> for comfortable one‑hand use.</li>
+                    </ul>
                   </div>
                 </div>
 
@@ -405,7 +413,7 @@ import HeadFonts from '../components/HeadFonts.astro';
             <div>
               <section class="panel" aria-labelledby="contact-form-title">
                 <h2 id="contact-form-title">Send a Message</h2>
-                <form id="contact-form" action="https://submit-form.com/BrXEDLTap" method="post" class="contact-form">
+                <form id="contact-form" action={`https://submit-form.com/${FORMSPARK_FORM_ID}`} method="post" class="contact-form">
                   
                   <div class="form-field">
                     <label for="name">Full Name</label>
@@ -428,7 +436,7 @@ import HeadFonts from '../components/HeadFonts.astro';
                   </div>
                   
                   <!-- Cloudflare Turnstile -->
-                  <div class="cf-turnstile" data-sitekey="0x4AAAAAABhU6Cccio-kREUw" data-callback="onTurnstileSuccess"></div>
+                  <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-callback="onTurnstileSuccess"></div>
                   
                   <div class="form-field">
                     <button type="submit" id="submit-btn" disabled class="btn btn--shadow-primary">
@@ -516,6 +524,11 @@ import HeadFonts from '../components/HeadFonts.astro';
         
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
+          // In dev, when env vars are not set we use action '#'. Prevent network calls.
+          if ((e.currentTarget as HTMLFormElement)?.action === '#') {
+            alert('Form is not configured yet (dev). Set PUBLIC_FORMSPARK_FORM_ID and PUBLIC_TURNSTILE_SITE_KEY to enable submissions.');
+            return false;
+          }
           
           const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
           const turnstileToken = document.getElementById('cf-turnstile-response') as HTMLInputElement | null;
