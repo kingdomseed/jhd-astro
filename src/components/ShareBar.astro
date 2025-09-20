@@ -1,0 +1,141 @@
+---
+// Lightweight share bar with Web Share API and platform links
+// Props
+export interface Props {
+  url: string;
+  title: string;
+  summary?: string;
+}
+const { url, title, summary = '' } = Astro.props;
+
+// Build platform share URLs (encode once)
+const e = encodeURIComponent;
+const shareLinks = {
+  email: `mailto:?subject=${e(title)}&body=${e(summary)}%0A%0A${e(url)}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${e(url)}`,
+  reddit: `https://www.reddit.com/submit?url=${e(url)}&title=${e(title)}`,
+  bluesky: `https://bsky.app/intent/compose?text=${e(title)}%20${e(url)}`,
+};
+---
+<div class="sharebar" data-share-root aria-labelledby="sharebar-title" data-share-url={url} data-share-title={title} data-share-summary={summary}>
+  <h2 id="sharebar-title" class="sharebar__title sr-only">Share</h2>
+  <ul class="sharebar__actions" role="list">
+    <li>
+      <button class="sharebar__iconbtn" type="button" data-share-native data-platform="share" aria-label={`Share “${title}”`}>
+        <i class="fa-slab fa-regular fa-share-nodes" aria-hidden="true"></i>
+        <span class="sr-only">Share</span>
+      </button>
+    </li>
+    <li>
+      <button class="sharebar__iconbtn" type="button" data-share-copy data-platform="copy" aria-label={`Copy link to “${title}”`}>
+        <i class="fa-slab fa-regular fa-link" aria-hidden="true"></i>
+        <span class="sr-only">Copy link</span>
+      </button>
+    </li>
+    <li>
+      <a class="sharebar__iconbtn" href={shareLinks.email} data-platform="email" aria-label={`Share “${title}” via email`}>
+        <i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i>
+        <span class="sr-only">Email</span>
+      </a>
+    </li>
+    <li>
+      <a class="sharebar__iconbtn" href={shareLinks.reddit} data-platform="reddit" target="_blank" rel="noopener" aria-label={`Share “${title}” on Reddit`}>
+        <i class="fa-brands fa-reddit" aria-hidden="true"></i>
+        <span class="sr-only">Reddit</span>
+      </a>
+    </li>
+    <li>
+      <a class="sharebar__iconbtn" href={shareLinks.facebook} data-platform="facebook" target="_blank" rel="noopener" aria-label={`Share “${title}” on Facebook`}>
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
+    <li>
+      <a class="sharebar__iconbtn" href={shareLinks.bluesky} data-platform="bluesky" target="_blank" rel="noopener" aria-label={`Share “${title}” on Bluesky`}>
+        <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+        <span class="sr-only">Bluesky</span>
+      </a>
+    </li>
+  </ul>
+  <p class="sharebar__status" data-share-status aria-live="polite"></p>
+  
+  <script type="module" is:inline>
+    const root = document.querySelector('[data-share-root]');
+    if (root) {
+      const nativeBtn = root.querySelector('[data-share-native]');
+      const copyBtn = root.querySelector('[data-share-copy]');
+      const statusEl = root.querySelector('[data-share-status]');
+      const shareTitle = root.getAttribute('data-share-title') || '';
+      const shareText = root.getAttribute('data-share-summary') || '';
+      const shareUrl = root.getAttribute('data-share-url') || window.location.href;
+
+      // Hide native share if unsupported
+      if (!('share' in navigator)) {
+        nativeBtn?.setAttribute('hidden', '');
+      } else {
+        nativeBtn?.addEventListener('click', async () => {
+          try {
+            await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
+          } catch (err) {
+            // User cancelled or share failed; no-op
+          }
+        });
+      }
+
+      copyBtn?.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          if (statusEl) statusEl.textContent = 'Link copied to clipboard.';
+        } catch (err) {
+          if (statusEl) statusEl.textContent = 'Unable to copy. Please copy the address bar.';
+        }
+      });
+    }
+  </script>
+</div>
+
+<style>
+  .sharebar { margin-block: 1rem 1.5rem; }
+  .sharebar__actions { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; }
+  .sharebar__actions > li { list-style: none; }
+  .sharebar__status { margin-top: .5rem; color: var(--color-text-muted); }
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
+  
+  /* Icon-only links, minimal visual weight */
+  .sharebar__iconbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    color: var(--color-text);
+    text-decoration: none;
+    border: var(--border-base);
+    background: var(--color-surface);
+    transition: transform .12s ease, box-shadow .12s ease, color .12s ease;
+  }
+  .sharebar__iconbtn:hover { transform: translateY(-1px); }
+  .sharebar__iconbtn:focus { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+  .sharebar__iconbtn i { font-size: 1rem; }
+
+  /* Brand tints on hover (neutral by default) */
+  :root {
+    --share-facebook: hsl(214 89% 52%);
+    --share-reddit: hsl(16 100% 50%);
+    --share-bluesky: hsl(212 100% 53%);
+  }
+  .sharebar__iconbtn[data-platform="facebook"]:hover i { color: var(--share-facebook); }
+  .sharebar__iconbtn[data-platform="facebook"]:hover { box-shadow: 0 2px 0 hsl(214 89% 52% / .25); }
+  .sharebar__iconbtn[data-platform="reddit"]:hover i { color: var(--share-reddit); }
+  .sharebar__iconbtn[data-platform="reddit"]:hover { box-shadow: 0 2px 0 hsl(16 100% 50% / .25); }
+  .sharebar__iconbtn[data-platform="bluesky"]:hover i { color: var(--share-bluesky); }
+  .sharebar__iconbtn[data-platform="bluesky"]:hover { box-shadow: 0 2px 0 hsl(212 100% 53% / .25); }
+  /* Optional: subtle tint for first-party actions */
+  .sharebar__iconbtn[data-platform="share"]:hover i,
+  .sharebar__iconbtn[data-platform="copy"]:hover i,
+  .sharebar__iconbtn[data-platform="email"]:hover i { color: var(--color-primary); }
+  @media (max-width: 560px) {
+    .sharebar__actions { gap: .5rem; }
+  }
+</style>

@@ -108,6 +108,62 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
       />
 
       <main id="main" class="resources-main">
+        {/* Search bar at the top */}
+        <div class="resource-search-container">
+          <div class="container">
+            <div class="resource-search-bar" data-resource-search-root>
+              <div class="resource-search-input-wrapper">
+                <i class="fa-slab fa-regular fa-search resource-search-icon" aria-hidden="true"></i>
+                <input 
+                  id="resource-search-input" 
+                  class="resource-search-input" 
+                  type="search" 
+                  name="resource-search" 
+                  placeholder="Search resources..." 
+                  aria-label="Search resources"
+                  aria-autocomplete="list"
+                  aria-controls="resource-search-dropdown"
+                  aria-expanded="false"
+                  data-resource-search-input
+                />
+                <span class="resource-search-hint">Press / to focus</span>
+              </div>
+              <div 
+                id="resource-search-dropdown"
+                class="resource-search-dropdown"
+                role="listbox"
+                aria-label="Search results"
+                hidden
+                data-resource-search-dropdown
+              >
+                <ul class="resource-search-results" role="list" data-resource-search-list>
+                  {searchEntries.map((entry, index) => (
+                    <li
+                      role="option"
+                      aria-selected="false"
+                      data-resource-search-item
+                      data-title={entry.title}
+                      data-summary={entry.summary}
+                      data-category={categoryLabels[entry.category]}
+                      data-index={index}
+                    >
+                      <a href={`/resources/${entry.slug}/`} tabindex="-1">
+                        <span class="resource-search-result-title">{entry.title}</span>
+                        <span class="resource-search-result-summary">{entry.summary}</span>
+                        <span class="resource-search-result-meta">{categoryLabels[entry.category]}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <div class="resource-search-empty" data-resource-search-empty hidden>
+                  <i class="fa-slab fa-regular fa-search-minus" aria-hidden="true"></i>
+                  <p>No matches found</p>
+                </div>
+                <div class="resource-search-status" role="status" aria-live="polite" data-resource-search-status></div>
+              </div>
+            </div>
+          </div>
+        </div>
         {guideSections.map((section) => (
           <section class="section" id={section.id} aria-labelledby={`${section.id}-title`}>
             <div class="container">
@@ -196,44 +252,6 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           </section>
         )}
 
-        {searchEntries.length > 0 && (
-          <section class="section" id="index-search" aria-labelledby="index-title">
-            <div class="container">
-              <header class="section-head" aria-hidden="true">
-                <span class="accent-line" aria-hidden="true"></span>
-                <span class="badge-text">Index</span>
-              </header>
-              <div class="resource-section-heading">
-                <h2 id="index-title" class="section-title">
-                  Index &amp; Search
-                </h2>
-                <p class="resource-section-summary">Search every guide at once or browse the quick index below.</p>
-              </div>
-              <div class="resource-search" data-resource-search-root>
-                <label class="resource-search__label" for="resource-search-input">Search resources</label>
-                <input id="resource-search-input" class="resource-search__input" type="search" name="resource-search" placeholder="Try &quot;dice&quot;, &quot;export&quot;, or &quot;schema&quot;" data-resource-search-input />
-                <p class="resource-search__hint" id="resource-search-hint">Results update as you type.</p>
-                <ul class="resource-search__results" role="list" data-resource-search-list aria-describedby="resource-search-hint">
-                  {searchEntries.map((entry) => (
-                    <li
-                      data-resource-search-item
-                      data-title={entry.title}
-                      data-summary={entry.summary}
-                      data-category={categoryLabels[entry.category]}
-                    >
-                      <a href={`/resources/${entry.slug}/`}>
-                        <span class="resource-search__result-title">{entry.title}</span>
-                        <span class="resource-search__result-summary">{entry.summary}</span>
-                        <span class="resource-search__result-meta">{categoryLabels[entry.category]}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <p class="resource-search__empty" data-resource-search-empty hidden>No matches yet. Try a different keyword.</p>
-              </div>
-            </div>
-          </section>
-        )}
 
         <section class="section section-band" id="resources-support" aria-labelledby="resources-support-title">
           <div class="container">
@@ -266,41 +284,308 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     </div>
 
     <script type="module" is:inline>
-      // Lightweight, dependency-free search for the resources index.
-      // Uses data-* attributes to avoid coupling to class names.
+      // Enhanced dropdown search with keyboard navigation
       const root = document.querySelector('[data-resource-search-root]');
       if (root) {
         const input = root.querySelector('[data-resource-search-input]');
+        const dropdown = root.querySelector('[data-resource-search-dropdown]');
         const items = Array.from(root.querySelectorAll('[data-resource-search-item]'));
         const emptyState = root.querySelector('[data-resource-search-empty]');
-        const list = root.querySelector('[data-resource-search-list]');
-
-        // Filter items by a simple "includes" match across title/summary/category
+        const statusEl = root.querySelector('[data-resource-search-status]');
+        
+        let currentIndex = -1;
+        let visibleItems = [];
+        
+        // Filter and show/hide dropdown
         const filterList = () => {
           const query = (input?.value ?? '').trim().toLowerCase();
-          let visibleCount = 0;
-
+          visibleItems = [];
+          
+          if (query.length === 0) {
+            // Hide dropdown when no input
+            dropdown?.setAttribute('hidden', '');
+            input?.setAttribute('aria-expanded', 'false');
+            currentIndex = -1;
+            return;
+          }
+          
+          // Filter items
           items.forEach((item) => {
             const haystack = `${item.dataset.title ?? ''} ${item.dataset.summary ?? ''} ${item.dataset.category ?? ''}`.toLowerCase();
-            const matches = query.length === 0 || haystack.includes(query);
+            const matches = haystack.includes(query);
             item.toggleAttribute('hidden', !matches);
             if (matches) {
-              visibleCount += 1;
+              visibleItems.push(item);
             }
           });
-
-          if (emptyState) {
-            emptyState.toggleAttribute('hidden', visibleCount !== 0);
+          
+          // Show/hide dropdown based on results
+          if (visibleItems.length > 0) {
+            dropdown?.removeAttribute('hidden');
+            input?.setAttribute('aria-expanded', 'true');
+            emptyState?.setAttribute('hidden', '');
+            statusEl && (statusEl.textContent = `${visibleItems.length} results found`);
+          } else {
+            dropdown?.removeAttribute('hidden');
+            input?.setAttribute('aria-expanded', 'true');
+            emptyState?.removeAttribute('hidden');
+            statusEl && (statusEl.textContent = 'No results found');
           }
-          if (list) {
-            list.toggleAttribute('data-has-results', visibleCount !== 0);
-          }
+          
+          currentIndex = -1;
+          updateActiveItem();
         };
-
-        // Live-update results as the user types, and render initial state
+        
+        // Update active item highlighting
+        const updateActiveItem = () => {
+          visibleItems.forEach((item, index) => {
+            if (index === currentIndex) {
+              item.setAttribute('aria-selected', 'true');
+              item.classList.add('active');
+              item.querySelector('a')?.focus();
+            } else {
+              item.setAttribute('aria-selected', 'false');
+              item.classList.remove('active');
+            }
+          });
+        };
+        
+        // Handle keyboard navigation
+        input?.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            currentIndex = Math.min(currentIndex + 1, visibleItems.length - 1);
+            updateActiveItem();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            currentIndex = Math.max(currentIndex - 1, -1);
+            if (currentIndex === -1) {
+              input.focus();
+            } else {
+              updateActiveItem();
+            }
+          } else if (e.key === 'Enter' && currentIndex >= 0) {
+            e.preventDefault();
+            const link = visibleItems[currentIndex]?.querySelector('a');
+            if (link) {
+              link.click();
+            }
+          } else if (e.key === 'Escape') {
+            input.value = '';
+            filterList();
+            input.blur();
+          }
+        });
+        
+        // Handle input changes
         input?.addEventListener('input', filterList);
-        filterList();
+        
+        // Click outside to close
+        document.addEventListener('click', (e) => {
+          if (!root.contains(e.target)) {
+            dropdown?.setAttribute('hidden', '');
+            input?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Focus search on '/' key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+            e.preventDefault();
+            input?.focus();
+          }
+        });
+        
+        // Handle hover on items
+        visibleItems.forEach((item) => {
+          item.addEventListener('mouseenter', () => {
+            currentIndex = visibleItems.indexOf(item);
+            updateActiveItem();
+          });
+        });
       }
     </script>
   </body>
 </html>
+
+<style>
+  /* Search bar container */
+  .resource-search-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 2px solid var(--color-border);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .resource-search-bar {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Input wrapper */
+  .resource-search-input-wrapper {
+    position: relative;
+  }
+  
+  .resource-search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+  
+  .resource-search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .resource-search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  }
+  
+  .resource-search-hint {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  
+  .resource-search-input:focus + .resource-search-hint {
+    opacity: 0;
+  }
+  
+  /* Dropdown */
+  .resource-search-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .resource-search-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .resource-search-results li {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  
+  .resource-search-results li:last-child {
+    border-bottom: none;
+  }
+  
+  .resource-search-results a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: background-color 0.15s;
+  }
+  
+  .resource-search-results li.active a,
+  .resource-search-results a:hover {
+    background: var(--color-surface-hover);
+  }
+  
+  .resource-search-results li[hidden] {
+    display: none;
+  }
+  
+  .resource-search-result-title {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+  
+  .resource-search-result-summary {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .resource-search-result-meta {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    background: rgba(0, 102, 255, 0.1);
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Empty state */
+  .resource-search-empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+  
+  .resource-search-empty i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+  }
+  
+  .resource-search-empty p {
+    margin: 0.5rem 0 0;
+  }
+  
+  /* Status for screen readers */
+  .resource-search-status {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .resource-search-container {
+      padding: 1rem 0;
+    }
+    
+    .resource-search-hint {
+      display: none;
+    }
+    
+    .resource-search-dropdown {
+      max-height: 300px;
+    }
+    
+    .resource-search-result-summary {
+      display: none;
+    }
+  }
+</style>

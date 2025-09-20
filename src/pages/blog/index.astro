@@ -281,15 +281,18 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
           button.addEventListener('click', () => {
             const filterValue = button.dataset.filter;
             
-            // Update active state
-            filterButtons.forEach(btn => {
-              btn.classList.remove('blog-filter--active');
-              btn.setAttribute('aria-pressed', 'false');
-            });
-            button.classList.add('blog-filter--active');
-            button.setAttribute('aria-pressed', 'true');
+            // Only update if not already active (prevents flash)
+            if (!button.classList.contains('blog-filter--active')) {
+              // Update active state
+              filterButtons.forEach(btn => {
+                btn.classList.remove('blog-filter--active');
+                btn.setAttribute('aria-pressed', 'false');
+              });
+              button.classList.add('blog-filter--active');
+              button.setAttribute('aria-pressed', 'true');
+            }
             
-            // Filter posts
+            // Always filter posts (even if clicking same button)
             posts.forEach(post => {
               if (filterValue === 'all' || post.dataset.category === filterValue) {
                 post.style.display = '';
@@ -343,23 +346,37 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     font-weight: 500;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s, box-shadow 0.15s ease-out;
+    position: relative;
+    /* Flat by default (unselected) */
+    box-shadow: none;
   }
   
   .blog-filter:hover {
     border-color: var(--color-primary);
-    background: var(--color-surface-hover);
+    background: #f0f0f0; /* Light gray hover state */
+    /* Slight shadow on hover for affordance */
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   }
   
   .blog-filter--active {
     background: var(--color-primary);
     color: white;
-    border-color: var(--color-primary);
+    /* Keep the black border like other buttons in the design system */
+    border: 2px solid #000;
+    /* Lifted effect - strong neo-brutalist shadow */
+    box-shadow: 4px 4px 0 #000;
+    /* Slight translate to enhance the lifted effect */
+    transform: translate(-1px, -1px);
   }
   
   .blog-filter--active:hover {
-    background: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    /* Slightly darker blue on hover, but maintain white text */
+    background: #0052cc; /* Darker blue for hover */
+    color: white;
+    border-color: #000;
+    /* Maintain the shadow on hover */
+    box-shadow: 4px 4px 0 #000;
   }
   
   @media (max-width: 768px) {

@@ -6,6 +6,7 @@ import PageHeader from '../../components/PageHeader.astro';
 import { Image } from 'astro:assets';
 import { formatDate } from '../../scripts/format-date'; // Consistent date rendering
 import defaultOg from '../../assets/logo/logo.jpg?url'; // Default site OG image fallback
+import ShareBar from '../../components/ShareBar.astro';
 import { getCollection, getEntryBySlug, type CollectionEntry } from 'astro:content';
 
 type BlogEntry = CollectionEntry<'blog'>;
@@ -121,6 +122,7 @@ const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
                 <p class="blog-sample-note blog-sample-note--detail">Sample placeholder — replace this entry before publishing to production.</p>
               )}
             </header>
+            <ShareBar url={canonicalUrl} title={post.title} summary={post.summary} />
             {/* Optional hero image; high priority due to position near top of page */}
             {post.hero && (
               <figure class="blog-hero">
