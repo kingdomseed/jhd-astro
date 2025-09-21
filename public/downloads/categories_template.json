@@ -1,0 +1,15 @@
+{
+  "defaultCategories": [],
+  "categories": [
+    {
+      "id": "user-examples",
+      "displayName": "User Examples",
+      "iconKey": "list",
+      "sortOrder": 1000,
+      "isBuiltIn": false,
+      "description": "User-created examples category",
+      "displayNameTranslations": {"pt": "Exemplos do Usuário"}
+    }
+  ]
+}
+

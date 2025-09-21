@@ -1,0 +1,7 @@
+range_start,range_end,result,description,entryRollOn,tags,table_type,table_description
+1,10,Remote Event,Happens off-screen, , ,event-focus,Event Focus template with descriptions
+11,20,NPC Action,An NPC takes an unsignaled action,,,
+21,30,Thread Event,An existing thread is impacted,,,
+31,40,PC Negative,A setback for a PC,,,
+41,50,PC Positive,A beneficial turn for a PC,,,
+

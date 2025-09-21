@@ -1,0 +1,8 @@
+# Meaning table (PSV). Each line: endpoint|result[|description]
+5|Abandon
+10|Move
+15|Oppose
+20|Assist
+25|Transform
+30|Create
+

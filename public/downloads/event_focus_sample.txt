@@ -1,0 +1,11 @@
+table_type: event-focus
+NPC Action|A nearby NPC acts decisively
+Introduce a NPC|A new character appears
+Advance a Thread|Progress occurs on an existing plot
+Close a Thread|An existing plot resolves
+PC Negative|Complication for the PCs
+PC Positive|Benefit for the PCs
+Ambiguous Event
+Move Toward a Thread
+Introduce a Feature
+Change Environment

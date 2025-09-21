@@ -1,0 +1,12 @@
+# table_type: meaning-table
+Abandon
+Move
+Oppose
+Assist
+Transform
+Create
+Destroy
+Communicate
+Investigate
+Protect
+

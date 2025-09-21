@@ -1,0 +1,6 @@
+range_start,range_end,result,description,tags,id,entryRollOn,table_type,table_description
+1,20,Common,Frequent outcome in most situations,common;,common, ,meaning-table,Example meaning table with descriptions
+21,40,Uncommon,Less frequent but expected,uncommon;,uncommon,,,
+41,60,Rare,Unusual or special circumstance,rare;,rare,,,
+61,80,Very Rare,Exceptional outcome,very-rare;,very-rare,,,
+81,100,Extremely Rare,Almost never happens,extremely-rare;,extremely-rare,,,

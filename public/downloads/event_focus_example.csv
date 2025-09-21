@@ -1,0 +1,9 @@
+range_start,range_end,result,description,entryRollOn,tags,table_type,table_description
+1,20,Remote Event,Happens off-screen, , ,event-focus,Example event focus table with descriptions
+21,40,NPC Action,An NPC takes an unsignaled action,,,
+41,55,Thread Event,An existing thread is impacted,,,
+56,65,PC Negative,A setback for a PC,,,
+66,75,PC Positive,A beneficial turn for a PC,,,
+76,90,Move Toward A Plotline,Progresses an active thread,Threads;PCThreads,,
+91,97,Move Away From A Plotline,Interrupts or diverts a thread,Threads;PCThreads,,
+98,100,Plotline Conclusion,Resolves a thread,Threads;PCThreads,,

@@ -54,3 +54,8 @@ updated: "2025-09-21"
 
 - The app understands a few compatible shapes on import and exports a canonical wrapped format.
 - See the [Formula Schema](/resources/formula-schema/) for field names and a minimal example.
+
+## Related guides
+
+- Build more complex expressions and see per‑system starters: [Dice Formulas & Customization](/resources/dice-formulas-and-customization/)
+- Reference fields and JSON shape: [Formula Schema](/resources/formula-schema/)

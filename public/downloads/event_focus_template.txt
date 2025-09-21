@@ -1,0 +1,8 @@
+table_type: event-focus
+# Event focus - one entry per line; optional description via "result|description"
+NPC Action
+Introduce a NPC
+Advance a Thread
+Close a Thread
+PC Negative
+PC Positive

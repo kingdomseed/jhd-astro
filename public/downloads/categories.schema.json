@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythicgme2e.app/schemas/categories.schema.json",
+  "title": "Meaning Table Categories",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "defaultCategories": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TableCategoryInfo" }
+    },
+    "categories": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TableCategoryInfo" }
+    }
+  },
+  "required": ["defaultCategories", "categories"],
+  "$defs": {
+    "TableCategoryInfo": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string" },
+        "displayName": { "type": "string" },
+        "iconKey": { "type": "string" },
+        "sortOrder": { "type": "integer" },
+        "isBuiltIn": { "type": "boolean" },
+        "description": { "type": ["string", "null"] },
+        "displayNameTranslations": { "type": "object", "additionalProperties": { "type": "string" } }
+      },
+      "required": ["id", "displayName", "iconKey", "sortOrder", "isBuiltIn"]
+    }
+  }
+}
+

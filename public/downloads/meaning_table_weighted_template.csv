@@ -1,0 +1,4 @@
+result,weight,tags,description,entryRollOn,table_type,table_description
+Goblin,5,monster;low-threat,Common low-level encounter,,meaning-table,Weighted meaning table template with descriptions
+Bandit,3,humanoid;threat,Minor organized threat,,,
+Dragon,1,dragon;boss,Major end-game encounter,,,

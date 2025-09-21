@@ -1,0 +1,33 @@
+{
+  "id": "user_event_focus_example",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "rangeStart": 1,
+  "rangeEnd": 10,
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Event Focus (Example)",
+  "displayNameTranslations": {"pt": "Foco de Evento"},
+  "description": "Example 1d10 event focus table",
+  "descriptionTranslations": {"pt": "Tabela de foco de evento 1d10"},
+  "isPremium": false,
+  "isBuiltIn": false,
+  "isUserCreated": true,
+  "source": "User",
+  "tags": ["example"],
+  "tableRollOn": [],
+  "entries": [
+    { "range": [1, 1], "result": "NPC Action", "entryRollOn": ["Characters"] },
+    { "range": [2, 2], "result": "Introduce a NPC", "entryRollOn": ["Characters"] },
+    { "range": [3, 3], "result": "Advance a Thread", "entryRollOn": ["Threads"] },
+    { "range": [4, 4], "result": "Close a Thread", "entryRollOn": ["Threads"] },
+    { "range": [5, 5], "result": "PC Negative" },
+    { "range": [6, 6], "result": "PC Positive" },
+    { "range": [7, 7], "result": "Ambiguous Event" },
+    { "range": [8, 8], "result": "Move Toward a Thread", "entryRollOn": ["Threads"] },
+    { "range": [9, 9], "result": "Introduce a Feature", "entryRollOn": ["Features"] },
+    { "range": [10, 10], "result": "Change Environment", "entryRollOn": ["Features"] }
+  ],
+  "data": { "iconKey": "event_focus" }
+}
+

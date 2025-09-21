@@ -1,0 +1,11 @@
+table_type: event-focus
+10|NPC Action
+20|Introduce a NPC
+30|Advance a Thread
+40|Close a Thread
+50|PC Negative
+60|PC Positive
+70|Ambiguous Event
+80|Move Toward a Thread
+90|Introduce a Feature
+100|Change Environment

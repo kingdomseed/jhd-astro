@@ -1,0 +1,12 @@
+{
+  "defaultCategories": [],
+  "categories": [
+    {
+      "id": "user-actions",
+      "displayName": "User Actions",
+      "iconKey": "bolt",
+      "sortOrder": 1000,
+      "isBuiltIn": false
+    }
+  ]
+}

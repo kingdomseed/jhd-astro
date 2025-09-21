@@ -1,0 +1,10 @@
+{
+  "name": "Sample Meaning (Foundry)",
+  "results": [
+    { "text": "Abandon", "range": [1, 10] },
+    { "text": "Move", "range": [11, 20] },
+    { "text": "Oppose", "range": [21, 30] },
+    { "text": "Assist", "range": [31, 40] }
+  ]
+}
+

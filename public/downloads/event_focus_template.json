@@ -1,0 +1,29 @@
+{
+  "id": "user_event_focus_1",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "rangeStart": 1,
+  "rangeEnd": 6,
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Sample Event Focus",
+  "displayNameTranslations": {},
+  "description": "Example template for an event focus (1d6)",
+  "descriptionTranslations": {},
+  "isPremium": false,
+  "isBuiltIn": false,
+  "isUserCreated": true,
+  "source": "User",
+  "tags": ["example"],
+  "tableRollOn": [],
+  "entries": [
+    { "range": [1, 1], "result": "NPC Action", "entryRollOn": ["Characters"] },
+    { "range": [2, 2], "result": "Introduce a NPC", "entryRollOn": ["Characters"] },
+    { "range": [3, 3], "result": "Advance a Thread", "entryRollOn": ["Threads"] },
+    { "range": [4, 4], "result": "Close a Thread", "entryRollOn": ["Threads"] },
+    { "range": [5, 5], "result": "PC Negative" },
+    { "range": [6, 6], "result": "PC Positive" }
+  ],
+  "data": { "iconKey": "event_focus" }
+}
+

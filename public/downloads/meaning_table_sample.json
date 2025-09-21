@@ -1,0 +1,33 @@
+{
+  "id": "user_meaning_table_actions",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "rangeStart": 1,
+  "rangeEnd": 10,
+  "categoryId": "user-actions",
+  "defaultLanguage": "en",
+  "displayName": "Actions (Example)",
+  "displayNameTranslations": {"pt": "Ações"},
+  "description": "Example 1d10 actions table",
+  "descriptionTranslations": {"pt": "Tabela de ações 1d10"},
+  "isPremium": false,
+  "isBuiltIn": false,
+  "isUserCreated": true,
+  "source": "User",
+  "tags": ["example"],
+  "tableRollOn": [],
+  "entries": [
+    { "range": [1, 1], "result": "Abandon" },
+    { "range": [2, 2], "result": "Move" },
+    { "range": [3, 3], "result": "Oppose" },
+    { "range": [4, 4], "result": "Assist" },
+    { "range": [5, 5], "result": "Transform" },
+    { "range": [6, 6], "result": "Create" },
+    { "range": [7, 7], "result": "Destroy" },
+    { "range": [8, 8], "result": "Communicate" },
+    { "range": [9, 9], "result": "Investigate" },
+    { "range": [10, 10], "result": "Protect" }
+  ],
+  "data": {}
+}
+

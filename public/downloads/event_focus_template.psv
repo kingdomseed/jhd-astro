@@ -1,0 +1,8 @@
+table_type: event-focus
+# Event focus (PSV)
+2|NPC Action
+4|Introduce a NPC
+6|Advance a Thread
+8|Close a Thread
+10|PC Negative
+12|PC Positive

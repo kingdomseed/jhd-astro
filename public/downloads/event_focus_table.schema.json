@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythicgme2e.app/schemas/event_focus_table.schema.json",
+  "title": "Event Focus Table (v3)",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "schemaVersion": { "type": "integer", "const": 3 },
+    "tableType": { "type": "string", "const": "event-focus" },
+    "rangeStart": { "type": "integer", "minimum": 1 },
+    "rangeEnd": { "type": "integer", "minimum": 1 },
+    "categoryId": { "type": "string", "const": "event-focus" },
+    "defaultLanguage": { "type": "string" },
+    "displayName": { "type": "string" },
+    "displayNameTranslations": { "type": "object", "additionalProperties": { "type": "string" } },
+    "description": { "type": "string" },
+    "descriptionTranslations": { "type": "object", "additionalProperties": { "type": "string" } },
+    "isPremium": { "type": "boolean" },
+    "isBuiltIn": { "type": "boolean" },
+    "isUserCreated": { "type": "boolean" },
+    "source": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "tableRollOn": { "type": "array", "items": { "type": "string" } },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/EventFocusEntry" },
+      "minItems": 1
+    },
+    "data": { "type": "object" }
+  },
+  "required": [
+    "id",
+    "displayName",
+    "displayNameTranslations",
+    "description",
+    "descriptionTranslations",
+    "entries"
+  ],
+  "$defs": {
+    "EventFocusEntry": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "range": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "result": { "type": "string" },
+        "resultTranslations": { "type": "object", "additionalProperties": { "type": "string" } },
+        "description": { "type": ["string", "null"] },
+        "descriptionTranslations": { "type": "object", "additionalProperties": { "type": "string" } },
+        "weight": { "type": ["integer", "null"] },
+        "entryRollOn": { "type": "array", "items": { "type": "string" } },
+        "action": { "type": ["string", "null"] },
+        "additionalRolls": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "data": { "type": "object" },
+        "disabled": { "type": "boolean" }
+      },
+      "required": ["range", "result"]
+    }
+  }
+}
+

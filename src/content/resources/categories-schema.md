@@ -1,12 +1,51 @@
 ---
 title: "Categories Schema"
-summary: "Understand how Mythic groups tables, journals, and formulas for cross-app discovery."
+summary: "Define and extend the category registry for Custom Tables (icons, labels, order)."
 category: "advanced"
 order: 4
 icon: "fa-slab fa-regular fa-sort"
 duration: "Reference"
-externalUrl: "https://www.jasonholtdigital.com/resources/categories_schema.jsonc"
-updated: "2025-02-01"
+updated: "2025-09-21"
 ---
 
-Coming soon.
+## Plain English
+
+Categories provide names and icons for table groups. The app ships with built‑ins; you add your own alongside them.
+
+## Root structure
+
+```json
+{
+  "defaultCategories": [ /* built‑ins */ ],
+  "categories": [ /* your custom categories */ ]
+}
+```
+
+- `defaultCategories`: built‑in list bundled with the app; you typically do not edit these
+- `categories`: your custom additions; add, rename, or remove here without touching built‑ins
+
+## TableCategoryInfo fields
+
+- `id` (kebab‑case string)
+- `displayName` (string)
+- `iconKey` (string; app icon registry key)
+- `sortOrder` (integer)
+- `isBuiltIn` (boolean)
+- Optional: `description` (string), `displayNameTranslations` (object)
+
+## Lifecycle in the app
+
+- First run: the app copies a baseline `categories.json` into your Documents (meaning_tables/categories.json)
+- Built‑ins live in `defaultCategories` and can be restored with “Reset to defaults”
+- Add your own categories only to the `categories` array
+
+## Downloads
+
+- Categories schema: [/downloads/categories.schema.json](/downloads/categories.schema.json)
+- Categories template: [/downloads/categories_template.json](/downloads/categories_template.json)
+- Categories sample: [/downloads/categories_sample.json](/downloads/categories_sample.json)
+
+## Related
+
+- Getting started and organizing tips: “Getting Started with Custom Tables”, “Organizing Custom Tables”
+- Table schemas: “Custom Table Schema”

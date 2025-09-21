@@ -1,0 +1,10 @@
+# Meaning table - one entry per line
+# Optional declaration (first or last line):
+# table_type: meaning-table
+Calm
+Energetic
+Angry
+Joyful
+Focused
+Distracted
+

@@ -1,0 +1,29 @@
+{
+  "id": "user_meaning_table_1",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "rangeStart": 1,
+  "rangeEnd": 6,
+  "categoryId": "user-examples",
+  "defaultLanguage": "en",
+  "displayName": "Sample Meaning Table",
+  "displayNameTranslations": {},
+  "description": "Example template for a meaning table (1d6)",
+  "descriptionTranslations": {},
+  "isPremium": false,
+  "isBuiltIn": false,
+  "isUserCreated": true,
+  "source": "User",
+  "tags": ["example"],
+  "tableRollOn": [],
+  "entries": [
+    { "range": [1, 1], "result": "Result 1" },
+    { "range": [2, 2], "result": "Result 2" },
+    { "range": [3, 3], "result": "Result 3" },
+    { "range": [4, 4], "result": "Result 4" },
+    { "range": [5, 5], "result": "Result 5" },
+    { "range": [6, 6], "result": "Result 6" }
+  ],
+  "data": {}
+}
+

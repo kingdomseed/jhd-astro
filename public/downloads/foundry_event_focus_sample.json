@@ -1,0 +1,9 @@
+{
+  "name": "Sample Event Focus (Foundry)",
+  "results": [
+    { "text": "NPC Action", "range": [1, 10] },
+    { "text": "Introduce a NPC", "range": [11, 20] },
+    { "text": "Advance a Thread", "range": [21, 30] }
+  ]
+}
+
