@@ -398,6 +398,16 @@
     color: #333;
   }
 
+  /* Keep it simple: zero heading margins; author controls spacing in Markdown */
+  .blog-detail__content h1,
+  .blog-detail__content h2,
+  .blog-detail__content h3,
+  .blog-detail__content h4,
+  .blog-detail__content h5,
+  .blog-detail__content h6 {
+    margin: 0;
+  }
+
   .blog-detail__content p {
     margin: 0;
   }

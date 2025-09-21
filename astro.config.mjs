@@ -21,7 +21,6 @@ export default defineConfig({
     spotlightjs(),
   ],
   // Cloudflare adapter - session warnings are informational and can be ignored for static sites
-  adapter: cloudflare(),
   image: {
     service: {
       entrypoint: "astro/assets/services/sharp",

@@ -257,6 +257,17 @@
     font-weight: 800;
   }
 
+  /* Tighter, predictable heading/list rhythm inside resource content */
+  .resource-detail__content h1,
+  .resource-detail__content h2,
+  .resource-detail__content h3,
+  .resource-detail__content h4,
+  .resource-detail__content h5,
+  .resource-detail__content h6 {
+    margin-top: 0rem; /* override base for consistent content spacing */
+    margin-bottom: 0rem;
+  }
+
   .resource-detail__back {
     margin: 0 0 1rem;
   }

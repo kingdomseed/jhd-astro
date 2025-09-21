@@ -18,7 +18,7 @@ keywords:
   - Getting started
 
 hero: ../../assets/resources/getting-started/bot_person.jpg
-heroAlt: "Illustration of a person with a friendly bot, representing getting started with the Mythic Apps workspace"
+heroAlt: "Illustration of a person with a friendly bot"
 
 # Structured steps (images optional)
 steps:
