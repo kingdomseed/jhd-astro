@@ -1,0 +1,8 @@
+{
+  "formulas": [
+    { "name": "Pool 5 (successes)", "formula": "5d10#>=6", "description": "Counts successes (6+). Adjust dice count for your pool size." },
+    { "name": "Pool 8 (successes)", "formula": "8d10#>=6", "description": "Counts successes (6+). Adjust dice count for your pool size." },
+    { "name": "Count tens (crit check)", "formula": "8d10#=10", "description": "Counts 10s; combine with successes to evaluate criticals per table rules. Hunger dice are not modeled." }
+  ],
+  "schemaVersion": 1
+}

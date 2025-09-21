@@ -1,0 +1,25 @@
+{
+  "formulas": [
+    {
+      "name": "Base Pool – 6 dice (count 6s)",
+      "formula": "6d6#s=6",
+      "description": "Year Zero base/skill dice. Adjust the number for your pool size."
+    },
+    {
+      "name": "Stress Pool – 3 dice (count 6s, track 1s)",
+      "formula": "3d6#s=6 #f=1",
+      "description": "Roll stress (or gear) dice separately to track 1s for panic/breakage."
+    },
+    {
+      "name": "Push Base Pool – reroll 2–5 once",
+      "formula": "6d6 ro<6 ro>1 #s=6",
+      "description": "Simulates a push: locks 1s/6s and rerolls 2–5 once, then counts 6s."
+    },
+    {
+      "name": "Push Stress Pool – reroll 2–5 once (track 1s)",
+      "formula": "3d6 ro<6 ro>1 #s=6 #f=1",
+      "description": "Stress (or gear) push: locks 1s/6s, rerolls others once; counts 6s and tracks 1s."
+    }
+  ],
+  "schemaVersion": 1
+}

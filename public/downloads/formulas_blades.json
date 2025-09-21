@@ -1,0 +1,25 @@
+{
+  "formulas": [
+    {
+      "name": "Pool 1 (take highest)",
+      "formula": "1d6",
+      "description": "Single die. Outcome bands per BitD rules."
+    },
+    {
+      "name": "Pool 2 (take highest)",
+      "formula": "2d6kh1",
+      "description": "Roll 2d6, keep highest."
+    },
+    {
+      "name": "Pool 3 (take highest)",
+      "formula": "3d6kh1",
+      "description": "Roll 3d6, keep highest."
+    },
+    {
+      "name": "Count sixes (crit check)",
+      "formula": "3d6 #cs6",
+      "description": "Records which dice rolled 6 in metadata; BitD crit = two 6s."
+    }
+  ],
+  "schemaVersion": 1
+}

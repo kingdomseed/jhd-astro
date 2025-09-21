@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    { "name": "Fate Roll (4dF)", "formula": "4dF", "description": "Roll four Fate dice (−, 0, +). Add your skill or aspect bonus manually." },
+    { "name": "+2 Situational Bonus", "formula": "4dF+2", "description": "Example with a situational +2. Edit to match your bonus." }
+  ],
+  "schemaVersion": 1
+}

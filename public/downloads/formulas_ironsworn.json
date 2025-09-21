@@ -1,0 +1,8 @@
+{
+  "formulas": [
+    { "name": "Action Roll (1d6 + adds)", "formula": "1d6+MOD", "description": "Roll your action die and add stat/bonus. Compare vs two challenge dice (below)." },
+    { "name": "Challenge Dice (2d10)", "formula": "2d10", "description": "Roll two d10 challenge dice. Compare each to your action total: beat both=Strong Hit; beat one=Weak Hit; beat none=Miss." },
+    { "name": "Progress Move (2d10)", "formula": "2d10", "description": "Roll two d10 challenge dice; compare each to your current progress value (0–10)." }
+  ],
+  "schemaVersion": 1
+}

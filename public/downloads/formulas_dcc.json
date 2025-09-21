@@ -1,0 +1,8 @@
+{
+  "formulas": [
+    { "name": "Attack (with deed die d3)", "formula": "1d20 + 1d3 + MOD", "description": "DCC warrior level 1: deed die d3. Replace MOD with your total modifier." },
+    { "name": "Attack (with deed die d5)", "formula": "1d20 + 1d5 + MOD", "description": "Higher level deed die example (d5). Replace MOD with your total modifier." },
+    { "name": "Odd dice examples", "formula": "1d16 + 1d24", "description": "Demonstrates dice chain support. Edit as needed for checks or tables." }
+  ],
+  "schemaVersion": 1
+}

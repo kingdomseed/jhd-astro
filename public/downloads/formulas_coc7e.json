@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    { "name": "Skill Check (1d100)", "formula": "1d100", "description": "Roll percentile and compare to skill. Hard/Extreme thresholds are table-driven." },
+    { "name": "Bonus/Penalty (manual)", "formula": "1d100", "description": "Roll as usual; handle bonus/penalty tens die replacement manually." }
+  ],
+  "schemaVersion": 1
+}

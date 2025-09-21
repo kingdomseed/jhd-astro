@@ -1,0 +1,19 @@
+{
+  "JournalName": "Untitled Journal",
+  "ChaosFactor": 5,
+  "Scenes": [],
+  "Characters": [],
+  "Threads": [],
+  "Features": [],
+  "ActivatedThreadSections": 1,
+  "ActivatedCharacterSections": 1,
+  "ActivatedFeatureSections": 1,
+  "LogEntries": [],
+  "ListNotes": {
+    "CharacterNotes": "",
+    "ThreadNotes": "",
+    "FeatureNotes": ""
+  },
+  "SchemaVersion": 1
+}
+

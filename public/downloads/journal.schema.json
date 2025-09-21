@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythicgme2e.app/schemas/journal.schema.json",
+  "title": "Mythic GME 2e Journal (v1)",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "JournalName": { "type": "string" },
+    "ChaosFactor": { "type": "integer", "minimum": 1, "maximum": 9 },
+    "Scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "Title": { "type": "string" },
+          "SceneSummary": { "type": "string" },
+          "SceneChaosFactor": { "type": "integer", "minimum": 1, "maximum": 9 },
+          "SceneAdjustments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "result": { "type": "string" },
+                "range": {
+                  "type": "array",
+                  "items": { "type": "integer" },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "description": { "type": "string" },
+                "additionalAdjustments": {
+                  "type": "array",
+                  "items": { "$ref": "#/$defs/SceneAdjustment" }
+                }
+              },
+              "required": ["result", "range", "description"]
+            }
+          },
+          "CreatedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "Characters": { "type": "array", "items": { "type": "string" } },
+    "Threads": { "type": "array", "items": { "type": "string" } },
+    "Features": { "type": "array", "items": { "type": "string" } },
+    "ActivatedThreadSections": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "ActivatedCharacterSections": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "ActivatedFeatureSections": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "LogEntries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "rollType": { "type": "string" },
+          "odds": { "type": "string" },
+          "chaosFactor": { "type": "integer", "minimum": 1, "maximum": 9 },
+          "question": { "type": "string" },
+          "outcome": { "type": "string" },
+          "rollResult": { "type": "integer" },
+          "eventFocusRoll": { "type": "integer" },
+          "individualDieResults": {
+            "type": "array",
+            "items": { "type": "integer" }
+          },
+          "modifierValue": { "type": "integer" },
+          "modifiedTotal": { "type": "integer" },
+          "randomEvent": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "eventFocus": { "type": "string" },
+              "meanings": { "type": "object", "additionalProperties": { "type": "string" } },
+              "characterResult": { "type": "string" },
+              "threadResult": { "type": "string" },
+              "featureResult": { "type": "string" },
+              "eventFocusRoll": { "type": "integer" },
+              "meaningDescriptions": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "eventFocus": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "result": { "type": "string" },
+              "roll": { "type": "integer" },
+              "characterResult": { "type": "string" },
+              "threadResult": { "type": "string" },
+              "featureResult": { "type": "string" },
+              "meanings": { "type": "object", "additionalProperties": { "type": "string" } },
+              "meaningDescriptions": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "isSceneCheck": { "type": "boolean" },
+          "sceneCheckResult": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "sceneAdjustment": { "$ref": "#/$defs/SceneAdjustment" },
+          "sceneAdjustmentRoll": { "type": "integer" },
+          "meaningDescriptions": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["rollType","odds","chaosFactor","question","outcome","rollResult","isSceneCheck","timestamp"]
+      }
+    },
+    "ListNotes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "CharacterNotes": { "type": "string" },
+        "ThreadNotes": { "type": "string" },
+        "FeatureNotes": { "type": "string" }
+      }
+    },
+    "SchemaVersion": { "type": "integer", "const": 1 }
+  },
+  "required": [
+    "JournalName",
+    "ChaosFactor",
+    "Scenes",
+    "Characters",
+    "Threads",
+    "Features",
+    "ActivatedThreadSections",
+    "ActivatedCharacterSections",
+    "ActivatedFeatureSections"
+  ],
+  "$defs": {
+    "SceneAdjustment": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "result": { "type": "string" },
+        "range": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "description": { "type": "string" },
+        "additionalAdjustments": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SceneAdjustment" }
+        }
+      },
+      "required": ["result","range","description"]
+    }
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "formulas": [
+    { "name": "Attack (no accuracy)", "formula": "1d20+MOD", "description": "Standard attack roll. Replace MOD with your total modifier." },
+    { "name": "Accuracy 1", "formula": "1d20 + (1d6kh1) + MOD", "description": "Add highest of 1d6. Replace MOD with your modifier." },
+    { "name": "Accuracy 2", "formula": "1d20 + (2d6kh1) + MOD", "description": "Add highest of 2d6. Replace MOD with your modifier." },
+    { "name": "Difficulty 1", "formula": "1d20 - (1d6kh1) + MOD", "description": "Subtract highest of 1d6. Replace MOD with your modifier." }
+  ],
+  "schemaVersion": 1
+}

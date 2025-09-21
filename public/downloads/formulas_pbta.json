@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    { "name": "Basic Move", "formula": "2d6+STAT", "description": "Roll 2d6 plus stat. Interpret 10+/7–9/6- per your playbook." },
+    { "name": "With +1 Forward", "formula": "2d6+STAT+1", "description": "+1 forward example. Edit bonus as needed." }
+  ],
+  "schemaVersion": 1
+}

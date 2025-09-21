@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    { "name": "Feat + 2 Success dice (approx)", "formula": "1d12 + 2d6", "description": "Approximation. Gandalf/Eye/Tengwar effects are handled manually at the table." },
+    { "name": "Feat + 4 Success dice (approx)", "formula": "1d12 + 4d6", "description": "Approximation. Treat special symbols manually; use as a quick numeric stand-in." }
+  ],
+  "schemaVersion": 1
+}

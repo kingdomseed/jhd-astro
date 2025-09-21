@@ -1,0 +1,75 @@
+{
+  "JournalName": "My Mythic Adventure",
+  "ChaosFactor": 5,
+  "Scenes": [
+    {
+      "Title": "Scene 1: Arrival",
+      "SceneSummary": "The party arrives in town and surveys the market square.",
+      "SceneChaosFactor": 5,
+      "SceneAdjustments": [],
+      "CreatedAt": "2025-01-01T12:00:00Z"
+    },
+    {
+      "Title": "Scene 2: A Sudden Disturbance",
+      "SceneSummary": "Shouts erupt as a thief darts through the crowd.",
+      "SceneChaosFactor": 5,
+      "SceneAdjustments": [
+        {"result": "Introduce a New NPC", "range": [1, 1], "description": "A panicked merchant stumbles into the heroes."}
+      ],
+      "CreatedAt": "2025-01-01T12:10:00Z"
+    }
+  ],
+  "Characters": ["Protagonist", "Antagonist", "Mentor"],
+  "Threads": ["Main Quest", "Side Plot"],
+  "Features": ["Ancient Ruins", "Mystic Forest"],
+  "ActivatedThreadSections": 1,
+  "ActivatedCharacterSections": 1,
+  "ActivatedFeatureSections": 1,
+  "LogEntries": [
+    {
+      "timestamp": "2025-01-01T12:00:05Z",
+      "rollType": "Scene Check",
+      "question": "Start of scene",
+      "odds": "",
+      "chaosFactor": 5,
+      "outcome": "Expected Scene",
+      "rollResult": 7,
+      "isSceneCheck": true
+    },
+    {
+      "timestamp": "2025-01-01T12:05:00Z",
+      "rollType": "Fate Check",
+      "question": "Does the guard let us pass?",
+      "odds": "50/50",
+      "chaosFactor": 5,
+      "outcome": "No",
+      "rollResult": 9,
+      "individualDieResults": [4, 5],
+      "modifiedTotal": 9,
+      "isSceneCheck": false
+    },
+    {
+      "timestamp": "2025-01-01T12:08:30Z",
+      "rollType": "Random Event",
+      "question": "",
+      "odds": "",
+      "chaosFactor": 5,
+      "outcome": "Random Event",
+      "rollResult": 52,
+      "randomEvent": {
+        "eventFocus": "NPC Action",
+        "eventFocusRoll": 52,
+        "meanings": {"Action 1": "Abandon", "Action 2": "Goals"},
+        "characterResult": "Antagonist"
+      },
+      "isSceneCheck": false
+    }
+  ],
+  "ListNotes": {
+    "CharacterNotes": "Protagonist: bold but cautious. Antagonist: calculating.",
+    "ThreadNotes": "Main Quest: Retrieve the relic. Side Plot: Merchant guild intrigue.",
+    "FeatureNotes": "Ancient Ruins: rumored haunt. Mystic Forest: unpredictable paths."
+  },
+  "SchemaVersion": 1
+}
+

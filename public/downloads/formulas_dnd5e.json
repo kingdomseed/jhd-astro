@@ -1,0 +1,30 @@
+{
+  "formulas": [
+    {
+      "name": "D20 Roll",
+      "formula": "1d20",
+      "description": "Base d20 check or attack. Edit to add your modifier (e.g., +5)."
+    },
+    {
+      "name": "Advantage (d20)",
+      "formula": "2d20kh",
+      "description": "Roll 2d20 and keep the highest. Edit to add your modifier (e.g., +5)."
+    },
+    {
+      "name": "Disadvantage (d20)",
+      "formula": "2d20kl",
+      "description": "Roll 2d20 and keep the lowest. Edit to add your modifier (e.g., +5)."
+    },
+    {
+      "name": "Ability Score (4d6 drop lowest)",
+      "formula": "4d6-L",
+      "description": "Classic ability generation: roll 4d6 and drop the lowest die."
+    },
+    {
+      "name": "Greatsword Damage (2d6)",
+      "formula": "2d6",
+      "description": "Example damage dice. Edit to add STR or other modifiers (e.g., +3)."
+    }
+  ],
+  "schemaVersion": 1
+}

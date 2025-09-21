@@ -1,0 +1,25 @@
+{
+  "formulas": [
+    {
+      "name": "Trait d8 + Wild d6 (keep highest)",
+      "formula": "(1d8!! + 1d6!!) kh",
+      "description": "Exploding dice for Trait and Wild die; keep highest. Add modifiers as needed (e.g., +2)."
+    },
+    {
+      "name": "Trait d10 + Wild d6 (keep highest)",
+      "formula": "(1d10!! + 1d6!!) kh",
+      "description": "Exploding dice for Trait and Wild die; keep highest. Add modifiers as needed."
+    },
+    {
+      "name": "Damage 2d6!",
+      "formula": "2d6!",
+      "description": "Exploding damage dice example."
+    },
+    {
+      "name": "Damage d8! + d6!",
+      "formula": "1d8! + 1d6!",
+      "description": "Exploding damage dice with mixed die sizes."
+    }
+  ],
+  "schemaVersion": 1
+}

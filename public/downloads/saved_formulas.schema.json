@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mythicgme2e.app/schemas/saved_formulas.schema.json",
+  "title": "Mythic GME 2e Saved Formulas (v1)",
+  "description": "Saved dice formulas for the app. Canonical form is a top-level array of formula objects; a wrapped object with `formulas` is accepted for templates.",
+  "oneOf": [
+    {
+      "description": "Canonical wrapped object with metadata.",
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "formulas": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SavedFormula" }
+        },
+        "version": { "type": "string" },
+        "schemaVersion": { "type": "string" }
+      },
+      "required": ["formulas", "version", "schemaVersion"]
+    },
+    {
+      "description": "Compatibility: legacy top-level array.",
+      "deprecated": true,
+      "type": "array",
+      "items": { "$ref": "#/$defs/SavedFormula" }
+    }
+  ],
+  "$defs": {
+    "SavedFormula": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "formula": { "type": "string", "minLength": 1 },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "dateAdded": { "type": "string", "format": "date-time" },
+        "id": { "type": "string" }
+      },
+      "required": ["formula"]
+    }
+  }
+}

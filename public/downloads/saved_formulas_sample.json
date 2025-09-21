@@ -1,0 +1,51 @@
+{
+  "formulas": [
+    {
+      "formula": "1d2",
+      "name": "Instructions",
+      "description": "These are example formulas. Modify or add using standard notation."
+    },
+    {
+      "formula": "1d100",
+      "name": "Fate Check",
+      "description": "Standard Mythic percentile roll"
+    },
+    {
+      "formula": "2d10",
+      "name": "Event Focus",
+      "description": "Roll for Event Focus table"
+    },
+    {
+      "formula": "1d10+1d100",
+      "name": "Action/Description",
+      "description": "Action + Description tables"
+    },
+    {
+      "formula": "4d6-L",
+      "name": "Character Stat",
+      "description": "Roll 4d6, drop lowest"
+    },
+    {
+      "formula": "2d20kh",
+      "name": "Advantage",
+      "description": "2d20 keep highest"
+    },
+    {
+      "formula": "2d20kl",
+      "name": "Disadvantage",
+      "description": "2d20 keep lowest"
+    },
+    {
+      "formula": "3d6!",
+      "name": "Exploding 3d6",
+      "description": "Explodes on max"
+    },
+    {
+      "formula": "6d6#s>=5#f<=2",
+      "name": "Success Counter",
+      "description": "Count successes ≥5 and failures ≤2"
+    }
+  ],
+  "version": "1.0",
+  "schemaVersion": "1"
+}

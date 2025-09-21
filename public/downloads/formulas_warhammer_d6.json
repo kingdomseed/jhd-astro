@@ -1,0 +1,7 @@
+{
+  "formulas": [
+    { "name": "Hits (10 dice, TN 4+)", "formula": "10d6#>=4", "description": "Counts 4–6 as hits. Edit dice count/TN for your table." },
+    { "name": "Wounds (10 dice, TN 5+)", "formula": "10d6#>=5", "description": "Counts 5–6 as wounds. Edit dice count/TN for your table." }
+  ],
+  "schemaVersion": 1
+}

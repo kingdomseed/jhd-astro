@@ -1,0 +1,6 @@
+{
+  "formulas": [
+    { "name": "Task Roll", "formula": "1d20+MOD", "description": "Cypher task roll. Replace MOD with your Edge/Effort/asset total as appropriate." }
+  ],
+  "schemaVersion": 1
+}
