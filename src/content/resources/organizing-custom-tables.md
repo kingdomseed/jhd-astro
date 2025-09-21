@@ -6,6 +6,13 @@ order: 2
 icon: "fa-slab fa-regular fa-list-squares"
 duration: "7 min read"
 updated: "2025-09-21"
+tags: ["custom-tables", "categories", "icons", "tags", "linking"]
+keywords:
+  - Categories
+  - Icons
+  - Tags
+  - Linking tables
+  - Custom tables
 ---
 
 ## Where to organize

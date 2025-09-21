@@ -6,6 +6,13 @@ order: 2
 icon: "fa-slab fa-regular fa-floppy-disk"
 duration: "5 min read"
 updated: "2025-09-21"
+tags: ["dice", "formulas", "saved-formulas", "import", "export"]
+keywords:
+  - Saved Formulas
+  - Dice formulas
+  - Import
+  - Export
+  - JSON
 ---
 
 ## Where to find it
@@ -17,9 +24,9 @@ updated: "2025-09-21"
 
 ## What you’ll use
 
-- Empty template: [/downloads/saved_formulas_template.json](/downloads/saved_formulas_template.json)
-- Filled sample: [/downloads/saved_formulas_sample.json](/downloads/saved_formulas_sample.json)
-- Optional schema (for tooling): [/downloads/saved_formulas.schema.json](/downloads/saved_formulas.schema.json)
+- Empty template: [Download](/downloads/saved_formulas_template.json)
+- Filled sample: [Download](/downloads/saved_formulas_sample.json)
+- Optional schema (for tooling): [Download](/downloads/saved_formulas.schema.json)
 
 ### No programming required
 

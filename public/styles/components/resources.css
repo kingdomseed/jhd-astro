@@ -239,6 +239,24 @@
     padding: clamp(24px, 5vw, 40px);
   }
 
+  /* Clear, accessible link styling for resource content */
+  .resource-detail__content a {
+    color: #0645AD; /* classic link blue for clarity */
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .resource-detail__content a:hover {
+    text-decoration-thickness: 2px;
+  }
+  .resource-detail__content a:visited {
+    color: #0b3a8f; /* slightly darker visited state */
+  }
+  /* Iconify download links without changing markup */
+  .resource-detail__content a[href^="/downloads/"]::before {
+    content: "⤓ ";
+    font-weight: 800;
+  }
+
   .resource-detail__back {
     margin: 0 0 1rem;
   }

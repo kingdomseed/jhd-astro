@@ -22,6 +22,8 @@ const resources = defineCollection({
       duration: z.string().optional(),
       externalUrl: z.string().url().optional(),
       updated: z.coerce.date().optional(),
+      keywords: z.array(z.string()).default([]),
+      tags: z.array(z.string()).default([]),
 
       // Optional images for hero and steps (validated as local images)
       hero: image().optional(),
@@ -65,6 +67,7 @@ const blog = defineCollection({
         readTime: z.string(),
         isSample: z.boolean().default(true),
       tags: z.array(z.string()).default([]),
+      keywords: z.array(z.string()).default([]),
 
         // Optional hero image for blog posts (validated as a local image)
         hero: image().optional(),

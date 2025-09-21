@@ -105,6 +105,7 @@
     box-shadow: var(--shadow-base);
     transition: transform 0.15s var(--easing-standard);
   }
+  /* Removed homepage link flag on resource link: style retained for future use if needed */
   .links a {
     display: flex;
     justify-content: space-between;

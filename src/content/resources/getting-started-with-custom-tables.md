@@ -6,6 +6,13 @@ order: 1
 icon: "fa-slab fa-regular fa-newspaper"
 duration: "9 min read"
 updated: "2025-09-21"
+tags: ["custom-tables", "getting-started", "meaning-tables", "event-focus", "categories"]
+keywords:
+  - Custom tables
+  - Meaning Tables
+  - Event Focus
+  - Categories
+  - Getting started
 ---
 
 ## Where to find Custom Tables
@@ -47,22 +54,22 @@ Tips
 
 Use these templates and samples as starting points. Import them from Custom Tables → Import.
 
-- Meaning template (JSON): [/downloads/meaning_table_template.json](/downloads/meaning_table_template.json)
-- Meaning sample (JSON): [/downloads/meaning_table_sample.json](/downloads/meaning_table_sample.json)
-- Meaning template (CSV): [/downloads/meaning_table_template.csv](/downloads/meaning_table_template.csv)
-- Meaning example (CSV): [/downloads/meaning_table_example.csv](/downloads/meaning_table_example.csv)
-- Meaning template (TXT): [/downloads/meaning_table_template.txt](/downloads/meaning_table_template.txt)
-- Meaning template (PSV): [/downloads/meaning_table_template.psv](/downloads/meaning_table_template.psv)
+- Meaning Template (JSON): [Download](/downloads/meaning_table_template.json)
+- Meaning Sample (JSON): [Download](/downloads/meaning_table_sample.json)
+- Meaning Template (CSV): [Download](/downloads/meaning_table_template.csv)
+- Meaning Example (CSV): [Download](/downloads/meaning_table_example.csv)
+- Meaning Template (TXT): [Download](/downloads/meaning_table_template.txt)
+- Meaning Template (PSV): [Download](/downloads/meaning_table_template.psv)
 
-- Event Focus template (JSON): [/downloads/event_focus_template.json](/downloads/event_focus_template.json)
-- Event Focus sample (JSON): [/downloads/event_focus_sample.json](/downloads/event_focus_sample.json)
-- Event Focus template (CSV): [/downloads/event_focus_template.csv](/downloads/event_focus_template.csv)
-- Event Focus example (CSV): [/downloads/event_focus_example.csv](/downloads/event_focus_example.csv)
-- Event Focus template (TXT): [/downloads/event_focus_template.txt](/downloads/event_focus_template.txt)
-- Event Focus template (PSV): [/downloads/event_focus_template.psv](/downloads/event_focus_template.psv)
+- Event Focus Template (JSON): [Download](/downloads/event_focus_template.json)
+- Event Focus Sample (JSON): [Download](/downloads/event_focus_sample.json)
+- Event Focus Template (CSV): [Download](/downloads/event_focus_template.csv)
+- Event Focus Example (CSV): [Download](/downloads/event_focus_example.csv)
+- Event Focus Template (TXT): [Download](/downloads/event_focus_template.txt)
+- Event Focus Template (PSV): [Download](/downloads/event_focus_template.psv)
 
-- Categories template (JSON): [/downloads/categories_template.json](/downloads/categories_template.json)
-- Categories sample (JSON): [/downloads/categories_sample.json](/downloads/categories_sample.json)
+- Categories Template (JSON): [Download](/downloads/categories_template.json)
+- Categories Sample (JSON): [Download](/downloads/categories_sample.json)
 
 Note: Files live in `public/downloads/` in the project and are served from `/downloads/` on the site.
 

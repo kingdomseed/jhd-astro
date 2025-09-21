@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2024-10-15"
 readTime: "4 min read"
 isSample: false
+keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-08", "fate", "lists", "journal", "settings"]
 ---
 

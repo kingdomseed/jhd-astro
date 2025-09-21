@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2025-08-11"
 readTime: "2 min read"
 isSample: false
+keywords: ["release notes", "Mythic GME Apps"]
 tags: ["release", "v1.5", "product:apps", "dice-roller", "custom-tables", "accessibility", "localization", "stability"]
 ---
 

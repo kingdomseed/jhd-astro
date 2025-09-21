@@ -6,13 +6,20 @@ order: 0
 icon: "fa-slab fa-regular fa-book-open"
 duration: "6 min read"
 updated: "2025-09-21"
+tags: ["journals", "getting-started", "import", "export"]
+keywords:
+  - Journals
+  - Getting started
+  - Import
+  - Export
+  - Mythic
 ---
 
 ## What you’ll use
 
-- Empty template: [/downloads/journal_template.json](/downloads/journal_template.json)
-- Filled sample: [/downloads/journal_sample.json](/downloads/journal_sample.json)
-- JSON Schema (for validation and tooling): [/downloads/journal.schema.json](/downloads/journal.schema.json)
+- Empty template: [Download](/downloads/journal_template.json)
+- Filled sample: [Download](/downloads/journal_sample.json)
+- JSON Schema (for validation and tooling): [Download](/downloads/journal.schema.json)
 
 ### No programming required
 

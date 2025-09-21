@@ -6,6 +6,12 @@ order: 3
 icon: "fa-slab fa-regular fa-layer-group"
 duration: "Reference"
 updated: "2025-09-21"
+tags: ["schema", "custom-tables", "meaning-tables", "event-focus", "reference"]
+keywords:
+  - Meaning Table schema
+  - Event Focus schema
+  - Unified Table v3
+  - JSON
 ---
 
 ## Plain English
@@ -94,10 +100,10 @@ Minimal JSON
 
 ## Downloads
 
-- Meaning schema: [/downloads/meaning_table.schema.json](/downloads/meaning_table.schema.json)
-- Event Focus schema: [/downloads/event_focus_table.schema.json](/downloads/event_focus_table.schema.json)
-- Meaning: template/sample JSON, CSV, TXT, PSV
-- Event Focus: template/sample JSON, CSV, TXT, PSV
+- Meaning Schema: [Download](/downloads/meaning_table.schema.json)
+- Event Focus Schema: [Download](/downloads/event_focus_table.schema.json)
+- Meaning Templates/Samples: JSON, CSV, TXT, PSV (see Getting Started)
+- Event Focus Templates/Samples: JSON, CSV, TXT, PSV (see Getting Started)
 
 Note: Weighted tables appear in schema for future compatibility, but the app does not use weights yet.
 

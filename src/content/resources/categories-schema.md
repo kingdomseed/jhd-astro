@@ -6,6 +6,11 @@ order: 4
 icon: "fa-slab fa-regular fa-sort"
 duration: "Reference"
 updated: "2025-09-21"
+tags: ["schema", "categories", "custom-tables", "reference"]
+keywords:
+  - Categories schema
+  - JSON
+  - Custom tables
 ---
 
 ## Plain English
@@ -41,9 +46,9 @@ Categories provide names and icons for table groups. The app ships with built‑
 
 ## Downloads
 
-- Categories schema: [/downloads/categories.schema.json](/downloads/categories.schema.json)
-- Categories template: [/downloads/categories_template.json](/downloads/categories_template.json)
-- Categories sample: [/downloads/categories_sample.json](/downloads/categories_sample.json)
+- Categories Schema: [Download](/downloads/categories.schema.json)
+- Categories Template: [Download](/downloads/categories_template.json)
+- Categories Sample: [Download](/downloads/categories_sample.json)
 
 ## Related
 

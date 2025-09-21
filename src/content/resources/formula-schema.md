@@ -6,6 +6,12 @@ order: 2
 icon: "fa-slab fa-regular fa-map"
 duration: "Reference"
 updated: "2025-02-01"
+tags: ["schema", "formulas", "reference", "download"]
+keywords:
+  - Schema
+  - Saved formulas
+  - JSON
+  - Download
 ---
 ## Overview
 
@@ -15,9 +21,9 @@ Plain English: You don’t need to know code to use this. “JSON” is just a s
 
 ## Downloads
 
-- Saved Formulas Schema: [/downloads/saved_formulas.schema.json](/downloads/saved_formulas.schema.json)
-- Empty Template: [/downloads/saved_formulas_template.json](/downloads/saved_formulas_template.json)
-- Filled Sample: [/downloads/saved_formulas_sample.json](/downloads/saved_formulas_sample.json)
+- Saved Formulas Schema: [Download](/downloads/saved_formulas.schema.json)
+- Empty Template: [Download](/downloads/saved_formulas_template.json)
+- Filled Sample: [Download](/downloads/saved_formulas_sample.json)
 
 Important: For now, do not rename the file. The app expects the filename to be `saved_formulas.json`. (Dice Bags will later allow custom names.)
 

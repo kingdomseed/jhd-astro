@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2025-09-01"
 readTime: "2 min read"
 isSample: false
+keywords: ["release notes", "Mythic GME Apps"]
 tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performance", "accessibility"]
 ---
 

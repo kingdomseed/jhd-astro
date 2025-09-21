@@ -6,6 +6,15 @@ order: 4
 icon: "fa-slab fa-regular fa-exchange"
 duration: "7 min read"
 updated: "2025-09-21"
+tags: ["custom-tables", "import", "export", "csv", "json", "foundry"]
+keywords:
+  - Import custom tables
+  - Export custom tables
+  - CSV
+  - JSON
+  - Foundry VTT
+  - PSV
+  - TXT
 ---
 
 ## Where to import/export
@@ -40,10 +49,10 @@ Notes
 - Conflicting or invalid values are rejected with a clear error message
 
 Samples
-- Meaning template: [/downloads/meaning_table_template.csv](/downloads/meaning_table_template.csv)
-- Meaning example: [/downloads/meaning_table_example.csv](/downloads/meaning_table_example.csv)
-- Event Focus template: [/downloads/event_focus_template.csv](/downloads/event_focus_template.csv)
-- Event Focus example: [/downloads/event_focus_example.csv](/downloads/event_focus_example.csv)
+- Meaning Template (CSV): [Download](/downloads/meaning_table_template.csv)
+- Meaning Example (CSV): [Download](/downloads/meaning_table_example.csv)
+- Event Focus Template (CSV): [Download](/downloads/event_focus_template.csv)
+- Event Focus Example (CSV): [Download](/downloads/event_focus_example.csv)
 
 ## TXT format (one per line)
 
@@ -51,8 +60,8 @@ Samples
 - Optional `table_type: meaning-table` (or `event-focus`) line may appear on the first or last non‑empty line.
 
 Samples
-- Meaning TXT: [/downloads/meaning_table_template.txt](/downloads/meaning_table_template.txt)
-- Event Focus TXT: [/downloads/event_focus_template.txt](/downloads/event_focus_template.txt)
+- Meaning Template (TXT): [Download](/downloads/meaning_table_template.txt)
+- Event Focus Template (TXT): [Download](/downloads/event_focus_template.txt)
 
 ## PSV format (pipe‑separated endpoints)
 
@@ -61,8 +70,8 @@ Samples
 - Optional table_type line may appear at the beginning or end
 
 Samples
-- Meaning PSV: [/downloads/meaning_table_template.psv](/downloads/meaning_table_template.psv)
-- Event Focus PSV: [/downloads/event_focus_template.psv](/downloads/event_focus_template.psv)
+- Meaning Template (PSV): [Download](/downloads/meaning_table_template.psv)
+- Event Focus Template (PSV): [Download](/downloads/event_focus_template.psv)
 
 ## JSON (Unified Table v3)
 
@@ -71,10 +80,10 @@ Samples
 - IDs: table IDs are snake_case; category IDs are kebab‑case
 
 Samples
-- Meaning JSON template: [/downloads/meaning_table_template.json](/downloads/meaning_table_template.json)
-- Meaning JSON sample: [/downloads/meaning_table_sample.json](/downloads/meaning_table_sample.json)
-- Event Focus JSON template: [/downloads/event_focus_template.json](/downloads/event_focus_template.json)
-- Event Focus JSON sample: [/downloads/event_focus_sample.json](/downloads/event_focus_sample.json)
+- Meaning Template (JSON): [Download](/downloads/meaning_table_template.json)
+- Meaning Sample (JSON): [Download](/downloads/meaning_table_sample.json)
+- Event Focus Template (JSON): [Download](/downloads/event_focus_template.json)
+- Event Focus Sample (JSON): [Download](/downloads/event_focus_sample.json)
 
 ## Foundry VTT JSON (auto‑mapping)
 
@@ -89,8 +98,8 @@ Mapping highlights
 - Event Focus imports enforce `categoryId = "event-focus"`
 
 Samples
-- Foundry Meaning JSON: [/downloads/foundry_meaning_sample.json](/downloads/foundry_meaning_sample.json)
-- Foundry Event Focus JSON: [/downloads/foundry_event_focus_sample.json](/downloads/foundry_event_focus_sample.json)
+- Foundry Meaning Sample (JSON): [Download](/downloads/foundry_meaning_sample.json)
+- Foundry Event Focus Sample (JSON): [Download](/downloads/foundry_event_focus_sample.json)
 
 ## Validation & troubleshooting
 

@@ -5,6 +5,7 @@ category: "Guides"
 date: "2025-03-10"
 readTime: "7 min read"
 isSample: false
+keywords: ["guide", "dice roller", "reference", "Mythic GME Apps"]
 tags: ["guide", "product:apps", "dice-roller", "notation", "reference", "advanced"]
 ---
 

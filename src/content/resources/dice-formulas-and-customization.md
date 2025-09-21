@@ -6,6 +6,12 @@ order: 3
 icon: fa-slab fa-regular fa-sliders
 duration: 12 min read
 updated: 2025-09-21
+tags:
+  - dice
+  - formulas
+  - systems
+  - advanced
+  - guides
 keywords:
   - customization
   - dice formula
@@ -127,23 +133,23 @@ Ironsworn / Starforged
 
 Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import to merge them into your list.
 
-- D&D 5e: [/downloads/formulas_dnd5e.json](/downloads/formulas_dnd5e.json)
-- Pathfinder 2e: [/downloads/formulas_pf2.json](/downloads/formulas_pf2.json)
-- Shadowrun: [/downloads/formulas_shadowrun.json](/downloads/formulas_shadowrun.json)
-- Blades in the Dark: [/downloads/formulas_blades.json](/downloads/formulas_blades.json)
-- Savage Worlds: [/downloads/formulas_savage_worlds.json](/downloads/formulas_savage_worlds.json)
-- Year Zero Engine (partial): [/downloads/formulas_year_zero.json](/downloads/formulas_year_zero.json)
-- Vampire V5: [/downloads/formulas_vampire_v5.json](/downloads/formulas_vampire_v5.json)
-- PbtA: [/downloads/formulas_pbta.json](/downloads/formulas_pbta.json)
-- Fate Core: [/downloads/formulas_fate.json](/downloads/formulas_fate.json)
-- Call of Cthulhu 7e: [/downloads/formulas_coc7e.json](/downloads/formulas_coc7e.json)
-- Cypher: [/downloads/formulas_cypher.json](/downloads/formulas_cypher.json)
-- Warhammer (d6 pools): [/downloads/formulas_warhammer_d6.json](/downloads/formulas_warhammer_d6.json)
-- Lancer: [/downloads/formulas_lancer.json](/downloads/formulas_lancer.json)
-- Ironsworn: [/downloads/formulas_ironsworn.json](/downloads/formulas_ironsworn.json)
-- Starforged: [/downloads/formulas_starforged.json](/downloads/formulas_starforged.json)
-- Dungeon Crawl Classics: [/downloads/formulas_dcc.json](/downloads/formulas_dcc.json)
-- The One Ring (approximation): [/downloads/formulas_one_ring.json](/downloads/formulas_one_ring.json)
+- D&D 5e: [Download](/downloads/formulas_dnd5e.json)
+- Pathfinder 2e: [Download](/downloads/formulas_pf2.json)
+- Shadowrun: [Download](/downloads/formulas_shadowrun.json)
+- Blades in the Dark: [Download](/downloads/formulas_blades.json)
+- Savage Worlds: [Download](/downloads/formulas_savage_worlds.json)
+- Year Zero Engine (partial): [Download](/downloads/formulas_year_zero.json)
+- Vampire V5: [Download](/downloads/formulas_vampire_v5.json)
+- PbtA: [Download](/downloads/formulas_pbta.json)
+- Fate Core: [Download](/downloads/formulas_fate.json)
+- Call of Cthulhu 7e: [Download](/downloads/formulas_coc7e.json)
+- Cypher: [Download](/downloads/formulas_cypher.json)
+- Warhammer (d6 pools): [Download](/downloads/formulas_warhammer_d6.json)
+- Lancer: [Download](/downloads/formulas_lancer.json)
+- Ironsworn: [Download](/downloads/formulas_ironsworn.json)
+- Starforged: [Download](/downloads/formulas_starforged.json)
+- Dungeon Crawl Classics: [Download](/downloads/formulas_dcc.json)
+- The One Ring (approximation): [Download](/downloads/formulas_one_ring.json)
 
 Important: If you manually drop a file in place rather than importing, name it exactly `saved_formulas.json`. The Import flow accepts any filename.
 

@@ -6,6 +6,12 @@ order: 1
 icon: "fa-slab fa-regular fa-share-nodes"
 duration: "7 min read"
 updated: "2025-02-01"
+tags: ["journals", "sharing", "export", "import"]
+keywords:
+  - Share journals
+  - Export
+  - Import
+  - JSON
 ---
 
 Coming soon.

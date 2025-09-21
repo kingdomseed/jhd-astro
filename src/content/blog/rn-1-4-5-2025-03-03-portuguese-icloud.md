@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2025-03-03"
 readTime: "7 min read"
 isSample: false
+keywords: ["release notes", "Mythic GME Apps"]
 tags: [
   "release",
   "v1.4.5",

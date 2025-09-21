@@ -6,6 +6,7 @@ date: "2025-03-26"
 readTime: "4 min read"
 isSample: false
 tags: ["announcement", "product:digital", "desktop", "windows", "linux", "macos", "drm-free"]
+keywords: ["announcement", "DRM-free", "desktop", "Windows", "Linux", "macOS", "Mythic GME Digital"]
 ---
 
 ## Official DRM-Free Companion App Now Available for Windows, Linux & macOS

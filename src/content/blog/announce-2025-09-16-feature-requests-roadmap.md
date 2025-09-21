@@ -6,6 +6,7 @@ date: "2025-09-16"
 readTime: "2 min read"
 isSample: false
 tags: ["announcement", "community", "product:apps", "feature-requests", "roadmap", "feedback"]
+keywords: ["announcement", "feature requests", "roadmap", "community", "Mythic GME Apps"]
 ---
 
 I hope those of you who have it are enjoying version 1.5 with custom tables! I’ve launched a **feature request board** and a **public roadmap** for future work on the apps.

@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2024-11-10"
 readTime: "2 min read"
 isSample: false
+keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-40", "accessibility", "ui", "cleanup"]
 ---
 

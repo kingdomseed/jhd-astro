@@ -18,6 +18,7 @@ tags: [
   "packaging",
   "sticky"
 ]
+keywords: ["announcement", "Flatpak", "Linux", "packaging", "Steam", "Steam Deck", "AppImage", "DEB", "RPM"]
 ---
 
 > Quick update on Linux support for Mythic GME Digital.

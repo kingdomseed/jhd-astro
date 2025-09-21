@@ -6,6 +6,16 @@ order: 1
 icon: "fa-slab fa-regular fa-book-open"
 duration: "8 min read"
 updated: "2025-09-21"
+tags: ["getting-started", "fate-chart", "fate-check", "lists", "scenes", "meaning-tables", "offline"]
+keywords:
+  - Mythic GME
+  - Fate Chart
+  - Fate Check
+  - Lists
+  - Scenes
+  - Meaning Tables
+  - Offline play
+  - Getting started
 
 hero: ../../assets/resources/getting-started/bot_person.jpg
 heroAlt: "Illustration of a person with a friendly bot, representing getting started with the Mythic Apps workspace"

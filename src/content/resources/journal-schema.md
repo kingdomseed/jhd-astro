@@ -6,6 +6,12 @@ order: 1
 icon: fa-slab fa-regular fa-link
 duration: Reference
 updated: 2025-02-01
+tags: ["schema", "journals", "reference", "download"]
+keywords:
+  - Journal schema
+  - JSON
+  - Download
+  - Mythic journal
 ---
 ## Overview
 
@@ -15,9 +21,9 @@ Plain English: You don’t need to know code to use journals. “JSON” is just
 
 ## Downloads
 
-- Journal Schema (JSON): [/downloads/journal.schema.json](/downloads/journal.schema.json)
-- Empty Template: [/downloads/journal_template.json](/downloads/journal_template.json)
-- Filled Sample: [/downloads/journal_sample.json](/downloads/journal_sample.json)
+- Journal Schema (JSON): [Download](/downloads/journal.schema.json)
+- Empty Template: [Download](/downloads/journal_template.json)
+- Filled Sample: [Download](/downloads/journal_sample.json)
 
 Tip: After downloading the empty template, make a copy and rename it from `journal_template.json` to a meaningful name (for example: `my-adventure-2025.json`). Keep the `.json` extension.
 

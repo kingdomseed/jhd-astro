@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2024-11-12"
 readTime: "4 min read"
 isSample: false
+keywords: ["release notes", "Mythic GME Apps"]
 tags: ["pre-release", "series:beta-to-first-release", "product:apps", "v1.2.5", "dice-roller", "journal", "accessibility", "support"]
 ---
 

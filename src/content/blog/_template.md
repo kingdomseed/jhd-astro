@@ -10,6 +10,7 @@ date: 2025-09-20
 readTime: "3 min read"
 isSample: false
 tags: ["release", "product:apps"]
+keywords: ["release notes", "Mythic GME Apps"]
 
 # Optional hero image (optimized via astro:assets)
 # hero: ../../assets/blog-images/your-slug/hero.png
@@ -21,4 +22,3 @@ Intro paragraph.
 ## Section heading
 
 Body content here. Use standard Markdown.
-

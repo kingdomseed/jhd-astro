@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2024-11-05"
 readTime: "4 min read"
 isSample: false
+keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-34", "stability", "privacy", "dice-roller"]
 ---
 

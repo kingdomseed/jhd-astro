@@ -5,6 +5,7 @@ category: "Release Notes"
 date: "2024-12-19"
 readTime: "6 min read"
 isSample: false
+keywords: ["release notes", "Mythic GME Apps"]
 tags: [
   "pre-release",
   "series:beta-to-first-release",
