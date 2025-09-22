@@ -43,6 +43,16 @@ const resources = defineCollection({
           })
         )
         .default([]),
+      downloads: z
+        .array(
+          z.object({
+            label: z.string().min(1),
+            href: z.string().min(1), // allow root-relative like /downloads/foo
+            format: z.string().optional(), // e.g., JSON, CSV, TXT
+            size: z.string().optional(), // optional display size, e.g., "12 KB"
+          })
+        )
+        .default([]),
     }).refine((data) => !data.hero || (data.heroAlt !== undefined && data.heroAlt.trim().length > 0), {
       message: "Provide heroAlt when a hero image is included",
       path: ["heroAlt"],
@@ -76,6 +86,17 @@ const blog = defineCollection({
         // Optional social image for link previews (Open Graph)
         socialImage: image().optional(),
         socialImageAlt: z.string().optional(),
+        // Optional downloads list rendered at the bottom of the post
+        downloads: z
+          .array(
+            z.object({
+              label: z.string().min(1),
+              href: z.string().min(1),
+              format: z.string().optional(),
+              size: z.string().optional(),
+            })
+          )
+          .default([]),
       })
       .refine(
         (data) => !data.hero || (data.heroAlt !== undefined && data.heroAlt.trim().length > 0),

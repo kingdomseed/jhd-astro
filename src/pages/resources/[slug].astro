@@ -34,6 +34,12 @@ if (!entry) {
 
 const { Content } = await entry.render();
 const resource = entry.data;
+// Group downloads (if any) into Schemas, Examples, Templates based on label keywords
+const downloads = Array.isArray(resource.downloads) ? resource.downloads : [];
+const dlSchemas = downloads.filter((d) => /schema/i.test(d.label));
+const dlExamples = downloads.filter((d) => /(example|sample)/i.test(d.label));
+const dlTemplates = downloads.filter((d) => /template/i.test(d.label));
+const dlOther = downloads.filter((d) => !/(schema|example|sample|template)/i.test(d.label));
 
 const categoryLabels = {
   'start-here': 'Start Here',
@@ -111,7 +117,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
               {resource.externalUrl && (
                 <p class="resource-detail__download">
                   <a class="btn btn--shadow-accent" href={resource.externalUrl} target="_blank" rel="noopener">
-                    <i class="fa-slab fa-regular fa-download" aria-hidden="true"></i>
+                    <i class="fa-slab fa-regular fa-arrow-down-to-line" aria-hidden="true"></i>
                     Open schema / download
                   </a>
                 </p>
@@ -137,6 +143,121 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
             <div class="resource-detail__content">
               <Content />
             </div>
+            {(downloads.length > 0) && (
+              <section class="section section-band" aria-labelledby="resource-downloads-title">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true"></span>
+                  <span class="badge-text">Downloads</span>
+                </header>
+                <h3 id="resource-downloads-title" class="section-title">Downloads</h3>
+                <div class="resource-downloads__groups">
+                  {dlSchemas.length > 0 && (
+                    <div class="resource-downloads__group">
+                      <h4 class="resource-downloads__group-title">Schemas</h4>
+                      <ul class="resource-downloads__list" aria-label="Schema downloads">
+                        {dlSchemas.map((d) => (
+                          <li class="resource-downloads__item">
+                            <a href={d.href} class="resource-downloads__link" download>
+                              <span class="resource-downloads__icon" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
+                              </span>
+                              <span class="resource-downloads__body">
+                                <span class="resource-downloads__label">{d.label}</span>
+                                <span class="resource-downloads__meta">
+                                  {d.format && <span class="resource-downloads__format">{d.format}</span>}
+                                  {d.size && <span class="resource-downloads__size">{d.size}</span>}
+                                </span>
+                              </span>
+                              <span class="resource-downloads__arrow" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-right"></i>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {dlExamples.length > 0 && (
+                    <div class="resource-downloads__group">
+                      <h4 class="resource-downloads__group-title">Examples</h4>
+                      <ul class="resource-downloads__list" aria-label="Example downloads">
+                        {dlExamples.map((d) => (
+                          <li class="resource-downloads__item">
+                            <a href={d.href} class="resource-downloads__link" download>
+                              <span class="resource-downloads__icon" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
+                              </span>
+                              <span class="resource-downloads__body">
+                                <span class="resource-downloads__label">{d.label}</span>
+                                <span class="resource-downloads__meta">
+                                  {d.format && <span class="resource-downloads__format">{d.format}</span>}
+                                  {d.size && <span class="resource-downloads__size">{d.size}</span>}
+                                </span>
+                              </span>
+                              <span class="resource-downloads__arrow" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-right"></i>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {dlTemplates.length > 0 && (
+                    <div class="resource-downloads__group">
+                      <h4 class="resource-downloads__group-title">Templates</h4>
+                      <ul class="resource-downloads__list" aria-label="Template downloads">
+                        {dlTemplates.map((d) => (
+                          <li class="resource-downloads__item">
+                            <a href={d.href} class="resource-downloads__link" download>
+                              <span class="resource-downloads__icon" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
+                              </span>
+                              <span class="resource-downloads__body">
+                                <span class="resource-downloads__label">{d.label}</span>
+                                <span class="resource-downloads__meta">
+                                  {d.format && <span class="resource-downloads__format">{d.format}</span>}
+                                  {d.size && <span class="resource-downloads__size">{d.size}</span>}
+                                </span>
+                              </span>
+                              <span class="resource-downloads__arrow" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-right"></i>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {dlOther.length > 0 && (
+                    <div class="resource-downloads__group">
+                      <h4 class="resource-downloads__group-title">Other</h4>
+                      <ul class="resource-downloads__list" aria-label="Other downloads">
+                        {dlOther.map((d) => (
+                          <li class="resource-downloads__item">
+                            <a href={d.href} class="resource-downloads__link" download>
+                              <span class="resource-downloads__icon" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
+                              </span>
+                              <span class="resource-downloads__body">
+                                <span class="resource-downloads__label">{d.label}</span>
+                                <span class="resource-downloads__meta">
+                                  {d.format && <span class="resource-downloads__format">{d.format}</span>}
+                                  {d.size && <span class="resource-downloads__size">{d.size}</span>}
+                                </span>
+                              </span>
+                              <span class="resource-downloads__arrow" aria-hidden="true">
+                                <i class="fa-slab fa-regular fa-arrow-right"></i>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )}
             {Array.isArray(resource.steps) && resource.steps.length > 0 && (
               // Structured steps: present a scannable, accessible sequence
               <section class="section" aria-labelledby="resource-steps-title">

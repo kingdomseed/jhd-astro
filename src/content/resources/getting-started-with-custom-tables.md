@@ -13,6 +13,49 @@ keywords:
   - Event Focus
   - Categories
   - Getting started
+downloads:
+  - label: "Meaning Template (JSON)"
+    href: "/downloads/meaning_table_template.json"
+    format: "JSON"
+  - label: "Meaning Sample (JSON)"
+    href: "/downloads/meaning_table_sample.json"
+    format: "JSON"
+  - label: "Meaning Template (CSV)"
+    href: "/downloads/meaning_table_template.csv"
+    format: "CSV"
+  - label: "Meaning Example (CSV)"
+    href: "/downloads/meaning_table_example.csv"
+    format: "CSV"
+  - label: "Meaning Template (TXT)"
+    href: "/downloads/meaning_table_template.txt"
+    format: "TXT"
+  - label: "Meaning Template (PSV)"
+    href: "/downloads/meaning_table_template.psv"
+    format: "PSV"
+  - label: "Event Focus Template (JSON)"
+    href: "/downloads/event_focus_template.json"
+    format: "JSON"
+  - label: "Event Focus Sample (JSON)"
+    href: "/downloads/event_focus_sample.json"
+    format: "JSON"
+  - label: "Event Focus Template (CSV)"
+    href: "/downloads/event_focus_template.csv"
+    format: "CSV"
+  - label: "Event Focus Example (CSV)"
+    href: "/downloads/event_focus_example.csv"
+    format: "CSV"
+  - label: "Event Focus Template (TXT)"
+    href: "/downloads/event_focus_template.txt"
+    format: "TXT"
+  - label: "Event Focus Template (PSV)"
+    href: "/downloads/event_focus_template.psv"
+    format: "PSV"
+  - label: "Categories Template (JSON)"
+    href: "/downloads/categories_template.json"
+    format: "JSON"
+  - label: "Categories Sample (JSON)"
+    href: "/downloads/categories_sample.json"
+    format: "JSON"
 ---
 
 ## Where to find Custom Tables
@@ -55,24 +98,7 @@ Open the Custom Tables feature through the navigation drawer or if on desktop, f
 
 ## Starter downloads
 
-Use these templates and samples as starting points. Import them from Custom Tables → Import.
-
-- Meaning Template (JSON): [Download](/downloads/meaning_table_template.json)
-- Meaning Sample (JSON): [Download](/downloads/meaning_table_sample.json)
-- Meaning Template (CSV): [Download](/downloads/meaning_table_template.csv)
-- Meaning Example (CSV): [Download](/downloads/meaning_table_example.csv)
-- Meaning Template (TXT): [Download](/downloads/meaning_table_template.txt)
-- Meaning Template (PSV): [Download](/downloads/meaning_table_template.psv)
-
-- Event Focus Template (JSON): [Download](/downloads/event_focus_template.json)
-- Event Focus Sample (JSON): [Download](/downloads/event_focus_sample.json)
-- Event Focus Template (CSV): [Download](/downloads/event_focus_template.csv)
-- Event Focus Example (CSV): [Download](/downloads/event_focus_example.csv)
-- Event Focus Template (TXT): [Download](/downloads/event_focus_template.txt)
-- Event Focus Template (PSV): [Download](/downloads/event_focus_template.psv)
-
-- Categories Template (JSON): [Download](/downloads/categories_template.json)
-- Categories Sample (JSON): [Download](/downloads/categories_sample.json)
+Use these templates and samples as starting points. Import them from Custom Tables → Import. See the Downloads section below for files.
 
 ## What’s not supported yet
 
