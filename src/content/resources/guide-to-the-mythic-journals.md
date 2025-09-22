@@ -118,9 +118,10 @@ End‑of‑scene bookkeeping
 
 ## Tips
 
-- Random Events: Include `eventFocus`, meanings, and optional ties (character/thread/feature) in the log entry.
-- Keep Lists current: Adventure Lists drive inspiration and event connections; expand available items by increasing the active sections.
-- Keep separate journals per campaign: It keeps lists, scenes, and logs cleanly isolated.
+- Each journal typically represents a single adventure.
+- Each journal file includes its own Lists, Scenes, and log data. 
+- Sharing own mobile opens a Share sheet that makes it easy to send to your preferred location or share with friends.
+- Journals can be exported as Markdown for use in other apps
 
 ### Reassurance for non‑tech folks
 
