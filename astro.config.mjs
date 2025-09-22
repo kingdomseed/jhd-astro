@@ -14,10 +14,13 @@ export default defineConfig({
   // Site is used for absolute URLs (e.g., in RSS) and canonical generation in some contexts
   site: 'https://jasonholtdigital.com',
   integrations: [
-    // Use Sentry SDK files (sentry.client/server.config.*) for runtime config.
-    // For source map uploads, prefer environment variables (SENTRY_AUTH_TOKEN, SENTRY_ORG, SENTRY_PROJECT)
-    // rather than passing deprecated options to the integration.
-    sentry(),
+    sentry({
+      sourceMapsUploadOptions: {
+        project: "flutter",
+        org: "jason-holt-digital-llc",
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+      },
+    }),
     spotlightjs(),
   ],
   // Cloudflare adapter - session warnings are informational and can be ignored for static sites

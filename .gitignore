@@ -27,3 +27,4 @@ amplify_outputs*
 amplifyconfiguration*
 
 /docs/slab-regular
+.env.sentry-build-plugin
