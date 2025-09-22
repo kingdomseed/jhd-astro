@@ -321,6 +321,21 @@
     color: #333;
   }
 
+  /* Callout style for Markdown blockquotes within resource content */
+  .resource-detail__content blockquote {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0; /* author controls spacing via surrounding flow */
+    padding: 0.75rem 1rem;
+    background: var(--color-surface-2, #f3f3f3);
+    border: var(--border-subtle);
+    border-left: 6px solid var(--color-primary); /* brand blue edge */
+  }
+
+  /* Keep inner content tidy without relying on default p margins */
+  .resource-detail__content blockquote > :first-child { margin-top: 0; }
+  .resource-detail__content blockquote > :last-child { margin-bottom: 0; }
+
   .resource-detail__content p {
     margin: 0;
   }

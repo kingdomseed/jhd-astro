@@ -23,43 +23,48 @@ heroAlt: "Illustration of a person with a friendly bot"
 # Structured steps (images optional)
 steps:
   - title: "Install on your device(s)"
-    body: "Download and install the desktop or mobile app. Launch—no account or sign‑in needed."
+    body: "Download and install the desktop or mobile app and launch--the app creates your first saved game--My Journal. Rename it on the settings screen."
   - title: "Set your Chaos Factor"
     body: "On first launch you’ll see the Fate Chart. Set CF (1–9) to match your scenario; adjust later as needed."
   - title: "Ask, roll, and record"
-    body: "Type a yes/no question, pick odds, and roll. Record outcomes in your scene notes to keep story continuity."
-  - title: "Use Lists and Meaning Tables"
-    body: "Keep Characters, Threads, and Features in Lists. Use Meaning Tables (Action/Subject, etc.) for sparks when you’re unsure."
+    body: "Type a yes/no question, pick odds, and roll. Record outcomes in your scene notes to keep story continuity. You can enable writing your question before the role on the screen settings."
+  - title: "Use Lists, Scenes, and Meaning Tables"
+    body: "It's a good idea to add Characters and Threads to your Lists before starting your first game. Use Scenes to summerize or predict, and meaning tables for interpreting outcomes."
 ---
 Welcome! This quick guide is based on the app itself: you start at the Fate Chart and move between Lists, Scenes, and Meaning Tables as you play. There are no accounts or servers—everything happens on your device.
 
-> Callout: Bring these to the table
+> What you need: Bring these to the table
 > - Your favorite RPG and character(s) created (keep sheets handy)
 > - The Mythic GME 2e book for odds and rules context
-> - The desktop or mobile app installed (no sign‑in required)
+> - The desktop or mobile app installed
 
 ## Before you begin
 
-- A copy of the Mythic Game Master Emulator 2e book (Word Mill Creative) for rules context and odds guidance
-- Your favorite RPG system and character(s) created and ready to play (keep character sheets handy)
+ - A copy of the [Mythic Game Master Emulator 2e book](https://www.drivethrurpg.com/en/product/422929/mythic-game-master-emulator-second-edition) (Word Mill Creative) for rules context and guidance
+- Your favorite RPG system and character(s) created and ready to play 
 - The desktop or mobile version of the app
 
 ## Core steps
 
 ### 1) Install
 
-Install the desktop app or the mobile app from your platform’s store and launch it. Permissions are minimal; no sign‑in is required.
+Install the desktop app or the mobile app from your platform’s store and launch it. Once launched, the app automatically creates your first journal for you called 'My Journal'. You can rename this in settings.
 
 ### 2) Start at the Fate Chart (or switch to Fate Check)
 
-On first launch, the app opens to the Fate Chart. You can switch the default to Fate Check in Settings later if you prefer. Set your Chaos Factor, choose odds, and roll. The app highlights Yes/No/Exceptional results clearly.
+On first launch, the app opens to the Fate Chart. You can switch the default to Fate Check in Settings later if you prefer. Set your Chaos Factor, choose odds, and roll. The app highlights Yes/No/Exceptional results clearly. 
+
+> Tip: Change A Screens Settings
+> - There's a settings wheel that let's you change the settings for each screen.
+> - You can enable more details about rolls on the Fate Chart screen
+> - You can also turn on the ability to ask a question before each roll
 
 ### 3) Core screens you’ll use every session
 
 - Fate Chart (and Fate Check): ask questions, choose odds, roll, and interpret answers.
-- Lists: track Characters, Threads, and Features. These lists feed your events and oracles.
-- Scenes: jot a title and summary; snapshot the Chaos Factor for the scene start; add notes as you play.
-- Meaning Tables: Action/Subject and other tables for prompts when you’re unsure what happens next.
+- Lists: track Characters, Threads, and Features. These lists feed your event rolls and bring elements into your story in unexpected ways.
+- Scenes: jot a title and summary; snapshot the Chaos Factor for the scene start; add notes as you play or wait until the conclusion of a scene and summerize.
+- Meaning Tables: Action/Subject and other tables for giving you the inspiration to interpret your results.
 
 Layout notes
 - Mobile: each area is its own screen; switch using the navigation drawer on the top left.
@@ -76,9 +81,9 @@ Layout notes
 
 ## Tips & troubleshooting
 
-- Unsure about odds? Keep the book nearby and start with likely/50‑50 early on
-- If something feels off, lower CF; if chaos erupts, raise CF
-- On mobile, try landscape when you want more context while writing
+- Unsure about how to start? Keep the book nearby and start with likely/50‑50 early on
+- Chaos factor determines how likely exceptional results occur
+- On mobile, try landscape when you want more context while playing
 
 ## Next steps
 
