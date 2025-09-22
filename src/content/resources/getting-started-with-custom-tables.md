@@ -17,10 +17,10 @@ keywords:
 
 ## Where to find Custom Tables
 
-- Open the Custom Tables feature in the app (not in Settings).
-- Unlocking:
-  - Google Play, Amazon, and Apple App Store: requires an in‑app purchase to unlock Custom Tables.
-  - Itch.io and Microsoft Store (Windows): included with the higher‑priced purchase.
+Open the Custom Tables feature through the navigation drawer or if on desktop, from the icon button on the right.
+> ### How to Unlock
+  >  - Google Play, Amazon, and Apple App Store: requires an in‑app purchase to unlock Custom Tables.
+  > - Itch.io and Microsoft Store (Windows): included with the higher‑priced purchase.
 
 ## Make your first Meaning table
 
@@ -31,18 +31,21 @@ keywords:
 5) Optional polish: description, tags, translations, icon
 6) Save and test by rolling
 
-Tips
-- Start small (1d6/1d10) and expand later to 1d100
-- Keep ranges continuous (no gaps/overlaps). The app validates this for you
-- Use entryRollOn to chain results to other tables or to Adventure Lists (Characters/Threads/Features)
+> ### Tips
+> - Start small (1d6/1d10) and expand later to 1d100
+> - Keep ranges continuous (no gaps/overlaps). The app validates this for you
+> - Use entryRollOn to chain results to other tables or to Adventure Lists (Characters/Threads/Features)
 
 ## Make an Event Focus table
 
 1) Open Custom Tables → New → Event Focus
 2) Range is typically 1–100 (percentile) but smaller ranges work too
 3) Add entries that describe what kind of event happens (e.g., NPC Action, Thread Event)
-4) Optional: for each entry, set an `entryRollOn` target to immediately roll on another table or list
-5) Save and try a few test rolls
+4) Save and try a few test rolls
+
+> ### Tip 
+> Each Table can be linked or nested under another table an each entry can also be linked to or nested under another table to immediately roll on another table. You can also link Lists this way.
+
 
 ## Translations & metadata
 
@@ -71,12 +74,9 @@ Use these templates and samples as starting points. Import them from Custom Tabl
 - Categories Template (JSON): [Download](/downloads/categories_template.json)
 - Categories Sample (JSON): [Download](/downloads/categories_sample.json)
 
-Note: Files live in `public/downloads/` in the project and are served from `/downloads/` on the site.
-
 ## What’s not supported yet
 
 - Weighted tables are not supported yet in the app. Build range‑based tables (1..N) instead.
-- No command‑line validator is required; the app validates ranges and shapes during import/save and shows clear messages if something’s off.
 
 ## Next steps
 

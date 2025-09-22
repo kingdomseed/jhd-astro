@@ -17,9 +17,11 @@ keywords:
 
 ## Where to organize
 
-- Open the Custom Tables feature in the app (not in Settings).
+- Open the Custom Tables feature through the navigation drawer or if on desktop, from the icon button on the right.
+- Choose the categories tab.
 - Categories, icons, and translations are managed alongside your tables.
-- Unlocking note: on Google Play, Amazon, and the Apple App Store, Custom Tables is an IAP; Itch.io and Microsoft Store include it with a higher‑priced purchase.
+> - Unlocking note: 
+> - on Google Play, Amazon, and the Apple App Store, Custom Tables is an IAP; Itch.io and Microsoft Store include it with a higher‑priced purchase.
 
 ## Meaning vs Event Focus
 
@@ -33,9 +35,8 @@ keywords:
 - User categories live alongside the defaults; keep built‑ins untouched and add your own under the user categories area
 
 Best practices
-- Clear IDs: table IDs are snake_case; category IDs are kebab‑case
 - Short display names; add detail in descriptions
-- Use translations where helpful; default language is `en`
+- Swap in your prefered language. Portuguse has official support in the app (thank you Retropunk!) and I hope to offer more official language support for other languages as time goes on
 
 ## Tags and search
 
@@ -44,9 +45,9 @@ Best practices
 
 ## Linking tables
 
-- `entryRollOn`: from a specific result, immediately roll another table (or an Adventure List)
-- `tableRollOn`: after producing a result, roll one or more follow‑ups
-- Chain carefully to avoid loops; start small and test
+- Set a link to another table or list for each entry in your table. from a specific result, immediately roll another table (or an Adventure List)
+- Set a link to another table or list any time the table is rolled on. after producing a result, roll one or more follow‑ups
+- Maxmium chained rolls are currently set to 10. Let me know if you think that should change. 
 
 ## Starter files
 
