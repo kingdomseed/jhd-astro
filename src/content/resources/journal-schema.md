@@ -22,6 +22,9 @@ downloads:
   - label: "Filled Sample"
     href: "/downloads/journal_sample.json"
     format: "JSON"
+related:
+  - guide-to-the-mythic-journals
+  - sharing-adventure-journals
 ---
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
 title: "Setting Up and Using Lists"
-summary: "Build reusable Mythic lists, manage categories, and keep everything in sync with the app sidebar."
+summary: "Build reusable Mythic lists using Characters, Threads, and Features"
 category: "start-here"
 order: 2
 icon: "fa-slab fa-regular fa-list"
@@ -12,6 +12,10 @@ keywords:
   - Characters
   - Threads
   - Features
+related:
+  - writing-and-organizing-scenes
+  - using-meaning-tables-for-inspiration
+  - guide-to-the-mythic-journals
 ---
 This guide distills the essential steps for starting players using the Lists module within the official Mythic GME companion apps. The apps are designed to complement the Mythic GME 2e rulebook, streamlining mechanics and minimizing lookup friction.
 
@@ -71,6 +75,4 @@ All lists share the practical structure of up to 5 sections with 5 lines each (2
 
 ## Related guides
 
-- Writing & Organizing Scenes
-- Using Meaning Tables for Inspiration
-- A Guide to the Mythic Journals
+See the Related Guides section at the bottom of this page.

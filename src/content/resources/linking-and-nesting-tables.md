@@ -12,6 +12,9 @@ keywords:
   - Nesting tables
   - entryRollOn
   - tableRollOn
+related:
+  - custom-table-schema
+  - importing-and-exporting-custom-tables
 ---
 
 Coming soon.

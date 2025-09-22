@@ -25,6 +25,8 @@ Optional fields:
 - `heroAlt: string` (required only if `hero` is provided)
 - `steps: { title: string; body?: string; image?: image(); imageAlt?: string }[]`
   - If a step `image` is provided, include `imageAlt`.
+ - `downloads: { label: string; href: string; format?: string; size?: string }[]` (optional)
+ - `related: string[]` — slugs of related resources to display in a Related Guides section (optional)
 
 Images use `astro:content`'s `image()` type, which enforces valid local image paths and feeds the `astro:assets` `<Image />` pipeline for responsive optimization.
 
@@ -73,6 +75,9 @@ order: 1
 icon: "fa-slab fa-regular fa-dice-d20"
 duration: "5 min read"
 updated: "2025-02-01"
+related:
+  - saving-and-managing-dice-formulas
+  - formula-schema
 ---
 ```
 
@@ -98,6 +103,10 @@ steps:
     imageAlt: "Install screen with highlighted button"
   - title: "Sign in"
     body: "Connect your Mythic account to sync settings."
+related:
+  - getting-started-with-the-dice-roller
+  - setting-up-and-using-lists
+  - using-meaning-tables-for-inspiration
 ---
 ```
 
@@ -107,6 +116,8 @@ steps:
   - If `hero` is provided, it is rendered via `<Image />` responsively.
   - If `steps` are provided, each step renders with an optional `<Image />` and caption.
 - ShareBar: a compact share bar is automatically rendered beneath the header (Copy, Share, Email, Reddit, Facebook, Bluesky). Icons are neutral by default with brand tints on hover.
+- Downloads: if `downloads` are provided, a grouped Downloads section appears at the bottom.
+- Related Guides: if `related` contains slugs, those items are rendered; otherwise up to three suggestions are shown from the same category (and then by tag overlap).
 - Index page: `src/pages/resources/index.astro` groups entries by category and uses `order` for sorting.
 
 ## Accessibility & performance

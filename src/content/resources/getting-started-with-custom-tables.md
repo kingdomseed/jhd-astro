@@ -56,6 +56,10 @@ downloads:
   - label: "Categories Sample (JSON)"
     href: "/downloads/categories_sample.json"
     format: "JSON"
+related:
+  - custom-table-schema
+  - categories-schema
+  - importing-and-exporting-custom-tables
 ---
 
 ## Where to find Custom Tables

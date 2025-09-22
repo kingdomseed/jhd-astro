@@ -69,6 +69,9 @@ downloads:
   - label: "The One Ring Saved Formulas"
     href: "/downloads/formulas_one_ring.json"
     format: "JSON"
+related:
+  - saving-and-managing-dice-formulas
+  - formula-schema
 ---
 
 ## Read this first (no programming required)

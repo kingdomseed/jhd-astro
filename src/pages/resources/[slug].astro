@@ -34,6 +34,34 @@ if (!entry) {
 
 const { Content } = await entry.render();
 const resource = entry.data;
+
+// Build Related Guides list
+const allResources = await getCollection('resources');
+// Helper: resolve a slug to entry safely
+const resolveResource = (s: string) => allResources.find((e) => e.slug === s);
+const explicitRelated = Array.isArray(resource.related)
+  ? resource.related
+      .map((s: string) => resolveResource(s))
+      .filter((e): e is ResourceEntry => Boolean(e) && e.slug !== entry.slug)
+  : [];
+// Fallback suggestions (same category, then tag overlap), excluding duplicates/self
+const seen = new Set<string>([entry.slug, ...explicitRelated.map((e) => e.slug)]);
+const sameCategory = allResources
+  .filter((e) => e.data.category === resource.category && !seen.has(e.slug))
+  .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+sameCategory.slice(0, 3).forEach((e) => seen.add(e.slug));
+const tags = new Set<string>(Array.isArray(resource.tags) ? resource.tags : []);
+const tagOverlap = allResources
+  .filter((e) => !seen.has(e.slug))
+  .map((e) => ({
+    entry: e,
+    score: (e.data.tags || []).reduce((acc: number, t: string) => acc + (tags.has(t) ? 1 : 0), 0),
+  }))
+  .filter((x) => x.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .map((x) => x.entry);
+const fallbackRelated = [...sameCategory, ...tagOverlap].slice(0, Math.max(0, 3 - explicitRelated.length));
+const relatedEntries: ResourceEntry[] = [...explicitRelated, ...fallbackRelated];
 // Group downloads (if any) into Schemas, Examples, Templates based on label keywords
 const downloads = Array.isArray(resource.downloads) ? resource.downloads : [];
 const dlSchemas = downloads.filter((d) => /schema/i.test(d.label));
@@ -143,6 +171,33 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
             <div class="resource-detail__content">
               <Content />
             </div>
+            {relatedEntries.length > 0 && (
+              <section class="section" aria-labelledby="resource-related-title">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true"></span>
+                  <span class="badge-text">Related</span>
+                </header>
+                <h3 id="resource-related-title" class="section-title">Related Guides</h3>
+                <ul class="resource-related__list" aria-label="Related guides">
+                  {relatedEntries.map((r) => (
+                    <li class="resource-related__item">
+                      <a href={`/resources/${r.slug}/`} class="resource-related__link">
+                        <span class="resource-related__icon" aria-hidden="true">
+                          <i class={r.data.icon ?? 'fa-slab fa-regular fa-book-open'}></i>
+                        </span>
+                        <span class="resource-related__body">
+                          <span class="resource-related__label">{r.data.title}</span>
+                          <span class="resource-related__summary">{r.data.summary}</span>
+                        </span>
+                        <span class="resource-related__arrow" aria-hidden="true">
+                          <i class="fa-slab fa-regular fa-arrow-right"></i>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
             {(downloads.length > 0) && (
               <section class="section section-band" aria-labelledby="resource-downloads-title">
                 <header class="section-head" aria-hidden="true">

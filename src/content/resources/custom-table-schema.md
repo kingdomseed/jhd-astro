@@ -19,6 +19,10 @@ downloads:
   - label: "Event Focus Schema"
     href: "/downloads/event_focus_table.schema.json"
     format: "JSON"
+related:
+  - getting-started-with-custom-tables
+  - importing-and-exporting-custom-tables
+  - linking-and-nesting-tables
 ---
 
 ## Plain English

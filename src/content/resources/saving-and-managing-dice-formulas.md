@@ -23,6 +23,9 @@ downloads:
   - label: "Saved Formulas Schema"
     href: "/downloads/saved_formulas.schema.json"
     format: "JSON"
+related:
+  - formula-schema
+  - dice-formulas-and-customization
 ---
 
 ## Where to find it

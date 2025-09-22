@@ -15,6 +15,10 @@ keywords:
   - Foundry VTT
   - PSV
   - TXT
+related:
+  - getting-started-with-custom-tables
+  - custom-table-schema
+  - linking-and-nesting-tables
 ---
 
 ## Where to import/export

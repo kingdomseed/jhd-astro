@@ -4,7 +4,7 @@ summary: "Use categories, icons, tags, and links to keep your Meaning and Event 
 category: "custom-tables"
 order: 2
 icon: "fa-slab fa-regular fa-list-squares"
-duration: "7 min read"
+duration: "5 min read"
 updated: "2025-09-21"
 tags: ["custom-tables", "categories", "icons", "tags", "linking"]
 keywords:
@@ -13,6 +13,9 @@ keywords:
   - Tags
   - Linking tables
   - Custom tables
+related:
+  - categories-schema
+  - getting-started-with-custom-tables
 ---
 
 ## Where to organize

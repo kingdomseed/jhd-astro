@@ -16,6 +16,10 @@ keywords:
   - Meaning Tables
   - Offline play
   - Getting started
+related:
+  - getting-started-with-the-dice-roller
+  - setting-up-and-using-lists
+  - using-meaning-tables-for-inspiration
 
 hero: ../../assets/resources/getting-started/bot_person.jpg
 heroAlt: "Illustration of a person with a friendly bot"

@@ -11,6 +11,9 @@ keywords:
   - Meaning Tables
   - Inspiration
   - Prompts
+related:
+  - setting-up-and-using-lists
+  - writing-and-organizing-scenes
 ---
 
 ## Guide: Mastering the Meaning Tables module

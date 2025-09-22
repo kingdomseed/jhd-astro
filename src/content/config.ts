@@ -43,6 +43,8 @@ const resources = defineCollection({
           })
         )
         .default([]),
+      // Related resource slugs for the Related Guides section
+      related: z.array(z.string()).default([]),
       downloads: z
         .array(
           z.object({

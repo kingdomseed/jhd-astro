@@ -12,6 +12,9 @@ keywords:
   - Import
   - Export
   - JSON
+related:
+  - saving-and-managing-dice-formulas
+  - formula-schema
 ---
 This page collects the essentials for bringing Saved Formulas into the app and exporting yours for safekeeping or sharing. If you want to learn how to build formulas or manage the list, see the related guides below.
 
@@ -77,6 +80,6 @@ Tip: Use Import to merge these into your current list. Manual placement requires
 
 ## Related guides
 
-- Build and customize expressions (with system recipes): “Dice Formulas & Customization”
+See the Related Guides section at the bottom of this page.
 - Save, load, import, export (UI walkthrough): “Saving and Managing Dice Formulas”
 - File structure reference (JSON schema): “Formula Schema”

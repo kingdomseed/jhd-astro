@@ -22,6 +22,9 @@ downloads:
   - label: "Filled Sample"
     href: "/downloads/saved_formulas_sample.json"
     format: "JSON"
+related:
+  - saving-and-managing-dice-formulas
+  - dice-formulas-and-customization
 ---
 ## Overview
 

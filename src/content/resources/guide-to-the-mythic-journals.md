@@ -23,6 +23,10 @@ downloads:
   - label: "JSON Schema"
     href: "/downloads/journal.schema.json"
     format: "JSON"
+related:
+  - writing-and-organizing-scenes
+  - sharing-adventure-journals
+  - saving-and-managing-dice-formulas
 ---
 
 ## What you’ll use

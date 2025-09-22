@@ -21,6 +21,9 @@ downloads:
   - label: "Categories Sample"
     href: "/downloads/categories_sample.json"
     format: "JSON"
+related:
+  - organizing-custom-tables
+  - getting-started-with-custom-tables
 ---
 
 ## Plain English

@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with the Dice Roller"
-summary: "Roll faster with presets, queues, and in-line oracle prompts."
+summary: "Roll faster with the system agnostic dice roller"
 category: "dice-roller"
 order: 1
 icon: "fa-slab fa-regular fa-star"
@@ -11,6 +11,9 @@ keywords:
   - Dice roller
   - Getting started
   - Roll dice
+related:
+  - dice-formulas-and-customization
+  - saving-and-managing-dice-formulas
 ---
 
 The Dice Roller helps you build expressions quickly and see clear, readable results. This quick start shows the basics so you can roll confidently right away.
@@ -55,6 +58,4 @@ Tip: Use parentheses for clarity when mixing pools, e.g., `(1d8!!+1d6!!) kh` (Sa
 - Short names and simple modifiers keep formulas scannable; add context in the Saved entry’s description when you save.
 
 ## Related guides
-- Expression patterns + system recipes: “Dice Formulas & Customization”
-- Save / Manage / Import / Export: “Saving and Managing Dice Formulas”
-- File shape + schema: “Importing & Exporting Saved Formulas” and “Formula Schema”
+See the Related Guides section at the bottom of this page.

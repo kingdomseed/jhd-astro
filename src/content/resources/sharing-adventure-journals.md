@@ -12,6 +12,9 @@ keywords:
   - Export
   - Import
   - JSON
+related:
+  - guide-to-the-mythic-journals
+  - writing-and-organizing-scenes
 ---
 
 Coming soon.

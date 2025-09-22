@@ -13,6 +13,10 @@ keywords:
   - Fate Chart
   - Interrupt Scene
   - Altered Scene
+related:
+  - setting-up-and-using-lists
+  - guide-to-the-mythic-journals
+  - using-meaning-tables-for-inspiration
 ---
 
 The Scenes screen in the Mythic Apps is the hub of your adventure. It gives each chunk of play a clear container so you can track each phase of your adventure clearly.
