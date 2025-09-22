@@ -216,6 +216,9 @@ Important: If you manually drop a file in place rather than importing, name it e
 - Save your favorite expressions: see “Saving and Managing Dice Formulas”.
 - Share and maintain a portable list: see “Formula Schema”.
 
+> ##### Syntax engine and docs
+> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+
 ## See a problem?
 
 Help me keep this page and content up-to-date! If you see a problem, please report it: support@jasonholtdigital.com

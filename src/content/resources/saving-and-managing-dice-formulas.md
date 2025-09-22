@@ -73,6 +73,9 @@ related:
 - The app understands a few compatible shapes on import and exports a canonical wrapped format.
 - See the [Formula Schema](/resources/formula-schema/) for field names and a minimal example.
 
+> ##### Syntax engine and docs
+> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+
 ## Related guides
 
 - Build more complex expressions and see per‑system starters: [Dice Formulas & Customization](/resources/dice-formulas-and-customization/)

@@ -18,6 +18,9 @@ related:
 
 The Dice Roller helps you build expressions quickly and see clear, readable results. This quick start shows the basics so you can roll confidently right away.
 
+> ##### Syntax engine and docs
+> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+
 ## The layout at a glance
 - Formula field + Roll button: Type a formula (e.g., `1d20+5`) and tap Roll.
 - Quick‑add buttons: One‑tap actions to insert dice (`d2`, `d4`, `d6`, `d8`, `d10`, `d12`, `d20`, `d%`, `dF`), common modifiers (advantage/disadvantage `kh/kl`, keep/drop `kh/kl/-H/-L`, explode/compound `!/!!`, reroll `r/ro`, count `#`), and operators (`+`, `-`, `*`, parentheses) into the formula field.

@@ -78,6 +78,9 @@ Tip: Use Import to merge these into your current list. Manual placement requires
 - Back up before large imports so you can roll back easily.
 - Prefer the canonical wrapped format for sharing (includes `formulas` and `schemaVersion`).
 
+> ##### Syntax engine and docs
+> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+
 ## Related guides
 
 See the Related Guides section at the bottom of this page.

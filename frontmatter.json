@@ -100,6 +100,33 @@
           "title": "tags",
           "name": "tags",
           "type": "tags"
+        },
+        {
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "Dice roller",
+            "Getting started",
+            "Roll dice"
+          ]
+        },
+        {
+          "title": "related",
+          "name": "related",
+          "type": "choice",
+          "choices": [
+            "dice-formulas-and-customization",
+            "saving-and-managing-dice-formulas"
+          ]
+        },
+        {
+          "title": "downloads",
+          "name": "downloads",
+          "type": "block",
+          "fieldGroup": [
+            "downloads_group"
+          ]
         }
       ]
     },
@@ -387,5 +414,27 @@
     "relative": true
   },
   "frontMatter.git.enabled": true,
-  "frontMatter.panel.openOnSupportedFile": true
+  "frontMatter.panel.openOnSupportedFile": true,
+  "frontMatter.taxonomy.fieldGroups": [
+    {
+      "id": "downloads_group",
+      "fields": [
+        {
+          "title": "label",
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "title": "href",
+          "name": "href",
+          "type": "string"
+        },
+        {
+          "title": "format",
+          "name": "format",
+          "type": "string"
+        }
+      ]
+    }
+  ]
 }
