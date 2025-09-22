@@ -12,6 +12,16 @@ keywords:
   - JSON
   - Download
   - Mythic journal
+downloads:
+  - label: "Journal Schema (JSON)"
+    href: "/downloads/journal.schema.json"
+    format: "JSON"
+  - label: "Empty Template"
+    href: "/downloads/journal_template.json"
+    format: "JSON"
+  - label: "Filled Sample"
+    href: "/downloads/journal_sample.json"
+    format: "JSON"
 ---
 ## Overview
 
@@ -21,9 +31,7 @@ Plain English: You don’t need to know code to use journals. “JSON” is just
 
 ## Downloads
 
-- Journal Schema (JSON): [Download](/downloads/journal.schema.json)
-- Empty Template: [Download](/downloads/journal_template.json)
-- Filled Sample: [Download](/downloads/journal_sample.json)
+See the Downloads section at the bottom of this page for files.
 
 Tip: After downloading the empty template, make a copy and rename it from `journal_template.json` to a meaningful name (for example: `my-adventure-2025.json`). Keep the `.json` extension.
 

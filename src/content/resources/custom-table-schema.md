@@ -12,6 +12,13 @@ keywords:
   - Event Focus schema
   - Unified Table v3
   - JSON
+downloads:
+  - label: "Meaning Schema"
+    href: "/downloads/meaning_table.schema.json"
+    format: "JSON"
+  - label: "Event Focus Schema"
+    href: "/downloads/event_focus_table.schema.json"
+    format: "JSON"
 ---
 
 ## Plain English
@@ -100,10 +107,7 @@ Minimal JSON
 
 ## Downloads
 
-- Meaning Schema: [Download](/downloads/meaning_table.schema.json)
-- Event Focus Schema: [Download](/downloads/event_focus_table.schema.json)
-- Meaning Templates/Samples: JSON, CSV, TXT, PSV (see Getting Started)
-- Event Focus Templates/Samples: JSON, CSV, TXT, PSV (see Getting Started)
+See the Downloads section at the bottom of this page for schema files. Templates/Samples are listed on “Getting Started with Custom Tables”.
 
 Note: Weighted tables appear in schema for future compatibility, but the app does not use weights yet.
 

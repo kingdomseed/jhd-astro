@@ -13,13 +13,21 @@ keywords:
   - Import
   - Export
   - Mythic
+downloads:
+  - label: "Empty Template"
+    href: "/downloads/journal_template.json"
+    format: "JSON"
+  - label: "Filled Sample"
+    href: "/downloads/journal_sample.json"
+    format: "JSON"
+  - label: "JSON Schema"
+    href: "/downloads/journal.schema.json"
+    format: "JSON"
 ---
 
 ## What you’ll use
 
-- Empty template: [Download](/downloads/journal_template.json)
-- Filled sample: [Download](/downloads/journal_sample.json)
-- JSON Schema (for validation and tooling): [Download](/downloads/journal.schema.json)
+- Empty template, filled sample, and JSON schema (find them in the Downloads section below)
 
 ### No programming required
 

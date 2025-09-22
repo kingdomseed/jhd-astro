@@ -13,6 +13,16 @@ keywords:
   - Import
   - Export
   - JSON
+downloads:
+  - label: "Empty Template"
+    href: "/downloads/saved_formulas_template.json"
+    format: "JSON"
+  - label: "Filled Sample"
+    href: "/downloads/saved_formulas_sample.json"
+    format: "JSON"
+  - label: "Saved Formulas Schema"
+    href: "/downloads/saved_formulas.schema.json"
+    format: "JSON"
 ---
 
 ## Where to find it
@@ -24,9 +34,7 @@ keywords:
 
 ## What you’ll use
 
-- Empty template: [Download](/downloads/saved_formulas_template.json)
-- Filled sample: [Download](/downloads/saved_formulas_sample.json)
-- Optional schema (for tooling): [Download](/downloads/saved_formulas.schema.json)
+- Empty template, filled sample, and optional schema (find them in the Downloads section below)
 
 ### No programming required
 

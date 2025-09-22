@@ -12,6 +12,16 @@ keywords:
   - Saved formulas
   - JSON
   - Download
+downloads:
+  - label: "Saved Formulas Schema"
+    href: "/downloads/saved_formulas.schema.json"
+    format: "JSON"
+  - label: "Empty Template"
+    href: "/downloads/saved_formulas_template.json"
+    format: "JSON"
+  - label: "Filled Sample"
+    href: "/downloads/saved_formulas_sample.json"
+    format: "JSON"
 ---
 ## Overview
 
@@ -21,9 +31,7 @@ Plain English: You don’t need to know code to use this. “JSON” is just a s
 
 ## Downloads
 
-- Saved Formulas Schema: [Download](/downloads/saved_formulas.schema.json)
-- Empty Template: [Download](/downloads/saved_formulas_template.json)
-- Filled Sample: [Download](/downloads/saved_formulas_sample.json)
+See the Downloads section at the bottom of this page for files.
 
 Important: For now, do not rename the file. The app expects the filename to be `saved_formulas.json`. (Dice Bags will later allow custom names.)
 

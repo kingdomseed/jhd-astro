@@ -11,6 +11,16 @@ keywords:
   - Categories schema
   - JSON
   - Custom tables
+downloads:
+  - label: "Categories Schema"
+    href: "/downloads/categories.schema.json"
+    format: "JSON"
+  - label: "Categories Template"
+    href: "/downloads/categories_template.json"
+    format: "JSON"
+  - label: "Categories Sample"
+    href: "/downloads/categories_sample.json"
+    format: "JSON"
 ---
 
 ## Plain English
@@ -46,9 +56,7 @@ Categories provide names and icons for table groups. The app ships with built‑
 
 ## Downloads
 
-- Categories Schema: [Download](/downloads/categories.schema.json)
-- Categories Template: [Download](/downloads/categories_template.json)
-- Categories Sample: [Download](/downloads/categories_sample.json)
+See the Downloads section at the bottom of this page for files.
 
 ## Related
 
