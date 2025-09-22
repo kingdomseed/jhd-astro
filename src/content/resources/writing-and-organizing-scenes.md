@@ -1,6 +1,6 @@
 ---
 title: "Writing and Organizing Scenes"
-summary: "Use scene templates, quick capture, and archive tools to keep Mythic adventures flowing."
+summary: "Start, run, and wrap scenes; log CF and results; keep notes tidy."
 category: "start-here"
 order: 3
 icon: "fa-slab fa-regular fa-film"

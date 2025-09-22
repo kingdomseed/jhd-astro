@@ -1,6 +1,6 @@
 ---
 title: "Linking & Nesting Tables"
-summary: "Chain results together for complex encounters, oracle escalations, and generated loot."
+summary: "How to chain tables for multi‑step prompts and roll‑ons (coming soon)."
 category: "custom-tables"
 order: 3
 icon: "fa-slab fa-regular fa-link"

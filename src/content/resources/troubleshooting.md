@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-summary: "Solve sync conflicts, recover missing entries, and report bugs with the right diagnostics."
+summary: "Quick fixes for common issues and how to report bugs."
 category: "adventure-journals"
 order: 2
 icon: "fa-slab fa-regular fa-life-ring"

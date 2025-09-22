@@ -1,6 +1,6 @@
 ---
 title: "Sharing Adventure Journals"
-summary: "Export polished adventure logs and import shared campaigns from friends or the community."
+summary: "Export journals to JSON/Markdown and import from files (coming soon)."
 category: "adventure-journals"
 order: 1
 icon: "fa-slab fa-regular fa-share-nodes"

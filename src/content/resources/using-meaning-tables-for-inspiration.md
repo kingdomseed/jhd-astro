@@ -1,6 +1,6 @@
 ---
 title: "Using Meaning Tables for Inspiration"
-summary: "Prompt fresh plot twists and NPC hooks using Mythic's modern meaning tables."
+summary: "Use Meaning Tables (Actions, Descriptions, Elements) for clear prompts."
 category: "start-here"
 order: 4
 icon: "fa-slab fa-regular fa-lightbulb"
@@ -30,6 +30,12 @@ Meaning Tables generate descriptive prompts that clarify narrative elements and 
 
 - Inspirational prompts for details: Use when you want information that doesn’t fit a Yes/No question.
 - Pairs well with Fate: Fate answers “does it happen?”; Meaning adds “what does it look like?” or “what’s really going on?”.
+
+> Availability and content
+> - Core set: The app includes the complete 2e Meaning Tables for rolling.
+> - Expanded sets: 50+ additional Meaning Tables and 12+ extra Event Focus tables from Mythic Magazines, Variations, and other publications are available in‑app.
+> - Pricing by platform: On Apple App Store, Google Play, and Amazon Appstore these expanded sets are part of a one‑time “Expanded Features” unlock (not a subscription). On Microsoft Store (Windows) and itch.io (DRM‑free), the one‑time purchase includes expanded features; no IAP.
+> - For the latest details, see Support → Purchases, Pricing & Upgrades: /support
 
 ## When and how to use the module
 
