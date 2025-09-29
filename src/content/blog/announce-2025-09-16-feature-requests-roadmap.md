@@ -15,7 +15,7 @@ I hope those of you who have it are enjoying version 1.5 with custom tables! Iâ€
 
 There are currently **42 open feature requests**. The board lets you **vote** on what youâ€™d like to see next so I can prioritize the work that matters most.
 
-- Board: [mythicgmeapps.features.vote/board](https://mythicgmeapps.features.vote/board)
+- Board: [feedback.jasonholtdigital.com/board](http://feedback.jasonholtdigital.com/board)
 
 ## Roadmap status
 
