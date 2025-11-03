@@ -6,6 +6,8 @@ tags:
     - announcement
     - blog
     - personal note
+    - product:apps
+    - thinking
 fmContentType: blog
 category: Announcement
 readTime: 7 minutes
