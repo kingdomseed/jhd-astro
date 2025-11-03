@@ -14,7 +14,7 @@ readTime: 7 minutes
 summary: Dive into what's next for Jason Holt Digital and the upcoming updates to Mythic GME apps.
 slug: blog-launched-future-mythic-apps
 hero: ../../assets/blog-images/mythic-images-17.png
-heroAlt: Woman walking a street.
+heroAlt: Woman walking on a street.
 ---
 ## Welcome to the blog!
 Hey everyone! I'm super excited to welcome you to my blog where I'll be diving into the development of the Mythic apps, reflections on app development, and life updates. My goal is to publish once a month, with the possibility of twice a month for focused updates. Release notes will also be published here, but won't count toward that cadence.
@@ -36,3 +36,5 @@ Stay tuned for more about this in the coming weeks and hop on the feature reques
 To wrap things up I wanted to post a brief life update. Over the last year my spouse, who was working full-time, has been incredibly supportive in allowing me to work full-time on the Mythic apps. Recently we've been in a season where she had to look for a new job. Unfortunately in this market, even with certain sectors having an abundance of jobs, there are also a huge number of job seekers. The competition is fierce. While we are doing ok, she is still looking for a job. With this as the background it became clear to us that I also need to look for a way to help support us more than what the app is able to do at this stage. 
 
 I've enrolled in a master's program here in Germany for computational linguistics (natural language processing, etc). There's kind of a complicated history around why pursuing a master's is the best move (I did search for and apply for numerous jobs in software development and teaching first) but the short version is it will be easier to get a job in the long run if I have this degree. I'm excited about diving into computational linguistics while continuing to work part-time on the Mythic apps. Who knows—maybe some of what I learn will find its way into future features! 
+
+Want to connect with me? Head over to the Mythic Discord and find me in the app channel: [Mythic GME Discord](https://discord.gg/PEDHrhzcnk)
