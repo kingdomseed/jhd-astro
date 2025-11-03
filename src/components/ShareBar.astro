@@ -51,9 +51,15 @@ const shareLinks = {
       </a>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href={shareLinks.bluesky} data-platform="bluesky" target="_blank" rel="noopener" aria-label={`Share “${title}” on Bluesky`}>
+      <a class="sharebar__iconbtn" href={shareLinks.bluesky} data-platform="bluesky" target="_blank" rel="noopener" aria-label={`Share "${title}" on Bluesky`}>
         <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
         <span class="sr-only">Bluesky</span>
+      </a>
+    </li>
+    <li>
+      <a class="sharebar__iconbtn" href="/rss.xml" data-platform="rss" aria-label="Subscribe to blog via RSS">
+        <i class="fa-slab fa-regular fa-rss" aria-hidden="true"></i>
+        <span class="sr-only">RSS Feed</span>
       </a>
     </li>
   </ul>
@@ -124,6 +130,7 @@ const shareLinks = {
     --share-facebook: hsl(214 89% 52%);
     --share-reddit: hsl(16 100% 50%);
     --share-bluesky: hsl(212 100% 53%);
+    --share-rss: hsl(25 83% 56%);
   }
   .sharebar__iconbtn[data-platform="facebook"]:hover i { color: var(--share-facebook); }
   .sharebar__iconbtn[data-platform="facebook"]:hover { box-shadow: 0 2px 0 hsl(214 89% 52% / .25); }
@@ -131,6 +138,8 @@ const shareLinks = {
   .sharebar__iconbtn[data-platform="reddit"]:hover { box-shadow: 0 2px 0 hsl(16 100% 50% / .25); }
   .sharebar__iconbtn[data-platform="bluesky"]:hover i { color: var(--share-bluesky); }
   .sharebar__iconbtn[data-platform="bluesky"]:hover { box-shadow: 0 2px 0 hsl(212 100% 53% / .25); }
+  .sharebar__iconbtn[data-platform="rss"]:hover i { color: var(--share-rss); }
+  .sharebar__iconbtn[data-platform="rss"]:hover { box-shadow: 0 2px 0 hsl(25 83% 56% / .25); }
   /* Optional: subtle tint for first-party actions */
   .sharebar__iconbtn[data-platform="share"]:hover i,
   .sharebar__iconbtn[data-platform="copy"]:hover i,

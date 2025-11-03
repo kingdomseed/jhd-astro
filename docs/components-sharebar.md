@@ -17,9 +17,10 @@ Component to render compact share controls for blog posts and resources.
 
 ## Behavior
 
-- Neutral icons by default; brand tints on hover (Reddit/Facebook/Bluesky) and primary tint for first‑party (Share/Copy/Email).
+- Neutral icons by default; brand tints on hover (Reddit/Facebook/Bluesky/RSS) and primary tint for first‑party (Share/Copy/Email).
 - Web Share API button hides if unsupported; falls back to platform links.
 - Copy uses `navigator.clipboard`; a polite status message confirms copy.
+- RSS link directs to `/rss.xml` for blog feed subscription.
 
 ## Accessibility
 
