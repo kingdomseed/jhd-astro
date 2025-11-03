@@ -11,6 +11,8 @@ category: Announcement
 readTime: 7 minutes
 summary: Dive into what's next for Jason Holt Digital and the upcoming updates to Mythic GME apps.
 slug: blog-launched-future-mythic-apps
+hero: src/assets/blog-images/mythic-images-17.png
+heroAlt: Woman walking a street.
 ---
 ## Welcome to the blog!
 Hey everyone! I'm super excited to welcome you to my blog where I'll be diving into the development of the Mythic apps, reflections on app development, and life updates. My goal is to publish once a month, with the possibility of twice a month for focused updates. Release notes will also be published here, but won't count toward that cadence.
