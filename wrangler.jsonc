@@ -1,6 +1,6 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "jhd-website",
+    "name": "jhd-astro-web",
     // Update to today's date
     "compatibility_date": "2025-09-20",
     "assets": {
