@@ -75,7 +75,7 @@ related:
   - formula-schema
 ---
 
-## Leia isso primeiro (sem programação necessária)
+## Leia isso primeiro (Sem programação necessária)
 
 - Fórmulas são expressões simples e legíveis (como `2d6+3`).
 - Você pode digitar uma fórmula, rolá-la e clicar em "Salvar Fórmulas" para mantê-la para mais tarde.
@@ -84,7 +84,7 @@ related:
   - Desktop: eles estão acima do campo de texto.
 - Salvar armazena o que quer que esteja atualmente no campo de texto e permite nomear e adicionar uma descrição. Gerenciar permite importar, exportar, renomear, reordenar e excluir.
 
-Dica: Para salvar, você só precisa do texto da fórmula—não é necessário entender cada opção abaixo. Volte aqui quando quiser fazer algo mais avançado.
+> **Dica**: Para salvar, você só precisa do texto da fórmula—não é necessário entender cada opção abaixo. Volte aqui quando quiser fazer algo mais avançado.
 
 ## Folha de dicas básica
 

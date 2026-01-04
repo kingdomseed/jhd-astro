@@ -24,7 +24,7 @@ Este post faz parte da série Beta → Primeiro Lançamento.
   - Ajustes de cena
 
 ## 🎨 Atualizações de Interface
-- Exibições refinadas de Fator de Caos e Destino
+- Exibições refinadas de Fator Caos e Destino
   - Espaçamento e margens melhorados
   - Melhor escala de texto com FittedBox
   - Ritmo vertical mais consistente com layouts flexíveis

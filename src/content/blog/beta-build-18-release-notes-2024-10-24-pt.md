@@ -27,7 +27,7 @@ Importante: Por favor, apague o app e instale o próximo beta do zero.
 - Estilo e organização renovados
 
 ### Tabela de Destino / Verificação de Destino
-- Corrigido incompatibilidade de cálculo do Fator de Caos entre UI e valor interno
+- Corrigido incompatibilidade de cálculo do Fator Caos entre UI e valor interno
 - Refinamentos contínuos de hierarquia visual
 - Estilo de rótulo simplificado (alguns rótulos estranhos removidos)
 - Botões dedicados de Foco de Evento e Evento Aleatório

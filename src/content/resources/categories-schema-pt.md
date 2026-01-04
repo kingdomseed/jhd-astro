@@ -27,7 +27,7 @@ related:
   - getting-started-with-custom-tables
 ---
 
-## Português Claro
+## Em Português Claro
 
 Categorias fornecem nomes e ícones para grupos de tabelas. O app vem com itens integrados; você adiciona os seus ao lado deles.
 

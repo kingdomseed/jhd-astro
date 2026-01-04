@@ -37,7 +37,7 @@ O diário de aventura é seu jogo salvo — um lugar único onde você registra 
 
 - Linha do tempo do Fator Caos: o mostrador (1–9) em momentos chave; capture no início de cada cena
 - Cenas: títulos curtos + resumos que marcam os ritmos de jogo
-- Log do Oráculo: Perguntas de Destino (probabilidades, rolagem, resultado) e resultados da Tabela de Significado com sua interpretação
+- Log do Oráculo: Perguntas do Destino (probabilidades, rolagem, resultado) e resultados da Tabela de Significados (Palavras de Descrição) com sua interpretação
 - Listas de Aventura: Personagens, Tramas e Características que você referencia e atualiza entre cenas
 - Contabilidade: ajustes de fim de cena (FC para cima/baixo) e quaisquer mudanças de lista
 
@@ -52,8 +52,8 @@ O app armazena seu diário como JSON. Para leitura e compartilhamento fora do ap
 - Durante o jogo (cada cena)
   - Cabeçalho de cena: número, título e FC no início da cena
   - Expectativa: Esperada, Alterada ou Interrompida (da Verificação de Cena)
-  - Perguntas de Destino: escreva a pergunta, escolha probabilidades, registre rolagem + resultado, adicione uma interpretação de uma linha
-  - Eventos Aleatórios: registre Foco de Evento + palavras de Significado e o que significam no contexto; anote quaisquer vínculos (Personagem/Trama/Característica)
+  - Perguntas do Destino: escreva a pergunta, escolha probabilidades, registre rolagem + resultado, adicione uma interpretação de uma linha
+  - Eventos Aleatórios: registre Foco do Evento + Palavras de Descrição e o que significam no contexto; anote quaisquer vínculos (Personagem/Trama/Característica)
   - Notas: algumas frases sobre o que aconteceu (não escreva um romance a menos que queira)
 - Entre cenas (contabilidade)
   - Ajuste FC: para baixo se você estava no controle; para cima se as coisas saíram do controle
@@ -68,8 +68,8 @@ O app armazena seu diário como JSON. Para leitura e compartilhamento fora do ap
 ### Cena N: Título (FC: X no início)
 
 - Expectativa: Esperada | Alterada | Interrompida
-- Pergunta de Destino: … (Probabilidade: Provável/50–50/… → Rolagem: 43 → Resultado: Sim) — Interpretação: …
-- Evento Aleatório (se houver): Foco: … • Significado: Ação=…, Assunto=… — Interpretação: …
+- Pergunta do Destino: … (Probabilidade: Provável/50–50/… → Rolagem: 43 → Resultado: Sim) — Interpretação: …
+- Evento Aleatório (se houver): Foco: … • Palavras de Descrição: Ação=…, Assunto=… — Interpretação: …
 - Notas: 2–4 frases sobre o que realmente aconteceu
 
 Contabilidade de fim de cena
@@ -104,8 +104,8 @@ Contabilidade de fim de cena
 - Listas de Aventura: As três listas usadas pelo Mythic para inspiração e eventos:
   - Personagens: NPCs, facções, personas que podem aparecer em eventos.
   - Tramas: Lista de Tramas/objetivos que podem ser avançados/fechados ou referenciados por eventos.
-  - Características: Lugares, objetos ou conceitos que dão cor a eventos e contexto.
-- Entradas de Log: Registro ordenado por tempo de oráculos e verificações: Respostas da Tabela de Destino/Verificação, Verificações de Cena, Eventos Aleatórios (Foco de Evento + Significados), etc.
+  - Características: Lugares, objetos ou conceitos que dão cor e contexto aos eventos.
+- Entradas de Log: Registro ordenado por tempo de oráculos e verificações: Respostas da Tabela de Destino/Verificação, Verificações de Cena, Eventos Aleatórios (Foco do Evento + Palavras de Descrição), etc.
 
 ## Fluxo de trabalho básico
 

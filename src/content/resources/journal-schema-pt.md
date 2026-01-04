@@ -31,7 +31,7 @@ related:
 
 Esta página documenta as chaves canônicas para o formato de exportação do Diário Mythic e como cada campo é usado. Se você está construindo ferramentas ou validando exportações, comece aqui. Para um passo a passo prático de criação e gerenciamento de diários, veja [Um Guia para os Diários Mythic](/resources/guide-to-the-mythic-journals/).
 
-Português Claro: Você não precisa saber código para usar diários. "JSON" é apenas um arquivo de texto estruturado que o app lê e escreve, e o "esquema" abaixo é um livro de regras para ferramentas validarem esses arquivos. Se você não está construindo ferramentas, pode pular os detalhes aqui com segurança.
+Em Português Claro: Você não precisa saber código para usar diários. "JSON" é apenas um arquivo de texto estruturado que o app lê e escreve, e o "esquema" abaixo é um livro de regras para ferramentas validarem esses arquivos. Se você não está construindo ferramentas, pode pular os detalhes aqui com segurança.
 
 ## Downloads
 
@@ -49,29 +49,29 @@ Dica: Após baixar o modelo vazio, faça uma cópia e renomeie de `journal_templ
   - `SceneAdjustments` (array): Resultados de rolagens de Ajuste de Cena Mythic; cada item tem `result`, `range` [min,max], `description` (e ajustes aninhados opcionais).
   - `CreatedAt` (string ISO8601): Quando a cena foi criada.
 - `Characters` (array<string>): Nomes usados para vínculos de eventos (ex., Ação de NPC, Introduzir NPC). Exportação é strings; formas de objeto legadas são aceitas na importação.
-- `Threads` (array<string>): Lista de Tramas usadas para resultados Mythic como "Fechar uma Trama" ou "Mover em Direção a uma Trama".
-- `Features` (array<string>): Locais/objetos/conceitos que dão cor a eventos e contexto.
+- `Threads` (array<string>): Lista de Tramas usadas para resultados do Mythic como "Fechar uma Trama" ou "Mover em Direção a uma Trama".
+- `Features` (array<string>): Locais, objetos e conceitos que dão cor e contexto aos eventos.
 - `ActivatedThreadSections` / `ActivatedCharacterSections` / `ActivatedFeatureSections` (int 1–5): Quantas seções de 5 itens estão ativas em cada lista (máx 25 itens por lista).
 - `LogEntries` (array de objetos): Histórico do oráculo. Campos comuns:
   - `rollType` ("Fate Chart" | "Fate Check" | "Scene Check" | "Random Event" | etc.)
-  - `question` (string): A pergunta Mythic (não usada para Verificação de Cena).
-  - `odds` (string): Descritor de probabilidades (ex., Provável, 50/50).
+  - `question` (string): A Pergunta do Destino (não usada para Verificação de Cena).
+  - `odds` (string): Probabilidade (ex., Provável, 50/50).
   - `chaosFactor` (int): FC no momento da rolagem.
   - `rollResult` (int): d100 para Tabela de Destino; total para Verificação de Destino.
   - `outcome` (string): Sim/Não/Sim Excepcional/Não Excepcional, ou resultado de cena para Verificação de Cena.
   - `isSceneCheck` (bool): Verdadeiro quando a entrada é um resultado de Verificação de Cena.
   - `timestamp` (string ISO8601): Quando aconteceu.
   - Opcional: `individualDieResults`, `modifierValue`, `modifiedTotal` (detalhes da Verificação de Destino),
-    `randomEvent` (Foco de Evento + significados e vínculos), `eventFocus`, `sceneAdjustment`, `sceneAdjustmentRoll`, `meaningDescriptions`.
+    `randomEvent` (Foco do Evento + Palavras de Descrição e vínculos), `eventFocus`, `sceneAdjustment`, `sceneAdjustmentRoll`, `meaningDescriptions`.
 - `ListNotes` (objeto, opcional): Notas de forma livre por lista: `CharacterNotes`, `ThreadNotes`, `FeatureNotes`.
 - `SchemaVersion` (int, atual = 1): Versão do esquema de dados para migração.
 
 ### Notas sobre alinhamento com Mythic
 
-- Tipo de cena é derivado do log: Registre "Cena Esperada/Alterada/Interrompida" via `outcome` de uma entrada de log de `Scene Check` em vez de no objeto de cena.
+- Tipo de cena é derivado do log: Registre "Cena Esperada, Alterada ou Interrompida" via `outcome` de uma entrada de log de `Scene Check` em vez de no objeto de cena.
 - Eventos Aleatórios: Use `randomEvent.eventFocus`, `meanings`, e vínculos opcionais (`characterResult`, `threadResult`, `featureResult`).
 - Mudanças de Fator Caos: Quando o FC muda para uma cena, defina `SceneChaosFactor` na cena e capture a justificativa em `SceneAdjustments` ou uma entrada de log.
-- Listas para inspiração: Listas de Aventura dirigem conexões de eventos; expanda com `Activated*Sections` conforme necessário (máx 25 itens por lista).
+- Listas como inspiração: Listas de Aventura conduzem conexões de eventos; expanda com `Activated*Sections` conforme necessário (máx 25 itens por lista).
 
 ## Esqueleto mínimo
 ```json

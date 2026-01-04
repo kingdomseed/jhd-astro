@@ -9,8 +9,8 @@ updated: "2025-09-21"
 tags: ["getting-started", "fate-chart", "fate-check", "lists", "scenes", "meaning-tables", "offline"]
 keywords:
   - Mythic GME
-  - Fate Chart
-  - Fate Check
+  - Tabela de Destino
+  - Verificação de Destino
   - Listas
   - Cenas
   - Tabelas de Significado
@@ -32,9 +32,9 @@ steps:
   - title: "Defina o Fator Caos"
     body: "Ao iniciar pela primeira vez, você verá a Tabela de Destino. Defina o FC (1–9) para corresponder ao seu cenário; ajuste depois conforme necessário."
   - title: "Pergunte, role e registre"
-    body: "Digite uma pergunta sim/não, escolha as probabilidades e role. Registre os resultados nas notas da sua cena para manter a continuidade da história. Você pode ativar a escrita da pergunta antes de rolar nas configurações da tela."
+    body: "Digite uma pergunta sim/não, escolha as probabilidades e role. Registre os resultados nas notas da sua cena para manter a continuidade da história. Você pode ativar a opção de escrever a pergunta antes de rolar nas configurações da tela."
   - title: "Use Listas, Cenas e Tabelas de Significados"
-    body: "É uma boa ideia adicionar Personagens e Threads às suas Listas antes de começar seu primeiro jogo. Use Cenas para resumir ou prever, e tabelas de significados para interpretar os resultados."
+    body: "É uma boa ideia adicionar Personagens e Tramas às suas Listas antes de começar seu primeiro jogo. Use Cenas para resumir ou prever, e tabelas de significados para interpretar os resultados."
 ---
 Bem-vindo! Este guia rápido baseia-se no próprio aplicativo: você começa na Fate Chart e se move entre Listas, Cenas e Tabelas de Significados enquanto joga. Não há contas ou servidores — tudo acontece no seu dispositivo.
 
@@ -55,9 +55,9 @@ Bem-vindo! Este guia rápido baseia-se no próprio aplicativo: você começa na 
 
 Instale o aplicativo desktop ou móvel da loja da sua plataforma e inicie-o. Uma vez iniciado, o aplicativo cria automaticamente seu primeiro diário chamado 'Meu Diário'. Você pode renomeá-lo nas configurações.
 
-### 2) Comece na Fate Chart (ou mude para Fate Check)
+### 2) Comece na Tabela de Destino (ou mude para Verificação de Destino)
 
-Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alterar o padrão para Fate Check nas Configurações depois, se preferir. Defina seu Fator Caos, escolha as probabilidades e role. O aplicativo destaca resultados Sim/Não/Excepcionais claramente.
+Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alterar o padrão para Verificação de Destino nas Configurações depois, se preferir. Defina seu Fator Caos, escolha as probabilidades e role. O aplicativo destaca resultados Sim/Não/Excepcionais claramente.
 
 > Dica: Alterar Configurações de Tela
 > - Existe uma roda de configurações que permite mudar as configurações de cada tela.
@@ -66,10 +66,10 @@ Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alter
 
 ### 3) Telas principais que você usará toda sessão
 
-- Fate Chart (e Fate Check): faça perguntas, escolha probabilidades, role e interprete respostas.
-- Listas: rastreie Personagens, Threads e Características. Essas listas alimentam suas rolagens de eventos e trazem elementos para sua história de maneiras inesperadas.
-- Cenas: anote um título e resumo; capture o Fator de Caos no início da cena; adicione notas enquanto joga ou espere até a conclusão de uma cena e resuma.
-- Tabelas de Significados: Tabelas de Ação/Assunto e outras para lhe dar inspiração para interpretar seus resultados.
+- Tabela de Destino (e Verificação de Destino): faça perguntas, escolha probabilidades, role e interprete respostas.
+- Listas: rastreie Personagens, Tramas e Características. Essas listas alimentam suas rolagens de eventos e trazem elementos para sua história de maneiras inesperadas.
+- Cenas: anote um título e resumo; capture o Fator Caos no início da cena; adicione notas enquanto joga ou espere até a conclusão de uma cena e resuma.
+- Tabelas de Significados: Tabelas de Ação/Assunto e outras para lhe dar inspiração (Palavras de Descrição) para interpretar seus resultados.
 
 Notas de layout
 - Mobile: cada área é sua própria tela; alterne usando a gaveta de navegação no canto superior esquerdo.
@@ -77,17 +77,17 @@ Notas de layout
 
 ### 4) Um fluxo simples de primeira sessão
 
-1) Defina o Fator de Caos (CF) na Fate Chart
-2) Crie uma Cena com um breve resumo; registre o CF inicial da cena
-3) Comece a cena fazendo sua primeira pergunta sim/não na Fate Chart e role
-4) Se ficar preso, role nas Tabelas de Significados para inspiração
-5) Adicione itens às Listas (Personagens, Threads, Características) conforme surgirem
-6) Ajuste o CF entre as cenas conforme sua história muda
+1) Defina o Fator Caos (FC) na Tabela de Destino
+2) Crie uma Cena com um breve resumo; registre o FC inicial da cena
+3) Comece a cena fazendo sua primeira pergunta sim/não na Tabela de Destino e role
+4) Se travar, role nas Tabelas de Significados para inspiração
+5) Adicione itens às Listas (Personagens, Tramas, Características) conforme surgirem
+6) Ajuste o FC entre as cenas conforme sua história muda
 
 ## Dicas e solução de problemas
 
-- Inseguro sobre como começar? Mantenha o livro por perto e comece com provável/50‑50 no início
-- O fator de caos determina a probabilidade de resultados excepcionais ocorrerem
+- Na dúvida de como começar? Mantenha o livro por perto e comece com provável/50‑50 no início
+- O Fator Caos determina a probabilidade de resultados excepcionais ocorrerem
 - No celular, tente o modo paisagem quando quiser mais contexto enquanto joga
 
 ## Próximos passos

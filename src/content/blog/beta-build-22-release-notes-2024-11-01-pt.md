@@ -1,6 +1,6 @@
 ---
 title: "Notas de Lançamento Beta — Build 22"
-summary: "Beta final: unificação do fator de caos, atualizações do rolador de dados, refinamentos do gerenciador de diário"
+summary: "Beta final: unificação do Fator Caos, atualizações do rolador de dados, refinamentos do gerenciador de diário"
 category: "Release Notes"
 date: "2024-11-01"
 readTime: "3 min de leitura"
@@ -15,7 +15,7 @@ Lançado em 1 de Novembro de 2024
 Este post faz parte da série Beta → Primeiro Lançamento.
 
 ## Melhorias Principais
-- Fator de Caos agora é um valor universal
+- Fator Caos agora é um valor universal
 - Adicionado relatório de falhas Firebase para rastreamento de estabilidade melhorado
 - Arquitetura de banco de dados otimizada para futura migração NoSQL
 - Texto de ajuda expandido em todas as telas (via botão de ajuda)

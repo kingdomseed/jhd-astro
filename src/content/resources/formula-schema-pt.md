@@ -32,7 +32,7 @@ related:
 
 Esta página documenta o formato JSON para Fórmulas Salvas para que seus arquivos possam ser validados e compartilhados entre dispositivos ou ferramentas. Para um passo a passo prático de salvar, carregar, importar e exportar fórmulas da UI, veja [Salvando e Gerenciando Fórmulas de Dados](/pt/resources/saving-and-managing-dice-formulas/).
 
-Português Claro: Você não precisa saber código para usar isso. "JSON" é apenas um arquivo de texto estruturado que o app lê e escreve, e o "esquema" é um livro de regras para ferramentas verificarem se um arquivo parece correto. A maioria dos jogadores pode ignorar os detalhes abaixo.
+Em Português Claro: Você não precisa saber código para usar isso. "JSON" é apenas um arquivo de texto estruturado que o app lê e escreve, e o "esquema" é um livro de regras para ferramentas verificarem se um arquivo parece correto. A maioria dos jogadores pode ignorar os detalhes abaixo.
 
 ## Downloads
 

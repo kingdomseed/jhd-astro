@@ -19,7 +19,7 @@ related:
 
 ## Guia: Dominando o módulo de Tabelas de Significado
 
-O módulo de Tabelas de Significado no app Mythic é sua fonte de acesso rápido para inspiração, projetado para reduzir o atrito de consulta e manter você no fluxo da história. Ele fornece sementes narrativas concretas quando uma simples Pergunta de Destino Sim/Não não é suficiente.
+O módulo de Tabelas de Significado no app Mythic é sua fonte de acesso rápido para inspiração, projetado para reduzir o atrito de consulta e manter você no fluxo da história. Ele fornece sementes narrativas concretas quando uma simples Pergunta do Destino Sim/Não não é suficiente.
 
 Layout
 - Celular: Tabelas de Significado é sua própria tela. Troque tabelas e role com controles amigáveis ao polegar.
@@ -43,7 +43,7 @@ Tabelas de Significado geram prompts descritivos que esclarecem elementos narrat
 Você pode abrir Tabelas de Significado a qualquer momento para obter um par de palavras para inspiração.
 
 ### 1) Eventos Aleatórios (Significado de Evento)
-- Tempo: Eventos Aleatórios ocorrem de duplos de Verificação de Destino ≤ FC ou quando uma Cena Esperada se torna uma Interrupção.
+- Tempo: Eventos Aleatórios ocorrem de duplos de Verificação de Destino ≤ Fator Caos (FC) ou quando uma Cena Esperada se torna uma Interrupção.
 - Aplicação: Após o Foco de Evento (ex., Novo NPC, Negativo para PJ), role um par de palavras de Significado de Evento (Ações, Descrições ou Elementos). Combine Contexto + Foco + Significado para inventar a reviravolta.
 
 ### 2) Descobrindo Significado (adicionando detalhes)

@@ -38,9 +38,9 @@ socialLinks:
     className: btn--shadow-accent
 mythicHighlights:
   - label: "Oráculos de um toque"
-    description: "Fate Chart & Fate Check com Fator de Caos ajustável e Eventos Aleatórios."
+    description: "Tabela de Destino e Verificação de Destino com Fator Caos ajustável e Eventos Aleatórios."
   - label: "Mantenha-se organizado"
-    description: "Listas de Personagens, Linhas de Trama e Características, e criação ilimitada de cenas para que nada passe despercebido."
+    description: "Listas de Personagens, Tramas e Características, e criação ilimitada de cenas para que nada passe despercebido."
   - label: "Role seus dados"
     description: "Um rolador de dados personalizável que suporta um grande número de sistemas e mecânicas de RPG."
   - label: "Traga suas tabelas"

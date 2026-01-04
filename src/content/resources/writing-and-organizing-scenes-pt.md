@@ -44,7 +44,7 @@ Cenas são as unidades básicas de tempo de jogo que trazem forma e ordem à sua
 ### 2) Defina a cena: nome e descrição
 
 - Nome: Dê à cena um título curto para que você possa encontrá-la mais tarde.
-- Fator Caos: Defina o FC na cena para o valor atual quando a cena começa (você o ajustará depois que a cena terminar).
+- Fator Caos: Defina o Fator Caos na cena para o valor atual quando a cena começa (você o ajustará depois que a cena terminar).
 - Descrição (suporta Markdown): Use cabeçalhos, marcadores e negrito para manter suas notas estruturadas e escaneáveis.
 
   > ##### Dica
@@ -74,7 +74,7 @@ Cenas terminam quando a ação principal resolve, ou quando a estrutura da hist�
 
 - Mantenha Cenas curtas e focadas — isso torna os resultados de Destino mais fáceis de interpretar e logs mais fáceis de revisar
 - Use Tabelas de Significado direto das notas de cena quando sua intuição travar
-- Ajuste o FC entre cenas, não durante; tire um instantâneo do FC no início de cada cena
+- Ajuste o Fator Caos entre cenas, não durante; tire um instantâneo do FC no início de cada cena
 - Emparelhe um padrão de anotação portátil (marcadores + sub-marcadores) com resultados de Destino inline para uma leitura rápida mais tarde
 
 > ### Muitos Caminhos

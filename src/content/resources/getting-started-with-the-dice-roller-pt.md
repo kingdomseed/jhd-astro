@@ -17,10 +17,10 @@ related:
   - saving-and-managing-dice-formulas
 ---
 
-O Rolador de Dados ajuda você a construir expressões rapidamente e ver resultados claros e legíveis. Este guia rápido mostra o básico para que você possa rolar com confiança imediatamente.
+O Rolador de Dados ajuda você a criar expressões rapidamente e ver resultados claros e legíveis. Este guia rápido mostra o básico para que você possa rolar com confiança imediatamente.
 
 > ##### Motor de sintaxe e documentação
-> O rolador é alimentado pelo `dart_dice_parser` da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
+> O rolador usa o `dart_dice_parser` da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
 ## O layout em resumo
 - Campo de Fórmula + Botão Rolar: Digite uma fórmula (ex: `1d20+5`) e toque em Rolar.

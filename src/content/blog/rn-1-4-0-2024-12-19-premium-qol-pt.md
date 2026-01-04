@@ -44,17 +44,17 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 ### Tabelas de Foco de Evento Adicionadas
 - Tabela de Foco de Evento de Aventura: Uma tabela de foco de evento para jogos orientados a aventura, enfatizando ação e interações de personagens.
 - Tabela de Foco de Evento Épico: Uma tabela de foco de evento para jogos de escala épica, enfatizando desenvolvimentos dramáticos de threads e grandes ações de personagens.
-- Tabela de Foco de Evento: A tabela de foco de evento original. Rola em Personagens e Threads.
+- Tabela de Foco de Evento: A tabela de foco de evento original. Rola em Personagens e Tramas.
 - Tabela de Foco de Evento de Horror: Uma tabela de foco de evento com tema de horror. MM Compilation 4.
 - Tabela de Foco de Evento de Notícias Principais: Uma tabela para determinar o foco de eventos de notícias principais. MM Compilation 6.
 - Tabela de Foco de Evento 20% Significativo: Uma tabela de foco de evento significativo com 20% de chance de um evento significativo. MM Compilation 2.
 - Tabela de Foco de Evento 25% Significativo: Uma tabela de foco de evento significativo com 25% de chance de um evento significativo. MM Compilation 2.
 - Tabela de Foco de Evento 33% Significativo: Uma tabela de foco de evento significativo com 33% de chance de um evento significativo. MM Compilation 2.
 - Tabela de Foco de Evento de Notícias Menores: Uma tabela para determinar o foco de eventos de notícias menores. MM Compilation 6.
-- Tabela de Foco de Evento de Mistério: Uma tabela de evento focada em mistério. Rola em Personagens e Threads. De MM Compilation 1.
+- Tabela de Foco de Evento de Mistério: Uma tabela de evento focada em mistério. Rola em Personagens e Tramas. De MM Compilation 1.
 - Tabela de Narrativa Nudges: Uma substituição para foco de evento para tornar o Mythic mais focado narrativamente. MM 43.
-- Tabela de Foco de Evento Pessoal: Uma tabela de foco de evento para jogos de escala pessoal, enfatizando interações individuais de personagens e threads pessoais.
-- Tabela de Foco de Evento Preparado: Use isso com suas aventuras preparadas. Rola em recursos em vez de threads.
+- Tabela de Foco de Evento Pessoal: Uma tabela de foco de evento para jogos de escala pessoal, enfatizando interações individuais de personagens e tramas pessoais.
+- Tabela de Foco de Evento Preparado: Use isso com suas aventuras preparadas. Rola em recursos em vez de tramas.
 - Tabela de Foco de Evento Social: Uma tabela de foco de evento para jogos orientados socialmente, enfatizando revelações dramáticas e interações de personagens.
 
 ### Melhorias de Qualidade de Vida
@@ -66,7 +66,7 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 - Atualizações de Gráfico de Destino / Verificação:
   - Gráfico de Destino e Verificação de Destino agora são uma única tela — alterne entre sistemas em Configurações
   - Tabelas de Foco de Evento selecionáveis com funcionalidade aprimorada
-  - Adicionada uma opção gratuita de tabela de Foco de Evento de Aventura Preparada. Selecionar isso faz com que Evento Aleatório e Foco de Evento rolem em Recursos em vez de Threads. Veja o livro de regras Mythic GME 2e (por volta da pág. 158) para detalhes
+  - Adicionada uma opção gratuita de tabela de Foco de Evento de Aventura Preparada. Selecionar isso faz com que Evento Aleatório e Foco de Evento rolem em Recursos em vez de Tramas. Veja o livro de regras Mythic GME 2e (por volta da pág. 158) para detalhes
 - Atualizações de configurações:
   - Configurações relevantes agora acessíveis de cada tela via um novo ícone de Configurações na barra do app
   - Interface de Configurações renovada para melhor acessibilidade e organização (visualização por abas por categoria)
