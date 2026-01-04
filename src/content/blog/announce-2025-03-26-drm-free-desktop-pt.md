@@ -49,7 +49,7 @@ Um dos aspectos mais empolgantes de desenvolver *Mythic GME Digital* tem sido o 
 - Suporte Extensivo a Acessibilidade: Da compatibilidade com leitores de tela a tamanhos de fonte ajustáveis, modo daltônico e operação para canhotos, recursos de acessibilidade foram priorizados graças aos pedidos da comunidade por inclusão.
 - Tabelas de Significado Expandidas: O app agora inclui uma coleção massiva de tabelas de significado d100 e tabelas de foco de evento originadas de *Variações Mythic* e *Revistas Mythic*, atendendo pedidos por mais ferramentas para inspirar narrativas criativas.
 
-- Escolhas de Design Baseadas no Feedback dos Jogadores: Cada aspecto do app, do layout à navegação, reflete decisões influenciadas pelo feedback dos Mythicers. Suas sugestões me ajudaram a refinar a experiência do usuário para melhor atender jogadores solo, grupos sem GM e contadores de histórias.
+- Escolhas de Design Baseadas no Feedback dos Jogadores: Cada aspecto do app, do layout à navegação, reflete decisões influenciadas pelo feedback dos Mythicers. Suas sugestões me ajudaram a refinar a experiência do usuário para melhor atender jogadores solo, grupos sem Mestre e contadores de histórias.
 - Funcionalidades Futuras no Roadmap: A versão 1.5 introduzirá a criação de tabelas personalizadas—um recurso altamente solicitado que permitirá que você adapte sua experiência ainda mais. Esta é apenas uma das muitas atualizações empolgantes inspiradas pela contribuição da comunidade.
 
 Seu feedback tem sido inestimável para moldar o *Mythic GME Digital*. Se você tiver ideias para futuros recursos ou melhorias, me avise através do Discord do Mythic ou das páginas da comunidade no itch.io. Juntos, estamos construindo o companheiro de narrativa definitivo!

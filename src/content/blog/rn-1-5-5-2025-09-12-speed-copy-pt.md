@@ -20,12 +20,12 @@ tags: ["release", "v1.5.5", "product:apps", "stability", "ui", "accessibility"]
 ### Compartilhamento Mais Fácil
 - **Copiar Qualquer Entrada de Log**: Cada item do Log de Jogo tem um botão Copiar que cria um resumo limpo e legível
 ### Clareza & Polimento
-- **Rótulo de Fator de Caos**: Exibição mais clara em visualizações de Destino
+- **Rótulo de Fator Caos**: Exibição mais clara em visualizações de Destino
 - **Renovação Visual**: Ícones atualizados e pequenos refinamentos de UI em tudo
 
 ## O Que Foi Corrigido
 - **Estabilidade**: Eliminada uma falha rara relacionada à seleção de texto no log
-- **Consistência**: Cabeçalho de Fator de Caos atualiza imediatamente e evita valores duplicados
+- **Consistência**: Cabeçalho de Fator Caos atualiza imediatamente e evita valores duplicados
 
 - **Confiabilidade Geral**: Correções de bugs e melhorias de desempenho em todo o app
 

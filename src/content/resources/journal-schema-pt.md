@@ -49,7 +49,7 @@ Dica: Após baixar o modelo vazio, faça uma cópia e renomeie de `journal_templ
   - `SceneAdjustments` (array): Resultados de rolagens de Ajuste de Cena Mythic; cada item tem `result`, `range` [min,max], `description` (e ajustes aninhados opcionais).
   - `CreatedAt` (string ISO8601): Quando a cena foi criada.
 - `Characters` (array<string>): Nomes usados para vínculos de eventos (ex., Ação de NPC, Introduzir NPC). Exportação é strings; formas de objeto legadas são aceitas na importação.
-- `Threads` (array<string>): Linhas de enredo usadas para resultados Mythic como "Fechar uma Trama" ou "Mover em Direção a uma Trama".
+- `Threads` (array<string>): Lista de Tramas usadas para resultados Mythic como "Fechar uma Trama" ou "Mover em Direção a uma Trama".
 - `Features` (array<string>): Locais/objetos/conceitos que dão cor a eventos e contexto.
 - `ActivatedThreadSections` / `ActivatedCharacterSections` / `ActivatedFeatureSections` (int 1–5): Quantas seções de 5 itens estão ativas em cada lista (máx 25 itens por lista).
 - `LogEntries` (array de objetos): Histórico do oráculo. Campos comuns:
@@ -70,7 +70,7 @@ Dica: Após baixar o modelo vazio, faça uma cópia e renomeie de `journal_templ
 
 - Tipo de cena é derivado do log: Registre "Cena Esperada/Alterada/Interrompida" via `outcome` de uma entrada de log de `Scene Check` em vez de no objeto de cena.
 - Eventos Aleatórios: Use `randomEvent.eventFocus`, `meanings`, e vínculos opcionais (`characterResult`, `threadResult`, `featureResult`).
-- Mudanças de Fator de Caos: Quando o FC muda para uma cena, defina `SceneChaosFactor` na cena e capture a justificativa em `SceneAdjustments` ou uma entrada de log.
+- Mudanças de Fator Caos: Quando o FC muda para uma cena, defina `SceneChaosFactor` na cena e capture a justificativa em `SceneAdjustments` ou uma entrada de log.
 - Listas para inspiração: Listas de Aventura dirigem conexões de eventos; expanda com `Activated*Sections` conforme necessário (máx 25 itens por lista).
 
 ## Esqueleto mínimo

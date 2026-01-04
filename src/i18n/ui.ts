@@ -104,7 +104,7 @@ export const ui = {
         'footer.brand_subtitle': 'Aplicativos Oficiais Mythic GME 2e',
         'hero.eyebrow': 'Aplicativos Oficiais Mythic GME 2e',
         'hero.headline': 'Seu RPG Sem Mestre ao Seu Alcance',
-        'hero.lead': 'Companion oficial e licenciado para o RPG solo original estilo oráculo',
+        'hero.lead': 'Companheiro oficial e licenciado para o RPG solo original estilo oráculo',
         'hero.learn_more': 'Saiba Mais',
         'hero.get_resources': 'Obter Recursos',
         'hero.stats.rating': 'avaliação média',

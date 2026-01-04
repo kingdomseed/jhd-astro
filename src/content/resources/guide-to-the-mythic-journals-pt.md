@@ -1,6 +1,6 @@
 ---
 title: "Um Guia para os Diários Mythic"
-summary: "Crie, importe e exporte diários; entenda como Fator de Caos, Cenas, Listas e Entradas de Log mapeiam para Mythic."
+summary: "Crie, importe e exporte diários; entenda como Fator Caos, Cenas, Listas e Entradas de Log mapeiam para Mythic."
 category: "adventure-journals"
 order: 0
 icon: "fa-slab fa-regular fa-book-open"
@@ -35,7 +35,7 @@ O diário de aventura é seu jogo salvo — um lugar único onde você registra 
 
 ## O que ele contém (resumo)
 
-- Linha do tempo do Fator de Caos: o mostrador (1–9) em momentos chave; capture no início de cada cena
+- Linha do tempo do Fator Caos: o mostrador (1–9) em momentos chave; capture no início de cada cena
 - Cenas: títulos curtos + resumos que marcam os ritmos de jogo
 - Log do Oráculo: Perguntas de Destino (probabilidades, rolagem, resultado) e resultados da Tabela de Significado com sua interpretação
 - Listas de Aventura: Personagens, Tramas e Características que você referencia e atualiza entre cenas
@@ -47,7 +47,7 @@ O app armazena seu diário como JSON. Para leitura e compartilhamento fora do ap
 
 - Antes da sessão
   - Crie/abra seu documento de diário
-  - Defina Nome do Diário e Fator de Caos atual
+  - Defina Nome do Diário e Fator Caos atual
   - Semeie algumas Tramas e Personagens que você espera ver
 - Durante o jogo (cada cena)
   - Cabeçalho de cena: número, título e FC no início da cena
@@ -93,17 +93,17 @@ Contabilidade de fim de cena
 ## Gerencie diários no app
 
 - Crie, importe e exporte diários da seção Configurações → Arquivos.
-- Cada diário é independente: mantém seu próprio Fator de Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características), Notas de Lista e Entradas de Log.
+- Cada diário é independente: mantém seu próprio Fator Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características), Notas de Lista e Entradas de Log.
 - Use múltiplos diários para manter diferentes campanhas/sessões separadas; trocar diários não mistura suas listas ou logs.
 
 ## Como mapeia para Mythic
 
-- Diário: Seu contêiner de campanha/sessão. Guarda o Fator de Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características) e o Log do jogo.
-- Fator de Caos (FC): Mostrador central do Mythic (1–9) controlando imprevisibilidade. Atualizado ao longo do tempo (tipicamente cena a cena) e afeta Verificações de Cena e oráculos.
+- Diário: Seu contêiner de campanha/sessão. Guarda o Fator Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características) e o Log do jogo.
+- Fator Caos (FC): Mostrador central do Mythic (1–9) controlando imprevisibilidade. Atualizado ao longo do tempo (tipicamente cena a cena) e afeta Verificações de Cena e oráculos.
 - Cenas: Segmentos narrativos. Tipo de cena (Esperada/Alterada/Interrompida) é capturado como uma Entrada de Log de uma Verificação de Cena, não armazenado na cena em si.
 - Listas de Aventura: As três listas usadas pelo Mythic para inspiração e eventos:
   - Personagens: NPCs, facções, personas que podem aparecer em eventos.
-  - Tramas: Linhas de enredo/objetivos que podem ser avançados/fechados ou referenciados por eventos.
+  - Tramas: Lista de Tramas/objetivos que podem ser avançados/fechados ou referenciados por eventos.
   - Características: Lugares, objetos ou conceitos que dão cor a eventos e contexto.
 - Entradas de Log: Registro ordenado por tempo de oráculos e verificações: Respostas da Tabela de Destino/Verificação, Verificações de Cena, Eventos Aleatórios (Foco de Evento + Significados), etc.
 

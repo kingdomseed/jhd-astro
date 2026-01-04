@@ -29,8 +29,8 @@ heroAlt: "Ilustração de uma pessoa com um bot amigável"
 steps:
   - title: "Instale no seu dispositivo(s)"
     body: "Baixe e instale o aplicativo para desktop ou celular e inicie — o aplicativo cria seu primeiro jogo salvo: Meu Diário. Renomeie-o na tela de configurações."
-  - title: "Defina o Fator de Caos"
-    body: "Ao iniciar pela primeira vez, você verá a Fate Chart. Defina o CF (1–9) para corresponder ao seu cenário; ajuste depois conforme necessário."
+  - title: "Defina o Fator Caos"
+    body: "Ao iniciar pela primeira vez, você verá a Tabela de Destino. Defina o FC (1–9) para corresponder ao seu cenário; ajuste depois conforme necessário."
   - title: "Pergunte, role e registre"
     body: "Digite uma pergunta sim/não, escolha as probabilidades e role. Registre os resultados nas notas da sua cena para manter a continuidade da história. Você pode ativar a escrita da pergunta antes de rolar nas configurações da tela."
   - title: "Use Listas, Cenas e Tabelas de Significados"
@@ -57,7 +57,7 @@ Instale o aplicativo desktop ou móvel da loja da sua plataforma e inicie-o. Uma
 
 ### 2) Comece na Fate Chart (ou mude para Fate Check)
 
-Na primeira execução, o aplicativo abre na Fate Chart. Você pode alterar o padrão para Fate Check nas Configurações depois, se preferir. Defina seu Fator de Caos, escolha as probabilidades e role. O aplicativo destaca resultados Sim/Não/Excepcionais claramente.
+Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alterar o padrão para Fate Check nas Configurações depois, se preferir. Defina seu Fator Caos, escolha as probabilidades e role. O aplicativo destaca resultados Sim/Não/Excepcionais claramente.
 
 > Dica: Alterar Configurações de Tela
 > - Existe uma roda de configurações que permite mudar as configurações de cada tela.

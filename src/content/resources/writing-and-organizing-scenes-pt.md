@@ -10,7 +10,7 @@ lang: "pt"
 tags: ["scenes", "journals", "workflow"]
 keywords:
   - Cenas
-  - Fator de Caos
+  - Fator Caos
   - Tabela de Destino
   - Cena Interrompida
   - Cena Alterada
@@ -24,7 +24,7 @@ A tela de Cenas nos Apps Mythic é o centro da sua aventura. Ela dá a cada peda
 
 ## Desenvolvendo suas cenas no app
 
-Cenas são as unidades básicas de tempo de jogo que trazem forma e ordem à sua história. Criar uma Cena no app bloqueia o contexto, define o ritmo mecânico (Fator de Caos) e dá a você um lugar focado para escrever o que acontece.
+Cenas são as unidades básicas de tempo de jogo que trazem forma e ordem à sua história. Criar uma Cena no app bloqueia o contexto, define o ritmo mecânico (Fator Caos) e dá a você um lugar focado para escrever o que acontece.
 
 ### 1) Comece a cena: expectativas e Caos
 
@@ -44,7 +44,7 @@ Cenas são as unidades básicas de tempo de jogo que trazem forma e ordem à sua
 ### 2) Defina a cena: nome e descrição
 
 - Nome: Dê à cena um título curto para que você possa encontrá-la mais tarde.
-- Fator de Caos: Defina o FC na cena para o valor atual quando a cena começa (você o ajustará depois que a cena terminar).
+- Fator Caos: Defina o FC na cena para o valor atual quando a cena começa (você o ajustará depois que a cena terminar).
 - Descrição (suporta Markdown): Use cabeçalhos, marcadores e negrito para manter suas notas estruturadas e escaneáveis.
 
   > ##### Dica

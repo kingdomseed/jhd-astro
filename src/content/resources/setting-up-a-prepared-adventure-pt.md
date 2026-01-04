@@ -17,7 +17,7 @@ keywords:
   - Evento Aleatório
   - Característica de Aventura
   - Lista de Características
-  - Fator de Caos
+  - Fator Caos
   - Cena Esperada
 related:
   - writing-and-organizing-scenes
@@ -74,7 +74,7 @@ Isso prepara o Mythic para gerar Eventos Aleatórios que parecem apropriados ao 
 - Eventos Aleatórios são adicionados a Cenas Esperadas (não as substituindo)
 - Ajuste de Cena é desativado por padrão
 
-Quando você testar uma Cena Esperada e rolar dentro do Fator de Caos, gere um Evento Aleatório mas continue com sua Cena Esperada. O Evento Aleatório adiciona uma reviravolta sem descarrilar a aventura pronta.
+Quando você testar uma Cena Esperada e rolar dentro do Fator Caos, gere um Evento Aleatório mas continue com sua Cena Esperada. O Evento Aleatório adiciona uma reviravolta sem descarrilar a aventura pronta.
 
 ---
 
