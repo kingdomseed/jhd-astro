@@ -6,6 +6,7 @@
 import brandLogoUrl from "../assets/logo/logo.svg?url";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import LanguageFab from "./LanguageFab.astro";
 
 const year = new Date().getFullYear();
 const lang = getLangFromUrl(Astro.url);
@@ -160,3 +161,4 @@ function l(path: string) {
     </a>
   </div>
 </footer>
+<LanguageFab />

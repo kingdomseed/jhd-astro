@@ -1,0 +1,207 @@
+---
+import { languages } from "../i18n/ui";
+import { getLangFromUrl, getRouteFromUrl } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
+const currentLabel = languages[lang as keyof typeof languages] || languages.en;
+---
+
+<div class="lang-fab-container">
+    <button
+        class="lang-fab-btn"
+        aria-label={`Current language: ${currentLabel}. Change language.`}
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-controls="lang-menu"
+        id="lang-fab-toggle"
+    >
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        <span class="current-lang-code">{lang.toUpperCase()}</span>
+    </button>
+
+    <ul id="lang-menu" class="lang-fab-menu" role="menu" hidden>
+        {
+            Object.entries(languages).map(([key, label]) => (
+                <li>
+                    <a
+                        href={getRelativeLocaleUrl(key, route)}
+                        class={`lang-fab-item ${key === lang ? "active" : ""}`}
+                        role="menuitem"
+                        aria-current={key === lang ? "true" : undefined}
+                    >
+                        <span class="lang-name">{label}</span>
+                        {key === lang && (
+                            <i class="fa-solid fa-check" aria-hidden="true" />
+                        )}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+<script>
+    // Simple toggle logic
+    const toggle = document.getElementById("lang-fab-toggle");
+    const menu = document.getElementById("lang-menu");
+    const container = document.querySelector(".lang-fab-container");
+
+    if (toggle && menu && container) {
+        toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!isExpanded));
+            menu.hidden = isExpanded;
+            container.classList.toggle("open", !isExpanded);
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!container.contains(e.target as Node)) {
+                toggle.setAttribute("aria-expanded", "false");
+                menu.hidden = true;
+                container.classList.remove("open");
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                toggle.setAttribute("aria-expanded", "false");
+                menu.hidden = true;
+                container.classList.remove("open");
+                toggle.focus();
+            }
+        });
+    }
+</script>
+
+<style>
+    .lang-fab-container {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column-reverse; /* Menu expands upwards */
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    /* Main FAB Button */
+    .lang-fab-btn {
+        appearance: none;
+        border: 3px solid var(--color-border);
+        background: var(--color-surface);
+        color: var(--color-text);
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 4px 4px 0 0 var(--color-border);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        transition:
+            transform 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+            box-shadow 0.15s cubic-bezier(0.2, 0.7, 0.2, 1);
+        font-family: var(--font-body);
+    }
+
+    .lang-fab-btn i {
+        font-size: 1.25rem;
+        color: var(--color-text);
+    }
+
+    .lang-fab-btn .current-lang-code {
+        font-size: 0.65rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .lang-fab-btn:hover,
+    .lang-fab-btn[aria-expanded="true"] {
+        transform: translate(-2px, -2px);
+        background: var(--color-surface);
+        box-shadow: 6px 6px 0 0 var(--color-border);
+    }
+
+    .lang-fab-btn:active {
+        transform: translate(0, 0);
+        box-shadow: 2px 2px 0 0 var(--color-border);
+    }
+
+    /* Menu */
+    .lang-fab-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: var(--color-surface);
+        border: 3px solid var(--color-border);
+        border-radius: 0;
+        box-shadow: 6px 6px 0 0 var(--color-border);
+        min-width: 160px;
+        transform-origin: bottom right;
+        animation: slideIn 0.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .lang-fab-menu[hidden] {
+        display: none;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .lang-fab-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        color: var(--color-text);
+        text-decoration: none;
+        transition: background 0.15s;
+        font-weight: 700;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .lang-fab-menu li:first-child .lang-fab-item {
+        border-top: none;
+    }
+
+    .lang-fab-item:hover,
+    .lang-fab-item:focus {
+        background: var(--color-accent);
+        color: var(--color-text);
+    }
+
+    .lang-fab-item.active {
+        background: var(--color-surface-2);
+        color: var(--color-text);
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+        .lang-fab-container {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .lang-fab-btn {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+</style>

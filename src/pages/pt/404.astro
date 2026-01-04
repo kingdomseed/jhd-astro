@@ -1,0 +1,123 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
+
+const ogImageUrl = new URL(
+    defaultOg,
+    Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+---
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <HeadFonts />
+        <title>404 — Página Não Encontrada | Apps Mythic GME</title>
+        <meta
+            name="description"
+            content="Desculpe, não conseguimos encontrar essa página. Tente a página inicial, Apps, Suporte ou Contato."
+        />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="stylesheet" href="/global.css" />
+        <script
+            is:inline
+            src="https://kit.fontawesome.com/9f0db3cdf4.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <a class="skip" href="#main">Pular para o conteúdo principal</a>
+        <div id="bg-atmo" aria-hidden="true"></div>
+        <div id="site">
+            <Header />
+
+            <PageHeader
+                title="404 — Página Não Encontrada"
+                subtitle="Ops! Algo desapareceu"
+                description="A página que você está procurando não existe ou pode ter mudado de lugar. Vamos colocar você de volta nos trilhos."
+                accent="Erro"
+                layout="left"
+                icon="fa-solid fa-triangle-exclamation"
+                colorScheme="accent"
+            />
+
+            <main id="main" class="error-main">
+                <section class="section" aria-labelledby="nf-title">
+                    <div class="container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">404</span>
+                        </header>
+                        <div class="error-card">
+                            <h1 id="nf-title" class="error-title">
+                                Página não encontrada
+                            </h1>
+                            <p class="error-summary">
+                                A página que você estava procurando não existe
+                                ou pode ter mudado. Escolha um destino abaixo.
+                            </p>
+                            <div class="error-actions">
+                                <a class="btn btn--shadow-primary" href="/pt/">
+                                    <i
+                                        class="fa-slab fa-regular fa-house"
+                                        aria-hidden="true"></i>
+                                    Início
+                                </a>
+                                <a
+                                    class="btn btn--shadow-accent"
+                                    href="/pt/apps"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-rocket"
+                                        aria-hidden="true"></i>
+                                    Apps
+                                </a>
+                                <a
+                                    class="btn btn--shadow-primary"
+                                    href="/pt/resources"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-book-open"
+                                        aria-hidden="true"></i>
+                                    Recursos
+                                </a>
+                                <a
+                                    class="btn btn--shadow-primary"
+                                    href="/pt/support"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-life-ring"
+                                        aria-hidden="true"></i>
+                                    Suporte
+                                </a>
+                                <a
+                                    class="btn btn--shadow-primary"
+                                    href="/pt/blog"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-newspaper"
+                                        aria-hidden="true"></i>
+                                    Blog
+                                </a>
+                                <a
+                                    class="btn btn--shadow-primary"
+                                    href="/pt/support#contact-panel"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-envelope"
+                                        aria-hidden="true"></i>
+                                    Contato
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>
