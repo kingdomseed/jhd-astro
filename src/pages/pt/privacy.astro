@@ -1,0 +1,862 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import defaultOg from "../../assets/logo/logo.jpg?url";
+
+const ogImageUrl = new URL(
+    defaultOg,
+    Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+---
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <HeadFonts />
+        <title>Política de Privacidade | Apps Mythic GME</title>
+        <meta
+            name="description"
+            content="Saiba como os Apps Mythic GME lidam com privacidade: coleta mínima de dados, armazenamento local-first, análises opcionais e controles claros."
+        />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="stylesheet" href="/global.css" />
+        <script
+            is:inline
+            src="https://kit.fontawesome.com/9f0db3cdf4.js"
+            crossorigin="anonymous"></script>
+        <link rel="canonical" href="https://jasonholtdigital.com/pt/privacy/" />
+    </head>
+    <body>
+        <a class="skip" href="#main">Pular para o conteúdo principal</a>
+        <div id="bg-atmo" aria-hidden="true"></div>
+        <div id="site">
+            <Header />
+
+            <PageHeader
+                title="Política de Privacidade"
+                subtitle="Sua privacidade, protegida"
+                description="Coleta mínima de dados, armazenamento local-first e controles claros. Última atualização: 27 de Agosto de 2025"
+                accent="Privacy"
+                layout="left"
+                icon="fa-solid fa-shield-check"
+                visualElement="grid"
+                colorScheme="primary"
+            />
+
+            <main id="main" class="legal-main">
+                <section class="section" aria-labelledby="privacy-body">
+                    <div class="container legal-container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Política</span>
+                        </header>
+                        <h2 id="privacy-body" class="section-title">
+                            Transparência em primeiro lugar
+                        </h2>
+                        <p class="legal-summary">
+                            Eu construí os apps Mythic GME porque amo RPGs solo
+                            e queria melhores ferramentas digitais para a
+                            comunidade. Esta política define exatamente quais
+                            dados coleto, por que, e como você permanece no
+                            controle.
+                        </p>
+                        <article class="legal-article">
+                            <p>
+                                <strong>Jason Holt Digital LLC</strong> é o controlador
+                                de dados para ambos Mythic GME Mobile e Mythic GME
+                                Digital. Para quaisquer perguntas sobre privacidade,
+                                contate-me em <a
+                                    href="mailto:privacy@jasonholtdigital.com"
+                                    >privacy@jasonholtdigital.com</a
+                                >.
+                            </p>
+
+                            <h2>Quais Apps Isso Cobre</h2>
+                            <p>Esta política de privacidade se aplica a:</p>
+                            <ul>
+                                <li>
+                                    <strong>Mythic GME Mobile</strong> — versões
+                                    iOS, Android, macOS e Web
+                                </li>
+                                <li>
+                                    <strong>Mythic GME Digital</strong> — versões
+                                    desktop Windows, macOS e Linux
+                                </li>
+                            </ul>
+
+                            <h2>Quais Dados Eu Realmente Coleto</h2>
+                            <p>
+                                Eu coleto o mínimo de dados, e apenas o
+                                necessário para fazer os apps funcionarem
+                                melhor. Aqui está exatamente o que coleto por
+                                plataforma:
+                            </p>
+
+                            <h3>
+                                Plataformas Mobile (iOS, Android, macOS, Web)
+                            </h3>
+                            <ul>
+                                <li>
+                                    <strong>Analytics (opt‑in):</strong> PostHog
+                                    e Firebase capturam uso do app como visualizações
+                                    de tela, interações com recursos e eventos como
+                                    rolagens de dados, busca em tabelas, ações em
+                                    listas, mudanças de configurações e ações de
+                                    suporte.
+                                </li>
+                                <li>
+                                    <strong>Dados técnicos:</strong> versão do app,
+                                    plataforma, localidade, canal de build e tela
+                                    atual; um identificador pseudônimo por instalação
+                                    (PostHog distinct_id).
+                                </li>
+                                <li>
+                                    <strong>Hashes de contexto:</strong> IDs com
+                                    hash para contexto de diário, cena, tabela e
+                                    lista (SHA‑256 com um sal por instalação). Nenhum
+                                    conteúdo bruto de diário, cena ou tabela é enviado.
+                                </li>
+                                <li>
+                                    <strong>Métricas derivadas apenas:</strong> ex:
+                                    faixas de comprimento de conteúdo, flags de complexidade
+                                    de expressão, contagens. Não enviamos suas anotações
+                                    reais ou texto de diário.
+                                </li>
+                                <li>
+                                    <strong
+                                        >Crashes &amp; erros (opt‑in):</strong
+                                    > Sentry captura relatórios de falha/erro e replays
+                                    de sessão (captura de tela) para ajudar a depurar
+                                    problemas. Conteúdo de texto é ofuscado/redigido,
+                                    incluindo rótulos de UI estáticos.
+                                </li>
+                                <li>
+                                    <strong>Inferência de país/região:</strong> Provedores
+                                    podem inferir localização aproximada (ex: país)
+                                    pelo IP para localização do produto; localização
+                                    GPS precisa não é coletada.
+                                </li>
+                            </ul>
+
+                            <h3>Plataformas Desktop (Windows, Linux)</h3>
+                            <ul>
+                                <li>
+                                    <strong>Analytics (opt‑in):</strong> Analytics
+                                    de uso pseudônimo similar ao mobile quando ativado.
+                                </li>
+                                <li>
+                                    <strong>Sem IDs de publicidade:</strong> Builds
+                                    desktop não usam identificadores de publicidade
+                                    mobile.
+                                </li>
+                                <li>
+                                    <strong>Local‑first:</strong> Diários, cenas
+                                    e tabelas personalizadas permanecem no seu dispositivo
+                                    a menos que você os exporte/compartilhe.
+                                </li>
+                            </ul>
+
+                            <h3>O Que Eu NÃO Coleto</h3>
+                            <ul>
+                                <li>
+                                    Informações pessoais (nome, e-mail, número
+                                    de telefone)
+                                </li>
+                                <li>
+                                    Dados de localização precisa (coordenadas
+                                    GPS, endereço exato)
+                                </li>
+                                <li>
+                                    Seu conteúdo de jogo ou entradas de diário
+                                </li>
+                                <li>Histórico de navegação fora do app</li>
+                                <li>Fotos, vídeos ou arquivos pessoais</li>
+                                <li>Conexões de mídia social</li>
+                            </ul>
+
+                            <h2>Sua Escolha de Analytics</h2>
+                            <p>
+                                Quando você abre o app pela primeira vez, você
+                                verá um diálogo de consentimento que explica
+                                analytics e permite você escolher. <strong
+                                    >Analytics está desligado por padrão</strong
+                                > até que você opte por participar. <strong
+                                    >Relatório de crashes e erros</strong
+                                > está <strong>ligado por padrão</strong> para ajudar
+                                a diagnosticar problemas e manter o app estável.
+                                <strong>Replay de Sessão</strong> é tratado separadamente
+                                conforme descrito abaixo. Você pode:
+                            </p>
+                            <ul>
+                                <li>
+                                    Ativar ou desativar analytics a qualquer
+                                    momento nas Configurações (controla PostHog
+                                    e Firebase).
+                                </li>
+                                <li>
+                                    Desativar relatório de crash/erro a qualquer
+                                    momento nas Configurações.
+                                </li>
+                                <li>
+                                    <strong>v1.5.3 e posteriores:</strong> Ativar
+                                    ou desativar Replay de Sessão a qualquer momento
+                                    nas Configurações. Amostragem de replay e upload
+                                    seguem sua preferência (desligado a menos que
+                                    você ligue).
+                                </li>
+                                <li>
+                                    <strong>Versões anteriores:</strong> Replay de
+                                    Sessão por erro pode estar ligado por padrão;
+                                    você pode desativá-lo nas Configurações.
+                                </li>
+                                <li>
+                                    Continuar usando todos os recursos do app
+                                    mesmo se analytics estiver desligado e/ou
+                                    relatório de crash desativado.
+                                </li>
+                            </ul>
+
+                            <h2>Eu Não Vendo Seus Dados. Nunca.</h2>
+                            <p>
+                                Eu não vendo seus dados. Eu não venderei seus
+                                dados. Não há modelo de negócios aqui que
+                                envolva vender dados. O único cenário onde seus
+                                dados poderiam ser "vendidos" é se eu vendesse
+                                todo o negócio, e seus dados fossem transferidos
+                                com ele como parte da funcionalidade do app. Mas
+                                eu não estou vendendo dados para anunciantes,
+                                corretores de dados ou qualquer outra pessoa.
+                            </p>
+
+                            <h2>Como Seus Dados são Processados</h2>
+                            <h3>Provedores de Analytics e Diagnóstico</h3>
+                            <ul>
+                                <li>
+                                    <strong>PostHog</strong> (analytics de produto):
+                                    coleta eventos de uso pseudônimos e propriedades
+                                    listadas acima. <em
+                                        >Replay de sessão não está habilitado</em
+                                    > no PostHog neste momento. Dados são criptografados
+                                    em trânsito. Região: Estados Unidos. <strong
+                                        >Retenção (Cloud, pago):</strong
+                                    > eventos retidos até <strong>7 anos</strong
+                                    >; gravações de replay de sessão retidas por <strong
+                                        >3 meses</strong
+                                    > por padrão (1 mês no gratuito). Alguns replays
+                                    podem ser retidos por até <strong
+                                        >1 ano</strong
+                                    > se fixados em uma playlist, compartilhados
+                                    publicamente ou adicionados a um caderno. Fontes:
+                                    <a
+                                        href="https://posthog.com/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Política de Privacidade</a
+                                    >, <a
+                                        href="https://posthog.com/docs/data/keeping-data"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Docs de retenção de dados</a
+                                    >.
+                                </li>
+                                <li>
+                                    <strong>Firebase Analytics</strong> (Google/GA4):
+                                    recebe eventos de uso espelhados durante a migração
+                                    para continuidade. Nenhum recurso de publicidade
+                                    é usado. Região: Estados Unidos (Google Cloud).
+                                    <strong
+                                        >Retenção (GA4 padrão para gratuito):</strong
+                                    > dados a nível de usuário e evento retidos por
+                                    <strong>2 meses</strong> por padrão (projetos
+                                    podem opcionalmente estender alguns dados para
+                                    14 meses). <em>Remoção planejada:</em> espelhamento
+                                    GA4 será removido após a versão do app <strong
+                                        >1.5.4</strong
+                                    >. Fonte: <a
+                                        href="https://support.google.com/analytics/answer/7667196"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Retenção Google Analytics</a
+                                    >.
+                                </li>
+                                <li>
+                                    <strong>Sentry</strong> (relatório de crash/erro
+                                    + replay de sessão): captura detalhes de erros
+                                    e replays de sessão curtos para diagnosticar
+                                    problemas; texto na tela é ofuscado/redigido
+                                    e não legível. Nenhuma digitação é capturada.
+                                    Relatório de crash/erro é ativado por padrão
+                                    e pode ser desativado nas Configurações. <strong
+                                        >Replay de Sessão</strong
+                                    >: <em>v1.5.3+</em> amostragem segue sua preferência
+                                    (desligado a menos que habilitado). <em
+                                        >Versões anteriores</em
+                                    > podem ter replays por erro ativados por padrão;
+                                    você pode desativá-los nas Configurações. Região:
+                                    Estados Unidos. Por padrão, SDKs Sentry mascaram
+                                    todo texto e imagens em replays e não gravam
+                                    nenhuma sessão a menos que amostragem seja explicitamente
+                                    habilitada. <strong>Retenção:</strong> Sentry
+                                    retém dados de eventos de acordo com a janela
+                                    de retenção do seu plano e deleta backups regulares
+                                    após <strong>90 dias</strong>. Durações
+                                    exatas variam por plano e tipo de dados.
+                                    Fonte: <a
+                                        href="https://sentry.io/security/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Segurança Sentry</a
+                                    >.
+                                </li>
+                                <li>
+                                    <strong>Retenção de Dados:</strong> Eu configuro
+                                    retenção a nível de provedor para manter dados
+                                    de analytics e diagnóstico apenas o tempo necessário,
+                                    então deletá-los ou agregá-los. Veja retenção
+                                    específica por provedor acima. Você pode solicitar
+                                    exclusão a qualquer momento (veja Seus Direitos
+                                    de Privacidade).
+                                </li>
+                                <li>
+                                    <strong
+                                        >Transferências Internacionais:</strong
+                                    > Dados são processados nos Estados Unidos sob
+                                    salvaguardas apropriadas (ex: SCCs) onde requerido.
+                                </li>
+                                <li>
+                                    <strong
+                                        >Compartilhamento/venda de dados:</strong
+                                    > Dados não são vendidos. Provedores processam
+                                    dados em meu nome para melhorar o app.
+                                </li>
+                            </ul>
+
+                            <p>
+                                <strong
+                                    >Informações de privacidade e retenção dos
+                                    provedores:</strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    Sentry: <a
+                                        href="https://sentry.io/privacy/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Política de Privacidade</a
+                                    > • <a
+                                        href="https://docs.sentry.io/product/explore/session-replay/privacy/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Privacidade de Replay de Sessão</a
+                                    > • <a
+                                        href="https://docs.sentry.io/platforms/flutter/session-replay/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Docs de Replay Flutter</a>
+                                </li>
+                                <li>
+                                    PostHog: <a
+                                        href="https://posthog.com/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Política de Privacidade</a
+                                    > • <a
+                                        href="https://posthog.com/docs/data/keeping-data"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Retenção e Exclusão de Dados</a>
+                                </li>
+                                <li>
+                                    Firebase (Google): <a
+                                        href="https://firebase.google.com/support/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Privacidade e Segurança Firebase</a
+                                    > • <a
+                                        href="https://policies.google.com/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Política de Privacidade Google</a>
+                                </li>
+                            </ul>
+
+                            <h3>Armazenamento Local</h3>
+                            <ul>
+                                <li>
+                                    <strong>Dados de Jogo:</strong> Todos os seus
+                                    diários, tabelas personalizadas e conteúdo de
+                                    jogo ficam no seu dispositivo
+                                </li>
+                                <li>
+                                    <strong>Acesso a Arquivos:</strong> Eu acesso
+                                    apenas arquivos que você explicitamente importa/exporta
+                                    (JSON para diários, Markdown para exportações)
+                                </li>
+                                <li>
+                                    <strong>Sincronização iCloud:</strong> Se habilitado,
+                                    seus dados de jogo sincronizam através do serviço
+                                    seguro iCloud da Apple
+                                </li>
+                                <li>
+                                    <strong
+                                        >Sem Armazenamento em Servidor:</strong
+                                    > Seu conteúdo de jogo nunca é enviado para meus
+                                    servidores
+                                </li>
+                            </ul>
+
+                            <h3>Base Legal (GDPR)</h3>
+                            <p>
+                                Para usuários na UE, minha base legal para
+                                processamento é:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong
+                                        >Consentimento (Art. 6(1)(a)):</strong
+                                    > Analytics roda apenas se você optar por participar;
+                                    você pode retirar consentimento a qualquer momento
+                                    nas Configurações.
+                                </li>
+                                <li>
+                                    <strong
+                                        >Interesses legítimos (Art. 6(1)(f)):</strong
+                                    > Relatório de crash/erro (incluindo replay de
+                                    sessão por erro) para manter segurança e estabilidade;
+                                    e responder a e-mails de suporte que você envia.
+                                    Você pode desativar o relatório de crash/erro
+                                    nas Configurações.
+                                </li>
+                            </ul>
+
+                            <h2 id="do-not-sell">
+                                Não Venda ou Compartilhe Minhas Informações
+                                Pessoais
+                            </h2>
+                            <p>
+                                Eu não vendo ou compartilho suas informações
+                                pessoais conforme definido pela CCPA/CPRA. Se
+                                você ainda deseja enviar uma solicitação
+                                referente a “Não Venda ou Compartilhe”, envie
+                                e-mail para <strong
+                                    >privacy@jasonholtdigital.com</strong
+                                >. Eu confirmarei que nenhuma venda ou
+                                compartilhamento ocorre e honrarei quaisquer
+                                direitos aplicáveis.
+                            </p>
+
+                            <h2>Seus Direitos de Privacidade</h2>
+                            <p>
+                                Não importa onde você vive, você tem direitos
+                                importantes sobre seus dados:
+                            </p>
+
+                            <h3>Direitos Universais</h3>
+                            <ul>
+                                <li>
+                                    <strong>Saber:</strong> Que dados eu coleto e
+                                    por que (está tudo nesta política)
+                                </li>
+                                <li>
+                                    <strong>Acessar:</strong> Solicitar uma cópia
+                                    de quaisquer dados que tenho sobre você
+                                </li>
+                                <li>
+                                    <strong>Corrigir:</strong> Consertar qualquer
+                                    informação incorreta
+                                </li>
+                                <li>
+                                    <strong>Deletar:</strong> Solicitar exclusão
+                                    dos seus dados
+                                </li>
+                                <li>
+                                    <strong>Controlar:</strong> Ligar/desligar analytics
+                                    a qualquer momento nas configurações do app
+                                </li>
+                                <li>
+                                    <strong>Exportar:</strong> Obter seus dados de
+                                    jogo em formatos portáteis
+                                </li>
+                            </ul>
+
+                            <h3>Leis de Privacidade Regionais</h3>
+                            <p>
+                                Se você vive em certas regiões, você tem
+                                direitos adicionais:
+                            </p>
+                            <h4>União Europeia (GDPR)</h4>
+                            <ul>
+                                <li>
+                                    Retirar consentimento para processamento de
+                                    analytics
+                                </li>
+                                <li>
+                                    Opor-se ao processamento de dados baseado em
+                                    interesses legítimos
+                                </li>
+                                <li>Solicitar restrição de processamento</li>
+                                <li>
+                                    Registrar reclamações com sua autoridade
+                                    local de proteção de dados
+                                </li>
+                            </ul>
+                            <h4>Califórnia (CCPA/CPRA)</h4>
+                            <ul>
+                                <li>
+                                    Divulgação detalhada das práticas de coleta
+                                    de dados
+                                </li>
+                                <li>
+                                    Direito de optar por não participar de
+                                    "vendas" de dados (embora eu não venda
+                                    dados)
+                                </li>
+                                <li>
+                                    Não discriminação por exercer direitos de
+                                    privacidade
+                                </li>
+                                <li>
+                                    Direito de limitar uso de informações
+                                    pessoais sensíveis
+                                </li>
+                            </ul>
+                            <h4>
+                                Virgínia, Colorado, Connecticut (Leis Estaduais
+                                de Privacidade)
+                            </h4>
+                            <ul>
+                                <li>
+                                    Confirmar quais dados pessoais eu processo
+                                </li>
+                                <li>
+                                    Acessar, corrigir, deletar ou portar seus
+                                    dados
+                                </li>
+                                <li>
+                                    Optar por não participar de publicidade
+                                    direcionada (não aplicável já que não faço
+                                    isso)
+                                </li>
+                            </ul>
+                            <h4>Brasil (LGPD)</h4>
+                            <ul>
+                                <li>
+                                    Confirmação das atividades de processamento
+                                    de dados
+                                </li>
+                                <li>
+                                    Acesso, correção e exclusão de dados
+                                    pessoais
+                                </li>
+                                <li>Portabilidade de dados entre serviços</li>
+                                <li>
+                                    Informação sobre compartilhamento de dados
+                                    (o que eu não faço)
+                                </li>
+                            </ul>
+
+                            <h3>Como Exercer Seus Direitos</h3>
+                            <p>
+                                Envie e-mail para <strong
+                                    ><a
+                                        href="mailto:privacy@jasonholtdigital.com"
+                                        >privacy@jasonholtdigital.com</a
+                                    ></strong
+                                > com sua solicitação. Eu responderei em até:
+                            </p>
+                            <ul>
+                                <li><strong>GDPR:</strong> 30 dias</li>
+                                <li><strong>CCPA:</strong> 45 dias</li>
+                                <li>
+                                    <strong>Outras leis:</strong> 30–45 dias
+                                </li>
+                                <li>
+                                    <strong>Solicitações gerais:</strong> 2 dias
+                                    úteis para confirmação
+                                </li>
+                            </ul>
+                            <p>
+                                <strong>Para seus dados de jogo locais:</strong>
+                                Você já tem controle total. Exporte seus diários
+                                antes de desinstalar se quiser mantê-los.
+                            </p>
+
+                            <h2>Controles de Privacidade</h2>
+                            <h3>Controles No App</h3>
+                            <ul>
+                                <li>
+                                    <strong>Configurações → Analytics:</strong> Alternar
+                                    analytics (PostHog/Firebase) ligado/desligado
+                                </li>
+                                <li>
+                                    <strong
+                                        >Configurações → Diagnósticos:</strong
+                                    >
+                                    <ul>
+                                        <li>
+                                            <strong
+                                                >Relatório de Crash &amp; Erro:</strong
+                                            > Ligado/Desligado (ligado por padrão)
+                                        </li>
+                                        <li>
+                                            <strong
+                                                >Replay de Sessão (v1.5.3+):</strong
+                                            > Ligado/Desligado (desligado por padrão)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong
+                                        >Diálogo de Primeira Execução:</strong
+                                    > Escolha sua preferência de analytics quando
+                                    abrir o app pela primeira vez
+                                </li>
+                                <li>
+                                    <strong>Exportar Dados:</strong> Exporte seus
+                                    diários de jogo como arquivos JSON ou Markdown
+                                </li>
+                                <li>
+                                    <strong>Deletar Dados:</strong> Limpar todos
+                                    os dados do app ou desinstalar para remover tudo
+                                </li>
+                            </ul>
+
+                            <h3>Controles do Dispositivo</h3>
+                            <h4>iOS/iPadOS</h4>
+                            <ul>
+                                <li>
+                                    <strong>Analytics do App:</strong> Ajustes →
+                                    Privacidade → Análise e Melhorias → Compartilhar
+                                    Análise
+                                </li>
+                                <li>
+                                    <strong>Permissões do App:</strong> Ajustes →
+                                    Privacidade → Arquivos e Pastas → Mythic GME
+                                </li>
+                                <li>
+                                    <strong>Rastreamento do App:</strong> Ajustes
+                                    → Privacidade → Rastreamento (embora eu não rastreie
+                                    entre apps)
+                                </li>
+                            </ul>
+                            <h4>Android</h4>
+                            <ul>
+                                <li>
+                                    <strong>Permissões do App:</strong> Configurações
+                                    → Apps → Mythic GME Mobile → Permissões
+                                </li>
+                                <li>
+                                    <strong>Dados de Uso:</strong> Configurações
+                                    → Google → Uso &amp; Diagnósticos
+                                </li>
+                                <li>
+                                    <strong>Publicidade:</strong> Configurações →
+                                    Google → Anúncios (embora eu não use anúncios)
+                                </li>
+                            </ul>
+                            <h4>Desktop (Windows/macOS/Linux)</h4>
+                            <ul>
+                                <li>
+                                    <strong>Analytics Limitado:</strong> A maioria
+                                    dos controles do dispositivo não se aplica
+                                </li>
+                                <li>
+                                    <strong>Acesso a Arquivos:</strong> Versões desktop
+                                    acessam apenas arquivos que você explicitamente
+                                    abre/salva
+                                </li>
+                                <li>
+                                    <strong>Privacidade do Sistema:</strong> Controles
+                                    de privacidade padrão do SO se aplicam
+                                </li>
+                            </ul>
+
+                            <h2>Diferenças de Plataforma</h2>
+                            <h3>Por Que Desktop Tem Analytics Limitado</h3>
+                            <ul>
+                                <li>
+                                    <strong>Windows/Linux:</strong> Firebase e PostHog
+                                    têm funcionalidade limitada nestas plataformas
+                                </li>
+                                <li>
+                                    <strong>macOS Desktop:</strong> Alguns analytics
+                                    funcionam, mas menos abrangentes que no mobile
+                                </li>
+                                <li>
+                                    <strong>Limitações Técnicas:</strong> Plataformas
+                                    desktop não suportam muitos recursos de analytics
+                                    mobile
+                                </li>
+                                <li>
+                                    <strong>Privacidade por Design:</strong> Menos
+                                    coleta de dados significa melhor privacidade
+                                </li>
+                            </ul>
+
+                            <h2>Privacidade de Crianças</h2>
+                            <p>
+                                Mythic GME é projetado para jogadores de RPG de
+                                mesa, que são tipicamente adultos. Os apps não
+                                são destinados a crianças menores de 13 anos.
+                                Usuários devem ter pelo menos 16 anos para
+                                consentir com o processamento de analytics na
+                                UE, ou ter consentimento de pais/responsáveis
+                                onde aplicável.
+                            </p>
+                            <p>
+                                Se você acredita que uma criança usou o app e
+                                analytics estavam ativados, por favor envie
+                                e-mail para <a
+                                    href="mailto:privacy@jasonholtdigital.com"
+                                    >privacy@jasonholtdigital.com</a
+                                > imediatamente.
+                            </p>
+
+                            <h2>Mudanças nesta Política</h2>
+                            <p>
+                                Quando eu atualizar esta política de
+                                privacidade:
+                            </p>
+                            <ul>
+                                <li>A data de "Última Atualização" mudará</li>
+                                <li>
+                                    Grandes mudanças serão anunciadas no app
+                                </li>
+                                <li>
+                                    Você verá o diálogo de consentimento
+                                    novamente se as práticas de analytics
+                                    mudarem significativamente
+                                </li>
+                                <li>
+                                    Uso contínuo após mudanças significa que
+                                    você aceita a política atualizada
+                                </li>
+                            </ul>
+
+                            <h2>Recursos Futuros</h2>
+                            <p>
+                                Se eu algum dia adicionar funcionalidade de
+                                salvamento em nuvem ou outros recursos que mudem
+                                o manuseio de dados:
+                            </p>
+                            <ul>
+                                <li>Esta política será atualizada primeiro</li>
+                                <li>Você será notificado das mudanças</li>
+                                <li>
+                                    Novos recursos terão seus próprios controles
+                                    de privacidade
+                                </li>
+                                <li>
+                                    Configurações de privacidade existentes não
+                                    mudarão sem seu consentimento
+                                </li>
+                            </ul>
+
+                            <h2>Contate-me</h2>
+                            <p>
+                                Para quaisquer perguntas, preocupações ou
+                                solicitações de privacidade:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>E-mail:</strong>
+                                    <a
+                                        href="mailto:privacy@jasonholtdigital.com"
+                                        >privacy@jasonholtdigital.com</a
+                                    > (resposta mais rápida)
+                                </li>
+                                <li>
+                                    <strong>Correio:</strong> Jason Holt Digital
+                                    LLC, 1111b S Governors Avenue STE 21904, Dover,
+                                    DE 19904 US
+                                </li>
+                                <li>
+                                    <strong>Tempo de Resposta:</strong> Dentro de
+                                    2 dias úteis para confirmação
+                                </li>
+                            </ul>
+                            <p>
+                                Eu pessoalmente leio e respondo a cada e-mail
+                                relacionado à privacidade. Se você tiver
+                                preocupações, perguntas ou sugestões sobre como
+                                lido com privacidade, por favor entre em
+                                contato.
+                            </p>
+
+                            <h2>Conformidade com Lojas de Apps</h2>
+                            <h3>Segurança de Dados Google Play</h3>
+                            <p>
+                                Esta política de privacidade suporta os
+                                requisitos de Segurança de Dados do Google Play
+                                divulgando:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Dados coletados:</strong> Atividade do
+                                    app (interações com recursos, visualizações de
+                                    tela), Informações e desempenho do app (diagnósticos
+                                    onde aplicável), e IDs de dispositivo ou outros
+                                    (ID pseudônimo por instalação). Nenhuns dados
+                                    pessoais ou de localização precisa são coletados.
+                                </li>
+                                <li>
+                                    <strong>Propósitos:</strong> Analytics de produto
+                                    e funcionalidade do app; sem publicidade.
+                                </li>
+                                <li>
+                                    <strong>Compartilhamento de dados:</strong> Apenas
+                                    com provedores de analytics (Firebase, PostHog)
+                                    para processamento em meu nome. Dados não são
+                                    vendidos.
+                                </li>
+                                <li>
+                                    <strong>Práticas de segurança:</strong> Dados
+                                    criptografados em trânsito; coleta mínima.
+                                </li>
+                                <li>
+                                    <strong>Controles do usuário:</strong> Analytics
+                                    é opcional e controlado por uma opção no app.
+                                </li>
+                            </ul>
+                            <h3>Rótulos de Nutrição de Privacidade da Apple</h3>
+                            <p>
+                                Para conformidade com a App Store, esta política
+                                suporta os requisitos de Rótulo de Nutrição de
+                                Privacidade da Apple:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Dados não vinculados a você:</strong
+                                    > Dados de Uso (Interações do App, Visualizações
+                                    de Tela) e Diagnósticos (incluindo relatórios
+                                    de falha e replays de sessão com redação de texto)
+                                    onde aplicável.
+                                </li>
+                                <li>
+                                    <strong
+                                        >Rastreamento entre apps/sites:</strong
+                                    > Não usado.
+                                </li>
+                                <li>
+                                    <strong>Parceiros terceiros:</strong> Firebase
+                                    (Google) e PostHog processam dados de analytics
+                                    conforme descrito.
+                                </li>
+                                <li>
+                                    <strong>Controle do usuário:</strong> Analytics
+                                    é opt-in e pode ser desligado a qualquer momento
+                                    nas Configurações.
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>

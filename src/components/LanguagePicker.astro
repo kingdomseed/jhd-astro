@@ -1,0 +1,54 @@
+---
+import { languages } from "../i18n/ui";
+import { getLangFromUrl, getRouteFromUrl } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
+---
+
+<ul class="language-picker">
+    {
+        Object.entries(languages).map(([key, label]) => (
+            <li>
+                <a
+                    href={getRelativeLocaleUrl(key, route)}
+                    class={key === lang ? "active" : ""}
+                    aria-label={label}
+                >
+                    {key.toUpperCase()}
+                </a>
+            </li>
+        ))
+    }
+</ul>
+
+<style>
+    .language-picker {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+    .language-picker a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+    .language-picker a:hover {
+        opacity: 1;
+        background-color: var(--color-bg-offset);
+    }
+    .language-picker a.active {
+        opacity: 1;
+        color: var(--accent-color);
+        background-color: var(--color-bg-offset);
+    }
+</style>

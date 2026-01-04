@@ -55,6 +55,7 @@ const resources = defineCollection({
           })
         )
         .default([]),
+      lang: z.enum(['en', 'pt']).default('en'),
     }).refine((data) => !data.hero || (data.heroAlt !== undefined && data.heroAlt.trim().length > 0), {
       message: "Provide heroAlt when a hero image is included",
       path: ["heroAlt"],
@@ -78,8 +79,9 @@ const blog = defineCollection({
         date: z.coerce.date(),
         readTime: z.string(),
         isSample: z.boolean().default(true),
-      tags: z.array(z.string()).default([]),
-      keywords: z.array(z.string()).default([]),
+        tags: z.array(z.string()).default([]),
+        keywords: z.array(z.string()).default([]),
+        lang: z.enum(['en', 'pt']).default('en'),
 
         // Optional hero image for blog posts (validated as a local image)
         hero: image().optional(),
@@ -125,9 +127,9 @@ const pages = defineCollection({
     pageHeader: z.object({
       accent: z.string(),
       icon: z.string(),
-      layout: z.string(),
-      visualElement: z.string(),
-      colorScheme: z.string(),
+      layout: z.enum(["left", "right", "center"]),
+      visualElement: z.enum(["shapes", "grid", "particles"]),
+      colorScheme: z.enum(["primary", "secondary", "accent"]),
     }),
     backgroundHighlights: z.array(z.object({
       icon: z.string(),

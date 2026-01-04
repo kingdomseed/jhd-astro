@@ -1,72 +1,86 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import HeadFonts from '../../components/HeadFonts.astro';
-import PageHeader from '../../components/PageHeader.astro';
-import { getCollection, type CollectionEntry } from 'astro:content';
-import { formatDate } from '../../scripts/format-date'; // Consistent date rendering for "Updated" chips
-import defaultOg from '../../assets/logo/logo.jpg?url'; // Default site OG image
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { formatDate } from "../../scripts/format-date"; // Consistent date rendering for "Updated" chips
+import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
 
-const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.com').toString();
+const ogImageUrl = new URL(
+  defaultOg,
+  Astro.site ?? "https://jasonholtdigital.com",
+).toString();
 
-const entries = await getCollection('resources');
-type ResourceEntry = CollectionEntry<'resources'>;
-
+const entries = await getCollection("resources", ({ data }) => {
+  return data.lang === "en" || data.lang === undefined;
+});
+type ResourceEntry = CollectionEntry<"resources">;
 
 const categoryLabels = {
-  'start-here': 'Start Here',
-  'adventure-journals': 'Adventure Journals',
-  'dice-roller': 'Dice Roller',
-  'custom-tables': 'Custom Tables',
-  advanced: 'Schemas & Deep Dives',
+  "start-here": "Start Here",
+  "adventure-journals": "Adventure Journals",
+  "dice-roller": "Dice Roller",
+  "custom-tables": "Custom Tables",
+  advanced: "Schemas & Deep Dives",
 };
 
 const sortByOrder = (items: ResourceEntry[]) =>
   [...items].sort((a, b) =>
     a.data.order === b.data.order
       ? a.data.title.localeCompare(b.data.title)
-      : a.data.order - b.data.order
+      : a.data.order - b.data.order,
   );
 
 const sectionBlueprint = [
   {
-    id: 'start-here',
-    badge: 'Start Here',
-    title: 'Get Up and Running Quickly',
-    description: 'Install the apps, learn the workspace, and get comfortable with the Mythic flow.',
-    category: 'start-here',
+    id: "start-here",
+    badge: "Start Here",
+    title: "Get Up and Running Quickly",
+    description:
+      "Install the apps, learn the workspace, and get comfortable with the Mythic flow.",
+    category: "start-here",
   },
   {
-    id: 'adventure-journals',
-    badge: 'Journals',
-    title: 'Share and Safeguard Your Journals',
-    description: 'Capture stories, share exports, and fix issues fast when something feels off.',
-    category: 'adventure-journals',
+    id: "adventure-journals",
+    badge: "Journals",
+    title: "Share and Safeguard Your Journals",
+    description:
+      "Capture stories, share exports, and fix issues fast when something feels off.",
+    category: "adventure-journals",
   },
   {
-    id: 'dice-roller',
-    badge: 'Dice',
-    title: 'Master the Dice Roller Toolkit',
-    description: 'Roll smarter with presets, custom formulas, and portable collections.',
-    category: 'dice-roller',
+    id: "dice-roller",
+    badge: "Dice",
+    title: "Master the Dice Roller Toolkit",
+    description:
+      "Roll smarter with presets, custom formulas, and portable collections.",
+    category: "dice-roller",
   },
   {
-    id: 'custom-tables',
-    badge: 'Tables',
-    title: 'Build Powerful Custom Tables',
-    description: 'Build, organise, and share powerful tables for improvising on the fly.',
-    category: 'custom-tables',
+    id: "custom-tables",
+    badge: "Tables",
+    title: "Build Powerful Custom Tables",
+    description:
+      "Build, organise, and share powerful tables for improvising on the fly.",
+    category: "custom-tables",
   },
 ];
 
 const guideSections = sectionBlueprint
   .map((section) => ({
     ...section,
-    items: sortByOrder(entries.filter((entry: ResourceEntry) => entry.data.category === section.category)),
+    items: sortByOrder(
+      entries.filter(
+        (entry: ResourceEntry) => entry.data.category === section.category,
+      ),
+    ),
   }))
   .filter((section) => section.items.length > 0);
 
-const advancedItems = sortByOrder(entries.filter((entry: ResourceEntry) => entry.data.category === 'advanced'));
+const advancedItems = sortByOrder(
+  entries.filter((entry: ResourceEntry) => entry.data.category === "advanced"),
+);
 
 const searchEntries = sortByOrder(entries).map((entry) => ({
   slug: entry.slug,
@@ -77,17 +91,24 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   updated: entry.data.updated ?? null,
 }));
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <HeadFonts />
     <title>Resources — Guides &amp; Docs for Mythic GME 2e Apps</title>
-    <meta name="description" content="Guides for Mythic Apps: onboarding, dice formulas, custom tables, schema references, and troubleshooting." />
+    <meta
+      name="description"
+      content="Guides for Mythic Apps: onboarding, dice formulas, custom tables, schema references, and troubleshooting."
+    />
     <meta property="og:image" content={ogImageUrl} />
     <meta name="twitter:image" content={ogImageUrl} />
     <link rel="stylesheet" href="/global.css" />
-  <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/9f0db3cdf4.js"
+      crossorigin="anonymous"></script>
     <link rel="canonical" href="https://jasonholtdigital.com/resources/" />
   </head>
   <body>
@@ -96,8 +117,8 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     <div id="site">
       <Header />
 
-      <PageHeader 
-        title="Guides &amp; Documentation"
+      <PageHeader
+        title="Guides & Documentation"
         subtitle="Learn, create, and troubleshoot"
         description="Task-focused guides for every Mythic tool: onboarding, journals, dice, custom tables, and schema references."
         accent="Resources"
@@ -113,13 +134,15 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           <div class="container">
             <div class="resource-search-bar" data-resource-search-root>
               <div class="resource-search-input-wrapper">
-                <i class="fa-slab fa-regular fa-search resource-search-icon" aria-hidden="true"></i>
-                <input 
-                  id="resource-search-input" 
-                  class="resource-search-input" 
-                  type="search" 
-                  name="resource-search" 
-                  placeholder="Search resources..." 
+                <i
+                  class="fa-slab fa-regular fa-search resource-search-icon"
+                  aria-hidden="true"></i>
+                <input
+                  id="resource-search-input"
+                  class="resource-search-input"
+                  type="search"
+                  name="resource-search"
+                  placeholder="Search resources..."
                   aria-label="Search resources"
                   aria-autocomplete="list"
                   aria-controls="resource-search-dropdown"
@@ -128,7 +151,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                 />
                 <span class="resource-search-hint">Press / to focus</span>
               </div>
-              <div 
+              <div
                 id="resource-search-dropdown"
                 class="resource-search-dropdown"
                 role="listbox"
@@ -136,124 +159,192 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                 hidden
                 data-resource-search-dropdown
               >
-                <ul class="resource-search-results" role="list" data-resource-search-list>
-                  {searchEntries.map((entry, index) => (
-                    <li
-                      role="option"
-                      aria-selected="false"
-                      data-resource-search-item
-                      data-title={entry.title}
-                      data-summary={entry.summary}
-                      data-category={categoryLabels[entry.category]}
-                      data-index={index}
-                    >
-                      <a href={`/resources/${entry.slug}/`} tabindex="-1">
-                        <span class="resource-search-result-title">{entry.title}</span>
-                        <span class="resource-search-result-summary">{entry.summary}</span>
-                        <span class="resource-search-result-meta">{categoryLabels[entry.category]}</span>
-                      </a>
-                    </li>
-                  ))}
+                <ul
+                  class="resource-search-results"
+                  role="list"
+                  data-resource-search-list
+                >
+                  {
+                    searchEntries.map((entry, index) => (
+                      <li
+                        role="option"
+                        aria-selected="false"
+                        data-resource-search-item
+                        data-title={entry.title}
+                        data-summary={entry.summary}
+                        data-category={categoryLabels[entry.category]}
+                        data-index={index}
+                      >
+                        <a href={`/resources/${entry.slug}/`} tabindex="-1">
+                          <span class="resource-search-result-title">
+                            {entry.title}
+                          </span>
+                          <span class="resource-search-result-summary">
+                            {entry.summary}
+                          </span>
+                          <span class="resource-search-result-meta">
+                            {categoryLabels[entry.category]}
+                          </span>
+                        </a>
+                      </li>
+                    ))
+                  }
                 </ul>
-                <div class="resource-search-empty" data-resource-search-empty hidden>
-                  <i class="fa-slab fa-regular fa-search-minus" aria-hidden="true"></i>
+                <div
+                  class="resource-search-empty"
+                  data-resource-search-empty
+                  hidden
+                >
+                  <i
+                    class="fa-slab fa-regular fa-search-minus"
+                    aria-hidden="true"></i>
                   <p>No matches found</p>
                 </div>
-                <div class="resource-search-status" role="status" aria-live="polite" data-resource-search-status></div>
+                <div
+                  class="resource-search-status"
+                  role="status"
+                  aria-live="polite"
+                  data-resource-search-status
+                >
+                </div>
               </div>
             </div>
           </div>
         </div>
-        {guideSections.map((section) => (
-          <section class="section" id={section.id} aria-labelledby={`${section.id}-title`}>
-            <div class="container">
-              <header class="section-head" aria-hidden="true">
-                <span class="accent-line" aria-hidden="true"></span>
-                <span class="badge-text">{section.badge}</span>
-              </header>
-              <div class="resource-section-heading">
-                <h2 id={`${section.id}-title`} class="section-title">
-                  {section.title}
-                </h2>
-                <p class="resource-section-summary">{section.description}</p>
-              </div>
-              <ul class="resource-list" role="list">
-                {section.items.map((item) => (
-                  <li>
-                    <a class="resource-card" href={`/resources/${item.slug}/`}>
-                      <span class="resource-card__icon" aria-hidden="true">
-                        <i class={item.data.icon}></i>
-                      </span>
-                      <span class="resource-card__body">
-                        <span class="resource-card__title">{item.data.title}</span>
-                        <span class="resource-card__summary">{item.data.summary}</span>
-                        <span class="resource-card__meta">
-                          {item.data.duration && (
-                            <span class="resource-card__meta-item">{item.data.duration}</span>
-                          )}
-                          <span class="resource-card__meta-item">{categoryLabels[item.data.category]}</span>
-                          {item.data.updated && (
-                            <span class="resource-card__meta-item">Updated {formatDate(item.data.updated)}</span>
-                          )}
+        {
+          guideSections.map((section) => (
+            <section
+              class="section"
+              id={section.id}
+              aria-labelledby={`${section.id}-title`}
+            >
+              <div class="container">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true" />
+                  <span class="badge-text">{section.badge}</span>
+                </header>
+                <div class="resource-section-heading">
+                  <h2 id={`${section.id}-title`} class="section-title">
+                    {section.title}
+                  </h2>
+                  <p class="resource-section-summary">{section.description}</p>
+                </div>
+                <ul class="resource-list" role="list">
+                  {section.items.map((item) => (
+                    <li>
+                      <a
+                        class="resource-card"
+                        href={`/resources/${item.slug}/`}
+                      >
+                        <span class="resource-card__icon" aria-hidden="true">
+                          <i class={item.data.icon} />
                         </span>
-                      </span>
-                      <span class="resource-card__arrow" aria-hidden="true">
-                        <i class="fa-slab fa-regular fa-arrow-right"></i>
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        ))}
-
-        {advancedItems.length > 0 && (
-          <section class="section" id="schemas" aria-labelledby="schemas-title">
-            <div class="container">
-              <header class="section-head" aria-hidden="true">
-                <span class="accent-line" aria-hidden="true"></span>
-                <span class="badge-text">Deep Dives</span>
-              </header>
-              <div class="resource-section-heading">
-                <h2 id="schemas-title" class="section-title">
-                  Schemas &amp; Deep Dives
-                </h2>
-                <p class="resource-section-summary">Reference docs, JSON exports, and schema notes for tooling and integrations.</p>
-              </div>
-              <ul class="resource-list" role="list">
-                {advancedItems.map((item) => (
-                  <li>
-                    <a class="resource-card" href={`/resources/${item.slug}/`}>
-                      <span class="resource-card__icon" aria-hidden="true">
-                        <i class={item.data.icon}></i>
-                      </span>
-                      <span class="resource-card__body">
-                        <span class="resource-card__title">{item.data.title}</span>
-                        <span class="resource-card__summary">{item.data.summary}</span>
-                        <span class="resource-card__meta">
-                          <span class="resource-card__meta-item">{categoryLabels[item.data.category]}</span>
-                          {item.data.duration && (
-                            <span class="resource-card__meta-item">{item.data.duration}</span>
-                          )}
-                          {item.data.updated && (
-                            <span class="resource-card__meta-item">Updated {formatDate(item.data.updated)}</span>
-                          )}
+                        <span class="resource-card__body">
+                          <span class="resource-card__title">
+                            {item.data.title}
+                          </span>
+                          <span class="resource-card__summary">
+                            {item.data.summary}
+                          </span>
+                          <span class="resource-card__meta">
+                            {item.data.duration && (
+                              <span class="resource-card__meta-item">
+                                {item.data.duration}
+                              </span>
+                            )}
+                            <span class="resource-card__meta-item">
+                              {categoryLabels[item.data.category]}
+                            </span>
+                            {item.data.updated && (
+                              <span class="resource-card__meta-item">
+                                Updated {formatDate(item.data.updated)}
+                              </span>
+                            )}
+                          </span>
                         </span>
-                      </span>
-                      <span class="resource-card__arrow" aria-hidden="true">
-                        <i class="fa-slab fa-regular fa-arrow-right"></i>
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        )}
+                        <span class="resource-card__arrow" aria-hidden="true">
+                          <i class="fa-slab fa-regular fa-arrow-right" />
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ))
+        }
 
+        {
+          advancedItems.length > 0 && (
+            <section
+              class="section"
+              id="schemas"
+              aria-labelledby="schemas-title"
+            >
+              <div class="container">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true" />
+                  <span class="badge-text">Deep Dives</span>
+                </header>
+                <div class="resource-section-heading">
+                  <h2 id="schemas-title" class="section-title">
+                    Schemas &amp; Deep Dives
+                  </h2>
+                  <p class="resource-section-summary">
+                    Reference docs, JSON exports, and schema notes for tooling
+                    and integrations.
+                  </p>
+                </div>
+                <ul class="resource-list" role="list">
+                  {advancedItems.map((item) => (
+                    <li>
+                      <a
+                        class="resource-card"
+                        href={`/resources/${item.slug}/`}
+                      >
+                        <span class="resource-card__icon" aria-hidden="true">
+                          <i class={item.data.icon} />
+                        </span>
+                        <span class="resource-card__body">
+                          <span class="resource-card__title">
+                            {item.data.title}
+                          </span>
+                          <span class="resource-card__summary">
+                            {item.data.summary}
+                          </span>
+                          <span class="resource-card__meta">
+                            <span class="resource-card__meta-item">
+                              {categoryLabels[item.data.category]}
+                            </span>
+                            {item.data.duration && (
+                              <span class="resource-card__meta-item">
+                                {item.data.duration}
+                              </span>
+                            )}
+                            {item.data.updated && (
+                              <span class="resource-card__meta-item">
+                                Updated {formatDate(item.data.updated)}
+                              </span>
+                            )}
+                          </span>
+                        </span>
+                        <span class="resource-card__arrow" aria-hidden="true">
+                          <i class="fa-slab fa-regular fa-arrow-right" />
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          )
+        }
 
-        <section class="section section-band" id="resources-support" aria-labelledby="resources-support-title">
+        <section
+          class="section section-band"
+          id="resources-support"
+          aria-labelledby="resources-support-title"
+        >
           <div class="container">
             <header class="section-head" aria-hidden="true">
               <span class="accent-line" aria-hidden="true"></span>
@@ -264,14 +355,24 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                 <h2 id="resources-support-title" class="section-title">
                   Can’t find what you’re looking for?
                 </h2>
-                <p class="resource-support__summary">Send me a note or hop into Discord—real humans are ready to help keep your adventures rolling.</p>
+                <p class="resource-support__summary">
+                  Send me a note or hop into Discord—real humans are ready to
+                  help keep your adventures rolling.
+                </p>
               </div>
               <div class="resource-support__actions">
                 <a class="btn btn--shadow-primary" href="/support">
                   Contact Support
-                  <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                  <i
+                    class="fa-slab fa-regular fa-arrow-right"
+                    aria-hidden="true"></i>
                 </a>
-                <a class="btn btn--shadow-discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">
+                <a
+                  class="btn btn--shadow-discord"
+                  href="https://discord.gg/PEDHrhzcnk"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <i class="fa-brands fa-discord" aria-hidden="true"></i>
                   Join Discord
                 </a>
@@ -285,78 +386,82 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
 
     <script type="module" is:inline>
       // Enhanced dropdown search with keyboard navigation
-      const root = document.querySelector('[data-resource-search-root]');
+      const root = document.querySelector("[data-resource-search-root]");
       if (root) {
-        const input = root.querySelector('[data-resource-search-input]');
-        const dropdown = root.querySelector('[data-resource-search-dropdown]');
-        const items = Array.from(root.querySelectorAll('[data-resource-search-item]'));
-        const emptyState = root.querySelector('[data-resource-search-empty]');
-        const statusEl = root.querySelector('[data-resource-search-status]');
-        
+        const input = root.querySelector("[data-resource-search-input]");
+        const dropdown = root.querySelector("[data-resource-search-dropdown]");
+        const items = Array.from(
+          root.querySelectorAll("[data-resource-search-item]"),
+        );
+        const emptyState = root.querySelector("[data-resource-search-empty]");
+        const statusEl = root.querySelector("[data-resource-search-status]");
+
         let currentIndex = -1;
         let visibleItems = [];
-        
+
         // Filter and show/hide dropdown
         const filterList = () => {
-          const query = (input?.value ?? '').trim().toLowerCase();
+          const query = (input?.value ?? "").trim().toLowerCase();
           visibleItems = [];
-          
+
           if (query.length === 0) {
             // Hide dropdown when no input
-            dropdown?.setAttribute('hidden', '');
-            input?.setAttribute('aria-expanded', 'false');
+            dropdown?.setAttribute("hidden", "");
+            input?.setAttribute("aria-expanded", "false");
             currentIndex = -1;
             return;
           }
-          
+
           // Filter items
           items.forEach((item) => {
-            const haystack = `${item.dataset.title ?? ''} ${item.dataset.summary ?? ''} ${item.dataset.category ?? ''}`.toLowerCase();
+            const haystack =
+              `${item.dataset.title ?? ""} ${item.dataset.summary ?? ""} ${item.dataset.category ?? ""}`.toLowerCase();
             const matches = haystack.includes(query);
-            item.toggleAttribute('hidden', !matches);
+            item.toggleAttribute("hidden", !matches);
             if (matches) {
               visibleItems.push(item);
             }
           });
-          
+
           // Show/hide dropdown based on results
           if (visibleItems.length > 0) {
-            dropdown?.removeAttribute('hidden');
-            input?.setAttribute('aria-expanded', 'true');
-            emptyState?.setAttribute('hidden', '');
-            statusEl && (statusEl.textContent = `${visibleItems.length} results found`);
+            dropdown?.removeAttribute("hidden");
+            input?.setAttribute("aria-expanded", "true");
+            emptyState?.setAttribute("hidden", "");
+            statusEl &&
+              (statusEl.textContent = `${visibleItems.length} results found`);
           } else {
-            dropdown?.removeAttribute('hidden');
-            input?.setAttribute('aria-expanded', 'true');
-            emptyState?.removeAttribute('hidden');
-            statusEl && (statusEl.textContent = 'No results found');
+            dropdown?.removeAttribute("hidden");
+            input?.setAttribute("aria-expanded", "true");
+            emptyState?.removeAttribute("hidden");
+            statusEl && (statusEl.textContent = "No results found");
           }
-          
+
           currentIndex = -1;
           updateActiveItem();
         };
-        
+
         // Update active item highlighting
         const updateActiveItem = () => {
           visibleItems.forEach((item, index) => {
             if (index === currentIndex) {
-              item.setAttribute('aria-selected', 'true');
-              item.classList.add('active');
-              item.querySelector('a')?.focus();
+              item.setAttribute("aria-selected", "true");
+              item.classList.add("active");
+              item.querySelector("a")?.focus();
             } else {
-              item.setAttribute('aria-selected', 'false');
-              item.classList.remove('active');
+              item.setAttribute("aria-selected", "false");
+              item.classList.remove("active");
             }
           });
         };
-        
+
         // Handle keyboard navigation
-        input?.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowDown') {
+        input?.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowDown") {
             e.preventDefault();
             currentIndex = Math.min(currentIndex + 1, visibleItems.length - 1);
             updateActiveItem();
-          } else if (e.key === 'ArrowUp') {
+          } else if (e.key === "ArrowUp") {
             e.preventDefault();
             currentIndex = Math.max(currentIndex - 1, -1);
             if (currentIndex === -1) {
@@ -364,41 +469,44 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
             } else {
               updateActiveItem();
             }
-          } else if (e.key === 'Enter' && currentIndex >= 0) {
+          } else if (e.key === "Enter" && currentIndex >= 0) {
             e.preventDefault();
-            const link = visibleItems[currentIndex]?.querySelector('a');
+            const link = visibleItems[currentIndex]?.querySelector("a");
             if (link) {
               link.click();
             }
-          } else if (e.key === 'Escape') {
-            input.value = '';
+          } else if (e.key === "Escape") {
+            input.value = "";
             filterList();
             input.blur();
           }
         });
-        
+
         // Handle input changes
-        input?.addEventListener('input', filterList);
-        
+        input?.addEventListener("input", filterList);
+
         // Click outside to close
-        document.addEventListener('click', (e) => {
+        document.addEventListener("click", (e) => {
           if (!root.contains(e.target)) {
-            dropdown?.setAttribute('hidden', '');
-            input?.setAttribute('aria-expanded', 'false');
+            dropdown?.setAttribute("hidden", "");
+            input?.setAttribute("aria-expanded", "false");
           }
         });
-        
+
         // Focus search on '/' key
-        document.addEventListener('keydown', (e) => {
-          if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+        document.addEventListener("keydown", (e) => {
+          if (
+            e.key === "/" &&
+            !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)
+          ) {
             e.preventDefault();
             input?.focus();
           }
         });
-        
+
         // Handle hover on items
         visibleItems.forEach((item) => {
-          item.addEventListener('mouseenter', () => {
+          item.addEventListener("mouseenter", () => {
             currentIndex = visibleItems.indexOf(item);
             updateActiveItem();
           });
@@ -419,18 +527,18 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     padding: 1.5rem 0;
     margin-bottom: 2rem;
   }
-  
+
   .resource-search-bar {
     position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   /* Input wrapper */
   .resource-search-input-wrapper {
     position: relative;
   }
-  
+
   .resource-search-icon {
     position: absolute;
     left: 1rem;
@@ -439,7 +547,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     color: var(--color-text-muted);
     pointer-events: none;
   }
-  
+
   .resource-search-input {
     width: 100%;
     padding: 0.875rem 1rem 0.875rem 3rem;
@@ -447,15 +555,17 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     border: 2px solid var(--color-border);
     border-radius: 8px;
     background: white;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
-  
+
   .resource-search-input:focus {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
   }
-  
+
   .resource-search-hint {
     position: absolute;
     right: 1rem;
@@ -468,11 +578,11 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     border-radius: 4px;
     pointer-events: none;
   }
-  
+
   .resource-search-input:focus + .resource-search-hint {
     opacity: 0;
   }
-  
+
   /* Dropdown */
   .resource-search-dropdown {
     position: absolute;
@@ -486,21 +596,21 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     max-height: 400px;
     overflow-y: auto;
   }
-  
+
   .resource-search-results {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .resource-search-results li {
     border-bottom: 1px solid var(--color-border-light);
   }
-  
+
   .resource-search-results li:last-child {
     border-bottom: none;
   }
-  
+
   .resource-search-results a {
     display: block;
     padding: 1rem;
@@ -508,23 +618,23 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     color: var(--color-text);
     transition: background-color 0.15s;
   }
-  
+
   .resource-search-results li.active a,
   .resource-search-results a:hover {
     background: var(--color-surface-hover);
   }
-  
+
   .resource-search-results li[hidden] {
     display: none;
   }
-  
+
   .resource-search-result-title {
     display: block;
     font-weight: 600;
     color: var(--color-text);
     margin-bottom: 0.25rem;
   }
-  
+
   .resource-search-result-summary {
     display: block;
     font-size: 0.875rem;
@@ -534,7 +644,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  
+
   .resource-search-result-meta {
     display: inline-block;
     font-size: 0.75rem;
@@ -543,24 +653,24 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     padding: 0.125rem 0.5rem;
     border-radius: 4px;
   }
-  
+
   /* Empty state */
   .resource-search-empty {
     padding: 2rem;
     text-align: center;
     color: var(--color-text-muted);
   }
-  
+
   .resource-search-empty i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     opacity: 0.5;
   }
-  
+
   .resource-search-empty p {
     margin: 0.5rem 0 0;
   }
-  
+
   /* Status for screen readers */
   .resource-search-status {
     position: absolute;
@@ -569,21 +679,21 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
     height: 1px;
     overflow: hidden;
   }
-  
+
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .resource-search-container {
       padding: 1rem 0;
     }
-    
+
     .resource-search-hint {
       display: none;
     }
-    
+
     .resource-search-dropdown {
       max-height: 300px;
     }
-    
+
     .resource-search-result-summary {
       display: none;
     }

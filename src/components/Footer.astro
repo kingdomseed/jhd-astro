@@ -3,48 +3,131 @@
 // connections and legal text.  The current year is computed
 // dynamically so that the copyright notice always remains up to
 // date.
-import brandLogoUrl from '../assets/logo/logo.svg?url';
+import brandLogoUrl from "../assets/logo/logo.svg?url";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
 const year = new Date().getFullYear();
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+function l(path: string) {
+  return getRelativeLocaleUrl(lang, path);
+}
 ---
+
 <footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
     <div class="f-brand">
       <div class="f-brand-header">
-        <img class="brand-logo" src={brandLogoUrl} alt="Jason Holt Digital" width="48" height="48" decoding="async" loading="lazy" />
+        <img
+          class="brand-logo"
+          src={brandLogoUrl}
+          alt="Jason Holt Digital"
+          width="48"
+          height="48"
+          decoding="async"
+          loading="lazy"
+        />
         <div>
           <strong>Jason Holt Digital</strong>
-          <small>Official Mythic GME&nbsp;2e apps</small>
+          <small>{t("footer.brand_subtitle")}</small>
         </div>
       </div>
-      <a class="feature-link" href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener noreferrer">
+      <a
+        class="feature-link"
+        href="http://feedback.jasonholtdigital.com/board"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i class="fa-slab fa-regular fa-lightbulb" aria-hidden="true"></i>
-        <span>Submit a feature request</span>
+        <span>{t("footer.feature_request")}</span>
       </a>
     </div>
     <nav class="f-links" aria-label="Footer">
       <ul>
-        <li><a href="/apps"><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span>Apps</span></a></li>
-        <li><a href="/resources"><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i><span>Resources</span></a></li>
-        <li><a href="/support"><i class="fa-slab fa-regular fa-life-ring" aria-hidden="true"></i><span>Support</span></a></li>
-        <li><a href="/support#contact-panel"><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
-        <li><a href="/blog"><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i><span>Blog</span></a></li>
-        <li><a href="/about"><i class="fa-slab fa-regular fa-circle-user" aria-hidden="true"></i><span>About</span></a></li>
+        <li>
+          <a href={l("apps")}
+            ><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"
+            ></i><span>{t("nav.apps")}</span></a
+          >
+        </li>
+        <li>
+          <a href={l("resources")}
+            ><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"
+            ></i><span>{t("nav.resources")}</span></a
+          >
+        </li>
+        <li>
+          <a href={l("support")}
+            ><i class="fa-slab fa-regular fa-life-ring" aria-hidden="true"
+            ></i><span>{t("nav.support")}</span></a
+          >
+        </li>
+        <li>
+          <a href={l("support#contact-panel")}
+            ><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"
+            ></i><span>{t("footer.contact")}</span></a
+          >
+        </li>
+        <li>
+          <a href={l("blog")}
+            ><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"
+            ></i><span>{t("nav.blog")}</span></a
+          >
+        </li>
+        <li>
+          <a href={l("about")}
+            ><i class="fa-slab fa-regular fa-circle-user" aria-hidden="true"
+            ></i><span>{t("footer.about")}</span></a
+          >
+        </li>
       </ul>
     </nav>
     <div class="f-social" aria-label="Social links">
-      <a class="ico ico--discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener" aria-label="Discord">
+      <a
+        class="ico ico--discord"
+        href="https://discord.gg/PEDHrhzcnk"
+        target="_blank"
+        rel="noopener"
+        aria-label="Discord"
+      >
         <i class="fa-brands fa-discord" aria-hidden="true"></i>
       </a>
-      <a class="ico ico--youtube" href="https://www.youtube.com/@JasonHoltDigital" target="_blank" rel="noopener" aria-label="YouTube">
+      <a
+        class="ico ico--youtube"
+        href="https://www.youtube.com/@JasonHoltDigital"
+        target="_blank"
+        rel="noopener"
+        aria-label="YouTube"
+      >
         <i class="fa-brands fa-youtube" aria-hidden="true"></i>
       </a>
-      <a class="ico ico--github" href="https://github.com/kingdomseed" target="_blank" rel="noopener" aria-label="GitHub">
+      <a
+        class="ico ico--github"
+        href="https://github.com/kingdomseed"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+      >
         <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
-      <a class="ico ico--itch" href="https://itch.io/profile/jasonholtdigital" target="_blank" rel="noopener" aria-label="itch.io">
+      <a
+        class="ico ico--itch"
+        href="https://itch.io/profile/jasonholtdigital"
+        target="_blank"
+        rel="noopener"
+        aria-label="itch.io"
+      >
         <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
       </a>
-      <a class="ico ico--instagram" href="https://instagram.com/jasonholtdigital" target="_blank" rel="noopener" aria-label="Instagram">
+      <a
+        class="ico ico--instagram"
+        href="https://instagram.com/jasonholtdigital"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+      >
         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
       </a>
       <a class="ico ico--rss" href="/rss.xml" aria-label="Subscribe via RSS">
@@ -58,13 +141,22 @@ const year = new Date().getFullYear();
   <div class="container f-legal">
     <small>
       &copy; {year} Jason Holt Digital ·
-      <a href="/privacy"><i class="fa-slab fa-regular fa-lock" aria-hidden="true"></i> Privacy</a> ·
-      <a href="/terms"><i class="fa-slab fa-regular fa-file" aria-hidden="true"></i> Terms</a> ·
-      <a href="/support#contact-panel"><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i> Contact</a>
+      <a href={l("privacy")}
+        ><i class="fa-slab fa-regular fa-lock" aria-hidden="true"></i>
+        {t("footer.privacy")}</a
+      > ·
+      <a href={l("terms")}
+        ><i class="fa-slab fa-regular fa-file" aria-hidden="true"></i>
+        {t("footer.terms")}</a
+      > ·
+      <a href={l("support#contact-panel")}
+        ><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i>
+        {t("footer.contact")}</a
+      >
     </small>
     <a class="top-link" href="#site" aria-label="Back to top">
       <i class="fa-slab fa-regular fa-arrow-up" aria-hidden="true"></i>
-      <span>Top</span>
+      <span>{t("footer.top")}</span>
     </a>
   </div>
 </footer>

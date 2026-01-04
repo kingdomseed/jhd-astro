@@ -1,0 +1,347 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { Image } from "astro:assets";
+import headshotMain from "../../assets/people/jason-school.jpg";
+import HeadFonts from "../../components/HeadFonts.astro";
+import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
+import { getEntry } from "astro:content";
+
+const ogImageUrl = new URL(
+    defaultOg,
+    Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+
+// Get content from the pages collection
+const aboutEntry = await getEntry("pages", "about-pt");
+
+if (!aboutEntry) {
+    throw new Error("Could not find about-pt entry in pages collection");
+}
+
+// Extract data from frontmatter
+const {
+    title,
+    subtitle,
+    description,
+    pageHeader,
+    backgroundHighlights = [],
+    mythicHighlights = [],
+} = aboutEntry.data;
+---
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <HeadFonts />
+        <title>Sobre — {title} & Parceria Oficial</title>
+        <meta name="description" content={description} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="stylesheet" href="/global.css" />
+        <script
+            is:inline
+            src="https://kit.fontawesome.com/9f0db3cdf4.js"
+            crossorigin="anonymous"></script>
+        <link rel="canonical" href="https://jasonholtdigital.com/pt/about/" />
+    </head>
+    <body>
+        <a class="skip" href="#main">Pular para o conteúdo principal</a>
+        <div id="bg-atmo" aria-hidden="true"></div>
+        <div id="site">
+            <Header />
+
+            <PageHeader
+                title={title}
+                subtitle={subtitle}
+                description={description}
+                accent={pageHeader.accent}
+                layout={pageHeader.layout}
+                icon={pageHeader.icon}
+                visualElement={pageHeader.visualElement}
+                colorScheme={pageHeader.colorScheme}
+            />
+
+            <main id="main" class="about-main">
+                <section
+                    class="section"
+                    id="about-overview"
+                    aria-labelledby="about-overview-title"
+                >
+                    <div class="container">
+                        <div class="about-overview">
+                            <figure class="about-portrait">
+                                <Image
+                                    src={headshotMain}
+                                    alt="Jason Holt"
+                                    class="about-portrait__image"
+                                    width={320}
+                                    height={320}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <figcaption class="about-portrait__caption">
+                                    <strong>Jason Holt</strong>
+                                    Desenvolvedor Indie &amp; Fundador
+                                </figcaption>
+                            </figure>
+                            <div class="about-intro">
+                                <header
+                                    class="section-head section-head--left"
+                                    aria-hidden="true"
+                                >
+                                    <span class="accent-line" aria-hidden="true"
+                                    ></span>
+                                    <span class="badge-text">Perfil</span>
+                                </header>
+                                <h2
+                                    id="about-overview-title"
+                                    class="section-title section-title--left"
+                                >
+                                    Olá, eu sou o Jason
+                                </h2>
+                                <p>
+                                    Desenvolvo software desde 2014 e lanço
+                                    aplicativos Flutter multiplataforma desde
+                                    2024. Hoje administro a Jason Holt Digital e
+                                    — sob licença da Word Mill Games — construo
+                                    os aplicativos complementares oficiais do
+                                    Mythic GME 2e.
+                                </p>
+                                <p>
+                                    Mantenho dois produtos: <strong
+                                        >Mythic GME Mobile</strong
+                                    > (iOS, Android) e <strong
+                                        >Mythic GME Digital</strong
+                                    > (Windows, macOS, Linux).
+                                </p>
+                                <p>
+                                    Foco em ferramentas que se adaptam ao <strong
+                                        >seu</strong
+                                    > estilo de jogo, mantendo-se fiéis ao Mythic
+                                    GME 2e. Isso significa interações rápidas, interface
+                                    clara e recursos que você pode ativar ou desativar
+                                    conforme necessário.
+                                </p>
+                                <p>
+                                    Também estou cursando um Mestrado em
+                                    Linguística Computacional para explorar
+                                    maneiras práticas de como aplicativos móveis
+                                    e PNL podem trabalhar juntos para jogos
+                                    solo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="section section-band"
+                    id="about-license"
+                    aria-labelledby="about-license-title"
+                >
+                    <div class="container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Oficial</span>
+                        </header>
+                        <div class="about-license">
+                            <h2 id="about-license-title" class="section-title">
+                                Licenciado pela Word Mill Games
+                            </h2>
+                            <p class="about-license__summary">
+                                Mythic GME é o oráculo que eu uso. Em 2024, fiz
+                                uma parceria com a Word Mill Games para traduzir
+                                o Mythic GME 2e em uma experiência acessível e
+                                multiplataforma, moldada pelo feedback dos
+                                jogadores e testes práticos.
+                            </p>
+                            <ul class="about-license__list">
+                                <li>
+                                    <strong>Fidelidade ao Core 2e.</strong> Fate
+                                    Chart, Fate Check, Eventos Aleatórios e ajustes
+                                    de Cena implementados com cuidado.
+                                </li>
+                                <li>
+                                    <strong>Plataformas.</strong> Dois aplicativos:
+                                    <strong>Mythic GME Mobile</strong> (iOS, Android)
+                                    e <strong>Mythic GME Digital</strong> (Windows,
+                                    macOS, Linux).
+                                </li>
+                                <li>
+                                    <strong>Portátil por design.</strong> Offline‑first,
+                                    diários em JSON e exportações em Markdown para
+                                    que suas campanhas viajem bem.
+                                </li>
+                                <li>
+                                    <strong>Acessível.</strong> Amigável para leitores
+                                    de tela, tipografia ajustável, modo para canhotos
+                                    e paletas para daltônicos.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="section"
+                    id="about-mythic"
+                    aria-labelledby="about-mythic-title"
+                >
+                    <div class="container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Produto</span>
+                        </header>
+                        <h2 id="about-mythic-title" class="section-title">
+                            Por que os jogadores de Mythic escolhem os
+                            aplicativos
+                        </h2>
+                        <p class="about-mythic__summary">
+                            Os aplicativos Mythic GME simplificam o jogo estilo
+                            oráculo para que você possa permanecer na história —
+                            seja jogando solo, mestrando grupos sem GM ou usando
+                            o Mythic como um motor de inspiração em casa ou em
+                            movimento.
+                        </p>
+                        <ul class="about-mythic__list">
+                            {
+                                mythicHighlights.map(
+                                    (item: {
+                                        label: string;
+                                        description: string;
+                                    }) => (
+                                        <li>
+                                            <strong>{item.label}.</strong>{" "}
+                                            {item.description}
+                                        </li>
+                                    ),
+                                )
+                            }
+                        </ul>
+                        <p class="about-mythic__note">
+                            O feedback da comunidade informa diretamente o que
+                            eu lanço a seguir — junte-se ao Discord para
+                            conversar diretamente comigo ou vá para o <a
+                                href="http://feedback.jasonholtdigital.com/board"
+                                target="_blank"
+                                rel="noopener noreferrer">Quadro de Recursos</a
+                            > para solicitar recursos e votar em prioridades.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="section"
+                    id="about-background"
+                    aria-labelledby="about-background-title"
+                >
+                    <div class="container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Abordagem</span>
+                        </header>
+                        <h2 id="about-background-title" class="section-title">
+                            O que molda o trabalho
+                        </h2>
+                        <p class="about-background__summary">
+                            <strong>Princípio fundamental:</strong> Eu construo em
+                            público. Converso com jogadores diretamente no Discord,
+                            compartilho o que lancei a cada dia em #daily-wrap e
+                            lanço atualizações pequenas e frequentes. Ouço todos
+                            os tipos de feedback e busco uma experiência Mythic flexível
+                            e fiel em muitos estilos de jogo.
+                        </p>
+                        <div class="about-background-grid">
+                            {
+                                backgroundHighlights.map(
+                                    (item: {
+                                        icon: string;
+                                        title: string;
+                                        description: string;
+                                    }) => (
+                                        <article class="about-background-card">
+                                            <span
+                                                class="about-background-card__icon"
+                                                aria-hidden="true"
+                                            >
+                                                <i class={item.icon} />
+                                            </span>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.description}</p>
+                                        </article>
+                                    ),
+                                )
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="section"
+                    id="about-connect"
+                    aria-labelledby="about-connect-title"
+                >
+                    <div class="container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Conectar</span>
+                        </header>
+                        <div class="about-connect">
+                            <h2 id="about-connect-title" class="section-title">
+                                Adoraria continuar a conversa
+                            </h2>
+                            <p class="about-connect__summary">
+                                Feedback, relatórios de bugs, histórias de jogo
+                                — tudo o que você compartilha ajuda o Mythic a
+                                ficar mais afiado. Escolha um canal abaixo ou
+                                entre na comunidade.
+                            </p>
+                            <div class="about-social">
+                                <a
+                                    class="ico ico--discord"
+                                    href="https://discord.gg/PEDHrhzcnk"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Entrar no Discord"
+                                >
+                                    <i
+                                        class="fa-brands fa-discord"
+                                        aria-hidden="true"></i>
+                                </a>
+                                <a
+                                    class="ico ico--github"
+                                    href="https://github.com/kingdomseed"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="Seguir no GitHub"
+                                >
+                                    <i
+                                        class="fa-brands fa-github"
+                                        aria-hidden="true"></i>
+                                </a>
+                                <a
+                                    class="ico ico--blog"
+                                    href="/blog"
+                                    aria-label="Ler o Blog"
+                                >
+                                    <i
+                                        class="fa-slab fa-regular fa-newspaper"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <p class="about-connect__support">
+                                Perguntas? <a href="/pt/support"
+                                    >Visite nossa central de suporte</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>

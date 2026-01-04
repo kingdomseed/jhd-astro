@@ -1,19 +1,21 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import HeadFonts from '../../components/HeadFonts.astro';
-import PageHeader from '../../components/PageHeader.astro';
-import { Image } from 'astro:assets';
-import { formatDate } from '../../scripts/format-date'; // Consistent date rendering
-import defaultOg from '../../assets/logo/logo.jpg?url'; // Default site OG image fallback
-import ShareBar from '../../components/ShareBar.astro';
-import { getCollection, getEntryBySlug, type CollectionEntry } from 'astro:content';
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { Image } from "astro:assets";
+import { formatDate } from "../../scripts/format-date"; // Consistent date rendering
+import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image fallback
+import ShareBar from "../../components/ShareBar.astro";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 
-type BlogEntry = CollectionEntry<'blog'>;
+type BlogEntry = CollectionEntry<"blog">;
 
 // Generate static routes for all blog entries at build time
 export async function getStaticPaths() {
-  const entries = await getCollection('blog');
+  const entries = await getCollection("blog", ({ data }) => {
+    return data.lang === "en" || data.lang === undefined;
+  });
   return entries.map((entry: BlogEntry) => ({
     params: { slug: entry.slug },
   }));
@@ -22,11 +24,11 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 if (!slug || Array.isArray(slug)) {
-  throw new Error('Invalid blog slug');
+  throw new Error("Invalid blog slug");
 }
 
 // Look up the entry by slug; fail early if missing to avoid undefined renders
-const entry = await getEntryBySlug('blog', slug);
+const entry = await getEntry("blog", slug);
 
 if (!entry) {
   throw new Error(`Blog post not found for slug: ${slug}`);
@@ -39,27 +41,35 @@ const downloads = Array.isArray(post.downloads) ? post.downloads : [];
 const dlSchemas = downloads.filter((d) => /schema/i.test(d.label));
 const dlExamples = downloads.filter((d) => /(example|sample)/i.test(d.label));
 const dlTemplates = downloads.filter((d) => /template/i.test(d.label));
-const dlOther = downloads.filter((d) => !/(schema|example|sample|template)/i.test(d.label));
+const dlOther = downloads.filter(
+  (d) => !/(schema|example|sample|template)/i.test(d.label),
+);
 
 // Derive product label from tags (UI label collapsed to a concise product name)
-const tagList: string[] = Array.isArray((post as any)?.tags) ? ((post as any).tags as unknown as string[]) : [];
-const hasMobile = tagList.includes('product:mobile');
-const hasDigital = tagList.includes('product:digital');
-const productLabel = hasMobile && hasDigital
-  ? 'Mythic GME Apps'
-  : hasMobile
-    ? 'Mythic GME Mobile'
-    : hasDigital
-      ? 'Mythic GME Digital'
-      : 'Mythic GME Apps';
-
+const tagList: string[] = Array.isArray((post as any)?.tags)
+  ? ((post as any).tags as unknown as string[])
+  : [];
+const hasMobile = tagList.includes("product:mobile");
+const hasDigital = tagList.includes("product:digital");
+const productLabel =
+  hasMobile && hasDigital
+    ? "Mythic GME Apps"
+    : hasMobile
+      ? "Mythic GME Mobile"
+      : hasDigital
+        ? "Mythic GME Digital"
+        : "Mythic GME Apps";
 
 const canonicalUrl = `https://jasonholtdigital.com/blog/${entry.slug}/`;
 // Compute absolute OG image URL with fallbacks: socialImage → hero → default site image
 const ogSrcPath = post.socialImage?.src ?? post.hero?.src ?? defaultOg;
-const ogImageUrl = new URL(ogSrcPath, Astro.site ?? 'https://jasonholtdigital.com').toString();
+const ogImageUrl = new URL(
+  ogSrcPath,
+  Astro.site ?? "https://jasonholtdigital.com",
+).toString();
 const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -68,8 +78,13 @@ const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
     <title>{post.title} — Mythic Blog</title>
     <meta name="description" content={post.summary} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Mythic Blog" />
-    
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Mythic Blog"
+    />
+
     <!-- Open Graph for rich link previews across platforms (FB, Threads, Bluesky, Reddit, etc.) -->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Jason Holt Digital" />
@@ -78,18 +93,31 @@ const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
     {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-    {post.date && <meta property="article:published_time" content={post.date.toISOString()} />}
-    {Array.isArray((post as any)?.tags) && (post as any).tags.map((t: string) => (
-      <meta property="article:tag" content={t} />
-    ))}
-    
+    {
+      post.date && (
+        <meta
+          property="article:published_time"
+          content={post.date.toISOString()}
+        />
+      )
+    }
+    {
+      Array.isArray((post as any)?.tags) &&
+        (post as any).tags.map((t: string) => (
+          <meta property="article:tag" content={t} />
+        ))
+    }
+
     <!-- Twitter Card tags for platforms that consume them (summary_large_image) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={post.title} />
     <meta name="twitter:description" content={post.summary} />
     <meta name="twitter:image" content={ogImageUrl} />
     <link rel="stylesheet" href="/global.css" />
-    <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/9f0db3cdf4.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to main content</a>
@@ -108,161 +136,287 @@ const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
       />
 
       <main id="main" class="blog-detail-main">
-        <article class="container section blog-detail" aria-labelledby="blog-detail-heading">
+        <article
+          class="container section blog-detail"
+          aria-labelledby="blog-detail-heading"
+        >
           <div class="blog-detail__inner">
             <p class="blog-detail__back">
               <a class="blog-back-link" href="/blog#recent-title">
-                <i class="fa-slab fa-regular fa-arrow-left" aria-hidden="true"></i>
+                <i class="fa-slab fa-regular fa-arrow-left" aria-hidden="true"
+                ></i>
                 Back to blog
               </a>
             </p>
             <header class="blog-detail__header">
-              <h2 id="blog-detail-heading" class="blog-detail__title">{post.title}</h2>
+              <h2 id="blog-detail-heading" class="blog-detail__title">
+                {post.title}
+              </h2>
               <div class="blog-detail__meta" aria-label="Post details">
                 <span class="blog-pill">{post.category}</span>
                 <span class="blog-pill">{formatDate(post.date)}</span>
                 <span class="blog-pill">{post.readTime}</span>
-                {post.isSample && <span class="blog-pill blog-pill--sample">Sample</span>}
+                {
+                  post.isSample && (
+                    <span class="blog-pill blog-pill--sample">Sample</span>
+                  )
+                }
               </div>
-              {post.isSample && (
-                <p class="blog-sample-note blog-sample-note--detail">Sample placeholder — replace this entry before publishing to production.</p>
-              )}
+              {
+                post.isSample && (
+                  <p class="blog-sample-note blog-sample-note--detail">
+                    Sample placeholder — replace this entry before publishing to
+                    production.
+                  </p>
+                )
+              }
             </header>
-            <ShareBar url={canonicalUrl} title={post.title} summary={post.summary} />
-            {/* Optional hero image; high priority due to position near top of page */}
-            {post.hero && (
-              <figure class="blog-hero">
-                <Image
-                  src={post.hero}
-                  alt={post.heroAlt ?? ''}
-                  widths={[480, 768, 1024, 1440]}
-                  sizes="(max-width: 768px) 92vw, 1100px"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                  class="blog-hero__img"
-                />
-                {post.heroAlt && <figcaption class="blog-hero__caption">{post.heroAlt}</figcaption>}
-              </figure>
-            )}
+            <ShareBar
+              url={canonicalUrl}
+              title={post.title}
+              summary={post.summary}
+            />
+            {
+              /* Optional hero image; high priority due to position near top of page */
+            }
+            {
+              post.hero && (
+                <figure class="blog-hero">
+                  <Image
+                    src={post.hero}
+                    alt={post.heroAlt ?? ""}
+                    widths={[480, 768, 1024, 1440]}
+                    sizes="(max-width: 768px) 92vw, 1100px"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    class="blog-hero__img"
+                  />
+                  {post.heroAlt && (
+                    <figcaption class="blog-hero__caption">
+                      {post.heroAlt}
+                    </figcaption>
+                  )}
+                </figure>
+              )
+            }
             <div class="blog-detail__content">
               <Content />
             </div>
-            {(downloads.length > 0) && (
-              <section class="section section-band" aria-labelledby="blog-downloads-title">
-                <header class="section-head" aria-hidden="true">
-                  <span class="accent-line" aria-hidden="true"></span>
-                  <span class="badge-text">Downloads</span>
-                </header>
-                <h3 id="blog-downloads-title" class="section-title">Downloads</h3>
-                <div class="blog-downloads__groups">
-                  {dlSchemas.length > 0 && (
-                    <div class="blog-downloads__group">
-                      <h4 class="blog-downloads__group-title">Schemas</h4>
-                      <ul class="blog-downloads__list" aria-label="Schema downloads">
-                        {dlSchemas.map((d) => (
-                          <li class="blog-downloads__item">
-                            <a href={d.href} class="blog-downloads__link" download>
-                              <span class="blog-downloads__icon" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
-                              </span>
-                              <span class="blog-downloads__body">
-                                <span class="blog-downloads__label">{d.label}</span>
-                                <span class="blog-downloads__meta">
-                                  {d.format && <span class="blog-downloads__format">{d.format}</span>}
-                                  {d.size && <span class="blog-downloads__size">{d.size}</span>}
+            {
+              downloads.length > 0 && (
+                <section
+                  class="section section-band"
+                  aria-labelledby="blog-downloads-title"
+                >
+                  <header class="section-head" aria-hidden="true">
+                    <span class="accent-line" aria-hidden="true" />
+                    <span class="badge-text">Downloads</span>
+                  </header>
+                  <h3 id="blog-downloads-title" class="section-title">
+                    Downloads
+                  </h3>
+                  <div class="blog-downloads__groups">
+                    {dlSchemas.length > 0 && (
+                      <div class="blog-downloads__group">
+                        <h4 class="blog-downloads__group-title">Schemas</h4>
+                        <ul
+                          class="blog-downloads__list"
+                          aria-label="Schema downloads"
+                        >
+                          {dlSchemas.map((d) => (
+                            <li class="blog-downloads__item">
+                              <a
+                                href={d.href}
+                                class="blog-downloads__link"
+                                download
+                              >
+                                <span
+                                  class="blog-downloads__icon"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-down-to-line" />
                                 </span>
-                              </span>
-                              <span class="blog-downloads__arrow" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-right"></i>
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {dlExamples.length > 0 && (
-                    <div class="blog-downloads__group">
-                      <h4 class="blog-downloads__group-title">Examples</h4>
-                      <ul class="blog-downloads__list" aria-label="Example downloads">
-                        {dlExamples.map((d) => (
-                          <li class="blog-downloads__item">
-                            <a href={d.href} class="blog-downloads__link" download>
-                              <span class="blog-downloads__icon" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
-                              </span>
-                              <span class="blog-downloads__body">
-                                <span class="blog-downloads__label">{d.label}</span>
-                                <span class="blog-downloads__meta">
-                                  {d.format && <span class="blog-downloads__format">{d.format}</span>}
-                                  {d.size && <span class="blog-downloads__size">{d.size}</span>}
+                                <span class="blog-downloads__body">
+                                  <span class="blog-downloads__label">
+                                    {d.label}
+                                  </span>
+                                  <span class="blog-downloads__meta">
+                                    {d.format && (
+                                      <span class="blog-downloads__format">
+                                        {d.format}
+                                      </span>
+                                    )}
+                                    {d.size && (
+                                      <span class="blog-downloads__size">
+                                        {d.size}
+                                      </span>
+                                    )}
+                                  </span>
                                 </span>
-                              </span>
-                              <span class="blog-downloads__arrow" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-right"></i>
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {dlTemplates.length > 0 && (
-                    <div class="blog-downloads__group">
-                      <h4 class="blog-downloads__group-title">Templates</h4>
-                      <ul class="blog-downloads__list" aria-label="Template downloads">
-                        {dlTemplates.map((d) => (
-                          <li class="blog-downloads__item">
-                            <a href={d.href} class="blog-downloads__link" download>
-                              <span class="blog-downloads__icon" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
-                              </span>
-                              <span class="blog-downloads__body">
-                                <span class="blog-downloads__label">{d.label}</span>
-                                <span class="blog-downloads__meta">
-                                  {d.format && <span class="blog-downloads__format">{d.format}</span>}
-                                  {d.size && <span class="blog-downloads__size">{d.size}</span>}
+                                <span
+                                  class="blog-downloads__arrow"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-right" />
                                 </span>
-                              </span>
-                              <span class="blog-downloads__arrow" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-right"></i>
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {dlOther.length > 0 && (
-                    <div class="blog-downloads__group">
-                      <h4 class="blog-downloads__group-title">Other</h4>
-                      <ul class="blog-downloads__list" aria-label="Other downloads">
-                        {dlOther.map((d) => (
-                          <li class="blog-downloads__item">
-                            <a href={d.href} class="blog-downloads__link" download>
-                              <span class="blog-downloads__icon" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-down-to-line"></i>
-                              </span>
-                              <span class="blog-downloads__body">
-                                <span class="blog-downloads__label">{d.label}</span>
-                                <span class="blog-downloads__meta">
-                                  {d.format && <span class="blog-downloads__format">{d.format}</span>}
-                                  {d.size && <span class="blog-downloads__size">{d.size}</span>}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {dlExamples.length > 0 && (
+                      <div class="blog-downloads__group">
+                        <h4 class="blog-downloads__group-title">Examples</h4>
+                        <ul
+                          class="blog-downloads__list"
+                          aria-label="Example downloads"
+                        >
+                          {dlExamples.map((d) => (
+                            <li class="blog-downloads__item">
+                              <a
+                                href={d.href}
+                                class="blog-downloads__link"
+                                download
+                              >
+                                <span
+                                  class="blog-downloads__icon"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-down-to-line" />
                                 </span>
-                              </span>
-                              <span class="blog-downloads__arrow" aria-hidden="true">
-                                <i class="fa-slab fa-regular fa-arrow-right"></i>
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </section>
-            )}
+                                <span class="blog-downloads__body">
+                                  <span class="blog-downloads__label">
+                                    {d.label}
+                                  </span>
+                                  <span class="blog-downloads__meta">
+                                    {d.format && (
+                                      <span class="blog-downloads__format">
+                                        {d.format}
+                                      </span>
+                                    )}
+                                    {d.size && (
+                                      <span class="blog-downloads__size">
+                                        {d.size}
+                                      </span>
+                                    )}
+                                  </span>
+                                </span>
+                                <span
+                                  class="blog-downloads__arrow"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-right" />
+                                </span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {dlTemplates.length > 0 && (
+                      <div class="blog-downloads__group">
+                        <h4 class="blog-downloads__group-title">Templates</h4>
+                        <ul
+                          class="blog-downloads__list"
+                          aria-label="Template downloads"
+                        >
+                          {dlTemplates.map((d) => (
+                            <li class="blog-downloads__item">
+                              <a
+                                href={d.href}
+                                class="blog-downloads__link"
+                                download
+                              >
+                                <span
+                                  class="blog-downloads__icon"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-down-to-line" />
+                                </span>
+                                <span class="blog-downloads__body">
+                                  <span class="blog-downloads__label">
+                                    {d.label}
+                                  </span>
+                                  <span class="blog-downloads__meta">
+                                    {d.format && (
+                                      <span class="blog-downloads__format">
+                                        {d.format}
+                                      </span>
+                                    )}
+                                    {d.size && (
+                                      <span class="blog-downloads__size">
+                                        {d.size}
+                                      </span>
+                                    )}
+                                  </span>
+                                </span>
+                                <span
+                                  class="blog-downloads__arrow"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-right" />
+                                </span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {dlOther.length > 0 && (
+                      <div class="blog-downloads__group">
+                        <h4 class="blog-downloads__group-title">Other</h4>
+                        <ul
+                          class="blog-downloads__list"
+                          aria-label="Other downloads"
+                        >
+                          {dlOther.map((d) => (
+                            <li class="blog-downloads__item">
+                              <a
+                                href={d.href}
+                                class="blog-downloads__link"
+                                download
+                              >
+                                <span
+                                  class="blog-downloads__icon"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-down-to-line" />
+                                </span>
+                                <span class="blog-downloads__body">
+                                  <span class="blog-downloads__label">
+                                    {d.label}
+                                  </span>
+                                  <span class="blog-downloads__meta">
+                                    {d.format && (
+                                      <span class="blog-downloads__format">
+                                        {d.format}
+                                      </span>
+                                    )}
+                                    {d.size && (
+                                      <span class="blog-downloads__size">
+                                        {d.size}
+                                      </span>
+                                    )}
+                                  </span>
+                                </span>
+                                <span
+                                  class="blog-downloads__arrow"
+                                  aria-hidden="true"
+                                >
+                                  <i class="fa-slab fa-regular fa-arrow-right" />
+                                </span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )
+            }
           </div>
         </article>
       </main>
@@ -272,7 +426,18 @@ const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
 </html>
 
 <style>
-  .blog-hero { margin: 1rem 0 2rem; }
-  .blog-hero__img { display: block; width: 100%; height: auto; border-radius: 15px; }
-  .blog-hero__caption { color: var(--color-text-muted); margin-top: .5rem; text-align: center; }
+  .blog-hero {
+    margin: 1rem 0 2rem;
+  }
+  .blog-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .blog-hero__caption {
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
 </style>

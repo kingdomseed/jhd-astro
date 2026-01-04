@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 
 import sentry from "@sentry/astro";
 import spotlightjs from "@spotlightjs/astro";
-import sentry from "@sentry/astro"; 
+import sentry from "@sentry/astro";
 import cloudflare from "@astrojs/cloudflare";
 
 // Astro configuration for this demo project.  The default settings are
@@ -13,6 +13,13 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   // Site is used for absolute URLs (e.g., in RSS) and canonical generation in some contexts
   site: 'https://jasonholtdigital.com',
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "pt"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
   integrations: [
     sentry({
       sourceMapsUploadOptions: {

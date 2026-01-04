@@ -1,22 +1,29 @@
 ---
 // Reviews rotator: small self-contained strip that cycles player quotes.
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
-<section class="strip" aria-label="What players say">
+
+<section class="strip" aria-label={t("reviews.badge")}>
   <div class="container">
     <header class="strip-head" aria-hidden="true">
       <span class="accent-line" aria-hidden="true"></span>
-      <span class="badge-text">What players say</span>
+      <span class="badge-text">{t("reviews.badge")}</span>
     </header>
-    <h2 id="reviews-title" class="section-title" style="margin-bottom: 6px">Player reviews</h2>
-    <figure class="reviews-rotator" aria-label="Player reviews">
+    <h2 id="reviews-title" class="section-title" style="margin-bottom: 6px">
+      {t("reviews.title")}
+    </h2>
+    <figure class="reviews-rotator" aria-label={t("reviews.badge")}>
       <div class="rev-stage">
-        <p id="quote" aria-live="polite">Loading…</p>
+        <p id="quote" aria-live="polite">{t("reviews.loading")}</p>
       </div>
       <p id="rev-status" class="sr-only" aria-live="polite">Quote 1 of 1</p>
     </figure>
 
     <script>
-      import '../scripts/reviews-rotator.ts';
+      import "../scripts/reviews-rotator.ts";
       // Hoisted import: processed by Astro/Vite (TS supported)
     </script>
   </div>

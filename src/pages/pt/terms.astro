@@ -1,0 +1,396 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import defaultOg from "../../assets/logo/logo.jpg?url";
+
+const ogImageUrl = new URL(
+    defaultOg,
+    Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+---
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <HeadFonts />
+        <title>Termos de Serviço | Apps Mythic GME</title>
+        <meta
+            name="description"
+            content="Termos de Serviço para Apps Mythic GME: licença, compras e reembolsos, uso aceitável, isenções de responsabilidade e limitações de responsabilidade."
+        />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="stylesheet" href="/global.css" />
+        <script
+            is:inline
+            src="https://kit.fontawesome.com/9f0db3cdf4.js"
+            crossorigin="anonymous"></script>
+        <link rel="canonical" href="https://jasonholtdigital.com/pt/terms/" />
+    </head>
+    <body>
+        <a class="skip" href="#main">Pular para o conteúdo principal</a>
+        <div id="bg-atmo" aria-hidden="true"></div>
+        <div id="site">
+            <Header />
+
+            <PageHeader
+                title="Termos de Serviço"
+                subtitle="Termos claros para uso justo"
+                description="Termos de licença, compras e reembolsos, uso aceitável e limitações. Última atualização: 27 de Agosto de 2025"
+                accent="Legal"
+                layout="left"
+                icon="fa-solid fa-gavel"
+                visualElement="shapes"
+                colorScheme="primary"
+            />
+
+            <main id="main" class="legal-main">
+                <section class="section" aria-labelledby="terms-body">
+                    <div class="container legal-container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Legal</span>
+                        </header>
+                        <h2 id="terms-body" class="section-title">
+                            Use os apps com confiança
+                        </h2>
+                        <p class="legal-summary">
+                            Estes termos mantêm os apps Mythic GME justos para
+                            todos. Eles cobrem licenciamento, compras,
+                            reembolsos e como confiamos em serviços de
+                            terceiros.
+                        </p>
+                        <article class="legal-article">
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-acceptance"
+                            >
+                                <h2 id="terms-acceptance">
+                                    1) Acordo com os Termos
+                                </h2>
+                                <p>
+                                    Estes Termos de Serviço ("Termos") regem seu
+                                    uso dos apps Mythic GME e site operados pela
+                                    <strong>Jason Holt Digital LLC</strong> ("JHD",
+                                    "nós", "nosso"). Ao baixar, instalar ou usar
+                                    os apps, você concorda com estes Termos. Se você
+                                    não concordar, não use os apps.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-products"
+                            >
+                                <h2 id="terms-products">
+                                    2) Produtos Cobertos
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <strong>Mythic GME Mobile</strong> — iOS,
+                                        Android, macOS e web
+                                    </li>
+                                    <li>
+                                        <strong>Mythic GME Digital</strong> — Windows,
+                                        macOS e Linux
+                                    </li>
+                                </ul>
+                                <p>
+                                    <em
+                                        >Mythic Game Master Emulator 2nd Edition</em
+                                    > e nomes relacionados são marcas registradas
+                                    de e © Word Mill Creative LLC. Usado sob licença.
+                                    JHD desenvolve os companheiros digitais licenciados
+                                    oficiais.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-license"
+                            >
+                                <h2 id="terms-license">3) Licença e Uso</h2>
+                                <p>
+                                    Sujeito a estes Termos, a JHD concede a você
+                                    uma licença limitada, não exclusiva,
+                                    intransferível e revogável para instalar e
+                                    usar os apps para jogo de mesa pessoal e não
+                                    comercial. Você não pode copiar, distribuir,
+                                    vender, sublicenciar, modificar, fazer
+                                    engenharia reversa ou criar trabalhos
+                                    derivados, exceto conforme permitido por
+                                    lei.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Conteúdo oficial:</strong> Textos
+                                        e tabelas Mythic licenciados são para uso
+                                        apenas no app; não extraia ou redistribua.
+                                    </li>
+                                    <li>
+                                        <strong>Conteúdo do usuário:</strong> Seus
+                                        diários, cenas e tabelas personalizadas permanecem
+                                        seus e ficam no seu dispositivo a menos que
+                                        você os exporte/compartilhe.
+                                    </li>
+                                    <li>
+                                        <strong>Uso proibido:</strong> Nenhuma atividade
+                                        ilegal, infratora ou de scraping automatizado.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-purchases"
+                            >
+                                <h2 id="terms-purchases">
+                                    4) Compras, Assinaturas e Impostos
+                                </h2>
+                                <p>
+                                    Preços e disponibilidade podem variar por
+                                    plataforma e região. Compras feitas através
+                                    da Apple App Store, Google Play ou itch.io
+                                    são processadas por essas lojas; seus termos
+                                    e tratamento de impostos/VAT se aplicam.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Compras no app:</strong> Entrega
+                                        é imediata assim que a loja confirma sua
+                                        compra.
+                                    </li>
+                                    <li>
+                                        <strong>Impostos/VAT:</strong> Coletados
+                                        e remetidos pela loja conforme aplicável.
+                                    </li>
+                                    <li>
+                                        <strong>Recibos:</strong> Fornecidos pela
+                                        loja ou pelo itch.io para compras diretas
+                                        desktop.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-refunds"
+                            >
+                                <h2 id="terms-refunds">5) Reembolsos</h2>
+                                <p>
+                                    Reembolsos para compras feitas via loja de
+                                    plataforma são tratados sob a política dessa
+                                    loja. Se você precisar de ajuda para iniciar
+                                    uma solicitação, entre em contato e nós lhe
+                                    indicaremos o processo correto.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Apple App Store:</strong> Solicite
+                                        em <a
+                                            href="https://reportaproblem.apple.com/"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >reportaproblem.apple.com</a>
+                                    </li>
+                                    <li>
+                                        <strong>Google Play:</strong> Veja <a
+                                            href="https://support.google.com/googleplay/answer/2479637"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >Reembolsos Google Play</a>
+                                    </li>
+                                    <li>
+                                        <strong>itch.io:</strong> Contate o criador
+                                        ou suporte do itch.io conforme diretrizes
+                                        de reembolso deles
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-third-party"
+                            >
+                                <h2 id="terms-third-party">
+                                    6) Serviços Terceirizados
+                                </h2>
+                                <p>
+                                    Os apps interagem com serviços de terceiros
+                                    para analytics e diagnósticos conforme
+                                    descrito em nossa
+                                    <a href="/pt/privacy"
+                                        >Política de Privacidade</a
+                                    >. Uso desses serviços está sujeito aos seus
+                                    termos. SDKs de publicidade não são usados.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-disclaimer"
+                            >
+                                <h2 id="terms-disclaimer">
+                                    7) Isenções de Responsabilidade
+                                </h2>
+                                <p>
+                                    OS APPS E SITE SÃO FORNECIDOS "COMO ESTÃO" E
+                                    "CONFORME DISPONÍVEIS" SEM GARANTIAS DE
+                                    QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS,
+                                    INCLUINDO MAS NÃO SE LIMITANDO A GARANTIAS
+                                    IMPLÍCITAS DE COMERCIABILIDADE, ADEQUAÇÃO A
+                                    UM DETERMINADO FIM E NÃO VIOLAÇÃO. NÃO
+                                    GARANTIMOS QUE OS APPS SERÃO LIVRES DE ERROS
+                                    OU ININTERRUPTOS.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-liability"
+                            >
+                                <h2 id="terms-liability">
+                                    8) Limitação de Responsabilidade
+                                </h2>
+                                <p>
+                                    NA EXTENSÃO MÁXIMA PERMITIDA POR LEI, A JHD
+                                    E SEUS LICENCIADORES NÃO SERÃO RESPONSÁVEIS
+                                    POR QUAISQUER DANOS INDIRETOS, ACIDENTAIS,
+                                    ESPECIAIS, CONSEQUENCIAIS OU PUNITIVOS, OU
+                                    QUALQUER PERDA DE DADOS, LUCROS OU RECEITA,
+                                    DECORRENTES DE OU RELACIONADOS AO SEU USO
+                                    DOS APPS. A RESPONSABILIDADE TOTAL POR
+                                    QUALQUER RECLAMAÇÃO NÃO EXCEDERÁ O VALOR
+                                    PAGO POR VOCÊ NOS 12 MESES ANTERIORES À
+                                    RECLAMAÇÃO.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-indemnity"
+                            >
+                                <h2 id="terms-indemnity">9) Indenização</h2>
+                                <p>
+                                    Você concorda em indenizar e isentar a JHD e
+                                    seus licenciadores de quaisquer reclamações,
+                                    perdas e despesas (incluindo honorários
+                                    advocatícios razoáveis) decorrentes de sua
+                                    violação destes Termos ou mau uso dos apps.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-termination"
+                            >
+                                <h2 id="terms-termination">10) Rescisão</h2>
+                                <p>
+                                    Podemos suspender ou encerrar o acesso se
+                                    você violar estes Termos. Você pode
+                                    desinstalar ou descontinuar o uso a qualquer
+                                    momento; isso não lhe dá direito a
+                                    reembolsos além das políticas de cada
+                                    plataforma.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-changes"
+                            >
+                                <h2 id="terms-changes">
+                                    11) Mudanças nestes Termos
+                                </h2>
+                                <p>
+                                    Podemos atualizar estes Termos conforme os
+                                    apps evoluem. Atualizaremos a data de
+                                    "Última Atualização" acima e, quando
+                                    necessário, anunciaremos mudanças no app. O
+                                    uso contínuo após atualizações significa que
+                                    você aceita os novos Termos.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-governing-law"
+                            >
+                                <h2 id="terms-governing-law">
+                                    12) Lei Regente
+                                </h2>
+                                <p>
+                                    Estes Termos são regidos pelas leis do
+                                    Estado de Delaware, EUA, sem considerar suas
+                                    regras de conflito de leis. O foro para
+                                    disputas serão os tribunais estaduais ou
+                                    federais localizados em Delaware, onde
+                                    permitido.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-app-store"
+                            >
+                                <h2 id="terms-app-store">
+                                    13) Requisitos da App Store
+                                </h2>
+                                <p>
+                                    Se você baixou o app da Apple App Store ou
+                                    Google Play, você também concorda com os
+                                    termos deles. Nem a Apple nem o Google são
+                                    responsáveis por fornecer manutenção ou
+                                    suporte para o app.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-ip"
+                            >
+                                <h2 id="terms-ip">
+                                    14) Aviso de Propriedade Intelectual
+                                </h2>
+                                <p>
+                                    Mythic Game Master Emulator 2nd Edition ©
+                                    Word Mill Creative LLC. Usado sob licença.
+                                    Apps Mythic GME © Jason Holt Digital LLC.
+                                    Todos os direitos reservados.
+                                </p>
+                            </section>
+
+                            <section
+                                class="legal-section"
+                                aria-labelledby="terms-contact"
+                            >
+                                <h2 id="terms-contact">15) Contato</h2>
+                                <p>
+                                    Se você tiver perguntas sobre estes Termos,
+                                    contate:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>E-mail:</strong>
+                                        <a
+                                            href="mailto:legal@jasonholtdigital.com"
+                                            >legal@jasonholtdigital.com</a>
+                                    </li>
+                                    <li>
+                                        <strong>Correio:</strong> Jason Holt Digital
+                                        LLC, 1111b S Governors Avenue STE 21904,
+                                        Dover, DE 19904 US
+                                    </li>
+                                </ul>
+                            </section>
+                        </article>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>

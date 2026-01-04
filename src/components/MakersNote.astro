@@ -2,27 +2,48 @@
 // Maker’s note provides a personal introduction from Jason.  The
 // layout uses the avatar monogram and muted text colours to
 // complement the rest of the page.
-import { Image } from 'astro:assets';
-import headshot from '../assets/people/jason-school.jpg';
+import { Image } from "astro:assets";
+import headshot from "../assets/people/jason-school.jpg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const l = (path: string) => getRelativeLocaleUrl(lang, path);
 ---
-<section class="container section note" id="about" aria-labelledby="about-title">
+
+<section
+  class="container section note"
+  id="about"
+  aria-labelledby="about-title"
+>
   <header class="section-head" aria-hidden="true">
     <span class="accent-line" aria-hidden="true"></span>
-    <span class="badge-text">About</span>
+    <span class="badge-text">{t("makers.badge")}</span>
   </header>
-  <h2 id="about-title" class="section-title" style="margin-bottom: 10px">Maker’s Note</h2>
+  <h2 id="about-title" class="section-title" style="margin-bottom: 10px">
+    {t("makers.title")}
+  </h2>
   <div class="row" style="align-items: center; justify-content: center">
     <div class="avatar">
-      <Image class="avatar-img" src={headshot} alt="Jason Holt" width={80} height={80} loading="lazy" decoding="async" />
+      <Image
+        class="avatar-img"
+        src={headshot}
+        alt="Jason Holt"
+        width={80}
+        height={80}
+        loading="lazy"
+        decoding="async"
+      />
     </div>
     <div>
-      <p style="margin: .5rem 0; color: var(--muted)">
-        Hi, I’m Jason—an indie developer focused on tools that respect and amplify tabletop creativity. I build the
-        <strong>official Mythic GME&nbsp;2e apps</strong> in partnership with Word Mill Creative. Players often tell me the app is quick and easy to use, helping them dive into their adventures without breaking the flow of the story. Whether you’re just starting out with Mythic and looking for a faster way to learn the basics, or a seasoned veteran wanting smoother workflow or on‑the‑go play — you’re in the right place. Welcome to your next great adventure.
-      </p>
+      <p
+        style="margin: .5rem 0; color: var(--muted)"
+        set:html={t("makers.text")}
+      />
       <p class="cta">
-        <a class="btn btn--shadow-primary btn--compact" href="/about">
-          Read the full story
+        <a class="btn btn--shadow-primary btn--compact" href={l("about")}>
+          {t("makers.cta")}
           <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
         </a>
       </p>

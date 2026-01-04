@@ -2,24 +2,36 @@
 // Community and support section offering two avenues: joining the
 // community via Discord or getting help quickly through support
 // resources.  Styled panels group related content for easy scanning.
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const l = (path: string) => getRelativeLocaleUrl(lang, path);
 ---
+
 <section class="container section" id="support" aria-labelledby="support-title">
   <header class="section-head" aria-hidden="true">
     <span class="accent-line" aria-hidden="true"></span>
-    <span class="badge-text">Help &amp; community</span>
+    <span class="badge-text">{t("community.badge")}</span>
   </header>
-  <h2 id="support-title" class="section-title">Join the community</h2>
+  <h2 id="support-title" class="section-title">{t("community.title")}</h2>
   <div class="twoup">
     <div class="panel">
       <div class="panel-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-users"></i>
       </div>
-      <h3>Join the Community</h3>
-      <p>Tips, support, feature requests—say hi!</p>
+      <h3>{t("community.discord.title")}</h3>
+      <p>{t("community.discord.desc")}</p>
       <p>
-        <a class="btn btn--shadow-discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">
+        <a
+          class="btn btn--shadow-discord"
+          href="https://discord.gg/PEDHrhzcnk"
+          target="_blank"
+          rel="noopener"
+        >
           <i class="fa-brands fa-discord" aria-hidden="true"></i>
-          Discord
+          {t("community.discord.action")}
         </a>
       </p>
     </div>
@@ -27,11 +39,11 @@
       <div class="panel-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-life-ring"></i>
       </div>
-      <h3>Get Help Fast</h3>
-      <p>Quick FAQ and a simple way to contact us.</p>
+      <h3>{t("community.support.title")}</h3>
+      <p>{t("community.support.desc")}</p>
       <p>
-        <a class="btn btn--shadow-primary" href="/support">
-          Support &amp; FAQ
+        <a class="btn btn--shadow-primary" href={l("support")}>
+          {t("community.support.action")}
           <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
         </a>
       </p>

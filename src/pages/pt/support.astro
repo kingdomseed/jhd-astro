@@ -1,0 +1,1479 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import defaultOg from "../../assets/logo/logo.jpg?url";
+const ogImageUrl = new URL(
+    defaultOg,
+    Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+
+const FORMSPARK_FORM_ID = "BrXEDLTap";
+const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
+---
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <HeadFonts />
+        <title>
+            Suporte e Contato — Obtenha Ajuda Rápido | Apps Mythic GME
+        </title>
+        <meta
+            name="description"
+            content="Respostas rápidas, Discord e opções de contato para Mythic GME Mobile e Digital."
+        />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="stylesheet" href="/global.css" />
+        <script
+            is:inline
+            src="https://kit.fontawesome.com/9f0db3cdf4.js"
+            crossorigin="anonymous"></script>
+        <script
+            is:inline
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            async
+            defer></script>
+        <link rel="canonical" href="https://jasonholtdigital.com/pt/support/" />
+    </head>
+    <body>
+        <a class="skip" href="#main">Pular para o conteúdo principal</a>
+        <div id="bg-atmo" aria-hidden="true"></div>
+        <div id="site">
+            <Header />
+
+            <PageHeader
+                title="Suporte e Contato"
+                subtitle="Obtenha ajuda ou inicie uma conversa"
+                description="Respostas rápidas, suporte da comunidade e opções de contato direto, tudo em um só lugar."
+                accent="Support"
+                layout="left"
+                icon="fa-solid fa-life-ring"
+                visualElement="particles"
+                colorScheme="accent"
+            />
+
+            <main id="main" class="support-main">
+                <section class="section" aria-labelledby="support-tabs-title">
+                    <div class="container support-container">
+                        <header class="section-head" aria-hidden="true">
+                            <span class="accent-line" aria-hidden="true"></span>
+                            <span class="badge-text">Suporte</span>
+                        </header>
+                        <div class="support-intro">
+                            <h2 id="support-tabs-title" class="section-title">
+                                Obtenha ajuda rápido
+                            </h2>
+                            <p class="support-intro__summary">
+                                Escolha o chat da comunidade, envie um e-mail ou
+                                navegue pelo FAQ completo. As abas mantêm tudo
+                                ao alcance sem perder seu lugar.
+                            </p>
+                        </div>
+
+                        <div class="support-tabs" role="presentation">
+                            <ul class="tab-nav" role="tablist">
+                                <li>
+                                    <button
+                                        class="tab-button active"
+                                        role="tab"
+                                        aria-selected="true"
+                                        aria-controls="support-panel"
+                                        id="support-tab"
+                                    >
+                                        <i
+                                            class="fa-slab fa-regular fa-life-ring"
+                                            aria-hidden="true"></i>
+                                        Suporte e FAQ
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="tab-button"
+                                        role="tab"
+                                        aria-selected="false"
+                                        aria-controls="contact-panel"
+                                        id="contact-tab"
+                                    >
+                                        <i
+                                            class="fa-slab fa-regular fa-envelope"
+                                            aria-hidden="true"></i>
+                                        Contato
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            id="support-panel"
+                            class="tab-content active"
+                            role="tabpanel"
+                            aria-labelledby="support-tab"
+                        >
+                            <section aria-labelledby="help-title">
+                                <h2 id="help-title">Como Obter Ajuda</h2>
+                                <div class="twoup">
+                                    <div class="panel">
+                                        <h3>Discord</h3>
+                                        <p>
+                                            Dicas da comunidade, pedidos de
+                                            recursos, respostas rápidas.
+                                        </p>
+                                        <p>
+                                            <a
+                                                class="btn btn--shadow-discord"
+                                                href="https://discord.gg/PEDHrhzcnk"
+                                                target="_blank"
+                                                rel="noopener"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-discord"
+                                                    aria-hidden="true"></i>
+                                                Entrar no Discord
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="panel">
+                                        <h3>Suporte por E-mail</h3>
+                                        <p>
+                                            Para problemas detalhados, envie um
+                                            e-mail para o Suporte.
+                                        </p>
+                                        <p>
+                                            <a
+                                                class="btn btn--shadow-primary"
+                                                href="mailto:support@jasonholtdigital.com"
+                                            >
+                                                <i
+                                                    class="fa-slab fa-regular fa-envelope"
+                                                    aria-hidden="true"></i>
+                                                Enviar E-mail
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section id="faqs" aria-labelledby="faqs-title">
+                                <h2 id="faqs-title">FAQ Abrangente</h2>
+
+                                <!-- General & Platforms Section -->
+                                <div class="faq-section">
+                                    <button
+                                        class="faq-section-header"
+                                        aria-expanded="true"
+                                        aria-controls="general-section"
+                                    >
+                                        <h3>Geral e Plataformas</h3>
+                                        <i
+                                            class="fa-solid fa-chevron-down"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        id="general-section"
+                                        class="faq-section-content"
+                                    >
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="what-is-mythic"
+                                            >
+                                                <strong
+                                                    >O que é Mythic GME Mobile /
+                                                    Digital?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="what-is-mythic"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    O companheiro oficialmente
+                                                    licenciado para Mythic Game
+                                                    Master Emulator 2e da Word
+                                                    Mill Creative. Ele agiliza a
+                                                    Tabela de Destino / Teste de
+                                                    Destino, Eventos Aleatórios,
+                                                    Testes de Cena, Tabelas de
+                                                    Significado, listas, cenas e
+                                                    muito mais — offline first
+                                                    em cada plataforma que
+                                                    lançamos.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="who-makes"
+                                            >
+                                                <strong>Quem faz?</strong>
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="who-makes"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Construído por Jason Holt, o
+                                                    desenvolvedor solo da Jason
+                                                    Holt Digital sob uma
+                                                    parceria exclusiva para
+                                                    mobile/desktop com a Word
+                                                    Mill Creative.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="where-get"
+                                            >
+                                                <strong
+                                                    >Onde posso conseguir?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="where-get"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        <strong
+                                                            >Apple App Store:</strong
+                                                        > iPhone • iPad • macOS (Compra
+                                                        Universal)
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Google Play:</strong
+                                                        > Celulares e tablets Android
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Amazon Appstore:</strong
+                                                        > Tablets Fire
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Windows Store:</strong
+                                                        > Windows 10 e 11
+                                                    </li>
+                                                    <li>
+                                                        <strong>Itch.io:</strong
+                                                        > Versões Windows, macOS
+                                                        e Linux (Flatpak) sem DRM
+                                                        (Compra Universal)
+                                                    </li>
+                                                    <li>
+                                                        <strong>Steam:</strong> planejado
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="worldwide"
+                                            >
+                                                <strong
+                                                    >Está disponível
+                                                    mundialmente?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="worldwide"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Sim. Disponibilidade e
+                                                    preços variam por
+                                                    loja/região.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="cross-platform"
+                                            >
+                                                <strong
+                                                    >Se eu comprar o app em uma
+                                                    plataforma, preciso comprar
+                                                    em outra?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="cross-platform"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Sim. Cada plataforma requer
+                                                    seus próprios custos de
+                                                    desenvolvimento e
+                                                    investimento de tempo. A
+                                                    única exceção é o sistema de
+                                                    compra universal da Apple
+                                                    App Store e a plataforma
+                                                    Itch.io, que permite comprar
+                                                    o app em uma plataforma e
+                                                    ter acesso para baixar o app
+                                                    para outras plataformas
+                                                    também.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="need-book"
+                                            >
+                                                <strong
+                                                    >Eu preciso do livro de
+                                                    regras do Mythic GME 2e?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="need-book"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    O app é um companheiro para
+                                                    o livro, então o livro é
+                                                    altamente recomendado e
+                                                    efetivamente necessário. O
+                                                    app implementa/acelera o
+                                                    Mythic, mas o livro ensina o
+                                                    sistema, variantes, e inclui
+                                                    muitos exemplos e regras
+                                                    alternativas que você pode
+                                                    aplicar.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Features & Data Section -->
+                                <div class="faq-section">
+                                    <button
+                                        class="faq-section-header"
+                                        aria-expanded="false"
+                                        aria-controls="features-section"
+                                    >
+                                        <h3>Recursos e Dados</h3>
+                                        <i
+                                            class="fa-solid fa-chevron-down"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        id="features-section"
+                                        class="faq-section-content"
+                                    >
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="core-features"
+                                            >
+                                                <strong
+                                                    >Recursos principais</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="core-features"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        Tabela de Destino /
+                                                        Teste de Destino com
+                                                        Fator de Caos
+                                                    </li>
+                                                    <li>
+                                                        Eventos Aleatórios e
+                                                        Foco de Evento (role
+                                                        independentemente quando
+                                                        desejar)
+                                                    </li>
+                                                    <li>
+                                                        Testes de Cena e Ajustes
+                                                        de Cena como escrito
+                                                    </li>
+                                                    <li>
+                                                        Tabelas de Significado:
+                                                        todas as tabelas
+                                                        oficiais incluídas para
+                                                        rolagem (mais tabelas
+                                                        adicionais abrangendo
+                                                        toda a linha do tempo
+                                                        Mythic disponíveis via
+                                                        IAP)
+                                                    </li>
+                                                    <li>
+                                                        Listas de Aventura:
+                                                        Personagens • Tramas •
+                                                        Características
+                                                        (integrado com eventos)
+                                                        permitindo tanto Mythic
+                                                        com e sem Aventuras
+                                                        Preparadas
+                                                    </li>
+                                                    <li>
+                                                        Cenas: títulos, resumos,
+                                                        caos; cenas ilimitadas
+                                                    </li>
+                                                    <li>
+                                                        Rolador de Dados:
+                                                        suporta notações como
+                                                        1d6, 2d10+3, 4d6kh3 e
+                                                        muito mais, e salva suas
+                                                        fórmulas para rolagens
+                                                        comuns
+                                                    </li>
+                                                    <li>
+                                                        Logs e Sistema de
+                                                        Diário: para acompanhar
+                                                        seus jogos e alternar
+                                                        entre diferentes
+                                                        aventuras
+                                                    </li>
+                                                    <li>
+                                                        Importar/Exportar
+                                                        Aventuras: Diários
+                                                        exportam para JSON e MD
+                                                        para que você possa
+                                                        importar e
+                                                        compartilhá-los
+                                                    </li>
+                                                    <li>
+                                                        Sincronização iCloud
+                                                        (com mais opções de
+                                                        sincronização em nuvem
+                                                        em breve): Para
+                                                        dispositivos Apple você
+                                                        pode sincronizar seus
+                                                        diários e fórmulas. Para
+                                                        outras plataformas você
+                                                        pode selecionar seu
+                                                        próprio local de
+                                                        armazenamento
+                                                    </li>
+                                                    <li>
+                                                        Conteúdo das Revistas
+                                                        Mythic (REQUER IAP)
+                                                    </li>
+                                                    <li>
+                                                        Tabelas Personalizadas
+                                                        (v1.5+) (REQUER IAP):
+                                                        Crie, edite, importe,
+                                                        exporte seus próprios
+                                                        oráculos: CSV/JSON,
+                                                        tags, rolagens pareadas,
+                                                        link em nível de
+                                                        entrada, e mais
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="accessibility"
+                                            >
+                                                <strong>Acessibilidade</strong>
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="accessibility"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        Suporte a <strong
+                                                            >leitor de tela</strong
+                                                        > nas principais plataformas.
+                                                    </li>
+                                                    <li>
+                                                        Paletas amigáveis para <strong
+                                                            >daltonismo</strong
+                                                        > para contraste melhorado.
+                                                    </li>
+                                                    <li>
+                                                        Opções de <strong
+                                                            >texto grande/muito
+                                                            grande</strong
+                                                        > que escalam a UI principal.
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Modo para canhotos</strong
+                                                        > para uso confortável com
+                                                        uma mão.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="languages"
+                                            >
+                                                <strong>Idiomas</strong>
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="languages"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Incluímos a localização
+                                                    oficial em Português
+                                                    Brasileiro da RetroPunk
+                                                    Publicações e traduções não
+                                                    oficiais em Italiano,
+                                                    Francês, Alemão e Espanhol.
+                                                    Espero adicionar mais
+                                                    localizações oficiais com o
+                                                    tempo!
+                                                </p>
+                                                <p>
+                                                    <strong>NOTA:</strong> Apenas
+                                                    as tabelas de significado e foco
+                                                    de evento em Português são localizadas
+                                                    de fábrica. Com o editor de tabelas
+                                                    personalizadas, você pode localizar
+                                                    as outras tabelas de idioma você
+                                                    mesmo. Espero oferecer traduções
+                                                    oficiais de idiomas de outras
+                                                    editoras no futuro!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Purchases, Pricing & Upgrades Section -->
+                                <div class="faq-section">
+                                    <button
+                                        class="faq-section-header"
+                                        aria-expanded="false"
+                                        aria-controls="pricing-section"
+                                    >
+                                        <h3>Compras, Preços e Atualizações</h3>
+                                        <i
+                                            class="fa-solid fa-chevron-down"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        id="pricing-section"
+                                        class="faq-section-content"
+                                    >
+                                        <p>
+                                            <em
+                                                >Última atualização: 2025-08-30</em>
+                                        </p>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="new-app"
+                                            >
+                                                <strong
+                                                    >Por que uma nova listagem
+                                                    de app?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="new-app"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    O desenvolvedor original
+                                                    fechou seu negócio e parou o
+                                                    trabalho no app legado.
+                                                    Alguns meses depois,
+                                                    reiniciei o desenvolvimento
+                                                    sob a Jason Holt Digital.
+                                                    Como as contas da loja
+                                                    mudaram e a base de código
+                                                    foi reconstruída,
+                                                    Apple/Google/Amazon tratam
+                                                    isso como um novo produto,
+                                                    então não pode ser entregue
+                                                    como uma atualização
+                                                    gratuita para a listagem
+                                                    antiga.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="pricing-store"
+                                            >
+                                                <strong
+                                                    >Preços (por loja)</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="pricing-store"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        <strong
+                                                            >Apple App Store
+                                                            (Universal):</strong
+                                                        > ~$2.99 app base + ~$8.99
+                                                        desbloqueio de Recursos Expandidos
+                                                        único (não é assinatura).
+                                                        Uma compra cobre iOS/iPadOS/macOS.
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Google Play &
+                                                            Amazon Appstore:</strong
+                                                        > ~$2.99 base + ~$8.99 IAP
+                                                        de Recursos Expandidos.
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >Microsoft Store
+                                                            (Windows):</strong
+                                                        > $12.99 taxa única; sem
+                                                        IAP.
+                                                    </li>
+                                                    <li>
+                                                        <strong
+                                                            >itch.io (Sem DRM):</strong
+                                                        > $12.99 taxa única; sem
+                                                        IAP. (Inclui downloads para
+                                                        plataformas desktop suportadas.)
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    Os preços convertem para sua
+                                                    moeda local e podem variar
+                                                    por região/impostos. As
+                                                    páginas da loja mostram o
+                                                    preço atual no seu país.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="subscription"
+                                            >
+                                                <strong
+                                                    >Isso é uma assinatura?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="subscription"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Não. Lojas mobile usam um
+                                                    desbloqueio de Recursos
+                                                    Expandidos único. Lojas
+                                                    desktop são compras únicas
+                                                    sem IAP.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="expanded-features"
+                                            >
+                                                <strong
+                                                    >Como funciona o desbloqueio
+                                                    de Recursos Expandidos (não
+                                                    é assinatura)</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="expanded-features"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        Quando você compra o
+                                                        desbloqueio, você mantém
+                                                        todos os recursos
+                                                        expandidos atuais para
+                                                        sempre.
+                                                    </li>
+                                                    <li>
+                                                        Pelos próximos 12 meses,
+                                                        quaisquer novos recursos
+                                                        expandidos que
+                                                        adicionarmos também são
+                                                        seus permanentemente.
+                                                    </li>
+                                                    <li>
+                                                        Após 12 meses, o app
+                                                        continua a receber
+                                                        correções de bugs e
+                                                        melhorias, mas novos
+                                                        recursos expandidos
+                                                        aparecerão bloqueados
+                                                        até que você escolha
+                                                        comprar um novo
+                                                        desbloqueio.
+                                                    </li>
+                                                    <li>
+                                                        Este modelo lhe dá a
+                                                        liberdade de decidir
+                                                        quando vale a pena para
+                                                        você comprar uma
+                                                        atualização enquanto me
+                                                        compensa pelo trabalho
+                                                        contínuo neste projeto e
+                                                        me permite continuar a
+                                                        apoiá-lo.
+                                                    </li>
+                                                    <li>
+                                                        Com este modelo de
+                                                        preços, seus recursos
+                                                        existentes nunca
+                                                        expiram. O que você
+                                                        desbloquear, você mantém
+                                                        para sempre.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="included-today"
+                                            >
+                                                <strong
+                                                    >O que está incluído hoje
+                                                    (Recursos Expandidos)</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="included-today"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        50+ Tabelas de
+                                                        Significado adicionais
+                                                        das Revistas Mythic e
+                                                        Variações.
+                                                    </li>
+                                                    <li>
+                                                        12+ tabelas extras de
+                                                        Foco de Evento das
+                                                        Revistas e Variações.
+                                                    </li>
+                                                    <li>
+                                                        Kit de Tabelas
+                                                        Personalizadas —
+                                                        construa, vincule,
+                                                        marque, categorize,
+                                                        importe/exporte seus
+                                                        próprios oráculos
+                                                        (Significado e Foco de
+                                                        Evento) e modifique
+                                                        tabelas incluídas.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="planned-premium"
+                                            >
+                                                <strong
+                                                    >Adições premium planejadas
+                                                    (sujeito a alterações)</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="planned-premium"
+                                                class="faq-answer"
+                                            >
+                                                <ul>
+                                                    <li>
+                                                        Trilhas de Progresso e
+                                                        Cenas Chaveadas
+                                                    </li>
+                                                    <li>
+                                                        Listas Personalizadas
+                                                    </li>
+                                                    <li>
+                                                        Jogo Híbrido (use dados
+                                                        reais)
+                                                    </li>
+                                                    <li>
+                                                        Diário e anotações
+                                                        avançadas
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="old-app-questions"
+                                            >
+                                                <strong
+                                                    >Perguntas sobre o app
+                                                    antigo vs este?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="old-app-questions"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Se você tiver dúvidas sobre
+                                                    sua compra original ou como
+                                                    ela se relaciona com esta
+                                                    nova versão, entre em
+                                                    contato comigo por DM ou
+                                                    e-mail
+                                                    support@jasonholtdigital.com.
+                                                    Ficarei feliz em responder
+                                                    suas perguntas e
+                                                    preocupações.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="cross-platform-note"
+                                            >
+                                                <strong
+                                                    >Nota sobre Cross-platform</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="cross-platform-note"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Compras geralmente não se
+                                                    transferem entre lojas (cada
+                                                    plataforma é separada). A
+                                                    Apple é uma exceção via
+                                                    Compra Universal
+                                                    (iOS/iPadOS/macOS). O
+                                                    itch.io fornece downloads
+                                                    para desktop
+                                                    multi-plataforma sob uma
+                                                    única compra.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bug Reporting Section -->
+                                <div class="faq-section">
+                                    <button
+                                        class="faq-section-header"
+                                        aria-expanded="false"
+                                        aria-controls="support-section"
+                                    >
+                                        <h3>Obtendo Ajuda</h3>
+                                        <i
+                                            class="fa-solid fa-chevron-down"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        id="support-section"
+                                        class="faq-section-content"
+                                    >
+                                        <div class="faq-item">
+                                            <button
+                                                class="faq-question"
+                                                aria-expanded="false"
+                                                aria-controls="report-bug"
+                                            >
+                                                <strong
+                                                    >Como eu relato um bug?</strong
+                                                >
+                                                <i
+                                                    class="fa-solid fa-chevron-down"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                id="report-bug"
+                                                class="faq-answer"
+                                            >
+                                                <p>
+                                                    Use o feedback no app
+                                                    (Configurações → Relatar um
+                                                    Problema), envie e-mail para
+                                                    o Suporte, ou poste no
+                                                    Discord em #bug-reports.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <p class="support-note">
+                                <small
+                                    >Veja os problemas conhecidos mais recentes
+                                    nas <a href="/blog">Notas de Lançamento</a
+                                    >.</small>
+                            </p>
+                        </div>
+
+                        <!-- Contact Tab Content -->
+                        <div
+                            id="contact-panel"
+                            class="tab-content"
+                            role="tabpanel"
+                            aria-labelledby="contact-tab"
+                        >
+                            <div class="twoup support-columns">
+                                <!-- Left column: Contact info -->
+                                <div>
+                                    <section
+                                        class="panel"
+                                        aria-labelledby="contact-info-title"
+                                    >
+                                        <h2 id="contact-info-title">
+                                            Entre em Contato
+                                        </h2>
+
+                                        <div class="support-contact-card">
+                                            <h3>Contatos de E-mail</h3>
+                                            <ul>
+                                                <li>
+                                                    <strong>Suporte:</strong>
+                                                    <a
+                                                        href="mailto:support@jasonholtdigital.com"
+                                                        >support@jasonholtdigital.com</a>
+                                                </li>
+                                                <li>
+                                                    <strong>Geral:</strong>
+                                                    <a
+                                                        href="mailto:jason@jasonholtdigital.com"
+                                                        >jason@jasonholtdigital.com</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="support-contact-card">
+                                            <h3>Comunidade Discord</h3>
+                                            <p>
+                                                Dicas, pedidos de recursos e
+                                                triagem de bugs noturna com
+                                                outros jogadores de Mythic.
+                                            </p>
+                                            <a
+                                                class="btn btn--shadow-discord"
+                                                href="https://discord.gg/PEDHrhzcnk"
+                                                target="_blank"
+                                                rel="noopener"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-discord"
+                                                    aria-hidden="true"></i>
+                                                Entrar no Discord
+                                            </a>
+                                        </div>
+
+                                        <div class="support-contact-card">
+                                            <h3>Freelance / Consultoria</h3>
+                                            <p>
+                                                Precisa de um parceiro estável
+                                                para desenvolvimento, estratégia
+                                                de tecnologia ou entrega de
+                                                projetos? Aceito um número
+                                                limitado de vagas para
+                                                consultoria e desenvolvimento a
+                                                cada trimestre.
+                                            </p>
+                                            <a
+                                                class="btn btn--shadow-primary"
+                                                href="https://www.upwork.com/fl/~01e352937913645264?mp_source=share"
+                                                target="_blank"
+                                                rel="noopener"
+                                            >
+                                                <i
+                                                    class="fa-slab fa-regular fa-briefcase"
+                                                    aria-hidden="true"></i>
+                                                Contrate-me no Upwork
+                                            </a>
+                                        </div>
+                                        <div class="support-contact-card"></div>
+                                    </section>
+                                </div>
+
+                                <!-- Right column: Contact form -->
+                                <div>
+                                    <section
+                                        class="panel"
+                                        aria-labelledby="contact-form-title"
+                                    >
+                                        <h2 id="contact-form-title">
+                                            Envie uma Mensagem
+                                        </h2>
+                                        <form
+                                            id="contact-form"
+                                            action={`https://submit-form.com/${FORMSPARK_FORM_ID}`}
+                                            method="post"
+                                            class="contact-form"
+                                        >
+                                            <div class="form-field">
+                                                <label for="name"
+                                                    >Nome Completo</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    id="name"
+                                                    name="name"
+                                                    required
+                                                    maxlength="256"
+                                                    placeholder="Seu nome completo"
+                                                />
+                                            </div>
+
+                                            <div class="form-field">
+                                                <label for="email"
+                                                    >Endereço de E-mail</label
+                                                >
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    required
+                                                    maxlength="256"
+                                                    placeholder="seu@email.com"
+                                                />
+                                            </div>
+
+                                            <div class="form-field">
+                                                <label for="phone"
+                                                    >Telefone (opcional)</label
+                                                >
+                                                <input
+                                                    type="tel"
+                                                    id="phone"
+                                                    name="phone"
+                                                    maxlength="256"
+                                                    placeholder="Seu número de telefone"
+                                                />
+                                            </div>
+
+                                            <div class="form-field">
+                                                <label for="message"
+                                                    >Mensagem</label
+                                                >
+                                                <textarea
+                                                    id="message"
+                                                    name="message"
+                                                    required
+                                                    maxlength="5000"
+                                                    rows="6"
+                                                    placeholder="Fale sobre seu projeto ou dúvida..."
+                                                ></textarea>
+                                            </div>
+
+                                            <!-- Cloudflare Turnstile -->
+                                            <div
+                                                class="cf-turnstile"
+                                                data-sitekey={TURNSTILE_SITE_KEY}
+                                                data-callback="onTurnstileSuccess"
+                                            >
+                                            </div>
+
+                                            <div class="form-field">
+                                                <button
+                                                    type="submit"
+                                                    id="submit-btn"
+                                                    disabled
+                                                    class="btn btn--shadow-primary"
+                                                >
+                                                    <i
+                                                        class="fa-slab fa-regular fa-paper-plane"
+                                                        aria-hidden="true"></i>
+                                                    Enviar Mensagem
+                                                </button>
+                                            </div>
+
+                                            <!-- Form Messages -->
+                                            <div class="form-messages">
+                                                <div
+                                                    id="form-success"
+                                                    class="form-success"
+                                                >
+                                                    <strong>Obrigado!</strong> Sua
+                                                    mensagem foi enviada com sucesso.
+                                                    Eu entrarei em contato em até
+                                                    2 dias úteis.
+                                                </div>
+
+                                                <div
+                                                    id="form-error"
+                                                    class="form-error"
+                                                >
+                                                    <strong>Ops!</strong> Algo deu
+                                                    errado. Por favor, tente novamente
+                                                    ou envie um e-mail diretamente
+                                                    para jason@jasonholtdigital.com.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </div>
+
+        <script>
+            // Tab functionality
+            function initTabs() {
+                const tabButtons =
+                    document.querySelectorAll<HTMLButtonElement>(".tab-button");
+                const tabContents =
+                    document.querySelectorAll<HTMLElement>(".tab-content");
+
+                const openTab = (index: number) => {
+                    tabButtons.forEach((btn, btnIndex) => {
+                        const isActive = btnIndex === index;
+                        btn.classList.toggle("active", isActive);
+                        btn.setAttribute(
+                            "aria-selected",
+                            isActive ? "true" : "false",
+                        );
+                    });
+                    tabContents.forEach((content, contentIndex) => {
+                        content.classList.toggle(
+                            "active",
+                            contentIndex === index,
+                        );
+                    });
+                };
+
+                tabButtons.forEach((button, index) => {
+                    button.addEventListener("click", () => {
+                        openTab(index);
+                    });
+                });
+
+                const hash = window.location.hash;
+                if (hash === "#contact-panel") {
+                    openTab(1);
+                } else {
+                    openTab(0);
+                }
+            }
+
+            // Turnstile callback function
+            function onTurnstileSuccess(token: string) {
+                const submitBtn = document.getElementById(
+                    "submit-btn",
+                ) as HTMLButtonElement | null;
+                if (submitBtn) submitBtn.disabled = false;
+
+                // Add the token to the form as a hidden input
+                const form = document.getElementById(
+                    "contact-form",
+                ) as HTMLFormElement | null;
+                if (!form) return;
+                let tokenInput = document.getElementById(
+                    "cf-turnstile-response",
+                ) as HTMLInputElement | null;
+                if (!tokenInput) {
+                    tokenInput = document.createElement("input");
+                    tokenInput.type = "hidden";
+                    tokenInput.name = "cf-turnstile-response";
+                    tokenInput.id = "cf-turnstile-response";
+                    form.appendChild(tokenInput);
+                }
+                tokenInput.value = token;
+            }
+            (window as any).onTurnstileSuccess = onTurnstileSuccess;
+
+            // Handle form submission
+            function initContactForm() {
+                const form = document.getElementById(
+                    "contact-form",
+                ) as HTMLFormElement | null;
+                if (!form) return;
+
+                form.addEventListener("submit", async (e) => {
+                    e.preventDefault();
+                    // In dev, when env vars are not set we use action '#'. Prevent network calls.
+                    if ((e.currentTarget as HTMLFormElement)?.action === "#") {
+                        alert(
+                            "Form is not configured yet (dev). Set PUBLIC_FORMSPARK_FORM_ID and PUBLIC_TURNSTILE_SITE_KEY to enable submissions.",
+                        );
+                        return false;
+                    }
+
+                    const submitBtn = document.getElementById(
+                        "submit-btn",
+                    ) as HTMLButtonElement | null;
+                    const turnstileToken = document.getElementById(
+                        "cf-turnstile-response",
+                    ) as HTMLInputElement | null;
+                    const successDiv = document.getElementById(
+                        "form-success",
+                    ) as HTMLElement | null;
+                    const errorDiv = document.getElementById(
+                        "form-error",
+                    ) as HTMLElement | null;
+
+                    // Hide previous messages
+                    if (successDiv) successDiv.style.display = "none";
+                    if (errorDiv) errorDiv.style.display = "none";
+
+                    if (!turnstileToken || !turnstileToken.value) {
+                        alert("Please complete the security verification.");
+                        return false;
+                    }
+
+                    // Show loading state
+                    const originalText = submitBtn?.innerHTML ?? "";
+                    if (submitBtn) {
+                        submitBtn.innerHTML =
+                            '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Enviando...';
+                        submitBtn.disabled = true;
+                    }
+
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch(form.action, {
+                            method: "POST",
+                            body: formData,
+                        });
+
+                        if (response.ok) {
+                            // Success
+                            if (successDiv) successDiv.style.display = "block";
+                            form.reset();
+                            // Reset Turnstile
+                            (window as any).turnstile?.reset();
+                        } else {
+                            // Error
+                            if (errorDiv) errorDiv.style.display = "block";
+                        }
+                    } catch (error) {
+                        console.error("Form submission error:", error);
+                        if (errorDiv) errorDiv.style.display = "block";
+                    } finally {
+                        // Reset button
+                        if (submitBtn) {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = true; // Disabled until Turnstile is completed again
+                        }
+                    }
+                });
+            }
+
+            // FAQ Accordion functionality
+            function initFAQAccordion() {
+                // Handle section headers
+                const sectionHeaders =
+                    document.querySelectorAll<HTMLButtonElement>(
+                        ".faq-section-header",
+                    );
+                sectionHeaders.forEach((header) => {
+                    header.addEventListener("click", () => {
+                        const isExpanded =
+                            header.getAttribute("aria-expanded") === "true";
+                        const targetId = header.getAttribute("aria-controls");
+                        const content = targetId
+                            ? document.getElementById(targetId)
+                            : null;
+
+                        // Toggle section
+                        header.setAttribute(
+                            "aria-expanded",
+                            (!isExpanded).toString(),
+                        );
+                        if (content) {
+                            if (isExpanded) {
+                                content.classList.remove("open");
+                                // Collapse all Q&A items in this section
+                                const questions =
+                                    content.querySelectorAll<HTMLButtonElement>(
+                                        ".faq-question",
+                                    );
+                                const answers =
+                                    content.querySelectorAll<HTMLElement>(
+                                        ".faq-answer",
+                                    );
+                                questions.forEach((q) =>
+                                    q.setAttribute("aria-expanded", "false"),
+                                );
+                                answers.forEach((a) =>
+                                    a.classList.remove("open"),
+                                );
+                            } else {
+                                content.classList.add("open");
+                            }
+                        }
+                    });
+
+                    // Handle keyboard navigation for section headers
+                    header.addEventListener("keydown", (e: KeyboardEvent) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            header.click();
+                        }
+                    });
+                });
+
+                // Handle individual FAQ questions
+                const questions =
+                    document.querySelectorAll<HTMLButtonElement>(
+                        ".faq-question",
+                    );
+                questions.forEach((question) => {
+                    question.addEventListener("click", () => {
+                        const isExpanded =
+                            question.getAttribute("aria-expanded") === "true";
+                        const targetId = question.getAttribute("aria-controls");
+                        const answer = targetId
+                            ? document.getElementById(targetId)
+                            : null;
+
+                        // Toggle Q&A
+                        question.setAttribute(
+                            "aria-expanded",
+                            (!isExpanded).toString(),
+                        );
+                        if (answer) {
+                            if (isExpanded) {
+                                answer.classList.remove("open");
+                            } else {
+                                answer.classList.add("open");
+                            }
+                        }
+                    });
+
+                    // Handle keyboard navigation for questions
+                    question.addEventListener("keydown", (e: KeyboardEvent) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            question.click();
+                        }
+                    });
+                });
+
+                // Initialize: First section open by default
+                const firstSection = document.querySelector<HTMLButtonElement>(
+                    '.faq-section-header[aria-expanded="true"]',
+                );
+                if (firstSection) {
+                    const targetId = firstSection.getAttribute("aria-controls");
+                    const content = targetId
+                        ? document.getElementById(targetId)
+                        : null;
+                    if (content) {
+                        content.classList.add("open");
+                    }
+                }
+            }
+
+            // Initialize everything when DOM is loaded
+            document.addEventListener("DOMContentLoaded", function () {
+                initTabs();
+                initContactForm();
+                initFAQAccordion();
+            });
+        </script>
+    </body>
+</html>

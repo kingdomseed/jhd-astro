@@ -1,79 +1,106 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import HeadFonts from '../../components/HeadFonts.astro';
-import PageHeader from '../../components/PageHeader.astro';
-import { getCollection, type CollectionEntry } from 'astro:content';
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import HeadFonts from "../../components/HeadFonts.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
 // Shared date formatting util for consistent rendering
-import { formatDate } from '../../scripts/format-date';
-import defaultOg from '../../assets/logo/logo.jpg?url'; // Default site OG image
+import { formatDate } from "../../scripts/format-date";
+import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
 
-type BlogEntry = CollectionEntry<'blog'>;
+type BlogEntry = CollectionEntry<"blog">;
 
 // Load all entries and sort newest-first by typed Date from schema
-const posts = (await getCollection('blog'))
+const posts = (
+  await getCollection("blog", ({ data }) => {
+    return data.lang === "en" || data.lang === undefined;
+  })
+)
   .slice()
-  .sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime());
+  .sort(
+    (a: BlogEntry, b: BlogEntry) =>
+      b.data.date.getTime() - a.data.date.getTime(),
+  );
 
 // Absolute OG image URL for the blog index
-const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.com').toString();
+const ogImageUrl = new URL(
+  defaultOg,
+  Astro.site ?? "https://jasonholtdigital.com",
+).toString();
 
 const featuredEntry: BlogEntry | undefined = posts[0];
 const moreEntries: BlogEntry[] = posts.slice(1);
 const listEntries: BlogEntry[] = moreEntries.length > 0 ? moreEntries : posts;
 
 // Get unique categories from posts and create metadata
-type CategoryName = BlogEntry['data']['category'];
-const uniqueCategories = [...new Set<CategoryName>(posts.map((post: BlogEntry) => post.data.category))].sort();
+type CategoryName = BlogEntry["data"]["category"];
+const uniqueCategories = [
+  ...new Set<CategoryName>(posts.map((post: BlogEntry) => post.data.category)),
+].sort();
 
 // Category metadata with descriptions and icons
 const categoryMeta = {
-  'Release Notes': {
-    description: 'Version highlights and detailed changelogs.',
-    icon: 'fa-slab fa-regular fa-rocket',
+  "Release Notes": {
+    description: "Version highlights and detailed changelogs.",
+    icon: "fa-slab fa-regular fa-rocket",
   },
-  'Behind the Scenes': {
-    description: 'Design explorations and process breakdowns.',
-    icon: 'fa-slab fa-regular fa-palette',
+  "Behind the Scenes": {
+    description: "Design explorations and process breakdowns.",
+    icon: "fa-slab fa-regular fa-palette",
   },
-  'Guides': {
-    description: 'Play-tested tips and workflows for Mythic tools.',
-    icon: 'fa-slab fa-regular fa-compass',
+  Guides: {
+    description: "Play-tested tips and workflows for Mythic tools.",
+    icon: "fa-slab fa-regular fa-compass",
   },
-  'Community': {
-    description: 'Spotlights, interviews, and play reports.',
-    icon: 'fa-slab fa-regular fa-users',
+  Community: {
+    description: "Spotlights, interviews, and play reports.",
+    icon: "fa-slab fa-regular fa-users",
   },
-  'Announcement': {
-    description: 'Important updates and news.',
-    icon: 'fa-slab fa-regular fa-bullhorn',
+  Announcement: {
+    description: "Important updates and news.",
+    icon: "fa-slab fa-regular fa-bullhorn",
   },
 };
 
 // Build categories array with proper links
 const categories = uniqueCategories.map((category: CategoryName) => ({
   name: category,
-  description: categoryMeta[category as keyof typeof categoryMeta]?.description || `Posts about ${category}`,
-  icon: categoryMeta[category as keyof typeof categoryMeta]?.icon || 'fa-slab fa-regular fa-folder',
-  href: `/blog/category/${category.toLowerCase().replace(/\s+/g, '-')}/`,
-  slug: category.toLowerCase().replace(/\s+/g, '-'),
+  description:
+    categoryMeta[category as keyof typeof categoryMeta]?.description ||
+    `Posts about ${category}`,
+  icon:
+    categoryMeta[category as keyof typeof categoryMeta]?.icon ||
+    "fa-slab fa-regular fa-folder",
+  href: `/blog/category/${category.toLowerCase().replace(/\s+/g, "-")}/`,
+  slug: category.toLowerCase().replace(/\s+/g, "-"),
 }));
-
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <HeadFonts />
     <title>Blog — Release Notes &amp; Behind‑the‑Scenes</title>
-    <meta name="description" content="Release notes, design deep dives, and community stories from the Mythic Apps team." />
+    <meta
+      name="description"
+      content="Release notes, design deep dives, and community stories from the Mythic Apps team."
+    />
     <link rel="stylesheet" href="/global.css" />
-    <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/9f0db3cdf4.js"
+      crossorigin="anonymous"></script>
     <link rel="canonical" href="https://jasonholtdigital.com/blog/" />
     <meta property="og:image" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImageUrl} />
-    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Mythic Blog" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Mythic Blog"
+    />
   </head>
   <body>
     <a class="skip" href="#main">Skip to main content</a>
@@ -81,8 +108,8 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     <div id="site">
       <Header />
 
-      <PageHeader 
-        title="Release Notes &amp; Behind-the-Scenes"
+      <PageHeader
+        title="Release Notes & Behind-the-Scenes"
         subtitle="Updates, insights, and the craft behind the apps"
         description="Plain-language release notes first. Occasional deep dives on design, development, and the players shaping Mythic."
         accent="Blog"
@@ -92,55 +119,91 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
       />
 
       <main id="main" class="blog-main">
-        {featuredEntry ? (
-          <section class="section section--feature" aria-labelledby="feature-title">
-            <div class="container">
-              <header class="section-head" aria-hidden="true">
-                <span class="accent-line" aria-hidden="true"></span>
-                <span class="badge-text">Latest</span>
-              </header>
-              <article class="blog-feature" id="feature">
-                <div class="blog-feature__flag" aria-hidden="true">New</div>
-                <div class="blog-feature__body">
-                  <h2 id="feature-title" class="blog-feature__title">
-                    <a href={`/blog/${featuredEntry.slug}/`}>{featuredEntry.data.title}</a>
-                  </h2>
-                  <p class="blog-feature__summary">{featuredEntry.data.summary}</p>
-                  {featuredEntry.data.isSample && (
-                    <p class="blog-sample-note">Sample placeholder — replace with the real article before publishing.</p>
-                  )}
-                  <div class="blog-feature__meta" aria-label="Post details">
-                    <span class="blog-pill">{featuredEntry.data.category}</span>
-                    <span class="blog-pill">{formatDate(featuredEntry.data.date)}</span>
-                    <span class="blog-pill">{featuredEntry.data.readTime}</span>
-                    {featuredEntry.data.isSample && <span class="blog-pill blog-pill--sample">Sample</span>}
+        {
+          featuredEntry ? (
+            <section
+              class="section section--feature"
+              aria-labelledby="feature-title"
+            >
+              <div class="container">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true" />
+                  <span class="badge-text">Latest</span>
+                </header>
+                <article class="blog-feature" id="feature">
+                  <div class="blog-feature__flag" aria-hidden="true">
+                    New
                   </div>
-                  <p class="blog-feature__cta">
-                    <a class="blog-feature__link" href={`/blog/${featuredEntry.slug}/`}>
-                      Read release notes
-                      <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                  </p>
-                </div>
-              </article>
-            </div>
-          </section>
-        ) : (
-          <section class="section section--feature" aria-labelledby="feature-title">
-            <div class="container">
-              <header class="section-head" aria-hidden="true">
-                <span class="accent-line" aria-hidden="true"></span>
-                <span class="badge-text">Latest</span>
-              </header>
-              <article class="blog-feature" id="feature">
-                <div class="blog-feature__body">
-                  <h2 id="feature-title" class="blog-feature__title">Blog posts coming soon</h2>
-                  <p class="blog-feature__summary">Add markdown files to `src/content/blog/` and rebuild to populate this section.</p>
-                </div>
-              </article>
-            </div>
-          </section>
-        )}
+                  <div class="blog-feature__body">
+                    <h2 id="feature-title" class="blog-feature__title">
+                      <a href={`/blog/${featuredEntry.slug}/`}>
+                        {featuredEntry.data.title}
+                      </a>
+                    </h2>
+                    <p class="blog-feature__summary">
+                      {featuredEntry.data.summary}
+                    </p>
+                    {featuredEntry.data.isSample && (
+                      <p class="blog-sample-note">
+                        Sample placeholder — replace with the real article
+                        before publishing.
+                      </p>
+                    )}
+                    <div class="blog-feature__meta" aria-label="Post details">
+                      <span class="blog-pill">
+                        {featuredEntry.data.category}
+                      </span>
+                      <span class="blog-pill">
+                        {formatDate(featuredEntry.data.date)}
+                      </span>
+                      <span class="blog-pill">
+                        {featuredEntry.data.readTime}
+                      </span>
+                      {featuredEntry.data.isSample && (
+                        <span class="blog-pill blog-pill--sample">Sample</span>
+                      )}
+                    </div>
+                    <p class="blog-feature__cta">
+                      <a
+                        class="blog-feature__link"
+                        href={`/blog/${featuredEntry.slug}/`}
+                      >
+                        Read release notes
+                        <i
+                          class="fa-slab fa-regular fa-arrow-right"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          ) : (
+            <section
+              class="section section--feature"
+              aria-labelledby="feature-title"
+            >
+              <div class="container">
+                <header class="section-head" aria-hidden="true">
+                  <span class="accent-line" aria-hidden="true" />
+                  <span class="badge-text">Latest</span>
+                </header>
+                <article class="blog-feature" id="feature">
+                  <div class="blog-feature__body">
+                    <h2 id="feature-title" class="blog-feature__title">
+                      Blog posts coming soon
+                    </h2>
+                    <p class="blog-feature__summary">
+                      Add markdown files to `src/content/blog/` and rebuild to
+                      populate this section.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          )
+        }
 
         <section class="section" aria-labelledby="recent-title">
           <div class="container">
@@ -150,95 +213,134 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
             </header>
             <div class="blog-section-heading">
               <h2 id="recent-title" class="section-title">Recent Posts</h2>
-              <p class="blog-section-summary">Stay current with Mythic updates, process insights, and community voices.</p>
+              <p class="blog-section-summary">
+                Stay current with Mythic updates, process insights, and
+                community voices.
+              </p>
             </div>
-            
+
             {/* Category filter buttons */}
             <div class="blog-filters" data-blog-filters>
-              <button 
-                class="blog-filter blog-filter--active" 
+              <button
+                class="blog-filter blog-filter--active"
                 data-filter="all"
                 aria-pressed="true"
               >
                 All Posts
               </button>
-              {uniqueCategories.map(category => (
-                <button 
-                  class="blog-filter" 
-                  data-filter={category}
-                  aria-pressed="false"
-                >
-                  {category}
-                </button>
-              ))}
+              {
+                uniqueCategories.map((category) => (
+                  <button
+                    class="blog-filter"
+                    data-filter={category}
+                    aria-pressed="false"
+                  >
+                    {category}
+                  </button>
+                ))
+              }
             </div>
-            
+
             <ul class="blog-posts" role="list" data-blog-posts>
-              {listEntries.map((entry) => (
-                <li data-category={entry.data.category}>
-                  <article class="blog-card">
-                    <header class="blog-card__header">
-                      <span class="blog-pill">{entry.data.category}</span>
-                      <span class="blog-card__date">{formatDate(entry.data.date)}</span>
-                    </header>
-                    <h3 class="blog-card__title">
-                      <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
-                    </h3>
-                    <p class="blog-card__summary">{entry.data.summary}</p>
-                    {entry.data.isSample && (
-                      <p class="blog-sample-note blog-sample-note--card">Sample placeholder — swap in the real article before launch.</p>
-                    )}
-                    <footer class="blog-card__footer">
-                      <span class="blog-card__readtime">{entry.data.readTime}</span>
+              {
+                listEntries.map((entry) => (
+                  <li data-category={entry.data.category}>
+                    <article class="blog-card">
+                      <header class="blog-card__header">
+                        <span class="blog-pill">{entry.data.category}</span>
+                        <span class="blog-card__date">
+                          {formatDate(entry.data.date)}
+                        </span>
+                      </header>
+                      <h3 class="blog-card__title">
+                        <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
+                      </h3>
+                      <p class="blog-card__summary">{entry.data.summary}</p>
                       {entry.data.isSample && (
-                        <div class="blog-card__meta">
-                          <span class="blog-pill blog-pill--sample">Sample</span>
-                        </div>
+                        <p class="blog-sample-note blog-sample-note--card">
+                          Sample placeholder — swap in the real article before
+                          launch.
+                        </p>
                       )}
-                      <a class="blog-card__link" href={`/blog/${entry.slug}/`}>
-                        Read post
-                        <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
-                      </a>
-                    </footer>
-                  </article>
-                </li>
-              ))}
+                      <footer class="blog-card__footer">
+                        <span class="blog-card__readtime">
+                          {entry.data.readTime}
+                        </span>
+                        {entry.data.isSample && (
+                          <div class="blog-card__meta">
+                            <span class="blog-pill blog-pill--sample">
+                              Sample
+                            </span>
+                          </div>
+                        )}
+                        <a
+                          class="blog-card__link"
+                          href={`/blog/${entry.slug}/`}
+                        >
+                          Read post
+                          <i
+                            class="fa-slab fa-regular fa-arrow-right"
+                            aria-hidden="true"
+                          />
+                        </a>
+                      </footer>
+                    </article>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </section>
 
-        <section class="section section-band" id="categories" aria-labelledby="categories-title">
+        <section
+          class="section section-band"
+          id="categories"
+          aria-labelledby="categories-title"
+        >
           <div class="container">
             <header class="section-head" aria-hidden="true">
               <span class="accent-line" aria-hidden="true"></span>
               <span class="badge-text">Browse</span>
             </header>
             <div class="blog-section-heading blog-section-heading--center">
-              <h2 id="categories-title" class="section-title">Explore by Category</h2>
-              <p class="blog-section-summary">Pick a lane to skim updates faster. These anchors map to future tag hubs.</p>
+              <h2 id="categories-title" class="section-title">
+                Explore by Category
+              </h2>
+              <p class="blog-section-summary">
+                Pick a lane to skim updates faster. These anchors map to future
+                tag hubs.
+              </p>
             </div>
             <ul class="blog-categories" role="list">
-              {categories.map((category) => (
-                <li>
-                  <a class="blog-category" href={category.href}>
-                    <span class="blog-category__icon" aria-hidden="true">
-                      <i class={category.icon}></i>
-                    </span>
-                    <span class="blog-category__body">
-                      <span class="blog-category__name">{category.name}</span>
-                      <span class="blog-category__description">{category.description}</span>
-                    </span>
-                    <span class="blog-category__arrow" aria-hidden="true">
-                      <i class="fa-slab fa-regular fa-arrow-right"></i>
-                    </span>
-                  </a>
-                </li>
-              ))}
+              {
+                categories.map((category) => (
+                  <li>
+                    <a class="blog-category" href={category.href}>
+                      <span class="blog-category__icon" aria-hidden="true">
+                        <i class={category.icon} />
+                      </span>
+                      <span class="blog-category__body">
+                        <span class="blog-category__name">{category.name}</span>
+                        <span class="blog-category__description">
+                          {category.description}
+                        </span>
+                      </span>
+                      <span class="blog-category__arrow" aria-hidden="true">
+                        <i class="fa-slab fa-regular fa-arrow-right" />
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </section>
 
-        <section class="section" id="blog-support" aria-labelledby="blog-support-title">
+        <section
+          class="section"
+          id="blog-support"
+          aria-labelledby="blog-support-title"
+        >
           <div class="container">
             <header class="section-head" aria-hidden="true">
               <span class="accent-line" aria-hidden="true"></span>
@@ -249,16 +351,26 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
                 <h2 id="blog-support-title" class="section-title">
                   Keep up with updates
                 </h2>
-                <p class="blog-support__summary">Hop into Discord or bookmark the resources hub. We post release notes here first, then dive deeper in guides.</p>
+                <p class="blog-support__summary">
+                  Hop into Discord or bookmark the resources hub. We post
+                  release notes here first, then dive deeper in guides.
+                </p>
               </div>
               <div class="blog-support__actions">
-                <a class="btn btn--shadow-discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">
+                <a
+                  class="btn btn--shadow-discord"
+                  href="https://discord.gg/PEDHrhzcnk"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <i class="fa-brands fa-discord" aria-hidden="true"></i>
                   Join Discord
                 </a>
                 <a class="btn btn--shadow-primary" href="/resources">
                   Browse Guides
-                  <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+                  <i
+                    class="fa-slab fa-regular fa-arrow-right"
+                    aria-hidden="true"></i>
                 </a>
                 <a class="btn btn--tertiary" href="/rss.xml">
                   <i class="fa-slab fa-regular fa-rss" aria-hidden="true"></i>
@@ -274,56 +386,65 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
 
     <script type="module" is:inline>
       // Client-side category filtering
-      const filters = document.querySelector('[data-blog-filters]');
-      const postsContainer = document.querySelector('[data-blog-posts]');
-      
+      const filters = document.querySelector("[data-blog-filters]");
+      const postsContainer = document.querySelector("[data-blog-posts]");
+
       if (filters && postsContainer) {
-        const filterButtons = filters.querySelectorAll('.blog-filter');
-        const posts = postsContainer.querySelectorAll('li[data-category]');
-        
-        filterButtons.forEach(button => {
-          button.addEventListener('click', () => {
+        const filterButtons = filters.querySelectorAll(".blog-filter");
+        const posts = postsContainer.querySelectorAll("li[data-category]");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
             const filterValue = button.dataset.filter;
-            
+
             // Only update if not already active (prevents flash)
-            if (!button.classList.contains('blog-filter--active')) {
+            if (!button.classList.contains("blog-filter--active")) {
               // Update active state
-              filterButtons.forEach(btn => {
-                btn.classList.remove('blog-filter--active');
-                btn.setAttribute('aria-pressed', 'false');
+              filterButtons.forEach((btn) => {
+                btn.classList.remove("blog-filter--active");
+                btn.setAttribute("aria-pressed", "false");
               });
-              button.classList.add('blog-filter--active');
-              button.setAttribute('aria-pressed', 'true');
+              button.classList.add("blog-filter--active");
+              button.setAttribute("aria-pressed", "true");
             }
-            
+
             // Always filter posts (even if clicking same button)
-            posts.forEach(post => {
-              if (filterValue === 'all' || post.dataset.category === filterValue) {
-                post.style.display = '';
+            posts.forEach((post) => {
+              if (
+                filterValue === "all" ||
+                post.dataset.category === filterValue
+              ) {
+                post.style.display = "";
               } else {
-                post.style.display = 'none';
+                post.style.display = "none";
               }
             });
-            
+
             // Update URL without page reload (for bookmarking/sharing)
             const url = new URL(window.location.href);
-            if (filterValue === 'all') {
-              url.searchParams.delete('category');
+            if (filterValue === "all") {
+              url.searchParams.delete("category");
             } else {
-              url.searchParams.set('category', filterValue.toLowerCase().replace(/\s+/g, '-'));
+              url.searchParams.set(
+                "category",
+                filterValue.toLowerCase().replace(/\s+/g, "-"),
+              );
             }
-            window.history.replaceState({}, '', url);
+            window.history.replaceState({}, "", url);
           });
         });
-        
+
         // Check URL on load for category parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const categoryParam = urlParams.get('category');
+        const categoryParam = urlParams.get("category");
         if (categoryParam) {
           // Find matching category button
-          filterButtons.forEach(button => {
+          filterButtons.forEach((button) => {
             const filterValue = button.dataset.filter;
-            if (filterValue && filterValue.toLowerCase().replace(/\s+/g, '-') === categoryParam) {
+            if (
+              filterValue &&
+              filterValue.toLowerCase().replace(/\s+/g, "-") === categoryParam
+            ) {
               button.click();
             }
           });
@@ -340,7 +461,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     gap: 0.5rem;
     margin: 2rem 0;
   }
-  
+
   .blog-filter {
     padding: 0.5rem 1rem;
     border: 2px solid var(--color-border);
@@ -350,19 +471,21 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     font-weight: 500;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s, box-shadow 0.15s ease-out;
+    transition:
+      all 0.2s,
+      box-shadow 0.15s ease-out;
     position: relative;
     /* Flat by default (unselected) */
     box-shadow: none;
   }
-  
+
   .blog-filter:hover {
     border-color: var(--color-primary);
     background: #f0f0f0; /* Light gray hover state */
     /* Slight shadow on hover for affordance */
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   }
-  
+
   .blog-filter--active {
     background: var(--color-primary);
     color: white;
@@ -373,7 +496,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     /* Slight translate to enhance the lifted effect */
     transform: translate(-1px, -1px);
   }
-  
+
   .blog-filter--active:hover {
     /* Slightly darker blue on hover, but maintain white text */
     background: #0052cc; /* Darker blue for hover */
@@ -382,12 +505,12 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
     /* Maintain the shadow on hover */
     box-shadow: 4px 4px 0 #000;
   }
-  
+
   @media (max-width: 768px) {
     .blog-filters {
       margin: 1.5rem 0;
     }
-    
+
     .blog-filter {
       font-size: 0.8125rem;
       padding: 0.375rem 0.75rem;

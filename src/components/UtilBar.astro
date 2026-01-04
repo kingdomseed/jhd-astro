@@ -4,10 +4,24 @@
 // utility classes defined in the global stylesheet.  The close
 // behaviour from the original design has been intentionally
 // omitted for clarity and simplicity.
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <div class="util" role="region" aria-label="Official notice">
-  <span class="tag"><i class="fa-slab fa-regular fa-bolt" aria-hidden="true"></i> OFFICIAL PARTNER</span>
-  <a href="https://www.wordmillgames.com/page/mythic-gme.html" target="_blank" rel="noopener">
-    Word Mill Creative <i class="fa-slab fa-regular fa-arrow-up-right-from-square" aria-hidden="true"></i>
+  <span class="tag"
+    ><i class="fa-slab fa-regular fa-bolt" aria-hidden="true"></i>
+    {t("util.official_partner")}</span
+  >
+  <a
+    href="https://www.wordmillgames.com/page/mythic-gme.html"
+    target="_blank"
+    rel="noopener"
+  >
+    Word Mill Creative <i
+      class="fa-slab fa-regular fa-arrow-up-right-from-square"
+      aria-hidden="true"></i>
   </a>
 </div>

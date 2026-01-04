@@ -2,41 +2,46 @@
 // Core benefits section enumerates the primary reasons players
 // appreciate the Mythic GME applications.  Each benefit appears
 // as a card with a headline and succinct description.
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <section class="container section" id="apps" aria-labelledby="benefits-title">
   <header class="benefits-head" aria-hidden="false">
     <span class="accent-line" aria-hidden="true"></span>
-    <span class="badge-text">Benefits</span>
+    <span class="badge-text">{t("benefit.badge")}</span>
   </header>
-  <h2 id="benefits-title" class="section-title">Why players choose Mythic&nbsp;GME Apps</h2>
+  <h2 id="benefits-title" class="section-title">{t("benefit.title")}</h2>
   <div class="cards benefits-grid">
     <article class="card">
       <div class="card-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-bolt"></i>
       </div>
-      <h3>Ask &amp; Roll&nbsp;Fast</h3>
-      <p>No lookup delays, instant oracle answers.</p>
+      <h3>{t("benefit.card1.title")}</h3>
+      <p>{t("benefit.card1.desc")}</p>
     </article>
     <article class="card">
       <div class="card-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-shield"></i>
       </div>
-      <h3>Trust Official&nbsp;Content</h3>
-      <p>Licensed Fate Chart &amp; Meaning Tables.</p>
+      <h3>{t("benefit.card2.title")}</h3>
+      <p>{t("benefit.card2.desc")}</p>
     </article>
     <article class="card">
       <div class="card-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-book-open"></i>
       </div>
-      <h3>Track Your&nbsp;Stories</h3>
-      <p>Scenes, characters, threads, session logs.</p>
+      <h3>{t("benefit.card3.title")}</h3>
+      <p>{t("benefit.card3.desc")}</p>
     </article>
     <article class="card">
       <div class="card-icon" aria-hidden="true">
         <i class="fa-slab fa-regular fa-sliders"></i>
       </div>
-      <h3>Customize&nbsp;Tools</h3>
-      <p>Custom tables, agnostic dice formulas.</p>
+      <h3>{t("benefit.card4.title")}</h3>
+      <p>{t("benefit.card4.desc")}</p>
     </article>
   </div>
 </section>
