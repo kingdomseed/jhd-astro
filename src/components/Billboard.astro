@@ -1,21 +1,36 @@
 ---
 // Billboard section shows a screenshot of the application. The image
-// now rotates through multiple screenshots found in src/assets/billboard as
-// billboard-1.jpeg .. billboard-7.jpeg, using the same styling as the
-// original design. Minimal TypeScript provides accessible controls and
-// auto-rotation that respects reduced motion.
+// now rotates through multiple language-specific screenshots found in
+// src/assets/billboard/en/ and src/assets/billboard/pt/ as billboard-1.jpeg
+// through billboard-7.jpeg. Minimal TypeScript provides accessible controls
+// and auto-rotation that respects reduced motion.
 import { Image } from "astro:assets";
-import b1 from "../assets/billboard/billboard-1.jpeg";
-import b2 from "../assets/billboard/billboard-2.jpeg";
-import b3 from "../assets/billboard/billboard-3.jpeg";
-import b4 from "../assets/billboard/billboard-4.jpeg";
-import b5 from "../assets/billboard/billboard-5.jpeg";
-import b6 from "../assets/billboard/billboard-6.jpeg";
-import b7 from "../assets/billboard/billboard-7.jpeg";
+// English images
+import b1_en from "../assets/billboard/en/billboard-1.jpeg";
+import b2_en from "../assets/billboard/en/billboard-2.jpeg";
+import b3_en from "../assets/billboard/en/billboard-3.jpeg";
+import b4_en from "../assets/billboard/en/billboard-4.jpeg";
+import b5_en from "../assets/billboard/en/billboard-5.jpeg";
+import b6_en from "../assets/billboard/en/billboard-6.jpeg";
+import b7_en from "../assets/billboard/en/billboard-7.jpeg";
+// Portuguese images
+import b1_pt from "../assets/billboard/pt/billboard-1.jpeg";
+import b2_pt from "../assets/billboard/pt/billboard-2.jpeg";
+import b3_pt from "../assets/billboard/pt/billboard-3.jpeg";
+import b4_pt from "../assets/billboard/pt/billboard-4.jpeg";
+import b5_pt from "../assets/billboard/pt/billboard-5.jpeg";
+import b6_pt from "../assets/billboard/pt/billboard-6.jpeg";
+import b7_pt from "../assets/billboard/pt/billboard-7.jpeg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Select images based on language
+const [b1, b2, b3, b4, b5, b6, b7] =
+  lang === "pt"
+    ? [b1_pt, b2_pt, b3_pt, b4_pt, b5_pt, b6_pt, b7_pt]
+    : [b1_en, b2_en, b3_en, b4_en, b5_en, b6_en, b7_en];
 ---
 
 <section
