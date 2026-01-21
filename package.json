@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20 <21"
+    "node": ">=22.0.0 <23"
   },
   "scripts": {
     "dev": "astro dev",
@@ -27,6 +27,7 @@
     "wrangler": "^4.38.0"
   },
   "overrides": {
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "undici": "^7.18.2"
   }
 }
