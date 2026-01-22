@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/show-plan-context.sh",
+        "description": "Show task plan context before shell commands"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/after-file-edit.sh",
+        "description": "Remind to update task_plan.md after file edits"
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/check-complete.sh",
+        "description": "Verify all phases complete before stopping"
+      }
+    ]
+  }
+}
