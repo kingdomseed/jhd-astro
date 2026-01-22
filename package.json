@@ -12,7 +12,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.8",
+    "@astrojs/cloudflare": "^12.6.12",
     "@awesome.me/kit-9f0db3cdf4": "^1.0.10",
     "@spotlightjs/astro": "^3.2.6",
     "astro": "^5.13.3",

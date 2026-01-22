@@ -13,6 +13,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   // Site is used for absolute URLs (e.g., in RSS) and canonical generation in some contexts
   site: 'https://jasonholtdigital.com',
+
   i18n: {
     defaultLocale: "en",
     locales: ["en", "pt"],
@@ -20,9 +21,11 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
+
   integrations: [
     // spotlightjs(),
   ],
+
   // Cloudflare adapter - session warnings are informational and can be ignored for static sites
   image: {
     service: {
@@ -32,4 +35,6 @@ export default defineConfig({
       }
     }
   },
+
+  adapter: cloudflare(),
 });
