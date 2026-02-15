@@ -81,6 +81,8 @@ All other pages should match or aspire to this level of polish.
 **Content Management:**
 - Blog posts in `src/content/blog/` with required frontmatter
 - Resources in `src/content/resources/` with category organization
+- Page data in `src/content/pages/` — frontmatter drives feature lists (mythicHighlights, backgroundHighlights); markdown body is documentation-only, not rendered
+- PT pages use separate `-pt.md` content files (e.g., `about-pt.md`), not the EN versions
 - Use `isSample: true` for placeholder content
 - Images require alt text for accessibility
 
@@ -88,6 +90,7 @@ All other pages should match or aspire to this level of polish.
 
 **Required checks:**
 1. Run `npx astro check && npm run build` (no errors/warnings)
+   Note: `src/worker.ts:2` has a pre-existing `Cannot find name 'Fetcher'` error — this is a known issue, not a regression.
 2. Manual QA per AGENTS.md checklist:
    - Header dropdown functionality
    - Image paths resolve without 404s
@@ -148,3 +151,12 @@ All other pages should match or aspire to this level of polish.
 - Build output: Static files to `dist/`
 - Node version: 20 (strict requirement)
 - Environment: Production builds with Sentry monitoring
+
+## Voice & Copy Guidelines
+
+- **Voice reference:** `~/Jason_Holt_Voice_Evolution.md` — 8 fingerprint markers for Jason's authentic voice. Read Part III before any copy work.
+- **Negative constraint:** `docs/brand-and-voice-guide-core.md` — if a sentence could have appeared here, rewrite it. The Brand Voice Guide describes marketing persona, not Jason's natural voice.
+- **First person throughout:** Use "I" on all pages. Do not use "we" or "our" (except where brand guide explicitly requires "we" on product pages).
+- **No false claims:** Jason has not played a Mythic session himself. He is the builder, not a TTRPG veteran. Do not write copy implying player identity.
+- **Key bio facts for copy accuracy:** Started coding at 12 (Redwall CYOA in Basic). Nine years teaching CS. Brother connected him to Tana Pigeon at Word Mill Games. App dream since 2013 (Hour of Code). Studying M.Sc. Computational Linguistics at Stuttgart.
+- **Audit process:** Compare prose against the 8 fingerprints (#1 Fresh Renewal, #2 Enumeration, #3 Transparency, #4 Replace "incredible"/"privilege", #5 People-First, #6 Active Voice, #7 Bridge Sentence, #8 Parenthetical). Flag anything that reads like polished marketing.

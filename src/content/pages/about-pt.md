@@ -1,7 +1,7 @@
 ---
-title: Conheça o Jason
-subtitle: Desenvolvedor indie, educador e entusiasta de RPG de mesa
-description: Construindo os aplicativos oficiais do Mythic GME 2e em parceria licenciada com a Word Mill Games
+title: Oi, eu sou o Jason
+subtitle: Professor que virou desenvolvedor, criando ferramentas para a comunidade Mythic
+description: Eu construo os apps oficiais do Mythic GME 2e com a Word Mill Games. Cheguei aqui depois de nove anos ensinando, muito código, e uma comunidade que me mostrou o que construir.
 pageHeader:
   accent: Sobre
   layout: left
@@ -11,16 +11,16 @@ pageHeader:
 backgroundHighlights:
   - icon: fa-slab fa-regular fa-book-open
     title: Raízes de educador
-    description: Nove anos ensinando ciência da computação e design digital — desbloqueando criatividade, treinando equipes e explicando sistemas complexos de forma simples.
+    description: Nove anos ensinando ciência da computação e design digital. Treinei equipes, expliquei coisas complexas de forma simples, e vi alunos construírem coisas que eu nunca teria pensado.
   - icon: fa-slab fa-regular fa-heart
     title: Formado pelo serviço
-    description: Estágio de dois anos focado em liderança, mentoria e serviço. Manter-se organizado e servir aos outros ainda guiam meu trabalho hoje.
+    description: Estágio de dois anos em liderança e serviço. Colocar os outros em primeiro lugar virou um hábito. E ficou.
   - icon: fa-slab fa-regular fa-users
     title: Comunidade em primeiro lugar
-    description: Centenas de jogadores de Mythic no beta contínuo me ajudam a priorizar correções, recursos e o que vem a seguir.
+    description: Centenas de jogadores de Mythic me ajudam a descobrir o que corrigir, o que construir e o que mais importa. Eles moldam os apps tanto quanto eu.
   - icon: fa-slab fa-regular fa-mobile
     title: Mobile × PNL a seguir
-    description: Estudando linguística computacional para explorar como aplicativos móveis e PNL podem trabalhar juntos para jogos de RPG solo e além.
+    description: Estudando linguística computacional em Stuttgart. Tenho curiosidade sobre onde processamento de linguagem e ferramentas de RPG solo podem se encontrar — e como isso poderia aparecer no app.
 socialLinks:
   - href: https://discord.gg/PEDHrhzcnk
     label: Entrar no Discord
