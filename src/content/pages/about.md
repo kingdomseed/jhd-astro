@@ -1,7 +1,7 @@
 ---
-title: Meet Jason
-subtitle: Indie developer, educator, and tabletop enthusiast
-description: Building the official Mythic GME 2e apps in licensed partnership with Word Mill Games
+title: Hi, I'm Jason
+subtitle: Teacher turned developer, building tools for the Mythic community
+description: I build the official Mythic GME 2e apps with Word Mill Games. I got here through nine years of teaching, a lot of code, and a community that showed me what to build.
 pageHeader:
   accent: About
   layout: left
@@ -11,16 +11,16 @@ pageHeader:
 backgroundHighlights:
   - icon: fa-slab fa-regular fa-book-open
     title: Educator roots
-    description: Nine years teaching computer science and digital design—unlocking creativity, coaching teams, and explaining complex systems simply.
+    description: Nine years of teaching computer science and digital design. I coached teams, explained complex things simply, and watched students build things I never would have thought of.
   - icon: fa-slab fa-regular fa-heart
     title: Formed by service
-    description: Two‑year practicum focused on leadership, mentorship, and service. Staying organised and serving others still guide my work today.
+    description: A two‑year practicum in leadership and service. Putting others first became a habit. It stuck.
   - icon: fa-slab fa-regular fa-users
     title: Community‑first
-    description: Hundreds of Mythic players in the ongoing beta help me prioritise fixes, features, and what comes next.
+    description: Hundreds of Mythic players help me figure out what to fix, what to build, and what matters most. They shape the apps as much as I do.
   - icon: fa-slab fa-regular fa-mobile
     title: Mobile × NLP next
-    description: Studying computational linguistics to explore how mobile apps and NLP can work together for solo RPG play and beyond.
+    description: Studying computational linguistics at Stuttgart. I'm curious about where language processing and solo RPG tools can meet — and what that might look like in the app.
 socialLinks:
   - href: https://discord.gg/PEDHrhzcnk
     label: Join Discord
@@ -57,19 +57,17 @@ tags:
 
 ### Hi, I'm Jason
 
-I've been building software since 2014 and shipping cross‑platform Flutter apps since 2024. Today I run Jason Holt Digital and—under licence from Word Mill Games—build the official Mythic GME 2e companion apps.
+I wrote my first program at twelve — a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally (after dreaming about it since I ran Hour of Code with my students in 2013) building a real app. What stayed the same across all of it was the people: I kept ending up where someone needed something built.
 
-I maintain two products: **Mythic GME Mobile** (iOS, Android) and **Mythic GME Digital** (Windows, macOS, Linux).
+I maintain two products under licence from Word Mill Games: **Mythic GME Mobile** (iOS, Android) and **Mythic GME Digital** (Windows, macOS, Linux).
 
-I focus on tools that adapt to **your** play style while staying faithful to Mythic GME 2e. That means fast interactions, clear UI, and features you can turn on or off as needed.
-
-I'm also pursuing an M.Sc. in Computational Linguistics to explore practical ways mobile apps and NLP can work together for solo play.
+I'm also pursuing an M.Sc. in Computational Linguistics. Part curiosity about how language and software can work together for solo play, and part (if I'm honest) the same pattern that's driven every fresh start in my career — someone had a need, and I wanted to help meet it.
 
 ## Official
 
 ### Licensed with Word Mill Games
 
-Mythic GME is the oracle I reach for. In 2024 I partnered with Word Mill Games to translate Mythic GME 2e into an accessible, cross‑platform experience shaped by player feedback and hands‑on testing.
+Word Mill Games needed a developer for Mythic GME 2e, and I was looking for what to build after teaching. The timing worked. That became a licence in 2024, and I've been working directly with Word Mill ever since.
 
 * **Core 2e fidelity.** Fate Chart, Fate Check, Random Events, and Scene adjustments implemented with care.
 * **Platforms.** Two apps: **Mythic GME Mobile** (iOS, Android) and **Mythic GME Digital** (Windows, macOS, Linux).
@@ -80,21 +78,23 @@ Mythic GME is the oracle I reach for. In 2024 I partnered with Word Mill Games t
 
 ### Why Mythic players choose the apps
 
-Mythic GME apps streamline oracle‑style play so you can stay in the story—whether you play solo, run GM‑less groups, or use Mythic as an inspiration engine at home or on the go.
+I built these apps for the Mythic community — less time flipping through tables, more time in the story. Solo play, GM-less sessions, creative spark on the go — however you use Mythic, the apps are built to keep up.
 
-Community feedback directly informs what I ship next—join the Discord to request features and vote on priorities.
+What I ship next comes from what players tell me — join the Discord to talk with me or head to the [Feature Board](http://feedback.jasonholtdigital.com/board) to request features and vote on priorities.
 
 ## Approach
 
 ### What shapes the work
 
-**Grounded principle:** I build in public. I talk with players directly in Discord, share what I shipped each day in #daily-wrap, and release small, frequent updates. I listen to all kinds of feedback and aim for a flexible, faithful Mythic experience across many play styles.
+When I started building the Mythic app, I knew I needed the community — their feedback, their play styles, their patience while I figured things out. Every version has been a fresh start — better architecture, new UX patterns, and a lot more listening. That's how "build in public" went from something I admired to the way I actually work.
+
+I share what I ship each day in the Discord #daily-wrap. Bug reports come in, feature requests come in, and sometimes a player catches something I missed (happens more often than I'd like to admit). Small, frequent updates.
 
 ## Connect
 
 ### I'd love to keep the conversation going
 
-Feedback, bug reports, play stories—everything you share helps Mythic get sharper. Pick a lane below or drop into the community.
+I read every message. Whether it's a bug report, a feature idea, or just a story about your last session — I want to hear it.
 
 * **Try the Mythic GME apps** — App Store, Google Play, Microsoft Store, Amazon Appstore, itch.io
 * **Get support** — Quick FAQ and contact form
