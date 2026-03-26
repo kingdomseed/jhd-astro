@@ -1,7 +1,7 @@
 // Reviews rotator — delegates core logic to shared carousel utility.
 // Retains: shuffle, dual-buffer crossfade, safe DOM rendering.
 import { createCarousel } from './carousel';
-import quotesData from './reviews-data.ts';
+import quotesData from '../data/reviews-data.ts';
 
 type Quote = { text: string; src: string; href: string; icon: string };
 
