@@ -20,6 +20,42 @@ function navigateItems(items: HTMLAnchorElement[], direction: 1 | -1) {
   next?.focus();
 }
 
+function handleToggleClick(e: MouseEvent, btn: HTMLButtonElement, menu: HTMLElement, items: HTMLAnchorElement[]) {
+  if (e.detail === 0) markKeyboard();
+  e.preventDefault();
+  const isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(isOpen));
+  if (isOpen && lastInput === 'keyboard') {
+    items[0]?.focus();
+  } else if (!isOpen && lastInput === 'keyboard') {
+    btn.focus();
+  }
+}
+
+function handleDocumentKeydown(e: KeyboardEvent, btn: HTMLButtonElement, menu: HTMLElement) {
+  if (e.key === 'Escape') {
+    markKeyboard();
+    closeMenu(btn, menu, true);
+    return;
+  }
+  if (['Tab', 'Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) {
+    markKeyboard();
+  }
+}
+
+function handleOutsideClick(e: MouseEvent, btn: HTMLButtonElement, menu: HTMLElement) {
+  const target = e.target as Node | null;
+  if (target && !menu.contains(target) && !btn.contains(target)) {
+    closeMenu(btn, menu, false);
+  }
+}
+
+function handleMenuKeydown(e: KeyboardEvent, items: HTMLAnchorElement[]) {
+  markKeyboard();
+  if (e.key === 'ArrowDown') { e.preventDefault(); navigateItems(items, 1); }
+  if (e.key === 'ArrowUp') { e.preventDefault(); navigateItems(items, -1); }
+}
+
 function initHeaderDropdown() {
   const btn = document.querySelector<HTMLButtonElement>('.cta-download');
   const menu = document.getElementById('downloadMenu');
@@ -28,42 +64,10 @@ function initHeaderDropdown() {
   const items = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
 
   document.addEventListener('pointerdown', markPointer, true);
-
-  btn.addEventListener('click', (e) => {
-    if (e.detail === 0) markKeyboard();
-    e.preventDefault();
-    const isOpen = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-    if (isOpen && lastInput === 'keyboard') {
-      items[0]?.focus();
-    } else if (!isOpen && lastInput === 'keyboard') {
-      btn.focus();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      markKeyboard();
-      closeMenu(btn, menu, true);
-      return;
-    }
-    if (['Tab', 'Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) {
-      markKeyboard();
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    const target = e.target as Node | null;
-    if (target && !menu.contains(target) && !btn.contains(target)) {
-      closeMenu(btn, menu, false);
-    }
-  });
-
-  menu.addEventListener('keydown', (e) => {
-    markKeyboard();
-    if (e.key === 'ArrowDown') { e.preventDefault(); navigateItems(items, 1); }
-    if (e.key === 'ArrowUp') { e.preventDefault(); navigateItems(items, -1); }
-  });
+  btn.addEventListener('click', (e) => handleToggleClick(e, btn, menu, items));
+  document.addEventListener('keydown', (e) => handleDocumentKeydown(e, btn, menu));
+  document.addEventListener('click', (e) => handleOutsideClick(e, btn, menu));
+  menu.addEventListener('keydown', (e) => handleMenuKeydown(e, items));
 }
 
 if (document.readyState === 'loading') {
