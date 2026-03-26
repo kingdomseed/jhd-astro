@@ -4,7 +4,7 @@
 // utility classes defined in the global stylesheet.  The close
 // behaviour from the original design has been intentionally
 // omitted for clarity and simplicity.
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

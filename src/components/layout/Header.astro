@@ -2,8 +2,8 @@
 // Site header containing the logo, primary navigation and an
 // accessible Download dropdown menu with platform links. The sticky
 // behaviour is achieved through CSS defined in the global stylesheet.
-import brandLogoUrl from "../assets/logo/logo.svg?url";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import brandLogoUrl from "../../assets/logo/logo.svg?url";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);
@@ -222,10 +222,10 @@ function l(path: string) {
   </nav>
 </header>
 <script>
-  import "../scripts/header-dropdown.ts";
-  import "../scripts/header-mobile.ts";
-  import "../scripts/header-sticky.ts";
-  import "../scripts/skip-link-focus.ts";
+  import "../../scripts/header-dropdown.ts";
+  import "../../scripts/header-mobile.ts";
+  import "../../scripts/header-sticky.ts";
+  import "../../scripts/skip-link-focus.ts";
   // Hoisted import: processed by Astro/Vite, supports TS and npm deps.
   // See: https://docs.astro.build/en/guides/client-side-scripts/#hoisted-scripts
 </script>

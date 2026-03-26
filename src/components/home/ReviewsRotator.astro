@@ -1,6 +1,6 @@
 ---
 // Reviews rotator: small self-contained strip that cycles player quotes.
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,7 +23,7 @@ const t = useTranslations(lang);
     </figure>
 
     <script>
-      import "../scripts/reviews-rotator.ts";
+      import "../../scripts/reviews-rotator.ts";
       // Hoisted import: processed by Astro/Vite (TS supported)
     </script>
   </div>

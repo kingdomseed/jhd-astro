@@ -1,0 +1,101 @@
+---
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import HeadFonts from '../components/layout/HeadFonts.astro';
+import defaultOg from '../assets/logo/logo.jpg?url';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'en' | 'pt';
+  canonicalPath: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogType?: string;
+  ogImage?: string;
+  mainClass?: string;
+}
+
+const {
+  title,
+  description,
+  lang = 'en',
+  canonicalPath,
+  ogTitle,
+  ogDescription,
+  ogType = 'website',
+  ogImage,
+  mainClass,
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString() ?? 'https://jasonholtdigital.com';
+const ogImageUrl = ogImage ?? new URL(defaultOg, siteUrl).toString();
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const skipText = lang === 'pt' ? 'Pular para o conte\u00fado principal' : 'Skip to main content';
+const altLang = lang === 'pt' ? 'en' : 'pt';
+const altPath = lang === 'pt' ? canonicalPath.replace('/pt/', '/') : `/pt${canonicalPath}`;
+const altUrl = new URL(altPath, siteUrl).toString();
+---
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <HeadFonts />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={ogTitle ?? title} />
+    <meta property="og:description" content={ogDescription ?? description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Jason Holt Digital" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle ?? title} />
+    <meta name="twitter:description" content={ogDescription ?? description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang={altLang} href={altUrl} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#main">{skipText}</a>
+    <div id="bg-atmo" aria-hidden="true"></div>
+    <div id="site">
+      <slot name="before-header" />
+      <Header />
+      <main id="main" class={mainClass}>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <script>
+      function focusTarget(target: HTMLElement) {
+        const prevTabIndex = target.getAttribute('tabindex');
+        const needsTabIndex = prevTabIndex === null;
+        if (needsTabIndex) target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: false });
+        const onBlur = () => {
+          if (needsTabIndex) target.removeAttribute('tabindex');
+          target.removeEventListener('blur', onBlur);
+        };
+        target.addEventListener('blur', onBlur);
+      }
+
+      document.querySelectorAll<HTMLAnchorElement>('a.skip[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const id = (link.getAttribute('href') || '').slice(1);
+          if (!id) return;
+          const target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          focusTarget(target);
+        });
+      });
+    </script>
+  </body>
+</html>

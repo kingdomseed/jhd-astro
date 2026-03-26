@@ -6,22 +6,22 @@
 // and auto-rotation that respects reduced motion.
 import { Image } from "astro:assets";
 // English images
-import b1_en from "../assets/billboard/en/billboard-1.jpeg";
-import b2_en from "../assets/billboard/en/billboard-2.jpeg";
-import b3_en from "../assets/billboard/en/billboard-3.jpeg";
-import b4_en from "../assets/billboard/en/billboard-4.jpeg";
-import b5_en from "../assets/billboard/en/billboard-5.jpeg";
-import b6_en from "../assets/billboard/en/billboard-6.jpeg";
-import b7_en from "../assets/billboard/en/billboard-7.jpeg";
+import b1_en from "../../assets/billboard/en/billboard-1.jpeg";
+import b2_en from "../../assets/billboard/en/billboard-2.jpeg";
+import b3_en from "../../assets/billboard/en/billboard-3.jpeg";
+import b4_en from "../../assets/billboard/en/billboard-4.jpeg";
+import b5_en from "../../assets/billboard/en/billboard-5.jpeg";
+import b6_en from "../../assets/billboard/en/billboard-6.jpeg";
+import b7_en from "../../assets/billboard/en/billboard-7.jpeg";
 // Portuguese images
-import b1_pt from "../assets/billboard/pt/billboard-1.jpeg";
-import b2_pt from "../assets/billboard/pt/billboard-2.jpeg";
-import b3_pt from "../assets/billboard/pt/billboard-3.jpeg";
-import b4_pt from "../assets/billboard/pt/billboard-4.jpeg";
-import b5_pt from "../assets/billboard/pt/billboard-5.jpeg";
-import b6_pt from "../assets/billboard/pt/billboard-6.jpeg";
-import b7_pt from "../assets/billboard/pt/billboard-7.jpeg";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import b1_pt from "../../assets/billboard/pt/billboard-1.jpeg";
+import b2_pt from "../../assets/billboard/pt/billboard-2.jpeg";
+import b3_pt from "../../assets/billboard/pt/billboard-3.jpeg";
+import b4_pt from "../../assets/billboard/pt/billboard-4.jpeg";
+import b5_pt from "../../assets/billboard/pt/billboard-5.jpeg";
+import b6_pt from "../../assets/billboard/pt/billboard-6.jpeg";
+import b7_pt from "../../assets/billboard/pt/billboard-7.jpeg";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -124,7 +124,7 @@ const [b1, b2, b3, b4, b5, b6, b7] =
     </div>
   </figure>
   <script>
-    import "../scripts/billboard.ts";
+    import "../../scripts/billboard.ts";
     // Hoisted import: processed by Astro/Vite (TS supported)
   </script>
 </section>
