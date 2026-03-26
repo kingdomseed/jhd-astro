@@ -19,10 +19,6 @@ export async function GET() {
       const title = escapeXml(post.data.title);
       const description = escapeXml(post.data.summary);
       
-      // Render markdown to HTML for RSS content
-      const { Content } = await post.render();
-      // We can't easily get HTML string from Content component in v5
-      // For now, use the markdown body directly - many RSS readers support it
       const fullContent = post.body;
       const content = `<![CDATA[${fullContent}]]>`;
       
