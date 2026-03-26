@@ -4,7 +4,7 @@ import Footer from '../../../components/layout/Footer.astro';
 import HeadFonts from '../../../components/layout/HeadFonts.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { formatDate } from '../../../scripts/format-date';
+import { formatDate } from '../../../lib/format-date';
 
 type BlogEntry = CollectionEntry<'blog'>;
 type CategoryName = BlogEntry['data']['category'];

@@ -4,7 +4,7 @@ import Footer from '../../../components/layout/Footer.astro';
 import HeadFonts from '../../../components/layout/HeadFonts.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
-import { formatDate } from "../../../scripts/format-date"; // Consistent date rendering
+import { formatDate } from "../../../lib/format-date"; // Consistent date rendering
 import defaultOg from "../../../assets/logo/logo.jpg?url"; // Default site OG image fallback
 import ShareBar from '../../../components/blog/ShareBar.astro';
 import { getCollection, getEntry, type CollectionEntry } from "astro:content";

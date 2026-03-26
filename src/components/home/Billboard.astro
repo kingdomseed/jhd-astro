@@ -124,7 +124,50 @@ const [b1, b2, b3, b4, b5, b6, b7] =
     </div>
   </figure>
   <script>
-    import "../../scripts/billboard.ts";
-    // Hoisted import: processed by Astro/Vite (TS supported)
+    import { createCarousel, type CarouselHandle } from '../../lib/carousel';
+
+    function togglePause(carousel: CarouselHandle, btn: HTMLButtonElement) {
+      if (carousel.isPaused()) {
+        carousel.resume();
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-label', 'Pause autoplay');
+        btn.textContent = '\u23F8';
+      } else {
+        carousel.pause();
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-label', 'Play autoplay');
+        btn.textContent = '\u25B6';
+      }
+    }
+
+    const plate = document.querySelector<HTMLElement>('.billboard-plate');
+    if (plate) {
+      const stage = plate.querySelector<HTMLElement>('.bb-stage');
+      const imgs = stage
+        ? Array.from(stage.querySelectorAll<HTMLImageElement>('.billboard-img:not(.bb-sizer)'))
+        : [];
+      const statusEl = document.getElementById('bb-status');
+      const btnPrev = plate.querySelector<HTMLButtonElement>('.bb-prev');
+      const btnNext = plate.querySelector<HTMLButtonElement>('.bb-next');
+      const btnPause = plate.querySelector<HTMLButtonElement>('.bb-pause');
+      const controls = plate.querySelector<HTMLElement>('.bb-controls');
+
+      if (stage && imgs.length && btnPrev && btnNext && btnPause && controls) {
+        const carousel = createCarousel({
+          itemCount: imgs.length,
+          onActivate: (index) => {
+            imgs.forEach((im, idx) => im.classList.toggle('is-active', idx === index));
+            if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
+          },
+          intervalMs: 10000,
+          pauseTargets: [plate],
+          keyboardTarget: controls,
+        });
+
+        btnPrev.addEventListener('click', () => carousel.prev());
+        btnNext.addEventListener('click', () => carousel.next());
+        btnPause.addEventListener('click', () => togglePause(carousel, btnPause));
+      }
+    }
   </script>
 </section>

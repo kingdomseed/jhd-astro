@@ -4,7 +4,7 @@ import Footer from '../../../components/layout/Footer.astro';
 import HeadFonts from '../../../components/layout/HeadFonts.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
 import { getCollection, type CollectionEntry } from "astro:content";
-import { formatDate } from "../../../scripts/format-date"; // Consistent date rendering for "Updated" chips
+import { formatDate } from "../../../lib/format-date"; // Consistent date rendering for "Updated" chips
 import defaultOg from "../../../assets/logo/logo.jpg?url"; // Default site OG image
 
 const ogImageUrl = new URL(

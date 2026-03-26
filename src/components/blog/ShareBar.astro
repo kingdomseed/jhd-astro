@@ -65,9 +65,8 @@ const shareLinks = {
   </ul>
   <p class="sharebar__status" data-share-status aria-live="polite"></p>
   
-  <script type="module" is:inline>
-    const root = document.querySelector('[data-share-root]');
-    if (root) {
+  <script>
+    document.querySelectorAll<HTMLElement>('[data-share-root]').forEach((root) => {
       const nativeBtn = root.querySelector('[data-share-native]');
       const copyBtn = root.querySelector('[data-share-copy]');
       const statusEl = root.querySelector('[data-share-status]');
@@ -75,16 +74,13 @@ const shareLinks = {
       const shareText = root.getAttribute('data-share-summary') || '';
       const shareUrl = root.getAttribute('data-share-url') || window.location.href;
 
-      // Hide native share if unsupported
       if (!('share' in navigator)) {
         nativeBtn?.setAttribute('hidden', '');
       } else {
         nativeBtn?.addEventListener('click', async () => {
           try {
             await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
-          } catch (err) {
-            // User cancelled or share failed; no-op
-          }
+          } catch { /* user cancelled */ }
         });
       }
 
@@ -92,11 +88,11 @@ const shareLinks = {
         try {
           await navigator.clipboard.writeText(shareUrl);
           if (statusEl) statusEl.textContent = 'Link copied to clipboard.';
-        } catch (err) {
+        } catch {
           if (statusEl) statusEl.textContent = 'Unable to copy. Please copy the address bar.';
         }
       });
-    }
+    });
   </script>
 </div>
 

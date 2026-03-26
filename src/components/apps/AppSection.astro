@@ -160,7 +160,98 @@ const getStoreShadowClass = (storeName: string) => {
             </div>
             <p class="sr-only device-status" aria-live="polite">Slide 1 of {images.length}</p>
             <script>
-              import '../../scripts/device-carousel.ts';
+              import { createCarousel, type CarouselHandle } from '../../lib/carousel';
+
+              function updateStageHeight(stageEl: HTMLElement) {
+                const active = stageEl.querySelector<HTMLElement>('.device-frame.is-active .device-shot');
+                if (active) {
+                  const h = active.clientHeight;
+                  if (h > 0) stageEl.style.height = h + 'px';
+                }
+              }
+
+              function attachSwipe(root: HTMLElement, carousel: CarouselHandle) {
+                let startX = 0, startY = 0, dragging = false;
+                const threshold = 30;
+                const onStart = (x: number, y: number) => { startX = x; startY = y; dragging = true; };
+                const onMove = (x: number, y: number, e: Event) => {
+                  if (!dragging) return;
+                  if (Math.abs(x - startX) > Math.abs(y - startY) && Math.abs(x - startX) > 6) e.preventDefault();
+                };
+                const onEnd = (x: number) => {
+                  if (!dragging) return;
+                  dragging = false;
+                  const dx = x - startX;
+                  if (Math.abs(dx) > threshold) { dx < 0 ? carousel.next() : carousel.prev(); }
+                };
+                root.addEventListener('touchstart', (e) => { const t = e.changedTouches[0]; if (t) onStart(t.clientX, t.clientY); }, { passive: true });
+                root.addEventListener('touchmove', (e) => { const t = e.changedTouches[0]; if (t) onMove(t.clientX, t.clientY, e); }, { passive: false });
+                root.addEventListener('touchend', (e) => { const t = e.changedTouches[0]; if (t) onEnd(t.clientX); });
+                root.addEventListener('pointerdown', (e) => onStart(e.clientX, e.clientY));
+                root.addEventListener('pointermove', (e) => onMove(e.clientX, e.clientY, e));
+                root.addEventListener('pointerup', (e) => onEnd(e.clientX));
+                root.addEventListener('pointercancel', () => { dragging = false; });
+              }
+
+              function openLightbox(src: string, alt: string) {
+                const ov = document.createElement('div');
+                ov.className = 'lightbox';
+                const inner = document.createElement('div');
+                inner.className = 'lb-inner';
+                const img = document.createElement('img');
+                img.src = src; img.alt = alt; img.loading = 'lazy'; img.decoding = 'async';
+                inner.appendChild(img);
+                const closeBtn = document.createElement('button');
+                closeBtn.className = 'lb-close';
+                closeBtn.setAttribute('aria-label', 'Close');
+                closeBtn.textContent = '\u00d7';
+                inner.appendChild(closeBtn);
+                ov.appendChild(inner);
+                const closeLb = () => { document.body.classList.remove('lb-open'); ov.remove(); };
+                ov.addEventListener('click', (e) => { if (e.target === ov) closeLb(); });
+                closeBtn.addEventListener('click', closeLb);
+                document.addEventListener('keydown', function onKey(e) {
+                  if (e.key === 'Escape') { closeLb(); document.removeEventListener('keydown', onKey); }
+                });
+                document.body.appendChild(ov);
+                document.body.classList.add('lb-open');
+              }
+
+              document.querySelectorAll<HTMLElement>('.device-carousel').forEach((root) => {
+                const stage = root.querySelector<HTMLElement>('.device-stage');
+                const frames = stage ? Array.from(stage.querySelectorAll<HTMLElement>('.device-frame')) : [];
+                const status = root.querySelector<HTMLElement>('.device-status');
+                if (!stage || frames.length === 0) return;
+
+                const carousel = createCarousel({
+                  itemCount: frames.length,
+                  onActivate: (index) => {
+                    frames.forEach((f, j) => f.classList.toggle('is-active', j === index));
+                    if (status) status.textContent = `Slide ${index + 1} of ${frames.length}`;
+                    setTimeout(() => updateStageHeight(stage), 0);
+                  },
+                  intervalMs: 6000,
+                  pauseTargets: [root],
+                  keyboardTarget: root,
+                });
+
+                const btnPrev = root.querySelector<HTMLButtonElement>('.dc-prev');
+                const btnNext = root.querySelector<HTMLButtonElement>('.dc-next');
+                if (btnPrev) btnPrev.addEventListener('click', () => carousel.prev());
+                if (btnNext) btnNext.addEventListener('click', () => carousel.next());
+
+                attachSwipe(root, carousel);
+
+                root.addEventListener('click', (e) => {
+                  const t = e.target as HTMLElement | null;
+                  if (t && t.classList.contains('device-shot')) {
+                    const imgEl = t as HTMLImageElement;
+                    openLightbox(imgEl.currentSrc || imgEl.src, imgEl.alt || '');
+                  }
+                });
+
+                window.addEventListener('resize', () => updateStageHeight(stage));
+              });
             </script>
           </figure>
         ) : (

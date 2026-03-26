@@ -5,7 +5,7 @@ import HeadFonts from '../../components/layout/HeadFonts.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 import { getCollection, type CollectionEntry } from "astro:content";
 // Shared date formatting util for consistent rendering
-import { formatDate } from "../../scripts/format-date";
+import { formatDate } from "../../lib/format-date";
 import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
 
 type BlogEntry = CollectionEntry<"blog">;
