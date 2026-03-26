@@ -1,62 +1,35 @@
 ---
-import Header from '../../components/layout/Header.astro';
-import Footer from '../../components/layout/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
-import HeadFonts from '../../components/layout/HeadFonts.astro';
-import defaultOg from "../../assets/logo/logo.jpg?url";
-const ogImageUrl = new URL(
-    defaultOg,
-    Astro.site ?? "https://jasonholtdigital.com",
-).toString();
 
 const FORMSPARK_FORM_ID = "BrXEDLTap";
 const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
 ---
+<BaseLayout
+  title="Suporte e Contato — Obtenha Ajuda Rápido | Apps Mythic GME"
+  description="Respostas rápidas, Discord e opções de contato para Mythic GME Mobile e Digital."
+  canonicalPath="/pt/support/"
+  lang="pt"
+  mainClass="support-main"
+>
+  <Fragment slot="head">
+    <script
+      is:inline
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer></script>
+  </Fragment>
 
-<html lang="pt-BR">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <HeadFonts />
-        <title>
-            Suporte e Contato — Obtenha Ajuda Rápido | Apps Mythic GME
-        </title>
-        <meta
-            name="description"
-            content="Respostas rápidas, Discord e opções de contato para Mythic GME Mobile e Digital."
-        />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:image" content={ogImageUrl} />
-        <link rel="stylesheet" href="/global.css" />
-        <script
-            is:inline
-            src="https://kit.fontawesome.com/9f0db3cdf4.js"
-            crossorigin="anonymous"></script>
-        <script
-            is:inline
-            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-            async
-            defer></script>
-        <link rel="canonical" href="https://jasonholtdigital.com/pt/support/" />
-    </head>
-    <body>
-        <a class="skip" href="#main">Pular para o conteúdo principal</a>
-        <div id="bg-atmo" aria-hidden="true"></div>
-        <div id="site">
-            <Header />
-
-            <PageHeader
-                title="Suporte e Contato"
-                subtitle="Obtenha ajuda ou inicie uma conversa"
-                description="Respostas rápidas, suporte da comunidade e opções de contato direto, tudo em um só lugar."
-                accent="Support"
-                layout="left"
-                icon="fa-solid fa-life-ring"
-                visualElement="particles"
-                colorScheme="accent"
-            />
-
-            <main id="main" class="support-main">
+  <PageHeader
+    title="Suporte e Contato"
+    subtitle="Obtenha ajuda ou inicie uma conversa"
+    description="Respostas rápidas, suporte da comunidade e opções de contato direto, tudo em um só lugar."
+    accent="Support"
+    layout="left"
+    icon="fa-solid fa-life-ring"
+    visualElement="particles"
+    colorScheme="accent"
+  />
                 <section class="section" aria-labelledby="support-tabs-title">
                     <div class="container support-container">
                         <header class="section-head" aria-hidden="true">
@@ -1216,11 +1189,9 @@ const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
                         </div>
                     </div>
                 </section>
-            </main>
-            <Footer />
-        </div>
+</BaseLayout>
 
-        <script>
+<script>
             // Tab functionality
             function initTabs() {
                 const tabButtons =
@@ -1475,5 +1446,3 @@ const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
                 initFAQAccordion();
             });
         </script>
-    </body>
-</html>

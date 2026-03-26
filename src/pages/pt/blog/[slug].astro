@@ -1,7 +1,5 @@
 ---
-import Header from '../../../components/layout/Header.astro';
-import Footer from '../../../components/layout/Footer.astro';
-import HeadFonts from '../../../components/layout/HeadFonts.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import { formatDate } from "../../../lib/format-date"; // Consistent date rendering
@@ -81,72 +79,50 @@ const categoryTranslation: Record<string, string> = {
 const displayCategory = categoryTranslation[post.category] || post.category;
 ---
 
-<html lang="pt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <HeadFonts />
-        <title>{post.title} — Mythic Blog</title>
-        <meta name="description" content={post.summary} />
-        <link rel="canonical" href={canonicalUrl} />
-        <link
-            rel="alternate"
-            type="application/rss+xml"
-            href="/rss.xml"
-            title="Mythic Blog"
+<BaseLayout
+  title={`${post.title} — Mythic Blog`}
+  description={post.summary}
+  canonicalPath={`/pt/blog/${entry.slug}/`}
+  lang="pt"
+  ogTitle={post.title}
+  ogDescription={post.summary}
+  ogType="article"
+  ogImage={ogImageUrl}
+  mainClass="blog-detail-main"
+>
+  <Fragment slot="head">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Mythic Blog"
+    />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+    {
+      post.date && (
+        <meta
+          property="article:published_time"
+          content={post.date.toISOString()}
         />
+      )
+    }
+    {
+      Array.isArray((post as any)?.tags) &&
+        (post as any).tags.map((t: string) => (
+          <meta property="article:tag" content={t} />
+        ))
+    }
+  </Fragment>
 
-        <!-- Open Graph for rich link previews across platforms (FB, Threads, Bluesky, Reddit, etc.) -->
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Jason Holt Digital" />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.summary} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={ogImageUrl} />
-        {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-        {
-            post.date && (
-                <meta
-                    property="article:published_time"
-                    content={post.date.toISOString()}
-                />
-            )
-        }
-        {
-            Array.isArray((post as any)?.tags) &&
-                (post as any).tags.map((t: string) => (
-                    <meta property="article:tag" content={t} />
-                ))
-        }
-
-        <!-- Twitter Card tags for platforms that consume them (summary_large_image) -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.summary} />
-        <meta name="twitter:image" content={ogImageUrl} />
-        <link rel="stylesheet" href="/global.css" />
-        <script
-            is:inline
-            src="https://kit.fontawesome.com/9f0db3cdf4.js"
-            crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <a class="skip" href="#main">Pular para o conteúdo principal</a>
-        <div id="bg-atmo" aria-hidden="true"></div>
-        <div id="site">
-            <Header />
-
-            <PageHeader
-                title={post.title}
-                subtitle={`${displayCategory} • ${productLabel}`}
-                description={post.summary}
-                accent="Blog"
-                layout="left"
-                icon="fa-solid fa-newspaper"
-                colorScheme="secondary"
-            />
-
-            <main id="main" class="blog-detail-main">
+  <PageHeader
+    title={post.title}
+    subtitle={`${displayCategory} • ${productLabel}`}
+    description={post.summary}
+    accent="Blog"
+    layout="left"
+    icon="fa-solid fa-newspaper"
+    colorScheme="secondary"
+  />
                 <article
                     class="container section blog-detail"
                     aria-labelledby="blog-detail-heading"
@@ -487,11 +463,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                         }
                     </div>
                 </article>
-            </main>
-            <Footer />
-        </div>
-    </body>
-</html>
+</BaseLayout>
 
 <style>
     .blog-hero {

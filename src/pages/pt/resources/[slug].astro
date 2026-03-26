@@ -1,7 +1,5 @@
 ---
-import Header from '../../../components/layout/Header.astro';
-import Footer from '../../../components/layout/Footer.astro';
-import HeadFonts from '../../../components/layout/HeadFonts.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import { formatDate } from "../../../lib/format-date";
@@ -118,42 +116,28 @@ const ogImageUrl = new URL(
 const ogImageAlt = resource.heroAlt ?? resource.title;
 ---
 
-<html lang="pt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <HeadFonts />
-        <title>{resource.title} — Mythic Resources</title>
-        <meta name="description" content={resource.summary} />
-        <link rel="canonical" href={canonicalUrl} />
-        <link rel="stylesheet" href="/global.css" />
-        <script
-            is:inline
-            src="https://kit.fontawesome.com/9f0db3cdf4.js"
-            crossorigin="anonymous"></script>
-        <meta property="og:image" content={ogImageUrl} />
-        {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
-    </head>
-    <body>
-        <a class="skip" href="#main">Pular para o conteúdo principal</a>
-        <div id="bg-atmo" aria-hidden="true"></div>
-        <div id="site">
-            <Header />
+<BaseLayout
+  title={`${resource.title} — Mythic Resources`}
+  description={resource.summary}
+  canonicalPath={`/pt/resources/${entry.slug}/`}
+  lang="pt"
+  ogImage={ogImageUrl}
+  mainClass="resource-detail-main"
+>
+  <Fragment slot="head">
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+  </Fragment>
 
-            <PageHeader
-                title={resource.title}
-                subtitle={categoryLabels[resource.category]}
-                description={resource.summary}
-                accent="Recursos"
-                layout="left"
-                icon="fa-solid fa-book-open"
-                visualElement="grid"
-                colorScheme="primary"
-            />
-
-            <main id="main" class="resource-detail-main">
+  <PageHeader
+    title={resource.title}
+    subtitle={categoryLabels[resource.category]}
+    description={resource.summary}
+    accent="Recursos"
+    layout="left"
+    icon="fa-solid fa-book-open"
+    visualElement="grid"
+    colorScheme="primary"
+  />
                 <article
                     class="container section resource-detail"
                     aria-labelledby="resource-detail-heading"
@@ -653,11 +637,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                         }
                     </div>
                 </article>
-            </main>
-            <Footer />
-        </div>
-    </body>
-</html>
+</BaseLayout>
 
 <style>
     .resource-hero {
