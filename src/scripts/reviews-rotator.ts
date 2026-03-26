@@ -48,8 +48,13 @@ function initReviewsRotator() {
   const statusEl = document.getElementById('rev-status');
   if (!stage) return;
 
-  let qA = stage.querySelector<HTMLParagraphElement>('#quote');
-  if (!qA) { qA = document.createElement('p'); qA.id = 'quote'; stage.appendChild(qA); }
+  const existingQuote = stage.querySelector<HTMLParagraphElement>('#quote');
+  const qA = existingQuote ?? (() => {
+    const el = document.createElement('p');
+    el.id = 'quote';
+    stage.appendChild(el);
+    return el;
+  })();
   qA.classList.add('rev-quote');
   const qB = document.createElement('p');
   qB.className = 'rev-quote';
@@ -62,8 +67,8 @@ function initReviewsRotator() {
   if (!quotes.length) return;
 
   function crossFade(toIndex: number) {
-    const active = qA!.classList.contains('is-active') ? qA! : qB;
-    const other = active === qA ? qB : qA!;
+    const active = qA.classList.contains('is-active') ? qA : qB;
+    const other = active === qA ? qB : qA;
     renderQuote(quotes[toIndex], other);
     requestAnimationFrame(() => {
       active.classList.remove('is-active');
