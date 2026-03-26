@@ -7,7 +7,7 @@ Important: `AGENTS.md` is the canonical repository playbook. This file tailors t
 ## Commands
 
 **Development:**
-- `npm install` - Install dependencies (Node.js >=20 <21 required)
+- `npm install` - Install dependencies (Node.js >=22 <23 required)
 - `npm run dev` - Start development server (runs `astro dev`)
 - `npm run build` - Build static site to `dist/`
 - `npm run preview` - Preview the built site
@@ -149,7 +149,7 @@ All other pages should match or aspire to this level of polish.
 - **Production**: Cloudflare (uses Cloudflare adapter in `astro.config.mjs`)
 - **Preview**: Netlify (configured in `netlify.toml`)
 - Build output: Static files to `dist/`
-- Node version: 20 (strict requirement)
+- Node version: 22 (strict requirement)
 - Environment: Production builds with Sentry monitoring
 
 ## Voice & Copy Guidelines

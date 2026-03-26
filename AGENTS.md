@@ -162,7 +162,7 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 
 ## Security & Configuration Tips
 
-- Node: use active LTS (≥18; prefer 20). Keep `package-lock.json` committed.
+- Node: use active LTS (≥22). Keep `package-lock.json` committed.
 - Private registries/tokens are configured via `.npmrc`. Do not commit secrets elsewhere.
 - This site is static; avoid SSR/external data unless explicitly planned and approved.
 
