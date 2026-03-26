@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import { formatDate } from "../../lib/format-date"; // Consistent date rendering
 import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image fallback
 import ShareBar from '../../components/blog/ShareBar.astro';
-import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+import { getCollection, render, getEntry, type CollectionEntry } from "astro:content";
 
 type BlogEntry = CollectionEntry<"blog">;
 
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     return data.lang === "en" || data.lang === undefined;
   });
   return entries.map((entry: BlogEntry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
   }));
 }
 
@@ -32,7 +32,7 @@ if (!entry) {
   throw new Error(`Blog post not found for slug: ${slug}`);
 }
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const post = entry.data;
 // Group downloads (if any) into Schemas, Examples, Templates based on label keywords
 const downloads = Array.isArray(post.downloads) ? post.downloads : [];
@@ -58,7 +58,7 @@ const productLabel =
         ? "Mythic GME Digital"
         : "Mythic GME Apps";
 
-const canonicalPath = `/blog/${entry.slug}/`;
+const canonicalPath = `/blog/${entry.id}/`;
 // Compute absolute OG image URL with fallbacks: socialImage -> hero -> default site image
 const ogSrcPath = post.socialImage?.src ?? post.hero?.src ?? defaultOg;
 const ogImageUrl = new URL(

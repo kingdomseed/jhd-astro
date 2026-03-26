@@ -12,7 +12,6 @@ fmContentType: blog
 category: Announcement
 readTime: 7 minutos
 summary: Mergulhe no que vem por aí para Jason Holt Digital e nas próximas atualizações dos aplicativos Mythic GME.
-slug: blog-launched-future-mythic-apps-pt
 hero: ../../assets/blog-images/mythic-images-17.png
 heroAlt: Mulher caminhando em uma rua.
 lang: pt

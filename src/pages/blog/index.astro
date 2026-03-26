@@ -108,7 +108,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
             </div>
             <div class="blog-feature__body">
               <h2 id="feature-title" class="blog-feature__title">
-                <a href={`/blog/${featuredEntry.slug}/`}>
+                <a href={`/blog/${featuredEntry.id}/`}>
                   {featuredEntry.data.title}
                 </a>
               </h2>
@@ -138,7 +138,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
               <p class="blog-feature__cta">
                 <a
                   class="blog-feature__link"
-                  href={`/blog/${featuredEntry.slug}/`}
+                  href={`/blog/${featuredEntry.id}/`}
                 >
                   Read release notes
                   <i
@@ -225,7 +225,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
                   </span>
                 </header>
                 <h3 class="blog-card__title">
-                  <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
+                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
                 </h3>
                 <p class="blog-card__summary">{entry.data.summary}</p>
                 {entry.data.isSample && (
@@ -247,7 +247,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
                   )}
                   <a
                     class="blog-card__link"
-                    href={`/blog/${entry.slug}/`}
+                    href={`/blog/${entry.id}/`}
                   >
                     Read post
                     <i

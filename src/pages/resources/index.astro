@@ -75,7 +75,7 @@ const advancedItems = sortByOrder(
 );
 
 const searchEntries = sortByOrder(entries).map((entry) => ({
-  slug: entry.slug,
+  id: entry.id,
   title: entry.data.title,
   summary: entry.data.summary,
   category: entry.data.category,
@@ -146,7 +146,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                   data-category={categoryLabels[entry.category]}
                   data-index={index}
                 >
-                  <a href={`/resources/${entry.slug}/`} tabindex="-1">
+                  <a href={`/resources/${entry.id}/`} tabindex="-1">
                     <span class="resource-search-result-title">
                       {entry.title}
                     </span>
@@ -205,7 +205,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
               <li>
                 <a
                   class="resource-card"
-                  href={`/resources/${item.slug}/`}
+                  href={`/resources/${item.id}/`}
                 >
                   <span class="resource-card__icon" aria-hidden="true">
                     <i class={item.data.icon} />
@@ -271,7 +271,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
               <li>
                 <a
                   class="resource-card"
-                  href={`/resources/${item.slug}/`}
+                  href={`/resources/${item.id}/`}
                 >
                   <span class="resource-card__icon" aria-hidden="true">
                     <i class={item.data.icon} />

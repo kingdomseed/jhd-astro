@@ -108,7 +108,7 @@ const canonicalPath = `/blog/category/${category}/`;
                   <span class="blog-card__date">{formatDate(entry.data.date)}</span>
                 </header>
                 <h3 class="blog-card__title">
-                  <a href={`/blog/${entry.slug}/`}>{entry.data.title}</a>
+                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
                 </h3>
                 <p class="blog-card__summary">{entry.data.summary}</p>
                 {entry.data.isSample && (
@@ -121,7 +121,7 @@ const canonicalPath = `/blog/category/${category}/`;
                       <span class="blog-pill blog-pill--sample">Sample</span>
                     </div>
                   )}
-                  <a class="blog-card__link" href={`/blog/${entry.slug}/`}>
+                  <a class="blog-card__link" href={`/blog/${entry.id}/`}>
                     Read post
                     <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
                   </a>

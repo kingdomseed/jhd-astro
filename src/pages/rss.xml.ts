@@ -14,7 +14,7 @@ export async function GET() {
   // Render each post to get full HTML content
   const items = await Promise.all(
     posts.map(async (post: BlogPost) => {
-      const link = new URL(`/blog/${post.slug}/`, site).toString();
+      const link = new URL(`/blog/${post.id}/`, site).toString();
       const pubDate = post.data.date.toUTCString();
       const title = escapeXml(post.data.title);
       const description = escapeXml(post.data.summary);

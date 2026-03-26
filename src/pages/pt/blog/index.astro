@@ -130,7 +130,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             class="blog-feature__title"
                                         >
                                             <a
-                                                href={`/pt/blog/${featuredEntry.slug}/`}
+                                                href={`/pt/blog/${featuredEntry.id}/`}
                                             >
                                                 {featuredEntry.data.title}
                                             </a>
@@ -172,7 +172,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                         <p class="blog-feature__cta">
                                             <a
                                                 class="blog-feature__link"
-                                                href={`/pt/blog/${featuredEntry.slug}/`}
+                                                href={`/pt/blog/${featuredEntry.id}/`}
                                             >
                                                 Ler post
                                                 <i
@@ -281,7 +281,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             </header>
                                             <h3 class="blog-card__title">
                                                 <a
-                                                    href={`/pt/blog/${entry.slug}/`}
+                                                    href={`/pt/blog/${entry.id}/`}
                                                 >
                                                     {entry.data.title}
                                                 </a>
@@ -309,7 +309,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                                 )}
                                                 <a
                                                     class="blog-card__link"
-                                                    href={`/pt/blog/${entry.slug}/`}
+                                                    href={`/pt/blog/${entry.id}/`}
                                                 >
                                                     Ler post
                                                     <i

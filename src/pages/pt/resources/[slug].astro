@@ -4,7 +4,7 @@ import PageHeader from '../../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import { formatDate } from "../../../lib/format-date";
 import defaultOg from "../../../assets/logo/logo.jpg?url"; // Default site OG image
-import { getEntry, getCollection, type CollectionEntry } from "astro:content";
+import { getEntry, render, getCollection, type CollectionEntry } from "astro:content";
 import ShareBar from '../../../components/blog/ShareBar.astro';
 
 type ResourceEntry = CollectionEntry<"resources">;
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
         return data.lang === "pt";
     });
     return entries.map((entry: ResourceEntry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
     }));
 }
 
@@ -32,7 +32,7 @@ if (!entry) {
     throw new Error(`Resource not found for slug: ${slug}`);
 }
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const resource = entry.data;
 
 // Build Related Guides list
@@ -40,27 +40,27 @@ const allResources = await getCollection("resources", ({ data }) => {
     return data.lang === "pt";
 });
 // Helper: resolve a slug to entry safely
-const resolveResource = (s: string) => allResources.find((e) => e.slug === s);
+const resolveResource = (s: string) => allResources.find((e) => e.id === s);
 const explicitRelated = Array.isArray(resource.related)
     ? resource.related
           .map((s: string) => resolveResource(s))
           .filter((e): e is ResourceEntry => {
               if (!e) return false;
-              return e.slug !== entry.slug;
+              return e.id !== entry.id;
           })
     : [];
 // Fallback suggestions (same category, then tag overlap), excluding duplicates/self
 const seen = new Set<string>([
-    entry.slug,
-    ...explicitRelated.map((e) => e.slug),
+    entry.id,
+    ...explicitRelated.map((e) => e.id),
 ]);
 const sameCategory = allResources
-    .filter((e) => e.data.category === resource.category && !seen.has(e.slug))
+    .filter((e) => e.data.category === resource.category && !seen.has(e.id))
     .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
-sameCategory.slice(0, 3).forEach((e) => seen.add(e.slug));
+sameCategory.slice(0, 3).forEach((e) => seen.add(e.id));
 const tags = new Set<string>(Array.isArray(resource.tags) ? resource.tags : []);
 const tagOverlap = allResources
-    .filter((e) => !seen.has(e.slug))
+    .filter((e) => !seen.has(e.id))
     .map((e) => ({
         entry: e,
         score: (e.data.tags || []).reduce(
@@ -106,7 +106,7 @@ const sectionAnchors = {
 
 const parentAnchor = sectionAnchors[resource.category] ?? "";
 const backHref = `/pt/resources${parentAnchor}`;
-const canonicalUrl = `https://jasonholtdigital.com/pt/resources/${entry.slug}/`;
+const canonicalUrl = `https://jasonholtdigital.com/pt/resources/${entry.id}/`;
 // Compute absolute OG image URL using resource hero or default site image
 const ogSrcPath = resource.hero?.src ?? defaultOg;
 const ogImageUrl = new URL(
@@ -119,7 +119,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
 <BaseLayout
   title={`${resource.title} — Mythic Resources`}
   description={resource.summary}
-  canonicalPath={`/pt/resources/${entry.slug}/`}
+  canonicalPath={`/pt/resources/${entry.id}/`}
   lang="pt"
   ogImage={ogImageUrl}
   mainClass="resource-detail-main"
@@ -263,7 +263,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                         {relatedEntries.map((r) => (
                                             <li class="resource-related__item">
                                                 <a
-                                                    href={`/pt/resources/${r.slug}/`}
+                                                    href={`/pt/resources/${r.id}/`}
                                                     class="resource-related__link"
                                                 >
                                                     <span
