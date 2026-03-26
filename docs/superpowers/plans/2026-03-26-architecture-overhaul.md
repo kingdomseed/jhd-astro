@@ -1,18 +1,42 @@
-# Architecture Overhaul — Implementation Plan
+# Architecture Overhaul — Implementation Plan (v2)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Restructure jhd-astro for nimblenomicon-level architectural clarity — domain-based component organization, shared layout, colocated scripts, explicit data separation, and EN/PT template unification. Zero functionality loss.
+**Goal:** Restructure jhd-astro for architectural clarity — domain-based component organization, shared layout, colocated scripts, explicit data separation, proper Astro 5 APIs. Zero functionality loss.
 
-**Architecture:** Astro's processed `<script>` tags are `type="module"` by default (deferred, deduplicated, bundled). Scripts belong inside the components that own them. Shared logic lives in importable modules. Data lives in `src/data/`. Layouts provide the shared HTML shell. Page components unify EN/PT routes.
+**Architecture:** Astro processed `<script>` tags are `type="module"` (deferred, deduplicated, bundled). Scripts belong inside the components that own them. Shared pure logic lives in `src/lib/`. Static data lives in `src/data/`. Layouts provide the shared HTML shell. Content collections use Astro 5's `loader: glob(...)` API.
 
-**Tech Stack:** Astro 5, TypeScript, CSS layers
+**Tech Stack:** Astro 5, TypeScript, CSS layers, Node 22
 
 **Verification command (run after every task):**
 ```bash
 npx astro check && npm run build
 ```
 Note: `src/worker.ts:2` `Cannot find name 'Fetcher'` is pre-existing — ignore.
+
+**Commit hygiene:** Never use `git add -A`. Always stage specific paths (`git add src/` or named files) to avoid accidentally staging `.env.*` or other sensitive untracked files.
+
+---
+
+## Architectural Decisions
+
+### CSS policy
+Component styles live in `public/styles/components/` and are loaded globally via CSS layers. This is the established pattern for 15 of 17 components. Astro scoped `<style>` is acceptable for self-contained leaf components (e.g., ShareBar) that define no site-wide tokens. New components (search overlay, tooltips in Workstream 3) should follow the global CSS layer pattern unless they are fully self-contained.
+
+ShareBar's brand tint variables (`--share-facebook`, etc.) in `:root` should move to `public/styles/tokens.css` to keep all CSS variables in one place. This is noted but not a separate task — address during Task 3 when touching ShareBar.
+
+### What NOT to copy from nimblenomicon
+Nimblenomicon is Next.js + React with a fundamentally different model. Do not replicate:
+- `"use client"` / `"use server"` boundaries — Astro has no equivalent; all `.astro` components are server-only
+- React hooks/context patterns — each Astro component independently resolves its state
+- Per-route `loading.tsx` / `error.tsx` conventions — Astro has no file-system error boundaries
+- DAL with `import "server-only"` — Astro content collections are already a data access layer
+
+### Not in scope (explicit deferrals)
+- **View Transitions** — deferred to a future iteration. Colocated scripts are written to work without them; adding them later will require `astro:after-swap` event handlers.
+- **Image optimization audit** — inconsistent `<Image>` vs `<img>` patterns exist but are not addressed in this structural overhaul.
+- **AppSection decomposition** — the 629-line component should be broken into FeatureCard, StoreLinks, DeviceCarousel. Deferred until after the architectural foundation is solid.
+- **`output: 'static'`** — the Cloudflare adapter works for static output but the config doesn't explicitly set `output: 'static'`. Noted for future cleanup.
 
 ---
 
@@ -28,6 +52,7 @@ src/
 │   │   ├── Footer.astro
 │   │   ├── UtilBar.astro
 │   │   ├── LanguageFab.astro
+│   │   ├── HeadFonts.astro
 │   │   └── PageHeader.astro
 │   ├── home/                         # Homepage-specific
 │   │   ├── Hero.astro
@@ -39,46 +64,109 @@ src/
 │   │   ├── MakersNote.astro
 │   │   └── ReviewsRotator.astro
 │   ├── apps/                         # Apps page components
-│   │   ├── AppSection.astro          # Orchestrator (~150 lines)
-│   │   ├── FeatureCard.astro
-│   │   ├── StoreLinks.astro
-│   │   └── DeviceCarousel.astro      # Owns its script
-│   ├── blog/                         # Blog components
-│   │   └── ShareBar.astro
-│   └── pages/                        # EN/PT unified page templates
-│       ├── HomePage.astro
-│       ├── AboutPage.astro
-│       └── (others as needed)
+│   │   └── AppSection.astro
+│   └── blog/                         # Blog components
+│       └── ShareBar.astro
 ├── lib/                              # Pure logic (no DOM, no I/O)
-│   └── carousel.ts                   # Shared carousel state machine
+│   ├── carousel.ts                   # Shared carousel state machine
+│   ├── format-date.ts                # Date formatting utility
+│   └── collections.ts               # Content collection query helpers
 ├── data/                             # Static data
 │   └── reviews.ts                    # Review quotes
 ├── i18n/                             # (existing, unchanged)
-│   ├── ui.ts
-│   └── utils.ts
-├── scripts/                          # Deprecated — only keep if truly shared
-│   └── format-date.ts               # Pure utility, could move to lib/
 ├── content/                          # (existing, unchanged)
 ├── assets/                           # (existing, unchanged)
-└── pages/                            # Thin route files
-    ├── index.astro                   # <HomePage lang="en" />
-    ├── about.astro                   # <AboutPage lang="en" />
-    ├── pt/
-    │   ├── index.astro              # <HomePage lang="pt" />
-    │   └── about.astro              # <AboutPage lang="pt" />
-    └── ...
+└── pages/                            # Route files
+```
+
+Note: `LanguagePicker.astro` is unused (zero importers) — delete it, don't move it.
+
+---
+
+## Task 0: Fix documentation and pre-flight checks
+
+**Files:**
+- Modify: `CLAUDE.md`
+
+- [ ] **Step 1: Fix Node version in CLAUDE.md**
+
+The `package.json` and `netlify.toml` specify Node 22. CLAUDE.md incorrectly says Node 20. Fix it:
+
+Change `Node.js >=20 <21 required` to `Node.js >=22 <23 required` in CLAUDE.md.
+
+- [ ] **Step 2: Check for frontmatter `slug:` overrides in content files**
+
+```bash
+grep -rn '^slug:' src/content/
+```
+
+Two files have frontmatter `slug:` overrides:
+- `src/content/blog/2025-10-27-blog-launched-and-the-future-of-mythic-apps.md` → `slug: blog-launched-future-mythic-apps`
+- `src/content/blog/2025-10-27-blog-launched-and-the-future-of-mythic-apps-pt.md` → `slug: blog-launched-future-mythic-apps-pt`
+
+These overrides will NOT carry over when migrating to `loader: glob(...)` in Task 5. The glob loader derives `id` from the filename. To preserve these URLs, either:
+- (a) Rename the files to match the desired slug, or
+- (b) Use `generateId` option in the glob loader to preserve slug behavior
+
+Document this for Task 5. Flag it now so it's not a surprise.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add CLAUDE.md
+git commit -m "fix: correct Node version requirement to 22 in CLAUDE.md"
 ```
 
 ---
 
-## Task 1: Create BaseLayout
+## Task 1: Create BaseLayout and reorganize components (atomic)
 
 **Files:**
 - Create: `src/layouts/BaseLayout.astro`
+- Move: All components into domain subdirectories
+- Delete: `src/components/LanguagePicker.astro` (unused)
+- Update: All import paths
 
-- [ ] **Step 1: Create `src/layouts/BaseLayout.astro`**
+Tasks 1 and 2 from the previous plan are merged into one atomic operation. BaseLayout cannot build until components are in their new locations, so both changes must land in one commit.
 
-This component replaces the html/head/body boilerplate that every page currently duplicates. It accepts metadata as props and provides named slots for page-specific head content.
+- [ ] **Step 1: Create directories**
+
+```bash
+mkdir -p src/layouts src/components/layout src/components/home src/components/apps src/components/blog
+```
+
+- [ ] **Step 2: Move components to domain directories**
+
+```bash
+# Layout components
+git mv src/components/Header.astro src/components/layout/
+git mv src/components/Footer.astro src/components/layout/
+git mv src/components/HeadFonts.astro src/components/layout/
+git mv src/components/UtilBar.astro src/components/layout/
+git mv src/components/LanguageFab.astro src/components/layout/
+git mv src/components/PageHeader.astro src/components/layout/
+
+# Homepage components
+git mv src/components/Hero.astro src/components/home/
+git mv src/components/Billboard.astro src/components/home/
+git mv src/components/CoreBenefits.astro src/components/home/
+git mv src/components/CommunitySupport.astro src/components/home/
+git mv src/components/Partners.astro src/components/home/
+git mv src/components/PopularResources.astro src/components/home/
+git mv src/components/MakersNote.astro src/components/home/
+git mv src/components/ReviewsRotator.astro src/components/home/
+
+# Apps components
+git mv src/components/AppSection.astro src/components/apps/
+
+# Blog components
+git mv src/components/ShareBar.astro src/components/blog/
+
+# Delete dead component
+git rm src/components/LanguagePicker.astro
+```
+
+- [ ] **Step 3: Create `src/layouts/BaseLayout.astro`**
 
 ```astro
 ---
@@ -115,6 +203,9 @@ const siteUrl = Astro.site?.toString() ?? 'https://jasonholtdigital.com';
 const ogImageUrl = ogImage ?? new URL(defaultOg, siteUrl).toString();
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
 const skipText = lang === 'pt' ? 'Pular para o conteudo principal' : 'Skip to main content';
+const altLang = lang === 'pt' ? 'en' : 'pt';
+const altPath = lang === 'pt' ? canonicalPath.replace('/pt/', '/') : `/pt${canonicalPath}`;
+const altUrl = new URL(altPath, siteUrl).toString();
 ---
 <html lang={lang}>
   <head>
@@ -138,6 +229,8 @@ const skipText = lang === 'pt' ? 'Pular para o conteudo principal' : 'Skip to ma
     <link rel="stylesheet" href="/global.css" />
     <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang={altLang} href={altUrl} />
     <slot name="head" />
   </head>
   <body>
@@ -151,151 +244,98 @@ const skipText = lang === 'pt' ? 'Pular para o conteudo principal' : 'Skip to ma
       </main>
       <Footer />
     </div>
+    <script>
+      // Skip link focus management (site-wide a11y)
+      function focusTarget(target: HTMLElement) {
+        const prevTabIndex = target.getAttribute('tabindex');
+        const needsTabIndex = prevTabIndex === null;
+        if (needsTabIndex) target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: false });
+        const onBlur = () => {
+          if (needsTabIndex) target.removeAttribute('tabindex');
+          target.removeEventListener('blur', onBlur);
+        };
+        target.addEventListener('blur', onBlur);
+      }
+
+      document.querySelectorAll<HTMLAnchorElement>('a.skip[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const id = (link.getAttribute('href') || '').slice(1);
+          if (!id) return;
+          const target = document.getElementById(id);
+          if (!target) return;
+          e.preventDefault();
+          focusTarget(target);
+        });
+      });
+    </script>
   </body>
 </html>
 ```
 
-Note: This file references `../components/layout/Header.astro` — it will compile after Task 2 moves components.
+Key additions vs previous plan:
+- `hreflang` alternate links for i18n SEO
+- `Astro.site?.toString()` for type-safe URL handling
+- Skip-link script placed before `</body>` (valid HTML)
+- Uses `querySelectorAll` for deduplication safety
 
-- [ ] **Step 2: Verify the file parses (won't build yet — component paths change in Task 2)**
+- [ ] **Step 4: Update ALL import paths across the codebase**
 
-```bash
-ls src/layouts/BaseLayout.astro  # confirm file exists
-```
+Update every file that imports a component. The patterns:
 
-- [ ] **Step 3: Commit**
+**Layout components** (`Header`, `Footer`, `HeadFonts`, `UtilBar`, `PageHeader`):
+- `../components/X.astro` → `../components/layout/X.astro`
+- `../../components/X.astro` → `../../components/layout/X.astro`
 
-```bash
-git add src/layouts/BaseLayout.astro
-git commit -m "feat: add BaseLayout shared HTML shell"
-```
+**Home components** (`Hero`, `Billboard`, `CoreBenefits`, `CommunitySupport`, `Partners`, `PopularResources`, `MakersNote`, `ReviewsRotator`):
+- `../components/X.astro` → `../components/home/X.astro`
+- `../../components/X.astro` → `../../components/home/X.astro`
 
----
+**Apps components** (`AppSection`):
+- `../components/AppSection.astro` → `../components/apps/AppSection.astro`
+- `../../components/AppSection.astro` → `../../components/apps/AppSection.astro`
 
-## Task 2: Reorganize components into domain directories
+**Blog components** (`ShareBar`):
+- `../components/ShareBar.astro` → `../components/blog/ShareBar.astro`
+- `../../components/ShareBar.astro` → `../../components/blog/ShareBar.astro`
 
-**Files:**
-- Move: All components from `src/components/` into domain subdirectories
-- Update: All import paths across the entire codebase
+**Internal component imports** (Footer imports LanguageFab — both now in `layout/`):
+- `./LanguageFab.astro` stays as `./LanguageFab.astro` (same directory)
 
-This is the biggest single change. Every import of every component across every page file changes.
+**Script imports inside components** (Billboard imports billboard.ts, etc.):
+- Update relative paths from new component locations to `src/scripts/`
+- These will change again in Task 2 when scripts get colocated, but they must be correct here for the build to pass
 
-- [ ] **Step 1: Create domain directories**
-
-```bash
-mkdir -p src/components/layout src/components/home src/components/apps src/components/blog src/components/pages
-```
-
-- [ ] **Step 2: Move layout components**
-
-```bash
-git mv src/components/Header.astro src/components/layout/
-git mv src/components/Footer.astro src/components/layout/
-git mv src/components/HeadFonts.astro src/components/layout/
-git mv src/components/UtilBar.astro src/components/layout/
-git mv src/components/LanguageFab.astro src/components/layout/
-git mv src/components/LanguagePicker.astro src/components/layout/
-git mv src/components/PageHeader.astro src/components/layout/
-```
-
-- [ ] **Step 3: Move home components**
-
-```bash
-git mv src/components/Hero.astro src/components/home/
-git mv src/components/Billboard.astro src/components/home/
-git mv src/components/CoreBenefits.astro src/components/home/
-git mv src/components/CommunitySupport.astro src/components/home/
-git mv src/components/Partners.astro src/components/home/
-git mv src/components/PopularResources.astro src/components/home/
-git mv src/components/MakersNote.astro src/components/home/
-git mv src/components/ReviewsRotator.astro src/components/home/
-```
-
-- [ ] **Step 4: Move apps components**
-
-```bash
-git mv src/components/AppSection.astro src/components/apps/
-```
-
-- [ ] **Step 5: Move blog components**
-
-```bash
-git mv src/components/ShareBar.astro src/components/blog/
-```
-
-- [ ] **Step 6: Update ALL import paths across the codebase**
-
-Every file that imports a component needs its path updated. Use find-and-replace across the codebase. The patterns are:
-
-| Old import | New import |
-|---|---|
-| `../components/Header.astro` | `../components/layout/Header.astro` |
-| `../../components/Header.astro` | `../../components/layout/Header.astro` |
-| `../components/Footer.astro` | `../components/layout/Footer.astro` |
-| `../../components/Footer.astro` | `../../components/layout/Footer.astro` |
-| `../components/HeadFonts.astro` | `../components/layout/HeadFonts.astro` |
-| `../../components/HeadFonts.astro` | `../../components/layout/HeadFonts.astro` |
-| `../components/UtilBar.astro` | `../components/layout/UtilBar.astro` |
-| `../../components/UtilBar.astro` | `../../components/layout/UtilBar.astro` |
-| `../components/PageHeader.astro` | `../components/layout/PageHeader.astro` |
-| `../../components/PageHeader.astro` | `../../components/layout/PageHeader.astro` |
-| `../components/Hero.astro` | `../components/home/Hero.astro` |
-| `../../components/Hero.astro` | `../../components/home/Hero.astro` |
-| `../components/Billboard.astro` | `../components/home/Billboard.astro` |
-| `../../components/Billboard.astro` | `../../components/home/Billboard.astro` |
-| `../components/CoreBenefits.astro` | `../components/home/CoreBenefits.astro` |
-| `../../components/CoreBenefits.astro` | `../../components/home/CoreBenefits.astro` |
-| `../components/CommunitySupport.astro` | `../components/home/CommunitySupport.astro` |
-| `../../components/CommunitySupport.astro` | `../../components/home/CommunitySupport.astro` |
-| `../components/Partners.astro` | `../components/home/Partners.astro` |
-| `../../components/Partners.astro` | `../../components/home/Partners.astro` |
-| `../components/PopularResources.astro` | `../components/home/PopularResources.astro` |
-| `../../components/PopularResources.astro` | `../../components/home/PopularResources.astro` |
-| `../components/MakersNote.astro` | `../components/home/MakersNote.astro` |
-| `../../components/MakersNote.astro` | `../../components/home/MakersNote.astro` |
-| `../components/ReviewsRotator.astro` | `../components/home/ReviewsRotator.astro` |
-| `../../components/ReviewsRotator.astro` | `../../components/home/ReviewsRotator.astro` |
-| `../components/AppSection.astro` | `../components/apps/AppSection.astro` |
-| `../../components/AppSection.astro` | `../../components/apps/AppSection.astro` |
-| `../components/ShareBar.astro` | `../components/blog/ShareBar.astro` |
-| `../../components/ShareBar.astro` | `../../components/blog/ShareBar.astro` |
-
-Also update internal component imports (e.g., Footer imports LanguageFab — both now in `layout/`):
-| Old | New |
-|---|---|
-| `./LanguageFab.astro` | `./LanguageFab.astro` (same — both in layout/) |
-
-- [ ] **Step 7: Verify build**
+- [ ] **Step 5: Verify build**
 
 ```bash
 npx astro check && npm run build
 ```
 
-Expected: PASS — no functionality change, only file locations.
+Expected: PASS — no functionality change, only file locations and BaseLayout (not yet consumed).
 
-- [ ] **Step 8: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
-git add -A
-git commit -m "refactor: organize components into domain directories (layout/, home/, apps/, blog/)"
+git add src/layouts/ src/components/ src/pages/ src/pages/pt/
+git commit -m "refactor: add BaseLayout, organize components by domain, delete unused LanguagePicker"
 ```
 
 ---
 
-## Task 3: Move scripts to `src/lib/` and colocate with components
+## Task 2: Colocate scripts with components, create src/lib/
 
 **Files:**
-- Move: `src/scripts/carousel.ts` → `src/lib/carousel.ts`
-- Move: `src/scripts/format-date.ts` → `src/lib/format-date.ts`
-- Move: `src/data/reviews-data.ts` → `src/data/reviews.ts` (rename for clarity)
-- Inline: `src/scripts/billboard.ts` into `src/components/home/Billboard.astro`
-- Inline: `src/scripts/device-carousel.ts` into `src/components/apps/AppSection.astro`
-- Inline: `src/scripts/reviews-rotator.ts` into `src/components/home/ReviewsRotator.astro`
-- Inline: `src/scripts/header-dropdown.ts` into `src/components/layout/Header.astro`
-- Inline: `src/scripts/header-mobile.ts` into `src/components/layout/Header.astro`
-- Inline: `src/scripts/header-sticky.ts` into `src/components/layout/Header.astro`
-- Inline: `src/scripts/skip-link-focus.ts` into `src/layouts/BaseLayout.astro`
-- Delete: `src/scripts/` directory (empty after moves)
+- Create: `src/lib/carousel.ts` (move from scripts)
+- Create: `src/lib/format-date.ts` (move from scripts)
+- Create: `src/lib/collections.ts` (new — query helpers)
+- Rename: `src/data/reviews-data.ts` → `src/data/reviews.ts`
+- Inline: billboard.ts → Billboard.astro
+- Inline: device-carousel.ts → AppSection.astro
+- Inline: reviews-rotator.ts → ReviewsRotator.astro
+- Inline: header-dropdown.ts + header-mobile.ts + header-sticky.ts → Header.astro
+- Remove: skip-link-focus.ts (now in BaseLayout from Task 1)
+- Delete: `src/scripts/` directory
 
 - [ ] **Step 1: Create `src/lib/` and move shared modules**
 
@@ -306,145 +346,79 @@ git mv src/scripts/format-date.ts src/lib/format-date.ts
 git mv src/data/reviews-data.ts src/data/reviews.ts
 ```
 
-- [ ] **Step 2: Update imports of moved modules**
+- [ ] **Step 2: Create `src/lib/collections.ts` — content collection query helpers**
 
-All files importing from `../scripts/carousel` change to `../lib/carousel`.
-All files importing from `../data/reviews-data` change to `../data/reviews`.
-All files importing from `../../scripts/format-date` change to `../../lib/format-date`.
+This reduces duplicated collection-querying logic across blog and resource pages:
 
-Search for all references and update them.
+```typescript
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-- [ ] **Step 3: Inline billboard.ts into Billboard.astro**
+type BlogEntry = CollectionEntry<'blog'>;
+type ResourceEntry = CollectionEntry<'resources'>;
 
-In `src/components/home/Billboard.astro`, replace the existing:
+export async function getBlogPostsByLang(lang: 'en' | 'pt' = 'en'): Promise<BlogEntry[]> {
+  const posts = await getCollection('blog', ({ data }) => data.lang === lang || data.lang === undefined);
+  return posts.slice().sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+}
+
+export async function getResourcesByLang(lang: 'en' | 'pt' = 'en'): Promise<ResourceEntry[]> {
+  const resources = await getCollection('resources', ({ data }) => data.lang === lang);
+  return resources.slice().sort((a, b) => a.data.order - b.data.order);
+}
+```
+
+- [ ] **Step 3: Update imports of moved modules**
+
+All files importing from `../scripts/carousel` → `../lib/carousel` (adjust relative path for new component locations).
+All files importing from `../data/reviews-data` → `../data/reviews`.
+All files importing from `../../scripts/format-date` → `../../lib/format-date`.
+
+- [ ] **Step 4: Inline billboard.ts into Billboard.astro**
+
+In `src/components/home/Billboard.astro`, replace:
 ```astro
 <script>
   import "../scripts/billboard.ts";
 </script>
 ```
 
-With the full script content (without the DOMContentLoaded guard — Astro handles timing):
-```astro
-<script>
-  import { createCarousel, type CarouselHandle } from '../../lib/carousel';
+With the full billboard script content. Remove the `DOMContentLoaded` guard and `initBillboard` wrapper — Astro processed scripts are `type="module"` (deferred). Import carousel from `../../lib/carousel`.
 
-  function togglePause(carousel: CarouselHandle, btn: HTMLButtonElement) {
-    if (carousel.isPaused()) {
-      carousel.resume();
-      btn.setAttribute('aria-pressed', 'false');
-      btn.setAttribute('aria-label', 'Pause autoplay');
-      btn.textContent = '\u23F8';
-    } else {
-      carousel.pause();
-      btn.setAttribute('aria-pressed', 'true');
-      btn.setAttribute('aria-label', 'Play autoplay');
-      btn.textContent = '\u25B6';
-    }
-  }
+After inlining, verify in dev tools that the script's DOM queries find their targets. Check browser console for null reference errors.
 
-  const plate = document.querySelector<HTMLElement>('.billboard-plate');
-  if (plate) {
-    const stage = plate.querySelector<HTMLElement>('.bb-stage');
-    const imgs = stage
-      ? Array.from(stage.querySelectorAll<HTMLImageElement>('.billboard-img:not(.bb-sizer)'))
-      : [];
-    const statusEl = document.getElementById('bb-status');
-    const btnPrev = plate.querySelector<HTMLButtonElement>('.bb-prev');
-    const btnNext = plate.querySelector<HTMLButtonElement>('.bb-next');
-    const btnPause = plate.querySelector<HTMLButtonElement>('.bb-pause');
-    const controls = plate.querySelector<HTMLElement>('.bb-controls');
+- [ ] **Step 5: Inline device-carousel.ts into AppSection.astro**
 
-    if (stage && imgs.length && btnPrev && btnNext && btnPause && controls) {
-      const carousel = createCarousel({
-        itemCount: imgs.length,
-        onActivate: (index) => {
-          imgs.forEach((im, idx) => im.classList.toggle('is-active', idx === index));
-          if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
-        },
-        intervalMs: 10000,
-        pauseTargets: [plate],
-        keyboardTarget: controls,
-      });
+Same pattern. Replace the import with full device-carousel code (minus DOMContentLoaded guard). Import carousel from `../../lib/carousel`.
 
-      btnPrev.addEventListener('click', () => carousel.prev());
-      btnNext.addEventListener('click', () => carousel.next());
-      btnPause.addEventListener('click', () => togglePause(carousel, btnPause));
-    }
-  }
-</script>
-```
+After inlining, verify DOM targeting works.
 
-Key change: No `initBillboard` wrapper, no `DOMContentLoaded` guard. The script executes at the right time because Astro's processed `<script>` tags are `type="module"`.
+- [ ] **Step 6: Inline reviews-rotator.ts into ReviewsRotator.astro**
 
-- [ ] **Step 4: Inline device-carousel.ts into AppSection.astro**
+Same pattern. Import carousel from `../../lib/carousel` and reviews data from `../../data/reviews`.
 
-Same pattern as Step 3. Replace the `<script>import '../scripts/device-carousel.ts';</script>` in AppSection.astro with the full device-carousel code (minus DOMContentLoaded guard). Import carousel from `../../lib/carousel`.
+After inlining, verify DOM targeting works.
 
-- [ ] **Step 5: Inline reviews-rotator.ts into ReviewsRotator.astro**
+- [ ] **Step 7: Inline header scripts into Header.astro**
 
-Same pattern. Replace the import with the full reviews-rotator code. Import carousel from `../../lib/carousel` and reviews data from `../../data/reviews`.
+Replace the multi-import `<script>` block with actual code from header-dropdown.ts, header-mobile.ts, and header-sticky.ts. Remove all DOMContentLoaded guards.
 
-- [ ] **Step 6: Inline header scripts into Header.astro**
+Remove the `skip-link-focus.ts` import — it's now in BaseLayout.
 
-Replace the existing multi-import `<script>` block in Header.astro:
-```astro
-<script>
-  import "../scripts/header-dropdown.ts";
-  import "../scripts/header-mobile.ts";
-  import "../scripts/header-sticky.ts";
-  import "../scripts/skip-link-focus.ts";
-</script>
-```
+After inlining, verify DOM targeting works for: dropdown toggle, mobile nav, sticky scroll behavior.
 
-With the actual code from header-dropdown.ts, header-mobile.ts, and header-sticky.ts inlined into a single `<script>` block. Remove all DOMContentLoaded guards.
+- [ ] **Step 8: Convert ShareBar.astro from `is:inline` to processed script**
 
-**Move skip-link-focus.ts into BaseLayout.astro** instead — it's not header-specific, it's a site-wide accessibility feature. Place the `<script>` **inside the `<body>` tag, before `</body>`** (not after — that would be invalid HTML):
-```astro
-<!-- In BaseLayout.astro, just before </body> -->
-    <script>
-      // Skip link focus management (site-wide a11y)
-      function focusTarget(target: HTMLElement) { /* ... */ }
-      function handleSkipClick(e: Event, link: HTMLAnchorElement) { /* ... */ }
+Remove `is:inline` and `type="module"` from the `<script>` tag. Switch from `querySelector` to `querySelectorAll` and iterate, since processed scripts are deduplicated.
 
-      const skipLinks = document.querySelectorAll<HTMLAnchorElement>('a.skip[href^="#"]');
-      skipLinks.forEach((link) => {
-        link.addEventListener('click', (e) => handleSkipClick(e, link));
-      });
-    </script>
-  </body>
-</html>
-```
+Also move ShareBar's brand tint CSS variables (`--share-facebook`, `--share-reddit`, `--share-bluesky`, `--share-rss`) from the component's `<style>` `:root` block to `public/styles/tokens.css`.
 
-- [ ] **Step 7: Convert ShareBar.astro from `is:inline` to processed script**
+**Deduplication principle:** Astro processed `<script>` tags run once per page even if the component appears N times. Scripts MUST use `querySelectorAll` and iterate for any component that could appear multiple times. Components guaranteed to appear once (Header, Billboard) can use `querySelector`, but `querySelectorAll` is safer as default.
 
-The current ShareBar uses `<script type="module" is:inline>` which loses bundling/deduplication. Convert to a processed `<script>` (remove `is:inline` and `type="module"`). Use `data-*` attributes to pass server-side props to the client:
-
-The current approach of reading `data-share-*` attributes is correct. Just remove `is:inline` and `type="module"`:
-```astro
-<script>
-  const roots = document.querySelectorAll<HTMLElement>('[data-share-root]');
-  roots.forEach((root) => {
-    // existing logic, unchanged
-  });
-</script>
-```
-
-Using `querySelectorAll` ensures deduplication works if ShareBar appears multiple times.
-
-**Deduplication principle (applies to ALL colocated scripts):** Astro processed `<script>` tags are deduplicated — the script runs once per page, even if the component appears N times. Any script that needs to target its component's DOM elements MUST use `querySelectorAll` and iterate, not `querySelector` (singular). Components that are guaranteed to appear only once per page (Header, Footer, Billboard) can use `querySelector`, but `querySelectorAll` is safer as a default.
-
-- [ ] **Step 8: Delete `src/scripts/` directory**
+- [ ] **Step 9: Delete `src/scripts/` and empty `src/pages/guides/`**
 
 ```bash
 rm -rf src/scripts/
-```
-
-All scripts are now either in `src/lib/` (shared pure logic) or colocated inside their owning components.
-
-- [ ] **Step 9: Delete empty `src/pages/guides/` directory**
-
-```bash
-rmdir src/pages/guides/
+rmdir src/pages/guides/ 2>/dev/null
 ```
 
 - [ ] **Step 10: Verify build**
@@ -453,42 +427,42 @@ rmdir src/pages/guides/
 npx astro check && npm run build
 ```
 
-Expected: PASS.
-
 - [ ] **Step 11: Commit**
 
 ```bash
-git add -A
-git commit -m "refactor: colocate scripts with components, move shared logic to src/lib/"
+git add src/lib/ src/data/ src/components/ src/layouts/ src/pages/
+git commit -m "refactor: colocate scripts with components, create src/lib/ with shared utilities"
 ```
 
 ---
 
-## Task 4: Migrate all pages to BaseLayout
+## Task 3: Migrate all pages to BaseLayout
 
 **Files:**
 - Modify: Every page file in `src/pages/` and `src/pages/pt/`
 
 - [ ] **Step 1: Migrate homepage**
 
-Replace `src/pages/index.astro` boilerplate with BaseLayout. See Task 4 in the previous plan for exact code — the page becomes ~30 lines (BaseLayout wrapper + component slots + JSON-LD in head slot + UtilBar in before-header slot).
+Replace `src/pages/index.astro` boilerplate with BaseLayout wrapper (~30 lines). Pass JSON-LD via `<Fragment slot="head">`, UtilBar via `<slot name="before-header">`.
 
 - [ ] **Step 2: Migrate about page**
 
-Replace boilerplate with BaseLayout. Keep the 5 section blocks in the default slot.
+Replace boilerplate with BaseLayout. Keep the 5 section blocks in the default slot. Set `mainClass="about-main"`.
 
 - [ ] **Step 3: Migrate remaining EN pages one at a time**
 
 For each page (apps, privacy, support, terms, contact, 404, blog/index, blog/[slug], blog/category/[category], resources/index, resources/[slug]):
 1. Replace html/head/body with `<BaseLayout>` wrapper
-2. Pass page metadata as props
-3. Move page-specific head content to `<Fragment slot="head">`
+2. Pass page metadata as props (title, description, canonicalPath)
+3. Move page-specific head content to `<Fragment slot="head">` (e.g., Turnstile on support)
 4. Keep main content in default slot
 5. Set `mainClass` to match existing class
 
+Use `src/lib/collections.ts` helpers in blog/index and resources/index to replace inline collection querying.
+
 - [ ] **Step 4: Migrate PT pages**
 
-Same pattern for all `src/pages/pt/` pages.
+Same pattern. **Fix the PT homepage canonical URL bug:** current `pt/index.astro` has `canonical` pointing to `/` (EN homepage) instead of `/pt/`. BaseLayout computes canonical from `canonicalPath` prop — ensure each PT page passes its own PT path.
 
 - [ ] **Step 5: Verify build after each page**
 
@@ -499,77 +473,37 @@ npx astro check && npm run build
 - [ ] **Step 6: Commit**
 
 ```bash
-git add -A
-git commit -m "refactor: migrate all pages to BaseLayout"
+git add src/pages/ src/layouts/
+git commit -m "refactor: migrate all pages to BaseLayout, fix PT canonical URLs"
 ```
 
 ---
 
-## Task 5: Unify EN/PT page templates
-
-**Files:**
-- Create: `src/components/pages/HomePage.astro`
-- Create: `src/components/pages/AboutPage.astro`
-- Modify: `src/pages/index.astro` → thin wrapper
-- Modify: `src/pages/pt/index.astro` → thin wrapper
-- Modify: `src/pages/about.astro` → thin wrapper
-- Modify: `src/pages/pt/about.astro` → thin wrapper
-- Repeat for all EN/PT page pairs
-
-- [ ] **Step 1: Create HomePage component**
-
-`src/components/pages/HomePage.astro` accepts `lang` prop, uses BaseLayout, composes all home section components. Components like Hero, Billboard, CoreBenefits already detect language from `Astro.url` via the i18n utils.
-
-- [ ] **Step 2: Reduce EN/PT index pages to thin wrappers**
-
-`src/pages/index.astro`:
-```astro
----
-import HomePage from '../components/pages/HomePage.astro';
----
-<HomePage lang="en" />
-```
-
-`src/pages/pt/index.astro`:
-```astro
----
-import HomePage from '../../components/pages/HomePage.astro';
----
-<HomePage lang="pt" />
-```
-
-- [ ] **Step 3: Create AboutPage component and reduce wrappers**
-
-Same pattern. AboutPage accepts `lang`, loads the correct content entry (`about` vs `about-pt`), and uses `{isPt ? 'PT text' : 'EN text'}` for hardcoded prose sections.
-
-- [ ] **Step 4: Repeat for remaining page pairs**
-
-Apply to: apps, blog/index, blog/[slug], resources/index, resources/[slug], support, terms, contact, 404.
-
-- [ ] **Step 5: Verify build**
-
-```bash
-npx astro check && npm run build
-```
-
-- [ ] **Step 6: Commit**
-
-```bash
-git add -A
-git commit -m "refactor: unify EN/PT pages via shared page components"
-```
-
----
-
-## Task 6: Migrate content collections to Astro 5 API and DRY schemas
+## Task 4: Migrate content collections to Astro 5 API and DRY schemas
 
 **Files:**
 - Modify: `src/content/config.ts`
 - Modify: All files using `entry.slug` (changes to `entry.id` with glob loader)
+- Possibly rename: 2 blog posts with frontmatter `slug:` overrides
 
-The current `type: "content"` is the legacy Astro v2-v4 API. Astro 5's recommended approach uses `loader: glob(...)` from `astro/loaders`. Since we're already touching config.ts to DRY it up, this is the ideal time to migrate.
+The current `type: "content"` is the legacy Astro v2-v4 API running through a compatibility shim. Astro 5 uses `loader: glob(...)`. Since we're already touching config.ts, this is the right time to migrate.
 
-- [ ] **Step 1: Migrate from `type: "content"` to `loader: glob(...)` and DRY up schemas**
+**Pre-flight:** Two blog posts have frontmatter `slug:` overrides that won't carry over:
+- `2025-10-27-blog-launched-and-the-future-of-mythic-apps.md` → `slug: blog-launched-future-mythic-apps`
+- `2025-10-27-blog-launched-and-the-future-of-mythic-apps-pt.md` → `slug: blog-launched-future-mythic-apps-pt`
+
+Either rename these files to match their slug values, or use `generateId` in the glob loader config. Renaming is simpler.
+
+- [ ] **Step 1: Rename files with slug overrides**
+
+```bash
+git mv src/content/blog/2025-10-27-blog-launched-and-the-future-of-mythic-apps.md src/content/blog/blog-launched-future-mythic-apps.md
+git mv src/content/blog/2025-10-27-blog-launched-and-the-future-of-mythic-apps-pt.md src/content/blog/blog-launched-future-mythic-apps-pt.md
+```
+
+Remove the `slug:` frontmatter field from both files since the filename now IS the slug/id.
+
+- [ ] **Step 2: Migrate config.ts — glob loader + shared schema fragments**
 
 ```typescript
 import { defineCollection, z } from "astro:content";
@@ -597,7 +531,30 @@ const resources = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/resources" }),
   schema: ({ image }) =>
     z.object({
-      // ... (same fields as before, using shared fragments)
+      title: z.string(),
+      summary: z.string(),
+      category: z.enum(["start-here", "adventure-journals", "dice-roller", "custom-tables", "advanced"]),
+      order: z.number().int().nonnegative(),
+      icon: z.string().default("fa-slab fa-regular fa-book-open"),
+      duration: z.string().optional(),
+      externalUrl: z.string().url().optional(),
+      updated: z.coerce.date().optional(),
+      keywords: keywordsField,
+      tags: tagsField,
+      hero: image().optional(),
+      heroAlt: z.string().optional(),
+      steps: z.array(z.object({
+        title: z.string().min(3),
+        body: z.string().optional(),
+        image: image().optional(),
+        imageAlt: z.string().optional().refine(
+          (v) => v === undefined || v.trim().length > 0,
+          { message: "If step image provided, include alt text" },
+        ),
+      })).default([]),
+      related: z.array(z.string()).default([]),
+      downloads: downloadsField,
+      lang: langField,
     }).refine(requireAltWhenImage('hero', 'heroAlt'), {
       message: "Provide heroAlt when a hero image is included",
       path: ["heroAlt"],
@@ -608,54 +565,115 @@ const blog = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   schema: ({ image }) =>
     z.object({
-      // ... (same fields as before, using shared fragments)
+      title: z.string(),
+      summary: z.string(),
+      category: z.enum(["Release Notes", "Behind the Scenes", "Guides", "Community", "Announcement"]),
+      date: z.coerce.date(),
+      readTime: z.string(),
+      isSample: z.boolean().default(true),
+      tags: tagsField,
+      keywords: keywordsField,
+      lang: langField,
+      hero: image().optional(),
+      heroAlt: z.string().optional(),
+      socialImage: image().optional(),
+      socialImageAlt: z.string().optional(),
+      downloads: downloadsField,
+    })
+    .refine(requireAltWhenImage('hero', 'heroAlt'), {
+      message: "Provide heroAlt when a hero image is included",
+      path: ["heroAlt"],
+    })
+    .refine(requireAltWhenImage('socialImage', 'socialImageAlt'), {
+      message: "Provide socialImageAlt when a socialImage is included",
+      path: ["socialImageAlt"],
     }),
 });
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
   schema: z.object({
-    // ... (same fields as before, add lang: langField)
+    title: z.string(),
+    subtitle: z.string(),
+    description: z.string(),
+    pageHeader: z.object({
+      accent: z.string(),
+      icon: z.string(),
+      layout: z.enum(["left", "right", "center"]),
+      visualElement: z.enum(["shapes", "grid", "particles"]),
+      colorScheme: z.enum(["primary", "secondary", "accent"]),
+    }),
+    backgroundHighlights: z.array(z.object({
+      icon: z.string(),
+      title: z.string(),
+      description: z.string(),
+    })).optional(),
+    socialLinks: z.array(z.object({
+      href: z.string(),
+      label: z.string(),
+      icon: z.string(),
+      className: z.string(),
+      external: z.boolean().optional(),
+    })).optional(),
+    mythicHighlights: z.array(z.object({
+      label: z.string(),
+      description: z.string(),
+    })).optional(),
+    lang: langField,
   }),
 });
 
 export const collections = { resources, blog, pages };
 ```
 
-- [ ] **Step 2: Update all `entry.slug` references to `entry.id`**
+- [ ] **Step 3: Update all `entry.slug` → `entry.id` (43 occurrences across 10 files)**
 
-With the glob loader, entries use `id` (the filename without extension) instead of `slug`. Search the codebase for `.slug` usage in content collection contexts and update:
+With the glob loader, entries use `id` (filename without extension) instead of `slug`. The URL parameter in routes stays named `slug` for URL aesthetics, but the value comes from `entry.id`.
 
-```bash
-# Find all slug references in page files
-grep -rn '\.slug' src/pages/ --include="*.astro" --include="*.ts"
-```
+Files to update:
+- `src/pages/blog/index.astro` — 4 occurrences
+- `src/pages/blog/[slug].astro` — 2 occurrences
+- `src/pages/blog/category/[category].astro` — 2 occurrences
+- `src/pages/resources/index.astro` — 4 occurrences
+- `src/pages/resources/[slug].astro` — 10 occurrences
+- `src/pages/rss.xml.ts` — 1 occurrence
+- `src/pages/pt/blog/index.astro` — 4 occurrences
+- `src/pages/pt/blog/[slug].astro` — 2 occurrences
+- `src/pages/pt/resources/index.astro` — 4 occurrences
+- `src/pages/pt/resources/[slug].astro` — 10 occurrences
 
-Common patterns to update:
-- `post.slug` → `post.id` in blog listing/detail pages
-- `entry.slug` → `entry.id` in resource listing/detail pages
-- `getStaticPaths` functions that return `{ params: { slug: entry.slug } }`
+Also update `src/lib/collections.ts` if it references `.slug`.
 
-- [ ] **Step 3: Verify build**
+- [ ] **Step 4: Verify routes are unchanged**
 
 ```bash
 npx astro check && npm run build
 ```
 
-Expected: PASS. All content should render identically.
-
-- [ ] **Step 4: Commit**
+After build, diff the `dist/` directory structure to verify no routes changed:
 
 ```bash
-git add src/content/config.ts src/pages/
+# Before Task 4, save route list:
+find dist -name "*.html" | sort > /tmp/routes-before.txt
+# After Task 4:
+find dist -name "*.html" | sort > /tmp/routes-after.txt
+diff /tmp/routes-before.txt /tmp/routes-after.txt
+```
+
+Expected: Only the 2 renamed blog post routes should differ (if filenames changed). All other routes identical.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add src/content/ src/pages/ src/lib/
 git commit -m "refactor: migrate to Astro 5 content loader API, DRY up schemas"
 ```
 
 ---
 
-## Task 7: Final verification and desloppify fresh scan
+## Task 5: Final verification, cleanup, and desloppify fresh scan
 
-**Files:** None modified
+**Files:** None modified (verification only)
 
 - [ ] **Step 1: Full build**
 
@@ -667,12 +685,14 @@ npx astro check && npm run build
 
 - [ ] Homepage renders (header, hero, billboard carousel, reviews, footer)
 - [ ] About page renders in EN and PT
-- [ ] Blog index and posts render
+- [ ] Blog index and posts render (including the renamed blog-launched posts)
 - [ ] Resources index and guides render
 - [ ] Apps page carousel works (prev/next, swipe, lightbox)
 - [ ] Support page Turnstile form renders
 - [ ] Mobile viewport responsive, no overflow
 - [ ] Keyboard nav works (tab, skip link, dropdown)
+- [ ] `_redirects` file still valid (no route changes except renamed blog posts)
+- [ ] View page source: hreflang tags present on all pages
 
 - [ ] **Step 3: Fresh desloppify scan**
 
@@ -684,11 +704,11 @@ desloppify status
 Record the new baseline. The architectural fixes should significantly improve:
 - Abstraction fitness (BaseLayout, carousel utility)
 - Design coherence (domain grouping, thin pages)
-- AI generated debt (no more EN/PT duplication)
-- Convention drift (consistent script pattern)
-- Mid/high level elegance (clear ownership)
+- Convention drift (consistent script pattern, CSS policy stated)
+- Mid/high level elegance (clear ownership, navigable structure)
+- Structure navigation (src/lib/, src/data/, domain components)
 
-- [ ] **Step 4: Commit scorecard**
+- [ ] **Step 4: Commit**
 
 ```bash
 git add scorecard.png
@@ -697,14 +717,27 @@ git commit -m "chore: record post-architecture desloppify score"
 
 ---
 
+## Task 6 (deferred): Evaluate EN/PT page template unification
+
+After Tasks 1-5 are complete, assess whether further EN/PT unification is needed. BaseLayout (Task 3) already eliminates the html/head/body duplication. Collection query helpers (Task 2) reduce data logic duplication. Components derive language from `Astro.url`.
+
+**Remaining duplication to evaluate:**
+- Page-level metadata (titles, descriptions) — could be data-driven
+- Page-specific prose (about page sections) — may justify page components
+- Number of pages that are truly identical between EN/PT after BaseLayout
+
+If the remaining duplication is small, this task can be skipped. If substantial, create `src/components/pages/` with shared page components as originally planned.
+
+---
+
 ## Summary
 
 | Task | Description | Impact |
 |------|-------------|--------|
-| 1 | Create BaseLayout | Eliminates head/body duplication across 12+ pages |
-| 2 | Reorganize components by domain | Clear ownership, navigable structure |
-| 3 | Colocate scripts, create src/lib/ | Proper Astro script pattern, no DOMContentLoaded guards |
-| 4 | Migrate all pages to BaseLayout | Every page becomes thin metadata + content |
-| 5 | Unify EN/PT templates | Eliminates structural duplication between languages |
-| 6 | DRY content schemas | Single definitions for shared patterns |
-| 7 | Final verification + fresh desloppify | Score the clean architecture |
+| 0 | Fix Node docs, pre-flight checks | Prevents confusion, surfaces slug override risk |
+| 1 | BaseLayout + component reorg (atomic) | Shared shell, domain grouping, hreflang, dead code removal |
+| 2 | Colocate scripts, create src/lib/ | Proper Astro patterns, collection helpers, no DOMContentLoaded |
+| 3 | Migrate all pages to BaseLayout | Thin pages, fix PT canonical bug, use collection helpers |
+| 4 | Content collections → Astro 5 API + DRY | Future-proof, single schema definitions, route verification |
+| 5 | Final verification + desloppify | Score the clean architecture |
+| 6 | (Deferred) EN/PT template evaluation | Decide based on remaining duplication after Tasks 1-5 |
