@@ -1,42 +1,22 @@
 // Device carousel — delegates core logic to shared carousel utility.
 // Retains device-specific features: height adaptation, swipe, lightbox.
-import { createCarousel } from './carousel';
+import { createCarousel, type CarouselHandle } from './carousel';
 
-function initDeviceCarousel(root: HTMLElement) {
-  const stage = root.querySelector<HTMLElement>('.device-stage');
-  const frames = stage
-    ? Array.from(stage.querySelectorAll<HTMLElement>('.device-frame'))
-    : [];
-  const status = root.querySelector<HTMLElement>('.device-status');
-  if (!stage || frames.length === 0) return;
+function updateStageHeight(stageEl: HTMLElement) {
+  const active = stageEl.querySelector<HTMLElement>('.device-frame.is-active .device-shot');
+  if (active) {
+    const h = active.clientHeight;
+    if (h > 0) stageEl.style.height = h + 'px';
+  }
+}
 
-  const stageEl = stage as HTMLElement;
-  const setStageHeight = () => {
-    const active = stageEl.querySelector<HTMLElement>('.device-frame.is-active .device-shot');
-    if (active) {
-      const h = active.clientHeight;
-      if (h > 0) stageEl.style.height = h + 'px';
-    }
-  };
+function activateFrame(frames: HTMLElement[], status: HTMLElement | null, stageEl: HTMLElement, index: number) {
+  frames.forEach((f, j) => f.classList.toggle('is-active', j === index));
+  if (status) status.textContent = `Slide ${index + 1} of ${frames.length}`;
+  setTimeout(() => updateStageHeight(stageEl), 0);
+}
 
-  const carousel = createCarousel({
-    itemCount: frames.length,
-    onActivate: (index) => {
-      frames.forEach((f, j) => f.classList.toggle('is-active', j === index));
-      if (status) status.textContent = `Slide ${index + 1} of ${frames.length}`;
-      setTimeout(setStageHeight, 0);
-    },
-    intervalMs: 6000,
-    pauseTargets: [root],
-    keyboardTarget: root,
-  });
-
-  const btnPrev = root.querySelector<HTMLButtonElement>('.dc-prev');
-  const btnNext = root.querySelector<HTMLButtonElement>('.dc-next');
-  if (btnPrev) btnPrev.addEventListener('click', () => carousel.prev());
-  if (btnNext) btnNext.addEventListener('click', () => carousel.next());
-
-  // Swipe support (touch/pointer)
+function attachSwipe(root: HTMLElement, carousel: CarouselHandle) {
   let startX = 0;
   let startY = 0;
   let dragging = false;
@@ -63,17 +43,6 @@ function initDeviceCarousel(root: HTMLElement) {
   root.addEventListener('pointermove', (e) => onMove(e.clientX, e.clientY, e));
   root.addEventListener('pointerup', (e) => onEnd(e.clientX));
   root.addEventListener('pointercancel', () => { dragging = false; });
-
-  // Lightbox
-  root.addEventListener('click', (e) => {
-    const t = e.target as HTMLElement | null;
-    if (t && t.classList.contains('device-shot')) {
-      const imgEl = t as HTMLImageElement;
-      openLightbox(imgEl.currentSrc || imgEl.src, imgEl.alt || '');
-    }
-  });
-
-  window.addEventListener('resize', () => setStageHeight());
 }
 
 function openLightbox(src: string, alt: string) {
@@ -106,6 +75,40 @@ function openLightbox(src: string, alt: string) {
   });
   document.body.appendChild(ov);
   document.body.classList.add('lb-open');
+}
+
+function initDeviceCarousel(root: HTMLElement) {
+  const stage = root.querySelector<HTMLElement>('.device-stage');
+  const frames = stage
+    ? Array.from(stage.querySelectorAll<HTMLElement>('.device-frame'))
+    : [];
+  const status = root.querySelector<HTMLElement>('.device-status');
+  if (!stage || frames.length === 0) return;
+
+  const carousel = createCarousel({
+    itemCount: frames.length,
+    onActivate: (index) => activateFrame(frames, status, stage, index),
+    intervalMs: 6000,
+    pauseTargets: [root],
+    keyboardTarget: root,
+  });
+
+  const btnPrev = root.querySelector<HTMLButtonElement>('.dc-prev');
+  const btnNext = root.querySelector<HTMLButtonElement>('.dc-next');
+  if (btnPrev) btnPrev.addEventListener('click', () => carousel.prev());
+  if (btnNext) btnNext.addEventListener('click', () => carousel.next());
+
+  attachSwipe(root, carousel);
+
+  root.addEventListener('click', (e) => {
+    const t = e.target as HTMLElement | null;
+    if (t && t.classList.contains('device-shot')) {
+      const imgEl = t as HTMLImageElement;
+      openLightbox(imgEl.currentSrc || imgEl.src, imgEl.alt || '');
+    }
+  });
+
+  window.addEventListener('resize', () => updateStageHeight(stage));
 }
 
 function initAll() {

@@ -1,5 +1,24 @@
 // Billboard carousel — delegates core logic to shared carousel utility.
-import { createCarousel } from './carousel';
+import { createCarousel, type CarouselHandle } from './carousel';
+
+function togglePause(carousel: CarouselHandle, btn: HTMLButtonElement) {
+  if (carousel.isPaused()) {
+    carousel.resume();
+    btn.setAttribute('aria-pressed', 'false');
+    btn.setAttribute('aria-label', 'Pause autoplay');
+    btn.textContent = '\u23F8';
+  } else {
+    carousel.pause();
+    btn.setAttribute('aria-pressed', 'true');
+    btn.setAttribute('aria-label', 'Play autoplay');
+    btn.textContent = '\u25B6';
+  }
+}
+
+function activateSlide(imgs: HTMLImageElement[], statusEl: HTMLElement | null, index: number) {
+  imgs.forEach((im, idx) => im.classList.toggle('is-active', idx === index));
+  if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
+}
 
 function initBillboard() {
   const plate = document.querySelector<HTMLElement>('.billboard-plate');
@@ -18,10 +37,7 @@ function initBillboard() {
 
   const carousel = createCarousel({
     itemCount: imgs.length,
-    onActivate: (index) => {
-      imgs.forEach((im, idx) => im.classList.toggle('is-active', idx === index));
-      if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
-    },
+    onActivate: (index) => activateSlide(imgs, statusEl, index),
     intervalMs: 10000,
     pauseTargets: [plate],
     keyboardTarget: controls,
@@ -29,19 +45,7 @@ function initBillboard() {
 
   btnPrev.addEventListener('click', () => carousel.prev());
   btnNext.addEventListener('click', () => carousel.next());
-  btnPause.addEventListener('click', () => {
-    if (carousel.isPaused()) {
-      carousel.resume();
-      btnPause.setAttribute('aria-pressed', 'false');
-      btnPause.setAttribute('aria-label', 'Pause autoplay');
-      btnPause.textContent = '\u23F8';
-    } else {
-      carousel.pause();
-      btnPause.setAttribute('aria-pressed', 'true');
-      btnPause.setAttribute('aria-label', 'Play autoplay');
-      btnPause.textContent = '\u25B6';
-    }
-  });
+  btnPause.addEventListener('click', () => togglePause(carousel, btnPause));
 }
 
 if (document.readyState === 'loading') {
