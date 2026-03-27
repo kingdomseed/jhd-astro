@@ -150,7 +150,7 @@ All other pages should match or aspire to this level of polish.
 - **Preview**: Netlify (configured in `netlify.toml`)
 - Build output: Static files to `dist/`
 - Node version: 22 (strict requirement)
-- Environment: Production builds with Sentry monitoring
+- Environment: Production builds via Cloudflare
 
 ## Voice & Copy Guidelines
 
