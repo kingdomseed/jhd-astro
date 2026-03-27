@@ -44,12 +44,8 @@ const dlOther = downloads.filter(
     (d) => !/(schema|example|sample|template)/i.test(d.label),
 );
 
-// Derive product label from tags (UI label collapsed to a concise product name)
-const tagList: string[] = Array.isArray((post as any)?.tags)
-    ? ((post as any).tags as unknown as string[])
-    : [];
-const hasMobile = tagList.includes("product:mobile");
-const hasDigital = tagList.includes("product:digital");
+const hasMobile = post.tags.includes("product:mobile");
+const hasDigital = post.tags.includes("product:digital");
 const productLabel =
     hasMobile && hasDigital
         ? "Mythic GME Apps"
@@ -107,8 +103,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
       )
     }
     {
-      Array.isArray((post as any)?.tags) &&
-        (post as any).tags.map((t: string) => (
+      post.tags.map((t) => (
           <meta property="article:tag" content={t} />
         ))
     }

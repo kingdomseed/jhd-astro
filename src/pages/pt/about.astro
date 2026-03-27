@@ -5,14 +5,12 @@ import { Image } from "astro:assets";
 import headshotMain from "../../assets/people/jason-school.jpg";
 import { getEntry } from "astro:content";
 
-// Get content from the pages collection
 const aboutEntry = await getEntry("pages", "about-pt");
 
 if (!aboutEntry) {
     throw new Error("Could not find about-pt entry in pages collection");
 }
 
-// Extract data from frontmatter
 const {
     title,
     subtitle,

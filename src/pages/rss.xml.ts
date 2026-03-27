@@ -22,11 +22,8 @@ export async function GET() {
       const fullContent = post.body;
       const content = `<![CDATA[${fullContent}]]>`;
       
-      // Type-safe tags extraction
-      const tags = (post.data as { tags?: string[] }).tags;
-      const categories = Array.isArray(tags)
-        ? tags.map((t: string) => `\n      <category>${escapeXml(t)}</category>`).join('')
-        : '';
+      const categories = post.data.tags
+        .map((t) => `\n      <category>${escapeXml(t)}</category>`).join('');
       
       // Add author using Dublin Core creator (more flexible than RSS 2.0 email-only author)
       const author = '\n      <dc:creator>Jason Holt</dc:creator>';
