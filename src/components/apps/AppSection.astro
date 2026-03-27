@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
+import FeatureCard from './FeatureCard.astro';
+import OfficialContent from './OfficialContent.astro';
+import StoreLinks from './StoreLinks.astro';
 
 interface Props {
   title: string;
@@ -34,19 +37,6 @@ const {
   imageAlt = "",
   images
 } = Astro.props;
-
-// Map store names to brand shadow classes
-const getStoreShadowClass = (storeName: string) => {
-  const storeMap: Record<string, string> = {
-    'Apple App Store': 'btn--shadow-apple',
-    'Google Play': 'btn--shadow-google', 
-    'Amazon Appstore': 'btn--shadow-amazon',
-    'itch.io (DRM‑free)': 'btn--shadow-itch',
-    'Microsoft Store': 'btn--shadow-microsoft',
-    'Steam': 'btn--shadow-steam'
-  };
-  return storeMap[storeName] || 'btn--shadow-primary';
-};
 ---
 
 <section class={`app-section ${reverse ? 'app-section--reverse' : ''}`}>
@@ -66,80 +56,20 @@ const getStoreShadowClass = (storeName: string) => {
 
           <div class="app-details">
             <div class="detail-block">
-              <div class="feature-card">
-                <h3>What it does</h3>
-                <ul class="feature-list">
-                  {features.map(feature => (
-                    <li class="feature-item">
-                      <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            
-            <div class="detail-block">
-              <div class="feature-card">
-                <h3>Official content</h3>
-                <ul class="feature-list">
-                  {officialContent.map(item => (
-                    <li class="feature-item">
-                      <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {iapInfo && (
-                <div class="iap-notice collapsed" onclick="this.classList.toggle('collapsed')">
-                  <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
-                  <span class="iap-text">
-                    <span class="collapsed-text">More details...</span>
-                    <span class="full-text">{iapInfo}</span>
-                  </span>
-                </div>
-              )}
-              {disclaimer && (
-                <div class="disclaimer-notice collapsed" onclick="this.classList.toggle('collapsed')">
-                  <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
-                  <span class="disclaimer-text">
-                    <span class="collapsed-text">More details...</span>
-                    <span class="full-text">{disclaimer}</span>
-                  </span>
-                </div>
-              )}
+              <FeatureCard heading="What it does" features={features} />
             </div>
 
             <div class="detail-block">
-              <h3>{storeLinks.length === 0 ? 'Availability' : 'Download now'}</h3>
-              <div class="store-links">
-                {storeLinks.length === 0 ? (
-                  <div class="coming-soon-notice">
-                    <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
-                    <span>Coming soon — Stay tuned for updates!</span>
-                  </div>
-                ) : (
-                  storeLinks.map(store => (
-                    store.available !== false ? (
-                      <a href={store.url} target="_blank" rel="noopener" class={`btn ${getStoreShadowClass(store.name)}`}>
-                        <i class={store.icon} aria-hidden="true"></i>
-                        {store.name}
-                      </a>
-                    ) : (
-                      <span class="btn btn--tertiary" aria-disabled="true">
-                        <i class={store.icon} aria-hidden="true"></i>
-                        {store.name} — Coming soon
-                      </span>
-                    )
-                  ))
-                )}
-              </div>
+              <OfficialContent officialContent={officialContent} iapInfo={iapInfo} disclaimer={disclaimer} />
+            </div>
+
+            <div class="detail-block">
+              <StoreLinks storeLinks={storeLinks} />
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Image/Screenshot Column -->
       <div class="app-visual">
         {Array.isArray(images) && images.length > 0 ? (
@@ -272,208 +202,52 @@ const getStoreShadowClass = (storeName: string) => {
     padding: 4rem 0;
     position: relative;
   }
-  
+
   .app-section:nth-child(even) {
     background: var(--color-surface-2);
   }
-  
+
   .app-section-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
   }
-  
+
   .app-section--reverse .app-section-grid {
     direction: rtl;
   }
-  
+
   .app-section--reverse .app-content {
     direction: ltr;
   }
-  
+
   .app-content-inner {
     max-width: 500px;
     margin-left: auto;
   }
-  
+
   .app-section--reverse .app-content-inner {
     margin-left: 0;
     margin-right: auto;
   }
-  
+
   /* Removed .app-title - now using .section-title from cards.css */
-  
+
   .detail-block {
     margin-bottom: 2rem;
   }
-  
-  .detail-block h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0 0 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
-  }
 
-  .feature-card h3 {
-    position: relative;
-    padding-left: 16px;
-  }
-
-  .feature-card h3::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 100%;
-    background: var(--color-accent);
-    left: 0;
-    top: 0;
-    border-radius: 0;
-  }
-  
   .detail-block p {
     color: var(--color-text-muted);
     line-height: 1.6;
     margin: 0;
   }
-  
-  .feature-card {
-    background: var(--color-surface);
-    border: var(--border-base);
-    padding: 1.5rem;
-    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
-  }
 
-  .feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-    color: var(--color-text);
-    font-weight: 500;
-  }
-
-  .feature-check {
-    color: var(--color-primary);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.12));
-  }
-  
-  .store-links { display: grid; gap: 0.75rem; }
-
-  .coming-soon-notice {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 1.25rem;
-    background: var(--color-surface-2);
-    border: var(--border-base);
-    color: var(--color-text-muted);
-    font-weight: 600;
-    border-radius: 0;
-    box-shadow: 2px 2px 0 0 var(--color-border);
-  }
-
-  .coming-soon-notice i {
-    color: var(--color-accent);
-    font-size: 1.125rem;
-  }
-
-  .iap-notice {
-    background: var(--color-surface-2);
-    border: var(--border-base);
-    padding: 1rem;
-    margin-top: 1rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.2s var(--easing-standard);
-    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .iap-notice i {
-    color: var(--color-primary);
-    font-size: 1rem;
-    margin-top: 0.125rem;
-    flex-shrink: 0;
-  }
-
-  .iap-notice:hover {
-    opacity: 0.8;
-  }
-
-  .iap-notice.collapsed .full-text,
-  .disclaimer-notice.collapsed .full-text {
-    display: none;
-  }
-
-  .iap-notice:not(.collapsed) .collapsed-text,
-  .disclaimer-notice:not(.collapsed) .collapsed-text {
-    display: none;
-  }
-
-  .iap-text,
-  .disclaimer-text {
-    overflow: hidden;
-    transition: all 0.3s var(--easing-standard);
-  }
-
-  .collapsed-text {
-    font-style: italic;
-    color: var(--color-primary);
-  }
-
-  .disclaimer-notice {
-    background: var(--color-surface-2);
-    border: var(--border-base);
-    padding: 1rem;
-    margin-top: 1rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.2s var(--easing-standard);
-    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .disclaimer-notice i {
-    color: var(--color-accent);
-    font-size: 1rem;
-    margin-top: 0.125rem;
-    flex-shrink: 0;
-  }
-
-
-  .disclaimer-notice:hover {
-    opacity: 0.8;
-  }
-  
   .app-visual {
     position: relative;
   }
-  
+
   .app-image-container {
     position: relative;
     border: var(--border-base);
@@ -483,9 +257,9 @@ const getStoreShadowClass = (storeName: string) => {
     overflow: hidden;
     box-shadow: none;
   }
-  
+
   .app-image { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
-  
+
   .app-placeholder {
     display: flex;
     flex-direction: column;
@@ -495,13 +269,13 @@ const getStoreShadowClass = (storeName: string) => {
     color: var(--color-text-muted);
     text-align: center;
   }
-  
+
   .placeholder-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
     opacity: 0.5;
   }
-  
+
   .placeholder-text {
     margin: 0;
     font-weight: 600;
@@ -555,7 +329,7 @@ const getStoreShadowClass = (storeName: string) => {
   .lightbox img { max-width: 100%; max-height: 90vh; display: block; background: #fff; }
   .lightbox .lb-close { position: absolute; top: -12px; right: -12px; border: var(--border-base); background: #fff; padding: 4px 8px; cursor: pointer; }
   body.lb-open { overflow: hidden; }
-  
+
   /* Grid layer for visual texture */
   .app-section .grid-layer {
     position: absolute;
@@ -578,7 +352,7 @@ const getStoreShadowClass = (storeName: string) => {
     border: var(--border-base);
     z-index: -1;
   }
-  
+
   .geometric-accent {
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.15);
     transition: all 0.3s var(--easing-standard);
@@ -618,7 +392,7 @@ const getStoreShadowClass = (storeName: string) => {
     box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
-  
+
   /* Responsive design */
   @media (max-width: 968px) {
     .app-section .grid-layer {
@@ -629,11 +403,11 @@ const getStoreShadowClass = (storeName: string) => {
       grid-template-columns: 1fr;
       gap: 1rem; /* Further reduced gap */
     }
-    
+
     .app-section--reverse .app-section-grid {
       direction: ltr;
     }
-    
+
     .app-content-inner {
       margin-left: 0;
       max-width: none;
@@ -657,7 +431,7 @@ const getStoreShadowClass = (storeName: string) => {
     .app-section--reverse .device-carousel {
       overflow: hidden; /* Prevent overflow on mobile */
     }
-    
+
     .app-title {
       font-size: 2rem;
     }
@@ -676,28 +450,15 @@ const getStoreShadowClass = (storeName: string) => {
       left: -12px;
     }
 
-    .feature-item {
-      padding: 0.6rem 0.8rem;
-      font-size: 0.9rem;
-    }
-
     .device-stage { min-height: 520px; }
     .device-shot { height: 520px; }
   }
-  
+
   @media (max-width: 640px) {
     .app-section {
       padding: 3rem 0;
     }
-    
-    .store-links {
-      gap: 0.5rem;
-    }
-    
-    .store-link {
-      padding: 0.625rem 0.875rem;
-      font-size: 0.9rem;
-    }
+
     .device-stage { min-height: 420px; }
     .device-shot { height: 420px; }
 

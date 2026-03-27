@@ -1,0 +1,87 @@
+---
+interface Props {
+  storeLinks: Array<{
+    name: string;
+    url: string;
+    icon: string;
+    available?: boolean;
+  }>;
+}
+
+const { storeLinks } = Astro.props;
+
+// Map store names to brand shadow classes
+const getStoreShadowClass = (storeName: string) => {
+  const storeMap: Record<string, string> = {
+    'Apple App Store': 'btn--shadow-apple',
+    'Google Play': 'btn--shadow-google',
+    'Amazon Appstore': 'btn--shadow-amazon',
+    'itch.io (DRM\u2011free)': 'btn--shadow-itch',
+    'Microsoft Store': 'btn--shadow-microsoft',
+    'Steam': 'btn--shadow-steam'
+  };
+  return storeMap[storeName] || 'btn--shadow-primary';
+};
+---
+
+<h3>{storeLinks.length === 0 ? 'Availability' : 'Download now'}</h3>
+<div class="store-links">
+  {storeLinks.length === 0 ? (
+    <div class="coming-soon-notice">
+      <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
+      <span>Coming soon — Stay tuned for updates!</span>
+    </div>
+  ) : (
+    storeLinks.map(store => (
+      store.available !== false ? (
+        <a href={store.url} target="_blank" rel="noopener" class={`btn ${getStoreShadowClass(store.name)}`}>
+          <i class={store.icon} aria-hidden="true"></i>
+          {store.name}
+        </a>
+      ) : (
+        <span class="btn btn--tertiary" aria-disabled="true">
+          <i class={store.icon} aria-hidden="true"></i>
+          {store.name} — Coming soon
+        </span>
+      )
+    ))
+  )}
+</div>
+
+<style>
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .store-links { display: grid; gap: 0.75rem; }
+
+  .coming-soon-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface-2);
+    border: var(--border-base);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border-radius: 0;
+    box-shadow: 2px 2px 0 0 var(--color-border);
+  }
+
+  .coming-soon-notice i {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 640px) {
+    .store-links {
+      gap: 0.5rem;
+    }
+  }
+</style>
