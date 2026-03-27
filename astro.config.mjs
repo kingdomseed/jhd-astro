@@ -9,7 +9,6 @@ export default defineConfig({
 
   redirects: {
     '/privacy-policy': '/privacy',
-    '/privacy-policy/': '/privacy',
   },
 
   i18n: {
