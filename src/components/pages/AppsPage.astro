@@ -1,0 +1,378 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import AppSection from '../../components/apps/AppSection.astro';
+import m1 from "../../assets/mobile/mobile-1.png";
+import m2 from "../../assets/mobile/mobile-2.png";
+import m3 from "../../assets/mobile/mobile-3.png";
+import m4 from "../../assets/mobile/mobile-4.png";
+import m5 from "../../assets/mobile/mobile-5.png";
+import m6 from "../../assets/mobile/mobile-6.png";
+import m7 from "../../assets/mobile/mobile-7.png";
+import d1 from "../../assets/desktop/desktop-1.png";
+import d2 from "../../assets/desktop/desktop-2.png";
+import d3 from "../../assets/desktop/desktop-3.png";
+import d4 from "../../assets/desktop/desktop-4.png";
+import d5 from "../../assets/desktop/desktop-5.png";
+import d6 from "../../assets/desktop/desktop-6.png";
+import d7 from "../../assets/desktop/desktop-7.png";
+
+interface Props {
+  lang: 'en' | 'pt';
+}
+
+const { lang } = Astro.props;
+const isPt = lang === 'pt';
+
+// App data
+const mobileApp = {
+  title: "Mythic GME Mobile",
+  whoItsFor: isPt
+    ? "Jogadores solo que querem menos consulta e mais história, em qualquer lugar."
+    : "Solo role\u2011players who want less lookup and more story, anywhere.",
+  features: isPt
+    ? [
+        "Tabela de Destino e Teste de Destino simplificado",
+        "Pergunte ao Destino—escreva primeiro, depois role",
+        "Personagens, Tramas, Características e Cenas",
+        "Diário de aventura com markdown e corretor ortográfico",
+        "Tabelas personalizadas: criar, importar, vincular, exportar",
+        "Rolador de dados personalizável com fórmulas salvas",
+        "Acessibilidade: leitor de tela, modo daltônico, modo canhoto",
+      ]
+    : [
+        "Fate Chart & streamlined Fate Check",
+        "Ask Your Fate Question—write first, then roll",
+        "Characters, Threads, Features, & Scenes",
+        "Adventure log with markdown & spell check",
+        "Custom tables: create, import, link, export",
+        "Customizable dice roller with saved formulas",
+        "Accessibility-first: screen reader, color-blind, left-hand modes",
+      ],
+  officialContent: isPt
+    ? [
+        "50 tabelas principais do Mythic GME 2e (48 de significado + 2 de foco de evento)",
+        "Expanda para 160+ tabelas com Recursos Expandidos (Variations, Magazines 1-61)",
+        "Tabelas de Foco de Evento de Aventura Aleatória e Preparada",
+        "Novo conteúdo oficial adicionado com grandes lançamentos",
+      ]
+    : [
+        "50 core tables from Mythic GME 2e (48 meaning + 2 event focus)",
+        "Expand to 160+ tables with Expanded Features (Variations, Magazines 1-61)",
+        "Random & Prepared Adventure Event Focus tables",
+        "New official content added with major releases",
+      ],
+  iapInfo: isPt
+    ? "Os desbloqueios IAP são permanentes (não é assinatura). Recursos que você desbloqueia, mais quaisquer novos recursos pro adicionados dentro de 12 meses, permanecem desbloqueados para sempre. Similar ao modelo do Working Copy."
+    : "IAP unlocks are permanent (not subscription). Features you unlock plus any new pro features added within 12 months stay unlocked forever. Like Working Copy\u2019s model.",
+  storeLinks: [
+    {
+      name: "Apple App Store",
+      url: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
+      icon: "fa-brands fa-apple",
+    },
+    {
+      name: "Google Play",
+      url: "https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e",
+      icon: "fa-brands fa-google-play",
+    },
+    {
+      name: "Amazon Appstore",
+      url: "https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9",
+      icon: "fa-brands fa-amazon",
+    },
+  ],
+};
+
+const desktopApp = {
+  title: "Mythic GME Digital",
+  whoItsFor: isPt
+    ? "Jogadores de PC/Mac/Linux que querem um layout focado para sessões longas."
+    : "PC/Mac/Linux players who want a focused, extended\u2011session layout.",
+  features: isPt
+    ? [
+        "Todos os recursos e sistemas mobile",
+        "Layout de painéis personalizável—arraste, redimensione, organize",
+        "Desfazer com Cmd/Ctrl+Z para qualquer ação",
+        "Central de Ajuda com guias pesquisáveis",
+        "Layout desktop completo para sessões longas",
+        "Tudo incluído—sem desbloqueios, sem assinaturas",
+      ]
+    : [
+        "All mobile features and systems",
+        "Customizable panel layout—drag, resize, arrange",
+        "Undo with Cmd/Ctrl+Z for any action",
+        "In-app Help Center with searchable guides",
+        "Full desktop layout for extended sessions",
+        "Everything included—no unlocks, no subscriptions",
+      ],
+  officialContent: isPt
+    ? [
+        "Todo o conteúdo oficial abrangendo o universo Mythic",
+        "Sem compras no app ou assinaturas",
+        "Todas as tabelas e recursos desbloqueados na compra",
+      ]
+    : [
+        "All official content spanning the Mythic-verse",
+        "No in-app purchases or subscriptions",
+        "All tables and features unlocked up front",
+      ],
+  disclaimer: isPt
+    ? "A versão da Mac App Store é um pacote mobile + desktop e inclui desbloqueios no app para conteúdo e recursos adicionais."
+    : "macOS App Store version is a mobile + desktop bundle and includes in-app unlocks for additional content and features.",
+  storeLinks: [
+    {
+      name: isPt ? "itch.io (Sem DRM)" : "itch.io (DRM\u2011free)",
+      url: "https://jasonholtdigital.itch.io/mythic-gme-digital",
+      icon: "fa-brands fa-itch-io",
+    },
+    {
+      name: "Microsoft Store",
+      url: "https://apps.microsoft.com/detail/9n39b8hj3cdg",
+      icon: "fa-brands fa-windows",
+    },
+    {
+      name: "Steam",
+      url: "#",
+      icon: "fa-brands fa-steam",
+      available: false,
+    },
+  ],
+};
+
+---
+<BaseLayout
+  title={isPt
+    ? "Apps — Companheiros Mythic GME 2e | Jason Holt Digital"
+    : "Apps — Mythic GME 2e Companions | Jason Holt Digital"}
+  description={isPt
+    ? "Compare os apps Mobile e Desktop, veja o conteúdo oficial e baixe na sua plataforma. Apps companheiros oficiais licenciados do Mythic GME 2e."
+    : "Compare Mobile and Desktop apps, see official content, and download on your platform. Licensed Mythic GME 2e companion apps."}
+  canonicalPath={isPt ? "/pt/apps/" : "/apps/"}
+  lang={lang}
+  ogTitle={isPt
+    ? "Apps Mythic GME 2e — Mobile e Desktop | Jason Holt Digital"
+    : "Mythic GME 2e Apps — Mobile & Desktop | Jason Holt Digital"}
+  ogDescription={isPt
+    ? "Apps companheiros oficiais licenciados para Mythic GME 2e. Disponível para mobile (iOS, Android) e desktop (Windows, macOS, Linux)."
+    : "Official licensed companion apps for Mythic GME 2e. Available on mobile (iOS, Android) and desktop (Windows, macOS, Linux)."}
+>
+  <PageHeader
+    title={isPt ? "Apps Mythic GME" : "Mythic GME Apps"}
+    subtitle={isPt ? "Mobile e Desktop, com você onde quer que jogue." : "Mobile & Desktop, with you wherever you play."}
+    description={isPt
+      ? "Aplicativos companheiros oficiais licenciados para Mythic GME 2ª Edição."
+      : "Official licensed companion apps for Mythic GME 2nd Edition."}
+    accent="Apps"
+    visualElement="grid"
+  />
+
+  <!-- Mobile App Section (Left-aligned content) -->
+  <AppSection
+    title={mobileApp.title}
+    whoItsFor={mobileApp.whoItsFor}
+    features={mobileApp.features}
+    officialContent={mobileApp.officialContent}
+    iapInfo={mobileApp.iapInfo}
+    storeLinks={mobileApp.storeLinks}
+    images={[m1, m2, m3, m4, m5, m6, m7]}
+    imageAlt={isPt ? "Screenshots do Mythic GME Mobile" : "Mythic GME Mobile screenshots"}
+    reverse={false}
+  />
+
+  <!-- Adventure Crafter Divider Section -->
+  <section
+    class="adventure-crafter-divider"
+    style="border-top: 4px solid var(--color-border); border-bottom: 4px solid var(--color-border); padding: 3rem 0;"
+  >
+    <div class="container">
+      <header
+        class="section-head"
+        style="justify-content: center; margin-bottom: 1.5rem;"
+        aria-hidden="true"
+      >
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">{isPt ? "Em Breve" : "Coming Soon"}</span>
+      </header>
+      <h2
+        class="section-title"
+        style="text-align: center; margin-bottom: 1rem;"
+      >
+        Adventure Crafter
+      </h2>
+      <p
+        class="lead-accent"
+        style="text-align: center; margin-bottom: 0;"
+      >
+        {isPt
+          ? "Jogadores solo que querem criação guiada de aventuras com ganchos e reviravoltas — Fique ligado nas novidades!"
+          : "Solo players who want guided adventure creation with hooks and twists — Stay tuned for updates!"}
+      </p>
+    </div>
+  </section>
+
+  <!-- Desktop App Section (Left-aligned content) -->
+  <AppSection
+    title={desktopApp.title}
+    whoItsFor={desktopApp.whoItsFor}
+    features={desktopApp.features}
+    officialContent={desktopApp.officialContent}
+    disclaimer={desktopApp.disclaimer}
+    storeLinks={desktopApp.storeLinks}
+    images={[d1, d2, d3, d4, d5, d6, d7]}
+    imageAlt={isPt ? "Screenshots do Mythic GME Desktop" : "Mythic GME Desktop screenshots"}
+    reverse={true}
+  />
+
+  <!-- Buy the Books Section -->
+  <section class="books-section">
+    <div class="container">
+      <header
+        class="section-head"
+        style="justify-content: center; margin-bottom: 2rem;"
+        aria-hidden="true"
+      >
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">{isPt ? "Livros Físicos" : "Physical Books"}</span>
+      </header>
+      <h2
+        class="section-title"
+        style="text-align: center; margin-bottom: 1rem;"
+      >
+        {isPt ? "Adquira os Livros Originais" : "Get the Original Books"}
+      </h2>
+      <p
+        class="lead-accent"
+        style="text-align: center; margin-bottom: 2rem;"
+      >
+        {isPt
+          ? "Experimente o sistema Mythic completo com os livros físicos oficiais de Tana Pigeon."
+          : "Experience the full Mythic system with the official physical books by Tana Pigeon."}
+      </p>
+      <div class="books-grid">
+        <div class="book-card">
+          <h3>Mythic GME 2e</h3>
+          <p>{isPt ? "O sistema de RPG solo completo que começou tudo." : "The complete solo RPG system that started it all."}</p>
+          <a
+            href="https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--shadow-primary"
+          >
+            <i class="fa-slab fa-regular fa-book" aria-hidden="true"></i>
+            {isPt ? "Comprar no DriveThruRPG" : "Buy on DriveThruRPG"}
+          </a>
+        </div>
+        <div class="book-card">
+          <h3>Adventure Crafter</h3>
+          <p>{isPt ? "Sistema de geração de aventuras para histórias dinâmicas." : "Adventure generation system for dynamic storylines."}</p>
+          <a
+            href="https://www.drivethrurpg.com/product/261479/The-Adventure-Crafter"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--shadow-accent"
+          >
+            <i class="fa-slab fa-regular fa-book" aria-hidden="true"></i>
+            {isPt ? "Comprar no DriveThruRPG" : "Buy on DriveThruRPG"}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Info Section -->
+  <section class="app-info-section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>
+            <i class="fa-slab fa-regular fa-shield" aria-hidden="true"></i>
+            {isPt ? "Privacidade e Permissões" : "Privacy & Permissions"}
+          </h3>
+          <p>
+            {isPt ? (
+              <>Ambos os apps respeitam sua privacidade com coleta mínima de dados. Leia nossa <a href="/pt/privacy">Política de Privacidade</a> completa para detalhes.</>
+            ) : (
+              <>Both apps respect your privacy with minimal data collection. Read our complete <a href="/privacy">Privacy Policy</a> for details.</>
+            )}
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>
+            <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
+            {isPt ? "Atualizações e Roteiro" : "Updates & Roadmap"}
+          </h3>
+          <p>
+            {isPt ? (
+              <>Atualizações regulares com novos recursos e melhorias. Confira o <a href="/blog">Blog</a> para notas de lançamento e <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener">Pedidos de Recursos</a> para ver o que está planejado.</>
+            ) : (
+              <>Regular updates with new features and improvements. Check the <a href="/blog">Blog</a> for release notes and <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener">Feature Requests</a> to see what's planned.</>
+            )}
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>
+            <i class="fa-slab fa-regular fa-circle-question" aria-hidden="true"></i>
+            {isPt ? "Suporte e Comunidade" : "Support & Community"}
+          </h3>
+          <p>
+            {isPt ? (
+              <>Obtenha ajuda através da nossa <a href="/pt/support">página de Suporte</a> ou junte-se à comunidade no <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a>.</>
+            ) : (
+              <>Get help through our <a href="/support">Support page</a> or join the community on <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a>.</>
+            )}
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>
+            <i class="fa-slab fa-regular fa-users" aria-hidden="true"></i>
+            {isPt ? "Feito pela Comunidade" : "Community-Driven"}
+          </h3>
+          <p>
+            {isPt
+              ? "Mais de 60% das melhorias do app vêm diretamente de sugestões da comunidade. Seu feedback molda o roteiro."
+              : "More than 60% of app improvements come directly from community suggestions. Your feedback shapes the roadmap."}
+          </p>
+        </div>
+      </div>
+
+      <div class="last-updated">
+        <small>{isPt ? "Última atualização: 15 de Setembro de 2025" : "Last updated: September 15, 2025"}</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="open-source" aria-labelledby="oss-title">
+    <div class="container">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">Open Source</span>
+      </header>
+      <h2 id="oss-title" class="section-title">{isPt ? "Construído com open source" : "Built with open source"}</h2>
+      <p style="max-width: 640px; margin: 0 auto 1.5rem; text-align: center;">{isPt
+        ? "Parte da infraestrutura dos apps Mythic é open source. Confira ou contribua no GitHub."
+        : "Some of the infrastructure powering the Mythic apps is open source. Check them out or contribute on GitHub."}</p>
+      <div class="cards benefits-grid" style="max-width: 640px; margin: 0 auto;">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></div>
+          <h3>icloud_storage_plus</h3>
+          <p>{isPt
+            ? "Plugin Flutter para armazenamento de documentos no iCloud com acesso coordenado a arquivos."
+            : "Flutter plugin for iCloud document storage with coordinated file access."}</p>
+          <a href="https://github.com/kingdomseed/icloud_storage_plus" target="_blank" rel="noopener noreferrer">{isPt ? "Ver no GitHub" : "View on GitHub"} &rarr;</a>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></div>
+          <h3>mythic_dice_parser</h3>
+          <p>{isPt
+            ? "Biblioteca Dart para análise de notação de dados — alimenta o rolador de dados do app."
+            : "Dart library for parsing dice notation — powers the in-app dice roller."}</p>
+          <a href="https://github.com/kingdomseed/mythic-dice-parser" target="_blank" rel="noopener noreferrer">{isPt ? "Ver no GitHub" : "View on GitHub"} &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
