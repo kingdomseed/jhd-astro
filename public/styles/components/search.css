@@ -52,11 +52,15 @@
   .search-overlay {
     position: fixed;
     inset: 0;
-    z-index: 100;
+    z-index: 9999;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding-top: 10vh;
+  }
+
+  .search-overlay[hidden] {
+    display: none;
   }
 
   .search-overlay__backdrop {
