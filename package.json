@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/postbuild.mjs",
+    "build": "astro build",
     "preview": "astro preview",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -18,14 +18,13 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@orama/orama": "^3.1.18",
-    "@orama/plugin-data-persistence": "^3.1.18",
     "@orama/plugin-match-highlight": "^3.1.18",
-    "astro": "^6.1.1"
+    "astro": "^6.1.1",
+    "html-to-text": "^9.0.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
     "esbuild": "^0.25.10",
-    "html-to-text": "^9.0.5",
     "prettier": "3.6.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",

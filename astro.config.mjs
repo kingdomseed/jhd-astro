@@ -1,11 +1,24 @@
 import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import sitemap from "@astrojs/sitemap";
+import oramaSearch from "./src/integrations/orama-search.mjs";
 
 export default defineConfig({
   site: 'https://jasonholtdigital.com',
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap(),
+    oramaSearch({
+      resources: {
+        pathMatcher: /^\/resources\/.+/,
+        contentSelectors: ["main"],
+      },
+      blog: {
+        pathMatcher: /^\/blog\/(?!category|index).+/,
+        contentSelectors: ["main"],
+      },
+    }),
+  ],
 
   redirects: {
     '/privacy-policy': '/privacy',

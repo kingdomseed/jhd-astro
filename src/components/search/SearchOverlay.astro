@@ -71,38 +71,17 @@
   });
 
   // ── Orama Search ──────────────────────────────────────────────────────
-  let resourcesDB: unknown = null;
-  let blogDB: unknown = null;
-  let manifest: Record<string, string> | null = null;
+  import { getOramaDB, search as oramaSearch } from '../../integrations/orama-search-client';
+
+  let resourcesDB: Awaited<ReturnType<typeof getOramaDB>> | null = null;
+  let blogDB: Awaited<ReturnType<typeof getOramaDB>> | null = null;
   let debounceTimer: ReturnType<typeof setTimeout>;
-  let oramaSearch: ((db: unknown, params: { term: string; limit: number }) => Promise<{ hits: Array<{ id: string; score: number; document: Record<string, unknown> }> }>) | null = null;
 
   async function ensureDBs() {
     if (resourcesDB && blogDB) return;
     try {
-      // Dynamic imports — only load Orama when search is first opened
-      const [oramaModule, persistModule] = await Promise.all([
-        import('@orama/orama'),
-        import('@orama/plugin-data-persistence'),
-      ]);
-      oramaSearch = oramaModule.search as typeof oramaSearch;
-
-      if (!manifest) {
-        const res = await fetch('/search-manifest.json');
-        manifest = await res.json();
-      }
-
-      if (!resourcesDB && manifest!.resources) {
-        const res = await fetch(manifest!.resources);
-        const data = await res.json();
-        resourcesDB = await persistModule.restore('json', data);
-      }
-
-      if (!blogDB && manifest!.blog) {
-        const res = await fetch(manifest!.blog);
-        const data = await res.json();
-        blogDB = await persistModule.restore('json', data);
-      }
+      if (!resourcesDB) resourcesDB = await getOramaDB('resources');
+      if (!blogDB) blogDB = await getOramaDB('blog');
     } catch (err) {
       console.error('Failed to load search indexes:', err);
     }
@@ -153,10 +132,10 @@
   }
 
   function renderResultLink(hit: SearchHit, term: string): HTMLAnchorElement {
-    const doc = hit.document as { url?: string; title?: string; content?: string };
+    const doc = hit.document as { path?: string; title?: string; content?: string };
     const link = document.createElement('a');
     link.className = 'search-result';
-    link.href = String(doc.url ?? '#');
+    link.href = String(doc.path ?? '#');
 
     const titleSpan = document.createElement('span');
     titleSpan.className = 'search-result__title';
@@ -195,7 +174,7 @@
     }
 
     await ensureDBs();
-    if (!oramaSearch || !resourcesDB || !blogDB) {
+    if (!resourcesDB || !blogDB) {
       showEmpty('Search is loading...');
       return;
     }
