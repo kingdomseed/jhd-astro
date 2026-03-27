@@ -1,0 +1,266 @@
+---
+// Site-wide search overlay.
+// Loads Orama indexes lazily on first open, searches both resources and blog,
+// groups results by context (current page determines primary group).
+---
+<div
+  id="search-overlay"
+  class="search-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Site search"
+  hidden
+>
+  <div class="search-overlay__backdrop" data-search-close></div>
+  <div class="search-overlay__panel">
+    <div class="search-overlay__header">
+      <div class="search-overlay__input-wrap">
+        <i class="fa-slab fa-regular fa-magnifying-glass search-overlay__icon" aria-hidden="true"></i>
+        <input
+          id="search-input"
+          class="search-overlay__input"
+          type="search"
+          placeholder="Search resources and blog..."
+          autocomplete="off"
+        />
+        <kbd class="search-overlay__esc">Esc</kbd>
+      </div>
+    </div>
+    <div class="search-overlay__body" id="search-results" role="listbox" aria-label="Search results">
+      <p class="search-overlay__empty">Type to search across resources and blog posts.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { search as oramaSearch, type AnyOrama } from '@orama/orama';
+  import { restore } from '@orama/plugin-data-persistence';
+
+  const overlay = document.getElementById('search-overlay')!;
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const resultsContainer = document.getElementById('search-results')!;
+  const backdrop = overlay.querySelector('[data-search-close]')!;
+
+  let resourcesDB: AnyOrama | null = null;
+  let blogDB: AnyOrama | null = null;
+  let manifest: Record<string, string> | null = null;
+  let debounceTimer: ReturnType<typeof setTimeout>;
+  let lastFocused: HTMLElement | null = null;
+
+  async function loadManifest(): Promise<Record<string, string>> {
+    if (manifest) return manifest;
+    const res = await fetch('/search-manifest.json');
+    manifest = await res.json();
+    return manifest!;
+  }
+
+  async function loadDB(name: string): Promise<AnyOrama> {
+    const m = await loadManifest();
+    const url = m[name];
+    if (!url) throw new Error(`No search index for "${name}"`);
+    const res = await fetch(url);
+    const data = await res.json();
+    return await restore('json', data) as unknown as AnyOrama;
+  }
+
+  async function ensureDBs() {
+    if (!resourcesDB) resourcesDB = await loadDB('resources');
+    if (!blogDB) blogDB = await loadDB('blog');
+  }
+
+  function openOverlay() {
+    lastFocused = document.activeElement as HTMLElement;
+    overlay.hidden = false;
+    document.body.classList.add('search-open');
+    input.value = '';
+    clearResults();
+    showEmpty('Type to search across resources and blog posts.');
+    requestAnimationFrame(() => input.focus());
+    ensureDBs();
+  }
+
+  function closeOverlay() {
+    overlay.hidden = true;
+    document.body.classList.remove('search-open');
+    if (lastFocused) lastFocused.focus();
+  }
+
+  function clearResults() {
+    resultsContainer.textContent = '';
+  }
+
+  function showEmpty(message: string) {
+    clearResults();
+    const p = document.createElement('p');
+    p.className = 'search-overlay__empty';
+    p.textContent = message;
+    resultsContainer.appendChild(p);
+  }
+
+  interface SearchHit {
+    id: string;
+    score: number;
+    document: Record<string, unknown>;
+  }
+
+  function highlightTerm(text: string, term: string): DocumentFragment {
+    const frag = document.createDocumentFragment();
+    if (!term.trim()) {
+      frag.appendChild(document.createTextNode(text));
+      return frag;
+    }
+    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escaped})`, 'gi');
+    const parts = text.split(regex);
+    for (const part of parts) {
+      if (part.toLowerCase() === term.toLowerCase()) {
+        const mark = document.createElement('mark');
+        mark.textContent = part;
+        frag.appendChild(mark);
+      } else {
+        frag.appendChild(document.createTextNode(part));
+      }
+    }
+    return frag;
+  }
+
+  function truncateExcerpt(text: string, maxLen = 160): string {
+    if (text.length <= maxLen) return text;
+    return text.slice(0, maxLen).replace(/\s\S*$/, '') + '\u2026';
+  }
+
+  function renderResultLink(hit: SearchHit, term: string): HTMLAnchorElement {
+    const doc = hit.document as { url?: string; title?: string; content?: string };
+    const link = document.createElement('a');
+    link.className = 'search-result';
+    link.href = String(doc.url ?? '#');
+    link.setAttribute('role', 'option');
+
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'search-result__title';
+    titleSpan.appendChild(highlightTerm(String(doc.title ?? 'Untitled'), term));
+    link.appendChild(titleSpan);
+
+    const excerptSpan = document.createElement('span');
+    excerptSpan.className = 'search-result__excerpt';
+    const excerpt = truncateExcerpt(String(doc.content ?? ''));
+    excerptSpan.appendChild(highlightTerm(excerpt, term));
+    link.appendChild(excerptSpan);
+
+    return link;
+  }
+
+  function renderGroup(title: string, hits: SearchHit[], term: string): HTMLDivElement | null {
+    if (!hits.length) return null;
+    const group = document.createElement('div');
+    group.className = 'search-group';
+
+    const heading = document.createElement('h3');
+    heading.className = 'search-group__title';
+    heading.textContent = title;
+    group.appendChild(heading);
+
+    for (const hit of hits.slice(0, 5)) {
+      group.appendChild(renderResultLink(hit, term));
+    }
+    return group;
+  }
+
+  async function doSearch(term: string) {
+    if (!term.trim()) {
+      showEmpty('Type to search across resources and blog posts.');
+      return;
+    }
+
+    await ensureDBs();
+    if (!resourcesDB || !blogDB) return;
+
+    const [resResults, blogResults] = await Promise.all([
+      oramaSearch(resourcesDB, { term, limit: 5 }),
+      oramaSearch(blogDB, { term, limit: 5 }),
+    ]);
+
+    const resHits = (resResults?.hits ?? []) as SearchHit[];
+    const blogHits = (blogResults?.hits ?? []) as SearchHit[];
+
+    if (!resHits.length && !blogHits.length) {
+      showEmpty(`No results for \u201c${term}\u201d`);
+      return;
+    }
+
+    clearResults();
+
+    const onBlog = location.pathname.startsWith('/blog/');
+    const primaryTitle = onBlog ? 'Blog' : 'Resources';
+    const secondaryTitle = onBlog ? 'Also in Resources' : 'Also in Blog';
+    const primaryHits = onBlog ? blogHits : resHits;
+    const secondaryHits = onBlog ? resHits : blogHits;
+
+    const primaryGroup = renderGroup(primaryTitle, primaryHits, term);
+    const secondaryGroup = renderGroup(secondaryTitle, secondaryHits, term);
+
+    if (primaryGroup) resultsContainer.appendChild(primaryGroup);
+    if (secondaryGroup) resultsContainer.appendChild(secondaryGroup);
+
+    const count = resHits.length + blogHits.length;
+    resultsContainer.setAttribute('aria-label', `${count} result${count === 1 ? '' : 's'} found`);
+  }
+
+  // Input handler with debounce
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => doSearch(input.value), 150);
+  });
+
+  // Close on backdrop click
+  backdrop.addEventListener('click', closeOverlay);
+
+  // Keyboard: Escape to close, arrow keys to navigate results
+  overlay.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeOverlay();
+      return;
+    }
+
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const links = Array.from(resultsContainer.querySelectorAll<HTMLAnchorElement>('.search-result'));
+      if (!links.length) return;
+      const current = document.activeElement as HTMLElement;
+      const idx = links.indexOf(current as HTMLAnchorElement);
+      let next: number;
+      if (e.key === 'ArrowDown') {
+        next = idx < 0 ? 0 : Math.min(idx + 1, links.length - 1);
+      } else {
+        next = idx <= 0 ? -1 : idx - 1;
+      }
+      if (next < 0) {
+        input.focus();
+      } else {
+        links[next].focus();
+      }
+    }
+  });
+
+  // Global keyboard shortcuts: Cmd/Ctrl+K, /
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (overlay.hidden) openOverlay(); else closeOverlay();
+      return;
+    }
+    if (e.key === '/' && overlay.hidden) {
+      const tag = (document.activeElement?.tagName ?? '').toLowerCase();
+      const editable = document.activeElement?.getAttribute('contenteditable');
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || editable) return;
+      e.preventDefault();
+      openOverlay();
+    }
+  });
+
+  // Listen for custom event from SearchTrigger
+  document.addEventListener('open-search', () => {
+    if (overlay.hidden) openOverlay(); else closeOverlay();
+  });
+</script>

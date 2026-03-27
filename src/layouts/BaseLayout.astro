@@ -2,6 +2,7 @@
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import HeadFonts from '../components/layout/HeadFonts.astro';
+import SearchOverlay from '../components/search/SearchOverlay.astro';
 import defaultOg from '../assets/logo/logo.jpg?url';
 
 interface Props {
@@ -77,6 +78,7 @@ const altUrl = noAlternate ? null : new URL(altPath, siteUrl).toString();
       </main>
       <Footer />
     </div>
+    <SearchOverlay />
     <script>
       function focusTarget(target: HTMLElement) {
         const prevTabIndex = target.getAttribute('tabindex');

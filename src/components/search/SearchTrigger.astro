@@ -1,0 +1,23 @@
+---
+// Search trigger button for the header nav.
+// Dispatches 'open-search' custom event when clicked.
+---
+<button
+  class="search-trigger"
+  type="button"
+  aria-label="Search (Cmd+K or /)"
+  data-search-trigger
+>
+  <i class="fa-slab fa-regular fa-magnifying-glass" aria-hidden="true"></i>
+  <span class="search-trigger__hint">
+    <kbd>/</kbd>
+  </span>
+</button>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-search-trigger]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('open-search'));
+    });
+  });
+</script>
