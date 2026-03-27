@@ -14,6 +14,7 @@ interface Props {
   ogType?: string;
   ogImage?: string;
   mainClass?: string;
+  noAlternate?: boolean;
 }
 
 const {
@@ -26,15 +27,18 @@ const {
   ogType = 'website',
   ogImage,
   mainClass,
+  noAlternate = false,
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString() ?? 'https://jasonholtdigital.com';
 const ogImageUrl = ogImage ?? new URL(defaultOg, siteUrl).toString();
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
-const skipText = lang === 'pt' ? 'Pular para o conte\u00fado principal' : 'Skip to main content';
+const skipText = lang === 'pt' ? 'Pular para o conteúdo principal' : 'Skip to main content';
 const altLang = lang === 'pt' ? 'en' : 'pt';
-const altPath = lang === 'pt' ? canonicalPath.replace('/pt/', '/') : `/pt${canonicalPath}`;
-const altUrl = new URL(altPath, siteUrl).toString();
+const altPath = lang === 'pt' && canonicalPath.startsWith('/pt/')
+  ? canonicalPath.slice(3)  // strip '/pt' prefix, keep leading '/'
+  : `/pt${canonicalPath}`;
+const altUrl = noAlternate ? null : new URL(altPath, siteUrl).toString();
 ---
 <html lang={lang}>
   <head>
@@ -59,7 +63,7 @@ const altUrl = new URL(altPath, siteUrl).toString();
     <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang={lang} href={canonicalUrl} />
-    <link rel="alternate" hreflang={altLang} href={altUrl} />
+    {altUrl && <link rel="alternate" hreflang={altLang} href={altUrl} />}
     <slot name="head" />
   </head>
   <body>

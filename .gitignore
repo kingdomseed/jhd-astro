@@ -28,3 +28,8 @@ amplify_outputs*
 amplifyconfiguration*
 
 /docs/slab-regular
+
+# Tool-generated runtime state
+.superpowers/
+.desloppify/
+.wrangler/

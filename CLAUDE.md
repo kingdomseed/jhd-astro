@@ -19,7 +19,7 @@ Important: `AGENTS.md` is the canonical repository playbook. This file tailors t
 
 ## Architecture
 
-This is a **static Astro v5 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
+This is a **static Astro 6 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
 
 **🏆 GOLD STANDARD:** The homepage (`src/pages/index.astro`) represents our gold standard for design quality, voice, user experience, and component implementation. Reference it for:
 - Component composition and structure
@@ -33,10 +33,10 @@ All other pages should match or aspire to this level of polish.
 
 ### Core Structure
 - **Component-driven:** Pages compose small, single-purpose components from `src/components/`
-- **Content collections:** Blog and Resources pull from `src/content/` with schemas defined in `src/content/config.ts`
+- **Content collections:** Blog and Resources pull from `src/content/` with schemas defined in `src/content.config.ts`
 - **Static assets:** Served from `public/` (referenced as `/filename.ext`)
 - **Layered CSS:** `public/global.css` imports layer files: tokens → base → utilities → components → overrides
-- **Minimal JS:** TypeScript modules in `src/scripts/` for interactions, hoisted in Astro components
+- **Minimal JS:** TypeScript modules in `src/lib/` for interactions, hoisted in Astro components
 
 ### CSS Layer Architecture
 ```css
@@ -52,9 +52,9 @@ All other pages should match or aspire to this level of polish.
 
 - **`src/pages/index.astro`**: Gold standard page assembly and global head tags
 - **`src/components/Header.astro`**: Navigation with accessible dropdown menu
-- **`src/scripts/header-dropdown.ts`**: TypeScript module for dropdown behavior
+- **`src/lib/carousel.ts`**: Shared carousel logic (index tracking, auto-advance, a11y)
 - **`public/global.css`**: CSS entrypoint with layer imports
-- **`src/content/config.ts`**: Content collection schemas with validation
+- **`src/content.config.ts`**: Content collection schemas with validation
 - **`astro.config.mjs`**: Minimal config with Cloudflare adapter
 
 ## Editing Guidelines
@@ -67,7 +67,7 @@ All other pages should match or aspire to this level of polish.
 
 **Client-side TypeScript conventions:**
 - Use hoisted script modules in `.astro` components
-- Import from `src/scripts/` for reusable behaviors
+- Import from `src/lib/` for reusable behaviors
 - Use data attributes for selectors (`data-dropdown`, `data-menu`)
 - Guard against nulls and support multiple instances
 - Add proper TypeScript types

@@ -140,8 +140,7 @@ const [b1, b2, b3, b4, b5, b6, b7] =
       }
     }
 
-    const plate = document.querySelector<HTMLElement>('.billboard-plate');
-    if (plate) {
+    document.querySelectorAll<HTMLElement>('.billboard-plate').forEach((plate) => {
       const stage = plate.querySelector<HTMLElement>('.bb-stage');
       const imgs = stage
         ? Array.from(stage.querySelectorAll<HTMLImageElement>('.billboard-img:not(.bb-sizer)'))
@@ -168,6 +167,6 @@ const [b1, b2, b3, b4, b5, b6, b7] =
         btnNext.addEventListener('click', () => carousel.next());
         btnPause.addEventListener('click', () => togglePause(carousel, btnPause));
       }
-    }
+    });
   </script>
 </section>

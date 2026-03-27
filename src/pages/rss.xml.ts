@@ -5,7 +5,7 @@ type BlogPost = CollectionEntry<'blog'>;
 
 // RSS 2.0 feed for Blog posts with full content and author
 export async function GET() {
-  const site = new URL(import.meta.env.SITE);
+  const site = new URL(import.meta.env.SITE ?? 'https://jasonholtdigital.com');
   const allPosts: BlogPost[] = await getCollection('blog');
   const posts = allPosts
     .slice()

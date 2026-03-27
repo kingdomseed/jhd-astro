@@ -1295,11 +1295,15 @@ const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
                         return false;
                     }
 
-                    // Show loading state
-                    const originalText = submitBtn?.innerHTML ?? "";
+                    // Show loading state — save and restore child nodes to preserve icon
+                    const savedChildren = submitBtn ? Array.from(submitBtn.childNodes) : [];
                     if (submitBtn) {
-                        submitBtn.innerHTML =
-                            '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Enviando...';
+                        submitBtn.textContent = '';
+                        const spinner = document.createElement('i');
+                        spinner.className = 'fa-solid fa-spinner fa-spin';
+                        spinner.setAttribute('aria-hidden', 'true');
+                        submitBtn.appendChild(spinner);
+                        submitBtn.appendChild(document.createTextNode(' Enviando...'));
                         submitBtn.disabled = true;
                     }
 
@@ -1326,7 +1330,8 @@ const TURNSTILE_SITE_KEY = "0x4AAAAAABhU6Cccio-kREUw";
                     } finally {
                         // Reset button
                         if (submitBtn) {
-                            submitBtn.innerHTML = originalText;
+                            submitBtn.textContent = '';
+                            savedChildren.forEach(node => submitBtn.appendChild(node));
                             submitBtn.disabled = true; // Disabled until Turnstile is completed again
                         }
                     }
