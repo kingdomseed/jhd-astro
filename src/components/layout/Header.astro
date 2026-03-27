@@ -5,7 +5,7 @@
 import brandLogoUrl from "../../assets/logo/logo.svg?url";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import SearchTrigger from "../search/SearchTrigger.astro";
+// SearchTrigger removed — search opens via keyboard shortcuts only (Cmd+K, /)
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -52,8 +52,6 @@ function l(path: string) {
           >{t("nav.blog")}</span
         ></a
       >
-
-      <SearchTrigger />
 
       <!-- Download call to action: dropdown menu with platform links -->
       <span class="cta-download-wrap">

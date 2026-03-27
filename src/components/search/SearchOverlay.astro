@@ -1,77 +1,36 @@
 ---
-// Site-wide search overlay.
-// Loads Orama indexes lazily on first open, searches both resources and blog,
-// groups results by context (current page determines primary group).
+// Site-wide search dialog.
+// Opens via Cmd/Ctrl+K or "/" key. Uses native <dialog> for modal behavior
+// (focus trapping, backdrop, Escape to close — all built in).
+// Loads Orama indexes lazily on first open.
 ---
-<div
-  id="search-overlay"
-  class="search-overlay"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Site search"
-  hidden
->
-  <div class="search-overlay__backdrop" data-search-close></div>
+<dialog id="search-dialog" class="search-overlay__dialog">
   <div class="search-overlay__panel">
     <div class="search-overlay__header">
-      <div class="search-overlay__input-wrap">
-        <i class="fa-slab fa-regular fa-magnifying-glass search-overlay__icon" aria-hidden="true"></i>
-        <input
-          id="search-input"
-          class="search-overlay__input"
-          type="search"
-          placeholder="Search resources and blog..."
-          autocomplete="off"
-        />
-        <kbd class="search-overlay__esc">Esc</kbd>
-      </div>
+      <i class="fa-slab fa-regular fa-magnifying-glass search-overlay__icon" aria-hidden="true"></i>
+      <input
+        id="search-input"
+        class="search-overlay__input"
+        type="search"
+        placeholder="Search resources and blog..."
+        autocomplete="off"
+      />
+      <kbd class="search-overlay__esc">Esc</kbd>
     </div>
-    <div class="search-overlay__body" id="search-results" role="listbox" aria-label="Search results">
+    <div class="search-overlay__body" id="search-results">
       <p class="search-overlay__empty">Type to search across resources and blog posts.</p>
     </div>
   </div>
-</div>
+</dialog>
 
 <script>
-  import { search as oramaSearch, type AnyOrama } from '@orama/orama';
-  import { restore } from '@orama/plugin-data-persistence';
-
-  const overlay = document.getElementById('search-overlay')!;
+  const dialog = document.getElementById('search-dialog') as HTMLDialogElement;
   const input = document.getElementById('search-input') as HTMLInputElement;
   const resultsContainer = document.getElementById('search-results')!;
-  const backdrop = overlay.querySelector('[data-search-close]')!;
 
-  let resourcesDB: AnyOrama | null = null;
-  let blogDB: AnyOrama | null = null;
-  let manifest: Record<string, string> | null = null;
-  let debounceTimer: ReturnType<typeof setTimeout>;
-  let lastFocused: HTMLElement | null = null;
-
-  async function loadManifest(): Promise<Record<string, string>> {
-    if (manifest) return manifest;
-    const res = await fetch('/search-manifest.json');
-    manifest = await res.json();
-    return manifest!;
-  }
-
-  async function loadDB(name: string): Promise<AnyOrama> {
-    const m = await loadManifest();
-    const url = m[name];
-    if (!url) throw new Error(`No search index for "${name}"`);
-    const res = await fetch(url);
-    const data = await res.json();
-    return await restore('json', data) as unknown as AnyOrama;
-  }
-
-  async function ensureDBs() {
-    if (!resourcesDB) resourcesDB = await loadDB('resources');
-    if (!blogDB) blogDB = await loadDB('blog');
-  }
-
-  function openOverlay() {
-    lastFocused = document.activeElement as HTMLElement;
-    overlay.hidden = false;
-    document.body.classList.add('search-open');
+  // ── Open / Close ──────────────────────────────────────────────────────
+  function openSearch() {
+    dialog.showModal();
     input.value = '';
     clearResults();
     showEmpty('Type to search across resources and blog posts.');
@@ -79,10 +38,74 @@
     ensureDBs();
   }
 
-  function closeOverlay() {
-    overlay.hidden = true;
-    document.body.classList.remove('search-open');
-    if (lastFocused) lastFocused.focus();
+  function closeSearch() {
+    dialog.close();
+  }
+
+  // Close on backdrop click (click on <dialog> itself, not the panel)
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) closeSearch();
+  });
+
+  // Global keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    // Cmd/Ctrl+K
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      dialog.open ? closeSearch() : openSearch();
+      return;
+    }
+    // "/" key (only when not in a text field and dialog is closed)
+    if (e.key === '/' && !dialog.open) {
+      const tag = (document.activeElement?.tagName ?? '').toLowerCase();
+      const editable = document.activeElement?.getAttribute('contenteditable');
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || editable) return;
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
+  // Listen for custom event (from SearchTrigger if ever re-added)
+  document.addEventListener('open-search', () => {
+    dialog.open ? closeSearch() : openSearch();
+  });
+
+  // ── Orama Search ──────────────────────────────────────────────────────
+  let resourcesDB: unknown = null;
+  let blogDB: unknown = null;
+  let manifest: Record<string, string> | null = null;
+  let debounceTimer: ReturnType<typeof setTimeout>;
+  let oramaSearch: ((db: unknown, params: { term: string; limit: number }) => Promise<{ hits: Array<{ id: string; score: number; document: Record<string, unknown> }> }>) | null = null;
+
+  async function ensureDBs() {
+    if (resourcesDB && blogDB) return;
+    try {
+      // Dynamic imports — only load Orama when search is first opened
+      const [oramaModule, persistModule] = await Promise.all([
+        import('@orama/orama'),
+        import('@orama/plugin-data-persistence'),
+      ]);
+      oramaSearch = oramaModule.search as typeof oramaSearch;
+
+      if (!manifest) {
+        const res = await fetch('/search-manifest.json');
+        manifest = await res.json();
+      }
+
+      if (!resourcesDB && manifest!.resources) {
+        const res = await fetch(manifest!.resources);
+        const data = await res.json();
+        resourcesDB = await persistModule.restore('json', data);
+      }
+
+      if (!blogDB && manifest!.blog) {
+        const res = await fetch(manifest!.blog);
+        const data = await res.json();
+        blogDB = await persistModule.restore('json', data);
+      }
+    } catch (err) {
+      console.error('Failed to load search indexes:', err);
+    }
   }
 
   function clearResults() {
@@ -95,12 +118,6 @@
     p.className = 'search-overlay__empty';
     p.textContent = message;
     resultsContainer.appendChild(p);
-  }
-
-  interface SearchHit {
-    id: string;
-    score: number;
-    document: Record<string, unknown>;
   }
 
   function highlightTerm(text: string, term: string): DocumentFragment {
@@ -129,12 +146,17 @@
     return text.slice(0, maxLen).replace(/\s\S*$/, '') + '\u2026';
   }
 
+  interface SearchHit {
+    id: string;
+    score: number;
+    document: Record<string, unknown>;
+  }
+
   function renderResultLink(hit: SearchHit, term: string): HTMLAnchorElement {
     const doc = hit.document as { url?: string; title?: string; content?: string };
     const link = document.createElement('a');
     link.className = 'search-result';
     link.href = String(doc.url ?? '#');
-    link.setAttribute('role', 'option');
 
     const titleSpan = document.createElement('span');
     titleSpan.className = 'search-result__title';
@@ -173,7 +195,10 @@
     }
 
     await ensureDBs();
-    if (!resourcesDB || !blogDB) return;
+    if (!oramaSearch || !resourcesDB || !blogDB) {
+      showEmpty('Search is loading...');
+      return;
+    }
 
     const [resResults, blogResults] = await Promise.all([
       oramaSearch(resourcesDB, { term, limit: 5 }),
@@ -201,66 +226,29 @@
 
     if (primaryGroup) resultsContainer.appendChild(primaryGroup);
     if (secondaryGroup) resultsContainer.appendChild(secondaryGroup);
-
-    const count = resHits.length + blogHits.length;
-    resultsContainer.setAttribute('aria-label', `${count} result${count === 1 ? '' : 's'} found`);
   }
 
-  // Input handler with debounce
+  // Debounced search on input
   input.addEventListener('input', () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => doSearch(input.value), 150);
   });
 
-  // Close on backdrop click
-  backdrop.addEventListener('click', closeOverlay);
-
-  // Keyboard: Escape to close, arrow keys to navigate results
-  overlay.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      closeOverlay();
-      return;
+  // Arrow key navigation within results
+  dialog.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const links = Array.from(resultsContainer.querySelectorAll<HTMLAnchorElement>('.search-result'));
+    if (!links.length) return;
+    const current = document.activeElement as HTMLElement;
+    const idx = links.indexOf(current as HTMLAnchorElement);
+    let next: number;
+    if (e.key === 'ArrowDown') {
+      next = idx < 0 ? 0 : Math.min(idx + 1, links.length - 1);
+    } else {
+      next = idx <= 0 ? -1 : idx - 1;
     }
-
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      e.preventDefault();
-      const links = Array.from(resultsContainer.querySelectorAll<HTMLAnchorElement>('.search-result'));
-      if (!links.length) return;
-      const current = document.activeElement as HTMLElement;
-      const idx = links.indexOf(current as HTMLAnchorElement);
-      let next: number;
-      if (e.key === 'ArrowDown') {
-        next = idx < 0 ? 0 : Math.min(idx + 1, links.length - 1);
-      } else {
-        next = idx <= 0 ? -1 : idx - 1;
-      }
-      if (next < 0) {
-        input.focus();
-      } else {
-        links[next].focus();
-      }
-    }
-  });
-
-  // Global keyboard shortcuts: Cmd/Ctrl+K, /
-  document.addEventListener('keydown', (e) => {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-      e.preventDefault();
-      if (overlay.hidden) openOverlay(); else closeOverlay();
-      return;
-    }
-    if (e.key === '/' && overlay.hidden) {
-      const tag = (document.activeElement?.tagName ?? '').toLowerCase();
-      const editable = document.activeElement?.getAttribute('contenteditable');
-      if (tag === 'input' || tag === 'textarea' || tag === 'select' || editable) return;
-      e.preventDefault();
-      openOverlay();
-    }
-  });
-
-  // Listen for custom event from SearchTrigger
-  document.addEventListener('open-search', () => {
-    if (overlay.hidden) openOverlay(); else closeOverlay();
+    if (next < 0) input.focus();
+    else links[next].focus();
   });
 </script>
