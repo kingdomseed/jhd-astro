@@ -1,59 +1,23 @@
 ---
-// Page component that assembles all of the individual
-// pieces of the landing page.  Each section of the design lives
-// in its own component to promote reusability and clarity.  When
-// consumed within an Astro project, these components render
-// static HTML that closely mirrors the original design.
-import UtilBar from '../components/UtilBar.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Billboard from '../components/Billboard.astro';
-import CoreBenefits from '../components/CoreBenefits.astro';
-import CommunitySupport from '../components/CommunitySupport.astro';
-import Partners from '../components/Partners.astro';
-import PopularResources from '../components/PopularResources.astro';
-import MakersNote from '../components/MakersNote.astro';
-import Footer from '../components/Footer.astro';
-import ReviewsRotator from '../components/ReviewsRotator.astro';
-import HeadFonts from '../components/HeadFonts.astro';
-import defaultOg from '../assets/logo/logo.jpg?url'; // Default site OG image
-
-// Absolute OG image URL for social previews
-const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.com').toString();
+import BaseLayout from '../layouts/BaseLayout.astro';
+import UtilBar from '../components/layout/UtilBar.astro';
+import Hero from '../components/home/Hero.astro';
+import Billboard from '../components/home/Billboard.astro';
+import CoreBenefits from '../components/home/CoreBenefits.astro';
+import CommunitySupport from '../components/home/CommunitySupport.astro';
+import Partners from '../components/home/Partners.astro';
+import PopularResources from '../components/home/PopularResources.astro';
+import MakersNote from '../components/home/MakersNote.astro';
+import ReviewsRotator from '../components/home/ReviewsRotator.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <HeadFonts />
-    <title>Official Mythic GME 2e Apps — Jason Holt Digital</title>
-    <meta name="description" content="GM‑less play at your fingertips. Official, licensed Mythic GME 2e companion apps by Jason Holt Digital. Download for mobile and desktop." />
-    
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Official Mythic GME 2e Apps — Jason Holt Digital" />
-    <meta property="og:description" content="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jasonholtdigital.com/" />
-    <meta property="og:site_name" content="Jason Holt Digital" />
-    <meta property="og:image" content={ogImageUrl} />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Official Mythic GME 2e Apps — Jason Holt Digital" />
-    <meta name="twitter:description" content="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop." />
-    <meta name="twitter:image" content={ogImageUrl} />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    
-    <!-- Global stylesheet: variables, layout and component styles -->
-    <link rel="stylesheet" href="/global.css" />
-    <!-- Font Awesome Kit (loads Classic + Slab as configured in your kit) -->
-  <script is:inline src="https://kit.fontawesome.com/9f0db3cdf4.js" crossorigin="anonymous"></script>
-    <link rel="canonical" href="https://jasonholtdigital.com/" />
-    
-    <!-- JSON-LD Structured Data -->
+<BaseLayout
+  title="Official Mythic GME 2e Apps — Jason Holt Digital"
+  description="GM‑less play at your fingertips. Official, licensed Mythic GME 2e companion apps by Jason Holt Digital. Download for mobile and desktop."
+  canonicalPath="/"
+  ogDescription="GM‑less play at your fingertips. Licensed companion apps for Mythic GME 2e on mobile & desktop."
+>
+  <UtilBar slot="before-header" />
+  <Fragment slot="head">
     <script is:inline type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -83,36 +47,14 @@ const ogImageUrl = new URL(defaultOg, Astro.site ?? 'https://jasonholtdigital.co
       }
     }
     </script>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to main content</a>
-    <!-- Atmospheric background gradients -->
-    <div id="bg-atmo" aria-hidden="true"></div>
-    <div id="site">
-      <!-- Top utility bar announcing the official partner status -->
-      <UtilBar />
-      <!-- Main site header with navigation and call‑to‑action -->
-      <Header />
-      <main id="main">
-        <!-- Hero section introduces the product and invites download -->
-        <Hero />
-        <!-- Billboard preview of the application screenshot -->
-        <Billboard />
-  <!-- Rotating reviews / social proof strip (from design) -->
+  </Fragment>
+
+  <Hero />
+  <Billboard />
   <ReviewsRotator />
-        <!-- Core benefits of using the Mythic GME apps -->
-        <CoreBenefits />
-        <!-- Community and support channels -->
-        <CommunitySupport />
-        <!-- Official partners -->
-        <Partners />
-        <!-- Teaser list of documentation resources -->
-        <PopularResources />
-        <!-- Personal note from the maker of the product -->
-        <MakersNote />
-      </main>
-      <!-- Footer with navigation and social links -->
-      <Footer />
-    </div>
-  </body>
-</html>
+  <CoreBenefits />
+  <CommunitySupport />
+  <Partners />
+  <PopularResources />
+  <MakersNote />
+</BaseLayout>

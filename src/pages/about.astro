@@ -1,324 +1,129 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import PageHeader from "../components/PageHeader.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import headshotMain from "../assets/people/jason-school.jpg";
-import HeadFonts from "../components/HeadFonts.astro";
-import defaultOg from "../assets/logo/logo.jpg?url"; // Default site OG image
 import { getEntry } from "astro:content";
 
-const ogImageUrl = new URL(
-  defaultOg,
-  Astro.site ?? "https://jasonholtdigital.com",
-).toString();
-
-// Get content from the pages collection
 const aboutEntry = await getEntry("pages", "about");
+if (!aboutEntry) throw new Error("Could not find about entry in pages collection");
 
-// Extract data from frontmatter
-if (!aboutEntry) {
-  throw new Error("Could not find about entry in pages collection");
-}
-
-const {
-  title,
-  subtitle,
-  description,
-  pageHeader,
-  backgroundHighlights = [],
-  mythicHighlights = [],
-} = aboutEntry.data;
+const { title, subtitle, description, pageHeader, backgroundHighlights = [], mythicHighlights = [] } = aboutEntry.data;
 ---
+<BaseLayout
+  title={`About — ${title} & Official Partnership`}
+  description={description}
+  canonicalPath="/about/"
+  mainClass="about-main"
+>
+  <PageHeader
+    title={title}
+    subtitle={subtitle}
+    description={description}
+    accent={pageHeader.accent}
+    layout={pageHeader.layout}
+    icon={pageHeader.icon}
+    visualElement={pageHeader.visualElement}
+    colorScheme={pageHeader.colorScheme}
+  />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <HeadFonts />
-    <title>About — {title} & Official Partnership</title>
-    <meta name="description" content={description} />
-    <meta property="og:image" content={ogImageUrl} />
-    <meta name="twitter:image" content={ogImageUrl} />
-    <link rel="stylesheet" href="/global.css" />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/9f0db3cdf4.js"
-      crossorigin="anonymous"></script>
-    <link rel="canonical" href="https://jasonholtdigital.com/about/" />
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to main content</a>
-    <div id="bg-atmo" aria-hidden="true"></div>
-    <div id="site">
-      <Header />
-
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        description={description}
-        accent={pageHeader.accent}
-        layout={pageHeader.layout}
-        icon={pageHeader.icon}
-        visualElement={pageHeader.visualElement}
-        colorScheme={pageHeader.colorScheme}
-      />
-
-      <main id="main" class="about-main">
-        <section
-          class="section"
-          id="about-overview"
-          aria-labelledby="about-overview-title"
-        >
-          <div class="container">
-            <div class="about-overview">
-              <figure class="about-portrait">
-                <Image
-                  src={headshotMain}
-                  alt="Jason Holt"
-                  class="about-portrait__image"
-                  width={320}
-                  height={320}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="about-portrait__caption">
-                  <strong>Jason Holt</strong>
-                  Indie developer &amp; founder
-                </figcaption>
-              </figure>
-              <div class="about-intro">
-                <header
-                  class="section-head section-head--left"
-                  aria-hidden="true"
-                >
-                  <span class="accent-line" aria-hidden="true"></span>
-                  <span class="badge-text">Profile</span>
-                </header>
-                <h2
-                  id="about-overview-title"
-                  class="section-title section-title--left"
-                >
-                  Hi, I'm Jason
-                </h2>
-                <p>
-                  I wrote my first program at twelve — a Redwall
-                  choose-your-own-adventure in Basic. Then nine years of
-                  teaching computer science, some Flutter experiments, and
-                  finally (after dreaming about it since I ran Hour of Code
-                  with my students in 2013) building a real app. What stayed
-                  the same across all of it was the people: I kept ending up
-                  where someone needed something built.
-                </p>
-                <p>
-                  I maintain two products under licence from Word Mill Games:
-                  <strong>Mythic GME Mobile</strong> (iOS, Android) and
-                  <strong>Mythic GME Digital</strong> (Windows, macOS, Linux).
-                </p>
-                <p>
-                  I'm also pursuing an M.Sc. in Computational Linguistics. Part
-                  curiosity about how language and software can work together for
-                  solo play, and part (if I'm honest) the same pattern that's
-                  driven every fresh start in my career — someone had a need, and
-                  I wanted to help meet it.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section section-band"
-          id="about-license"
-          aria-labelledby="about-license-title"
-        >
-          <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Official</span>
-            </header>
-            <div class="about-license">
-              <h2 id="about-license-title" class="section-title">
-                Licensed with Word Mill Games
-              </h2>
-              <p class="about-license__summary">
-                Word Mill Games needed a developer for Mythic GME 2e, and I
-                was looking for what to build after teaching. The timing
-                worked. That became a licence in 2024, and I've been working
-                directly with Word Mill ever since.
-              </p>
-              <ul class="about-license__list">
-                <li>
-                  <strong>Core 2e fidelity.</strong> Fate Chart, Fate Check, Random
-                  Events, and Scene adjustments implemented with care.
-                </li>
-                <li>
-                  <strong>Platforms.</strong> Two apps: <strong
-                    >Mythic GME Mobile</strong
-                  > (iOS, Android) and <strong>Mythic GME Digital</strong> (Windows,
-                  macOS, Linux).
-                </li>
-                <li>
-                  <strong>Portable by design.</strong> Offline‑first, JSON journals,
-                  and Markdown exports so your campaigns travel well.
-                </li>
-                <li>
-                  <strong>Accessible.</strong> Screen‑reader friendly, adjustable
-                  type, left‑hand mode, and color‑blind aware palettes.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section"
-          id="about-mythic"
-          aria-labelledby="about-mythic-title"
-        >
-          <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Product</span>
-            </header>
-            <h2 id="about-mythic-title" class="section-title">
-              Why Mythic players choose the apps
-            </h2>
-            <p class="about-mythic__summary">
-              I built these apps for the Mythic community — less time flipping
-              through tables, more time in the story. Solo play, GM‑less
-              sessions, creative spark on the go — however you use Mythic, the
-              apps are built to keep up.
-            </p>
-            <ul class="about-mythic__list">
-              {
-                mythicHighlights.map(
-                  (item: { label: string; description: string }) => (
-                    <li>
-                      <strong>{item.label}.</strong> {item.description}
-                    </li>
-                  ),
-                )
-              }
-            </ul>
-            <p class="about-mythic__note">
-              What I ship next comes from what players tell me — join the
-              Discord to talk with me or head to the <a
-                href="http://feedback.jasonholtdigital.com/board"
-                target="_blank"
-                rel="noopener noreferrer">Feature Board</a
-              > to request features and vote on priorities.
-            </p>
-          </div>
-        </section>
-
-        <section
-          class="section"
-          id="about-background"
-          aria-labelledby="about-background-title"
-        >
-          <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Approach</span>
-            </header>
-            <h2 id="about-background-title" class="section-title">
-              What shapes the work
-            </h2>
-            <p class="about-background__summary">
-              When I started building the Mythic app, I knew I needed the
-              community — their feedback, their play styles, their patience
-              while I figured things out. Every version has been a fresh
-              start — better architecture, new UX patterns, and a lot more
-              listening. That's how "build in public" went from something I
-              admired to the way I actually work.
-            </p>
-            <p class="about-background__summary">
-              I share what I ship each day in the Discord #daily-wrap. Bug
-              reports come in, feature requests come in, and sometimes a player
-              catches something I missed (happens more often than I'd like to
-              admit). Small, frequent updates.
-            </p>
-            <div class="about-background-grid">
-              {
-                backgroundHighlights.map(
-                  (item: {
-                    icon: string;
-                    title: string;
-                    description: string;
-                  }) => (
-                    <article class="about-background-card">
-                      <span
-                        class="about-background-card__icon"
-                        aria-hidden="true"
-                      >
-                        <i class={item.icon} />
-                      </span>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </article>
-                  ),
-                )
-              }
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section"
-          id="about-connect"
-          aria-labelledby="about-connect-title"
-        >
-          <div class="container">
-            <header class="section-head" aria-hidden="true">
-              <span class="accent-line" aria-hidden="true"></span>
-              <span class="badge-text">Connect</span>
-            </header>
-            <div class="about-connect">
-              <h2 id="about-connect-title" class="section-title">
-                I'd love to keep the conversation going
-              </h2>
-              <p class="about-connect__summary">
-                I read every message. Whether it's a bug report, a feature
-                idea, or just a story about your last session — I want to
-                hear it.
-              </p>
-              <div class="about-social">
-                <a
-                  class="ico ico--discord"
-                  href="https://discord.gg/PEDHrhzcnk"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Join Discord"
-                >
-                  <i class="fa-brands fa-discord" aria-hidden="true"></i>
-                </a>
-                <a
-                  class="ico ico--github"
-                  href="https://github.com/kingdomseed"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Follow on GitHub"
-                >
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-                <a
-                  class="ico ico--blog"
-                  href="/blog"
-                  aria-label="Read the Blog"
-                >
-                  <i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"
-                  ></i>
-                </a>
-              </div>
-              <p class="about-connect__support">
-                Questions? <a href="/support">Visit the support center</a>
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
+  <section class="section" id="about-overview" aria-labelledby="about-overview-title">
+    <div class="container">
+      <div class="about-overview">
+        <figure class="about-portrait">
+          <Image src={headshotMain} alt="Jason Holt" class="about-portrait__image" width={320} height={320} loading="lazy" decoding="async" />
+          <figcaption class="about-portrait__caption">
+            <strong>Jason Holt</strong>
+            Indie developer &amp; founder
+          </figcaption>
+        </figure>
+        <div class="about-intro">
+          <header class="section-head section-head--left" aria-hidden="true">
+            <span class="accent-line" aria-hidden="true"></span>
+            <span class="badge-text">Profile</span>
+          </header>
+          <h2 id="about-overview-title" class="section-title section-title--left">Hi, I'm Jason</h2>
+          <p>I wrote my first program at twelve — a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally (after dreaming about it since I ran Hour of Code with my students in 2013) building a real app. What stayed the same across all of it was the people: I kept ending up where someone needed something built.</p>
+          <p>I maintain two products under licence from Word Mill Games: <strong>Mythic GME Mobile</strong> (iOS, Android) and <strong>Mythic GME Digital</strong> (Windows, macOS, Linux).</p>
+          <p>I'm also pursuing an M.Sc. in Computational Linguistics. Part curiosity about how language and software can work together for solo play, and part (if I'm honest) the same pattern that's driven every fresh start in my career — someone had a need, and I wanted to help meet it.</p>
+        </div>
+      </div>
     </div>
-  </body>
-</html>
+  </section>
+
+  <section class="section section-band" id="about-license" aria-labelledby="about-license-title">
+    <div class="container">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">Official</span>
+      </header>
+      <div class="about-license">
+        <h2 id="about-license-title" class="section-title">Licensed with Word Mill Games</h2>
+        <p class="about-license__summary">Word Mill Games needed a developer for Mythic GME 2e, and I was looking for what to build after teaching. The timing worked. That became a licence in 2024, and I've been working directly with Word Mill ever since.</p>
+        <ul class="about-license__list">
+          <li><strong>Core 2e fidelity.</strong> Fate Chart, Fate Check, Random Events, and Scene adjustments implemented with care.</li>
+          <li><strong>Platforms.</strong> Two apps: <strong>Mythic GME Mobile</strong> (iOS, Android) and <strong>Mythic GME Digital</strong> (Windows, macOS, Linux).</li>
+          <li><strong>Portable by design.</strong> Offline‑first, JSON journals, and Markdown exports so your campaigns travel well.</li>
+          <li><strong>Accessible.</strong> Screen‑reader friendly, adjustable type, left‑hand mode, and color‑blind aware palettes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about-mythic" aria-labelledby="about-mythic-title">
+    <div class="container">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">Product</span>
+      </header>
+      <h2 id="about-mythic-title" class="section-title">Why Mythic players choose the apps</h2>
+      <p class="about-mythic__summary">I built these apps for the Mythic community — less time flipping through tables, more time in the story. Solo play, GM‑less sessions, creative spark on the go — however you use Mythic, the apps are built to keep up.</p>
+      <ul class="about-mythic__list">
+        {mythicHighlights.map((item: { label: string; description: string }) => (
+          <li><strong>{item.label}.</strong> {item.description}</li>
+        ))}
+      </ul>
+      <p class="about-mythic__note">What I ship next comes from what players tell me — join the Discord to talk with me or head to the <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener noreferrer">Feature Board</a> to request features and vote on priorities.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about-background" aria-labelledby="about-background-title">
+    <div class="container">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">Approach</span>
+      </header>
+      <h2 id="about-background-title" class="section-title">What shapes the work</h2>
+      <p class="about-background__summary">When I started building the Mythic app, I knew I needed the community — their feedback, their play styles, their patience while I figured things out. Every version has been a fresh start — better architecture, new UX patterns, and a lot more listening. That's how "build in public" went from something I admired to the way I actually work.</p>
+      <p class="about-background__summary">I share what I ship each day in the Discord #daily-wrap. Bug reports come in, feature requests come in, and sometimes a player catches something I missed (happens more often than I'd like to admit). Small, frequent updates.</p>
+      <div class="about-background-grid">
+        {backgroundHighlights.map((item: { icon: string; title: string; description: string }) => (
+          <article class="about-background-card">
+            <span class="about-background-card__icon" aria-hidden="true"><i class={item.icon} /></span>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about-connect" aria-labelledby="about-connect-title">
+    <div class="container">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">Connect</span>
+      </header>
+      <div class="about-connect">
+        <h2 id="about-connect-title" class="section-title">I'd love to keep the conversation going</h2>
+        <p class="about-connect__summary">I read every message. Whether it's a bug report, a feature idea, or just a story about your last session — I want to hear it.</p>
+        <div class="about-social">
+          <a class="ico ico--discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener" aria-label="Join Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+          <a class="ico ico--github" href="https://github.com/kingdomseed" target="_blank" rel="noopener" aria-label="Follow on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a class="ico ico--blog" href="/blog" aria-label="Read the Blog"><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i></a>
+        </div>
+        <p class="about-connect__support">Questions? <a href="/support">Visit the support center</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

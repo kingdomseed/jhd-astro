@@ -1,13 +1,11 @@
 ---
-import Header from "../../../components/Header.astro";
-import Footer from "../../../components/Footer.astro";
-import HeadFonts from "../../../components/HeadFonts.astro";
-import PageHeader from "../../../components/PageHeader.astro";
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
-import { formatDate } from "../../../scripts/format-date";
+import { formatDate } from "../../../lib/format-date";
 import defaultOg from "../../../assets/logo/logo.jpg?url"; // Default site OG image
-import { getEntry, getCollection, type CollectionEntry } from "astro:content";
-import ShareBar from "../../../components/ShareBar.astro";
+import { getEntry, render, getCollection, type CollectionEntry } from "astro:content";
+import ShareBar from '../../../components/blog/ShareBar.astro';
 
 type ResourceEntry = CollectionEntry<"resources">;
 // Narrow the type of individual steps for stronger typing in map callback
@@ -18,7 +16,7 @@ export async function getStaticPaths() {
         return data.lang === "pt";
     });
     return entries.map((entry: ResourceEntry) => ({
-        params: { slug: entry.slug },
+        params: { slug: entry.id },
     }));
 }
 
@@ -34,7 +32,7 @@ if (!entry) {
     throw new Error(`Resource not found for slug: ${slug}`);
 }
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const resource = entry.data;
 
 // Build Related Guides list
@@ -42,27 +40,27 @@ const allResources = await getCollection("resources", ({ data }) => {
     return data.lang === "pt";
 });
 // Helper: resolve a slug to entry safely
-const resolveResource = (s: string) => allResources.find((e) => e.slug === s);
+const resolveResource = (s: string) => allResources.find((e) => e.id === s);
 const explicitRelated = Array.isArray(resource.related)
     ? resource.related
           .map((s: string) => resolveResource(s))
           .filter((e): e is ResourceEntry => {
               if (!e) return false;
-              return e.slug !== entry.slug;
+              return e.id !== entry.id;
           })
     : [];
 // Fallback suggestions (same category, then tag overlap), excluding duplicates/self
 const seen = new Set<string>([
-    entry.slug,
-    ...explicitRelated.map((e) => e.slug),
+    entry.id,
+    ...explicitRelated.map((e) => e.id),
 ]);
 const sameCategory = allResources
-    .filter((e) => e.data.category === resource.category && !seen.has(e.slug))
+    .filter((e) => e.data.category === resource.category && !seen.has(e.id))
     .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
-sameCategory.slice(0, 3).forEach((e) => seen.add(e.slug));
+sameCategory.slice(0, 3).forEach((e) => seen.add(e.id));
 const tags = new Set<string>(Array.isArray(resource.tags) ? resource.tags : []);
 const tagOverlap = allResources
-    .filter((e) => !seen.has(e.slug))
+    .filter((e) => !seen.has(e.id))
     .map((e) => ({
         entry: e,
         score: (e.data.tags || []).reduce(
@@ -108,7 +106,7 @@ const sectionAnchors = {
 
 const parentAnchor = sectionAnchors[resource.category] ?? "";
 const backHref = `/pt/resources${parentAnchor}`;
-const canonicalUrl = `https://jasonholtdigital.com/pt/resources/${entry.slug}/`;
+const canonicalUrl = `https://jasonholtdigital.com/pt/resources/${entry.id}/`;
 // Compute absolute OG image URL using resource hero or default site image
 const ogSrcPath = resource.hero?.src ?? defaultOg;
 const ogImageUrl = new URL(
@@ -118,42 +116,29 @@ const ogImageUrl = new URL(
 const ogImageAlt = resource.heroAlt ?? resource.title;
 ---
 
-<html lang="pt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <HeadFonts />
-        <title>{resource.title} — Mythic Resources</title>
-        <meta name="description" content={resource.summary} />
-        <link rel="canonical" href={canonicalUrl} />
-        <link rel="stylesheet" href="/global.css" />
-        <script
-            is:inline
-            src="https://kit.fontawesome.com/9f0db3cdf4.js"
-            crossorigin="anonymous"></script>
-        <meta property="og:image" content={ogImageUrl} />
-        {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
-    </head>
-    <body>
-        <a class="skip" href="#main">Pular para o conteúdo principal</a>
-        <div id="bg-atmo" aria-hidden="true"></div>
-        <div id="site">
-            <Header />
+<BaseLayout
+  title={`${resource.title} — Mythic Resources`}
+  description={resource.summary}
+  canonicalPath={`/pt/resources/${entry.id}/`}
+  lang="pt"
+  noAlternate
+  ogImage={ogImageUrl}
+  mainClass="resource-detail-main"
+>
+  <Fragment slot="head">
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
+  </Fragment>
 
-            <PageHeader
-                title={resource.title}
-                subtitle={categoryLabels[resource.category]}
-                description={resource.summary}
-                accent="Recursos"
-                layout="left"
-                icon="fa-solid fa-book-open"
-                visualElement="grid"
-                colorScheme="primary"
-            />
-
-            <main id="main" class="resource-detail-main">
+  <PageHeader
+    title={resource.title}
+    subtitle={categoryLabels[resource.category]}
+    description={resource.summary}
+    accent="Recursos"
+    layout="left"
+    icon="fa-solid fa-book-open"
+    visualElement="grid"
+    colorScheme="primary"
+  />
                 <article
                     class="container section resource-detail"
                     aria-labelledby="resource-detail-heading"
@@ -279,7 +264,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                         {relatedEntries.map((r) => (
                                             <li class="resource-related__item">
                                                 <a
-                                                    href={`/pt/resources/${r.slug}/`}
+                                                    href={`/pt/resources/${r.id}/`}
                                                     class="resource-related__link"
                                                 >
                                                     <span
@@ -653,11 +638,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                         }
                     </div>
                 </article>
-            </main>
-            <Footer />
-        </div>
-    </body>
-</html>
+</BaseLayout>
 
 <style>
     .resource-hero {

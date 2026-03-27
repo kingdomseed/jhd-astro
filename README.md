@@ -119,11 +119,10 @@ public/
 
 ## 🛠️ Technical Stack
 
-- **Astro 5.13.3** — Static site generator
+- **Astro 6** — Static site generator
 - **TypeScript** — Type-safe development
-- **Font Awesome Pro** — Icon library
-- **Sentry** — Error monitoring
-- **Spotlight** — Performance monitoring
+- **Font Awesome Pro** — Icon library (CDN)
+- **Vitest** — Unit testing
 
 ## 📄 License
 

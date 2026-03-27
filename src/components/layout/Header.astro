@@ -1,0 +1,376 @@
+---
+// Site header containing the logo, primary navigation and an
+// accessible Download dropdown menu with platform links. The sticky
+// behaviour is achieved through CSS defined in the global stylesheet.
+import brandLogoUrl from "../../assets/logo/logo.svg?url";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+function l(path: string) {
+  return getRelativeLocaleUrl(lang, path);
+}
+---
+
+<header class="header-nav">
+  <div class="container row" style="justify-content: space-between">
+    <a class="brand" href={l("/")} aria-label="Jason Holt Digital home">
+      <img
+        class="brand-logo"
+        src={brandLogoUrl}
+        alt="Jason Holt Digital"
+        width="48"
+        height="48"
+        decoding="async"
+        loading="lazy"
+      />
+      <strong>Jason Holt Digital</strong>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav id="siteNav" class="nav nav--desktop" aria-label="Primary">
+      <a href={l("/")}
+        ><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span
+          >{t("nav.home")}</span
+        ></a
+      >
+      <a href={l("apps")}
+        ><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span
+          >{t("nav.apps")}</span
+        ></a
+      >
+      <a href={l("resources")}
+        ><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i><span
+          >{t("nav.resources")}</span
+        ></a
+      >
+      <a href={l("blog")}
+        ><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i><span
+          >{t("nav.blog")}</span
+        ></a
+      >
+
+      <!-- Download call to action: dropdown menu with platform links -->
+      <span class="cta-download-wrap">
+        <button
+          class="btn btn--secondary btn--compact cta-download"
+          aria-haspopup="menu"
+          aria-expanded="false"
+          aria-controls="downloadMenu"
+        >
+          <span>{t("cta.get_app")}</span>
+          <i class="fa-slab fa-regular fa-angle-down" aria-hidden="true"></i>
+        </button>
+        <div
+          id="downloadMenu"
+          class="menu"
+          role="menu"
+          aria-label="Choose a platform"
+        >
+          <a
+            role="menuitem"
+            href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
+            {t("platform.apple")}
+          </a>
+          <a
+            role="menuitem"
+            href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+            {t("platform.google")}
+          </a>
+          <a
+            role="menuitem"
+            href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-amazon" aria-hidden="true"></i>
+            {t("platform.amazon")}
+          </a>
+          <a
+            role="menuitem"
+            href="https://apps.microsoft.com/detail/9n39b8hj3cdg"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-windows" aria-hidden="true"></i>
+            {t("platform.microsoft")}
+          </a>
+          <a
+            role="menuitem"
+            href="https://jasonholtdigital.itch.io/mythic-gme-digital"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+            {t("platform.itch")}
+          </a>
+        </div>
+      </span>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="mobile-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+      data-mobile-toggle
+    >
+      <span class="mobile-toggle-icons" aria-hidden="true">
+        <i
+          class="fa-slab fa-regular fa-bars mobile-toggle-icon mobile-toggle-icon--bars"
+        ></i>
+        <i
+          class="fa-slab fa-regular fa-xmark mobile-toggle-icon mobile-toggle-icon--x"
+        ></i>
+      </span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-overlay" data-mobile-overlay aria-hidden="true"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav
+    id="mobileNav"
+    class="nav nav--mobile"
+    aria-label="Mobile navigation"
+    data-mobile-nav
+  >
+    <div class="nav-mobile-content">
+      <header class="nav-mobile-header">
+        <strong>{t("nav.mobile.nav")}</strong>
+      </header>
+
+      <div class="nav-mobile-links">
+        <a href={l("/")}
+          ><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span
+            >{t("nav.home")}</span
+          ></a
+        >
+        <a href={l("apps")}
+          ><i class="fa-slab fa-regular fa-desktop" aria-hidden="true"></i><span
+            >{t("nav.apps")}</span
+          ></a
+        >
+        <a href={l("resources")}
+          ><i class="fa-slab fa-regular fa-book-open" aria-hidden="true"
+          ></i><span>{t("nav.resources")}</span></a
+        >
+        <a href={l("blog")}
+          ><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"
+          ></i><span>{t("nav.blog")}</span></a
+        >
+      </div>
+
+      <div class="nav-mobile-cta">
+        <div class="nav-mobile-section-title">{t("nav.mobile.download")}</div>
+        <div class="nav-mobile-downloads">
+          <a
+            href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
+            {t("platform.apple")}
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+            {t("platform.google")}
+          </a>
+          <a
+            href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-amazon" aria-hidden="true"></i>
+            {t("platform.amazon")}
+          </a>
+          <a
+            href="https://apps.microsoft.com/detail/9n39b8hj3cdg"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-windows" aria-hidden="true"></i>
+            {t("platform.microsoft")}
+          </a>
+          <a
+            href="https://jasonholtdigital.itch.io/mythic-gme-digital"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+            {t("platform.itch")}
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  // --- Sticky header ---
+  const header = document.querySelector<HTMLElement>('header.header-nav');
+  if (header) {
+    let ticking = false;
+    const onScroll = () => {
+      const scrolled = window.scrollY > 4;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          header.classList.toggle('is-scrolled', scrolled);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // --- Download dropdown ---
+  let lastInput: 'keyboard' | 'pointer' = 'pointer';
+  function markKeyboard() { lastInput = 'keyboard'; }
+  function markPointer() { lastInput = 'pointer'; }
+
+  function closeMenu(btn: HTMLButtonElement, menu: HTMLElement, restoreFocus: boolean) {
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) btn.focus();
+  }
+
+  function navigateItems(items: HTMLAnchorElement[], direction: 1 | -1) {
+    const active = document.activeElement as Element | null;
+    const i = active ? items.indexOf(active as HTMLAnchorElement) : -1;
+    const next = direction === 1
+      ? (items[(i + 1) % items.length] || items[0])
+      : (items[i - 1] || items[items.length - 1]);
+    next?.focus();
+  }
+
+  const dropdownBtn = document.querySelector<HTMLButtonElement>('.cta-download');
+  const dropdownMenu = document.getElementById('downloadMenu');
+  if (dropdownBtn && dropdownMenu) {
+    const menuItems = Array.from(dropdownMenu.querySelectorAll<HTMLAnchorElement>('a'));
+
+    document.addEventListener('pointerdown', markPointer, true);
+    dropdownBtn.addEventListener('click', (e) => {
+      if (e.detail === 0) markKeyboard();
+      e.preventDefault();
+      const isOpen = dropdownMenu.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen && lastInput === 'keyboard') menuItems[0]?.focus();
+      else if (!isOpen && lastInput === 'keyboard') dropdownBtn.focus();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { markKeyboard(); closeMenu(dropdownBtn, dropdownMenu, true); return; }
+      if (['Tab', 'Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) markKeyboard();
+    });
+    document.addEventListener('click', (e) => {
+      const t = e.target as Node | null;
+      if (t && !dropdownMenu.contains(t) && !dropdownBtn.contains(t)) closeMenu(dropdownBtn, dropdownMenu, false);
+    });
+    dropdownMenu.addEventListener('keydown', (e) => {
+      markKeyboard();
+      if (e.key === 'ArrowDown') { e.preventDefault(); navigateItems(menuItems, 1); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); navigateItems(menuItems, -1); }
+    });
+  }
+
+  // --- Mobile navigation ---
+  function getFocusableElements(container: HTMLElement): HTMLElement[] {
+    return Array.from(container.querySelectorAll<HTMLElement>(
+      'a, button, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+  }
+
+  function setAriaState(toggle: HTMLButtonElement, nav: HTMLElement, overlay: HTMLElement, open: boolean) {
+    toggle.setAttribute('aria-expanded', String(open));
+    nav.setAttribute('aria-hidden', String(!open));
+    overlay.setAttribute('aria-hidden', String(!open));
+  }
+
+  function setVisualState(nav: HTMLElement, overlay: HTMLElement, open: boolean) {
+    document.body.classList.toggle('mobile-nav-open', open);
+    nav.classList.toggle('nav--mobile-open', open);
+    overlay.classList.toggle('mobile-overlay--visible', open);
+  }
+
+  function trapFocus(e: KeyboardEvent, container: HTMLElement) {
+    if (e.key !== 'Tab') return;
+    const focusable = getFocusableElements(container);
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last?.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first?.focus(); }
+    }
+  }
+
+  const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');
+  const mobileNav = document.querySelector<HTMLElement>('[data-mobile-nav]');
+  const mobileOverlay = document.querySelector<HTMLElement>('[data-mobile-overlay]');
+  const mobileCloseBtn = document.querySelector<HTMLButtonElement>('[data-mobile-close]');
+
+  if (mobileToggle && mobileNav && mobileOverlay) {
+    let mobileIsOpen = false;
+    let mobileLastActive: HTMLElement | null = null;
+
+    const openMobile = () => {
+      mobileIsOpen = true;
+      mobileLastActive = document.activeElement as HTMLElement;
+      setAriaState(mobileToggle, mobileNav, mobileOverlay, true);
+      setVisualState(mobileNav, mobileOverlay, true);
+      getFocusableElements(mobileNav)[0]?.focus();
+    };
+    const closeMobile = () => {
+      mobileIsOpen = false;
+      setAriaState(mobileToggle, mobileNav, mobileOverlay, false);
+      setVisualState(mobileNav, mobileOverlay, false);
+      (mobileLastActive ?? mobileToggle).focus();
+    };
+
+    mobileToggle.addEventListener('click', (e) => { e.preventDefault(); mobileIsOpen ? closeMobile() : openMobile(); });
+    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', (e) => { e.preventDefault(); closeMobile(); });
+    mobileOverlay.addEventListener('click', closeMobile);
+
+    document.addEventListener('keydown', (e) => {
+      if (!mobileIsOpen) return;
+      if (e.key === 'Escape') { closeMobile(); return; }
+      trapFocus(e, mobileNav);
+    });
+
+    mobileNav.addEventListener('click', (e) => {
+      const t = e.target as HTMLElement;
+      if (t.tagName === 'A' && t.getAttribute('href')?.startsWith('/')) closeMobile();
+    });
+
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { if (mobileIsOpen && window.innerWidth > 900) closeMobile(); }, 150);
+    });
+  }
+</script>
+
+<style>
+  .desktop-lang-picker {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+</style>

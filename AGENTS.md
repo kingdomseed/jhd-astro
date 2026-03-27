@@ -5,14 +5,14 @@ This file is the canonical, detailed playbook for this repository. The previous 
 ## Scope & assumptions
 
 - This repository folder is `astro_project/`.
-- Site is a static Astro v5 site (no SSR, no Actions, no Content Layer, no islands) unless a PLAN explicitly introduces them.
+- Site is a static Astro 6 site (no SSR, no Actions, no islands) unless a PLAN explicitly introduces them.
 - Goal: small, safe, incremental changes that preserve semantics, a11y, and visual intent.
 
 ## Project Structure & Module Organization
 
 - `src/pages/`: Route files (`index.astro`, `about.astro`, etc.). Keep page filenames lowercase.
 - `src/components/`: Reusable UI in PascalCase (e.g., `Header.astro`, `Billboard.astro`).
-- `src/scripts/`: Small TypeScript utilities used by components.
+- `src/lib/`: Small TypeScript utilities used by components.
 - `src/assets/`: Processed assets for components (use `astro:assets`). Example: `import shot from '../assets/billboard/billboard-1.jpeg'` and render with `<Image src={shot} />`. Move author photos and other component images here (e.g., `src/assets/people/jason-school.jpg`).
 - `public/`: Truly static assets and global CSS (`/global.css`, favicons, robots.txt). Reference with root paths (e.g., `/global.css`). Avoid duplicating images that are imported via `astro:assets`.
 - `astro.config.mjs`: Minimal Astro config; prefer defaults.
@@ -162,7 +162,7 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 
 ## Security & Configuration Tips
 
-- Node: use active LTS (≥18; prefer 20). Keep `package-lock.json` committed.
+- Node: use active LTS (≥22). Keep `package-lock.json` committed.
 - Private registries/tokens are configured via `.npmrc`. Do not commit secrets elsewhere.
 - This site is static; avoid SSR/external data unless explicitly planned and approved.
 

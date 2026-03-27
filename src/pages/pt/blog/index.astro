@@ -1,12 +1,8 @@
 ---
-import Header from "../../../components/Header.astro";
-import Footer from "../../../components/Footer.astro";
-import HeadFonts from "../../../components/HeadFonts.astro";
-import PageHeader from "../../../components/PageHeader.astro";
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/layout/PageHeader.astro';
 import { getCollection, type CollectionEntry } from "astro:content";
-import { formatDate } from "../../../scripts/format-date";
-import defaultOg from "../../../assets/logo/logo.jpg?url";
-
+import { formatDate } from "../../../lib/format-date";
 type BlogEntry = CollectionEntry<"blog">;
 
 // Load all entries and sort newest-first by typed Date from schema
@@ -20,12 +16,6 @@ const posts = (
         (a: BlogEntry, b: BlogEntry) =>
             b.data.date.getTime() - a.data.date.getTime(),
     );
-
-// Absolute OG image URL for the blog index
-const ogImageUrl = new URL(
-    defaultOg,
-    Astro.site ?? "https://jasonholtdigital.com",
-).toString();
 
 const featuredEntry: BlogEntry | undefined = posts[0];
 const moreEntries: BlogEntry[] = posts.slice(1);
@@ -86,49 +76,31 @@ const categories = uniqueCategories.map((category: CategoryName) => {
 });
 ---
 
-<html lang="pt">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <HeadFonts />
-        <title>Blog — Notas de Lançamento e Bastidores</title>
-        <meta
-            name="description"
-            content="Notas de lançamento, aprofundamentos em design e histórias da comunidade da equipe Mythic Apps."
-        />
-        <link rel="stylesheet" href="/global.css" />
-        <script
-            is:inline
-            src="https://kit.fontawesome.com/9f0db3cdf4.js"
-            crossorigin="anonymous"></script>
-        <link rel="canonical" href="https://jasonholtdigital.com/pt/blog/" />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
-        <link
-            rel="alternate"
-            type="application/rss+xml"
-            href="/rss.xml"
-            title="Mythic Blog"
-        />
-    </head>
-    <body>
-        <a class="skip" href="#main">Pular para o conteúdo principal</a>
-        <div id="bg-atmo" aria-hidden="true"></div>
-        <div id="site">
-            <Header />
+<BaseLayout
+  title="Blog — Notas de Lançamento e Bastidores"
+  description="Notas de lançamento, aprofundamentos em design e histórias da comunidade da equipe Mythic Apps."
+  canonicalPath="/pt/blog/"
+  lang="pt"
+  mainClass="blog-main"
+>
+  <Fragment slot="head">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Mythic Blog"
+    />
+  </Fragment>
 
-            <PageHeader
-                title="Notas de Lançamento e Bastidores"
-                subtitle="Atualizações, insights e os bastidores dos apps"
-                description="Notas de lançamento em linguagem simples primeiro. Aprofundamentos ocasionais em design, desenvolvimento e os jogadores moldando o Mythic."
-                accent="Blog"
-                layout="left"
-                icon="fa-solid fa-newspaper"
-                colorScheme="secondary"
-            />
-
-            <main id="main" class="blog-main">
+  <PageHeader
+    title="Notas de Lançamento e Bastidores"
+    subtitle="Atualizações, insights e os bastidores dos apps"
+    description="Notas de lançamento em linguagem simples primeiro. Aprofundamentos ocasionais em design, desenvolvimento e os jogadores moldando o Mythic."
+    accent="Blog"
+    layout="left"
+    icon="fa-solid fa-newspaper"
+    colorScheme="secondary"
+  />
                 {
                     featuredEntry ? (
                         <section
@@ -158,7 +130,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             class="blog-feature__title"
                                         >
                                             <a
-                                                href={`/pt/blog/${featuredEntry.slug}/`}
+                                                href={`/pt/blog/${featuredEntry.id}/`}
                                             >
                                                 {featuredEntry.data.title}
                                             </a>
@@ -200,7 +172,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                         <p class="blog-feature__cta">
                                             <a
                                                 class="blog-feature__link"
-                                                href={`/pt/blog/${featuredEntry.slug}/`}
+                                                href={`/pt/blog/${featuredEntry.id}/`}
                                             >
                                                 Ler post
                                                 <i
@@ -309,7 +281,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             </header>
                                             <h3 class="blog-card__title">
                                                 <a
-                                                    href={`/pt/blog/${entry.slug}/`}
+                                                    href={`/pt/blog/${entry.id}/`}
                                                 >
                                                     {entry.data.title}
                                                 </a>
@@ -337,7 +309,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                                 )}
                                                 <a
                                                     class="blog-card__link"
-                                                    href={`/pt/blog/${entry.slug}/`}
+                                                    href={`/pt/blog/${entry.id}/`}
                                                 >
                                                     Ler post
                                                     <i
@@ -465,7 +437,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                 </a>
                                 <a class="btn btn--tertiary" href="/rss.xml">
                                     <i
-                                        class="fa-slab fa-regular fa-rss"
+                                        class="fa-solid fa-rss"
                                         aria-hidden="true"></i>
                                     Assinar via RSS
                                 </a>
@@ -473,11 +445,9 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                         </div>
                     </div>
                 </section>
-            </main>
-            <Footer />
-        </div>
+</BaseLayout>
 
-        <script type="module" is:inline>
+<script type="module" is:inline>
             // Client-side category filtering
             const filters = document.querySelector("[data-blog-filters]");
             const postsContainer = document.querySelector("[data-blog-posts]");
@@ -546,8 +516,6 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                 }
             }
         </script>
-    </body>
-</html>
 
 <style>
     .blog-filters {

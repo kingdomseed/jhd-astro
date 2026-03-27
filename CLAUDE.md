@@ -7,7 +7,7 @@ Important: `AGENTS.md` is the canonical repository playbook. This file tailors t
 ## Commands
 
 **Development:**
-- `npm install` - Install dependencies (Node.js >=20 <21 required)
+- `npm install` - Install dependencies (Node.js >=22 <23 required)
 - `npm run dev` - Start development server (runs `astro dev`)
 - `npm run build` - Build static site to `dist/`
 - `npm run preview` - Preview the built site
@@ -19,7 +19,7 @@ Important: `AGENTS.md` is the canonical repository playbook. This file tailors t
 
 ## Architecture
 
-This is a **static Astro v5 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
+This is a **static Astro 6 site** with no SSR, no server actions, and no complex data fetching. Key architectural principles:
 
 **🏆 GOLD STANDARD:** The homepage (`src/pages/index.astro`) represents our gold standard for design quality, voice, user experience, and component implementation. Reference it for:
 - Component composition and structure
@@ -33,10 +33,10 @@ All other pages should match or aspire to this level of polish.
 
 ### Core Structure
 - **Component-driven:** Pages compose small, single-purpose components from `src/components/`
-- **Content collections:** Blog and Resources pull from `src/content/` with schemas defined in `src/content/config.ts`
+- **Content collections:** Blog and Resources pull from `src/content/` with schemas defined in `src/content.config.ts`
 - **Static assets:** Served from `public/` (referenced as `/filename.ext`)
 - **Layered CSS:** `public/global.css` imports layer files: tokens → base → utilities → components → overrides
-- **Minimal JS:** TypeScript modules in `src/scripts/` for interactions, hoisted in Astro components
+- **Minimal JS:** TypeScript modules in `src/lib/` for interactions, hoisted in Astro components
 
 ### CSS Layer Architecture
 ```css
@@ -52,9 +52,9 @@ All other pages should match or aspire to this level of polish.
 
 - **`src/pages/index.astro`**: Gold standard page assembly and global head tags
 - **`src/components/Header.astro`**: Navigation with accessible dropdown menu
-- **`src/scripts/header-dropdown.ts`**: TypeScript module for dropdown behavior
+- **`src/lib/carousel.ts`**: Shared carousel logic (index tracking, auto-advance, a11y)
 - **`public/global.css`**: CSS entrypoint with layer imports
-- **`src/content/config.ts`**: Content collection schemas with validation
+- **`src/content.config.ts`**: Content collection schemas with validation
 - **`astro.config.mjs`**: Minimal config with Cloudflare adapter
 
 ## Editing Guidelines
@@ -67,7 +67,7 @@ All other pages should match or aspire to this level of polish.
 
 **Client-side TypeScript conventions:**
 - Use hoisted script modules in `.astro` components
-- Import from `src/scripts/` for reusable behaviors
+- Import from `src/lib/` for reusable behaviors
 - Use data attributes for selectors (`data-dropdown`, `data-menu`)
 - Guard against nulls and support multiple instances
 - Add proper TypeScript types
@@ -90,8 +90,8 @@ All other pages should match or aspire to this level of polish.
 
 **Required checks:**
 1. Run `npx astro check && npm run build` (no errors/warnings)
-   Note: `src/worker.ts:2` has a pre-existing `Cannot find name 'Fetcher'` error — this is a known issue, not a regression.
-2. Manual QA per AGENTS.md checklist:
+2. Run `npm test` (all tests pass)
+3. Manual QA per AGENTS.md checklist:
    - Header dropdown functionality
    - Image paths resolve without 404s
    - No console errors
@@ -149,8 +149,8 @@ All other pages should match or aspire to this level of polish.
 - **Production**: Cloudflare (uses Cloudflare adapter in `astro.config.mjs`)
 - **Preview**: Netlify (configured in `netlify.toml`)
 - Build output: Static files to `dist/`
-- Node version: 20 (strict requirement)
-- Environment: Production builds with Sentry monitoring
+- Node version: 22 (strict requirement)
+- Environment: Production builds via Cloudflare
 
 ## Voice & Copy Guidelines
 

@@ -1,0 +1,113 @@
+---
+// Reviews rotator: small self-contained strip that cycles player quotes.
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="strip" aria-label={t("reviews.badge")}>
+  <div class="container">
+    <header class="strip-head" aria-hidden="true">
+      <span class="accent-line" aria-hidden="true"></span>
+      <span class="badge-text">{t("reviews.badge")}</span>
+    </header>
+    <h2 id="reviews-title" class="section-title" style="margin-bottom: 6px">
+      {t("reviews.title")}
+    </h2>
+    <figure class="reviews-rotator" aria-label={t("reviews.badge")}>
+      <div class="rev-stage">
+        <p id="quote" aria-live="polite">{t("reviews.loading")}</p>
+      </div>
+      <p id="rev-status" class="sr-only" aria-live="polite">Quote 1 of 1</p>
+    </figure>
+
+    <script>
+      import { createCarousel } from '../../lib/carousel';
+      import quotesData from '../../data/reviews.json';
+
+      type Quote = { text: string; src: string; href: string; icon: string };
+
+      function shuffle<T>(arr: T[]): T[] {
+        for (let k = arr.length - 1; k > 0; k--) {
+          const j = Math.floor(Math.random() * (k + 1));
+          [arr[k], arr[j]] = [arr[j], arr[k]];
+        }
+        return arr;
+      }
+
+      function renderQuote(q: Quote, target: HTMLParagraphElement) {
+        target.textContent = '';
+        const icon = document.createElement('i');
+        icon.className = `fa-brands ${q.icon}`;
+        icon.setAttribute('aria-hidden', 'true');
+        target.appendChild(icon);
+        target.appendChild(document.createTextNode(' \u201c'));
+        const link = document.createElement('a');
+        link.href = q.href;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.style.color = 'inherit';
+        link.style.textDecoration = 'underline dotted';
+        link.textContent = q.text;
+        target.appendChild(link);
+        target.appendChild(document.createTextNode('\u201d \u2014 '));
+        const src = document.createElement('span');
+        src.style.opacity = '.8';
+        src.textContent = q.src;
+        target.appendChild(src);
+      }
+
+      const container = document.querySelector<HTMLElement>('.reviews-rotator');
+      if (container) {
+        const stage = container.querySelector<HTMLElement>('.rev-stage');
+        const statusEl = document.getElementById('rev-status');
+        if (stage) {
+          const existingQuote = stage.querySelector<HTMLParagraphElement>('#quote');
+          const qA = existingQuote ?? (() => {
+            const el = document.createElement('p');
+            el.id = 'quote';
+            stage.appendChild(el);
+            return el;
+          })();
+          qA.classList.add('rev-quote');
+          const qB = document.createElement('p');
+          qB.className = 'rev-quote';
+          stage.appendChild(qB);
+
+          const MAX_QUOTES = 20;
+          const quotes: Quote[] = shuffle([...(quotesData as Quote[])]).slice(
+            0, Math.min(MAX_QUOTES, (quotesData as Quote[]).length),
+          );
+
+          if (quotes.length) {
+            function crossFade(toIndex: number) {
+              const active = qA.classList.contains('is-active') ? qA : qB;
+              const other = active === qA ? qB : qA;
+              renderQuote(quotes[toIndex], other);
+              requestAnimationFrame(() => {
+                active.classList.remove('is-active');
+                other.classList.add('is-active');
+              });
+            }
+
+            const startIdx = Math.floor(Math.random() * quotes.length);
+            renderQuote(quotes[startIdx], qA);
+            qA.classList.add('is-active');
+
+            createCarousel({
+              itemCount: quotes.length,
+              onActivate: (index) => {
+                crossFade(index);
+                if (statusEl) statusEl.textContent = `Quote ${index + 1} of ${quotes.length}`;
+              },
+              intervalMs: 8000,
+              pauseTargets: [container],
+              startIndex: startIdx,
+            });
+          }
+        }
+      }
+    </script>
+  </div>
+</section>

@@ -7,6 +7,7 @@
 
 # Environment files
 .env
+.env.*
 .env.local
 .env.*.local
 
@@ -27,4 +28,8 @@ amplify_outputs*
 amplifyconfiguration*
 
 /docs/slab-regular
-.env.sentry-build-plugin
+
+# Tool-generated runtime state
+.superpowers/
+.desloppify/
+.wrangler/
