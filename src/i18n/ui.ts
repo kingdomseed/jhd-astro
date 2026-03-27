@@ -100,7 +100,6 @@ export const ui = {
         'footer.contact': 'Contato',
         'footer.about': 'Sobre',
         'footer.top': 'Topo',
-        'hero.title': 'Aplicativos Oficiais Mythic GME 2e',
         'footer.brand_subtitle': 'Aplicativos Oficiais Mythic GME 2e',
         'hero.eyebrow': 'Aplicativos Oficiais Mythic GME 2e',
         'hero.headline': 'Seu RPG Sem Mestre ao Seu Alcance',

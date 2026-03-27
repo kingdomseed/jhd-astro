@@ -2,7 +2,7 @@
 // Each consumer configures behavior via CarouselConfig; the returned handle
 // exposes imperative controls for consumer-specific features (swipe, crossfade, lightbox).
 
-export interface CarouselConfig {
+interface CarouselConfig {
   /** Total number of items in the carousel */
   itemCount: number;
   /** Called when active index changes — consumer updates DOM here */
