@@ -92,6 +92,8 @@ const t = useTranslations(lang);
             }
 
             const startIdx = Math.floor(Math.random() * quotes.length);
+            renderQuote(quotes[startIdx], qA);
+            qA.classList.add('is-active');
 
             createCarousel({
               itemCount: quotes.length,
