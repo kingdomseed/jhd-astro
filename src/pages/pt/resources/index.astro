@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getResourcesByLang } from '../../../lib/collections';
+import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../../../lib/format-date"; // Consistent date rendering for "Updated" chips
-const entries = await getCollection("resources", ({ data }) => {
-    return data.lang === "pt";
-});
+const entries = await getResourcesByLang('pt');
 type ResourceEntry = CollectionEntry<"resources">;
 
 const categoryLabels = {

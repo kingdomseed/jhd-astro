@@ -1,21 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHeader from '../../../components/layout/PageHeader.astro';
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getBlogPostsByLang } from '../../../lib/collections';
 import { formatDate } from "../../../lib/format-date";
+import type { CollectionEntry } from "astro:content";
 type BlogEntry = CollectionEntry<"blog">;
 
-// Load all entries and sort newest-first by typed Date from schema
-const posts = (
-    await getCollection("blog", ({ data }) => {
-        return data.lang === "pt";
-    })
-)
-    .slice()
-    .sort(
-        (a: BlogEntry, b: BlogEntry) =>
-            b.data.date.getTime() - a.data.date.getTime(),
-    );
+// Load all entries and sort newest-first via shared helper
+const posts = await getBlogPostsByLang('pt');
 
 const featuredEntry: BlogEntry | undefined = posts[0];
 const moreEntries: BlogEntry[] = posts.slice(1);
