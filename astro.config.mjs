@@ -7,7 +7,9 @@ export default defineConfig({
   site: 'https://jasonholtdigital.com',
 
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/demo'),
+    }),
     oramaSearch({
       resources: {
         pathMatcher: /^\/resources\/.+/,

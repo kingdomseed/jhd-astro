@@ -1,0 +1,127 @@
+---
+// Standalone page for the embedded Flutter web demo.
+// No BaseLayout — Flutter manages its own viewport, scrolling, and navigation.
+// Flutter build output is served from /demo/ (public/demo/).
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Try Mythic GME Mobile — Web Demo | Jason Holt Digital</title>
+    <meta name="description" content="Play the official Mythic GME Mobile web demo. Explore Fate Chart, meaning tables, scenes, and adventure lists right in your browser." />
+    <meta property="og:title" content="Try Mythic GME Mobile — Web Demo" />
+    <meta property="og:description" content="Play the official Mythic GME Mobile demo in your browser. Fate Chart, meaning tables, scenes, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jasonholtdigital.com/demo/" />
+    <meta property="og:site_name" content="Jason Holt Digital" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        height: 100%;
+        overflow: hidden;
+        background: #1e1a28;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .demo-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background: #1e1a28;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.85rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        flex-shrink: 0;
+        z-index: 10;
+      }
+      .demo-bar a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.12s ease;
+      }
+      .demo-bar a:hover { color: #fff; }
+      .demo-bar__title {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .demo-bar__links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      #flutter-host {
+        flex: 1;
+        width: 100%;
+        overflow: hidden;
+      }
+      .demo-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+      .demo-loading__spinner {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-top-color: rgba(255, 255, 255, 0.8);
+        animation: spin 0.9s linear infinite;
+        margin-right: 0.5rem;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @media (max-width: 480px) {
+        .demo-bar { padding: 0.4rem 0.75rem; font-size: 0.8rem; }
+        .demo-bar__links { gap: 0.6rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-bar">
+      <span class="demo-bar__title">Mythic GME Mobile — Web Demo</span>
+      <div class="demo-bar__links">
+        <a href="/apps">Get the App</a>
+        <a href="/">&larr; Back to site</a>
+      </div>
+    </div>
+    <div id="flutter-host">
+      <div class="demo-loading">
+        <span class="demo-loading__spinner"></span>
+        Loading demo...
+      </div>
+    </div>
+
+    <script is:inline src="/demo/flutter_bootstrap.js"></script>
+    <script is:inline>
+      // Initialize Flutter in embedded mode (multi-view).
+      // The IS_EMBEDDED dart-define in the Flutter build enables runWidget + MultiViewApp.
+      (function() {
+        if (!window._flutter) {
+          document.querySelector('.demo-loading').textContent =
+            'Demo not available — Flutter build output missing from /demo/.';
+          return;
+        }
+        window._flutter.loader.load({
+          serviceWorkerSettings: { serviceWorkerVersion: null },
+          onEntrypointLoaded: async function(engineInitializer) {
+            var engine = await engineInitializer.initializeEngine({
+              multiViewEnabled: true,
+              assetBase: '/demo/',
+            });
+            var app = await engine.runApp();
+            app.addView({
+              hostElement: document.getElementById('flutter-host'),
+            });
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

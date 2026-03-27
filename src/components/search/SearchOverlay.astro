@@ -47,8 +47,12 @@
     if (e.target === dialog) closeSearch();
   });
 
-  // Global keyboard shortcuts
+  // Resources page has its own inline Orama search — skip the overlay there
+  const isResourcesPage = location.pathname === '/resources' || location.pathname === '/resources/';
+
+  // Global keyboard shortcuts (disabled on /resources — that page has its own search)
   document.addEventListener('keydown', (e) => {
+    if (isResourcesPage) return;
     // Cmd/Ctrl+K
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
