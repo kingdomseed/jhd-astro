@@ -90,8 +90,8 @@ All other pages should match or aspire to this level of polish.
 
 **Required checks:**
 1. Run `npx astro check && npm run build` (no errors/warnings)
-   Note: `src/worker.ts:2` has a pre-existing `Cannot find name 'Fetcher'` error — this is a known issue, not a regression.
-2. Manual QA per AGENTS.md checklist:
+2. Run `npm test` (all tests pass)
+3. Manual QA per AGENTS.md checklist:
    - Header dropdown functionality
    - Image paths resolve without 404s
    - No console errors

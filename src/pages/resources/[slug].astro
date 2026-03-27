@@ -120,6 +120,7 @@ const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigi
   title={`${resource.title} — Mythic Resources`}
   description={resource.summary}
   canonicalPath={canonicalPath}
+  noAlternate
   ogImage={ogImageUrl}
   mainClass="resource-detail-main"
 >

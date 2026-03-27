@@ -68,6 +68,7 @@ const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigi
   title={`${post.title} — Mythic Blog`}
   description={post.summary}
   canonicalPath={canonicalPath}
+  noAlternate
   ogTitle={post.title}
   ogDescription={post.summary}
   ogType="article"
