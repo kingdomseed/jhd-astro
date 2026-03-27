@@ -1,12 +1,12 @@
 ---
-// App section component with alternating layout support
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 interface Props {
   title: string;
   whoItsFor: string;
   features: string[];
-  officialContent: string | string[];
+  officialContent: string[];
   iapInfo?: string;
   disclaimer?: string;
   storeLinks: Array<{
@@ -18,7 +18,7 @@ interface Props {
   reverse?: boolean;
   imageSrc?: string;
   imageAlt?: string;
-  images?: any[]; // optional array of astro:assets images (e.g., mobile device shots)
+  images?: ImageMetadata[];
 }
 
 const {
@@ -80,24 +80,17 @@ const getStoreShadowClass = (storeName: string) => {
             </div>
             
             <div class="detail-block">
-              {Array.isArray(officialContent) ? (
-                <div class="feature-card">
-                  <h3>Official content</h3>
-                  <ul class="feature-list">
-                    {officialContent.map(item => (
-                      <li class="feature-item">
-                        <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                <div class="feature-card">
-                  <h3>Official content</h3>
-                  <p>{officialContent}</p>
-                </div>
-              )}
+              <div class="feature-card">
+                <h3>Official content</h3>
+                <ul class="feature-list">
+                  {officialContent.map(item => (
+                    <li class="feature-item">
+                      <i class="fa-slab fa-regular fa-check feature-check" aria-hidden="true"></i>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               {iapInfo && (
                 <div class="iap-notice collapsed" onclick="this.classList.toggle('collapsed')">
                   <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
