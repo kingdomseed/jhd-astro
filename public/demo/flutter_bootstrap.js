@@ -38,6 +38,18 @@ _flutter.buildConfig = {"engineRevision":"425cfb54d01a9472b3e81d9e76fd63a4a44cfb
 
 _flutter.loader.load({
   config: {
-    canvasKitBaseUrl: 'canvaskit',
+    canvasKitBaseUrl: '/demo/canvaskit',
+    entryPointBaseUrl: '/demo/',
   },
+  onEntrypointLoaded: async function(engineInitializer) {
+    var engine = await engineInitializer.initializeEngine({
+      multiViewEnabled: true,
+      assetBase: '/demo/',
+    });
+    var app = await engine.runApp();
+    var host = document.getElementById('flutter-host');
+    if (host) {
+      app.addView({ hostElement: host });
+    }
+  }
 });

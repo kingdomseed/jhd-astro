@@ -99,29 +99,5 @@
     </div>
 
     <script is:inline src="/demo/flutter_bootstrap.js"></script>
-    <script is:inline>
-      // Initialize Flutter in embedded mode (multi-view).
-      // The IS_EMBEDDED dart-define in the Flutter build enables runWidget + MultiViewApp.
-      (function() {
-        if (!window._flutter) {
-          document.querySelector('.demo-loading').textContent =
-            'Demo not available — Flutter build output missing from /demo/.';
-          return;
-        }
-        window._flutter.loader.load({
-          serviceWorkerSettings: { serviceWorkerVersion: null },
-          onEntrypointLoaded: async function(engineInitializer) {
-            var engine = await engineInitializer.initializeEngine({
-              multiViewEnabled: true,
-              assetBase: '/demo/',
-            });
-            var app = await engine.runApp();
-            app.addView({
-              hostElement: document.getElementById('flutter-host'),
-            });
-          }
-        });
-      })();
-    </script>
   </body>
 </html>
