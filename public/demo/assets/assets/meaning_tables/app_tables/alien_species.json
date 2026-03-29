@@ -1,0 +1,1530 @@
+{
+  "id": "alien_species",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creatures-beasts",
+  "defaultLanguage": "en",
+  "displayName": "Alien Species",
+  "displayNameTranslations": {
+    "pt": "Espécies Alienígenas",
+    "en": "Alien Species"
+  },
+  "description": "Table for generating descriptive traits of alien species",
+  "descriptionTranslations": {
+    "en": "Table for generating descriptive traits of alien species"
+  },
+  "isPremium": false,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic GME 2e core rulebook",
+  "tags": [
+    "general"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Advanced",
+      "resultTranslations": {
+        "pt": "Avançada",
+        "en": "Advanced"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Aggressive",
+      "resultTranslations": {
+        "pt": "Agressiva",
+        "en": "Aggressive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Agile",
+      "resultTranslations": {
+        "pt": "Ágil",
+        "en": "Agile"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Amphibious",
+      "resultTranslations": {
+        "pt": "Anfíbia",
+        "en": "Amphibious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Ancient",
+      "resultTranslations": {
+        "pt": "Ancestral",
+        "en": "Ancient"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Anxious",
+      "resultTranslations": {
+        "pt": "Ansiosa",
+        "en": "Anxious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Aquatic",
+      "resultTranslations": {
+        "pt": "Aquática",
+        "en": "Aquatic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Arrogant",
+      "resultTranslations": {
+        "pt": "Arrogante",
+        "en": "Arrogant"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Artistic",
+      "resultTranslations": {
+        "pt": "Artística",
+        "en": "Artistic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Avian",
+      "resultTranslations": {
+        "pt": "Aviana",
+        "en": "Avian"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Beautiful",
+      "resultTranslations": {
+        "pt": "Bela",
+        "en": "Beautiful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Bizarre",
+      "resultTranslations": {
+        "pt": "Bizarra",
+        "en": "Bizarre"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Carapace",
+      "resultTranslations": {
+        "pt": "Carapaça",
+        "en": "Carapace"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Clawed",
+      "resultTranslations": {
+        "pt": "Garras",
+        "en": "Clawed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Colorful",
+      "resultTranslations": {
+        "pt": "Colorida",
+        "en": "Colorful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Combative",
+      "resultTranslations": {
+        "pt": "Combativa",
+        "en": "Combative"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Conquering",
+      "resultTranslations": {
+        "pt": "Conquistadora",
+        "en": "Conquering"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Dangerous",
+      "resultTranslations": {
+        "pt": "Perigosa",
+        "en": "Dangerous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Declining",
+      "resultTranslations": {
+        "pt": "Decadente",
+        "en": "Declining"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Defensive",
+      "resultTranslations": {
+        "pt": "Defensiva",
+        "en": "Defensive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Desperate",
+      "resultTranslations": {
+        "pt": "Desesperada",
+        "en": "Desperate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Destructive",
+      "resultTranslations": {
+        "pt": "Destrutiva",
+        "en": "Destructive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Dominating",
+      "resultTranslations": {
+        "pt": "Dominadora",
+        "en": "Dominating"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Emotionless",
+      "resultTranslations": {
+        "pt": "Sem Emoção",
+        "en": "Emotionless"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Enormous",
+      "resultTranslations": {
+        "pt": "Enorme",
+        "en": "Enormous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Exploitive",
+      "resultTranslations": {
+        "pt": "Parasita",
+        "en": "Exploitive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Explorers",
+      "resultTranslations": {
+        "pt": "Exploradora",
+        "en": "Explorers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Familiar",
+      "resultTranslations": {
+        "pt": "Familiar",
+        "en": "Familiar"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Fast",
+      "resultTranslations": {
+        "pt": "Rápida",
+        "en": "Fast"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Feeble",
+      "resultTranslations": {
+        "pt": "Débil",
+        "en": "Feeble"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Feral",
+      "resultTranslations": {
+        "pt": "Feral",
+        "en": "Feral"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Ferocious",
+      "resultTranslations": {
+        "pt": "Feroz",
+        "en": "Ferocious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Friendly",
+      "resultTranslations": {
+        "pt": "Amigável",
+        "en": "Friendly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Frightening",
+      "resultTranslations": {
+        "pt": "Amedrontadora",
+        "en": "Frightening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Fungal",
+      "resultTranslations": {
+        "pt": "Fúngica",
+        "en": "Fungal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Furry",
+      "resultTranslations": {
+        "pt": "Peluda",
+        "en": "Furry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Generous",
+      "resultTranslations": {
+        "pt": "Generosa",
+        "en": "Generous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Gentle",
+      "resultTranslations": {
+        "pt": "Gentil",
+        "en": "Gentle"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Glowing",
+      "resultTranslations": {
+        "pt": "Cintilante",
+        "en": "Glowing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Graceful",
+      "resultTranslations": {
+        "pt": "Graciosa",
+        "en": "Graceful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Harsh",
+      "resultTranslations": {
+        "pt": "Brusca",
+        "en": "Harsh"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Helpful",
+      "resultTranslations": {
+        "pt": "Prestativa",
+        "en": "Helpful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Humanoid",
+      "resultTranslations": {
+        "pt": "Humanoide",
+        "en": "Humanoid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Hungry",
+      "resultTranslations": {
+        "pt": "Faminta",
+        "en": "Hungry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Immortal",
+      "resultTranslations": {
+        "pt": "Imortal",
+        "en": "Immortal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Insectlike",
+      "resultTranslations": {
+        "pt": "Insetoide",
+        "en": "Insectlike"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Insubstantial",
+      "resultTranslations": {
+        "pt": "Insubstancial",
+        "en": "Insubstantial"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Intelligent",
+      "resultTranslations": {
+        "pt": "Inteligente",
+        "en": "Intelligent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Intimidating",
+      "resultTranslations": {
+        "pt": "Intimidadora",
+        "en": "Intimidating"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Large",
+      "resultTranslations": {
+        "pt": "Grande",
+        "en": "Large"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Lethal",
+      "resultTranslations": {
+        "pt": "Letal",
+        "en": "Lethal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Levitating",
+      "resultTranslations": {
+        "pt": "Levitante",
+        "en": "Levitating"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Liquid",
+      "resultTranslations": {
+        "pt": "Líquido",
+        "en": "Liquid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Mammalian",
+      "resultTranslations": {
+        "pt": "Mamífera",
+        "en": "Mammalian"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Many-eyed",
+      "resultTranslations": {
+        "pt": "Multiocular",
+        "en": "Many-eyed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Militaristic",
+      "resultTranslations": {
+        "pt": "Militarista",
+        "en": "Militaristic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Mysterious",
+      "resultTranslations": {
+        "pt": "Misteriosa",
+        "en": "Mysterious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Nightmarish",
+      "resultTranslations": {
+        "pt": "Pesadélica",
+        "en": "Nightmarish"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Odd",
+      "resultTranslations": {
+        "pt": "Esquisita",
+        "en": "Odd"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Oppressive",
+      "resultTranslations": {
+        "pt": "Opressora",
+        "en": "Oppressive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Passive",
+      "resultTranslations": {
+        "pt": "Passiva",
+        "en": "Passive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Peaceful",
+      "resultTranslations": {
+        "pt": "Pacífica",
+        "en": "Peaceful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Perfect",
+      "resultTranslations": {
+        "pt": "Perfeita",
+        "en": "Perfect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Plant",
+      "resultTranslations": {
+        "pt": "Planta",
+        "en": "Plant"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Powered",
+      "resultTranslations": {
+        "pt": "Energizada",
+        "en": "Powered"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Powerful",
+      "resultTranslations": {
+        "pt": "Poderosa",
+        "en": "Powerful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Powers",
+      "resultTranslations": {
+        "pt": "Poderes",
+        "en": "Powers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Primitive",
+      "resultTranslations": {
+        "pt": "Primitiva",
+        "en": "Primitive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Prosperous",
+      "resultTranslations": {
+        "pt": "Próspera",
+        "en": "Prosperous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Psychic",
+      "resultTranslations": {
+        "pt": "Psíquica",
+        "en": "Psychic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Reptilian",
+      "resultTranslations": {
+        "pt": "Reptiliana",
+        "en": "Reptilian"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Robotic",
+      "resultTranslations": {
+        "pt": "Robótica",
+        "en": "Robotic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Scary",
+      "resultTranslations": {
+        "pt": "Assustadora",
+        "en": "Scary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Scientific",
+      "resultTranslations": {
+        "pt": "Científica",
+        "en": "Scientific"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Secretive",
+      "resultTranslations": {
+        "pt": "Discreta",
+        "en": "Secretive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Servitor",
+      "resultTranslations": {
+        "pt": "Servidora",
+        "en": "Servitor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Simple",
+      "resultTranslations": {
+        "pt": "Simples",
+        "en": "Simple"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Skilled",
+      "resultTranslations": {
+        "pt": "Habilidosa",
+        "en": "Skilled"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Slender",
+      "resultTranslations": {
+        "pt": "Esguia",
+        "en": "Slender"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Slow",
+      "resultTranslations": {
+        "pt": "Lenta",
+        "en": "Slow"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Small",
+      "resultTranslations": {
+        "pt": "Pequena",
+        "en": "Small"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Smelly",
+      "resultTranslations": {
+        "pt": "Fedorenta",
+        "en": "Smelly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranha",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Strong",
+      "resultTranslations": {
+        "pt": "Forte",
+        "en": "Strong"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Suffering",
+      "resultTranslations": {
+        "pt": "Sofrimento",
+        "en": "Suffering"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Tail",
+      "resultTranslations": {
+        "pt": "Cauda",
+        "en": "Tail"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Tall",
+      "resultTranslations": {
+        "pt": "Alta",
+        "en": "Tall"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Technological",
+      "resultTranslations": {
+        "pt": "Tecnológica",
+        "en": "Technological"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Tentacled",
+      "resultTranslations": {
+        "pt": "Tentacular",
+        "en": "Tentacled"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Threatening",
+      "resultTranslations": {
+        "pt": "Ameaçadora",
+        "en": "Threatening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Toothy",
+      "resultTranslations": {
+        "pt": "Dentes",
+        "en": "Toothy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Travelers",
+      "resultTranslations": {
+        "pt": "Viajantes",
+        "en": "Travelers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Treacherous",
+      "resultTranslations": {
+        "pt": "Traiçoeira",
+        "en": "Treacherous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Violent",
+      "resultTranslations": {
+        "pt": "Violenta",
+        "en": "Violent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Warlike",
+      "resultTranslations": {
+        "pt": "Bélica",
+        "en": "Warlike"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Wary",
+      "resultTranslations": {
+        "pt": "Atenta",
+        "en": "Wary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Watery",
+      "resultTranslations": {
+        "pt": "Aquosa",
+        "en": "Watery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Weak",
+      "resultTranslations": {
+        "pt": "Fraca",
+        "en": "Weak"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Wings",
+      "resultTranslations": {
+        "pt": "Asas",
+        "en": "Wings"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Wormish",
+      "resultTranslations": {
+        "pt": "Vermiforme",
+        "en": "Wormish"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

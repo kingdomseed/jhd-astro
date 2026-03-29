@@ -1,0 +1,136 @@
+{
+  "id": "threats_tension_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Threats & Tension Focus",
+  "displayNameTranslations": {
+    "en": "Threats & Tension Focus"
+  },
+  "description": "Determines the top-level threat or tension affecting a fantasy world. Part of the Fantasy World Crafter system.",
+  "descriptionTranslations": {
+    "en": "Determines the top-level threat or tension affecting a fantasy world. Part of the Fantasy World Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "threats",
+    "tension",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        25
+      ],
+      "result": "War: The world is either currently embroiled in, or on the verge of, war",
+      "resultTranslations": {
+        "en": "War: The world is either currently embroiled in, or on the verge of, war"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        40
+      ],
+      "result": "Menace: A singular being is menacing this world. For instance, a dragon that terrorizes the land, or a demon lord who dispatches imps to harass people",
+      "resultTranslations": {
+        "en": "Menace: A singular being is menacing this world. For instance, a dragon that terrorizes the land, or a demon lord who dispatches imps to harass people"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        65
+      ],
+      "result": "The Dark Lord: A singular and powerful being bent on overthrowing and dominating this setting, often through war",
+      "resultTranslations": {
+        "en": "The Dark Lord: A singular and powerful being bent on overthrowing and dominating this setting, often through war"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "The Hunt Is On: Something powerful and important must be found to save the land. For instance, a divine cup that will heal blighted fields, or a magical artifact that is precious to the dominant religion but has been stolen",
+      "resultTranslations": {
+        "en": "The Hunt Is On: Something powerful and important must be found to save the land. For instance, a divine cup that will heal blighted fields, or a magical artifact that is precious to the dominant religion but has been stolen"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Prophecy of Change: A prophecy that foretells great change or doom appears to be coming true",
+      "resultTranslations": {
+        "en": "Prophecy of Change: A prophecy that foretells great change or doom appears to be coming true"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "result": "Power Vacuum: The dominant leader is gone and without a replacement, leaving chaos and competition to see who will claim the mantle",
+      "resultTranslations": {
+        "en": "Power Vacuum: The dominant leader is gone and without a replacement, leaving chaos and competition to see who will claim the mantle"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        100
+      ],
+      "result": "Plot Twists",
+      "resultTranslations": {
+        "en": "Plot Twists"
+      },
+      "description": "Roll one additional Keyword from the Plot Twists Meaning table for a total of three Keywords to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll one additional Keyword from the Plot Twists Meaning table for a total of three Keywords to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["plot_twists"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

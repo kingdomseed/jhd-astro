@@ -1,0 +1,151 @@
+{
+  "id": "mark_on_history_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Mark On History Focus",
+  "displayNameTranslations": {
+    "en": "Mark On History Focus"
+  },
+  "description": "Determines how a magical tradition has impacted history. Part of the Magical Tradition Focus system.",
+  "descriptionTranslations": {
+    "en": "Determines how a magical tradition has impacted history. Part of the Magical Tradition Focus system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 45",
+  "tags": [
+    "magical-tradition",
+    "magic",
+    "world-building",
+    "fantasy",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [1, 13],
+      "result": "The tradition was involved in a major historical event, such as helping to win a war or save/destroy a nation",
+      "resultTranslations": {
+        "en": "The tradition was involved in a major historical event, such as helping to win a war or save/destroy a nation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [14, 25],
+      "result": "The tradition has a long history of involvement with powerful people and institutions",
+      "resultTranslations": {
+        "en": "The tradition has a long history of involvement with powerful people and institutions"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [26, 38],
+      "result": "A hero from the tradition did something amazing in the past that is still remembered",
+      "resultTranslations": {
+        "en": "A hero from the tradition did something amazing in the past that is still remembered"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [39, 44],
+      "result": "A villain from the tradition did something awful in the past that is still remembered",
+      "resultTranslations": {
+        "en": "A villain from the tradition did something awful in the past that is still remembered"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [45, 56],
+      "result": "The tradition was involved in a major event in the past that almost no one knows about, like secretly repairing a catastrophic rift in time",
+      "resultTranslations": {
+        "en": "The tradition was involved in a major event in the past that almost no one knows about, like secretly repairing a catastrophic rift in time"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [57, 62],
+      "result": "The tradition has been a guardian of something important, whether publicly known or secretly. This can be an object, like securing the Tree of Life, or a duty, like safeguarding the world from extradimensional threats",
+      "resultTranslations": {
+        "en": "The tradition has been a guardian of something important, whether publicly known or secretly. This can be an object, like securing the Tree of Life, or a duty, like safeguarding the world from extradimensional threats"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [63, 68],
+      "result": "The tradition has a bad reputation for something. This reputation may be true or false, but people believe it",
+      "resultTranslations": {
+        "en": "The tradition has a bad reputation for something. This reputation may be true or false, but people believe it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [69, 74],
+      "result": "The tradition has a good reputation for something. This reputation may be true or false, but people believe it",
+      "resultTranslations": {
+        "en": "The tradition has a good reputation for something. This reputation may be true or false, but people believe it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [75, 94],
+      "result": "The tradition has made no notable mark on history",
+      "resultTranslations": {
+        "en": "The tradition has made no notable mark on history"
+      },
+      "description": "Don't roll on the Meaning Table or make an interpretation",
+      "descriptionTranslations": {
+        "en": "Don't roll on the Meaning Table or make an interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [95, 100],
+      "result": "Roll on Action Meaning Tables",
+      "resultTranslations": {
+        "en": "Roll on Action Meaning Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,1531 @@
+{
+  "id": "culture_descriptors",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Culture Descriptors",
+  "displayNameTranslations": {
+    "pt": "Descritores de Cultura",
+    "en": "Culture Descriptors"
+  },
+  "description": "A table for determining cultural elements and practices of a society.",
+  "descriptionTranslations": {
+    "en": "A table for determining cultural elements and practices of a society."
+  },
+  "isPremium": false,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 49",
+  "tags": [
+    "location",
+    "descriptors"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Activity",
+      "resultTranslations": {
+        "pt": "Atividade",
+        "en": "Activity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Adornment",
+      "resultTranslations": {
+        "pt": "Adorno",
+        "en": "Adornment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Ancestors",
+      "resultTranslations": {
+        "pt": "Ancestrais",
+        "en": "Ancestors"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Animal",
+      "resultTranslations": {
+        "pt": "Animal",
+        "en": "Animal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Annual",
+      "resultTranslations": {
+        "pt": "Anual",
+        "en": "Annual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Art",
+      "resultTranslations": {
+        "pt": "Arte",
+        "en": "Art"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Behavior",
+      "resultTranslations": {
+        "pt": "Comportamento",
+        "en": "Behavior"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Belief",
+      "resultTranslations": {
+        "pt": "Crença",
+        "en": "Belief"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Body",
+      "resultTranslations": {
+        "pt": "Corpo",
+        "en": "Body"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Casual",
+      "resultTranslations": {
+        "pt": "Casual",
+        "en": "Casual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Celebrate",
+      "resultTranslations": {
+        "pt": "Celebrar",
+        "en": "Celebrate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Ceremony",
+      "resultTranslations": {
+        "pt": "Cerimônia",
+        "en": "Ceremony"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Clothes",
+      "resultTranslations": {
+        "pt": "Roupas",
+        "en": "Clothes"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Colors",
+      "resultTranslations": {
+        "pt": "Cores",
+        "en": "Colors"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Commemorate",
+      "resultTranslations": {
+        "pt": "Comemorar",
+        "en": "Commemorate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Common",
+      "resultTranslations": {
+        "pt": "Comum",
+        "en": "Common"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Community",
+      "resultTranslations": {
+        "pt": "Comunidade",
+        "en": "Community"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Competition",
+      "resultTranslations": {
+        "pt": "Competição",
+        "en": "Competition"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Control",
+      "resultTranslations": {
+        "pt": "Controlar",
+        "en": "Control"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Dance",
+      "resultTranslations": {
+        "pt": "Dança",
+        "en": "Dance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Death",
+      "resultTranslations": {
+        "pt": "Morte",
+        "en": "Death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Display",
+      "resultTranslations": {
+        "pt": "Demonstração",
+        "en": "Display"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Drink",
+      "resultTranslations": {
+        "pt": "Beber",
+        "en": "Drink"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Entertainment",
+      "resultTranslations": {
+        "pt": "Entretenimento",
+        "en": "Entertainment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Evening",
+      "resultTranslations": {
+        "pt": "Noite",
+        "en": "Evening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Evil",
+      "resultTranslations": {
+        "pt": "Mal",
+        "en": "Evil"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Family",
+      "resultTranslations": {
+        "pt": "Família",
+        "en": "Family"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Fasting",
+      "resultTranslations": {
+        "pt": "Jejum",
+        "en": "Fasting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Fear",
+      "resultTranslations": {
+        "pt": "Medo",
+        "en": "Fear"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Feast",
+      "resultTranslations": {
+        "pt": "Banquete",
+        "en": "Feast"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Festival",
+      "resultTranslations": {
+        "pt": "Festival",
+        "en": "Festival"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Fire",
+      "resultTranslations": {
+        "pt": "Fogo",
+        "en": "Fire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Food",
+      "resultTranslations": {
+        "pt": "Comida",
+        "en": "Food"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Freedom",
+      "resultTranslations": {
+        "pt": "Liberdade",
+        "en": "Freedom"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Gathering",
+      "resultTranslations": {
+        "pt": "Congregação",
+        "en": "Gathering"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Generous",
+      "resultTranslations": {
+        "pt": "Generosidade",
+        "en": "Generous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Gifts",
+      "resultTranslations": {
+        "pt": "Presentes",
+        "en": "Gifts"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Goal",
+      "resultTranslations": {
+        "pt": "Meta",
+        "en": "Goal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Gratitude",
+      "resultTranslations": {
+        "pt": "Gratidão",
+        "en": "Gratitude"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Group",
+      "resultTranslations": {
+        "pt": "Grupo",
+        "en": "Group"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Habit",
+      "resultTranslations": {
+        "pt": "Hábito",
+        "en": "Habit"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Harvest",
+      "resultTranslations": {
+        "pt": "Colheita",
+        "en": "Harvest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Helpful",
+      "resultTranslations": {
+        "pt": "Prestativo",
+        "en": "Helpful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Heritage",
+      "resultTranslations": {
+        "pt": "Herança",
+        "en": "Heritage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Historical",
+      "resultTranslations": {
+        "pt": "Histórico",
+        "en": "Historical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Holiday",
+      "resultTranslations": {
+        "pt": "Feriado",
+        "en": "Holiday"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Home",
+      "resultTranslations": {
+        "pt": "Lar",
+        "en": "Home"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Hope",
+      "resultTranslations": {
+        "pt": "Esperança",
+        "en": "Hope"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Jewelry",
+      "resultTranslations": {
+        "pt": "Joalheria",
+        "en": "Jewelry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Law",
+      "resultTranslations": {
+        "pt": "Lei",
+        "en": "Law"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Legend",
+      "resultTranslations": {
+        "pt": "Lenda",
+        "en": "Legend"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Life",
+      "resultTranslations": {
+        "pt": "Vida",
+        "en": "Life"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Light",
+      "resultTranslations": {
+        "pt": "Luz",
+        "en": "Light"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Loss",
+      "resultTranslations": {
+        "pt": "Perda",
+        "en": "Loss"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Loud",
+      "resultTranslations": {
+        "pt": "Barulhento",
+        "en": "Loud"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Love",
+      "resultTranslations": {
+        "pt": "Amor",
+        "en": "Love"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Luck",
+      "resultTranslations": {
+        "pt": "Sorte",
+        "en": "Luck"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Meals",
+      "resultTranslations": {
+        "pt": "Refeições",
+        "en": "Meals"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Milestone",
+      "resultTranslations": {
+        "pt": "Marco",
+        "en": "Milestone"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Morning",
+      "resultTranslations": {
+        "pt": "Manhã",
+        "en": "Morning"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Music",
+      "resultTranslations": {
+        "pt": "Música",
+        "en": "Music"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Nature",
+      "resultTranslations": {
+        "pt": "Natureza",
+        "en": "Nature"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Object",
+      "resultTranslations": {
+        "pt": "Objeto",
+        "en": "Object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Parade",
+      "resultTranslations": {
+        "pt": "Desfile",
+        "en": "Parade"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Patriotism",
+      "resultTranslations": {
+        "pt": "Patriotismo",
+        "en": "Patriotism"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "People",
+      "resultTranslations": {
+        "pt": "Pessoas",
+        "en": "People"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Personal",
+      "resultTranslations": {
+        "pt": "Pessoal",
+        "en": "Personal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Plants",
+      "resultTranslations": {
+        "pt": "Plantas",
+        "en": "Plants"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Protection",
+      "resultTranslations": {
+        "pt": "Proteção",
+        "en": "Protection"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Quiet",
+      "resultTranslations": {
+        "pt": "Silêncio",
+        "en": "Quiet"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Religious",
+      "resultTranslations": {
+        "pt": "Religioso",
+        "en": "Religious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Renewal",
+      "resultTranslations": {
+        "pt": "Renovação",
+        "en": "Renewal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Respected",
+      "resultTranslations": {
+        "pt": "Respeitado",
+        "en": "Respected"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Restricting",
+      "resultTranslations": {
+        "pt": "Restrição",
+        "en": "Restricting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Reunion",
+      "resultTranslations": {
+        "pt": "Reunião",
+        "en": "Reunion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Ritual",
+      "resultTranslations": {
+        "pt": "Ritual",
+        "en": "Ritual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Sacrifice",
+      "resultTranslations": {
+        "pt": "Sacrifício",
+        "en": "Sacrifice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Seasons",
+      "resultTranslations": {
+        "pt": "Estações",
+        "en": "Seasons"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Shunned",
+      "resultTranslations": {
+        "pt": "Evitado",
+        "en": "Shunned"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Skill",
+      "resultTranslations": {
+        "pt": "Habilidade",
+        "en": "Skill"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Song",
+      "resultTranslations": {
+        "pt": "Canção",
+        "en": "Song"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Speech",
+      "resultTranslations": {
+        "pt": "Discurso",
+        "en": "Speech"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Story",
+      "resultTranslations": {
+        "pt": "História",
+        "en": "Story"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranho",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Strict",
+      "resultTranslations": {
+        "pt": "Estrito",
+        "en": "Strict"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Superstition",
+      "resultTranslations": {
+        "pt": "Superstição",
+        "en": "Superstition"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Sweets",
+      "resultTranslations": {
+        "pt": "Doces",
+        "en": "Sweets"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Symbolic",
+      "resultTranslations": {
+        "pt": "Simbólico",
+        "en": "Symbolic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Taboo",
+      "resultTranslations": {
+        "pt": "Tabu",
+        "en": "Taboo"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Time",
+      "resultTranslations": {
+        "pt": "Tempo",
+        "en": "Time"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Tool",
+      "resultTranslations": {
+        "pt": "Ferramenta",
+        "en": "Tool"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Traditional",
+      "resultTranslations": {
+        "pt": "Tradicional",
+        "en": "Traditional"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Tragedy",
+      "resultTranslations": {
+        "pt": "Tragédia",
+        "en": "Tragedy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "pt": "Viagem",
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Vacation",
+      "resultTranslations": {
+        "pt": "Férias",
+        "en": "Vacation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Victory",
+      "resultTranslations": {
+        "pt": "Vitória",
+        "en": "Victory"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "War",
+      "resultTranslations": {
+        "pt": "Guerra",
+        "en": "War"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Water",
+      "resultTranslations": {
+        "pt": "Água",
+        "en": "Water"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Wealth",
+      "resultTranslations": {
+        "pt": "Riqueza",
+        "en": "Wealth"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

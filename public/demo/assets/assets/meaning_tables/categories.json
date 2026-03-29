@@ -1,0 +1,294 @@
+{
+  "defaultCategories": [
+    {
+      "id": "core-tables",
+      "displayName": "Core Tables",
+      "displayNameTranslations": {
+        "pt": "Tabelas Principais",
+        "pt-BR": "Tabelas Principais",
+        "es": "Tablas principales",
+        "es-MX": "Tablas principales",
+        "es-419": "Tablas principales",
+        "de": "Kern-Tabellen",
+        "fr": "Tables principales",
+        "it": "Tabelle principali"
+      },
+      "iconKey": "dice",
+      "sortOrder": 0,
+      "isBuiltIn": true,
+      "description": "Essential tables for core Mythic GME gameplay"
+    },
+    {
+      "id": "character-identity",
+      "displayName": "Character & Identity",
+      "displayNameTranslations": {
+        "pt": "Personagem e Identidade",
+        "pt-BR": "Personagem e Identidade",
+        "es": "Personaje e Identidad",
+        "es-MX": "Personaje e Identidad",
+        "es-419": "Personaje e Identidad",
+        "de": "Charakter & Identität",
+        "fr": "Personnage et Identité",
+        "it": "Personaggio e Identità"
+      },
+      "iconKey": "user",
+      "sortOrder": 1,
+      "isBuiltIn": true,
+      "description": "Tables for character generation and development"
+    },
+    {
+      "id": "environment-location",
+      "displayName": "Environment & Location",
+      "displayNameTranslations": {
+        "pt": "Ambiente e Localização",
+        "pt-BR": "Ambiente e Localização",
+        "es": "Entorno y Ubicación",
+        "es-MX": "Entorno y Ubicación",
+        "es-419": "Entorno y Ubicación",
+        "de": "Umgebung & Ort",
+        "fr": "Environnement et Lieu",
+        "it": "Ambiente e Località"
+      },
+      "iconKey": "mountain",
+      "sortOrder": 2,
+      "isBuiltIn": true,
+      "description": "Environmental and location-based tables"
+    },
+    {
+      "id": "supernatural-magic",
+      "displayName": "Supernatural & Magic",
+      "displayNameTranslations": {
+        "pt": "Sobrenatural e Magia",
+        "pt-BR": "Sobrenatural e Magia",
+        "es": "Sobrenatural y Magia",
+        "es-MX": "Sobrenatural y Magia",
+        "es-419": "Sobrenatural y Magia",
+        "de": "Übernatürliches & Magie",
+        "fr": "Surnaturel et Magie",
+        "it": "Soprannaturale e Magia"
+      },
+      "iconKey": "magic",
+      "sortOrder": 3,
+      "isBuiltIn": true,
+      "description": "Magic, supernatural, and mystical elements"
+    },
+    {
+      "id": "creatures-beasts",
+      "displayName": "Creatures & Beasts",
+      "displayNameTranslations": {
+        "pt": "Criaturas e Feras",
+        "pt-BR": "Criaturas e Feras",
+        "es": "Criaturas y Bestias",
+        "es-MX": "Criaturas y Bestias",
+        "es-419": "Criaturas y Bestias",
+        "de": "Kreaturen & Bestien",
+        "fr": "Créatures et Bêtes",
+        "it": "Creature e Bestie"
+      },
+      "iconKey": "paw-claws",
+      "sortOrder": 4,
+      "isBuiltIn": true,
+      "description": "Creatures, monsters, and beasts"
+    },
+    {
+      "id": "adventure-elements",
+      "displayName": "Adventure Elements",
+      "displayNameTranslations": {
+        "pt": "Elementos de Aventura",
+        "pt-BR": "Elementos de Aventura",
+        "es": "Elementos de Aventura",
+        "es-MX": "Elementos de Aventura",
+        "es-419": "Elementos de Aventura",
+        "de": "Elemente des Abenteuers",
+        "fr": "Éléments d'Aventure",
+        "it": "Elementi di Avventura"
+      },
+      "iconKey": "scroll",
+      "sortOrder": 5,
+      "isBuiltIn": true,
+      "description": "General adventure and story elements"
+    },
+    {
+      "id": "event-focus",
+      "displayName": "Event Focus",
+      "displayNameTranslations": {
+        "pt": "Foco do Evento",
+        "pt-BR": "Foco do Evento",
+        "es": "Enfoque del Evento",
+        "es-MX": "Enfoque del Evento",
+        "es-419": "Enfoque del Evento",
+        "de": "Ereignisfokus",
+        "fr": "Focus de l'événement",
+        "it": "Focus dell'Evento"
+      },
+      "iconKey": "bullseye",
+      "sortOrder": 6,
+      "isBuiltIn": true,
+      "description": "Event focus and scene framing"
+    },
+    {
+      "id": "factions-organizations",
+      "displayName": "Factions & Organizations",
+      "displayNameTranslations": {
+        "pt": "Facções e Organizações",
+        "pt-BR": "Facções e Organizações",
+        "es": "Facciones y Organizaciones",
+        "es-MX": "Facciones y Organizaciones",
+        "es-419": "Facciones y Organizaciones",
+        "de": "Fraktionen & Organisationen",
+        "fr": "Factions et Organisations",
+        "it": "Fazioni e Organizzazioni"
+      },
+      "iconKey": "people",
+      "sortOrder": 7,
+      "isBuiltIn": true,
+      "description": "Groups, factions, and organizations"
+    },
+    {
+      "id": "lore-history",
+      "displayName": "Lore & History",
+      "displayNameTranslations": {
+        "pt": "Lendas e História",
+        "pt-BR": "Lendas e História",
+        "es": "Lore y Historia",
+        "es-MX": "Lore y Historia",
+        "es-419": "Lore y Historia",
+        "de": "Überlieferung & Geschichte",
+        "fr": "Lore et Histoire",
+        "it": "Lore e Storia"
+      },
+      "iconKey": "book",
+      "sortOrder": 8,
+      "isBuiltIn": true,
+      "description": "Historical and background information"
+    },
+    {
+      "id": "scene-adjustments",
+      "displayName": "Scene Adjustments",
+      "displayNameTranslations": {
+        "pt": "Ajustes de Cena",
+        "pt-BR": "Ajustes de Cena",
+        "es": "Ajustes de Escena",
+        "es-MX": "Ajustes de Escena",
+        "es-419": "Ajustes de Escena",
+        "de": "Szenen-Anpassungen",
+        "fr": "Ajustements de Scène",
+        "it": "Regolazioni di Scena"
+      },
+      "iconKey": "theater",
+      "sortOrder": 9,
+      "isBuiltIn": true,
+      "description": "Scene modification and adjustment tables"
+    },
+    {
+      "id": "sensory-atmosphere",
+      "displayName": "Sensory & Atmosphere",
+      "displayNameTranslations": {
+        "pt": "Sensorial e Atmosfera",
+        "pt-BR": "Sensorial e Atmosfera",
+        "es": "Sensorial y Atmósfera",
+        "es-MX": "Sensorial y Atmósfera",
+        "es-419": "Sensorial y Atmósfera",
+        "de": "Sensorik & Atmosphäre",
+        "fr": "Sensoriel et Atmosphère",
+        "it": "Sensoriale e Atmosfera"
+      },
+      "iconKey": "eye",
+      "sortOrder": 10,
+      "isBuiltIn": true,
+      "description": "Sensory details and atmospheric elements"
+    },
+    {
+      "id": "technology-scifi",
+      "displayName": "Technology & Scifi",
+      "displayNameTranslations": {
+        "pt": "Tecnologia e Ficção científica",
+        "pt-BR": "Tecnologia e Ficção científica",
+        "es": "Tecnología y Ciencia ficción",
+        "es-MX": "Tecnología y Ciencia ficción",
+        "es-419": "Tecnología y Ciencia ficción",
+        "de": "Technologie & Science-Fiction",
+        "fr": "Technologie et Science-fiction",
+        "it": "Tecnologia e Fantascienza"
+      },
+      "iconKey": "rocket",
+      "sortOrder": 11,
+      "isBuiltIn": true,
+      "description": "Technology and science fiction elements"
+    },
+    {
+      "id": "world-building",
+      "displayName": "World Building",
+      "displayNameTranslations": {
+        "pt": "Construção de Mundo",
+        "pt-BR": "Construção de Mundo",
+        "es": "Construcción de Mundo",
+        "es-MX": "Construcción de Mundo",
+        "es-419": "Construcción de Mundo",
+        "de": "Weltenbau",
+        "fr": "Création de Monde",
+        "it": "Costruzione del Mondo"
+      },
+      "iconKey": "globe",
+      "sortOrder": 12,
+      "isBuiltIn": true,
+      "description": "World setting, campaign framework, and city building tables"
+    },
+    {
+      "id": "adventure-crafter",
+      "displayName": "Adventure Crafter",
+      "displayNameTranslations": {
+        "pt": "Criador de Aventuras",
+        "pt-BR": "Criador de Aventuras",
+        "es": "Creador de Aventuras",
+        "es-MX": "Creador de Aventuras",
+        "es-419": "Creador de Aventuras",
+        "de": "Abenteuer-Gestalter",
+        "fr": "Créateur d'Aventure",
+        "it": "Creatore di Avventure"
+      },
+      "iconKey": "compass",
+      "sortOrder": 13,
+      "isBuiltIn": true,
+      "description": "Tables for The Adventure Crafter plot point and theme generation"
+    },
+    {
+      "id": "location-crafter",
+      "displayName": "Location Crafter",
+      "displayNameTranslations": {},
+      "iconKey": "map",
+      "sortOrder": 14,
+      "isBuiltIn": true,
+      "description": "Tables for The Location Crafter exploration and region generation system"
+    },
+    {
+      "id": "creature-crafter",
+      "displayName": "Creature Crafter",
+      "displayNameTranslations": {},
+      "iconKey": "hydra",
+      "sortOrder": 15,
+      "isBuiltIn": true,
+      "description": "Tables for The Creature Crafter monster generation system"
+    }
+  ],
+  "categories": [
+    {
+      "id": "custom",
+      "displayName": "Custom",
+      "displayNameTranslations": {
+        "pt": "Personalizado",
+        "pt-BR": "Personalizado",
+        "es": "Personalizado",
+        "es-MX": "Personalizado",
+        "es-419": "Personalizado",
+        "de": "Benutzerdefiniert",
+        "fr": "Personnalisé",
+        "it": "Personalizzato"
+      },
+      "iconKey": "question",
+      "sortOrder": 999,
+      "isBuiltIn": true,
+      "description": "User-created custom tables"
+    }
+  ]
+}

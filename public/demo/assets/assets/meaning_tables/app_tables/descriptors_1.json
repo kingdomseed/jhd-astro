@@ -1,0 +1,1534 @@
+{
+  "id": "descriptors_1",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "core-tables",
+  "defaultLanguage": "en",
+  "displayName": "Descriptor Meaning 1",
+  "displayNameTranslations": {
+    "pt": "Significado de Descritor 1",
+    "en": "Descriptor Meaning 1"
+  },
+  "description": "First descriptor meaning table used for random event generation",
+  "descriptionTranslations": {
+    "en": "First descriptor meaning table used for random event generation"
+  },
+  "isPremium": false,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic GME 2e core rulebook",
+  "tags": [
+    "location",
+    "descriptors",
+    "core"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Adventurously",
+      "resultTranslations": {
+        "pt": "Aventureiramente",
+        "en": "Adventurously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Aggressively",
+      "resultTranslations": {
+        "pt": "Agressivamente",
+        "en": "Aggressively"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Anxiously",
+      "resultTranslations": {
+        "pt": "Ansiosamente",
+        "en": "Anxiously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Awkwardly",
+      "resultTranslations": {
+        "pt": "Desajeitadamente",
+        "en": "Awkwardly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Beautifully",
+      "resultTranslations": {
+        "pt": "Lindamente",
+        "en": "Beautifully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Bleakly",
+      "resultTranslations": {
+        "pt": "Desoladamente",
+        "en": "Bleakly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Boldly",
+      "resultTranslations": {
+        "pt": "Audaciosamente",
+        "en": "Boldly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Bravely",
+      "resultTranslations": {
+        "pt": "Bravamente",
+        "en": "Bravely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Busily",
+      "resultTranslations": {
+        "pt": "Trabalhosamente",
+        "en": "Busily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Calmly",
+      "resultTranslations": {
+        "pt": "Calmamente",
+        "en": "Calmly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Carefully",
+      "resultTranslations": {
+        "pt": "Cuidadosamente",
+        "en": "Carefully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Carelessly",
+      "resultTranslations": {
+        "pt": "Descuidadamente",
+        "en": "Carelessly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Cautiously",
+      "resultTranslations": {
+        "pt": "Cautelosamente",
+        "en": "Cautiously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Ceaselessly",
+      "resultTranslations": {
+        "pt": "Incessantemente",
+        "en": "Ceaselessly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Cheerfully",
+      "resultTranslations": {
+        "pt": "Alegremente",
+        "en": "Cheerfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Combatively",
+      "resultTranslations": {
+        "pt": "Combativamente",
+        "en": "Combatively"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Coolly",
+      "resultTranslations": {
+        "pt": "Friamente",
+        "en": "Coolly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Crazily",
+      "resultTranslations": {
+        "pt": "Insanamente",
+        "en": "Crazily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Curiously",
+      "resultTranslations": {
+        "pt": "Curiosamente",
+        "en": "Curiously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Dangerously",
+      "resultTranslations": {
+        "pt": "Perigosamente",
+        "en": "Dangerously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Defiantly",
+      "resultTranslations": {
+        "pt": "Desfiadoramente",
+        "en": "Defiantly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Deliberately",
+      "resultTranslations": {
+        "pt": "Deliberadamente",
+        "en": "Deliberately"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Delicately",
+      "resultTranslations": {
+        "pt": "Delicadamente",
+        "en": "Delicately"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Delightfully",
+      "resultTranslations": {
+        "pt": "Agradavelmente",
+        "en": "Delightfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Dimly",
+      "resultTranslations": {
+        "pt": "Vagamente",
+        "en": "Dimly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Efficiently",
+      "resultTranslations": {
+        "pt": "Eficientemente",
+        "en": "Efficiently"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Emotionally",
+      "resultTranslations": {
+        "pt": "Emocionalmente",
+        "en": "Emotionally"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Energetically",
+      "resultTranslations": {
+        "pt": "Energeticamente",
+        "en": "Energetically"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Enormously",
+      "resultTranslations": {
+        "pt": "Enormemente",
+        "en": "Enormously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Enthusiastically",
+      "resultTranslations": {
+        "pt": "Entusiasmadamente",
+        "en": "Enthusiastically"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Excitedly",
+      "resultTranslations": {
+        "pt": "Empolgadamente",
+        "en": "Excitedly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Fearfully",
+      "resultTranslations": {
+        "pt": "Temerosamente",
+        "en": "Fearfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Ferociously",
+      "resultTranslations": {
+        "pt": "Ferozmente",
+        "en": "Ferociously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Fiercely",
+      "resultTranslations": {
+        "pt": "Ardentemente",
+        "en": "Fiercely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Foolishly",
+      "resultTranslations": {
+        "pt": "Tolamente",
+        "en": "Foolishly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Fortunately",
+      "resultTranslations": {
+        "pt": "Afortunadamente",
+        "en": "Fortunately"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Frantically",
+      "resultTranslations": {
+        "pt": "Freneticamente",
+        "en": "Frantically"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Freely",
+      "resultTranslations": {
+        "pt": "Livremente",
+        "en": "Freely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Frighteningly",
+      "resultTranslations": {
+        "pt": "Assustadoramente",
+        "en": "Frighteningly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Fully",
+      "resultTranslations": {
+        "pt": "Completamente",
+        "en": "Fully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Generously",
+      "resultTranslations": {
+        "pt": "Generosamente",
+        "en": "Generously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Gently",
+      "resultTranslations": {
+        "pt": "Gentilmente",
+        "en": "Gently"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Gladly",
+      "resultTranslations": {
+        "pt": "Contentemente",
+        "en": "Gladly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Gracefully",
+      "resultTranslations": {
+        "pt": "Graciosamente",
+        "en": "Gracefully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Gratefully",
+      "resultTranslations": {
+        "pt": "Gratamente",
+        "en": "Gratefully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Happily",
+      "resultTranslations": {
+        "pt": "Felizmente",
+        "en": "Happily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Hastily",
+      "resultTranslations": {
+        "pt": "Apressadamente",
+        "en": "Hastily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Healthily",
+      "resultTranslations": {
+        "pt": "Vigorosamente",
+        "en": "Healthily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Helpfully",
+      "resultTranslations": {
+        "pt": "Prestativamente",
+        "en": "Helpfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Helplessly",
+      "resultTranslations": {
+        "pt": "Desamparadamente",
+        "en": "Helplessly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Hopelessly",
+      "resultTranslations": {
+        "pt": "Desesperadamente",
+        "en": "Hopelessly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Innocently",
+      "resultTranslations": {
+        "pt": "Inocentemente",
+        "en": "Innocently"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Intensely",
+      "resultTranslations": {
+        "pt": "Intensamente",
+        "en": "Intensely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Interestingly",
+      "resultTranslations": {
+        "pt": "Interessantemente",
+        "en": "Interestingly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Irritatingly",
+      "resultTranslations": {
+        "pt": "Irritantemente",
+        "en": "Irritatingly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Joyfully",
+      "resultTranslations": {
+        "pt": "Divertidamente",
+        "en": "Joyfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Kindly",
+      "resultTranslations": {
+        "pt": "Bondosamente",
+        "en": "Kindly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Lazily",
+      "resultTranslations": {
+        "pt": "Preguiçosamente",
+        "en": "Lazily"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Lightly",
+      "resultTranslations": {
+        "pt": "Levemente",
+        "en": "Lightly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Loosely",
+      "resultTranslations": {
+        "pt": "Frouxamente",
+        "en": "Loosely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Loudly",
+      "resultTranslations": {
+        "pt": "Ruidosament",
+        "en": "Loudly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Lovingly",
+      "resultTranslations": {
+        "pt": "Amavelmente",
+        "en": "Lovingly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Loyally",
+      "resultTranslations": {
+        "pt": "Lealmente",
+        "en": "Loyally"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Majestically",
+      "resultTranslations": {
+        "pt": "Majestosamente",
+        "en": "Majestically"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Meaningfully",
+      "resultTranslations": {
+        "pt": "Significativamente",
+        "en": "Meaningfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Mechanically",
+      "resultTranslations": {
+        "pt": "Mecanicamente",
+        "en": "Mechanically"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Mildly",
+      "resultTranslations": {
+        "pt": "Moderadamente",
+        "en": "Mildly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Miserably",
+      "resultTranslations": {
+        "pt": "Miseravelmente",
+        "en": "Miserably"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Mockingly",
+      "resultTranslations": {
+        "pt": "Zombeteiramente",
+        "en": "Mockingly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Mysteriously",
+      "resultTranslations": {
+        "pt": "Misteriosamente",
+        "en": "Mysteriously"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Naturally",
+      "resultTranslations": {
+        "pt": "Naturalmente",
+        "en": "Naturally"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Neatly",
+      "resultTranslations": {
+        "pt": "Arrumadamente",
+        "en": "Neatly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Nicely",
+      "resultTranslations": {
+        "pt": "Satisfatoriamente",
+        "en": "Nicely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Oddly",
+      "resultTranslations": {
+        "pt": "Bizarramente",
+        "en": "Oddly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Offensively",
+      "resultTranslations": {
+        "pt": "Ofensivamente",
+        "en": "Offensively"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Officially",
+      "resultTranslations": {
+        "pt": "Oficialmente",
+        "en": "Officially"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Partially",
+      "resultTranslations": {
+        "pt": "Parcialmente",
+        "en": "Partially"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Passively",
+      "resultTranslations": {
+        "pt": "Passivamente",
+        "en": "Passively"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Peacefully",
+      "resultTranslations": {
+        "pt": "Pacificamente",
+        "en": "Peacefully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Perfectly",
+      "resultTranslations": {
+        "pt": "Perfeitamente",
+        "en": "Perfectly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Playfully",
+      "resultTranslations": {
+        "pt": "Jocosament",
+        "en": "Playfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Politely",
+      "resultTranslations": {
+        "pt": "Educadamente",
+        "en": "Politely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Positively",
+      "resultTranslations": {
+        "pt": "Positivamente",
+        "en": "Positively"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Powerfully",
+      "resultTranslations": {
+        "pt": "Poderosamente",
+        "en": "Powerfully"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Quaintly",
+      "resultTranslations": {
+        "pt": "Peculiarmente",
+        "en": "Quaintly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Quarrelsomely",
+      "resultTranslations": {
+        "pt": "Problematicamente",
+        "en": "Quarrelsomely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Quietly",
+      "resultTranslations": {
+        "pt": "Silenciosamente",
+        "en": "Quietly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Roughly",
+      "resultTranslations": {
+        "pt": "Grosseiramente",
+        "en": "Roughly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Rudely",
+      "resultTranslations": {
+        "pt": "Rudemente",
+        "en": "Rudely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Ruthlessly",
+      "resultTranslations": {
+        "pt": "Implacavelmente",
+        "en": "Ruthlessly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Slowly",
+      "resultTranslations": {
+        "pt": "Lentamente",
+        "en": "Slowly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Softly",
+      "resultTranslations": {
+        "pt": "Suavemente",
+        "en": "Softly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Strangely",
+      "resultTranslations": {
+        "pt": "Estranhamente",
+        "en": "Strangely"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Swiftly",
+      "resultTranslations": {
+        "pt": "Rapidamente",
+        "en": "Swiftly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Threateningly",
+      "resultTranslations": {
+        "pt": "Ameaçadoramente",
+        "en": "Threateningly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Timidly",
+      "resultTranslations": {
+        "pt": "Timidamente",
+        "en": "Timidly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Very",
+      "resultTranslations": {
+        "pt": "Muito",
+        "en": "Very"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Violently",
+      "resultTranslations": {
+        "pt": "Violentamente",
+        "en": "Violently"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Wildly",
+      "resultTranslations": {
+        "pt": "Selvagemente",
+        "en": "Wildly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Yieldingly",
+      "resultTranslations": {
+        "pt": "Concessivamente",
+        "en": "Yieldingly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "descriptors_2"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

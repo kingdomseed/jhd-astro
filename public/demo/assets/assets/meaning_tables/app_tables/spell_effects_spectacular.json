@@ -1,0 +1,314 @@
+{
+  "id": "spell_effects_spectacular",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Spectacular",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Spectacular"
+  },
+  "description": "Determines additional spectacular visual or sensory effects for spells. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines additional spectacular visual or sensory effects for spells. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "visual",
+    "effects"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Casting of the spell creates an eerie, unnatural sound",
+      "resultTranslations": {
+        "en": "Casting of the spell creates an eerie, unnatural sound"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "The spell creates an unusual odor",
+      "resultTranslations": {
+        "en": "The spell creates an unusual odor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "The spell is accompanied by a radiant burst of light or energy",
+      "resultTranslations": {
+        "en": "The spell is accompanied by a radiant burst of light or energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "The spell creates a rainbow of colors",
+      "resultTranslations": {
+        "en": "The spell creates a rainbow of colors"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "The spell raises or lowers the temperature in the vicinity to a noticeable degree",
+      "resultTranslations": {
+        "en": "The spell raises or lowers the temperature in the vicinity to a noticeable degree"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "The spell sparks an emotion in those witnessing it, such as dread or joy",
+      "resultTranslations": {
+        "en": "The spell sparks an emotion in those witnessing it, such as dread or joy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "The spell has an additional, unintended effect",
+      "resultTranslations": {
+        "en": "The spell has an additional, unintended effect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "The spell causes nearby animals to behave strangely, such as birds to caw or dogs to bark",
+      "resultTranslations": {
+        "en": "The spell causes nearby animals to behave strangely, such as birds to caw or dogs to bark"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "The area around the cast spell darkens ominously and unnaturally",
+      "resultTranslations": {
+        "en": "The area around the cast spell darkens ominously and unnaturally"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Temporary and shifting phantasmal shapes form around the casting of the spell. It could be people, places, creatures, or things",
+      "resultTranslations": {
+        "en": "Temporary and shifting phantasmal shapes form around the casting of the spell. It could be people, places, creatures, or things"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Objects in the vicinity of the spell levitate or move",
+      "resultTranslations": {
+        "en": "Objects in the vicinity of the spell levitate or move"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Those near the casting hear whispering in their heads",
+      "resultTranslations": {
+        "en": "Those near the casting hear whispering in their heads"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "The spell causes the caster to take on a temporary altered form, such as appearing as an animal or a pillar of fire",
+      "resultTranslations": {
+        "en": "The spell causes the caster to take on a temporary altered form, such as appearing as an animal or a pillar of fire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "The spell unfolds with a spectacular display of colors and shifting geometric shapes",
+      "resultTranslations": {
+        "en": "The spell unfolds with a spectacular display of colors and shifting geometric shapes"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Whatever the spell does, double its effects and intensity",
+      "resultTranslations": {
+        "en": "Whatever the spell does, double its effects and intensity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Come up with the most bizarre and unusual display you can think of that this spell creates when cast",
+      "resultTranslations": {
+        "en": "Come up with the most bizarre and unusual display you can think of that this spell creates when cast"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "The spell casts with an angelic chorus and a cracking open of the heavens, as if the world is ending",
+      "resultTranslations": {
+        "en": "The spell casts with an angelic chorus and a cracking open of the heavens, as if the world is ending"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

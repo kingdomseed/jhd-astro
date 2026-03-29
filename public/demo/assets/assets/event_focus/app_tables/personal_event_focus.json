@@ -1,0 +1,330 @@
+{
+  "id": "personal_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Personal Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Personal Event Focus Table",
+    "pt": "Tabela de Foco de Evento Pessoal"
+  },
+  "description": "An event focus table for personal-scale games, emphasizing individual character interactions and personal threads.",
+  "descriptionTranslations": {
+    "en": "An event focus table for personal-scale games, emphasizing individual character interactions and personal threads.",
+    "pt": "Uma tabela de foco de evento para jogos em escala pessoal, enfatizando interações de personagens individuais e tramas pessoais."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Variations 1",
+  "tags": [
+    "event-focus",
+    "personal",
+    "character-focused"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        7
+      ],
+      "result": "Remote Event",
+      "resultTranslations": {
+        "en": "Remote Event",
+        "pt": "Evento Remoto"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        24
+      ],
+      "result": "NPC Action",
+      "resultTranslations": {
+        "en": "NPC Action",
+        "pt": "Ação de PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        28
+      ],
+      "result": "PC NPC Action",
+      "resultTranslations": {
+        "en": "PC NPC Action",
+        "pt": "Ação de PJ PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCNPCs"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        35
+      ],
+      "result": "New NPC",
+      "resultTranslations": {
+        "en": "New NPC",
+        "pt": "Nova PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        42
+      ],
+      "result": "Move Toward A Thread",
+      "resultTranslations": {
+        "en": "Move Toward A Thread",
+        "pt": "Avançar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        45
+      ],
+      "result": "Move Toward A PC Thread",
+      "resultTranslations": {
+        "en": "Move Toward A PC Thread",
+        "pt": "Avançar uma Trama de PJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCThreads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "result": "Move Away From A Thread",
+      "resultTranslations": {
+        "en": "Move Away From A Thread",
+        "pt": "Recuar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        52
+      ],
+      "result": "Move Away From A PC Thread",
+      "resultTranslations": {
+        "en": "Move Away From A PC Thread",
+        "pt": "Recuar uma Trama de PJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCThreads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        54
+      ],
+      "result": "Close Thread",
+      "resultTranslations": {
+        "en": "Close Thread",
+        "pt": "Encerrar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Close PC Thread",
+      "resultTranslations": {
+        "en": "Close PC Thread",
+        "pt": "Encerrar uma Trama de PJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCThreads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        67
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative",
+        "pt": "Negativo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        75
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive",
+        "pt": "Positivo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        83
+      ],
+      "result": "Ambiguous Event",
+      "resultTranslations": {
+        "en": "Ambiguous Event",
+        "pt": "Evento Ambíguo"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        90
+      ],
+      "result": "NPC Negative",
+      "resultTranslations": {
+        "en": "NPC Negative",
+        "pt": "Negativo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        92
+      ],
+      "result": "PC NPC Negative",
+      "resultTranslations": {
+        "en": "PC NPC Negative",
+        "pt": "Negativo para PJ/PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCNPCs"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        99
+      ],
+      "result": "NPC Positive",
+      "resultTranslations": {
+        "en": "NPC Positive",
+        "pt": "Positivo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "PC NPC Positive",
+      "resultTranslations": {
+        "en": "PC NPC Positive",
+        "pt": "Positivo para PJ/PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "PCNPCs"
+      ],
+      "weight": 1,
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

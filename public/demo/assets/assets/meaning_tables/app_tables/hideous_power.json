@@ -1,0 +1,1530 @@
+{
+  "id": "hideous_power",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Hideous Power",
+  "displayNameTranslations": {
+    "pt": "Poder Hediondo",
+    "en": "Hideous Power"
+  },
+  "description": "This table is for creature and monster powers, with a horror emphasis placed on it. General words are included for flexible interpretations, but also some specific powers are listed such as telekinesis and invisible.",
+  "descriptionTranslations": {
+    "en": "This table is for creature and monster powers, with a horror emphasis placed on it. General words are included for flexible interpretations, but also some specific powers are listed such as telekinesis and invisible."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 7",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Absorb",
+      "resultTranslations": {
+        "pt": "Absorver",
+        "en": "Absorb"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Acid",
+      "resultTranslations": {
+        "pt": "Ácido",
+        "en": "Acid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Ambush",
+      "resultTranslations": {
+        "pt": "Emboscada",
+        "en": "Ambush"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Animate",
+      "resultTranslations": {
+        "pt": "Animar",
+        "en": "Animate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Armed",
+      "resultTranslations": {
+        "pt": "Armada",
+        "en": "Armed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Armor",
+      "resultTranslations": {
+        "pt": "Armadura",
+        "en": "Armor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Attach",
+      "resultTranslations": {
+        "pt": "Vincular",
+        "en": "Attach"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Bite",
+      "resultTranslations": {
+        "pt": "Mordida",
+        "en": "Bite"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Burrow",
+      "resultTranslations": {
+        "pt": "Cavar",
+        "en": "Burrow"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Change",
+      "resultTranslations": {
+        "pt": "Mudar",
+        "en": "Change"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Charge",
+      "resultTranslations": {
+        "pt": "Investida",
+        "en": "Charge"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Chase",
+      "resultTranslations": {
+        "pt": "Perseguição",
+        "en": "Chase"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Chemical",
+      "resultTranslations": {
+        "pt": "Químico",
+        "en": "Chemical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Claw",
+      "resultTranslations": {
+        "pt": "Garra",
+        "en": "Claw"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Cold",
+      "resultTranslations": {
+        "pt": "Frio",
+        "en": "Cold"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Conceal",
+      "resultTranslations": {
+        "pt": "Ocultar",
+        "en": "Conceal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Confuse",
+      "resultTranslations": {
+        "pt": "Confundir",
+        "en": "Confuse"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Control",
+      "resultTranslations": {
+        "pt": "Controlar",
+        "en": "Control"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Create",
+      "resultTranslations": {
+        "pt": "Criar",
+        "en": "Create"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Damage",
+      "resultTranslations": {
+        "pt": "Dano",
+        "en": "Damage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Death",
+      "resultTranslations": {
+        "pt": "Morte",
+        "en": "Death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Deceive",
+      "resultTranslations": {
+        "pt": "Enganar",
+        "en": "Deceive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Defense",
+      "resultTranslations": {
+        "pt": "Defesa",
+        "en": "Defense"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Destroy",
+      "resultTranslations": {
+        "pt": "Destruir",
+        "en": "Destroy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Detect",
+      "resultTranslations": {
+        "pt": "Detectar",
+        "en": "Detect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Devour",
+      "resultTranslations": {
+        "pt": "Devorar",
+        "en": "Devour"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Disappear",
+      "resultTranslations": {
+        "pt": "Desaparecer",
+        "en": "Disappear"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Disrupt",
+      "resultTranslations": {
+        "pt": "Interromper",
+        "en": "Disrupt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Drag",
+      "resultTranslations": {
+        "pt": "Arrastar",
+        "en": "Drag"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Duplicate",
+      "resultTranslations": {
+        "pt": "Duplicar",
+        "en": "Duplicate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Electricity",
+      "resultTranslations": {
+        "pt": "Eletricidade",
+        "en": "Electricity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Elements",
+      "resultTranslations": {
+        "pt": "Elementos",
+        "en": "Elements"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Emission",
+      "resultTranslations": {
+        "pt": "Emissão",
+        "en": "Emission"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Emotion",
+      "resultTranslations": {
+        "pt": "Emoção",
+        "en": "Emotion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Energy",
+      "resultTranslations": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Enhance",
+      "resultTranslations": {
+        "pt": "Aprimorar",
+        "en": "Enhance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Environment",
+      "resultTranslations": {
+        "pt": "Ambiente",
+        "en": "Environment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Escape",
+      "resultTranslations": {
+        "pt": "Escapar",
+        "en": "Escape"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Fast",
+      "resultTranslations": {
+        "pt": "Rápido",
+        "en": "Fast"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Fire",
+      "resultTranslations": {
+        "pt": "Fogo",
+        "en": "Fire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Flee",
+      "resultTranslations": {
+        "pt": "Fugir",
+        "en": "Flee"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Flight",
+      "resultTranslations": {
+        "pt": "Voo",
+        "en": "Flight"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Heal",
+      "resultTranslations": {
+        "pt": "Curar",
+        "en": "Heal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Hear",
+      "resultTranslations": {
+        "pt": "Ouvir",
+        "en": "Hear"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Heat",
+      "resultTranslations": {
+        "pt": "Calor",
+        "en": "Heat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Hide",
+      "resultTranslations": {
+        "pt": "Esconder",
+        "en": "Hide"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Illusion",
+      "resultTranslations": {
+        "pt": "Ilusão",
+        "en": "Illusion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Imitate",
+      "resultTranslations": {
+        "pt": "Imitar",
+        "en": "Imitate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Immunity",
+      "resultTranslations": {
+        "pt": "Imunidade",
+        "en": "Immunity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Impale",
+      "resultTranslations": {
+        "pt": "Empalar",
+        "en": "Impale"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Imprison",
+      "resultTranslations": {
+        "pt": "Aprisionar",
+        "en": "Imprison"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Indestructible",
+      "resultTranslations": {
+        "pt": "Indestrutível",
+        "en": "Indestructible"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Infect",
+      "resultTranslations": {
+        "pt": "Infectar",
+        "en": "Infect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Insubstantial",
+      "resultTranslations": {
+        "pt": "Insubstancial",
+        "en": "Insubstantial"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Invade",
+      "resultTranslations": {
+        "pt": "Invadir",
+        "en": "Invade"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Invisible",
+      "resultTranslations": {
+        "pt": "Invisível",
+        "en": "Invisible"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Lure",
+      "resultTranslations": {
+        "pt": "Provocar",
+        "en": "Lure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Magic",
+      "resultTranslations": {
+        "pt": "Magia",
+        "en": "Magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Manipulate",
+      "resultTranslations": {
+        "pt": "Manipular",
+        "en": "Manipulate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Matter",
+      "resultTranslations": {
+        "pt": "Matéria",
+        "en": "Matter"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Mental",
+      "resultTranslations": {
+        "pt": "Mental",
+        "en": "Mental"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Move",
+      "resultTranslations": {
+        "pt": "Mover",
+        "en": "Move"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Mutate",
+      "resultTranslations": {
+        "pt": "Mutar",
+        "en": "Mutate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Mysterious",
+      "resultTranslations": {
+        "pt": "Misterioso",
+        "en": "Mysterious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Object",
+      "resultTranslations": {
+        "pt": "Objeto",
+        "en": "Object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Observe",
+      "resultTranslations": {
+        "pt": "Observar",
+        "en": "Observe"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Pain",
+      "resultTranslations": {
+        "pt": "Dor",
+        "en": "Pain"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Paralyze",
+      "resultTranslations": {
+        "pt": "Paralisar",
+        "en": "Paralyze"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "People",
+      "resultTranslations": {
+        "pt": "Pessoas",
+        "en": "People"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Plants",
+      "resultTranslations": {
+        "pt": "Plantas",
+        "en": "Plants"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Poison",
+      "resultTranslations": {
+        "pt": "Veneno",
+        "en": "Poison"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Possess",
+      "resultTranslations": {
+        "pt": "Possuir",
+        "en": "Possess"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Psychic",
+      "resultTranslations": {
+        "pt": "Psíquico",
+        "en": "Psychic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Radius",
+      "resultTranslations": {
+        "pt": "Área",
+        "en": "Radius"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Ranged",
+      "resultTranslations": {
+        "pt": "Distância",
+        "en": "Ranged"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Reflect",
+      "resultTranslations": {
+        "pt": "Refletir",
+        "en": "Reflect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Regenerate",
+      "resultTranslations": {
+        "pt": "Regenerar",
+        "en": "Regenerate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Repel",
+      "resultTranslations": {
+        "pt": "Repelir",
+        "en": "Repel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Resistance",
+      "resultTranslations": {
+        "pt": "Resistência",
+        "en": "Resistance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Sense",
+      "resultTranslations": {
+        "pt": "Sentido",
+        "en": "Sense"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Shapechange",
+      "resultTranslations": {
+        "pt": "Metamorfosear",
+        "en": "Shapechange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Sight",
+      "resultTranslations": {
+        "pt": "Visão",
+        "en": "Sight"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Skill",
+      "resultTranslations": {
+        "pt": "Habilidade",
+        "en": "Skill"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Sonic",
+      "resultTranslations": {
+        "pt": "Sônico",
+        "en": "Sonic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Stealth",
+      "resultTranslations": {
+        "pt": "Furtividade",
+        "en": "Stealth"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranhar",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Strong",
+      "resultTranslations": {
+        "pt": "Forte",
+        "en": "Strong"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Summon",
+      "resultTranslations": {
+        "pt": "Conjurar",
+        "en": "Summon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Suppress",
+      "resultTranslations": {
+        "pt": "Suprimir",
+        "en": "Suppress"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Surprise",
+      "resultTranslations": {
+        "pt": "Surpresa",
+        "en": "Surprise"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Technology",
+      "resultTranslations": {
+        "pt": "Tecnologia",
+        "en": "Technology"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Telekinesis",
+      "resultTranslations": {
+        "pt": "Telecinese",
+        "en": "Telekinesis"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Telepathy",
+      "resultTranslations": {
+        "pt": "Telepatia",
+        "en": "Telepathy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Teleport",
+      "resultTranslations": {
+        "pt": "Teleportar",
+        "en": "Teleport"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Time",
+      "resultTranslations": {
+        "pt": "Tempo",
+        "en": "Time"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Transform",
+      "resultTranslations": {
+        "pt": "Transformar",
+        "en": "Transform"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Trap",
+      "resultTranslations": {
+        "pt": "Armadilha",
+        "en": "Trap"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "pt": "Viajar",
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Wall-crawl",
+      "resultTranslations": {
+        "pt": "Escalar Paredes",
+        "en": "Wall-crawl"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Weapon",
+      "resultTranslations": {
+        "pt": "Arma",
+        "en": "Weapon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

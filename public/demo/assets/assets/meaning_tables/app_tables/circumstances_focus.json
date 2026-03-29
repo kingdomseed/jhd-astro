@@ -1,0 +1,191 @@
+{
+  "id": "circumstances_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Circumstances Focus",
+  "displayNameTranslations": {
+    "en": "Circumstances Focus"
+  },
+  "description": "Determines how a magical tradition was founded. Part of the Magical Tradition Focus system.",
+  "descriptionTranslations": {
+    "en": "Determines how a magical tradition was founded. Part of the Magical Tradition Focus system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 45",
+  "tags": [
+    "magical-tradition",
+    "magic",
+    "world-building",
+    "fantasy",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [1, 4],
+      "result": "A great hero founded it",
+      "resultTranslations": {
+        "en": "A great hero founded it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [5, 16],
+      "result": "Tradition passed on from a forgotten age",
+      "resultTranslations": {
+        "en": "Tradition passed on from a forgotten age"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 24],
+      "result": "A scholar uncovered the knowledge after a lifetime of seeking",
+      "resultTranslations": {
+        "en": "A scholar uncovered the knowledge after a lifetime of seeking"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 28],
+      "result": "A primal force taught the originator the secrets",
+      "resultTranslations": {
+        "en": "A primal force taught the originator the secrets"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [29, 39],
+      "result": "There is no origin, the tradition stems from natural forces that anyone can tap",
+      "resultTranslations": {
+        "en": "There is no origin, the tradition stems from natural forces that anyone can tap"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [40, 43],
+      "result": "The founder made a deal with an entity in exchange for power",
+      "resultTranslations": {
+        "en": "The founder made a deal with an entity in exchange for power"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [44, 47],
+      "result": "The founder discovered the secrets accidentally",
+      "resultTranslations": {
+        "en": "The founder discovered the secrets accidentally"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [48, 55],
+      "result": "A god or benevolent entity instructed the originators in the secrets",
+      "resultTranslations": {
+        "en": "A god or benevolent entity instructed the originators in the secrets"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [56, 63],
+      "result": "The power is inherent in some people, who find each other",
+      "resultTranslations": {
+        "en": "The power is inherent in some people, who find each other"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [64, 67],
+      "result": "The founder died and returned to the mortal world with secret knowledge",
+      "resultTranslations": {
+        "en": "The founder died and returned to the mortal world with secret knowledge"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 74],
+      "result": "Pieced together from disparate other traditions",
+      "resultTranslations": {
+        "en": "Pieced together from disparate other traditions"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [75, 85],
+      "result": "The origin of this tradition is unknown except for rumors",
+      "resultTranslations": {
+        "en": "The origin of this tradition is unknown except for rumors"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [86, 90],
+      "result": "The origin is secret, held by a very few and not known to anyone else",
+      "resultTranslations": {
+        "en": "The origin is secret, held by a very few and not known to anyone else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "Roll on Action Meaning Tables",
+      "resultTranslations": {
+        "en": "Roll on Action Meaning Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

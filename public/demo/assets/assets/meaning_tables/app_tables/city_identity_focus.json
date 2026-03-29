@@ -1,0 +1,144 @@
+{
+  "id": "city_identity_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "City Identity Focus",
+  "displayNameTranslations": {
+    "en": "City Identity Focus"
+  },
+  "description": "Determines the overall character and identity of a city for world building.",
+  "descriptionTranslations": {
+    "en": "Determines the overall character and identity of a city for world building."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 61",
+  "tags": [
+    "city-crafter",
+    "world-building",
+    "cities",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "Golden Age: This City is at its peak, where the economy is going strong, infrastructure is robust, and everyone is doing something. Of course, there may be rot beneath the surface, but by appearances it's in a golden age",
+      "resultTranslations": {
+        "en": "Golden Age: This City is at its peak, where the economy is going strong, infrastructure is robust, and everyone is doing something. Of course, there may be rot beneath the surface, but by appearances it's in a golden age"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        20
+      ],
+      "result": "Waning: This City's best days are in the past. Its institutions are strained, opportunities are few, and life is tough",
+      "resultTranslations": {
+        "en": "Waning: This City's best days are in the past. Its institutions are strained, opportunities are few, and life is tough"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        30
+      ],
+      "result": "Smart City: This City embraces the cutting edge technology of this world and is known for institutions of knowledge",
+      "resultTranslations": {
+        "en": "Smart City: This City embraces the cutting edge technology of this world and is known for institutions of knowledge"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "result": "Holistic: This City's growth has embraced harmony with nature, weaving itself around natural elements instead of paving over them",
+      "resultTranslations": {
+        "en": "Holistic: This City's growth has embraced harmony with nature, weaving itself around natural elements instead of paving over them"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        60
+      ],
+      "result": "Cosmopolitan: This City is known for its diversity of population and many cultural traditions imported from across the world",
+      "resultTranslations": {
+        "en": "Cosmopolitan: This City is known for its diversity of population and many cultural traditions imported from across the world"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "Power City: The City is the seat of something powerful that makes the place important. For instance, it may be the capitol of the nation",
+      "resultTranslations": {
+        "en": "Power City: The City is the seat of something powerful that makes the place important. For instance, it may be the capitol of the nation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Gateway: The City is a hub to other places, such as a coastal port or a space station at the center of galactic alliances",
+      "resultTranslations": {
+        "en": "Gateway: The City is a hub to other places, such as a coastal port or a space station at the center of galactic alliances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Another Keyword: Roll an additional Keyword from City Descriptors and include it with the other Meaning words rolled to make your interpretation",
+      "resultTranslations": {
+        "en": "Another Keyword: Roll an additional Keyword from City Descriptors and include it with the other Meaning words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

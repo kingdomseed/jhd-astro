@@ -1,0 +1,926 @@
+{
+  "id": "location_crafter_descriptor_1",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "location-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Descriptor 1",
+  "displayNameTranslations": { "en": "Descriptor 1" },
+  "description": "Location Crafter Complex Question table (Descriptor 1).",
+  "descriptionTranslations": {
+    "en": "Location Crafter Complex Question table (Descriptor 1)."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Location Crafter",
+  "tags": ["location-crafter", "complex-question", "descriptions"],
+  "entries": [
+    {
+      "range": [1, 1],
+      "result": "Abnormally",
+      "resultTranslations": { "en": "Abnormally" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [2, 2],
+      "result": "Adventurously",
+      "resultTranslations": { "en": "Adventurously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [3, 3],
+      "result": "Aggressively",
+      "resultTranslations": { "en": "Aggressively" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [4, 4],
+      "result": "Angrily",
+      "resultTranslations": { "en": "Angrily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [5, 5],
+      "result": "Anxiously",
+      "resultTranslations": { "en": "Anxiously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [6, 6],
+      "result": "Awkwardly",
+      "resultTranslations": { "en": "Awkwardly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [7, 7],
+      "result": "Beautifully",
+      "resultTranslations": { "en": "Beautifully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [8, 8],
+      "result": "Bleakly",
+      "resultTranslations": { "en": "Bleakly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 9],
+      "result": "Boldly",
+      "resultTranslations": { "en": "Boldly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [10, 10],
+      "result": "Bravely",
+      "resultTranslations": { "en": "Bravely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [11, 11],
+      "result": "Busily",
+      "resultTranslations": { "en": "Busily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [12, 12],
+      "result": "Calmly",
+      "resultTranslations": { "en": "Calmly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [13, 13],
+      "result": "Carefully",
+      "resultTranslations": { "en": "Carefully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [14, 14],
+      "result": "Carelessly",
+      "resultTranslations": { "en": "Carelessly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [15, 15],
+      "result": "Cautiously",
+      "resultTranslations": { "en": "Cautiously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [16, 16],
+      "result": "Ceaselessly",
+      "resultTranslations": { "en": "Ceaselessly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 17],
+      "result": "Cheerfully",
+      "resultTranslations": { "en": "Cheerfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [18, 18],
+      "result": "Combatively",
+      "resultTranslations": { "en": "Combatively" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [19, 19],
+      "result": "Coolly",
+      "resultTranslations": { "en": "Coolly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [20, 20],
+      "result": "Crazily",
+      "resultTranslations": { "en": "Crazily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 21],
+      "result": "Curiously",
+      "resultTranslations": { "en": "Curiously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [22, 22],
+      "result": "Daintily",
+      "resultTranslations": { "en": "Daintily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [23, 23],
+      "result": "Dangerously",
+      "resultTranslations": { "en": "Dangerously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [24, 24],
+      "result": "Defiantly",
+      "resultTranslations": { "en": "Defiantly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 25],
+      "result": "Deliberately",
+      "resultTranslations": { "en": "Deliberately" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [26, 26],
+      "result": "Delightfully",
+      "resultTranslations": { "en": "Delightfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [27, 27],
+      "result": "Dimly",
+      "resultTranslations": { "en": "Dimly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [28, 28],
+      "result": "Efficiently",
+      "resultTranslations": { "en": "Efficiently" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [29, 29],
+      "result": "Energetically",
+      "resultTranslations": { "en": "Energetically" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [30, 30],
+      "result": "Enormously",
+      "resultTranslations": { "en": "Enormously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [31, 31],
+      "result": "Enthusiastically",
+      "resultTranslations": { "en": "Enthusiastically" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [32, 32],
+      "result": "Excitedly",
+      "resultTranslations": { "en": "Excitedly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [33, 33],
+      "result": "Fearfully",
+      "resultTranslations": { "en": "Fearfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 34],
+      "result": "Ferociously",
+      "resultTranslations": { "en": "Ferociously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [35, 35],
+      "result": "Fiercely",
+      "resultTranslations": { "en": "Fiercely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [36, 36],
+      "result": "Foolishly",
+      "resultTranslations": { "en": "Foolishly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [37, 37],
+      "result": "Fortunately",
+      "resultTranslations": { "en": "Fortunately" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [38, 38],
+      "result": "Frantically",
+      "resultTranslations": { "en": "Frantically" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [39, 39],
+      "result": "Freely",
+      "resultTranslations": { "en": "Freely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [40, 40],
+      "result": "Frighteningly",
+      "resultTranslations": { "en": "Frighteningly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 41],
+      "result": "Fully",
+      "resultTranslations": { "en": "Fully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [42, 42],
+      "result": "Generously",
+      "resultTranslations": { "en": "Generously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [43, 43],
+      "result": "Gently",
+      "resultTranslations": { "en": "Gently" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [44, 44],
+      "result": "Gladly",
+      "resultTranslations": { "en": "Gladly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [45, 45],
+      "result": "Gracefully",
+      "resultTranslations": { "en": "Gracefully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [46, 46],
+      "result": "Gratefully",
+      "resultTranslations": { "en": "Gratefully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [47, 47],
+      "result": "Happily",
+      "resultTranslations": { "en": "Happily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [48, 48],
+      "result": "Hastily",
+      "resultTranslations": { "en": "Hastily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [49, 49],
+      "result": "Healthily",
+      "resultTranslations": { "en": "Healthily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [50, 50],
+      "result": "Helpfully",
+      "resultTranslations": { "en": "Helpfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 51],
+      "result": "Helplessly",
+      "resultTranslations": { "en": "Helplessly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [52, 52],
+      "result": "Hopelessly",
+      "resultTranslations": { "en": "Hopelessly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [53, 53],
+      "result": "Innocently",
+      "resultTranslations": { "en": "Innocently" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [54, 54],
+      "result": "Intensely",
+      "resultTranslations": { "en": "Intensely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [55, 55],
+      "result": "Interestingly",
+      "resultTranslations": { "en": "Interestingly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [56, 56],
+      "result": "Irritatingly",
+      "resultTranslations": { "en": "Irritatingly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [57, 57],
+      "result": "Jovially",
+      "resultTranslations": { "en": "Jovially" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [58, 58],
+      "result": "Joyfully",
+      "resultTranslations": { "en": "Joyfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [59, 59],
+      "result": "Judgementally",
+      "resultTranslations": { "en": "Judgementally" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [60, 60],
+      "result": "Kindly",
+      "resultTranslations": { "en": "Kindly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 61],
+      "result": "Kookily",
+      "resultTranslations": { "en": "Kookily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [62, 62],
+      "result": "Lazily",
+      "resultTranslations": { "en": "Lazily" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [63, 63],
+      "result": "Lightly",
+      "resultTranslations": { "en": "Lightly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [64, 64],
+      "result": "Loosely",
+      "resultTranslations": { "en": "Loosely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [65, 65],
+      "result": "Loudly",
+      "resultTranslations": { "en": "Loudly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [66, 66],
+      "result": "Lovingly",
+      "resultTranslations": { "en": "Lovingly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [67, 67],
+      "result": "Loyally",
+      "resultTranslations": { "en": "Loyally" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 68],
+      "result": "Majestically",
+      "resultTranslations": { "en": "Majestically" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [69, 69],
+      "result": "Meaningfully",
+      "resultTranslations": { "en": "Meaningfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [70, 70],
+      "result": "Mechanically",
+      "resultTranslations": { "en": "Mechanically" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 71],
+      "result": "Miserably",
+      "resultTranslations": { "en": "Miserably" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [72, 72],
+      "result": "Mockingly",
+      "resultTranslations": { "en": "Mockingly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [73, 73],
+      "result": "Mysteriously",
+      "resultTranslations": { "en": "Mysteriously" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [74, 74],
+      "result": "Naturally",
+      "resultTranslations": { "en": "Naturally" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [75, 75],
+      "result": "Neatly",
+      "resultTranslations": { "en": "Neatly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 76],
+      "result": "Nicely",
+      "resultTranslations": { "en": "Nicely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [77, 77],
+      "result": "Oddly",
+      "resultTranslations": { "en": "Oddly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [78, 78],
+      "result": "Offensively",
+      "resultTranslations": { "en": "Offensively" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [79, 79],
+      "result": "Officially",
+      "resultTranslations": { "en": "Officially" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [80, 80],
+      "result": "Partially",
+      "resultTranslations": { "en": "Partially" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 81],
+      "result": "Peacefully",
+      "resultTranslations": { "en": "Peacefully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [82, 82],
+      "result": "Perfectly",
+      "resultTranslations": { "en": "Perfectly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [83, 83],
+      "result": "Playfully",
+      "resultTranslations": { "en": "Playfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [84, 84],
+      "result": "Politely",
+      "resultTranslations": { "en": "Politely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [85, 85],
+      "result": "Positively",
+      "resultTranslations": { "en": "Positively" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [86, 86],
+      "result": "Powerfully",
+      "resultTranslations": { "en": "Powerfully" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [87, 87],
+      "result": "Quaintly",
+      "resultTranslations": { "en": "Quaintly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [88, 88],
+      "result": "Quarrelsomely",
+      "resultTranslations": { "en": "Quarrelsomely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [89, 89],
+      "result": "Quietly",
+      "resultTranslations": { "en": "Quietly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [90, 90],
+      "result": "Roughly",
+      "resultTranslations": { "en": "Roughly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 91],
+      "result": "Rudely",
+      "resultTranslations": { "en": "Rudely" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [92, 92],
+      "result": "Ruthlessly",
+      "resultTranslations": { "en": "Ruthlessly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [93, 93],
+      "result": "Slowly",
+      "resultTranslations": { "en": "Slowly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [94, 94],
+      "result": "Softly",
+      "resultTranslations": { "en": "Softly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [95, 95],
+      "result": "Swiftly",
+      "resultTranslations": { "en": "Swiftly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [96, 96],
+      "result": "Threateningly",
+      "resultTranslations": { "en": "Threateningly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [97, 97],
+      "result": "Very",
+      "resultTranslations": { "en": "Very" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [98, 98],
+      "result": "Violently",
+      "resultTranslations": { "en": "Violently" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [99, 99],
+      "result": "Wildly",
+      "resultTranslations": { "en": "Wildly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [100, 100],
+      "result": "Yieldingly",
+      "resultTranslations": { "en": "Yieldingly" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}
+

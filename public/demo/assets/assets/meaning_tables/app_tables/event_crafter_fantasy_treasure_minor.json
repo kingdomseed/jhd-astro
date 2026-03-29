@@ -1,0 +1,394 @@
+{
+  "id": "event_crafter_fantasy_treasure_minor",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Fantasy Treasure: Minor",
+  "displayNameTranslations": {
+    "en": "Fantasy Treasure: Minor"
+  },
+  "description": "Structured Category for the Fantasy Treasure Event Crafter Situation. Roll when your PC finds a treasure. Minor Treasures scale from mundane items to minor magic items as Progress Points increase. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Structured Category for the Fantasy Treasure Event Crafter Situation. Roll when your PC finds a treasure. Minor Treasures scale from mundane items to minor magic items as Progress Points increase. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "fantasy-treasure",
+    "loot",
+    "structured"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Useful mundane item",
+      "resultTranslations": {
+        "en": "Useful mundane item"
+      },
+      "description": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration.",
+      "descriptionTranslations": {
+        "en": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Useful mundane item",
+      "resultTranslations": {
+        "en": "Useful mundane item"
+      },
+      "description": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration.",
+      "descriptionTranslations": {
+        "en": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Useful mundane item",
+      "resultTranslations": {
+        "en": "Useful mundane item"
+      },
+      "description": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration.",
+      "descriptionTranslations": {
+        "en": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Mundane armor",
+      "resultTranslations": {
+        "en": "Mundane armor"
+      },
+      "description": "A piece of non-magical armor: shield, helmet, full set of armor, or a piece of armor.",
+      "descriptionTranslations": {
+        "en": "A piece of non-magical armor: shield, helmet, full set of armor, or a piece of armor."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret what the treasure is.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret what the treasure is."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Mundane weapon",
+      "resultTranslations": {
+        "en": "Mundane weapon"
+      },
+      "description": "A non-magical weapon: sword, battle axe, dagger, or similar.",
+      "descriptionTranslations": {
+        "en": "A non-magical weapon: sword, battle axe, dagger, or similar."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Handful of coins",
+      "resultTranslations": {
+        "en": "Handful of coins"
+      },
+      "description": "Money, but not a lot. A couple of gold pieces, a small bag of silver coins, or a small chest with assorted currencies.",
+      "descriptionTranslations": {
+        "en": "Money, but not a lot. A couple of gold pieces, a small bag of silver coins, or a small chest with assorted currencies."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Small amount of gems",
+      "resultTranslations": {
+        "en": "Small amount of gems"
+      },
+      "description": "Gems and precious stones, but not much. There may only be one and of suspect quality.",
+      "descriptionTranslations": {
+        "en": "Gems and precious stones, but not much. There may only be one and of suspect quality."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Small amount of valued goods",
+      "resultTranslations": {
+        "en": "Small amount of valued goods"
+      },
+      "description": "Something semi-valuable that isn't direct currency. A work of art, or a commodity valuable on the open market.",
+      "descriptionTranslations": {
+        "en": "Something semi-valuable that isn't direct currency. A work of art, or a commodity valuable on the open market."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Special",
+      "resultTranslations": {
+        "en": "Special"
+      },
+      "description": "Roll on the Special Elements table.",
+      "descriptionTranslations": {
+        "en": "Roll on the Special Elements table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "event_crafter_special_elements"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Useful mundane item",
+      "resultTranslations": {
+        "en": "Useful mundane item"
+      },
+      "description": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration.",
+      "descriptionTranslations": {
+        "en": "A mundane item that has some usefulness. Could be bought from any street merchant. Roll on Objects Meaning table for inspiration."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret what the treasure is.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret what the treasure is."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Mundane weapon",
+      "resultTranslations": {
+        "en": "Mundane weapon"
+      },
+      "description": "A non-magical weapon: sword, battle axe, dagger, or similar.",
+      "descriptionTranslations": {
+        "en": "A non-magical weapon: sword, battle axe, dagger, or similar."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Roll Twice",
+      "resultTranslations": {
+        "en": "Roll Twice"
+      },
+      "description": "Roll again twice in this Category and use both results. If you get Roll Twice again, ignore it and roll again.",
+      "descriptionTranslations": {
+        "en": "Roll again twice in this Category and use both results. If you get Roll Twice again, ignore it and roll again."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Minor magic potion",
+      "resultTranslations": {
+        "en": "Minor magic potion"
+      },
+      "description": "A minor magic potion of some sort.",
+      "descriptionTranslations": {
+        "en": "A minor magic potion of some sort."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Minor magic scroll",
+      "resultTranslations": {
+        "en": "Minor magic scroll"
+      },
+      "description": "Parchment with a spell written on it, for those who know what to do with it.",
+      "descriptionTranslations": {
+        "en": "Parchment with a spell written on it, for those who know what to do with it."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Minor magic object",
+      "resultTranslations": {
+        "en": "Minor magic object"
+      },
+      "description": "An object that may look mundane but has magical properties. Roll on Objects Meaning table for what it is, and Actions tables for what it does.",
+      "descriptionTranslations": {
+        "en": "An object that may look mundane but has magical properties. Roll on Objects Meaning table for what it is, and Actions tables for what it does."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Minor magic armor",
+      "resultTranslations": {
+        "en": "Minor magic armor"
+      },
+      "description": "A piece of armor that has been enchanted with minor magical properties.",
+      "descriptionTranslations": {
+        "en": "A piece of armor that has been enchanted with minor magical properties."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Minor magic weapon",
+      "resultTranslations": {
+        "en": "Minor magic weapon"
+      },
+      "description": "A weapon that has been enchanted with minor magical properties.",
+      "descriptionTranslations": {
+        "en": "A weapon that has been enchanted with minor magical properties."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Minor treasure horde",
+      "resultTranslations": {
+        "en": "Minor treasure horde"
+      },
+      "description": "A large stash of minor treasure. Roll 3 additional times in this Category and combine all results.",
+      "descriptionTranslations": {
+        "en": "A large stash of minor treasure. Roll 3 additional times in this Category and combine all results."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 20,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

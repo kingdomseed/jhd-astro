@@ -1,0 +1,241 @@
+{
+  "id": "meaningful_event_focus_20",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "20% Meaningful Event Focus Table",
+  "displayNameTranslations": {
+    "en": "20% Meaningful Event Focus Table",
+    "pt": "20% Tabela de Foco de Evento Significativo"
+  },
+  "description": "A meaningful event focus table with a 20% chance of a meaningful event. MM Compilation 2.",
+  "descriptionTranslations": {
+    "en": "A meaningful event focus table with a 20% chance of a meaningful event. MM Compilation 2.",
+    "pt": "Uma tabela de foco de evento significativo com uma chance de 20% de um evento significativo. Mythic Magazine Compilado 2"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 2",
+  "tags": [
+    "event-focus",
+    "meaningful",
+    "significant",
+    "plot-relevant"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "result": "Meaningful Event",
+      "resultTranslations": {
+        "en": "Meaningful Event",
+        "pt": "Evento Significativo"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "result": "Remote Event",
+      "resultTranslations": {
+        "en": "Remote Event",
+        "pt": "Evento Remoto"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Ambiguous Event",
+      "resultTranslations": {
+        "en": "Ambiguous Event",
+        "pt": "Evento Ambíguo"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "Introduce a New NPC",
+      "resultTranslations": {
+        "en": "Introduce a New NPC",
+        "pt": "Introduzir uma Nova PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        51
+      ],
+      "result": "NPC Action",
+      "resultTranslations": {
+        "en": "NPC Action",
+        "pt": "Ação de PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        60
+      ],
+      "result": "NPC Negative",
+      "resultTranslations": {
+        "en": "NPC Negative",
+        "pt": "Negativo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        68
+      ],
+      "result": "NPC Positive",
+      "resultTranslations": {
+        "en": "NPC Positive",
+        "pt": "Positivo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        79
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative",
+        "pt": "Negativo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        84
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive",
+        "pt": "Positivo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        92
+      ],
+      "result": "Move Toward a Thread",
+      "resultTranslations": {
+        "en": "Move Toward a Thread",
+        "pt": "Avançar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        97
+      ],
+      "result": "Move Away From a Thread",
+      "resultTranslations": {
+        "en": "Move Away From a Thread",
+        "pt": "Recuar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        100
+      ],
+      "result": "Close a Thread",
+      "resultTranslations": {
+        "en": "Close a Thread",
+        "pt": "Encerrar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

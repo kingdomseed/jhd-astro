@@ -1,0 +1,1530 @@
+{
+  "id": "supernatural_influence",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Supernatural Influence",
+  "displayNameTranslations": {
+    "pt": "Influência Sobrenatural",
+    "en": "Supernatural Influence"
+  },
+  "description": "This table can be used as inspiration for when you know something supernatural is afoot, but you’re not sure where it’s coming from. This table can inspire a wide range of results, such as spells run amok to ancient family heirlooms giving off evil energy.",
+  "descriptionTranslations": {
+    "en": "This table can be used as inspiration for when you know something supernatural is afoot, but you’re not sure where it’s coming from. This table can inspire a wide range of results, such as spells run amok to ancient family heirlooms giving off evil energy."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 7",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Aggressive",
+      "resultTranslations": {
+        "pt": "Agressiva",
+        "en": "Aggressive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Alien",
+      "resultTranslations": {
+        "pt": "Alienígena",
+        "en": "Alien"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Angelic",
+      "resultTranslations": {
+        "pt": "Angelical",
+        "en": "Angelic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Aquatic",
+      "resultTranslations": {
+        "pt": "Aquática",
+        "en": "Aquatic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Artifact",
+      "resultTranslations": {
+        "pt": "Artefato",
+        "en": "Artifact"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Artificial",
+      "resultTranslations": {
+        "pt": "Artificial",
+        "en": "Artificial"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Barrier",
+      "resultTranslations": {
+        "pt": "Barreira",
+        "en": "Barrier"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Betrayal",
+      "resultTranslations": {
+        "pt": "Traição",
+        "en": "Betrayal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Bizarre",
+      "resultTranslations": {
+        "pt": "Bizarra",
+        "en": "Bizarre"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Book",
+      "resultTranslations": {
+        "pt": "Livro",
+        "en": "Book"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Building",
+      "resultTranslations": {
+        "pt": "Construção",
+        "en": "Building"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Cave",
+      "resultTranslations": {
+        "pt": "Caverna",
+        "en": "Cave"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Cemetery",
+      "resultTranslations": {
+        "pt": "Cemitério",
+        "en": "Cemetery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Clothing",
+      "resultTranslations": {
+        "pt": "Vestuário",
+        "en": "Clothing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Corruption",
+      "resultTranslations": {
+        "pt": "Corrupção",
+        "en": "Corruption"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Cosmic",
+      "resultTranslations": {
+        "pt": "Cósmica",
+        "en": "Cosmic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Creepy",
+      "resultTranslations": {
+        "pt": "Tenebrosa",
+        "en": "Creepy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Curse",
+      "resultTranslations": {
+        "pt": "Maldição",
+        "en": "Curse"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Damaged",
+      "resultTranslations": {
+        "pt": "Danificada",
+        "en": "Damaged"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Dangerous",
+      "resultTranslations": {
+        "pt": "Perigosa",
+        "en": "Dangerous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Dark",
+      "resultTranslations": {
+        "pt": "Escura",
+        "en": "Dark"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Death",
+      "resultTranslations": {
+        "pt": "Morte",
+        "en": "Death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Deity",
+      "resultTranslations": {
+        "pt": "Divindade",
+        "en": "Deity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Demon",
+      "resultTranslations": {
+        "pt": "Demônio",
+        "en": "Demon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Dimensions",
+      "resultTranslations": {
+        "pt": "Dimensões",
+        "en": "Dimensions"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Disease",
+      "resultTranslations": {
+        "pt": "Doença",
+        "en": "Disease"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Emotion",
+      "resultTranslations": {
+        "pt": "Emoção",
+        "en": "Emotion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Energy",
+      "resultTranslations": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Entity",
+      "resultTranslations": {
+        "pt": "Entidade",
+        "en": "Entity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Experiment",
+      "resultTranslations": {
+        "pt": "Experimento",
+        "en": "Experiment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Fairy",
+      "resultTranslations": {
+        "pt": "Fada",
+        "en": "Fairy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Family",
+      "resultTranslations": {
+        "pt": "Família",
+        "en": "Family"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Fierce",
+      "resultTranslations": {
+        "pt": "Indômita",
+        "en": "Fierce"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Frightening",
+      "resultTranslations": {
+        "pt": "Amedrontadora",
+        "en": "Frightening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Future",
+      "resultTranslations": {
+        "pt": "Futuro",
+        "en": "Future"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Ghost",
+      "resultTranslations": {
+        "pt": "Fantasma",
+        "en": "Ghost"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Hate",
+      "resultTranslations": {
+        "pt": "Ódio",
+        "en": "Hate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Historical",
+      "resultTranslations": {
+        "pt": "Histórica",
+        "en": "Historical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "History",
+      "resultTranslations": {
+        "pt": "História",
+        "en": "History"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Horrible",
+      "resultTranslations": {
+        "pt": "Horrível",
+        "en": "Horrible"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "House",
+      "resultTranslations": {
+        "pt": "Casa",
+        "en": "House"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Hunger",
+      "resultTranslations": {
+        "pt": "Fome",
+        "en": "Hunger"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Infection",
+      "resultTranslations": {
+        "pt": "Infecção",
+        "en": "Infection"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Jewelry",
+      "resultTranslations": {
+        "pt": "Joalheria",
+        "en": "Jewelry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Legend",
+      "resultTranslations": {
+        "pt": "Lenda",
+        "en": "Legend"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Lethal",
+      "resultTranslations": {
+        "pt": "Letal",
+        "en": "Lethal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Love",
+      "resultTranslations": {
+        "pt": "Amor",
+        "en": "Love"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Mage",
+      "resultTranslations": {
+        "pt": "Mago",
+        "en": "Mage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Magic",
+      "resultTranslations": {
+        "pt": "Magia",
+        "en": "Magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Mask",
+      "resultTranslations": {
+        "pt": "Máscara",
+        "en": "Mask"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Meaningful",
+      "resultTranslations": {
+        "pt": "Significativa",
+        "en": "Meaningful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Mechanical",
+      "resultTranslations": {
+        "pt": "Mecânica",
+        "en": "Mechanical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Medicine",
+      "resultTranslations": {
+        "pt": "Medicina",
+        "en": "Medicine"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Mighty",
+      "resultTranslations": {
+        "pt": "Possante",
+        "en": "Mighty"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Mocking",
+      "resultTranslations": {
+        "pt": "Zombeteira",
+        "en": "Mocking"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Modern",
+      "resultTranslations": {
+        "pt": "Moderna",
+        "en": "Modern"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Monster",
+      "resultTranslations": {
+        "pt": "Monstro",
+        "en": "Monster"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Moon",
+      "resultTranslations": {
+        "pt": "Lua",
+        "en": "Moon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Mysterious",
+      "resultTranslations": {
+        "pt": "Misteriosa",
+        "en": "Mysterious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Nature",
+      "resultTranslations": {
+        "pt": "Natureza",
+        "en": "Nature"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Object",
+      "resultTranslations": {
+        "pt": "Objeto",
+        "en": "Object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Odd",
+      "resultTranslations": {
+        "pt": "Esquisita",
+        "en": "Odd"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Official",
+      "resultTranslations": {
+        "pt": "Oficial",
+        "en": "Official"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Old",
+      "resultTranslations": {
+        "pt": "Velha",
+        "en": "Old"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Painting",
+      "resultTranslations": {
+        "pt": "Pintura",
+        "en": "Painting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Possession",
+      "resultTranslations": {
+        "pt": "Posses",
+        "en": "Possession"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Power",
+      "resultTranslations": {
+        "pt": "Poder",
+        "en": "Power"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Powerful",
+      "resultTranslations": {
+        "pt": "Poderosa",
+        "en": "Powerful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Psychic",
+      "resultTranslations": {
+        "pt": "Psíquica",
+        "en": "Psychic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Rage",
+      "resultTranslations": {
+        "pt": "Fúria",
+        "en": "Rage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Rare",
+      "resultTranslations": {
+        "pt": "Rara",
+        "en": "Rare"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Religion",
+      "resultTranslations": {
+        "pt": "Religião",
+        "en": "Religion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Ritual",
+      "resultTranslations": {
+        "pt": "Ritual",
+        "en": "Ritual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Ruined",
+      "resultTranslations": {
+        "pt": "Arruinada",
+        "en": "Ruined"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Ruthless",
+      "resultTranslations": {
+        "pt": "Implacável",
+        "en": "Ruthless"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Scary",
+      "resultTranslations": {
+        "pt": "Assustadora",
+        "en": "Scary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Science",
+      "resultTranslations": {
+        "pt": "Ciência",
+        "en": "Science"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Simple",
+      "resultTranslations": {
+        "pt": "Simples",
+        "en": "Simple"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Spell",
+      "resultTranslations": {
+        "pt": "Feitiço",
+        "en": "Spell"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Spirits",
+      "resultTranslations": {
+        "pt": "Espíritos",
+        "en": "Spirits"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Stars",
+      "resultTranslations": {
+        "pt": "Estrelas",
+        "en": "Stars"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Statue",
+      "resultTranslations": {
+        "pt": "Estátua",
+        "en": "Statue"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Stone",
+      "resultTranslations": {
+        "pt": "Pedra",
+        "en": "Stone"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Stories",
+      "resultTranslations": {
+        "pt": "Histórias",
+        "en": "Stories"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranhar",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Strong",
+      "resultTranslations": {
+        "pt": "Forte",
+        "en": "Strong"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Stylish",
+      "resultTranslations": {
+        "pt": "Estilosa",
+        "en": "Stylish"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Summoning",
+      "resultTranslations": {
+        "pt": "Convocação",
+        "en": "Summoning"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Swamp",
+      "resultTranslations": {
+        "pt": "Pântano",
+        "en": "Swamp"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Swift",
+      "resultTranslations": {
+        "pt": "Ágil",
+        "en": "Swift"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Temple",
+      "resultTranslations": {
+        "pt": "Templo",
+        "en": "Temple"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Threatening",
+      "resultTranslations": {
+        "pt": "Ameaçadora",
+        "en": "Threatening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Tradition",
+      "resultTranslations": {
+        "pt": "Tradição",
+        "en": "Tradition"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Undead",
+      "resultTranslations": {
+        "pt": "Morto-Vivo",
+        "en": "Undead"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Vampire",
+      "resultTranslations": {
+        "pt": "Vampiro",
+        "en": "Vampire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Vengeance",
+      "resultTranslations": {
+        "pt": "Vingança",
+        "en": "Vengeance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Violent",
+      "resultTranslations": {
+        "pt": "Violenta",
+        "en": "Violent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Wild",
+      "resultTranslations": {
+        "pt": "Selvagem",
+        "en": "Wild"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Young",
+      "resultTranslations": {
+        "pt": "Jovem",
+        "en": "Young"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

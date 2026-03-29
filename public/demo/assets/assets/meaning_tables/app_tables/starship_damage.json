@@ -1,0 +1,1530 @@
+{
+  "id": "starship_damage",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "technology-scifi",
+  "defaultLanguage": "en",
+  "displayName": "Starship Damage",
+  "displayNameTranslations": {
+    "pt": "Dano em Nave Estelar",
+    "en": "Starship Damage"
+  },
+  "description": "Types of damage and malfunctions that can occur on starships",
+  "descriptionTranslations": {
+    "en": "Types of damage and malfunctions that can occur on starships"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 46",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Breach",
+      "resultTranslations": {
+        "pt": "Brecha",
+        "en": "Breach"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Break",
+      "resultTranslations": {
+        "pt": "Quebrar",
+        "en": "Break"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Bridge",
+      "resultTranslations": {
+        "pt": "Ponte",
+        "en": "Bridge"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Cabin",
+      "resultTranslations": {
+        "pt": "Cabine",
+        "en": "Cabin"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Cargo",
+      "resultTranslations": {
+        "pt": "Carga",
+        "en": "Cargo"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Casualties",
+      "resultTranslations": {
+        "pt": "Baixas",
+        "en": "Casualties"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Catastrophe",
+      "resultTranslations": {
+        "pt": "Catástrofe",
+        "en": "Catastrophe"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Change",
+      "resultTranslations": {
+        "pt": "Mudar",
+        "en": "Change"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Chaos",
+      "resultTranslations": {
+        "pt": "Caos",
+        "en": "Chaos"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Communications",
+      "resultTranslations": {
+        "pt": "Comunicações",
+        "en": "Communications"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Compromised",
+      "resultTranslations": {
+        "pt": "Comprometido",
+        "en": "Compromised"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Computer",
+      "resultTranslations": {
+        "pt": "Computador",
+        "en": "Computer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Continue",
+      "resultTranslations": {
+        "pt": "Continuar",
+        "en": "Continue"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Control",
+      "resultTranslations": {
+        "pt": "Controlar",
+        "en": "Control"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Corridor",
+      "resultTranslations": {
+        "pt": "Corredor",
+        "en": "Corridor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Crew",
+      "resultTranslations": {
+        "pt": "Tripulação",
+        "en": "Crew"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Crisis",
+      "resultTranslations": {
+        "pt": "Crise",
+        "en": "Crisis"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Damage",
+      "resultTranslations": {
+        "pt": "Dano",
+        "en": "Damage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Danger",
+      "resultTranslations": {
+        "pt": "Perigo",
+        "en": "Danger"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Death",
+      "resultTranslations": {
+        "pt": "Morte",
+        "en": "Death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Decompression",
+      "resultTranslations": {
+        "pt": "Decompressão",
+        "en": "Decompression"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Decrease",
+      "resultTranslations": {
+        "pt": "Diminuir",
+        "en": "Decrease"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Defenses",
+      "resultTranslations": {
+        "pt": "Defesas",
+        "en": "Defenses"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Delay",
+      "resultTranslations": {
+        "pt": "Atrasar",
+        "en": "Delay"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Deny",
+      "resultTranslations": {
+        "pt": "Negar",
+        "en": "Deny"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Depletion",
+      "resultTranslations": {
+        "pt": "Esgotamento",
+        "en": "Depletion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Destroy",
+      "resultTranslations": {
+        "pt": "Destruir",
+        "en": "Destroy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Disable",
+      "resultTranslations": {
+        "pt": "Desabilitar",
+        "en": "Disable"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Disadvantage",
+      "resultTranslations": {
+        "pt": "Desvantagem",
+        "en": "Disadvantage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Disrupt",
+      "resultTranslations": {
+        "pt": "Interromper",
+        "en": "Disrupt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Divide",
+      "resultTranslations": {
+        "pt": "Dividir",
+        "en": "Divide"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Emergency",
+      "resultTranslations": {
+        "pt": "Emergência",
+        "en": "Emergency"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Energy",
+      "resultTranslations": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Engineering",
+      "resultTranslations": {
+        "pt": "Engenharia",
+        "en": "Engineering"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Engines",
+      "resultTranslations": {
+        "pt": "Motores",
+        "en": "Engines"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Environment",
+      "resultTranslations": {
+        "pt": "Ambiente",
+        "en": "Environment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Equipment",
+      "resultTranslations": {
+        "pt": "Equipamento",
+        "en": "Equipment"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Explosion",
+      "resultTranslations": {
+        "pt": "Explosão",
+        "en": "Explosion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Expose",
+      "resultTranslations": {
+        "pt": "Expor",
+        "en": "Expose"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Exterior",
+      "resultTranslations": {
+        "pt": "Exterior",
+        "en": "Exterior"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Failure",
+      "resultTranslations": {
+        "pt": "Fracasso",
+        "en": "Failure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Fire",
+      "resultTranslations": {
+        "pt": "Fogo",
+        "en": "Fire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Fuel",
+      "resultTranslations": {
+        "pt": "Combustível",
+        "en": "Fuel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Hangar",
+      "resultTranslations": {
+        "pt": "Hangar",
+        "en": "Hangar"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Harm",
+      "resultTranslations": {
+        "pt": "Prejudicar",
+        "en": "Harm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Health",
+      "resultTranslations": {
+        "pt": "Saúde",
+        "en": "Health"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Hinder",
+      "resultTranslations": {
+        "pt": "Atrapalhar",
+        "en": "Hinder"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Hull",
+      "resultTranslations": {
+        "pt": "Casco",
+        "en": "Hull"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Impact",
+      "resultTranslations": {
+        "pt": "Impacto",
+        "en": "Impact"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Impending",
+      "resultTranslations": {
+        "pt": "Iminente",
+        "en": "Impending"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Individual",
+      "resultTranslations": {
+        "pt": "Individual",
+        "en": "Individual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Interior",
+      "resultTranslations": {
+        "pt": "Interior",
+        "en": "Interior"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Life-Support",
+      "resultTranslations": {
+        "pt": "Suporte de Vida",
+        "en": "Life-Support"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Limited",
+      "resultTranslations": {
+        "pt": "Limitada",
+        "en": "Limited"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Loss",
+      "resultTranslations": {
+        "pt": "Perda",
+        "en": "Loss"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Medical",
+      "resultTranslations": {
+        "pt": "Médico",
+        "en": "Medical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Minimal",
+      "resultTranslations": {
+        "pt": "Mínimo",
+        "en": "Minimal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Misfortune",
+      "resultTranslations": {
+        "pt": "Infortúnio",
+        "en": "Misfortune"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Mysterious",
+      "resultTranslations": {
+        "pt": "Misterioso",
+        "en": "Mysterious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Navigation",
+      "resultTranslations": {
+        "pt": "Navegação",
+        "en": "Navigation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Needs",
+      "resultTranslations": {
+        "pt": "Necessidades",
+        "en": "Needs"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Normal",
+      "resultTranslations": {
+        "pt": "Normal",
+        "en": "Normal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Offline",
+      "resultTranslations": {
+        "pt": "Desligado",
+        "en": "Offline"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Open",
+      "resultTranslations": {
+        "pt": "Abrir",
+        "en": "Open"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Outside",
+      "resultTranslations": {
+        "pt": "Fora",
+        "en": "Outside"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "People",
+      "resultTranslations": {
+        "pt": "Pessoas",
+        "en": "People"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Portal",
+      "resultTranslations": {
+        "pt": "Portal",
+        "en": "Portal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Power",
+      "resultTranslations": {
+        "pt": "Poder",
+        "en": "Power"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Protection",
+      "resultTranslations": {
+        "pt": "Proteção",
+        "en": "Protection"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Quarters",
+      "resultTranslations": {
+        "pt": "Alojamentos",
+        "en": "Quarters"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Release",
+      "resultTranslations": {
+        "pt": "Soltar",
+        "en": "Release"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Resources",
+      "resultTranslations": {
+        "pt": "Recursos",
+        "en": "Resources"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Ruin",
+      "resultTranslations": {
+        "pt": "Arruinar",
+        "en": "Ruin"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Rupture",
+      "resultTranslations": {
+        "pt": "Ruptura",
+        "en": "Rupture"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Safety",
+      "resultTranslations": {
+        "pt": "Segurança",
+        "en": "Safety"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Science",
+      "resultTranslations": {
+        "pt": "Ciência",
+        "en": "Science"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Sensors",
+      "resultTranslations": {
+        "pt": "Sensores",
+        "en": "Sensors"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Separate",
+      "resultTranslations": {
+        "pt": "Separar",
+        "en": "Separate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Shields",
+      "resultTranslations": {
+        "pt": "Escudos",
+        "en": "Shields"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Start",
+      "resultTranslations": {
+        "pt": "Começar",
+        "en": "Start"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Stop",
+      "resultTranslations": {
+        "pt": "Parar",
+        "en": "Stop"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Storage",
+      "resultTranslations": {
+        "pt": "Armazenamento",
+        "en": "Storage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranhar",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Strength",
+      "resultTranslations": {
+        "pt": "Força",
+        "en": "Strength"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Structure",
+      "resultTranslations": {
+        "pt": "Estrutura",
+        "en": "Structure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Struggle",
+      "resultTranslations": {
+        "pt": "Esforço",
+        "en": "Struggle"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Suffering",
+      "resultTranslations": {
+        "pt": "Sofrimento",
+        "en": "Suffering"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Systems",
+      "resultTranslations": {
+        "pt": "Sistemas",
+        "en": "Systems"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Targeting",
+      "resultTranslations": {
+        "pt": "Mira",
+        "en": "Targeting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Technology",
+      "resultTranslations": {
+        "pt": "Tecnologia",
+        "en": "Technology"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Threaten",
+      "resultTranslations": {
+        "pt": "Ameaça",
+        "en": "Threaten"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Transportation",
+      "resultTranslations": {
+        "pt": "Transporte",
+        "en": "Transportation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Trapped",
+      "resultTranslations": {
+        "pt": "Preso",
+        "en": "Trapped"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Trouble",
+      "resultTranslations": {
+        "pt": "Encrenca",
+        "en": "Trouble"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Valuables",
+      "resultTranslations": {
+        "pt": "Bens de Valor",
+        "en": "Valuables"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Vulnerability",
+      "resultTranslations": {
+        "pt": "Vulnerabilidade",
+        "en": "Vulnerability"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Weaken",
+      "resultTranslations": {
+        "pt": "Enfraquecer",
+        "en": "Weaken"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Weapons",
+      "resultTranslations": {
+        "pt": "Armas",
+        "en": "Weapons"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Wounded",
+      "resultTranslations": {
+        "pt": "Ferida",
+        "en": "Wounded"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

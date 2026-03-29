@@ -1,0 +1,247 @@
+{
+  "id": "central_society_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Central Society Focus",
+  "displayNameTranslations": {
+    "en": "Central Society Focus"
+  },
+  "description": "Determines the type and nature of the central society in a fantasy world.",
+  "descriptionTranslations": {
+    "en": "Determines the type and nature of the central society in a fantasy world."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "society",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        4
+      ],
+      "result": "Village: Our story begins in a humble village, probably in the middle of nowhere",
+      "resultTranslations": {
+        "en": "Village: Our story begins in a humble village, probably in the middle of nowhere"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        8
+      ],
+      "result": "Town: This is a town, greater than a village but much smaller than a city",
+      "resultTranslations": {
+        "en": "Town: This is a town, greater than a village but much smaller than a city"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        16
+      ],
+      "result": "City: This is a city in the fantasy world, an urban center of dense population. This is the kind of place where wealth, opportunity, and danger can be found",
+      "resultTranslations": {
+        "en": "City: This is a city in the fantasy world, an urban center of dense population. This is the kind of place where wealth, opportunity, and danger can be found"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        28
+      ],
+      "result": "Nation: The Central Society focuses on the summary of an entire nation. There are cities, towns, and villages within this nation, but we're going to summarize the overall nation itself. This may mean that the Player Character is already familiar with the nation and many places within it",
+      "resultTranslations": {
+        "en": "Nation: The Central Society focuses on the summary of an entire nation. There are cities, towns, and villages within this nation, but we're going to summarize the overall nation itself. This may mean that the Player Character is already familiar with the nation and many places within it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        40
+      ],
+      "result": "Autocracy: Whatever the size and scope of the Central Society, it is ruled by a single individual. This may be a king or other type of dictator",
+      "resultTranslations": {
+        "en": "Autocracy: Whatever the size and scope of the Central Society, it is ruled by a single individual. This may be a king or other type of dictator"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        48
+      ],
+      "result": "Aristocracy: Whatever the size and scope of the Central Society, it is ruled by an elite group such as a royal family, a merchant group, or other small and exclusive collective",
+      "resultTranslations": {
+        "en": "Aristocracy: Whatever the size and scope of the Central Society, it is ruled by an elite group such as a royal family, a merchant group, or other small and exclusive collective"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        52
+      ],
+      "result": "Religious: The Central Society is religious in nature, such as a cult or a theocracy",
+      "resultTranslations": {
+        "en": "Religious: The Central Society is religious in nature, such as a cult or a theocracy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        56
+      ],
+      "result": "Rule of Law: The Central Society has laws, institutions to create and enforce those laws, and a distributed Democratic government",
+      "resultTranslations": {
+        "en": "Rule of Law: The Central Society has laws, institutions to create and enforce those laws, and a distributed Democratic government"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        64
+      ],
+      "result": "Military: The Central Society is highly militaristic",
+      "resultTranslations": {
+        "en": "Military: The Central Society is highly militaristic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        68
+      ],
+      "result": "Exclusive Guild: The Central Society is a guild or collective of like-minded people within the larger society, such as a criminal organization or society of mages",
+      "resultTranslations": {
+        "en": "Exclusive Guild: The Central Society is a guild or collective of like-minded people within the larger society, such as a criminal organization or society of mages"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        78
+      ],
+      "result": "Medieval: The Central Society is patterned after medieval times, with feudal structure, knights or samurai, and other familiar medieval tropes",
+      "resultTranslations": {
+        "en": "Medieval: The Central Society is patterned after medieval times, with feudal structure, knights or samurai, and other familiar medieval tropes"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        82
+      ],
+      "result": "Maritime: The Central Society is coastal or water focused",
+      "resultTranslations": {
+        "en": "Maritime: The Central Society is coastal or water focused"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        86
+      ],
+      "result": "Species: Species and races abound in this world, with many societies focused on a species's culture. The Central Society is one of those. For instance, elves, dwarves, or fairies",
+      "resultTranslations": {
+        "en": "Species: Species and races abound in this world, with many societies focused on a species's culture. The Central Society is one of those. For instance, elves, dwarves, or fairies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        90
+      ],
+      "result": "Harsh Land: The Central Society is highly defined by the harsh geography it's located in, such as a barren desert, high in rocky mountains, or deep in frozen steppes",
+      "resultTranslations": {
+        "en": "Harsh Land: The Central Society is highly defined by the harsh geography it's located in, such as a barren desert, high in rocky mountains, or deep in frozen steppes"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

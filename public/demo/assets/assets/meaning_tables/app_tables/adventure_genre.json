@@ -1,0 +1,1530 @@
+{
+  "id": "adventure_genre",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Adventure Genre",
+  "displayNameTranslations": {
+    "pt": "Gênero de Aventura",
+    "en": "Adventure Genre"
+  },
+  "description": "A table for determining the genre or theme of an adventure",
+  "descriptionTranslations": {
+    "en": "A table for determining the genre or theme of an adventure"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 7",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Action",
+      "resultTranslations": {
+        "pt": "Ação",
+        "en": "Action"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Adventure",
+      "resultTranslations": {
+        "pt": "Aventura",
+        "en": "Adventure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Agents",
+      "resultTranslations": {
+        "pt": "Agentes",
+        "en": "Agents"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Aliens",
+      "resultTranslations": {
+        "pt": "Alienígenas",
+        "en": "Aliens"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Animals",
+      "resultTranslations": {
+        "pt": "Animais",
+        "en": "Animals"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Aquatic",
+      "resultTranslations": {
+        "pt": "Aquática",
+        "en": "Aquatic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Classic",
+      "resultTranslations": {
+        "pt": "Clássica",
+        "en": "Classic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Combat",
+      "resultTranslations": {
+        "pt": "Combate",
+        "en": "Combat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Commerce",
+      "resultTranslations": {
+        "pt": "Comércio",
+        "en": "Commerce"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Communities",
+      "resultTranslations": {
+        "pt": "Comunidades",
+        "en": "Communities"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Contemporary",
+      "resultTranslations": {
+        "pt": "Contemporânea",
+        "en": "Contemporary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Corporations",
+      "resultTranslations": {
+        "pt": "Corporações",
+        "en": "Corporations"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Cosmic",
+      "resultTranslations": {
+        "pt": "Cósmica",
+        "en": "Cosmic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Cozy",
+      "resultTranslations": {
+        "pt": "Confortável",
+        "en": "Cozy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Crime",
+      "resultTranslations": {
+        "pt": "Crime",
+        "en": "Crime"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Cybernetic",
+      "resultTranslations": {
+        "pt": "Cibernética",
+        "en": "Cybernetic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Demons",
+      "resultTranslations": {
+        "pt": "Demônios",
+        "en": "Demons"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Derivative",
+      "resultTranslations": {
+        "pt": "Derivativa",
+        "en": "Derivative"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Dinosaurs",
+      "resultTranslations": {
+        "pt": "Dinossauros",
+        "en": "Dinosaurs"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Doomed",
+      "resultTranslations": {
+        "pt": "Condenada",
+        "en": "Doomed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Dystopian",
+      "resultTranslations": {
+        "pt": "Distópica",
+        "en": "Dystopian"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Escape",
+      "resultTranslations": {
+        "pt": "Escapar",
+        "en": "Escape"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Espionage",
+      "resultTranslations": {
+        "pt": "Espionagem",
+        "en": "Espionage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Exploration",
+      "resultTranslations": {
+        "pt": "Exploração",
+        "en": "Exploration"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Factions",
+      "resultTranslations": {
+        "pt": "Facções",
+        "en": "Factions"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Fairytale",
+      "resultTranslations": {
+        "pt": "Contos de Fadas",
+        "en": "Fairytale"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Fantastical",
+      "resultTranslations": {
+        "pt": "Fantástica",
+        "en": "Fantastical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Fantasy",
+      "resultTranslations": {
+        "pt": "Fantasia",
+        "en": "Fantasy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Freedom",
+      "resultTranslations": {
+        "pt": "Liberdade",
+        "en": "Freedom"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Future",
+      "resultTranslations": {
+        "pt": "Futuro",
+        "en": "Future"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Geographic",
+      "resultTranslations": {
+        "pt": "Geográfica",
+        "en": "Geographic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Ghosts",
+      "resultTranslations": {
+        "pt": "Fantasmas",
+        "en": "Ghosts"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Gods",
+      "resultTranslations": {
+        "pt": "Deuses",
+        "en": "Gods"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Gothic",
+      "resultTranslations": {
+        "pt": "Gótica",
+        "en": "Gothic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Government",
+      "resultTranslations": {
+        "pt": "Governo",
+        "en": "Government"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Grim",
+      "resultTranslations": {
+        "pt": "Sinistra",
+        "en": "Grim"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Gritty",
+      "resultTranslations": {
+        "pt": "Suja",
+        "en": "Gritty"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Heist",
+      "resultTranslations": {
+        "pt": "Golpe",
+        "en": "Heist"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Heroic",
+      "resultTranslations": {
+        "pt": "Heroica",
+        "en": "Heroic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Historical",
+      "resultTranslations": {
+        "pt": "Histórica",
+        "en": "Historical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Horror",
+      "resultTranslations": {
+        "pt": "Horror",
+        "en": "Horror"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Humorous",
+      "resultTranslations": {
+        "pt": "Bem-Humorada",
+        "en": "Humorous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Hybrid",
+      "resultTranslations": {
+        "pt": "Híbrida",
+        "en": "Hybrid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Invasion",
+      "resultTranslations": {
+        "pt": "Invasão",
+        "en": "Invasion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Investigative",
+      "resultTranslations": {
+        "pt": "Investigativa",
+        "en": "Investigative"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Law",
+      "resultTranslations": {
+        "pt": "Lei",
+        "en": "Law"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Legends",
+      "resultTranslations": {
+        "pt": "Lendas",
+        "en": "Legends"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Magic",
+      "resultTranslations": {
+        "pt": "Magia",
+        "en": "Magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Martial-Arts",
+      "resultTranslations": {
+        "pt": "Artes Marciais",
+        "en": "Martial-Arts"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Mecha",
+      "resultTranslations": {
+        "pt": "Mecha",
+        "en": "Mecha"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Medieval",
+      "resultTranslations": {
+        "pt": "Medieval",
+        "en": "Medieval"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Mercenary",
+      "resultTranslations": {
+        "pt": "Mercenária",
+        "en": "Mercenary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Monsters",
+      "resultTranslations": {
+        "pt": "Monstros",
+        "en": "Monsters"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Mutation",
+      "resultTranslations": {
+        "pt": "Mutação",
+        "en": "Mutation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Mystery",
+      "resultTranslations": {
+        "pt": "Mistério",
+        "en": "Mystery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Nautical",
+      "resultTranslations": {
+        "pt": "Náutica",
+        "en": "Nautical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Occult",
+      "resultTranslations": {
+        "pt": "Ocultismo",
+        "en": "Occult"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Outlaws",
+      "resultTranslations": {
+        "pt": "Fora da Lei",
+        "en": "Outlaws"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Parody",
+      "resultTranslations": {
+        "pt": "Paródia",
+        "en": "Parody"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Pirates",
+      "resultTranslations": {
+        "pt": "Piratas",
+        "en": "Pirates"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Post-Apocalypse",
+      "resultTranslations": {
+        "pt": "Pós-Apocalíptica",
+        "en": "Post-Apocalypse"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Powers",
+      "resultTranslations": {
+        "pt": "Poderes",
+        "en": "Powers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Prehistoric",
+      "resultTranslations": {
+        "pt": "Pré-Histórica",
+        "en": "Prehistoric"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Pulp",
+      "resultTranslations": {
+        "pt": "Pulp",
+        "en": "Pulp"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Quest",
+      "resultTranslations": {
+        "pt": "Missão",
+        "en": "Quest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Realistic",
+      "resultTranslations": {
+        "pt": "Realista",
+        "en": "Realistic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Religion",
+      "resultTranslations": {
+        "pt": "Religião",
+        "en": "Religion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Robots",
+      "resultTranslations": {
+        "pt": "Robôs",
+        "en": "Robots"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Rural",
+      "resultTranslations": {
+        "pt": "Rural",
+        "en": "Rural"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Scary",
+      "resultTranslations": {
+        "pt": "Assustadora",
+        "en": "Scary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Scavenging",
+      "resultTranslations": {
+        "pt": "Saque",
+        "en": "Scavenging"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "School",
+      "resultTranslations": {
+        "pt": "Escola",
+        "en": "School"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Sci-Fi",
+      "resultTranslations": {
+        "pt": "Sci-Fi",
+        "en": "Sci-Fi"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Ships",
+      "resultTranslations": {
+        "pt": "Naves",
+        "en": "Ships"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Small-Town",
+      "resultTranslations": {
+        "pt": "Vilarejo",
+        "en": "Small-Town"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Social",
+      "resultTranslations": {
+        "pt": "Social",
+        "en": "Social"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Soldiers",
+      "resultTranslations": {
+        "pt": "Soldados",
+        "en": "Soldiers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Space",
+      "resultTranslations": {
+        "pt": "Espaço",
+        "en": "Space"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Steampunk",
+      "resultTranslations": {
+        "pt": "Steampunk",
+        "en": "Steampunk"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranha",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Subterranean",
+      "resultTranslations": {
+        "pt": "Subterrânea",
+        "en": "Subterranean"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Superhero",
+      "resultTranslations": {
+        "pt": "Super-Heróis",
+        "en": "Superhero"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Supernatural",
+      "resultTranslations": {
+        "pt": "Inumana",
+        "en": "Supernatural"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Survival",
+      "resultTranslations": {
+        "pt": "Sobrevivência",
+        "en": "Survival"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Technology",
+      "resultTranslations": {
+        "pt": "Tecnologia",
+        "en": "Technology"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Thriller",
+      "resultTranslations": {
+        "pt": "Thriller",
+        "en": "Thriller"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Time-Travel",
+      "resultTranslations": {
+        "pt": "Viagem no Tempo",
+        "en": "Time-Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "pt": "Viagem",
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Undead",
+      "resultTranslations": {
+        "pt": "Morto-Vivo",
+        "en": "Undead"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Urban",
+      "resultTranslations": {
+        "pt": "Urbana",
+        "en": "Urban"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Vampire",
+      "resultTranslations": {
+        "pt": "Vampiro",
+        "en": "Vampire"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Vehicles",
+      "resultTranslations": {
+        "pt": "Veículos",
+        "en": "Vehicles"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Victorian",
+      "resultTranslations": {
+        "pt": "Vitoriana",
+        "en": "Victorian"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "War",
+      "resultTranslations": {
+        "pt": "Guerra",
+        "en": "War"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Weird",
+      "resultTranslations": {
+        "pt": "Esquisita",
+        "en": "Weird"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Western",
+      "resultTranslations": {
+        "pt": "Velho Oeste",
+        "en": "Western"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Wild",
+      "resultTranslations": {
+        "pt": "Selvagem",
+        "en": "Wild"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Worlds",
+      "resultTranslations": {
+        "pt": "Mundos",
+        "en": "Worlds"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Zombie",
+      "resultTranslations": {
+        "pt": "Zumbi",
+        "en": "Zombie"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

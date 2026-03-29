@@ -1,0 +1,108 @@
+{
+  "id": "secure_facility",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "technology-scifi",
+  "defaultLanguage": "en",
+  "displayName": "Secure Facility",
+  "displayNameTranslations": {
+    "en": "Secure Facility"
+  },
+  "description": "Determines the location that must be infiltrated in a heist scenario. Part of the Scoundrels RPG mini-game.",
+  "descriptionTranslations": {
+    "en": "Determines the location that must be infiltrated in a heist scenario. Part of the Scoundrels RPG mini-game."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 48",
+  "tags": [
+    "scoundrels",
+    "heist",
+    "sci-fi",
+    "adventure",
+    "location"
+  ],
+  "entries": [
+    {
+      "range": [1, 20],
+      "result": "Station Bikon-5",
+      "resultTranslations": {
+        "en": "Station Bikon-5"
+      },
+      "description": "This is a base that also serves as a dam for a massive river located on an agricultural world.",
+      "descriptionTranslations": {
+        "en": "This is a base that also serves as a dam for a massive river located on an agricultural world."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 45],
+      "result": "The Agrillon",
+      "resultTranslations": {
+        "en": "The Agrillon"
+      },
+      "description": "This is a Monarchy Leviathan Class warship, the flag ship where the King can usually be found. It is the most secure vessel in the royal fleet.",
+      "descriptionTranslations": {
+        "en": "This is a Monarchy Leviathan Class warship, the flag ship where the King can usually be found. It is the most secure vessel in the royal fleet."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [46, 75],
+      "result": "Dison Spire",
+      "resultTranslations": {
+        "en": "Dison Spire"
+      },
+      "description": "This is the capitol building of the Calloben Monarchy, located on their homeworld. It is a towering edifice in the center of a sprawling and busy metropolis.",
+      "descriptionTranslations": {
+        "en": "This is the capitol building of the Calloben Monarchy, located on their homeworld. It is a towering edifice in the center of a sprawling and busy metropolis."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 90],
+      "result": "Firespike Railways",
+      "resultTranslations": {
+        "en": "Firespike Railways"
+      },
+      "description": "This is a fortified military train traveling on a backwater world between Calloben military bases. The Heist Target will be on this train, making it vulnerable to theft during transport.",
+      "descriptionTranslations": {
+        "en": "This is a fortified military train traveling on a backwater world between Calloben military bases. The Heist Target will be on this train, making it vulnerable to theft during transport."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "Yarya Seclude",
+      "resultTranslations": {
+        "en": "Yarya Seclude"
+      },
+      "description": "Yarya is a Calloben controlled world that is known as a luxurious vacation spot. The Heist Target will briefly be at one of the resorts on this planet, making it an ideal time to try and steal it.",
+      "descriptionTranslations": {
+        "en": "Yarya is a Calloben controlled world that is known as a luxurious vacation spot. The Heist Target will briefly be at one of the resorts on this planet, making it an ideal time to try and steal it."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

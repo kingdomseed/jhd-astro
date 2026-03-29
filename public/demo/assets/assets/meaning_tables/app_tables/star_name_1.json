@@ -1,0 +1,1532 @@
+{
+  "id": "star_name_1",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "technology-scifi",
+  "defaultLanguage": "en",
+  "displayName": "Star Names 1",
+  "displayNameTranslations": {
+    "pt": "Nomes de Estrelas 1",
+    "en": "Star Names 1"
+  },
+  "description": "First component for generating star names in science fiction settings",
+  "descriptionTranslations": {
+    "en": "First component for generating star names in science fiction settings"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 46",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "A",
+      "resultTranslations": {
+        "pt": "A",
+        "en": "A"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Absol",
+      "resultTranslations": {
+        "pt": "Absol",
+        "en": "Absol"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Achery",
+      "resultTranslations": {
+        "pt": "Áqueri",
+        "en": "Achery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Acr",
+      "resultTranslations": {
+        "pt": "Acr",
+        "en": "Acr"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Aldeb",
+      "resultTranslations": {
+        "pt": "Aldeb",
+        "en": "Aldeb"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Alt",
+      "resultTranslations": {
+        "pt": "Alte",
+        "en": "Alt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Andr",
+      "resultTranslations": {
+        "pt": "Andr",
+        "en": "Andr"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Ant",
+      "resultTranslations": {
+        "pt": "Ant",
+        "en": "Ant"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Arct",
+      "resultTranslations": {
+        "pt": "Arct",
+        "en": "Arct"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "B",
+      "resultTranslations": {
+        "pt": "B",
+        "en": "B"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Ba",
+      "resultTranslations": {
+        "pt": "Ba",
+        "en": "Ba"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Barn",
+      "resultTranslations": {
+        "pt": "Barn",
+        "en": "Barn"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Bat",
+      "resultTranslations": {
+        "pt": "Bat",
+        "en": "Bat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "C",
+      "resultTranslations": {
+        "pt": "C",
+        "en": "C"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Can",
+      "resultTranslations": {
+        "pt": "Can",
+        "en": "Can"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Cap",
+      "resultTranslations": {
+        "pt": "Cap",
+        "en": "Cap"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Cast",
+      "resultTranslations": {
+        "pt": "Cast",
+        "en": "Cast"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "D",
+      "resultTranslations": {
+        "pt": "D",
+        "en": "D"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Dab",
+      "resultTranslations": {
+        "pt": "Dab",
+        "en": "Dab"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Dal",
+      "resultTranslations": {
+        "pt": "Dal",
+        "en": "Dal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Danf",
+      "resultTranslations": {
+        "pt": "Danf",
+        "en": "Danf"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Drac",
+      "resultTranslations": {
+        "pt": "Drac",
+        "en": "Drac"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "E",
+      "resultTranslations": {
+        "pt": "E",
+        "en": "E"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Ebl",
+      "resultTranslations": {
+        "pt": "Ebl",
+        "en": "Ebl"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "El",
+      "resultTranslations": {
+        "pt": "El",
+        "en": "El"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "F",
+      "resultTranslations": {
+        "pt": "F",
+        "en": "F"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Fel",
+      "resultTranslations": {
+        "pt": "Fel",
+        "en": "Fel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Fom",
+      "resultTranslations": {
+        "pt": "Fom",
+        "en": "Fom"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Form",
+      "resultTranslations": {
+        "pt": "Form",
+        "en": "Form"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "G",
+      "resultTranslations": {
+        "pt": "G",
+        "en": "G"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Gacr",
+      "resultTranslations": {
+        "pt": "Gacr",
+        "en": "Gacr"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Graff",
+      "resultTranslations": {
+        "pt": "Graf",
+        "en": "Graff"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Grum",
+      "resultTranslations": {
+        "pt": "Grum",
+        "en": "Grum"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "H",
+      "resultTranslations": {
+        "pt": "H",
+        "en": "H"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Had",
+      "resultTranslations": {
+        "pt": "Had",
+        "en": "Had"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "He",
+      "resultTranslations": {
+        "pt": "Ri",
+        "en": "He"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Hun",
+      "resultTranslations": {
+        "pt": "Hun",
+        "en": "Hun"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "I",
+      "resultTranslations": {
+        "pt": "I",
+        "en": "I"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Illyr",
+      "resultTranslations": {
+        "pt": "Ilir",
+        "en": "Illyr"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Inq",
+      "resultTranslations": {
+        "pt": "Inq",
+        "en": "Inq"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Ir",
+      "resultTranslations": {
+        "pt": "Ir",
+        "en": "Ir"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Iz",
+      "resultTranslations": {
+        "pt": "Iz",
+        "en": "Iz"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "J",
+      "resultTranslations": {
+        "pt": "J",
+        "en": "J"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Jabb",
+      "resultTranslations": {
+        "pt": "Jab",
+        "en": "Jabb"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Jish",
+      "resultTranslations": {
+        "pt": "Jish",
+        "en": "Jish"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "K",
+      "resultTranslations": {
+        "pt": "K",
+        "en": "K"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Kent",
+      "resultTranslations": {
+        "pt": "Kent",
+        "en": "Kent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Kosj",
+      "resultTranslations": {
+        "pt": "Kosj",
+        "en": "Kosj"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "L",
+      "resultTranslations": {
+        "pt": "L",
+        "en": "L"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Lern",
+      "resultTranslations": {
+        "pt": "Lern",
+        "en": "Lern"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Les",
+      "resultTranslations": {
+        "pt": "Les",
+        "en": "Les"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "M",
+      "resultTranslations": {
+        "pt": "M",
+        "en": "M"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Ma",
+      "resultTranslations": {
+        "pt": "Ma",
+        "en": "Ma"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Mouh",
+      "resultTranslations": {
+        "pt": "Mouh",
+        "en": "Mouh"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "N",
+      "resultTranslations": {
+        "pt": "N",
+        "en": "N"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Nash",
+      "resultTranslations": {
+        "pt": "Nash",
+        "en": "Nash"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Nos",
+      "resultTranslations": {
+        "pt": "Nos",
+        "en": "Nos"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Nus",
+      "resultTranslations": {
+        "pt": "Nus",
+        "en": "Nus"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "O",
+      "resultTranslations": {
+        "pt": "O",
+        "en": "O"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Ogm",
+      "resultTranslations": {
+        "pt": "Ogm",
+        "en": "Ogm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Ok",
+      "resultTranslations": {
+        "pt": "Ok",
+        "en": "Ok"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Ori",
+      "resultTranslations": {
+        "pt": "Ori",
+        "en": "Ori"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "P",
+      "resultTranslations": {
+        "pt": "P",
+        "en": "P"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Par",
+      "resultTranslations": {
+        "pt": "Par",
+        "en": "Par"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Pav",
+      "resultTranslations": {
+        "pt": "Pav",
+        "en": "Pav"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Ph",
+      "resultTranslations": {
+        "pt": "Ph",
+        "en": "Ph"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Pho",
+      "resultTranslations": {
+        "pt": "Pho",
+        "en": "Pho"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Proc",
+      "resultTranslations": {
+        "pt": "Proc",
+        "en": "Proc"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Q",
+      "resultTranslations": {
+        "pt": "Q",
+        "en": "Q"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Qu",
+      "resultTranslations": {
+        "pt": "Qu",
+        "en": "Qu"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "R",
+      "resultTranslations": {
+        "pt": "R",
+        "en": "R"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Ras",
+      "resultTranslations": {
+        "pt": "Ras",
+        "en": "Ras"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Reg",
+      "resultTranslations": {
+        "pt": "Reg",
+        "en": "Reg"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Rig",
+      "resultTranslations": {
+        "pt": "Rig",
+        "en": "Rig"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "S",
+      "resultTranslations": {
+        "pt": "S",
+        "en": "S"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Sa",
+      "resultTranslations": {
+        "pt": "Sa",
+        "en": "Sa"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Sag",
+      "resultTranslations": {
+        "pt": "Sag",
+        "en": "Sag"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Sans",
+      "resultTranslations": {
+        "pt": "Sans",
+        "en": "Sans"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Sir",
+      "resultTranslations": {
+        "pt": "Sir",
+        "en": "Sir"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "T",
+      "resultTranslations": {
+        "pt": "T",
+        "en": "T"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Ta",
+      "resultTranslations": {
+        "pt": "Ta",
+        "en": "Ta"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Th",
+      "resultTranslations": {
+        "pt": "Th",
+        "en": "Th"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Torc",
+      "resultTranslations": {
+        "pt": "Torc",
+        "en": "Torc"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "U",
+      "resultTranslations": {
+        "pt": "U",
+        "en": "U"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Ukl",
+      "resultTranslations": {
+        "pt": "Ukl",
+        "en": "Ukl"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Ur",
+      "resultTranslations": {
+        "pt": "Ur",
+        "en": "Ur"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Urs",
+      "resultTranslations": {
+        "pt": "Urs",
+        "en": "Urs"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "V",
+      "resultTranslations": {
+        "pt": "V",
+        "en": "V"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Veg",
+      "resultTranslations": {
+        "pt": "Veg",
+        "en": "Veg"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Ver",
+      "resultTranslations": {
+        "pt": "Ver",
+        "en": "Ver"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "W",
+      "resultTranslations": {
+        "pt": "W",
+        "en": "W"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Wo",
+      "resultTranslations": {
+        "pt": "Wo",
+        "en": "Wo"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "X",
+      "resultTranslations": {
+        "pt": "X",
+        "en": "X"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Xi",
+      "resultTranslations": {
+        "pt": "Xi",
+        "en": "Xi"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Xu",
+      "resultTranslations": {
+        "pt": "Xu",
+        "en": "Xu"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Y",
+      "resultTranslations": {
+        "pt": "Y",
+        "en": "Y"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Yild",
+      "resultTranslations": {
+        "pt": "Yild",
+        "en": "Yild"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Z",
+      "resultTranslations": {
+        "pt": "Z",
+        "en": "Z"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Zan",
+      "resultTranslations": {
+        "pt": "Zan",
+        "en": "Zan"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Zib",
+      "resultTranslations": {
+        "pt": "Zib",
+        "en": "Zib"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "star_name_2"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

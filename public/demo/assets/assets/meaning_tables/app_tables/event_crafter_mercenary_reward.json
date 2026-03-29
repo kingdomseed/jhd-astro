@@ -1,0 +1,266 @@
+{
+  "id": "event_crafter_mercenary_reward",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Mercenary Missions: Reward",
+  "displayNameTranslations": {
+    "en": "Mercenary Missions: Reward"
+  },
+  "description": "Random Category custom List for the Mercenary Missions Event Crafter Situation. Roll when Event Elements directs you to this List. Rewards become more unusual as Progress Points increase. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Random Category custom List for the Mercenary Missions Event Crafter Situation. Roll when Event Elements directs you to this List. Rewards become more unusual as Progress Points increase. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "mercenary-missions",
+    "reward",
+    "random"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Valued item",
+      "resultTranslations": {
+        "en": "Valued item"
+      },
+      "description": "Payment in the form of a valuable item rather than currency.",
+      "descriptionTranslations": {
+        "en": "Payment in the form of a valuable item rather than currency."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Favor",
+      "resultTranslations": {
+        "en": "Favor"
+      },
+      "description": "The employer owes you a favor that can be called in later.",
+      "descriptionTranslations": {
+        "en": "The employer owes you a favor that can be called in later."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Good will",
+      "resultTranslations": {
+        "en": "Good will"
+      },
+      "description": "Earning good will, reputation, or trust from the employer or their associates.",
+      "descriptionTranslations": {
+        "en": "Earning good will, reputation, or trust from the employer or their associates."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Valued item",
+      "resultTranslations": {
+        "en": "Valued item"
+      },
+      "description": "Payment in the form of a valuable item rather than currency.",
+      "descriptionTranslations": {
+        "en": "Payment in the form of a valuable item rather than currency."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Prestige",
+      "resultTranslations": {
+        "en": "Prestige"
+      },
+      "description": "Gaining status, recognition, or a title. Your reputation grows.",
+      "descriptionTranslations": {
+        "en": "Gaining status, recognition, or a title. Your reputation grows."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Favor",
+      "resultTranslations": {
+        "en": "Favor"
+      },
+      "description": "The employer owes you a favor that can be called in later.",
+      "descriptionTranslations": {
+        "en": "The employer owes you a favor that can be called in later."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Favor",
+      "resultTranslations": {
+        "en": "Favor"
+      },
+      "description": "The employer owes you a favor that can be called in later.",
+      "descriptionTranslations": {
+        "en": "The employer owes you a favor that can be called in later."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Good will",
+      "resultTranslations": {
+        "en": "Good will"
+      },
+      "description": "Earning good will, reputation, or trust from the employer or their associates.",
+      "descriptionTranslations": {
+        "en": "Earning good will, reputation, or trust from the employer or their associates."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Prestige",
+      "resultTranslations": {
+        "en": "Prestige"
+      },
+      "description": "Gaining status, recognition, or a title. Your reputation grows.",
+      "descriptionTranslations": {
+        "en": "Gaining status, recognition, or a title. Your reputation grows."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Freedom",
+      "resultTranslations": {
+        "en": "Freedom"
+      },
+      "description": "The reward is freedom from something: a debt, an obligation, captivity, or similar constraint.",
+      "descriptionTranslations": {
+        "en": "The reward is freedom from something: a debt, an obligation, captivity, or similar constraint."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Connections",
+      "resultTranslations": {
+        "en": "Connections"
+      },
+      "description": "Gaining access to a network of contacts, allies, or resources.",
+      "descriptionTranslations": {
+        "en": "Gaining access to a network of contacts, allies, or resources."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Connections",
+      "resultTranslations": {
+        "en": "Connections"
+      },
+      "description": "Gaining access to a network of contacts, allies, or resources.",
+      "descriptionTranslations": {
+        "en": "Gaining access to a network of contacts, allies, or resources."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Seat at the table",
+      "resultTranslations": {
+        "en": "Seat at the table"
+      },
+      "description": "Gaining a position of influence or membership in an exclusive group.",
+      "descriptionTranslations": {
+        "en": "Gaining a position of influence or membership in an exclusive group."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 13,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

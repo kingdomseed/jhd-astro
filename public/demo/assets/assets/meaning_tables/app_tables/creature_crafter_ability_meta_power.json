@@ -1,0 +1,111 @@
+{
+  "id": "creature_crafter_ability_meta_power",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Meta Power Properties",
+  "displayNameTranslations": { "en": "Meta Power Properties" },
+  "description": "Determines the properties of the creature's meta power (spellcasting, psychic ability, etc.). Roll once on this table for properties. After determining properties, roll for power type: 1-12 Protective, 13-24 Conjuring, 25-36 Healing, 37-49 Information, 50-62 Mind Altering, 63-75 Damaging, 76-87 Illusion, 88-100 Alteration.",
+  "descriptionTranslations": { "en": "Determines the properties of the creature's meta power (spellcasting, psychic ability, etc.). Roll once on this table for properties. After determining properties, roll for power type: 1-12 Protective, 13-24 Conjuring, 25-36 Healing, 37-49 Information, 50-62 Mind Altering, 63-75 Damaging, 76-87 Illusion, 88-100 Alteration." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "meta-power"],
+  "entries": [
+    {
+      "range": [1, 12],
+      "result": "SINGLE POWER",
+      "resultTranslations": { "en": "SINGLE POWER" },
+      "description": "The creature possesses only a single power (i.e., a single spell it can cast or just one psychic ability, etc.).",
+      "descriptionTranslations": { "en": "The creature possesses only a single power (i.e., a single spell it can cast or just one psychic ability, etc.)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [13, 24],
+      "result": "FEW POWERS",
+      "resultTranslations": { "en": "FEW POWERS" },
+      "description": "The creature possesses a few powers within the meta power, the number decided by the GM.",
+      "descriptionTranslations": { "en": "The creature possesses a few powers within the meta power, the number decided by the GM." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 36],
+      "result": "FULL RANGE",
+      "resultTranslations": { "en": "FULL RANGE" },
+      "description": "The creature has a full range of abilities within the meta power.",
+      "descriptionTranslations": { "en": "The creature has a full range of abilities within the meta power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [37, 48],
+      "result": "INNATE",
+      "resultTranslations": { "en": "INNATE" },
+      "description": "The creature possesses these powers innately, using them naturally as opposed to being trained.",
+      "descriptionTranslations": { "en": "The creature possesses these powers innately, using them naturally as opposed to being trained." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [49, 60],
+      "result": "VERY LIMITED USE",
+      "resultTranslations": { "en": "VERY LIMITED USE" },
+      "description": "The creature can use each power within its meta power a very limited number of times (such as just once per day, etc., as decided upon by the GM).",
+      "descriptionTranslations": { "en": "The creature can use each power within its meta power a very limited number of times (such as just once per day, etc., as decided upon by the GM)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 72],
+      "result": "STANDARD USE",
+      "resultTranslations": { "en": "STANDARD USE" },
+      "description": "The creature can use the powers within its meta power as often as others within the campaign with the similar meta power can.",
+      "descriptionTranslations": { "en": "The creature can use the powers within its meta power as often as others within the campaign with the similar meta power can." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [73, 84],
+      "result": "UNLIMITED USE",
+      "resultTranslations": { "en": "UNLIMITED USE" },
+      "description": "The creature can use its meta powers as often as it likes, without restriction.",
+      "descriptionTranslations": { "en": "The creature can use its meta powers as often as it likes, without restriction." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [85, 100],
+      "result": "ROLL TWICE",
+      "resultTranslations": { "en": "ROLL TWICE" },
+      "description": "Roll twice on this table. If you get a duplicate or a contradictory result, treat it as applying to another power within the meta power (for instance, maybe the creature can cast a certain spell once per day, but another spell it can cast as often as it likes).",
+      "descriptionTranslations": { "en": "Roll twice on this table. If you get a duplicate or a contradictory result, treat it as applying to another power within the meta power (for instance, maybe the creature can cast a certain spell once per day, but another spell it can cast as often as it likes)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

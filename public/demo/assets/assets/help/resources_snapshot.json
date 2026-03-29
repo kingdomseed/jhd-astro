@@ -1,0 +1,200 @@
+{
+  "lastUpdated": "2025-12-30T00:00:00Z",
+  "docs": [
+    {
+      "id": "getting-started-with-the-mythic-apps",
+      "title": "Getting Started with the Mythic Apps",
+      "bodyMarkdown": "Start at the Fate Chart, then flow through Lists, Scenes, and Meaning Tables. No accounts, no internet—just play.\n\nThis guide walks you through the basics of using the Mythic GME 2e companion apps to run solo or GM-less tabletop RPG sessions.",
+      "category": "gettingStarted",
+      "source": "webResources",
+      "tags": ["getting-started", "beginner", "tutorial"],
+      "externalUrl": "https://jasonholtdigital.com/resources/getting-started-with-the-mythic-apps/",
+      "readTime": "8 min read"
+    },
+    {
+      "id": "setting-up-and-using-lists",
+      "title": "Setting Up and Using Lists",
+      "bodyMarkdown": "Build reusable Mythic lists using Characters, Threads, and Features.\n\nLearn how to organize your adventure elements for quick reference during play.",
+      "category": "gettingStarted",
+      "source": "webResources",
+      "tags": ["lists", "characters", "threads", "features", "beginner"],
+      "externalUrl": "https://jasonholtdigital.com/resources/setting-up-and-using-lists/",
+      "readTime": "8 min read"
+    },
+    {
+      "id": "writing-and-organizing-scenes",
+      "title": "Writing and Organizing Scenes",
+      "bodyMarkdown": "Start, run, and wrap scenes; log CF and results; keep notes tidy.\n\nMaster the scene management system to structure your adventures effectively.",
+      "category": "gettingStarted",
+      "source": "webResources",
+      "tags": ["scenes", "chaos-factor", "organization", "beginner"],
+      "externalUrl": "https://jasonholtdigital.com/resources/writing-and-organizing-scenes/",
+      "readTime": "9 min read"
+    },
+    {
+      "id": "using-meaning-tables-for-inspiration",
+      "title": "Using Meaning Tables for Inspiration",
+      "bodyMarkdown": "Use Meaning Tables (Actions, Descriptions, Elements) for clear prompts.\n\nDiscover how to leverage the oracle tables for creative inspiration during your games.",
+      "category": "gettingStarted",
+      "source": "webResources",
+      "tags": ["meaning-tables", "oracle", "inspiration", "beginner"],
+      "externalUrl": "https://jasonholtdigital.com/resources/using-meaning-tables-for-inspiration/",
+      "readTime": "6 min read"
+    },
+    {
+      "id": "setting-up-a-prepared-adventure",
+      "title": "Setting Up a Prepared Adventure in Mythic GME Digital",
+      "bodyMarkdown": "Configure Mythic for published modules: switch the Event Focus table, populate Features, and use the prepared-adventure scene flow.\n\nLearn how to adapt the app for running pre-written adventures.",
+      "category": "gettingStarted",
+      "source": "webResources",
+      "tags": ["prepared-adventure", "modules", "setup"],
+      "externalUrl": "https://jasonholtdigital.com/resources/setting-up-a-prepared-adventure/",
+      "readTime": "4 min read"
+    },
+    {
+      "id": "guide-to-the-mythic-journals",
+      "title": "A Guide to the Mythic Journals",
+      "bodyMarkdown": "Create, import, and export journals; understand how Chaos Factor, Scenes, Lists, and Log Entries map to Mythic.\n\nComprehensive guide to managing your adventure journals.",
+      "category": "journals",
+      "source": "webResources",
+      "tags": ["journals", "export", "import", "chaos-factor"],
+      "externalUrl": "https://jasonholtdigital.com/resources/guide-to-the-mythic-journals/",
+      "readTime": "6 min read"
+    },
+    {
+      "id": "sharing-adventure-journals",
+      "title": "Sharing Adventure Journals",
+      "bodyMarkdown": "Export journals to JSON/Markdown and import from files.\n\nLearn how to share your adventures with others or back them up.",
+      "category": "journals",
+      "source": "webResources",
+      "tags": ["journals", "sharing", "export", "import-export"],
+      "externalUrl": "https://jasonholtdigital.com/resources/sharing-adventure-journals/",
+      "readTime": "7 min read"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "bodyMarkdown": "Quick fixes for common issues and how to report bugs.\n\nFind solutions to common problems and learn how to get help when needed.",
+      "category": "troubleshooting",
+      "source": "webResources",
+      "tags": ["troubleshooting", "bugs", "support", "help"],
+      "externalUrl": "https://jasonholtdigital.com/resources/troubleshooting/"
+    },
+    {
+      "id": "getting-started-with-the-dice-roller",
+      "title": "Getting Started with the Dice Roller",
+      "bodyMarkdown": "Roll faster with the system-agnostic dice roller.\n\nLearn the basics of the built-in dice roller for any tabletop RPG system.",
+      "category": "diceRoller",
+      "source": "webResources",
+      "tags": ["dice", "roller", "beginner"],
+      "externalUrl": "https://jasonholtdigital.com/resources/getting-started-with-the-dice-roller/",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "saving-and-managing-dice-formulas",
+      "title": "Saving and Managing Dice Formulas",
+      "bodyMarkdown": "Save, load, import, and export your Saved Formulas file—no coding required.\n\nOrganize your frequently used dice rolls for quick access.",
+      "category": "diceRoller",
+      "source": "webResources",
+      "tags": ["dice", "formulas", "save", "manage"],
+      "externalUrl": "https://jasonholtdigital.com/resources/saving-and-managing-dice-formulas/",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "dice-formulas-and-customization",
+      "title": "Dice Formulas & Customization",
+      "bodyMarkdown": "Build the rolls you want: advantage, thresholds, exploding/compounding, keep/drop, and more—no programming required.\n\nMaster advanced dice notation for complex game mechanics.",
+      "category": "diceRoller",
+      "source": "webResources",
+      "tags": ["dice", "formulas", "customization", "advanced"],
+      "externalUrl": "https://jasonholtdigital.com/resources/dice-formulas-and-customization/",
+      "readTime": "12 min read"
+    },
+    {
+      "id": "importing-and-exporting-saved-formulas",
+      "title": "Importing & Exporting Saved Formulas",
+      "bodyMarkdown": "Bring in favorites from friends and back up your own—no coding needed.\n\nShare and backup your dice formula collections.",
+      "category": "diceRoller",
+      "source": "webResources",
+      "tags": ["dice", "formulas", "import-export", "backup"],
+      "externalUrl": "https://jasonholtdigital.com/resources/importing-and-exporting-saved-formulas/",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "getting-started-with-custom-tables",
+      "title": "Getting Started with Custom Tables",
+      "bodyMarkdown": "Create Meaning and Event Focus tables, add translations and links, and import ready-made starters—no programming required.\n\nLearn to create your own oracle tables.",
+      "category": "customTables",
+      "source": "webResources",
+      "tags": ["custom-tables", "creation", "beginner"],
+      "externalUrl": "https://jasonholtdigital.com/resources/getting-started-with-custom-tables/",
+      "readTime": "9 min read"
+    },
+    {
+      "id": "organizing-custom-tables",
+      "title": "Organizing Custom Tables",
+      "bodyMarkdown": "Use categories, icons, tags, and links to keep your Meaning and Event Focus tables tidy and powerful.\n\nOrganize your custom tables for easy access.",
+      "category": "customTables",
+      "source": "webResources",
+      "tags": ["custom-tables", "organization", "categories"],
+      "externalUrl": "https://jasonholtdigital.com/resources/organizing-custom-tables/",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "linking-and-nesting-tables",
+      "title": "Linking & Nesting Tables",
+      "bodyMarkdown": "How to chain tables for multi-step prompts and roll-ons.\n\nCreate complex table relationships for sophisticated oracle systems.",
+      "category": "customTables",
+      "source": "webResources",
+      "tags": ["custom-tables", "linking", "nesting", "advanced"],
+      "externalUrl": "https://jasonholtdigital.com/resources/linking-and-nesting-tables/",
+      "readTime": "11 min read"
+    },
+    {
+      "id": "importing-and-exporting-custom-tables",
+      "title": "Importing & Exporting Custom Tables",
+      "bodyMarkdown": "Prepare CSV, TXT, PSV, and JSON tables for import—range-based only for now—then export clean bundles for sharing.\n\nShare and backup your custom table collections.",
+      "category": "customTables",
+      "source": "webResources",
+      "tags": ["custom-tables", "import-export", "csv", "json"],
+      "externalUrl": "https://jasonholtdigital.com/resources/importing-and-exporting-custom-tables/",
+      "readTime": "7 min read"
+    },
+    {
+      "id": "journal-schema",
+      "title": "Journal Schema",
+      "bodyMarkdown": "Field-by-field reference for the Mythic Journal JSON format with a minimal example and local downloads.\n\nTechnical reference for journal file structure.",
+      "category": "schemas",
+      "source": "webResources",
+      "tags": ["schema", "journal", "json", "reference"],
+      "externalUrl": "https://jasonholtdigital.com/resources/journal-schema/"
+    },
+    {
+      "id": "formula-schema",
+      "title": "Formula Schema",
+      "bodyMarkdown": "Reference for the Saved Formulas JSON format with a minimal example and local downloads.\n\nTechnical reference for formula file structure.",
+      "category": "schemas",
+      "source": "webResources",
+      "tags": ["schema", "formulas", "json", "reference"],
+      "externalUrl": "https://jasonholtdigital.com/resources/formula-schema/"
+    },
+    {
+      "id": "custom-table-schema",
+      "title": "Custom Table Schema",
+      "bodyMarkdown": "Unified Table v3 reference for Meaning and Event Focus tables, with minimal examples and downloads.\n\nTechnical reference for custom table file structure.",
+      "category": "schemas",
+      "source": "webResources",
+      "tags": ["schema", "custom-tables", "json", "reference"],
+      "externalUrl": "https://jasonholtdigital.com/resources/custom-table-schema/"
+    },
+    {
+      "id": "categories-schema",
+      "title": "Categories Schema",
+      "bodyMarkdown": "Define and extend the category registry for Custom Tables (icons, labels, order).\n\nTechnical reference for category configuration.",
+      "category": "schemas",
+      "source": "webResources",
+      "tags": ["schema", "categories", "json", "reference"],
+      "externalUrl": "https://jasonholtdigital.com/resources/categories-schema/"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "mystery_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Mystery Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Mystery Event Focus Table"
+  },
+  "description": "A mystery-focused event table. Rolls on Characters and Threads. From MM Compilation 1.",
+  "descriptionTranslations": {
+    "en": "A mystery-focused event table. Rolls on Characters and Threads. From MM Compilation 1."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 1",
+  "tags": [
+    "event-focus",
+    "mystery",
+    "investigation",
+    "clues"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Clue Element",
+      "resultTranslations": {
+        "en": "Clue Element"
+      },
+      "tags": [],
+      "data": {
+        "isSpecialEvent": true
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        30
+      ],
+      "result": "Suspect Element",
+      "resultTranslations": {
+        "en": "Suspect Element"
+      },
+      "tags": [],
+      "data": {
+        "isSpecialEvent": true
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        34
+      ],
+      "result": "Remote Event",
+      "resultTranslations": {
+        "en": "Remote Event"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        38
+      ],
+      "result": "Ambiguous Event",
+      "resultTranslations": {
+        "en": "Ambiguous Event"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        44
+      ],
+      "result": "New NPC",
+      "resultTranslations": {
+        "en": "New NPC"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        58
+      ],
+      "result": "NPC Action",
+      "resultTranslations": {
+        "en": "NPC Action"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        66
+      ],
+      "result": "NPC Negative",
+      "resultTranslations": {
+        "en": "NPC Negative"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        71
+      ],
+      "result": "NPC Positive",
+      "resultTranslations": {
+        "en": "NPC Positive"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        79
+      ],
+      "result": "Move Toward A Thread",
+      "resultTranslations": {
+        "en": "Move Toward A Thread"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        84
+      ],
+      "result": "Move Away From A Thread",
+      "resultTranslations": {
+        "en": "Move Away From A Thread"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        86
+      ],
+      "result": "Close A Thread",
+      "resultTranslations": {
+        "en": "Close A Thread"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        94
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        100
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

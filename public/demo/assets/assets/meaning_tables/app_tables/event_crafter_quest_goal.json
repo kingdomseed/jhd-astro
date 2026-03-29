@@ -1,0 +1,394 @@
+{
+  "id": "event_crafter_quest_goal",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Quest Waypoints: Goal",
+  "displayNameTranslations": {
+    "en": "Quest Waypoints: Goal"
+  },
+  "description": "Structured Category for the Quest Waypoints Event Crafter Situation. Roll directly on this list. The Goal is what your PC is fighting for in this Waypoint Scene. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Structured Category for the Quest Waypoints Event Crafter Situation. Roll directly on this list. The Goal is what your PC is fighting for in this Waypoint Scene. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "quest-waypoints",
+    "goal",
+    "structured"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "en": "Expected"
+      },
+      "description": "The Goal is what you would expect based on the adventure Context so far.",
+      "descriptionTranslations": {
+        "en": "The Goal is what you would expect based on the adventure Context so far."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "en": "Expected"
+      },
+      "description": "The Goal is what you would expect based on the adventure Context so far.",
+      "descriptionTranslations": {
+        "en": "The Goal is what you would expect based on the adventure Context so far."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Information",
+      "resultTranslations": {
+        "en": "Information"
+      },
+      "description": "The Goal is to gain important information or knowledge that advances the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain important information or knowledge that advances the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Information",
+      "resultTranslations": {
+        "en": "Information"
+      },
+      "description": "The Goal is to gain important information or knowledge that advances the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain important information or knowledge that advances the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Ally",
+      "resultTranslations": {
+        "en": "Ally"
+      },
+      "description": "The Goal is to gain a new ally or strengthen an existing alliance.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain a new ally or strengthen an existing alliance."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Ally",
+      "resultTranslations": {
+        "en": "Ally"
+      },
+      "description": "The Goal is to gain a new ally or strengthen an existing alliance.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain a new ally or strengthen an existing alliance."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the Goal.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the Goal."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Information",
+      "resultTranslations": {
+        "en": "Information"
+      },
+      "description": "The Goal is to gain important information or knowledge that advances the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain important information or knowledge that advances the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Directions to the next point",
+      "resultTranslations": {
+        "en": "Directions to the next point"
+      },
+      "description": "The Goal is to discover where to go next on the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to discover where to go next on the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "en": "Expected"
+      },
+      "description": "The Goal is what you would expect based on the adventure Context so far.",
+      "descriptionTranslations": {
+        "en": "The Goal is what you would expect based on the adventure Context so far."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Obstacle in the way",
+      "resultTranslations": {
+        "en": "Obstacle in the way"
+      },
+      "description": "The Goal reveals a new obstacle or complication blocking progress on the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal reveals a new obstacle or complication blocking progress on the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "en": "Expected"
+      },
+      "description": "The Goal is what you would expect based on the adventure Context so far.",
+      "descriptionTranslations": {
+        "en": "The Goal is what you would expect based on the adventure Context so far."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Special",
+      "resultTranslations": {
+        "en": "Special"
+      },
+      "description": "Roll on the Special Elements table.",
+      "descriptionTranslations": {
+        "en": "Roll on the Special Elements table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "event_crafter_special_elements"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Useful tool",
+      "resultTranslations": {
+        "en": "Useful tool"
+      },
+      "description": "The Goal is to acquire a useful tool, resource, or piece of equipment that aids the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to acquire a useful tool, resource, or piece of equipment that aids the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Important object",
+      "resultTranslations": {
+        "en": "Important object"
+      },
+      "description": "The Goal is to acquire an important object that is key to the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to acquire an important object that is key to the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Information",
+      "resultTranslations": {
+        "en": "Information"
+      },
+      "description": "The Goal is to gain important information or knowledge that advances the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to gain important information or knowledge that advances the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the Goal.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the Goal."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Location of something",
+      "resultTranslations": {
+        "en": "Location of something"
+      },
+      "description": "The Goal is to discover the location of something important to the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to discover the location of something important to the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Location of something",
+      "resultTranslations": {
+        "en": "Location of something"
+      },
+      "description": "The Goal is to discover the location of something important to the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to discover the location of something important to the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Learn a secret",
+      "resultTranslations": {
+        "en": "Learn a secret"
+      },
+      "description": "The Goal is to uncover a secret that changes the nature or understanding of the quest.",
+      "descriptionTranslations": {
+        "en": "The Goal is to uncover a secret that changes the nature or understanding of the quest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 20,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

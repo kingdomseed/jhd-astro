@@ -1,0 +1,214 @@
+{
+  "id": "hello_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Hello Focus",
+  "displayNameTranslations": {
+    "en": "Hello Focus"
+  },
+  "description": "Determines caller type or segment type for the Moonlight Radio scenario. Roll d100 + Revelation Score.",
+  "descriptionTranslations": {
+    "en": "Determines caller type or segment type for the Moonlight Radio scenario. Roll d100 + Revelation Score."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 58",
+  "tags": [
+    "moonlight-radio",
+    "radio",
+    "horror",
+    "scenario"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "Question: They have a question for you",
+      "resultTranslations": {
+        "en": "Question: They have a question for you"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        25
+      ],
+      "result": "I Have To Tell You This Thing: They want to talk about something strange that happened to them or that they witnessed",
+      "resultTranslations": {
+        "en": "I Have To Tell You This Thing: They want to talk about something strange that happened to them or that they witnessed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Crank: The caller is a crank caller who will likely say something snarky then hang up",
+      "resultTranslations": {
+        "en": "Crank: The caller is a crank caller who will likely say something snarky then hang up"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "Regular: The caller is someone who frequently calls in, you know them well by now. Whatever they talk about, it's the same kind of thing they always talk about",
+      "resultTranslations": {
+        "en": "Regular: The caller is someone who frequently calls in, you know them well by now. Whatever they talk about, it's the same kind of thing they always talk about"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "result": "Scheduled Segment: It's time to deliver news or information. Roll on Scheduled Segments Focus and Conversation",
+      "resultTranslations": {
+        "en": "Scheduled Segment: It's time to deliver news or information. Roll on Scheduled Segments Focus and Conversation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "result": "Fan: The caller says they are a fan of yours. They will likely talk about previous episodes or just tell you how much they appreciate what you do",
+      "resultTranslations": {
+        "en": "Fan: The caller says they are a fan of yours. They will likely talk about previous episodes or just tell you how much they appreciate what you do"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        65
+      ],
+      "result": "I Have To Tell You This Thing: They want to talk about something strange that happened to them or that they witnessed",
+      "resultTranslations": {
+        "en": "I Have To Tell You This Thing: They want to talk about something strange that happened to them or that they witnessed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        75
+      ],
+      "result": "Question: They have a question for you",
+      "resultTranslations": {
+        "en": "Question: They have a question for you"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "result": "Bored: The caller is bored or can't sleep and wants to chat about random stuff",
+      "resultTranslations": {
+        "en": "Bored: The caller is bored or can't sleep and wants to chat about random stuff"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "result": "Problem: The caller has a problem they are hoping you can either help them with, or they just want you to listen",
+      "resultTranslations": {
+        "en": "Problem: The caller has a problem they are hoping you can either help them with, or they just want you to listen"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "Scheduled Segment: It's time to deliver news or information. Roll on Scheduled Segments Focus and Conversation",
+      "resultTranslations": {
+        "en": "Scheduled Segment: It's time to deliver news or information. Roll on Scheduled Segments Focus and Conversation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        101,
+        105
+      ],
+      "result": "Previous Caller: Someone who called earlier calls again. Roll on the Call Log to see who it is",
+      "resultTranslations": {
+        "en": "Previous Caller: Someone who called earlier calls again. Roll on the Call Log to see who it is"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        106,
+        120
+      ],
+      "result": "Weird: This is a Weird Call. Roll on Weird Call Focus and Conversation",
+      "resultTranslations": {
+        "en": "Weird: This is a Weird Call. Roll on Weird Call Focus and Conversation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 120,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

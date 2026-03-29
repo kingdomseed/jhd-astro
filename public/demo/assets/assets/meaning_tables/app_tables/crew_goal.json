@@ -1,0 +1,1531 @@
+{
+  "id": "crew_goal",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Crew Goal",
+  "displayNameTranslations": {
+    "pt": "Objetivo da Tripulação",
+    "en": "Crew Goal"
+  },
+  "description": "Goals and motivations that drive crew members",
+  "descriptionTranslations": {
+    "en": "Goals and motivations that drive crew members"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 6",
+  "tags": [
+    "character",
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Agreement",
+      "resultTranslations": {
+        "pt": "Acordo",
+        "en": "Agreement"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Art",
+      "resultTranslations": {
+        "pt": "Arte",
+        "en": "Art"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Assist",
+      "resultTranslations": {
+        "pt": "Auxiliar",
+        "en": "Assist"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Attack",
+      "resultTranslations": {
+        "pt": "Atacar",
+        "en": "Attack"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Business",
+      "resultTranslations": {
+        "pt": "Negócios",
+        "en": "Business"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Character",
+      "resultTranslations": {
+        "pt": "Personagem",
+        "en": "Character"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Control",
+      "resultTranslations": {
+        "pt": "Controlar",
+        "en": "Control"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Convince",
+      "resultTranslations": {
+        "pt": "Convencer",
+        "en": "Convince"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Criminal",
+      "resultTranslations": {
+        "pt": "Criminosa",
+        "en": "Criminal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Crisis",
+      "resultTranslations": {
+        "pt": "Crise",
+        "en": "Crisis"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Damage",
+      "resultTranslations": {
+        "pt": "Dano",
+        "en": "Damage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Dangerous",
+      "resultTranslations": {
+        "pt": "Perigosa",
+        "en": "Dangerous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Debt",
+      "resultTranslations": {
+        "pt": "Dívida",
+        "en": "Debt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Deception",
+      "resultTranslations": {
+        "pt": "Enganação",
+        "en": "Deception"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Defeat",
+      "resultTranslations": {
+        "pt": "Derrota",
+        "en": "Defeat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Defend",
+      "resultTranslations": {
+        "pt": "Defender",
+        "en": "Defend"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Delay",
+      "resultTranslations": {
+        "pt": "Atrasar",
+        "en": "Delay"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Destroy",
+      "resultTranslations": {
+        "pt": "Destruir",
+        "en": "Destroy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Diminish",
+      "resultTranslations": {
+        "pt": "Diminuir",
+        "en": "Diminish"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Discover",
+      "resultTranslations": {
+        "pt": "Descobrir",
+        "en": "Discover"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Disrupt",
+      "resultTranslations": {
+        "pt": "Interromper",
+        "en": "Disrupt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Distract",
+      "resultTranslations": {
+        "pt": "Distrair",
+        "en": "Distract"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Earn",
+      "resultTranslations": {
+        "pt": "Ganhar",
+        "en": "Earn"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Enter",
+      "resultTranslations": {
+        "pt": "Entrar",
+        "en": "Enter"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Escape",
+      "resultTranslations": {
+        "pt": "Escapar",
+        "en": "Escape"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Espionage",
+      "resultTranslations": {
+        "pt": "Espionagem",
+        "en": "Espionage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Forces",
+      "resultTranslations": {
+        "pt": "Forças",
+        "en": "Forces"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Fortress",
+      "resultTranslations": {
+        "pt": "Fortaleza",
+        "en": "Fortress"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Goods",
+      "resultTranslations": {
+        "pt": "Bens",
+        "en": "Goods"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Government",
+      "resultTranslations": {
+        "pt": "Governo",
+        "en": "Government"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Group",
+      "resultTranslations": {
+        "pt": "Grupo",
+        "en": "Group"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Harm",
+      "resultTranslations": {
+        "pt": "Prejudicar",
+        "en": "Harm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Help",
+      "resultTranslations": {
+        "pt": "Ajudar",
+        "en": "Help"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Hinder",
+      "resultTranslations": {
+        "pt": "Atrapalhar",
+        "en": "Hinder"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Hired",
+      "resultTranslations": {
+        "pt": "Contratado",
+        "en": "Hired"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Impossible",
+      "resultTranslations": {
+        "pt": "Impossível",
+        "en": "Impossible"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Incapacitate",
+      "resultTranslations": {
+        "pt": "Incapacitar",
+        "en": "Incapacitate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Individual",
+      "resultTranslations": {
+        "pt": "Individual",
+        "en": "Individual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Infiltrate",
+      "resultTranslations": {
+        "pt": "Infiltrar",
+        "en": "Infiltrate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Information",
+      "resultTranslations": {
+        "pt": "Informação",
+        "en": "Information"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Innocent",
+      "resultTranslations": {
+        "pt": "Inocente",
+        "en": "Innocent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Intimidate",
+      "resultTranslations": {
+        "pt": "Intimidar",
+        "en": "Intimidate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Item",
+      "resultTranslations": {
+        "pt": "Item",
+        "en": "Item"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Justice",
+      "resultTranslations": {
+        "pt": "Justiça",
+        "en": "Justice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Kill",
+      "resultTranslations": {
+        "pt": "Matar",
+        "en": "Kill"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Leader",
+      "resultTranslations": {
+        "pt": "Líder",
+        "en": "Leader"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Legal",
+      "resultTranslations": {
+        "pt": "Jurídico",
+        "en": "Legal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Lethal",
+      "resultTranslations": {
+        "pt": "Letal",
+        "en": "Lethal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Liberate",
+      "resultTranslations": {
+        "pt": "Liberar",
+        "en": "Liberate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Lie",
+      "resultTranslations": {
+        "pt": "Mentira",
+        "en": "Lie"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Limit",
+      "resultTranslations": {
+        "pt": "Limite",
+        "en": "Limit"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Location",
+      "resultTranslations": {
+        "pt": "Localidade",
+        "en": "Location"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Missing",
+      "resultTranslations": {
+        "pt": "Ausente",
+        "en": "Missing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Money",
+      "resultTranslations": {
+        "pt": "Dinheiro",
+        "en": "Money"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Obligation",
+      "resultTranslations": {
+        "pt": "Obrigação",
+        "en": "Obligation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Opportunity",
+      "resultTranslations": {
+        "pt": "Oportunidade",
+        "en": "Opportunity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Oppose",
+      "resultTranslations": {
+        "pt": "Opor",
+        "en": "Oppose"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Overcome",
+      "resultTranslations": {
+        "pt": "Superar",
+        "en": "Overcome"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Partner",
+      "resultTranslations": {
+        "pt": "Parceiro",
+        "en": "Partner"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Personal",
+      "resultTranslations": {
+        "pt": "Pessoal",
+        "en": "Personal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Politics",
+      "resultTranslations": {
+        "pt": "Política",
+        "en": "Politics"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Power",
+      "resultTranslations": {
+        "pt": "Poder",
+        "en": "Power"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Prison",
+      "resultTranslations": {
+        "pt": "Prisão",
+        "en": "Prison"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Protect",
+      "resultTranslations": {
+        "pt": "Proteger",
+        "en": "Protect"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Pursue",
+      "resultTranslations": {
+        "pt": "Perseguir",
+        "en": "Pursue"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Rare",
+      "resultTranslations": {
+        "pt": "Raro",
+        "en": "Rare"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Recover",
+      "resultTranslations": {
+        "pt": "Recuperar",
+        "en": "Recover"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Reduce",
+      "resultTranslations": {
+        "pt": "Reduzir",
+        "en": "Reduce"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Replace",
+      "resultTranslations": {
+        "pt": "Substituir",
+        "en": "Replace"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Rescue",
+      "resultTranslations": {
+        "pt": "Resgatar",
+        "en": "Rescue"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Resource",
+      "resultTranslations": {
+        "pt": "Recurso",
+        "en": "Resource"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Retrieve",
+      "resultTranslations": {
+        "pt": "Recuperar",
+        "en": "Retrieve"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Reveal",
+      "resultTranslations": {
+        "pt": "Revelar",
+        "en": "Reveal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Revenge",
+      "resultTranslations": {
+        "pt": "Vingança",
+        "en": "Revenge"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Riches",
+      "resultTranslations": {
+        "pt": "Riquezas",
+        "en": "Riches"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Risky",
+      "resultTranslations": {
+        "pt": "Arriscado",
+        "en": "Risky"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Robbery",
+      "resultTranslations": {
+        "pt": "Assalto",
+        "en": "Robbery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Sabotage",
+      "resultTranslations": {
+        "pt": "Sabotagem",
+        "en": "Sabotage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Sacrifice",
+      "resultTranslations": {
+        "pt": "Sacrificar",
+        "en": "Sacrifice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Save",
+      "resultTranslations": {
+        "pt": "Salvar",
+        "en": "Save"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Social",
+      "resultTranslations": {
+        "pt": "Social",
+        "en": "Social"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Solution",
+      "resultTranslations": {
+        "pt": "Solução",
+        "en": "Solution"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Steal",
+      "resultTranslations": {
+        "pt": "Roubar",
+        "en": "Steal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Stolen",
+      "resultTranslations": {
+        "pt": "Roubado",
+        "en": "Stolen"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Stop",
+      "resultTranslations": {
+        "pt": "Parar",
+        "en": "Stop"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranho",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Stronghold",
+      "resultTranslations": {
+        "pt": "Cidadela",
+        "en": "Stronghold"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Take",
+      "resultTranslations": {
+        "pt": "Pegar",
+        "en": "Take"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Transaction",
+      "resultTranslations": {
+        "pt": "Transação",
+        "en": "Transaction"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Trap",
+      "resultTranslations": {
+        "pt": "Armadilha",
+        "en": "Trap"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "pt": "Viajar",
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Unique",
+      "resultTranslations": {
+        "pt": "Único",
+        "en": "Unique"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Unknown",
+      "resultTranslations": {
+        "pt": "Desconhecido",
+        "en": "Unknown"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Urgent",
+      "resultTranslations": {
+        "pt": "Urgente",
+        "en": "Urgent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Vault",
+      "resultTranslations": {
+        "pt": "Cofre",
+        "en": "Vault"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Vehicle",
+      "resultTranslations": {
+        "pt": "Veículo",
+        "en": "Vehicle"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Villain",
+      "resultTranslations": {
+        "pt": "Vilão",
+        "en": "Villain"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Weapon",
+      "resultTranslations": {
+        "pt": "Arma",
+        "en": "Weapon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Win",
+      "resultTranslations": {
+        "pt": "Vencer",
+        "en": "Win"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,1532 @@
+{
+  "id": "random_element_objects",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "core-tables",
+  "defaultLanguage": "en",
+  "displayName": "Random Element Objects",
+  "displayNameTranslations": {
+    "pt": "Objetos de Elementos Aleatórios",
+    "en": "Random Element Objects"
+  },
+  "description": "Elements and descriptors that can be used to describe random objects",
+  "descriptionTranslations": {
+    "en": "Elements and descriptors that can be used to describe random objects"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 1",
+  "tags": [
+    "object",
+    "premium",
+    "core"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Amusing",
+      "resultTranslations": {
+        "pt": "Divertido",
+        "en": "Amusing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Ancient",
+      "resultTranslations": {
+        "pt": "Antigo",
+        "en": "Ancient"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Aromatic",
+      "resultTranslations": {
+        "pt": "Aromático",
+        "en": "Aromatic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Average",
+      "resultTranslations": {
+        "pt": "Comum",
+        "en": "Average"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Beautiful",
+      "resultTranslations": {
+        "pt": "Bonito",
+        "en": "Beautiful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Bizarre",
+      "resultTranslations": {
+        "pt": "Bizarro",
+        "en": "Bizarre"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Classy",
+      "resultTranslations": {
+        "pt": "Elegante",
+        "en": "Classy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Colorful",
+      "resultTranslations": {
+        "pt": "Colorido",
+        "en": "Colorful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Creepy",
+      "resultTranslations": {
+        "pt": "Assustador",
+        "en": "Creepy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Cute",
+      "resultTranslations": {
+        "pt": "Fofo",
+        "en": "Cute"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Damaged",
+      "resultTranslations": {
+        "pt": "Danificado",
+        "en": "Damaged"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Delicate",
+      "resultTranslations": {
+        "pt": "Delicado",
+        "en": "Delicate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Disgusting",
+      "resultTranslations": {
+        "pt": "Nojento",
+        "en": "Disgusting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Cold",
+      "resultTranslations": {
+        "pt": "Frio",
+        "en": "Cold"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Empty",
+      "resultTranslations": {
+        "pt": "Vazio",
+        "en": "Empty"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Enormous",
+      "resultTranslations": {
+        "pt": "Enorme",
+        "en": "Enormous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Dangerous",
+      "resultTranslations": {
+        "pt": "Perigoso",
+        "en": "Dangerous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Exotic",
+      "resultTranslations": {
+        "pt": "Exótico",
+        "en": "Exotic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Deliberate",
+      "resultTranslations": {
+        "pt": "Deliberado",
+        "en": "Deliberate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Delightful",
+      "resultTranslations": {
+        "pt": "Encantador",
+        "en": "Delightful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Faded",
+      "resultTranslations": {
+        "pt": "Desbotado",
+        "en": "Faded"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Familiar",
+      "resultTranslations": {
+        "pt": "Familiar",
+        "en": "Familiar"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Enormous",
+      "resultTranslations": {
+        "pt": "Enorme",
+        "en": "Enormous"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Fancy",
+      "resultTranslations": {
+        "pt": "Sofisticado",
+        "en": "Fancy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Hard",
+      "resultTranslations": {
+        "pt": "Duro",
+        "en": "Hard"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Heavy",
+      "resultTranslations": {
+        "pt": "Pesado",
+        "en": "Heavy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Horrible",
+      "resultTranslations": {
+        "pt": "Horrível",
+        "en": "Horrible"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Fortunate",
+      "resultTranslations": {
+        "pt": "Afortunado",
+        "en": "Fortunate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Important",
+      "resultTranslations": {
+        "pt": "Importante",
+        "en": "Important"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Frightening",
+      "resultTranslations": {
+        "pt": "Assustador",
+        "en": "Frightening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Large",
+      "resultTranslations": {
+        "pt": "Grande",
+        "en": "Large"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Lethal",
+      "resultTranslations": {
+        "pt": "Letal",
+        "en": "Lethal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Magnificent",
+      "resultTranslations": {
+        "pt": "Magnífico",
+        "en": "Magnificent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Military",
+      "resultTranslations": {
+        "pt": "Militar",
+        "en": "Military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Modern",
+      "resultTranslations": {
+        "pt": "Moderno",
+        "en": "Modern"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Extravagant",
+      "resultTranslations": {
+        "pt": "Extravagante",
+        "en": "Extravagant"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Helpful",
+      "resultTranslations": {
+        "pt": "Útil",
+        "en": "Helpful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Mundane",
+      "resultTranslations": {
+        "pt": "Mundano",
+        "en": "Mundane"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Natural",
+      "resultTranslations": {
+        "pt": "Natural",
+        "en": "Natural"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Powerful",
+      "resultTranslations": {
+        "pt": "Poderoso",
+        "en": "Powerful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Rare",
+      "resultTranslations": {
+        "pt": "Raro",
+        "en": "Rare"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Light",
+      "resultTranslations": {
+        "pt": "Leve",
+        "en": "Light"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Loud",
+      "resultTranslations": {
+        "pt": "Barulhento",
+        "en": "Loud"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Reassuring",
+      "resultTranslations": {
+        "pt": "Tranquilizador",
+        "en": "Reassuring"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Majestic",
+      "resultTranslations": {
+        "pt": "Majestoso",
+        "en": "Majestic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Meaningful",
+      "resultTranslations": {
+        "pt": "Significativo",
+        "en": "Meaningful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Mechanical",
+      "resultTranslations": {
+        "pt": "Mecânico",
+        "en": "Mechanical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Ruined",
+      "resultTranslations": {
+        "pt": "Arruinado",
+        "en": "Ruined"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Mysterious",
+      "resultTranslations": {
+        "pt": "Misterioso",
+        "en": "Mysterious"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "New",
+      "resultTranslations": {
+        "pt": "Novo",
+        "en": "New"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Odd",
+      "resultTranslations": {
+        "pt": "Estranho",
+        "en": "Odd"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Official",
+      "resultTranslations": {
+        "pt": "Oficial",
+        "en": "Official"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Small",
+      "resultTranslations": {
+        "pt": "Pequeno",
+        "en": "Small"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Smelly",
+      "resultTranslations": {
+        "pt": "Fedorento",
+        "en": "Smelly"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Positive",
+      "resultTranslations": {
+        "pt": "Positivo",
+        "en": "Positive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Powerful",
+      "resultTranslations": {
+        "pt": "Poderoso",
+        "en": "Powerful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Smooth",
+      "resultTranslations": {
+        "pt": "Suave",
+        "en": "Smooth"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Valuable",
+      "resultTranslations": {
+        "pt": "Valioso",
+        "en": "Valuable"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Warm",
+      "resultTranslations": {
+        "pt": "Quente",
+        "en": "Warm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Soft",
+      "resultTranslations": {
+        "pt": "Macio",
+        "en": "Soft"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Watery",
+      "resultTranslations": {
+        "pt": "Aquoso",
+        "en": "Watery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Threatening",
+      "resultTranslations": {
+        "pt": "Ameaçador",
+        "en": "Threatening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Weapon",
+      "resultTranslations": {
+        "pt": "Arma",
+        "en": "Weapon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Useful",
+      "resultTranslations": {
+        "pt": "Útil",
+        "en": "Useful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Clothing",
+      "resultTranslations": {
+        "pt": "Vestuário",
+        "en": "Clothing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "pt": "Viagem",
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Tool",
+      "resultTranslations": {
+        "pt": "Ferramenta",
+        "en": "Tool"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Negative",
+      "resultTranslations": {
+        "pt": "Negativo",
+        "en": "Negative"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Communication",
+      "resultTranslations": {
+        "pt": "Comunicação",
+        "en": "Communication"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Food",
+      "resultTranslations": {
+        "pt": "Comida",
+        "en": "Food"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Domestic",
+      "resultTranslations": {
+        "pt": "Doméstico",
+        "en": "Domestic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Artistic",
+      "resultTranslations": {
+        "pt": "Artístico",
+        "en": "Artistic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "pt": "Esperado",
+        "en": "Expected"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Unexpected",
+      "resultTranslations": {
+        "pt": "Inesperado",
+        "en": "Unexpected"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranho",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Resource",
+      "resultTranslations": {
+        "pt": "Recurso",
+        "en": "Resource"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Fuel",
+      "resultTranslations": {
+        "pt": "Combustível",
+        "en": "Fuel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Harmful",
+      "resultTranslations": {
+        "pt": "Nocivo",
+        "en": "Harmful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Energy",
+      "resultTranslations": {
+        "pt": "Energia",
+        "en": "Energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Multiple",
+      "resultTranslations": {
+        "pt": "Múltiplo",
+        "en": "Multiple"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Single",
+      "resultTranslations": {
+        "pt": "Único",
+        "en": "Single"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Unusual",
+      "resultTranslations": {
+        "pt": "Incomum",
+        "en": "Unusual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Bright",
+      "resultTranslations": {
+        "pt": "Brilhante",
+        "en": "Bright"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Ornate",
+      "resultTranslations": {
+        "pt": "Ornamentado",
+        "en": "Ornate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Broken",
+      "resultTranslations": {
+        "pt": "Quebrado",
+        "en": "Broken"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Liquid",
+      "resultTranslations": {
+        "pt": "Líquido",
+        "en": "Liquid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Personal",
+      "resultTranslations": {
+        "pt": "Pessoal",
+        "en": "Personal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Intriguing",
+      "resultTranslations": {
+        "pt": "Intrigante",
+        "en": "Intriguing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Active",
+      "resultTranslations": {
+        "pt": "Ativo",
+        "en": "Active"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Inactive",
+      "resultTranslations": {
+        "pt": "Inativo",
+        "en": "Inactive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Garbage",
+      "resultTranslations": {
+        "pt": "Lixo",
+        "en": "Garbage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Useless",
+      "resultTranslations": {
+        "pt": "Inútil",
+        "en": "Useless"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Primitive",
+      "resultTranslations": {
+        "pt": "Primitivo",
+        "en": "Primitive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Desired",
+      "resultTranslations": {
+        "pt": "Desejado",
+        "en": "Desired"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Healing",
+      "resultTranslations": {
+        "pt": "Curativo",
+        "en": "Healing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Hidden",
+      "resultTranslations": {
+        "pt": "Escondido",
+        "en": "Hidden"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Prized",
+      "resultTranslations": {
+        "pt": "Valioso",
+        "en": "Prized"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Flora",
+      "resultTranslations": {
+        "pt": "Flora",
+        "en": "Flora"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Moving",
+      "resultTranslations": {
+        "pt": "Em movimento",
+        "en": "Moving"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Confusing",
+      "resultTranslations": {
+        "pt": "Confuso",
+        "en": "Confusing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

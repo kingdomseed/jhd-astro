@@ -1,0 +1,89 @@
+{
+  "id": "creature_crafter_size",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Creature Size",
+  "displayNameTranslations": { "en": "Creature Size" },
+  "description": "Determines creature size and provides Potency modifiers for Health, Speed, Defense, and Offense.",
+  "descriptionTranslations": { "en": "Determines creature size and provides Potency modifiers for Health, Speed, Defense, and Offense." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "size", "core-mechanic"],
+  "entries": [
+    {
+      "range": [1, 5],
+      "result": "TINY",
+      "resultTranslations": { "en": "TINY" },
+      "description": "Potency Modifiers — Health: -6, Speed: -4, Defense: -6, Offense: -6",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: -6, Speed: -4, Defense: -6, Offense: -6" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [6, 20],
+      "result": "SMALL",
+      "resultTranslations": { "en": "SMALL" },
+      "description": "Potency Modifiers — Health: -2, Speed: -2, Defense: -2, Offense: -2",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: -2, Speed: -2, Defense: -2, Offense: -2" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 70],
+      "result": "HUMAN-SIZED",
+      "resultTranslations": { "en": "HUMAN-SIZED" },
+      "description": "Potency Modifiers — Health: 0, Speed: 0, Defense: 0, Offense: 0",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: 0, Speed: 0, Defense: 0, Offense: 0" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 85],
+      "result": "LARGE",
+      "resultTranslations": { "en": "LARGE" },
+      "description": "Potency Modifiers — Health: +2, Speed: 0, Defense: +2, Offense: +2",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: +2, Speed: 0, Defense: +2, Offense: +2" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [86, 95],
+      "result": "VERY LARGE",
+      "resultTranslations": { "en": "VERY LARGE" },
+      "description": "Potency Modifiers — Health: +6, Speed: -2, Defense: +6, Offense: +6",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: +6, Speed: -2, Defense: +6, Offense: +6" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [96, 100],
+      "result": "GIGANTIC",
+      "resultTranslations": { "en": "GIGANTIC" },
+      "description": "Potency Modifiers — Health: +8, Speed: -2, Defense: +8, Offense: +8",
+      "descriptionTranslations": { "en": "Potency Modifiers — Health: +8, Speed: -2, Defense: +8, Offense: +8" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

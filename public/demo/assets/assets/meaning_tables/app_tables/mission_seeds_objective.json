@@ -1,0 +1,53 @@
+{
+  "id": "mission_seeds_objective",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Mission Seeds: Objective",
+  "displayNameTranslations": {
+    "en": "Mission Seeds: Objective"
+  },
+  "description": "What your character is hired to do in a cyberpunk mission. Use with Mission Seeds: Employer for complete missions.",
+  "descriptionTranslations": {
+    "en": "What your character is hired to do in a cyberpunk mission. Use with Mission Seeds: Employer for complete missions."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "cyber-dystopia",
+    "cyberpunk",
+    "sci-fi",
+    "adventure",
+    "mission"
+  ],
+  "entries": [
+    {"range": [1, 5], "result": "Steal valuable information", "resultTranslations": {"en": "Steal valuable information"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [6, 10], "result": "Solve a mystery or crime", "resultTranslations": {"en": "Solve a mystery or crime"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [11, 15], "result": "Investigate a theft", "resultTranslations": {"en": "Investigate a theft"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [16, 20], "result": "Enact revenge upon someone", "resultTranslations": {"en": "Enact revenge upon someone"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [21, 25], "result": "Sabotage a corporation, individual, or other entity", "resultTranslations": {"en": "Sabotage a corporation, individual, or other entity"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [26, 30], "result": "Return something that was stolen", "resultTranslations": {"en": "Return something that was stolen"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [31, 35], "result": "Locate someone", "resultTranslations": {"en": "Locate someone"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [36, 40], "result": "Save someone who has been kidnapped", "resultTranslations": {"en": "Save someone who has been kidnapped"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [41, 45], "result": "Deliver something to a specific location", "resultTranslations": {"en": "Deliver something to a specific location"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [46, 50], "result": "Escape someone who is after them because of a mission gone wrong", "resultTranslations": {"en": "Escape someone who is after them because of a mission gone wrong"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [51, 55], "result": "Serve as a bodyguard and protect them from a threat", "resultTranslations": {"en": "Serve as a bodyguard and protect them from a threat"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [56, 60], "result": "Action Tables", "resultTranslations": {"en": "Action Tables"}, "description": "Roll on Action Meaning tables to interpret the objective", "descriptionTranslations": {"en": "Roll on Action Meaning tables to interpret the objective"}, "weight": 1, "entryRollOn": ["action_meaning_1"], "tags": [], "disabled": false},
+    {"range": [61, 65], "result": "Test experimental technology", "resultTranslations": {"en": "Test experimental technology"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [66, 70], "result": "Escort someone safely through dangerous territory", "resultTranslations": {"en": "Escort someone safely through dangerous territory"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [71, 75], "result": "Conduct surveillance on someone to collect information", "resultTranslations": {"en": "Conduct surveillance on someone to collect information"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [76, 80], "result": "Infiltrate a location", "resultTranslations": {"en": "Infiltrate a location"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [81, 85], "result": "Assassinate someone", "resultTranslations": {"en": "Assassinate someone"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [86, 90], "result": "Shut down a rogue AI", "resultTranslations": {"en": "Shut down a rogue AI"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [91, 95], "result": "Help with a revolution of some kind", "resultTranslations": {"en": "Help with a revolution of some kind"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false},
+    {"range": [96, 100], "result": "Retrieve something valuable at a remote location before rivals do", "resultTranslations": {"en": "Retrieve something valuable at a remote location before rivals do"}, "weight": 1, "entryRollOn": [], "tags": [], "disabled": false}
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

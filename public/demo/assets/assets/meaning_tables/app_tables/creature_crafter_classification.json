@@ -1,0 +1,231 @@
+{
+  "id": "creature_crafter_classification",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Creature Classification",
+  "displayNameTranslations": {
+    "en": "Creature Classification"
+  },
+  "description": "Determines creature type with Potency modifiers and links to the appropriate description table. Roll twice on the linked description table.",
+  "descriptionTranslations": {
+    "en": "Determines creature type with Potency modifiers and links to the appropriate description table. Roll twice on the linked description table."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": [
+    "creature-crafter",
+    "classification",
+    "core-mechanic"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "ALIEN",
+      "resultTranslations": {
+        "en": "ALIEN"
+      },
+      "description": "Potency Modifiers — Health: +2, Speed: +2, Defense: +2, Offense: +2. Roll twice on the Alien Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +2, Speed: +2, Defense: +2, Offense: +2. Roll twice on the Alien Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_alien"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        20
+      ],
+      "result": "ANIMAL",
+      "resultTranslations": {
+        "en": "ANIMAL"
+      },
+      "description": "Potency Modifiers — Health: 0, Speed: +4, Defense: 0, Offense: +2. Roll twice on the Animal Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: 0, Speed: +4, Defense: 0, Offense: +2. Roll twice on the Animal Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_animal"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        30
+      ],
+      "result": "ANIMATED",
+      "resultTranslations": {
+        "en": "ANIMATED"
+      },
+      "description": "Potency Modifiers — Health: +4, Speed: -2, Defense: +4, Offense: +2. Roll twice on the Animated Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +4, Speed: -2, Defense: +4, Offense: +2. Roll twice on the Animated Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_animated"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "result": "ELEMENTAL",
+      "resultTranslations": {
+        "en": "ELEMENTAL"
+      },
+      "description": "Potency Modifiers — Health: +6, Speed: -2, Defense: +4, Offense: +2. Roll twice on the Elemental Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +6, Speed: -2, Defense: +4, Offense: +2. Roll twice on the Elemental Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_elemental"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "result": "HUMANOID",
+      "resultTranslations": {
+        "en": "HUMANOID"
+      },
+      "description": "Potency Modifiers — Health: 0, Speed: 0, Defense: 0, Offense: 0. Roll twice on the Humanoid Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: 0, Speed: 0, Defense: 0, Offense: 0. Roll twice on the Humanoid Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_humanoid"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        60
+      ],
+      "result": "SUPERNATURAL BEAST",
+      "resultTranslations": {
+        "en": "SUPERNATURAL BEAST"
+      },
+      "description": "Potency Modifiers — Health: +2, Speed: +4, Defense: +2, Offense: +2. Roll twice on the Supernatural Beast Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +2, Speed: +4, Defense: +2, Offense: +2. Roll twice on the Supernatural Beast Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_sup_beast"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "AMORPHOUS",
+      "resultTranslations": {
+        "en": "AMORPHOUS"
+      },
+      "description": "Potency Modifiers — Health: +4, Speed: -4, Defense: +4, Offense: -2. Roll twice on the Amorphous Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +4, Speed: -4, Defense: +4, Offense: -2. Roll twice on the Amorphous Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_amorphous"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "PLANT",
+      "resultTranslations": {
+        "en": "PLANT"
+      },
+      "description": "Potency Modifiers — Health: +2, Speed: -4, Defense: 0, Offense: -2. Roll twice on the Plant Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +2, Speed: -4, Defense: 0, Offense: -2. Roll twice on the Plant Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_plant"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "result": "UNDEAD",
+      "resultTranslations": {
+        "en": "UNDEAD"
+      },
+      "description": "Potency Modifiers — Health: +4, Speed: -2, Defense: +2, Offense: +2. Roll twice on the Undead Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: +4, Speed: -2, Defense: +2, Offense: +2. Roll twice on the Undead Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_undead"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "INSECT",
+      "resultTranslations": {
+        "en": "INSECT"
+      },
+      "description": "Potency Modifiers — Health: 0, Speed: +2, Defense: +2, Offense: +2. Roll twice on the Insect Descriptions table.",
+      "descriptionTranslations": {
+        "en": "Potency Modifiers — Health: 0, Speed: +2, Defense: +2, Offense: +2. Roll twice on the Insect Descriptions table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "creature_crafter_desc_insect"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,163 @@
+{
+  "id": "monster_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Monster Focus",
+  "displayNameTranslations": {
+    "en": "Monster Focus"
+  },
+  "description": "Determines the role and nature of monsters in a fantasy world.",
+  "descriptionTranslations": {
+    "en": "Determines the role and nature of monsters in a fantasy world."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "monsters",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "result": "Common and Feared: Monsters can be found everywhere, and sow destruction wherever they are",
+      "resultTranslations": {
+        "en": "Common and Feared: Monsters can be found everywhere, and sow destruction wherever they are"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "result": "Common and Social: Monsters are common and live everyday lives like anyone else",
+      "resultTranslations": {
+        "en": "Common and Social: Monsters are common and live everyday lives like anyone else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        40
+      ],
+      "result": "Rare and Feared: Monsters are uncommon, but when one appears it is a cause for great anxiety and fear",
+      "resultTranslations": {
+        "en": "Rare and Feared: Monsters are uncommon, but when one appears it is a cause for great anxiety and fear"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "result": "Very Rare: Monsters are so rare that few believe in them. When one appears it is a special and, often, horrible occasion",
+      "resultTranslations": {
+        "en": "Very Rare: Monsters are so rare that few believe in them. When one appears it is a special and, often, horrible occasion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "result": "Signature Monster: There is one type of monster that is known and feared. There may be more, but this is the most frequent. For instance, orcs who raid fringe lands",
+      "resultTranslations": {
+        "en": "Signature Monster: There is one type of monster that is known and feared. There may be more, but this is the most frequent. For instance, orcs who raid fringe lands"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        65
+      ],
+      "result": "Monsters as Animals: Monsters are common but they fill a role in the ecosystem like any other natural animal. While many can be fearsome, most are harmless or useful",
+      "resultTranslations": {
+        "en": "Monsters as Animals: Monsters are common but they fill a role in the ecosystem like any other natural animal. While many can be fearsome, most are harmless or useful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "Magic Monsters: Monsters exist, but as a result of magic. For instance, all monsters are constructs built by wizards or summoned creatures",
+      "resultTranslations": {
+        "en": "Magic Monsters: Monsters exist, but as a result of magic. For instance, all monsters are constructs built by wizards or summoned creatures"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Legendary: Monsters are very rare but feared. Each is a unique creature, not part of a species, and have their own origins and motives",
+      "resultTranslations": {
+        "en": "Legendary: Monsters are very rare but feared. Each is a unique creature, not part of a species, and have their own origins and motives"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Adventure Tone",
+      "resultTranslations": {
+        "en": "Adventure Tone"
+      },
+      "description": "Roll one Keyword from the Adventure Tone Meaning table for a total of two Keywords to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll one Keyword from the Adventure Tone Meaning table for a total of two Keywords to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["adventure_tone"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

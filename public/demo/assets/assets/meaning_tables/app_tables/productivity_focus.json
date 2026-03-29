@@ -1,0 +1,168 @@
+{
+  "id": "productivity_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Productivity Focus",
+  "displayNameTranslations": {
+    "en": "Productivity Focus"
+  },
+  "description": "Provides context for what a Society produces. Use with Production Meaning table for additional inspiration. Part of the Society Crafter system.",
+  "descriptionTranslations": {
+    "en": "Provides context for what a Society produces. Use with Production Meaning table for additional inspiration. Part of the Society Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 49",
+  "tags": [
+    "society",
+    "society-crafter",
+    "world-building",
+    "economy",
+    "production",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Sustenance: They produce something necessary to live, such as food. They may keep it to themselves or trade it with others",
+      "resultTranslations": {
+        "en": "Sustenance: They produce something necessary to live, such as food. They may keep it to themselves or trade it with others"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Luxury: They produce something many want, but no one needs. Perhaps they are renowned as a vacation destination or create luxury goods",
+      "resultTranslations": {
+        "en": "Luxury: They produce something many want, but no one needs. Perhaps they are renowned as a vacation destination or create luxury goods"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        35
+      ],
+      "result": "Knowledge: They trade in information, such as scientific research or education",
+      "resultTranslations": {
+        "en": "Knowledge: They trade in information, such as scientific research or education"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "result": "Protection: They offer protection, for their own people or others. Productivity is focused on making weapons and maintaining armies",
+      "resultTranslations": {
+        "en": "Protection: They offer protection, for their own people or others. Productivity is focused on making weapons and maintaining armies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        55
+      ],
+      "result": "Trade: They don't make anything, but they are good at facilitating trade between others",
+      "resultTranslations": {
+        "en": "Trade: They don't make anything, but they are good at facilitating trade between others"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        60
+      ],
+      "result": "Self-Sufficient: They produce exactly what they need to survive, and no more. For instance, a society of hunters that provides for their own",
+      "resultTranslations": {
+        "en": "Self-Sufficient: They produce exactly what they need to survive, and no more. For instance, a society of hunters that provides for their own"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        80
+      ],
+      "result": "Industrial: They make fabricated goods that others need. For instance, an orbital station that makes starships",
+      "resultTranslations": {
+        "en": "Industrial: They make fabricated goods that others need. For instance, an orbital station that makes starships"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "result": "Multiple: Roll on this table twice for a dual Productivity Focus. Reroll Multiple if you get it again",
+      "resultTranslations": {
+        "en": "Multiple: Roll on this table twice for a dual Productivity Focus. Reroll Multiple if you get it again"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "production"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "scene_adjustment",
+    "displayName": "Scene Adjustment Table",
+    "category": "Scene Adjustments",
+    "isPremium": false,
+    "jsonKey": "entries",
+    "description": "Core table used to determine how a scene changes when an alteration is needed",
+    "source": "Mythic GME 2e core rulebook"
+  },
+  "entries": [
+    {
+      "range": [1, 1],
+      "result": "Remove A Character",
+      "description": "A character exits or is removed from the scene"
+    },
+    {
+      "range": [2, 2],
+      "result": "Add A Character",
+      "description": "A new character enters or is added to the scene"
+    },
+    {
+      "range": [3, 3],
+      "result": "Reduce/Remove An Activity",
+      "description": "An ongoing activity is reduced in scope or completely removed"
+    },
+    {
+      "range": [4, 4],
+      "result": "Increase An Activity",
+      "description": "An ongoing activity increases in scope or intensity"
+    },
+    {
+      "range": [5, 5],
+      "result": "Remove An Object",
+      "description": "An object is removed from the scene"
+    },
+    {
+      "range": [6, 6],
+      "result": "Add An Object",
+      "description": "A new object is added to the scene"
+    },
+    {
+      "range": [7, 10],
+      "result": "Make 2 Adjustments",
+      "description": "Roll twice more on this table and apply both results"
+    }
+  ]
+}

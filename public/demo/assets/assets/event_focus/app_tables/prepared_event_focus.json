@@ -1,0 +1,155 @@
+{
+  "id": "prepared_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Prepared Adventure Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Prepared Adventure Event Focus Table",
+    "pt": "Tabela de Foco de Eventos Preparados"
+  },
+  "description": "Use this with your prepared adventures. Rolls on features instead of threads. Official 2e version.",
+  "descriptionTranslations": {
+    "en": "Use this with your prepared adventures. Rolls on features instead of threads. Official 2e version.",
+    "pt": "Use isso com suas aventuras preparadas. Rola em recursos em vez de tramas."
+  },
+  "isPremium": false,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic GME 2e core rulebook",
+  "tags": [
+    "event-focus",
+    "prepared",
+    "structured",
+    "adventure"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "result": "Adventure Feature",
+      "resultTranslations": {
+        "en": "Adventure Feature",
+        "pt": "Aspecto de Aventura"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Features"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        40
+      ],
+      "result": "NPC Action",
+      "resultTranslations": {
+        "en": "NPC Action",
+        "pt": "Ação de PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "result": "NPC Negative",
+      "resultTranslations": {
+        "en": "NPC Negative",
+        "pt": "Negativo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "result": "NPC Positive",
+      "resultTranslations": {
+        "en": "NPC Positive",
+        "pt": "Positivo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        70
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative",
+        "pt": "Negativo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive",
+        "pt": "Positivo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Current Context",
+      "resultTranslations": {
+        "en": "Current Context",
+        "pt": "Contexto Atual"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

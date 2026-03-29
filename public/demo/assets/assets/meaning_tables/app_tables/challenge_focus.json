@@ -1,0 +1,188 @@
+{
+  "id": "challenge_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Challenge Focus",
+  "displayNameTranslations": {
+    "en": "Challenge Focus"
+  },
+  "description": "Provides context for generating quest challenges with The Challenge table. Determines the type of obstacle your PC overcame during their quest.",
+  "descriptionTranslations": {
+    "en": "Provides context for generating quest challenges with The Challenge table. Determines the type of obstacle your PC overcame during their quest."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 54",
+  "tags": [
+    "adventure",
+    "challenge",
+    "context",
+    "down-time"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "A Trap!: Your PC was caught in a trap they narrowly escaped from",
+      "resultTranslations": {
+        "en": "A Trap!: Your PC was caught in a trap they narrowly escaped from"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        25
+      ],
+      "result": "Epic Fight: Your PC fought a mighty foe, in a large battle, or under other legendary circumstances",
+      "resultTranslations": {
+        "en": "Epic Fight: Your PC fought a mighty foe, in a large battle, or under other legendary circumstances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Treachery: An ally turned on your PC at the worst time, showing themselves to be in league with the enemy",
+      "resultTranslations": {
+        "en": "Treachery: An ally turned on your PC at the worst time, showing themselves to be in league with the enemy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "result": "Catastrophe: Something went terribly wrong during the quest that almost led to disaster, except for the heroic actions of your PC",
+      "resultTranslations": {
+        "en": "Catastrophe: Something went terribly wrong during the quest that almost led to disaster, except for the heroic actions of your PC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        45
+      ],
+      "result": "Puzzler: Your PC solved a puzzle or problem that was instrumental in completing the quest",
+      "resultTranslations": {
+        "en": "Puzzler: Your PC solved a puzzle or problem that was instrumental in completing the quest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "result": "Escape: Your PC took part in a daring escape from the clutches of the enemy, certain doom, or other perilous circumstances",
+      "resultTranslations": {
+        "en": "Escape: Your PC took part in a daring escape from the clutches of the enemy, certain doom, or other perilous circumstances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "result": "Contest of Champions: Your PC competed in and won a contest of some sort that led to the completion of the quest",
+      "resultTranslations": {
+        "en": "Contest of Champions: Your PC competed in and won a contest of some sort that led to the completion of the quest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        65
+      ],
+      "result": "That Didn't Go So Well: Your PC experienced a major failure that they were able to recover from",
+      "resultTranslations": {
+        "en": "That Didn't Go So Well: Your PC experienced a major failure that they were able to recover from"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "Smooth Talker: Your PC worked hard to forge an important alliance",
+      "resultTranslations": {
+        "en": "Smooth Talker: Your PC worked hard to forge an important alliance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        85
+      ],
+      "result": "Danger!: Your PC bravely entered a dangerous place in an effort to complete the Quest",
+      "resultTranslations": {
+        "en": "Danger!: Your PC bravely entered a dangerous place in an effort to complete the Quest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        100
+      ],
+      "result": "No Additional Context: Roll Meaning words from The Challenge without additional context from this table",
+      "resultTranslations": {
+        "en": "No Additional Context: Roll Meaning words from The Challenge without additional context from this table"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "the_challenge"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

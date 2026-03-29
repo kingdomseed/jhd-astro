@@ -1,0 +1,78 @@
+{
+  "id": "creature_crafter_ability_enhanced_sense",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Enhanced Sense Type",
+  "displayNameTranslations": { "en": "Enhanced Sense Type" },
+  "description": "Determines which of the creature's senses is enhanced.",
+  "descriptionTranslations": { "en": "Determines which of the creature's senses is enhanced." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "enhanced-sense"],
+  "entries": [
+    {
+      "range": [1, 20],
+      "result": "SIGHT",
+      "resultTranslations": { "en": "SIGHT" },
+      "description": "The creature has enhanced sight, such as seeing in the dark or over great distances.",
+      "descriptionTranslations": { "en": "The creature has enhanced sight, such as seeing in the dark or over great distances." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 40],
+      "result": "HEARING",
+      "resultTranslations": { "en": "HEARING" },
+      "description": "The creature has enhanced hearing, such as being able to hear a heartbeat.",
+      "descriptionTranslations": { "en": "The creature has enhanced hearing, such as being able to hear a heartbeat." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 60],
+      "result": "SMELL",
+      "resultTranslations": { "en": "SMELL" },
+      "description": "The creature has an enhanced sense of smell.",
+      "descriptionTranslations": { "en": "The creature has an enhanced sense of smell." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 80],
+      "result": "TASTE",
+      "resultTranslations": { "en": "TASTE" },
+      "description": "The creature has an enhanced sense of taste.",
+      "descriptionTranslations": { "en": "The creature has an enhanced sense of taste." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 100],
+      "result": "ROLL TWICE",
+      "resultTranslations": { "en": "ROLL TWICE" },
+      "description": "Roll twice for two senses, in which case both are enhanced.",
+      "descriptionTranslations": { "en": "Roll twice for two senses, in which case both are enhanced." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

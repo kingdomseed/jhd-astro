@@ -1,0 +1,130 @@
+{
+  "id": "city_features",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "City Features",
+  "displayNameTranslations": {
+    "en": "City Features"
+  },
+  "description": "Determines features for city map tiles. Roll 1d12 for each tile.",
+  "descriptionTranslations": {
+    "en": "Determines features for city map tiles. Roll 1d12 for each tile."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 61",
+  "tags": [
+    "city-crafter",
+    "world-building",
+    "cities",
+    "maps"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Route: Anything that facilitates important travel, such as major roads, bridges, rivers, orbital beanstalk stations, airports, etc.",
+      "resultTranslations": {
+        "en": "Route: Anything that facilitates important travel, such as major roads, bridges, rivers, orbital beanstalk stations, airports, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Residential: Places where City residents live, such as houses, apartment buildings, tents, caves, etc.",
+      "resultTranslations": {
+        "en": "Residential: Places where City residents live, such as houses, apartment buildings, tents, caves, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Commerce: Areas that are connected to commerce, such as marketplaces, factories, farms, etc.",
+      "resultTranslations": {
+        "en": "Commerce: Areas that are connected to commerce, such as marketplaces, factories, farms, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Infrastructure: Services and institutions that help a City function, such as hospitals, schools, courts, power stations, etc.",
+      "resultTranslations": {
+        "en": "Infrastructure: Services and institutions that help a City function, such as hospitals, schools, courts, power stations, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Natural: This is something natural that the City hasn't displaced, such as hills, lakes, rivers, the bleached bones of an ancient leviathan, etc.",
+      "resultTranslations": {
+        "en": "Natural: This is something natural that the City hasn't displaced, such as hills, lakes, rivers, the bleached bones of an ancient leviathan, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Happy: These are areas and buildings that make residents feel happy, content, safe, and connected, such as museums, parks, temples, etc.",
+      "resultTranslations": {
+        "en": "Happy: These are areas and buildings that make residents feel happy, content, safe, and connected, such as museums, parks, temples, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        12
+      ],
+      "result": "Sprawl: This City Feature is the same as another adjoining (horizontally, vertically, or diagonally) tile. If this is the map's first Feature, then treat this roll as Infrastructure",
+      "resultTranslations": {
+        "en": "Sprawl: This City Feature is the same as another adjoining (horizontally, vertically, or diagonally) tile. If this is the map's first Feature, then treat this roll as Infrastructure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 12,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

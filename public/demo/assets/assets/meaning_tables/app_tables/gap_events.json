@@ -1,0 +1,107 @@
+{
+  "id": "gap_events",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Gap Events",
+  "displayNameTranslations": {
+    "en": "Gap Events"
+  },
+  "description": "Determines what happens during time gaps in your adventure, such as travel between locations or periods of downtime. Part of the Fantasy World Crafter system.",
+  "descriptionTranslations": {
+    "en": "Determines what happens during time gaps in your adventure, such as travel between locations or periods of downtime. Part of the Fantasy World Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "travel",
+    "time",
+    "gap"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        4
+      ],
+      "result": "Expectation",
+      "resultTranslations": {
+        "en": "Expectation"
+      },
+      "description": "The gap unfolds as expected with no surprises.",
+      "descriptionTranslations": {
+        "en": "The gap unfolds as expected with no surprises."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Smooth",
+      "resultTranslations": {
+        "en": "Smooth"
+      },
+      "description": "The gap goes smoother than expected, with some benefit to the PC.",
+      "descriptionTranslations": {
+        "en": "The gap goes smoother than expected, with some benefit to the PC."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        7
+      ],
+      "result": "Disaster",
+      "resultTranslations": {
+        "en": "Disaster"
+      },
+      "description": "Something goes terribly wrong during the gap, creating a significant problem.",
+      "descriptionTranslations": {
+        "en": "Something goes terribly wrong during the gap, creating a significant problem."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        10
+      ],
+      "result": "Expectation With A Twist",
+      "resultTranslations": {
+        "en": "Expectation With A Twist"
+      },
+      "description": "The gap unfolds as expected, but with an unexpected twist. Roll on Action Meaning tables for context.",
+      "descriptionTranslations": {
+        "en": "The gap unfolds as expected, but with an unexpected twist. Roll on Action Meaning tables for context."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 10,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

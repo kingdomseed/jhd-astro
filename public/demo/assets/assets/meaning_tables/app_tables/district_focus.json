@@ -1,0 +1,131 @@
+{
+  "id": "district_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "District Focus",
+  "displayNameTranslations": {
+    "en": "District Focus"
+  },
+  "description": "Determines the character of city districts for map building.",
+  "descriptionTranslations": {
+    "en": "Determines the character of city districts for map building."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 61",
+  "tags": [
+    "city-crafter",
+    "world-building",
+    "cities",
+    "districts",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        25
+      ],
+      "result": "Economic: This District is a haven for business interests of one sort or another. This could be commercial, such as marketplaces where people buy things, or headquarters for business entities... anything that touches on economics",
+      "resultTranslations": {
+        "en": "Economic: This District is a haven for business interests of one sort or another. This could be commercial, such as marketplaces where people buy things, or headquarters for business entities... anything that touches on economics"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        35
+      ],
+      "result": "Food: Food is made here, either grown and farmed, harvested in vats, fished from rivers, or however this world sustains people",
+      "resultTranslations": {
+        "en": "Food: Food is made here, either grown and farmed, harvested in vats, fished from rivers, or however this world sustains people"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "result": "Domestic: This District is home to many people and is known for its neighborhoods",
+      "resultTranslations": {
+        "en": "Domestic: This District is home to many people and is known for its neighborhoods"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        55
+      ],
+      "result": "Industry: This District is known for producing things at scale (or at least, at maximum scale for what this city can manage), such as being home to factories. The things made here are likely shipped somewhere else to sell",
+      "resultTranslations": {
+        "en": "Industry: This District is known for producing things at scale (or at least, at maximum scale for what this city can manage), such as being home to factories. The things made here are likely shipped somewhere else to sell"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        65
+      ],
+      "result": "Leisure: This District is known for things that people enjoy. For instance, it may be full of popular restaurants or zoos or other entertainments and leisure opportunities",
+      "resultTranslations": {
+        "en": "Leisure: This District is known for things that people enjoy. For instance, it may be full of popular restaurants or zoos or other entertainments and leisure opportunities"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        75
+      ],
+      "result": "Government: This District is home to important governing institutions for the City, such as judicial, legislative, and law enforcement",
+      "resultTranslations": {
+        "en": "Government: This District is home to important governing institutions for the City, such as judicial, legislative, and law enforcement"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        100
+      ],
+      "result": "Another Keyword: Roll an additional Keyword from City Descriptors and include it with the other Meaning words rolled to make your interpretation",
+      "resultTranslations": {
+        "en": "Another Keyword: Roll an additional Keyword from City Descriptors and include it with the other Meaning words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

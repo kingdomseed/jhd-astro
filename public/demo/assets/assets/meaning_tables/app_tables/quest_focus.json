@@ -1,0 +1,160 @@
+{
+  "id": "quest_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Quest Focus",
+  "displayNameTranslations": {
+    "en": "Quest Focus"
+  },
+  "description": "Provides context for generating quests with The Quest table. Determines the type of quest your PC was on before down time begins.",
+  "descriptionTranslations": {
+    "en": "Provides context for generating quests with The Quest table. Determines the type of quest your PC was on before down time begins."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 54",
+  "tags": [
+    "adventure",
+    "quest",
+    "context",
+    "down-time"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Treasure Hunt: A quest to find riches or something valuable",
+      "resultTranslations": {
+        "en": "Treasure Hunt: A quest to find riches or something valuable"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Rescue Mission: This quest was to rescue someone, something, or a group",
+      "resultTranslations": {
+        "en": "Rescue Mission: This quest was to rescue someone, something, or a group"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        30
+      ],
+      "result": "Stop It Before It's Too Late: The quest involved stopping something before it can do more harm, such as a growing evil or a nefarious plan",
+      "resultTranslations": {
+        "en": "Stop It Before It's Too Late: The quest involved stopping something before it can do more harm, such as a growing evil or a nefarious plan"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "A Cry For Help: Someone requested your aid in resolving a problem, and you answered the call",
+      "resultTranslations": {
+        "en": "A Cry For Help: Someone requested your aid in resolving a problem, and you answered the call"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "result": "Exploration: The quest was one of discovery",
+      "resultTranslations": {
+        "en": "Exploration: The quest was one of discovery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        60
+      ],
+      "result": "Personal: The quest was of a personal nature, involving a goal close to your PC's heart",
+      "resultTranslations": {
+        "en": "Personal: The quest was of a personal nature, involving a goal close to your PC's heart"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "Duty Calls: The quest was a duty to perform, related to something professional or personal to the PC",
+      "resultTranslations": {
+        "en": "Duty Calls: The quest was a duty to perform, related to something professional or personal to the PC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Straight Up Luck: You weren't looking for the quest, but it found you as you stumbled into it",
+      "resultTranslations": {
+        "en": "Straight Up Luck: You weren't looking for the quest, but it found you as you stumbled into it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "No Additional Context: Roll Meaning words from The Quest without additional context from this table",
+      "resultTranslations": {
+        "en": "No Additional Context: Roll Meaning words from The Quest without additional context from this table"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "the_quest"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

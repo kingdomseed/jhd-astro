@@ -1,0 +1,171 @@
+{
+  "id": "scheduled_segments",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Scheduled Segments",
+  "displayNameTranslations": {
+    "en": "Scheduled Segments"
+  },
+  "description": "Determines the type of scheduled radio segment for the Moonlight Radio scenario. Roll when you get Scheduled Segment from the Hello Focus table.",
+  "descriptionTranslations": {
+    "en": "Determines the type of scheduled radio segment for the Moonlight Radio scenario. Roll when you get Scheduled Segment from the Hello Focus table."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 58",
+  "tags": [
+    "moonlight-radio",
+    "radio",
+    "scenario"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        16
+      ],
+      "result": "A Message From The Chief: This is a public service announcement your PC agreed to read from Police Chief Gibbons",
+      "resultTranslations": {
+        "en": "A Message From The Chief: This is a public service announcement your PC agreed to read from Police Chief Gibbons"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        36
+      ],
+      "result": "And Now, The News: Tell an item of news your PC collected from the local paper",
+      "resultTranslations": {
+        "en": "And Now, The News: Tell an item of news your PC collected from the local paper"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        48
+      ],
+      "result": "Madame Claire Cares: Madame Claire is a local psychic and spirit medium. She sends notes containing predictions of the future or messages she says she received from spirits",
+      "resultTranslations": {
+        "en": "Madame Claire Cares: Madame Claire is a local psychic and spirit medium. She sends notes containing predictions of the future or messages she says she received from spirits"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        56
+      ],
+      "result": "Lemur Tires And Motors: Your PC's show has a few local businesses that financially support it, including this auto mechanic. Roll on Conversation for inspiration about their services",
+      "resultTranslations": {
+        "en": "Lemur Tires And Motors: Your PC's show has a few local businesses that financially support it, including this auto mechanic. Roll on Conversation for inspiration about their services"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        60
+      ],
+      "result": "Hold On, Please: Something distracts your PC that causes a few minutes of dead air on the show. Maybe it's a sound outside, or a knock on the door. When your PC goes to check it out, there is nothing there",
+      "resultTranslations": {
+        "en": "Hold On, Please: Something distracts your PC that causes a few minutes of dead air on the show. Maybe it's a sound outside, or a knock on the door. When your PC goes to check it out, there is nothing there"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        68
+      ],
+      "result": "Delicate Dental: This is another local business who sponsors the show. Roll on Conversation for inspiration about their services",
+      "resultTranslations": {
+        "en": "Delicate Dental: This is another local business who sponsors the show. Roll on Conversation for inspiration about their services"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        76
+      ],
+      "result": "Dermal Designs: This business sponsor's exact services are unclear. Create a message where you have no idea what you're actually talking about",
+      "resultTranslations": {
+        "en": "Dermal Designs: This business sponsor's exact services are unclear. Create a message where you have no idea what you're actually talking about"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        84
+      ],
+      "result": "Gomez Extermination: This pest extermination business has ad copy that suggests other, unspecified services. Add a strangely cryptic twist with unclear meaning",
+      "resultTranslations": {
+        "en": "Gomez Extermination: This pest extermination business has ad copy that suggests other, unspecified services. Add a strangely cryptic twist with unclear meaning"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        92
+      ],
+      "result": "Inspirational Message From The Church Of Saint Vertex: A popular local church sends inspirational scripture messages. They sound pithy and classic without making any obvious sense",
+      "resultTranslations": {
+        "en": "Inspirational Message From The Church Of Saint Vertex: A popular local church sends inspirational scripture messages. They sound pithy and classic without making any obvious sense"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        100
+      ],
+      "result": "Pet Adoption: Local animal control asks you to read a notice about a newly found animal. The agency never tells you what the animal actually is, and some descriptions can seem quite strange",
+      "resultTranslations": {
+        "en": "Pet Adoption: Local animal control asks you to read a notice about a newly found animal. The agency never tells you what the animal actually is, and some descriptions can seem quite strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

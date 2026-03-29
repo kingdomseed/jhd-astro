@@ -1,0 +1,313 @@
+{
+  "id": "spell_effects_death",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Death",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Death"
+  },
+  "description": "Determines the specific effect for Death & Necromancy spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Death & Necromancy spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "necromancy"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Sense the proximity of dead things",
+      "resultTranslations": {
+        "en": "Sense the proximity of dead things"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Make something appear dead when it is not",
+      "resultTranslations": {
+        "en": "Make something appear dead when it is not"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Damage the undead by reducing their animating force",
+      "resultTranslations": {
+        "en": "Damage the undead by reducing their animating force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Drain life force from the living",
+      "resultTranslations": {
+        "en": "Drain life force from the living"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Animate dead parts, like a hand or eye",
+      "resultTranslations": {
+        "en": "Animate dead parts, like a hand or eye"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Raise undead animals of dog size or smaller",
+      "resultTranslations": {
+        "en": "Raise undead animals of dog size or smaller"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Control lesser undead like zombies",
+      "resultTranslations": {
+        "en": "Control lesser undead like zombies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Raise lesser undead like zombies",
+      "resultTranslations": {
+        "en": "Raise lesser undead like zombies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Contact a spirit of the dead",
+      "resultTranslations": {
+        "en": "Contact a spirit of the dead"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Destroy lesser undead like zombies by removing their animating force",
+      "resultTranslations": {
+        "en": "Destroy lesser undead like zombies by removing their animating force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Bestow a creeping death upon living things that slowly rots them",
+      "resultTranslations": {
+        "en": "Bestow a creeping death upon living things that slowly rots them"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Kill the living by destroying their life force",
+      "resultTranslations": {
+        "en": "Kill the living by destroying their life force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Temporarily hold off imminent death",
+      "resultTranslations": {
+        "en": "Temporarily hold off imminent death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Create a greater sentient undead such as a vampire or lich",
+      "resultTranslations": {
+        "en": "Create a greater sentient undead such as a vampire or lich"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Travel to a plane of the dead",
+      "resultTranslations": {
+        "en": "Travel to a plane of the dead"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Contact a god of death",
+      "resultTranslations": {
+        "en": "Contact a god of death"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Conquer death and acquire immortality through undeath",
+      "resultTranslations": {
+        "en": "Conquer death and acquire immortality through undeath"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

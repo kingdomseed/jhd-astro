@@ -1,0 +1,108 @@
+{
+  "id": "companion_primary_descriptor",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "technology-scifi",
+  "defaultLanguage": "en",
+  "displayName": "Companion Primary Descriptor",
+  "displayNameTranslations": {
+    "en": "Companion Primary Descriptor"
+  },
+  "description": "Determines the primary skill or role of an NPC companion in a heist scenario. Part of the Scoundrels RPG mini-game.",
+  "descriptionTranslations": {
+    "en": "Determines the primary skill or role of an NPC companion in a heist scenario. Part of the Scoundrels RPG mini-game."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 48",
+  "tags": [
+    "scoundrels",
+    "heist",
+    "sci-fi",
+    "character",
+    "npc"
+  ],
+  "entries": [
+    {
+      "range": [1, 30],
+      "result": "Blaster",
+      "resultTranslations": {
+        "en": "Blaster"
+      },
+      "description": "Expert in ranged combat and firearms (Rank 4)",
+      "descriptionTranslations": {
+        "en": "Expert in ranged combat and firearms (Rank 4)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [31, 50],
+      "result": "Brawl",
+      "resultTranslations": {
+        "en": "Brawl"
+      },
+      "description": "Expert in hand-to-hand combat and melee (Rank 4)",
+      "descriptionTranslations": {
+        "en": "Expert in hand-to-hand combat and melee (Rank 4)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 70],
+      "result": "Pilot",
+      "resultTranslations": {
+        "en": "Pilot"
+      },
+      "description": "Expert in piloting vehicles and spacecraft (Rank 4)",
+      "descriptionTranslations": {
+        "en": "Expert in piloting vehicles and spacecraft (Rank 4)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 90],
+      "result": "Tech",
+      "resultTranslations": {
+        "en": "Tech"
+      },
+      "description": "Expert in technology, hacking, and engineering (Rank 4)",
+      "descriptionTranslations": {
+        "en": "Expert in technology, hacking, and engineering (Rank 4)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "Savvy",
+      "resultTranslations": {
+        "en": "Savvy"
+      },
+      "description": "Expert in social situations, negotiation, and deception (Rank 4)",
+      "descriptionTranslations": {
+        "en": "Expert in social situations, negotiation, and deception (Rank 4)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

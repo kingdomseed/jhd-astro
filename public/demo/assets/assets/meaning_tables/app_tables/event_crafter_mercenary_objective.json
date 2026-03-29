@@ -1,0 +1,266 @@
+{
+  "id": "event_crafter_mercenary_objective",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Mercenary Missions: Objective",
+  "displayNameTranslations": {
+    "en": "Mercenary Missions: Objective"
+  },
+  "description": "Random Category custom List for the Mercenary Missions Event Crafter Situation. Roll when Event Elements directs you to this List. Missions scale upward with Progress Points. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Random Category custom List for the Mercenary Missions Event Crafter Situation. Roll when Event Elements directs you to this List. Missions scale upward with Progress Points. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "mercenary-missions",
+    "objective",
+    "random"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Courier",
+      "resultTranslations": {
+        "en": "Courier"
+      },
+      "description": "Deliver something to some place. Whatever you're delivering and where is likely dangerous.",
+      "descriptionTranslations": {
+        "en": "Deliver something to some place. Whatever you're delivering and where is likely dangerous."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Courier",
+      "resultTranslations": {
+        "en": "Courier"
+      },
+      "description": "Deliver something to some place. Whatever you're delivering and where is likely dangerous.",
+      "descriptionTranslations": {
+        "en": "Deliver something to some place. Whatever you're delivering and where is likely dangerous."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Guard location",
+      "resultTranslations": {
+        "en": "Guard location"
+      },
+      "description": "Guard a location, or something at a location, for a certain amount of time. Includes planning the logistics and defending against threats.",
+      "descriptionTranslations": {
+        "en": "Guard a location, or something at a location, for a certain amount of time. Includes planning the logistics and defending against threats."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Bodyguard",
+      "resultTranslations": {
+        "en": "Bodyguard"
+      },
+      "description": "Guard someone important. May be stationary or a travel adventure accompanying the protectee to a destination.",
+      "descriptionTranslations": {
+        "en": "Guard someone important. May be stationary or a travel adventure accompanying the protectee to a destination."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Reconnaissance",
+      "resultTranslations": {
+        "en": "Reconnaissance"
+      },
+      "description": "Information gathering mission involving spying, recording what you've found, and returning with intelligence.",
+      "descriptionTranslations": {
+        "en": "Information gathering mission involving spying, recording what you've found, and returning with intelligence."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Retrieval",
+      "resultTranslations": {
+        "en": "Retrieval"
+      },
+      "description": "Recover an item or person from a location. What you're retrieving and where it is makes this dangerous.",
+      "descriptionTranslations": {
+        "en": "Recover an item or person from a location. What you're retrieving and where it is makes this dangerous."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Retrieval",
+      "resultTranslations": {
+        "en": "Retrieval"
+      },
+      "description": "Recover an item or person from a location. What you're retrieving and where it is makes this dangerous.",
+      "descriptionTranslations": {
+        "en": "Recover an item or person from a location. What you're retrieving and where it is makes this dangerous."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Steal",
+      "resultTranslations": {
+        "en": "Steal"
+      },
+      "description": "Take something that doesn't belong to you, or that someone else is guarding. Similar to Retrieval but with stealth emphasis.",
+      "descriptionTranslations": {
+        "en": "Take something that doesn't belong to you, or that someone else is guarding. Similar to Retrieval but with stealth emphasis."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Steal",
+      "resultTranslations": {
+        "en": "Steal"
+      },
+      "description": "Take something that doesn't belong to you, or that someone else is guarding. Similar to Retrieval but with stealth emphasis.",
+      "descriptionTranslations": {
+        "en": "Take something that doesn't belong to you, or that someone else is guarding. Similar to Retrieval but with stealth emphasis."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Elimination",
+      "resultTranslations": {
+        "en": "Elimination"
+      },
+      "description": "Remove a target. This could mean assassination, capture, or neutralization depending on the Context.",
+      "descriptionTranslations": {
+        "en": "Remove a target. This could mean assassination, capture, or neutralization depending on the Context."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Rescue",
+      "resultTranslations": {
+        "en": "Rescue"
+      },
+      "description": "Save someone from captivity or a dangerous situation. Involves locating and extracting the target.",
+      "descriptionTranslations": {
+        "en": "Save someone from captivity or a dangerous situation. Involves locating and extracting the target."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Undercover",
+      "resultTranslations": {
+        "en": "Undercover"
+      },
+      "description": "Infiltrate an organization or group by assuming a false identity. Requires deception and maintaining cover.",
+      "descriptionTranslations": {
+        "en": "Infiltrate an organization or group by assuming a false identity. Requires deception and maintaining cover."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Stop someone",
+      "resultTranslations": {
+        "en": "Stop someone"
+      },
+      "description": "Prevent someone from achieving their goal. The target and their objective depend on the Context.",
+      "descriptionTranslations": {
+        "en": "Prevent someone from achieving their goal. The target and their objective depend on the Context."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 13,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

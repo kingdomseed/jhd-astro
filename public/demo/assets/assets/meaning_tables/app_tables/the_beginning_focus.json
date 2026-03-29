@@ -1,0 +1,154 @@
+{
+  "id": "the_beginning_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "The Beginning Focus",
+  "displayNameTranslations": {
+    "en": "The Beginning Focus"
+  },
+  "description": "Provides context for how a Society began. Use with History Meaning table for additional inspiration. Part of the Society Crafter system.",
+  "descriptionTranslations": {
+    "en": "Provides context for how a Society began. Use with History Meaning table for additional inspiration. Part of the Society Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 49",
+  "tags": [
+    "society",
+    "society-crafter",
+    "world-building",
+    "history",
+    "origins",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        25
+      ],
+      "result": "Opportunity: An opportunity brought people together. For instance, discovering gold to mine",
+      "resultTranslations": {
+        "en": "Opportunity: An opportunity brought people together. For instance, discovering gold to mine"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Forced: The Society's founders did not choose to start this place, they were forced by circumstances. Maybe they were shipwrecked or fled from persecution",
+      "resultTranslations": {
+        "en": "Forced: The Society's founders did not choose to start this place, they were forced by circumstances. Maybe they were shipwrecked or fled from persecution"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "result": "Ideals: The founders were brought together by an idea or ideal. For instance, they may have been practitioners of the same profession or religion",
+      "resultTranslations": {
+        "en": "Ideals: The founders were brought together by an idea or ideal. For instance, they may have been practitioners of the same profession or religion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        60
+      ],
+      "result": "Commerce: This Society started for economic reasons. For instance, it was a frequent point of trade",
+      "resultTranslations": {
+        "en": "Commerce: This Society started for economic reasons. For instance, it was a frequent point of trade"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "Protection: The Society initially drew together for protection against something else",
+      "resultTranslations": {
+        "en": "Protection: The Society initially drew together for protection against something else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        85
+      ],
+      "result": "Colony: The Society was initially a colony or offshoot of a larger, more successful Society. That may no longer be true today",
+      "resultTranslations": {
+        "en": "Colony: The Society was initially a colony or offshoot of a larger, more successful Society. That may no longer be true today"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        90
+      ],
+      "result": "Legend: The Society's origins are so wrapped in myth and legend that it's impossible to tell if it's true or not",
+      "resultTranslations": {
+        "en": "Legend: The Society's origins are so wrapped in myth and legend that it's impossible to tell if it's true or not"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "history"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

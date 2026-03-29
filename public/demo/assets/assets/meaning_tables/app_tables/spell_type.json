@@ -1,0 +1,652 @@
+{
+  "id": "spell_type",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Type",
+  "displayNameTranslations": {
+    "en": "Spell Type"
+  },
+  "description": "Determines the type and nature of a spell. Roll to get context for the spell, then follow the instructions to roll on the appropriate Spell Effect table.",
+  "descriptionTranslations": {
+    "en": "Determines the type and nature of a spell. Roll to get context for the spell, then follow the instructions to roll on the appropriate Spell Effect table."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        2
+      ],
+      "result": "Air",
+      "resultTranslations": {
+        "en": "Air"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves air or atmosphere (smoke, mist, wind). Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves air or atmosphere (smoke, mist, wind). Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        3,
+        4
+      ],
+      "result": "Natural Animal",
+      "resultTranslations": {
+        "en": "Natural Animal"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves an animal found in nature. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves an animal found in nature. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        5,
+        6
+      ],
+      "result": "Area Effect",
+      "resultTranslations": {
+        "en": "Area Effect"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_type"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Impacts an entire area or multiple targets. Roll an additional Spell Type",
+      "descriptionTranslations": {
+        "en": "Impacts an entire area or multiple targets. Roll an additional Spell Type"
+      }
+    },
+    {
+      "range": [
+        7,
+        8
+      ],
+      "result": "Cold",
+      "resultTranslations": {
+        "en": "Cold"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves freezing, ice crystals, or lowering temperature. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves freezing, ice crystals, or lowering temperature. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Communication",
+      "resultTranslations": {
+        "en": "Communication"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves communication or information. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves communication or information. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        11,
+        14
+      ],
+      "result": "Control",
+      "resultTranslations": {
+        "en": "Control"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_control"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Controls something (animating, manipulating, puppeting). Roll on Control Spell Effect",
+      "descriptionTranslations": {
+        "en": "Controls something (animating, manipulating, puppeting). Roll on Control Spell Effect"
+      }
+    },
+    {
+      "range": [
+        15,
+        18
+      ],
+      "result": "Create",
+      "resultTranslations": {
+        "en": "Create"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_conjure"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Creates something out of thin air. Roll on Conjure Spell Effect",
+      "descriptionTranslations": {
+        "en": "Creates something out of thin air. Roll on Conjure Spell Effect"
+      }
+    },
+    {
+      "range": [
+        19,
+        23
+      ],
+      "result": "Damage",
+      "resultTranslations": {
+        "en": "Damage"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_damage"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Causes damage or harm. Roll on Damage Spell Effect",
+      "descriptionTranslations": {
+        "en": "Causes damage or harm. Roll on Damage Spell Effect"
+      }
+    },
+    {
+      "range": [
+        24,
+        25
+      ],
+      "result": "Death & Necromancy",
+      "resultTranslations": {
+        "en": "Death & Necromancy"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_death"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves the realm of the dead. Roll on Death Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves the realm of the dead. Roll on Death Spell Effect"
+      }
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Demons",
+      "resultTranslations": {
+        "en": "Demons"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves demonic creatures or powers. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves demonic creatures or powers. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        27,
+        29
+      ],
+      "result": "Destroy",
+      "resultTranslations": {
+        "en": "Destroy"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Destroys or breaks something. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Destroys or breaks something. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Dimensions",
+      "resultTranslations": {
+        "en": "Dimensions"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves other dimensions or planes. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves other dimensions or planes. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        31,
+        32
+      ],
+      "result": "Earth and Rock",
+      "resultTranslations": {
+        "en": "Earth and Rock"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves earth, stone, or rock. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves earth, stone, or rock. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        33,
+        36
+      ],
+      "result": "Elements and Nature",
+      "resultTranslations": {
+        "en": "Elements and Nature"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_nature"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves natural elements. Roll on Nature Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves natural elements. Roll on Nature Spell Effect"
+      }
+    },
+    {
+      "range": [
+        37,
+        39
+      ],
+      "result": "Emotion",
+      "resultTranslations": {
+        "en": "Emotion"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves emotions and feelings. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves emotions and feelings. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        40,
+        41
+      ],
+      "result": "Energy",
+      "resultTranslations": {
+        "en": "Energy"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves raw magical or physical energy. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves raw magical or physical energy. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        42,
+        44
+      ],
+      "result": "Environmental",
+      "resultTranslations": {
+        "en": "Environmental"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Affects the environment or surroundings. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Affects the environment or surroundings. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        45,
+        46
+      ],
+      "result": "Fire",
+      "resultTranslations": {
+        "en": "Fire"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves fire, heat, or flames. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves fire, heat, or flames. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        47,
+        48
+      ],
+      "result": "Life",
+      "resultTranslations": {
+        "en": "Life"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_life"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves life force or vitality. Roll on Life Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves life force or vitality. Roll on Life Spell Effect"
+      }
+    },
+    {
+      "range": [
+        49,
+        51
+      ],
+      "result": "Mind",
+      "resultTranslations": {
+        "en": "Mind"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves mental or psychic effects. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves mental or psychic effects. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        52,
+        54
+      ],
+      "result": "Monster",
+      "resultTranslations": {
+        "en": "Monster"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves monstrous creatures. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves monstrous creatures. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        55,
+        56
+      ],
+      "result": "Ranged Effect",
+      "resultTranslations": {
+        "en": "Ranged Effect"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_type"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Extends the spell's range. Roll an additional Spell Type",
+      "descriptionTranslations": {
+        "en": "Extends the spell's range. Roll an additional Spell Type"
+      }
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Shape",
+      "resultTranslations": {
+        "en": "Shape"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_type"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Affects the shape or form of something. Roll an additional Spell Type",
+      "descriptionTranslations": {
+        "en": "Affects the shape or form of something. Roll an additional Spell Type"
+      }
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Spectacular",
+      "resultTranslations": {
+        "en": "Spectacular"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_spectacular"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Has unusual cosmetic delivery. Roll on Spectacular Spell Effect",
+      "descriptionTranslations": {
+        "en": "Has unusual cosmetic delivery. Roll on Spectacular Spell Effect"
+      }
+    },
+    {
+      "range": [
+        59,
+        60
+      ],
+      "result": "Spirits",
+      "resultTranslations": {
+        "en": "Spirits"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves spiritual beings or forces. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves spiritual beings or forces. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        61,
+        62
+      ],
+      "result": "Summon",
+      "resultTranslations": {
+        "en": "Summon"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_conjure"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Draws something that already exists to the caster. Roll on Conjure Spell Effect",
+      "descriptionTranslations": {
+        "en": "Draws something that already exists to the caster. Roll on Conjure Spell Effect"
+      }
+    },
+    {
+      "range": [
+        63,
+        64
+      ],
+      "result": "Transform",
+      "resultTranslations": {
+        "en": "Transform"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Changes something into something else. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Changes something into something else. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        65,
+        66
+      ],
+      "result": "Travel",
+      "resultTranslations": {
+        "en": "Travel"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects_travel"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves movement or transportation. Roll on Travel Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves movement or transportation. Roll on Travel Spell Effect"
+      }
+    },
+    {
+      "range": [
+        67,
+        68
+      ],
+      "result": "Water",
+      "resultTranslations": {
+        "en": "Water"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves water or liquids. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves water or liquids. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        69,
+        70
+      ],
+      "result": "Weather",
+      "resultTranslations": {
+        "en": "Weather"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_effects"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Involves weather effects. Roll on Random Spell Effect",
+      "descriptionTranslations": {
+        "en": "Involves weather effects. Roll on Random Spell Effect"
+      }
+    },
+    {
+      "range": [
+        71,
+        100
+      ],
+      "result": "Powerful",
+      "resultTranslations": {
+        "en": "Powerful"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "spell_type"
+      ],
+      "tags": [],
+      "disabled": false,
+      "description": "Add +1d10 to the next Spell Effect (max 3d10). Roll an additional Spell Type",
+      "descriptionTranslations": {
+        "en": "Add +1d10 to the next Spell Effect (max 3d10). Roll an additional Spell Type"
+      }
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

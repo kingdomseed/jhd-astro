@@ -1,0 +1,56 @@
+{
+  "id": "creature_crafter_ability_extra_defense",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Extra Defense Properties",
+  "displayNameTranslations": { "en": "Extra Defense Properties" },
+  "description": "Determines the properties of the creature's extra defense. Roll once on this table for commonality. Then determine type: 1-50 against an attack form, 51-100 against an effect.",
+  "descriptionTranslations": { "en": "Determines the properties of the creature's extra defense. Roll once on this table for commonality. Then determine type: 1-50 against an attack form, 51-100 against an effect." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "extra-defense"],
+  "entries": [
+    {
+      "range": [1, 33],
+      "result": "COMMON",
+      "resultTranslations": { "en": "COMMON" },
+      "description": "The defense is against a common effect or attack, such as metal weapons.",
+      "descriptionTranslations": { "en": "The defense is against a common effect or attack, such as metal weapons." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 67],
+      "result": "UNCOMMON",
+      "resultTranslations": { "en": "UNCOMMON" },
+      "description": "The defense is against a less common, though not rare, effect or attack, like puncture wounds.",
+      "descriptionTranslations": { "en": "The defense is against a less common, though not rare, effect or attack, like puncture wounds." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 100],
+      "result": "RARE",
+      "resultTranslations": { "en": "RARE" },
+      "description": "The defense is against a rare effect or attack, such as magical attacks.",
+      "descriptionTranslations": { "en": "The defense is against a rare effect or attack, such as magical attacks." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

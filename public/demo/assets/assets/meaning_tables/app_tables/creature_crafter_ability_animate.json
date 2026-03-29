@@ -1,0 +1,133 @@
+{
+  "id": "creature_crafter_ability_animate",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Animate Properties",
+  "displayNameTranslations": { "en": "Animate Properties" },
+  "description": "Determines the properties of the creature's animate ability.",
+  "descriptionTranslations": { "en": "Determines the properties of the creature's animate ability." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "animate"],
+  "entries": [
+    {
+      "range": [1, 10],
+      "result": "SINGLE OBJECT",
+      "resultTranslations": { "en": "SINGLE OBJECT" },
+      "description": "The creature can only animate a single object at a time.",
+      "descriptionTranslations": { "en": "The creature can only animate a single object at a time." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [11, 20],
+      "result": "MULTIPLE OBJECTS",
+      "resultTranslations": { "en": "MULTIPLE OBJECTS" },
+      "description": "The creature can animate more than one object at a time.",
+      "descriptionTranslations": { "en": "The creature can animate more than one object at a time." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 30],
+      "result": "TOUCH REQUIRED",
+      "resultTranslations": { "en": "TOUCH REQUIRED" },
+      "description": "The creature must initially touch the object to animate it.",
+      "descriptionTranslations": { "en": "The creature must initially touch the object to animate it." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [31, 40],
+      "result": "WIDE RANGE",
+      "resultTranslations": { "en": "WIDE RANGE" },
+      "description": "The creature can animate multiple objects within a wide range (determined by the GM).",
+      "descriptionTranslations": { "en": "The creature can animate multiple objects within a wide range (determined by the GM)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 50],
+      "result": "CONCENTRATION",
+      "resultTranslations": { "en": "CONCENTRATION" },
+      "description": "The creature can control the objects as long as it concentrates, but the objects revert to normal when the creature is gone or no longer concentrating.",
+      "descriptionTranslations": { "en": "The creature can control the objects as long as it concentrates, but the objects revert to normal when the creature is gone or no longer concentrating." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 60],
+      "result": "PERSISTENT",
+      "resultTranslations": { "en": "PERSISTENT" },
+      "description": "The animated objects will continue functioning for a time (determined by the GM) even after the animator is gone. In this case, the objects can be given some degree of programming or autonomy to control their own actions.",
+      "descriptionTranslations": { "en": "The animated objects will continue functioning for a time (determined by the GM) even after the animator is gone. In this case, the objects can be given some degree of programming or autonomy to control their own actions." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 70],
+      "result": "COMMON SUBSTANCE",
+      "resultTranslations": { "en": "COMMON SUBSTANCE" },
+      "description": "The creature can animate a very common substance (i.e., water, air).",
+      "descriptionTranslations": { "en": "The creature can animate a very common substance (i.e., water, air)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 80],
+      "result": "UNCOMMON SUBSTANCE",
+      "resultTranslations": { "en": "UNCOMMON SUBSTANCE" },
+      "description": "The creature can animate a less common substance (planes, vines).",
+      "descriptionTranslations": { "en": "The creature can animate a less common substance (planes, vines)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 90],
+      "result": "RARE SUBSTANCE",
+      "resultTranslations": { "en": "RARE SUBSTANCE" },
+      "description": "The creature can animate something that is rare (lava, a particular car).",
+      "descriptionTranslations": { "en": "The creature can animate something that is rare (lava, a particular car)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "ROLL TWICE",
+      "resultTranslations": { "en": "ROLL TWICE" },
+      "description": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate.",
+      "descriptionTranslations": { "en": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

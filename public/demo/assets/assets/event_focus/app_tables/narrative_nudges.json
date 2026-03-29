@@ -1,0 +1,153 @@
+{
+  "id": "narrative_nudges",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Narrative Nudges Table",
+  "displayNameTranslations": {
+    "en": "Narrative Nudges Table",
+    "pt": "Tabela de Incentivos Narrativos"
+  },
+  "description": "A replacement for event focus to make Mythic more narratively focused. MM 43.",
+  "descriptionTranslations": {
+    "en": "A replacement for event focus to make Mythic more narratively focused. MM 43.",
+    "pt": "Um substituto de focos de eventos para dar ao Mythic um foco narrativo maior. Mythic Magazine 43."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 43",
+  "tags": [
+    "event-focus",
+    "narrative",
+    "nudges",
+    "guidance"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        21
+      ],
+      "result": "Narrative Shifting Event",
+      "resultTranslations": {
+        "en": "Narrative Shifting Event",
+        "pt": "Evento de Mudança Narrativa"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        28
+      ],
+      "result": "Mystery Question",
+      "resultTranslations": {
+        "en": "Mystery Question",
+        "pt": "Pergunta de Mistério"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        42
+      ],
+      "result": "New NPC Shifts Narrative",
+      "resultTranslations": {
+        "en": "New NPC Shifts Narrative",
+        "pt": "Nova PNJ Muda a Narrativa"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        57
+      ],
+      "result": "NPC Shifts Narrative",
+      "resultTranslations": {
+        "en": "NPC Shifts Narrative",
+        "pt": "PNJ Muda a Narrativa"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        71
+      ],
+      "result": "Narrative Twist",
+      "resultTranslations": {
+        "en": "Narrative Twist",
+        "pt": "Reviravolta Narrativa"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        78
+      ],
+      "result": "NPC Does Something Surprising",
+      "resultTranslations": {
+        "en": "NPC Does Something Surprising",
+        "pt": "PNJ Faz Algo Surpreendente"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        100
+      ],
+      "result": "Current Context",
+      "resultTranslations": {
+        "en": "Current Context",
+        "pt": "Contexto Atual"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,314 @@
+{
+  "id": "spell_effects_nature",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Nature",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Nature"
+  },
+  "description": "Determines the specific effect for Nature & Elements spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Nature & Elements spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "nature",
+    "elements"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Sense the condition of the natural world around you, such as detecting toxins in the ground or the status of local animals",
+      "resultTranslations": {
+        "en": "Sense the condition of the natural world around you, such as detecting toxins in the ground or the status of local animals"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Pacify a wild animal so that it becomes your friend",
+      "resultTranslations": {
+        "en": "Pacify a wild animal so that it becomes your friend"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Call animals to you, they will obey your commands",
+      "resultTranslations": {
+        "en": "Call animals to you, they will obey your commands"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Instantly grow food from the ground or cause water to bubble up",
+      "resultTranslations": {
+        "en": "Instantly grow food from the ground or cause water to bubble up"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Cause plants to instantly grow and thrive",
+      "resultTranslations": {
+        "en": "Cause plants to instantly grow and thrive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Animate and control plants around you",
+      "resultTranslations": {
+        "en": "Animate and control plants around you"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Speak and communicate with plants or animals",
+      "resultTranslations": {
+        "en": "Speak and communicate with plants or animals"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Temporarily acquire or bestow an aspect of something in nature, such as growing claws or fangs, or having barklike skin for armor",
+      "resultTranslations": {
+        "en": "Temporarily acquire or bestow an aspect of something in nature, such as growing claws or fangs, or having barklike skin for armor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Transform a living being, including yourself, into a natural animal",
+      "resultTranslations": {
+        "en": "Transform a living being, including yourself, into a natural animal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Create an element from nowhere, such as flame in your palm or wind around you",
+      "resultTranslations": {
+        "en": "Create an element from nowhere, such as flame in your palm or wind around you"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Damage the natural world, such as causing plants to wither or rocks to crack",
+      "resultTranslations": {
+        "en": "Damage the natural world, such as causing plants to wither or rocks to crack"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Transform a living being, including yourself, into a plant",
+      "resultTranslations": {
+        "en": "Transform a living being, including yourself, into a plant"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Transform a living being, including yourself, into a mineral like rock or crystal",
+      "resultTranslations": {
+        "en": "Transform a living being, including yourself, into a mineral like rock or crystal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Create a living elemental from a common element, such as water or earth",
+      "resultTranslations": {
+        "en": "Create a living elemental from a common element, such as water or earth"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Summon or control major weather effects, such as storms",
+      "resultTranslations": {
+        "en": "Summon or control major weather effects, such as storms"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Contact a god of nature, a major elemental entity, or nature itself",
+      "resultTranslations": {
+        "en": "Contact a god of nature, a major elemental entity, or nature itself"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Create new natural forms of life by combining existing forms. Reshape nature",
+      "resultTranslations": {
+        "en": "Create new natural forms of life by combining existing forms. Reshape nature"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

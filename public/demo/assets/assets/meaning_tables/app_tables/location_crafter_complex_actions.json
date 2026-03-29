@@ -1,0 +1,37 @@
+{
+  "id": "location_crafter_complex_actions",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "location-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Complex Question (Actions)",
+  "displayNameTranslations": { "en": "Complex Question (Actions)" },
+  "description": "Rolls on Action 1 and Action 2; combine the two words.",
+  "descriptionTranslations": { "en": "Rolls on Action 1 and Action 2; combine the two words." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Location Crafter",
+  "tags": ["location-crafter", "complex-question", "actions"],
+  "entries": [
+    {
+      "range": [1, 100],
+      "result": "ACTIONS",
+      "resultTranslations": { "en": "ACTIONS" },
+      "description": "Roll on Action 1 and Action 2; combine the two words.",
+      "descriptionTranslations": {
+        "en": "Roll on Action 1 and Action 2; combine the two words."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": ["location_crafter_action_1", "location_crafter_action_2"],
+  "replacement": false,
+  "displayRoll": true
+}
+

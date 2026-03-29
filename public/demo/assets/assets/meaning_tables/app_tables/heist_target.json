@@ -1,0 +1,93 @@
+{
+  "id": "heist_target",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "technology-scifi",
+  "defaultLanguage": "en",
+  "displayName": "Heist Target",
+  "displayNameTranslations": {
+    "en": "Heist Target"
+  },
+  "description": "Determines what item or objective must be stolen in a heist scenario. Part of the Scoundrels RPG mini-game.",
+  "descriptionTranslations": {
+    "en": "Determines what item or objective must be stolen in a heist scenario. Part of the Scoundrels RPG mini-game."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 48",
+  "tags": [
+    "scoundrels",
+    "heist",
+    "sci-fi",
+    "adventure",
+    "objective"
+  ],
+  "entries": [
+    {
+      "range": [1, 40],
+      "result": "Planet Eater Schematics",
+      "resultTranslations": {
+        "en": "Planet Eater Schematics"
+      },
+      "description": "The target is a critical blueprint required for the completion of the Planet Eater. This is a war-changing weapon that would alter the balance of power in the struggle with the Monarchy. The Planet Eater is a massive starship crewed by tens of thousands that can fire a beam so powerful it can drill through a planet within hours and disrupt its core, resulting in complete destruction of the world.",
+      "descriptionTranslations": {
+        "en": "The target is a critical blueprint required for the completion of the Planet Eater. This is a war-changing weapon that would alter the balance of power in the struggle with the Monarchy. The Planet Eater is a massive starship crewed by tens of thousands that can fire a beam so powerful it can drill through a planet within hours and disrupt its core, resulting in complete destruction of the world."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 60],
+      "result": "Thorn",
+      "resultTranslations": {
+        "en": "Thorn"
+      },
+      "description": "A rebellion sympathizer deep within the command structure of the Monarchy has planted a virus in critical computer systems. When activated, this virus will wreak havoc on military operations by scrambling Monarchy ship systems across the galaxy. Thorn is a computer chip that must be smuggled out that is required to activate the virus remotely.",
+      "descriptionTranslations": {
+        "en": "A rebellion sympathizer deep within the command structure of the Monarchy has planted a virus in critical computer systems. When activated, this virus will wreak havoc on military operations by scrambling Monarchy ship systems across the galaxy. Thorn is a computer chip that must be smuggled out that is required to activate the virus remotely."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 90],
+      "result": "Calloben Battle Plans",
+      "resultTranslations": {
+        "en": "Calloben Battle Plans"
+      },
+      "description": "The Calloben Monarchy is planning a major, decisive military action to crush the rebellion and the Inogen Navy. If you can steal the battle plans and get them to the rebellion, then the tables can be turned and a surprise attack would cripple the Calloben forces.",
+      "descriptionTranslations": {
+        "en": "The Calloben Monarchy is planning a major, decisive military action to crush the rebellion and the Inogen Navy. If you can steal the battle plans and get them to the rebellion, then the tables can be turned and a surprise attack would cripple the Calloben forces."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "Taikon Energy Core",
+      "resultTranslations": {
+        "en": "Taikon Energy Core"
+      },
+      "description": "This flashlight sized tube contains enough energy to power the entire Calloben fleet. It's alien technology that was accidentally discovered and is in Monarchy hands. Whoever possesses the core, and figures out how to utilize its immense power, will have a decisive advantage in the conflict.",
+      "descriptionTranslations": {
+        "en": "This flashlight sized tube contains enough energy to power the entire Calloben fleet. It's alien technology that was accidentally discovered and is in Monarchy hands. Whoever possesses the core, and figures out how to utilize its immense power, will have a decisive advantage in the conflict."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,191 @@
+{
+  "id": "dungeon_connectors_cavern",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Dungeon Connectors (Cavern)",
+  "displayNameTranslations": {
+    "en": "Dungeon Connectors (Cavern)"
+  },
+  "description": "Generates connectors between dungeon areas for natural cave environments. Use when characters move between areas in cavern-style dungeons.",
+  "descriptionTranslations": {
+    "en": "Generates connectors between dungeon areas for natural cave environments. Use when characters move between areas in cavern-style dungeons."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 1",
+  "tags": [
+    "dungeon",
+    "location-crafter",
+    "connectors",
+    "cavern",
+    "exploration"
+  ],
+  "entries": [
+    {
+      "range": [1, 5],
+      "result": "Simple cavern tunnel",
+      "resultTranslations": {"en": "Simple cavern tunnel"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [6, 8],
+      "result": "Natural downward slope",
+      "resultTranslations": {"en": "Natural downward slope"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 9],
+      "result": "Natural upward slope",
+      "resultTranslations": {"en": "Natural upward slope"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [10, 10],
+      "result": "Hole above you",
+      "resultTranslations": {"en": "Hole above you"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [11, 11],
+      "result": "Walk space along the edge of a crevasse",
+      "resultTranslations": {"en": "Walk space along the edge of a crevasse"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [12, 12],
+      "result": "Natural bridge",
+      "resultTranslations": {"en": "Natural bridge"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [13, 15],
+      "result": "Shaft going down",
+      "resultTranslations": {"en": "Shaft going down"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [16, 18],
+      "result": "Large cavern tunnel",
+      "resultTranslations": {"en": "Large cavern tunnel"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [19, 20],
+      "result": "Cramped tunnel or crawlspace",
+      "resultTranslations": {"en": "Cramped tunnel or crawlspace"},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 30],
+      "result": "Leads directly to another Area",
+      "resultTranslations": {"en": "Leads directly to another Area"},
+      "description": "Instead of a Connector, the Area your Character is leaving leads directly to another Area.",
+      "descriptionTranslations": {"en": "Instead of a Connector, the Area your Character is leaving leads directly to another Area."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [31, 40],
+      "result": "Expected",
+      "resultTranslations": {"en": "Expected"},
+      "description": "The Connector is what you would most expect it to be given the current context.",
+      "descriptionTranslations": {"en": "The Connector is what you would most expect it to be given the current context."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 65],
+      "result": "Same",
+      "resultTranslations": {"en": "Same"},
+      "description": "The Connector is the same as the last Connector you generated. If this is the first Connector, treat as Expected.",
+      "descriptionTranslations": {"en": "The Connector is the same as the last Connector you generated. If this is the first Connector, treat as Expected."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [66, 75],
+      "result": "Same, with intersection",
+      "resultTranslations": {"en": "Same, with intersection"},
+      "description": "Same as the last Connector but with a branching path or intersection.",
+      "descriptionTranslations": {"en": "Same as the last Connector but with a branching path or intersection."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 80],
+      "result": "Same, with a curve or turn",
+      "resultTranslations": {"en": "Same, with a curve or turn"},
+      "description": "Same as the last Connector but with a curve or turn along the way.",
+      "descriptionTranslations": {"en": "Same as the last Connector but with a curve or turn along the way."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 90],
+      "result": "Same, with a side Area",
+      "resultTranslations": {"en": "Same, with a side Area"},
+      "description": "Same as the last Connector but with an optional side Area to explore.",
+      "descriptionTranslations": {"en": "Same as the last Connector but with an optional side Area to explore."},
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 100],
+      "result": "Roll on Descriptions Meaning Tables",
+      "resultTranslations": {"en": "Roll on Descriptions Meaning Tables"},
+      "description": "Roll on the Descriptions Meaning Tables for inspiration on what this Connector could be. Allow this result to give you something unusual.",
+      "descriptionTranslations": {"en": "Roll on the Descriptions Meaning Tables for inspiration on what this Connector could be. Allow this result to give you something unusual."},
+      "weight": 1,
+      "entryRollOn": ["descriptors_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

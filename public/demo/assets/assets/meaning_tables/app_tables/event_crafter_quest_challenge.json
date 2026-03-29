@@ -1,0 +1,302 @@
+{
+  "id": "event_crafter_quest_challenge",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Quest Waypoints: Challenge",
+  "displayNameTranslations": {
+    "en": "Quest Waypoints: Challenge"
+  },
+  "description": "Random Category custom List for the Quest Waypoints Event Crafter Situation. Roll when Event Elements directs you to this List. The Challenge is what your PC will face in this Waypoint Scene. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Random Category custom List for the Quest Waypoints Event Crafter Situation. Roll when Event Elements directs you to this List. The Challenge is what your PC will face in this Waypoint Scene. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "quest-waypoints",
+    "challenge",
+    "random"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Gain someone's trust",
+      "resultTranslations": {
+        "en": "Gain someone's trust"
+      },
+      "description": "The challenge involves earning the trust of a key character through actions, diplomacy, or proving yourself.",
+      "descriptionTranslations": {
+        "en": "The challenge involves earning the trust of a key character through actions, diplomacy, or proving yourself."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Solve a riddle",
+      "resultTranslations": {
+        "en": "Solve a riddle"
+      },
+      "description": "The challenge is intellectual: a puzzle, cipher, mystery, or problem that must be figured out.",
+      "descriptionTranslations": {
+        "en": "The challenge is intellectual: a puzzle, cipher, mystery, or problem that must be figured out."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Survive a trap",
+      "resultTranslations": {
+        "en": "Survive a trap"
+      },
+      "description": "A trap, ambush, or dangerous situation that must be survived or overcome.",
+      "descriptionTranslations": {
+        "en": "A trap, ambush, or dangerous situation that must be survived or overcome."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Win in battle",
+      "resultTranslations": {
+        "en": "Win in battle"
+      },
+      "description": "Combat challenge. Defeat an opponent or group of opponents.",
+      "descriptionTranslations": {
+        "en": "Combat challenge. Defeat an opponent or group of opponents."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Win in battle",
+      "resultTranslations": {
+        "en": "Win in battle"
+      },
+      "description": "Combat challenge. Defeat an opponent or group of opponents.",
+      "descriptionTranslations": {
+        "en": "Combat challenge. Defeat an opponent or group of opponents."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Socialize",
+      "resultTranslations": {
+        "en": "Socialize"
+      },
+      "description": "The challenge is social: navigate a social situation, negotiate, persuade, or make connections.",
+      "descriptionTranslations": {
+        "en": "The challenge is social: navigate a social situation, negotiate, persuade, or make connections."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Rough conditions",
+      "resultTranslations": {
+        "en": "Rough conditions"
+      },
+      "description": "Endure harsh environmental conditions: weather, terrain, lack of supplies, or hostile environment.",
+      "descriptionTranslations": {
+        "en": "Endure harsh environmental conditions: weather, terrain, lack of supplies, or hostile environment."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Make something work",
+      "resultTranslations": {
+        "en": "Make something work"
+      },
+      "description": "A technical or practical challenge: repair, build, operate, or figure out how to use something.",
+      "descriptionTranslations": {
+        "en": "A technical or practical challenge: repair, build, operate, or figure out how to use something."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Break inside",
+      "resultTranslations": {
+        "en": "Break inside"
+      },
+      "description": "Infiltration challenge: break into a guarded location, bypass security, or sneak past defenses.",
+      "descriptionTranslations": {
+        "en": "Infiltration challenge: break into a guarded location, bypass security, or sneak past defenses."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Enact a ruse",
+      "resultTranslations": {
+        "en": "Enact a ruse"
+      },
+      "description": "Deception challenge: create a diversion, disguise, false trail, or convincing lie.",
+      "descriptionTranslations": {
+        "en": "Deception challenge: create a diversion, disguise, false trail, or convincing lie."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Win in battle",
+      "resultTranslations": {
+        "en": "Win in battle"
+      },
+      "description": "Combat challenge. Defeat an opponent or group of opponents.",
+      "descriptionTranslations": {
+        "en": "Combat challenge. Defeat an opponent or group of opponents."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Enter dangerous place",
+      "resultTranslations": {
+        "en": "Enter dangerous place"
+      },
+      "description": "The challenge requires entering a location that is inherently dangerous or hostile.",
+      "descriptionTranslations": {
+        "en": "The challenge requires entering a location that is inherently dangerous or hostile."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Gain someone's trust",
+      "resultTranslations": {
+        "en": "Gain someone's trust"
+      },
+      "description": "The challenge involves earning the trust of a key character through actions, diplomacy, or proving yourself.",
+      "descriptionTranslations": {
+        "en": "The challenge involves earning the trust of a key character through actions, diplomacy, or proving yourself."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Survive a trap",
+      "resultTranslations": {
+        "en": "Survive a trap"
+      },
+      "description": "A trap, ambush, or dangerous situation that must be survived or overcome.",
+      "descriptionTranslations": {
+        "en": "A trap, ambush, or dangerous situation that must be survived or overcome."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Enter dangerous place",
+      "resultTranslations": {
+        "en": "Enter dangerous place"
+      },
+      "description": "The challenge requires entering a location that is inherently dangerous or hostile.",
+      "descriptionTranslations": {
+        "en": "The challenge requires entering a location that is inherently dangerous or hostile."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 15,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

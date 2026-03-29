@@ -1,0 +1,45 @@
+{
+  "id": "creature_crafter_ability_immunity",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Immunity Properties",
+  "displayNameTranslations": { "en": "Immunity Properties" },
+  "description": "Determines the properties of the creature's immunity. Roll once on this table for type. After rolling, determine commonality: 1-33 common (blunt assault, non-magical weapons), 34-67 uncommon (poison, arrows), 68-100 rare (vacuum of space, specific magical sword).",
+  "descriptionTranslations": { "en": "Determines the properties of the creature's immunity. Roll once on this table for type. After rolling, determine commonality: 1-33 common (blunt assault, non-magical weapons), 34-67 uncommon (poison, arrows), 68-100 rare (vacuum of space, specific magical sword)." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "immunity"],
+  "entries": [
+    {
+      "range": [1, 50],
+      "result": "ATTACK FORM",
+      "resultTranslations": { "en": "ATTACK FORM" },
+      "description": "The immunity is against an attack form, not from an effect.",
+      "descriptionTranslations": { "en": "The immunity is against an attack form, not from an effect." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 100],
+      "result": "EFFECT",
+      "resultTranslations": { "en": "EFFECT" },
+      "description": "The immunity is against an effect, and not a damaging attack. For instance, maybe the creature is immune to any effects that force it to sleep.",
+      "descriptionTranslations": { "en": "The immunity is against an effect, and not a damaging attack. For instance, maybe the creature is immune to any effects that force it to sleep." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

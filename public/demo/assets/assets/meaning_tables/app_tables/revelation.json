@@ -1,0 +1,172 @@
+{
+  "id": "revelation",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Revelation",
+  "displayNameTranslations": {
+    "en": "Revelation"
+  },
+  "description": "Determines the nature of your PC's Revelation in the Moonlight Radio scenario. Used at the end of the adventure if your PC reaches 20+ Revelation Points.",
+  "descriptionTranslations": {
+    "en": "Determines the nature of your PC's Revelation in the Moonlight Radio scenario. Used at the end of the adventure if your PC reaches 20+ Revelation Points."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 58",
+  "tags": [
+    "moonlight-radio",
+    "radio",
+    "horror",
+    "scenario"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "You Are... Somewhere Else: Your PC realizes they are not on Earth or in any reality they recognize. They've been fooling themself that everything was normal, but they are actually somewhere else",
+      "resultTranslations": {
+        "en": "You Are... Somewhere Else: Your PC realizes they are not on Earth or in any reality they recognize. They've been fooling themself that everything was normal, but they are actually somewhere else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        20
+      ],
+      "result": "The Human Zoo: Your PC realizes that they, and the entire town, had been abducted by aliens months if not years ago. They are all in a massive spaceship within a city-sized habitat",
+      "resultTranslations": {
+        "en": "The Human Zoo: Your PC realizes that they, and the entire town, had been abducted by aliens months if not years ago. They are all in a massive spaceship within a city-sized habitat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "result": "Stop Cloning Around: Your PC realizes that they are actually a copy of the real PC, wherever they are. Maybe they're a robot or a magical construct created to take the original's place",
+      "resultTranslations": {
+        "en": "Stop Cloning Around: Your PC realizes that they are actually a copy of the real PC, wherever they are. Maybe they're a robot or a magical construct created to take the original's place"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Dreamy: Your PC wakes up suddenly in bed. It's morning. The show was all just a dream. The Key Segments represent things in the PC's life their dreaming brain interpreted into radio show Segments",
+      "resultTranslations": {
+        "en": "Dreamy: Your PC wakes up suddenly in bed. It's morning. The show was all just a dream. The Key Segments represent things in the PC's life their dreaming brain interpreted into radio show Segments"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "You're A Player Character In A Solo Roleplaying Game: Your PC realizes, with sudden and absolute certainty, that they are just a PC in someone else's solo roleplaying game",
+      "resultTranslations": {
+        "en": "You're A Player Character In A Solo Roleplaying Game: Your PC realizes, with sudden and absolute certainty, that they are just a PC in someone else's solo roleplaying game"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        60
+      ],
+      "result": "Huh, They Were Actually Right: One of the callers this night told the truth about your PC's reality. Choose the strangest of the Key Segments. That one is true",
+      "resultTranslations": {
+        "en": "Huh, They Were Actually Right: One of the callers this night told the truth about your PC's reality. Choose the strangest of the Key Segments. That one is true"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        65
+      ],
+      "result": "They Will Be Here Soon: Your PC strongly suspects there will soon be a massive visitation by an alien civilization. The Key Segments are attempts by aliens to communicate with human life",
+      "resultTranslations": {
+        "en": "They Will Be Here Soon: Your PC strongly suspects there will soon be a massive visitation by an alien civilization. The Key Segments are attempts by aliens to communicate with human life"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "Looping: Your PC realizes they are trapped in a never ending looping day. The Key Segments are desperate attempts from friends outside the loop to communicate a way to break it",
+      "resultTranslations": {
+        "en": "Looping: Your PC realizes they are trapped in a never ending looping day. The Key Segments are desperate attempts from friends outside the loop to communicate a way to break it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "The End Is Nigh: That was your PC's last broadcast. The world is about to end. They knew it from the start, as does everyone. Use the Key Segments to interpret how the world is about to end",
+      "resultTranslations": {
+        "en": "The End Is Nigh: That was your PC's last broadcast. The world is about to end. They knew it from the start, as does everyone. Use the Key Segments to interpret how the world is about to end"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "I Think It All Means Something: Your PC sits back, thinking about tonight's show. Something doesn't sit right. Then it hits them and they understand! Use the Key Segments to interpret what they understand",
+      "resultTranslations": {
+        "en": "I Think It All Means Something: Your PC sits back, thinking about tonight's show. Something doesn't sit right. Then it hits them and they understand! Use the Key Segments to interpret what they understand"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

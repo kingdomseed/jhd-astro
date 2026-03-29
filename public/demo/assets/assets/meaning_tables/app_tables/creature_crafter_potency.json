@@ -1,0 +1,100 @@
+{
+  "id": "creature_crafter_potency",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Potency",
+  "displayNameTranslations": { "en": "Potency" },
+  "description": "Determines relative power level of creature statistics. Roll 1d20 and apply any modifiers from Number of Creatures, Size, and Classification.",
+  "descriptionTranslations": { "en": "Determines relative power level of creature statistics. Roll 1d20 and apply any modifiers from Number of Creatures, Size, and Classification." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "potency", "core-mechanic"],
+  "entries": [
+    {
+      "range": [1, 2],
+      "result": "MINIMUM (-75%)",
+      "resultTranslations": { "en": "MINIMUM (-75%)" },
+      "description": "The statistic for this creature should be lowered considerably from baseline, at least down by 75% of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be lowered considerably from baseline, at least down by 75% of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [3, 5],
+      "result": "WEAK (-50%)",
+      "resultTranslations": { "en": "WEAK (-50%)" },
+      "description": "The statistic for this creature should be lowered significantly from baseline, down by about 50% of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be lowered significantly from baseline, down by about 50% of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [6, 8],
+      "result": "LESS (-10%)",
+      "resultTranslations": { "en": "LESS (-10%)" },
+      "description": "The statistic for this creature should be slightly below baseline, down by about 10% of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be slightly below baseline, down by about 10% of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 12],
+      "result": "BASELINE AVERAGE",
+      "resultTranslations": { "en": "BASELINE AVERAGE" },
+      "description": "The statistic for this creature is at baseline, representing the average for this type of creature in its real world equivalent.",
+      "descriptionTranslations": { "en": "The statistic for this creature is at baseline, representing the average for this type of creature in its real world equivalent." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [13, 16],
+      "result": "MORE (+10%)",
+      "resultTranslations": { "en": "MORE (+10%)" },
+      "description": "The statistic for this creature should be slightly above baseline, up by about 10% of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be slightly above baseline, up by about 10% of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 18],
+      "result": "STRONG (+50%)",
+      "resultTranslations": { "en": "STRONG (+50%)" },
+      "description": "The statistic for this creature should be raised significantly above baseline, up by about 50% of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be raised significantly above baseline, up by about 50% of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [19, 20],
+      "result": "MAXIMUM (+100% OR MORE)",
+      "resultTranslations": { "en": "MAXIMUM (+100% OR MORE)" },
+      "description": "The statistic for this creature should be raised considerably above baseline, at least double or more of its real world power.",
+      "descriptionTranslations": { "en": "The statistic for this creature should be raised considerably above baseline, at least double or more of its real world power." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 20,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

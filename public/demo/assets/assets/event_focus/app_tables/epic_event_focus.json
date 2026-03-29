@@ -1,0 +1,223 @@
+{
+  "id": "epic_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Epic Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Epic Event Focus Table",
+    "pt": "Tabela de Foco de Evento Épico"
+  },
+  "description": "An event focus table for epic-scale games, emphasizing dramatic thread developments and grand character actions.",
+  "descriptionTranslations": {
+    "en": "An event focus table for epic-scale games, emphasizing dramatic thread developments and grand character actions.",
+    "pt": "Uma tabela de foco de evento para jogos em escala épica, enfatizando desenvolvimentos dramáticos de tramas e ações grandiosas de personagens."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Variations 1",
+  "tags": [
+    "event-focus",
+    "epic",
+    "dramatic",
+    "escalation"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        12
+      ],
+      "result": "Thread Escalates",
+      "resultTranslations": {
+        "en": "Thread Escalates",
+        "pt": "A Trama Agrava"
+      },
+      "tags": [],
+      "data": {
+        "isSpecialEvent": true
+      },
+      "weight": 1,
+      "entryRollOn": ["Threads"],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        16
+      ],
+      "result": "Remote Event",
+      "resultTranslations": {
+        "en": "Remote Event",
+        "pt": "Evento Remoto"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        30
+      ],
+      "result": "NPC Action",
+      "resultTranslations": {
+        "en": "NPC Action",
+        "pt": "Ação de PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        42
+      ],
+      "result": "New NPC",
+      "resultTranslations": {
+        "en": "New NPC",
+        "pt": "Nova PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        46
+      ],
+      "result": "Move Toward A Thread",
+      "resultTranslations": {
+        "en": "Move Toward A Thread",
+        "pt": "Avançar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        58
+      ],
+      "result": "Move Away From A Thread",
+      "resultTranslations": {
+        "en": "Move Away From A Thread",
+        "pt": "Recuar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        72
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative",
+        "pt": "Negativo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        80
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive",
+        "pt": "Positivo para PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        84
+      ],
+      "result": "Ambiguous Event",
+      "resultTranslations": {
+        "en": "Ambiguous Event",
+        "pt": "Evento Ambíguo"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        92
+      ],
+      "result": "NPC Negative",
+      "resultTranslations": {
+        "en": "NPC Negative",
+        "pt": "Negativo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        100
+      ],
+      "result": "NPC Positive",
+      "resultTranslations": {
+        "en": "NPC Positive",
+        "pt": "Positivo para PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

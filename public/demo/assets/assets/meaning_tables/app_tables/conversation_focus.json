@@ -1,0 +1,269 @@
+{
+  "id": "conversation_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Conversation Focus",
+  "displayNameTranslations": {
+    "en": "Conversation Focus"
+  },
+  "description": "A focus table for determining the direction or context of NPC conversation. Roll first to get general idea, then roll on Conversation for specific keywords.",
+  "descriptionTranslations": {
+    "en": "A focus table for determining the direction or context of NPC conversation. Roll first to get general idea, then roll on Conversation for specific keywords."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 58",
+  "tags": [
+    "dialogue",
+    "npc",
+    "conversation"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        8
+      ],
+      "result": "Agree",
+      "resultTranslations": {
+        "en": "Agree"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        12
+      ],
+      "result": "Disagree",
+      "resultTranslations": {
+        "en": "Disagree"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        18
+      ],
+      "result": "Question",
+      "resultTranslations": {
+        "en": "Question"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        28
+      ],
+      "result": "Explanation",
+      "resultTranslations": {
+        "en": "Explanation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        32
+      ],
+      "result": "Redirects",
+      "resultTranslations": {
+        "en": "Redirects"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        38
+      ],
+      "result": "Emotional",
+      "resultTranslations": {
+        "en": "Emotional"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        40
+      ],
+      "result": "Request",
+      "resultTranslations": {
+        "en": "Request"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        42
+      ],
+      "result": "Offer",
+      "resultTranslations": {
+        "en": "Offer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        50
+      ],
+      "result": "End",
+      "resultTranslations": {
+        "en": "End"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        52
+      ],
+      "result": "Confusion",
+      "resultTranslations": {
+        "en": "Confusion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        58
+      ],
+      "result": "Knowing",
+      "resultTranslations": {
+        "en": "Knowing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        60
+      ],
+      "result": "Sketchy",
+      "resultTranslations": {
+        "en": "Sketchy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        62
+      ],
+      "result": "Eager",
+      "resultTranslations": {
+        "en": "Eager"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        68
+      ],
+      "result": "Story",
+      "resultTranslations": {
+        "en": "Story"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        72
+      ],
+      "result": "Problem",
+      "resultTranslations": {
+        "en": "Problem"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        75
+      ],
+      "result": "Want",
+      "resultTranslations": {
+        "en": "Want"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        100
+      ],
+      "result": "No Additional Context",
+      "resultTranslations": {
+        "en": "No Additional Context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

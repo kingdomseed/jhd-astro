@@ -1,0 +1,236 @@
+{
+  "id": "major_news_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Major News Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Major News Event Focus Table",
+    "pt": "Tabela de Foco de Evento de Notícias Maiores"
+  },
+  "description": "A table for determining the focus of major news events. MM Compilation 6.",
+  "descriptionTranslations": {
+    "en": "A table for determining the focus of major news events. MM Compilation 6.",
+    "pt": "Uma tabela para determinar o foco de eventos de notícias maiores. Mythic Magazine Compilado 6."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 6",
+  "tags": [
+    "event-focus",
+    "news",
+    "current-events",
+    "world-building"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "New Character",
+      "resultTranslations": {
+        "en": "New Character",
+        "pt": "Nova Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        15
+      ],
+      "result": "Remove Character",
+      "resultTranslations": {
+        "en": "Remove Character",
+        "pt": "Remova Uma Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        30
+      ],
+      "result": "Character Action",
+      "resultTranslations": {
+        "en": "Character Action",
+        "pt": "Ação de Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "Character Positive",
+      "resultTranslations": {
+        "en": "Character Positive",
+        "pt": "Positivo para Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "Character Negative",
+      "resultTranslations": {
+        "en": "Character Negative",
+        "pt": "Negativo para Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        55
+      ],
+      "result": "Move Toward A Thread",
+      "resultTranslations": {
+        "en": "Move Toward A Thread",
+        "pt": "Avançar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        70
+      ],
+      "result": "Move Away From A Thread",
+      "resultTranslations": {
+        "en": "Move Away From A Thread",
+        "pt": "Recuar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "result": "New Thread",
+      "resultTranslations": {
+        "en": "New Thread",
+        "pt": "Nova Trama"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        90
+      ],
+      "result": "Close A Thread",
+      "resultTranslations": {
+        "en": "Close A Thread",
+        "pt": "Encerrar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        95
+      ],
+      "result": "Roll Two Major Events",
+      "resultTranslations": {
+        "en": "Roll Two Major Events",
+        "pt": "Role Dois Eventos Maiores"
+      },
+      "tags": [],
+      "data": {
+        "action": "RollTwoMajorEvents"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "major_news_event_focus",
+        "major_news_event_focus"
+      ],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        100
+      ],
+      "result": "Roll Three Minor Events",
+      "resultTranslations": {
+        "en": "Roll Three Minor Events",
+        "pt": "Role Três Eventos Menores"
+      },
+      "tags": [],
+      "data": {
+        "action": "RollThreeMinorEvents"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "minor_news_event_focus",
+        "minor_news_event_focus",
+        "minor_news_event_focus"
+      ],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

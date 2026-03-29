@@ -1,0 +1,163 @@
+{
+  "id": "central_mythology_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Central Mythology Focus",
+  "displayNameTranslations": {
+    "en": "Central Mythology Focus"
+  },
+  "description": "Determines the central mythology or origin story that defines a fantasy world.",
+  "descriptionTranslations": {
+    "en": "Determines the central mythology or origin story that defines a fantasy world."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "mythology",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Creation: The Central Mythology is about how this fantasy world came into existence. This should be a tale of mighty magical forces or great divine powers",
+      "resultTranslations": {
+        "en": "Creation: The Central Mythology is about how this fantasy world came into existence. This should be a tale of mighty magical forces or great divine powers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "The Right to Rule: The dominant nation, species, or force maintains it has a right to rule through inherent properties. For instance, a kingdom of cruel sorcerers believe in their superiority over others",
+      "resultTranslations": {
+        "en": "The Right to Rule: The dominant nation, species, or force maintains it has a right to rule through inherent properties. For instance, a kingdom of cruel sorcerers believe in their superiority over others"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        40
+      ],
+      "result": "War: War has ravaged this world, shaping every aspect of life. War may currently be going on now, or it might be a distant memory. Either way, the impact of war runs deep",
+      "resultTranslations": {
+        "en": "War: War has ravaged this world, shaping every aspect of life. War may currently be going on now, or it might be a distant memory. Either way, the impact of war runs deep"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        45
+      ],
+      "result": "Doom: The Central Mythology is about how this world will end. For instance, the return of a banished powerful evil entity or a foretold disaster",
+      "resultTranslations": {
+        "en": "Doom: The Central Mythology is about how this world will end. For instance, the return of a banished powerful evil entity or a foretold disaster"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "result": "Return to Greatness: This world was once much more than it is now, and many believe it will return to greatness. Perhaps there's a legend about the return of a mythical king, or the desire for the overthrow of a despot",
+      "resultTranslations": {
+        "en": "Return to Greatness: This world was once much more than it is now, and many believe it will return to greatness. Perhaps there's a legend about the return of a mythical king, or the desire for the overthrow of a despot"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        65
+      ],
+      "result": "Way of Life: There is a particular way of life here that you can interpret from the Keywords. This way of life is steeped in history and tradition. For instance, people favor living on boats because they revere water, or magic is viewed as divine and those who wield it are honored",
+      "resultTranslations": {
+        "en": "Way of Life: There is a particular way of life here that you can interpret from the Keywords. This way of life is steeped in history and tradition. For instance, people favor living on boats because they revere water, or magic is viewed as divine and those who wield it are honored"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "A New Era: There is a sense that the world is on the precipice of great change, breaking from its past into an uncertain but new future",
+      "resultTranslations": {
+        "en": "A New Era: There is a sense that the world is on the precipice of great change, breaking from its past into an uncertain but new future"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Hope: The Central Mythology is a message of hope. For instance, the people believe that the land will always provide, or that the balance between good and evil will be reset by the arrival of The One",
+      "resultTranslations": {
+        "en": "Hope: The Central Mythology is a message of hope. For instance, the people believe that the land will always provide, or that the balance between good and evil will be reset by the arrival of The One"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

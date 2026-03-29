@@ -1,0 +1,175 @@
+{
+  "id": "event_crafter_special_elements",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Special Elements",
+  "displayNameTranslations": {
+    "en": "Special Elements"
+  },
+  "description": "When a Special Element is generated, roll on this table. Most results modify existing Elements on the List in some way. Used with the Event Crafter system from Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "When a Special Element is generated, roll on this table. Most results modify existing Elements on the List in some way. Used with the Event Crafter system from Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "special",
+    "modifier"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "result": "INCREASE",
+      "resultTranslations": {
+        "en": "INCREASE"
+      },
+      "description": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element with increased intensity, making it more impactful.",
+      "descriptionTranslations": {
+        "en": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element with increased intensity, making it more impactful."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        20
+      ],
+      "result": "DECREASE",
+      "resultTranslations": {
+        "en": "DECREASE"
+      },
+      "description": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element with less intensity, making it less impactful.",
+      "descriptionTranslations": {
+        "en": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element with less intensity, making it less impactful."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        30
+      ],
+      "result": "THIS IS BAD",
+      "resultTranslations": {
+        "en": "THIS IS BAD"
+      },
+      "description": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element as unfortunate or negative for the Player Character.",
+      "descriptionTranslations": {
+        "en": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element as unfortunate or negative for the Player Character."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "result": "THIS IS GOOD",
+      "resultTranslations": {
+        "en": "THIS IS GOOD"
+      },
+      "description": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element as fortunate or beneficial for the Player Character.",
+      "descriptionTranslations": {
+        "en": "Roll in the Category again (if you get Special, treat it as Expected). Interpret the Element as fortunate or beneficial for the Player Character."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        60
+      ],
+      "result": "MULTI-ELEMENT",
+      "resultTranslations": {
+        "en": "MULTI-ELEMENT"
+      },
+      "description": "Roll twice in the Category (if you get Special, treat it as Expected) and include both Elements in this Event.",
+      "descriptionTranslations": {
+        "en": "Roll twice in the Category (if you get Special, treat it as Expected) and include both Elements in this Event."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "MOVING ALONG",
+      "resultTranslations": {
+        "en": "MOVING ALONG"
+      },
+      "description": "Add 3 Progress Points to this Category instead of 1 Point for this roll. Otherwise treat this as an Expected Element.",
+      "descriptionTranslations": {
+        "en": "Add 3 Progress Points to this Category instead of 1 Point for this roll. Otherwise treat this as an Expected Element."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "ROLLING BACK",
+      "resultTranslations": {
+        "en": "ROLLING BACK"
+      },
+      "description": "Subtract 2 Progress Points from this Category and don't add 1 for this roll. Otherwise treat this as an Expected Element.",
+      "descriptionTranslations": {
+        "en": "Subtract 2 Progress Points from this Category and don't add 1 for this roll. Otherwise treat this as an Expected Element."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "RANDOM ELEMENT",
+      "resultTranslations": {
+        "en": "RANDOM ELEMENT"
+      },
+      "description": "Treat this Special Element like a Random Element, rolling on your choice of Meaning Tables and interpreting the results.",
+      "descriptionTranslations": {
+        "en": "Treat this Special Element like a Random Element, rolling on your choice of Meaning Tables and interpreting the results."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

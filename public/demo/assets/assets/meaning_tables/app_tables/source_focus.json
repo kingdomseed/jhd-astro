@@ -1,0 +1,195 @@
+{
+  "id": "source_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Source Focus",
+  "displayNameTranslations": {
+    "en": "Source Focus"
+  },
+  "description": "Determines where a magical tradition gets its power from. Part of the Magical Tradition Focus system.",
+  "descriptionTranslations": {
+    "en": "Determines where a magical tradition gets its power from. Part of the Magical Tradition Focus system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 45",
+  "tags": [
+    "magical-tradition",
+    "magic",
+    "world-building",
+    "fantasy",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [1, 6],
+      "result": "The power is drawn from a specific cosmic entity or group of entities",
+      "resultTranslations": {
+        "en": "The power is drawn from a specific cosmic entity or group of entities"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [7, 15],
+      "result": "The source is reality, and in some places in creation spells are more powerful because there is a greater concentration of magic there",
+      "resultTranslations": {
+        "en": "The source is reality, and in some places in creation spells are more powerful because there is a greater concentration of magic there"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [16, 18],
+      "result": "The power comes from within the magical practitioner themself",
+      "resultTranslations": {
+        "en": "The power comes from within the magical practitioner themself"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [19, 24],
+      "result": "The power is drawn from another dimension",
+      "resultTranslations": {
+        "en": "The power is drawn from another dimension"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 33],
+      "result": "The source is nature and the natural world",
+      "resultTranslations": {
+        "en": "The source is nature and the natural world"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 36],
+      "result": "The power comes from a single magical object",
+      "resultTranslations": {
+        "en": "The power comes from a single magical object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [37, 39],
+      "result": "The power comes from a single magical location",
+      "resultTranslations": {
+        "en": "The power comes from a single magical location"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [40, 45],
+      "result": "The power is pulled from objects, like minerals, powders, and other substances",
+      "resultTranslations": {
+        "en": "The power is pulled from objects, like minerals, powders, and other substances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [46, 54],
+      "result": "The power is drawn from the energy of life and death itself",
+      "resultTranslations": {
+        "en": "The power is drawn from the energy of life and death itself"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [55, 63],
+      "result": "The power is sourced from the hidden crevices and subtle cracks in the universe, exploiting them to change reality",
+      "resultTranslations": {
+        "en": "The power is sourced from the hidden crevices and subtle cracks in the universe, exploiting them to change reality"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [64, 66],
+      "result": "Magic is a type of science, sourced from nature, explainable and manipulated through understanding and experimentation",
+      "resultTranslations": {
+        "en": "Magic is a type of science, sourced from nature, explainable and manipulated through understanding and experimentation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [67, 83],
+      "result": "There is no source, magic exists as a force of the universe",
+      "resultTranslations": {
+        "en": "There is no source, magic exists as a force of the universe"
+      },
+      "description": "Don't roll on the Meaning Tables or make an interpretation",
+      "descriptionTranslations": {
+        "en": "Don't roll on the Meaning Tables or make an interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [84, 92],
+      "result": "Magic has a source, but it is unknown",
+      "resultTranslations": {
+        "en": "Magic has a source, but it is unknown"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [93, 100],
+      "result": "Roll on Action Meaning Tables",
+      "resultTranslations": {
+        "en": "Roll on Action Meaning Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning Tables and include them with the other words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

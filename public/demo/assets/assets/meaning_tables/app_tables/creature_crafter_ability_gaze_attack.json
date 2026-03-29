@@ -1,0 +1,67 @@
+{
+  "id": "creature_crafter_ability_gaze_attack",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Gaze Attack Properties",
+  "displayNameTranslations": { "en": "Gaze Attack Properties" },
+  "description": "Determines the nature of the creature's gaze attack.",
+  "descriptionTranslations": { "en": "Determines the nature of the creature's gaze attack." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "gaze-attack"],
+  "entries": [
+    {
+      "range": [1, 25],
+      "result": "PHYSICAL DAMAGE",
+      "resultTranslations": { "en": "PHYSICAL DAMAGE" },
+      "description": "The attack causes physical damage.",
+      "descriptionTranslations": { "en": "The attack causes physical damage." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [26, 50],
+      "result": "DEATH GAZE",
+      "resultTranslations": { "en": "DEATH GAZE" },
+      "description": "If the victim fails to resist, he dies immediately. Otherwise, he suffers no harm.",
+      "descriptionTranslations": { "en": "If the victim fails to resist, he dies immediately. Otherwise, he suffers no harm." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 75],
+      "result": "TRANSFORMATION",
+      "resultTranslations": { "en": "TRANSFORMATION" },
+      "description": "Failed resistance means the victim is transformed somehow, such as turned to stone or turned into a pig.",
+      "descriptionTranslations": { "en": "Failed resistance means the victim is transformed somehow, such as turned to stone or turned into a pig." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 100],
+      "result": "MIND CONTROL",
+      "resultTranslations": { "en": "MIND CONTROL" },
+      "description": "Failed resistance results in some form of mind control, such as hypnosis.",
+      "descriptionTranslations": { "en": "Failed resistance results in some form of mind control, such as hypnosis." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

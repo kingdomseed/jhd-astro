@@ -1,0 +1,196 @@
+{
+  "id": "event_crafter_event_elements_concluding_short",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Event Elements: Concluding Short",
+  "displayNameTranslations": {
+    "en": "Event Elements: Concluding Short"
+  },
+  "description": "Roll 1d10 + Progress Points. Use this column for Categories that build toward a conclusion over a shorter, faster arc. Used with the Event Crafter system from Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Roll 1d10 + Progress Points. Use this column for Categories that build toward a conclusion over a shorter, faster arc. Used with the Event Crafter system from Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "event-elements",
+    "core-mechanic",
+    "concluding-short"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "result": "None or Expected",
+      "resultTranslations": {
+        "en": "None or Expected"
+      },
+      "description": "The Element is \"None\" unless it makes no sense with this Event, in which case it's Expected.",
+      "descriptionTranslations": {
+        "en": "The Element is \"None\" unless it makes no sense with this Event, in which case it's Expected."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        8
+      ],
+      "result": "Expected",
+      "resultTranslations": {
+        "en": "Expected"
+      },
+      "description": "The Element is what you would most expect for this Category in this Event, considering the Context of the adventure.",
+      "descriptionTranslations": {
+        "en": "The Element is what you would most expect for this Category in this Event, considering the Context of the adventure."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the Element. Consider the Context of the Category when interpreting.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the Element. Consider the Context of the Category when interpreting."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        11
+      ],
+      "result": "1d10 List or Random",
+      "resultTranslations": {
+        "en": "1d10 List or Random"
+      },
+      "description": "If this Category has Custom Elements, roll 1d10 on the Situation's custom List. If there are no Custom Elements, treat as Random.",
+      "descriptionTranslations": {
+        "en": "If this Category has Custom Elements, roll 1d10 on the Situation's custom List. If there are no Custom Elements, treat as Random."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Conclusion",
+      "resultTranslations": {
+        "en": "Conclusion"
+      },
+      "description": "This is the final Event in this Situation. Interpret the Event knowing it will end. For this Category, also treat as Expected.",
+      "descriptionTranslations": {
+        "en": "This is the final Event in this Situation. Interpret the Event knowing it will end. For this Category, also treat as Expected."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Special",
+      "resultTranslations": {
+        "en": "Special"
+      },
+      "description": "Roll on the Special Elements table.",
+      "descriptionTranslations": {
+        "en": "Roll on the Special Elements table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "event_crafter_special_elements"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "1d10+PP List or Expected",
+      "resultTranslations": {
+        "en": "1d10+PP List or Expected"
+      },
+      "description": "If this Category has Custom Elements, roll 1d10 + Progress Points on the Situation's custom List. If there are no Custom Elements, treat as Expected.",
+      "descriptionTranslations": {
+        "en": "If this Category has Custom Elements, roll 1d10 + Progress Points on the Situation's custom List. If there are no Custom Elements, treat as Expected."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Conclusion",
+      "resultTranslations": {
+        "en": "Conclusion"
+      },
+      "description": "This is the final Event in this Situation. Interpret the Event knowing it will end. For this Category, also treat as Expected.",
+      "descriptionTranslations": {
+        "en": "This is the final Event in this Situation. Interpret the Event knowing it will end. For this Category, also treat as Expected."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Expected, PP-6",
+      "resultTranslations": {
+        "en": "Expected, PP-6"
+      },
+      "description": "The Element is Expected. Instead of adding a Progress Point, subtract 6 Progress Points from this Category.",
+      "descriptionTranslations": {
+        "en": "The Element is Expected. Instead of adding a Progress Point, subtract 6 Progress Points from this Category."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 16,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

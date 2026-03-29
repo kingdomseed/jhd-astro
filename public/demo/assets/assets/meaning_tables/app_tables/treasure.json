@@ -1,0 +1,1530 @@
+{
+  "id": "treasure",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Treasure",
+  "displayNameTranslations": {
+    "pt": "Tesouro",
+    "en": "Treasure"
+  },
+  "description": "Various types of valuable items and treasures that can be discovered",
+  "descriptionTranslations": {
+    "en": "Various types of valuable items and treasures that can be discovered"
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 54",
+  "tags": [
+    "premium"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Alcohol",
+      "resultTranslations": {
+        "pt": "Álcool",
+        "en": "Alcohol"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Armor",
+      "resultTranslations": {
+        "pt": "Armadura",
+        "en": "Armor"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Arrows",
+      "resultTranslations": {
+        "pt": "Flechas",
+        "en": "Arrows"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Art",
+      "resultTranslations": {
+        "pt": "Arte",
+        "en": "Art"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Axe",
+      "resultTranslations": {
+        "pt": "Machado",
+        "en": "Axe"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Bag",
+      "resultTranslations": {
+        "pt": "Saco",
+        "en": "Bag"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Barrel",
+      "resultTranslations": {
+        "pt": "Barril",
+        "en": "Barrel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Book",
+      "resultTranslations": {
+        "pt": "Livro",
+        "en": "Book"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "Boots",
+      "resultTranslations": {
+        "pt": "Botas",
+        "en": "Boots"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Bow",
+      "resultTranslations": {
+        "pt": "Arco",
+        "en": "Bow"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Bowl",
+      "resultTranslations": {
+        "pt": "Tigela",
+        "en": "Bowl"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Box",
+      "resultTranslations": {
+        "pt": "Caixa",
+        "en": "Box"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Bracelet",
+      "resultTranslations": {
+        "pt": "Bracelete",
+        "en": "Bracelet"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Broken",
+      "resultTranslations": {
+        "pt": "Quebrado",
+        "en": "Broken"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Brooch",
+      "resultTranslations": {
+        "pt": "Broche",
+        "en": "Brooch"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Candles",
+      "resultTranslations": {
+        "pt": "Velas",
+        "en": "Candles"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Cape",
+      "resultTranslations": {
+        "pt": "Capa",
+        "en": "Cape"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Chalice",
+      "resultTranslations": {
+        "pt": "Cálice",
+        "en": "Chalice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Chest",
+      "resultTranslations": {
+        "pt": "Baú",
+        "en": "Chest"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Cloak",
+      "resultTranslations": {
+        "pt": "Manto",
+        "en": "Cloak"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Clock",
+      "resultTranslations": {
+        "pt": "Relógio",
+        "en": "Clock"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Clothes",
+      "resultTranslations": {
+        "pt": "Roupas",
+        "en": "Clothes"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Coal",
+      "resultTranslations": {
+        "pt": "Carvão",
+        "en": "Coal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Coins",
+      "resultTranslations": {
+        "pt": "Moedas",
+        "en": "Coins"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        25
+      ],
+      "result": "Common",
+      "resultTranslations": {
+        "pt": "Comum",
+        "en": "Common"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        26
+      ],
+      "result": "Copper",
+      "resultTranslations": {
+        "pt": "Cobre",
+        "en": "Copper"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        27,
+        27
+      ],
+      "result": "Crate",
+      "resultTranslations": {
+        "pt": "Engradado",
+        "en": "Crate"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        28,
+        28
+      ],
+      "result": "Crown",
+      "resultTranslations": {
+        "pt": "Coroa",
+        "en": "Crown"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        29
+      ],
+      "result": "Cushion",
+      "resultTranslations": {
+        "pt": "Almofada",
+        "en": "Cushion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        30,
+        30
+      ],
+      "result": "Dagger",
+      "resultTranslations": {
+        "pt": "Adaga",
+        "en": "Dagger"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        31
+      ],
+      "result": "Damaged",
+      "resultTranslations": {
+        "pt": "Danificado",
+        "en": "Damaged"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        32,
+        32
+      ],
+      "result": "Diamonds",
+      "resultTranslations": {
+        "pt": "Diamantes",
+        "en": "Diamonds"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        33
+      ],
+      "result": "Document",
+      "resultTranslations": {
+        "pt": "Documento",
+        "en": "Document"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        34,
+        34
+      ],
+      "result": "Figurine",
+      "resultTranslations": {
+        "pt": "Estatueta",
+        "en": "Figurine"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        35
+      ],
+      "result": "Fine",
+      "resultTranslations": {
+        "pt": "Fino",
+        "en": "Fine"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        36
+      ],
+      "result": "Flask",
+      "resultTranslations": {
+        "pt": "Frasco",
+        "en": "Flask"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        37
+      ],
+      "result": "Furniture",
+      "resultTranslations": {
+        "pt": "Mobília",
+        "en": "Furniture"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        38,
+        38
+      ],
+      "result": "Gauntlet",
+      "resultTranslations": {
+        "pt": "Manopla",
+        "en": "Gauntlet"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        39
+      ],
+      "result": "Gems",
+      "resultTranslations": {
+        "pt": "Gemas",
+        "en": "Gems"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        40,
+        40
+      ],
+      "result": "Gloves",
+      "resultTranslations": {
+        "pt": "Luvas",
+        "en": "Gloves"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        41
+      ],
+      "result": "Glowing",
+      "resultTranslations": {
+        "pt": "Cintilante",
+        "en": "Glowing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        42,
+        42
+      ],
+      "result": "Goblet",
+      "resultTranslations": {
+        "pt": "Taça",
+        "en": "Goblet"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        43
+      ],
+      "result": "Gold",
+      "resultTranslations": {
+        "pt": "Ouro",
+        "en": "Gold"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        44,
+        44
+      ],
+      "result": "Hammer",
+      "resultTranslations": {
+        "pt": "Martelo",
+        "en": "Hammer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        45
+      ],
+      "result": "Harp",
+      "resultTranslations": {
+        "pt": "Harpa",
+        "en": "Harp"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        46
+      ],
+      "result": "Hat",
+      "resultTranslations": {
+        "pt": "Chapéu",
+        "en": "Hat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        47,
+        47
+      ],
+      "result": "Helmet",
+      "resultTranslations": {
+        "pt": "Elmo",
+        "en": "Helmet"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        48,
+        48
+      ],
+      "result": "Horn",
+      "resultTranslations": {
+        "pt": "Chifre",
+        "en": "Horn"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        49
+      ],
+      "result": "Idol",
+      "resultTranslations": {
+        "pt": "Ídolo",
+        "en": "Idol"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        50,
+        50
+      ],
+      "result": "Jewelry",
+      "resultTranslations": {
+        "pt": "Joalheria",
+        "en": "Jewelry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "result": "Journal",
+      "resultTranslations": {
+        "pt": "Diário",
+        "en": "Journal"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        52
+      ],
+      "result": "Key",
+      "resultTranslations": {
+        "pt": "Chave",
+        "en": "Key"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        53
+      ],
+      "result": "Lamp",
+      "resultTranslations": {
+        "pt": "Lâmpada",
+        "en": "Lamp"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        54,
+        54
+      ],
+      "result": "Lantern",
+      "resultTranslations": {
+        "pt": "Lamparina",
+        "en": "Lantern"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        55,
+        55
+      ],
+      "result": "Leather",
+      "resultTranslations": {
+        "pt": "Couro",
+        "en": "Leather"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        56
+      ],
+      "result": "Letter",
+      "resultTranslations": {
+        "pt": "Carta",
+        "en": "Letter"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        57
+      ],
+      "result": "Mace",
+      "resultTranslations": {
+        "pt": "Maça",
+        "en": "Mace"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        58,
+        58
+      ],
+      "result": "Magic",
+      "resultTranslations": {
+        "pt": "Magia",
+        "en": "Magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "result": "Manacles",
+      "resultTranslations": {
+        "pt": "Algemas",
+        "en": "Manacles"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        60,
+        60
+      ],
+      "result": "Mandolin",
+      "resultTranslations": {
+        "pt": "Bandolim",
+        "en": "Mandolin"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        61
+      ],
+      "result": "Map",
+      "resultTranslations": {
+        "pt": "Mapa",
+        "en": "Map"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        62,
+        62
+      ],
+      "result": "Mask",
+      "resultTranslations": {
+        "pt": "Máscara",
+        "en": "Mask"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        63
+      ],
+      "result": "Masterwork",
+      "resultTranslations": {
+        "pt": "Obra-Prima",
+        "en": "Masterwork"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        64,
+        64
+      ],
+      "result": "Mechanical",
+      "resultTranslations": {
+        "pt": "Mecânico",
+        "en": "Mechanical"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "result": "Message",
+      "resultTranslations": {
+        "pt": "Mensagem",
+        "en": "Message"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "result": "Mirror",
+      "resultTranslations": {
+        "pt": "Espelho",
+        "en": "Mirror"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "result": "Multiple",
+      "resultTranslations": {
+        "pt": "Múltiplos",
+        "en": "Multiple"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "result": "Necklace",
+      "resultTranslations": {
+        "pt": "Colar",
+        "en": "Necklace"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "result": "Orb",
+      "resultTranslations": {
+        "pt": "Orbe",
+        "en": "Orb"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        70,
+        70
+      ],
+      "result": "Painting",
+      "resultTranslations": {
+        "pt": "Pintura",
+        "en": "Painting"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        71
+      ],
+      "result": "Pearl",
+      "resultTranslations": {
+        "pt": "Pérola",
+        "en": "Pearl"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        72
+      ],
+      "result": "Pelt",
+      "resultTranslations": {
+        "pt": "Peles",
+        "en": "Pelt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        73
+      ],
+      "result": "Pile",
+      "resultTranslations": {
+        "pt": "Pilha",
+        "en": "Pile"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        74,
+        74
+      ],
+      "result": "Pot",
+      "resultTranslations": {
+        "pt": "Pote",
+        "en": "Pot"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "result": "Potion",
+      "resultTranslations": {
+        "pt": "Poção",
+        "en": "Potion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        76
+      ],
+      "result": "Quality",
+      "resultTranslations": {
+        "pt": "Qualidade",
+        "en": "Quality"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        77,
+        77
+      ],
+      "result": "Quill",
+      "resultTranslations": {
+        "pt": "Pena",
+        "en": "Quill"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        78,
+        78
+      ],
+      "result": "Ring",
+      "resultTranslations": {
+        "pt": "Anel",
+        "en": "Ring"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        79
+      ],
+      "result": "Rope",
+      "resultTranslations": {
+        "pt": "Corda",
+        "en": "Rope"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "result": "Rubies",
+      "resultTranslations": {
+        "pt": "Rubis",
+        "en": "Rubies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        81
+      ],
+      "result": "Sapphires",
+      "resultTranslations": {
+        "pt": "Safiras",
+        "en": "Sapphires"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        82,
+        82
+      ],
+      "result": "Scroll",
+      "resultTranslations": {
+        "pt": "Pergaminho",
+        "en": "Scroll"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        83
+      ],
+      "result": "Shield",
+      "resultTranslations": {
+        "pt": "Escudo",
+        "en": "Shield"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        84,
+        84
+      ],
+      "result": "Silver",
+      "resultTranslations": {
+        "pt": "Prata",
+        "en": "Silver"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        85
+      ],
+      "result": "Spear",
+      "resultTranslations": {
+        "pt": "Lança",
+        "en": "Spear"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        86
+      ],
+      "result": "Staff",
+      "resultTranslations": {
+        "pt": "Cajado",
+        "en": "Staff"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        87
+      ],
+      "result": "Strange",
+      "resultTranslations": {
+        "pt": "Estranho",
+        "en": "Strange"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        88,
+        88
+      ],
+      "result": "Sword",
+      "resultTranslations": {
+        "pt": "Espada",
+        "en": "Sword"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "result": "Symbol",
+      "resultTranslations": {
+        "pt": "Símbolo",
+        "en": "Symbol"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        90,
+        90
+      ],
+      "result": "Tapestry",
+      "resultTranslations": {
+        "pt": "Tapeçaria",
+        "en": "Tapestry"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "result": "Tarnished",
+      "resultTranslations": {
+        "pt": "Manchado",
+        "en": "Tarnished"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        92,
+        92
+      ],
+      "result": "Torch",
+      "resultTranslations": {
+        "pt": "Tocha",
+        "en": "Torch"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        93
+      ],
+      "result": "Unusual",
+      "resultTranslations": {
+        "pt": "Incomum",
+        "en": "Unusual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "result": "Valuable",
+      "resultTranslations": {
+        "pt": "Valioso",
+        "en": "Valuable"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "result": "Vase",
+      "resultTranslations": {
+        "pt": "Vaso",
+        "en": "Vase"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "result": "Vial",
+      "resultTranslations": {
+        "pt": "Vidro",
+        "en": "Vial"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        97
+      ],
+      "result": "Wand",
+      "resultTranslations": {
+        "pt": "Varinha",
+        "en": "Wand"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        98
+      ],
+      "result": "Weapon",
+      "resultTranslations": {
+        "pt": "Arma",
+        "en": "Weapon"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        99
+      ],
+      "result": "Whip",
+      "resultTranslations": {
+        "pt": "Chicote",
+        "en": "Whip"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "result": "Wine",
+      "resultTranslations": {
+        "pt": "Vinho",
+        "en": "Wine"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

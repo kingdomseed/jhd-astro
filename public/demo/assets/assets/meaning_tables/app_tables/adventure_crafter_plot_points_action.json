@@ -1,0 +1,590 @@
+{
+  "id": "adventure_crafter_plot_points_action",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Plot Points: Action",
+  "displayNameTranslations": {
+    "en": "Plot Points: Action"
+  },
+  "description": "",
+  "descriptionTranslations": {
+    "en": ""
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Adventure Crafter",
+  "tags": ["adventure-crafter", "plot-points", "action"],
+  "entries": [
+    {
+      "range": [1, 8],
+      "result": "CONCLUSION",
+      "resultTranslations": { "en": "CONCLUSION" },
+      "description": "If this Turning Point is currently a Plotline Development, then it becomes a Plotline Conclusion. Incorporate anything necessary into this Turning Point to end this Plotline and remove it from the Plotlines List. If this Turning Point is a New Plotline or already a Conclusion, then consider this Plot Point a None.",
+      "descriptionTranslations": {
+        "en": "If this Turning Point is currently a Plotline Development, then it becomes a Plotline Conclusion. Incorporate anything necessary into this Turning Point to end this Plotline and remove it from the Plotlines List. If this Turning Point is a New Plotline or already a Conclusion, then consider this Plot Point a None."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 24],
+      "result": "NONE",
+      "resultTranslations": { "en": "NONE" },
+      "description": "Leave this Plot Point blank and go on to the next Plot Point, unless it would leave you with fewer than 2 Plot Points in this Turning Point, in which case re-roll.",
+      "descriptionTranslations": {
+        "en": "Leave this Plot Point blank and go on to the next Plot Point, unless it would leave you with fewer than 2 Plot Points in this Turning Point, in which case re-roll."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 26],
+      "result": "A CHARACTER IS ATTACKED IN A NON-LETHAL WAY",
+      "resultTranslations": {
+        "en": "A CHARACTER IS ATTACKED IN A NON-LETHAL WAY"
+      },
+      "description": "A Character is attacked, but the assailant will not attack to kill.",
+      "descriptionTranslations": {
+        "en": "A Character is attacked, but the assailant will not attack to kill."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [27, 27],
+      "result": "COLLATERAL DAMAGE",
+      "resultTranslations": { "en": "COLLATERAL DAMAGE" },
+      "description": "Whatever is going on in this Turning Point, the activity will spill over from the focus of that activity to things around it. This is particularly true for damaging events. For instance, a superhero defeats a villain in a downtown brawl, but doing significant damage to the buildings around them in the process. The collateral damage does not have to be physical. For instance, it could be the legal fallout from a major court decision.",
+      "descriptionTranslations": {
+        "en": "Whatever is going on in this Turning Point, the activity will spill over from the focus of that activity to things around it. This is particularly true for damaging events. For instance, a superhero defeats a villain in a downtown brawl, but doing significant damage to the buildings around them in the process. The collateral damage does not have to be physical. For instance, it could be the legal fallout from a major court decision."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [28, 29],
+      "result": "A CHARACTER IS ATTACKED IN A LETHAL WAY",
+      "resultTranslations": { "en": "A CHARACTER IS ATTACKED IN A LETHAL WAY" },
+      "description": "An assailant is trying to kill a Character.",
+      "descriptionTranslations": {
+        "en": "An assailant is trying to kill a Character."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [30, 31],
+      "result": "AMBUSH",
+      "resultTranslations": { "en": "AMBUSH" },
+      "description": "Whatever is happening in this Turning Point involves sudden action at an unexpected time.",
+      "descriptionTranslations": {
+        "en": "Whatever is happening in this Turning Point involves sudden action at an unexpected time."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [32, 32],
+      "result": "CATASTROPHE",
+      "resultTranslations": { "en": "CATASTROPHE" },
+      "description": "Just about the worst thing that can happen does happen, and it happens spectacularly and with much action. This could be the impregnable fortress that gets sacked, the unstoppable superhero who gets defeated, the unsinkable ship that starts to sink.",
+      "descriptionTranslations": {
+        "en": "Just about the worst thing that can happen does happen, and it happens spectacularly and with much action. This could be the impregnable fortress that gets sacked, the unstoppable superhero who gets defeated, the unsinkable ship that starts to sink."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [33, 33],
+      "result": "CHARACTER HAS A CLEVER IDEA",
+      "resultTranslations": { "en": "CHARACTER HAS A CLEVER IDEA" },
+      "description": "A Character has an idea that has an impact on this Turning Point. For instance, the con man speaks up and just happens to know a secret way through the sewers into the walled city.",
+      "descriptionTranslations": {
+        "en": "A Character has an idea that has an impact on this Turning Point. For instance, the con man speaks up and just happens to know a secret way through the sewers into the walled city."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 34],
+      "result": "SOMETHING IS GETTING AWAY",
+      "resultTranslations": { "en": "SOMETHING IS GETTING AWAY" },
+      "description": "This Turning Point involves a time limit where, at the end of it, something will get away. For instance, a ship carrying a magic artifact is about to leave the dock and a Character has to fight their way through a pack of armed goons to board the ship before it sets sail.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a time limit where, at the end of it, something will get away. For instance, a ship carrying a magic artifact is about to leave the dock and a Character has to fight their way through a pack of armed goons to board the ship before it sets sail."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [35, 36],
+      "result": "HUNTED",
+      "resultTranslations": { "en": "HUNTED" },
+      "description": "A Character is being hunted by someone or something that is not strictly legitimate. In other words, as opposed to Wanted By The Law, Hunted may mean a hit man is pursuing a Character to fulfill a mafia contract on them, or a ghost may be after a Character. The hunter doesn't have to be seeking to kill.",
+      "descriptionTranslations": {
+        "en": "A Character is being hunted by someone or something that is not strictly legitimate. In other words, as opposed to Wanted By The Law, Hunted may mean a hit man is pursuing a Character to fulfill a mafia contract on them, or a ghost may be after a Character. The hunter doesn't have to be seeking to kill."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [37, 37],
+      "result": "DISTRACTION",
+      "resultTranslations": { "en": "DISTRACTION" },
+      "description": "A Character is distracted in this Turning Point in such a way that it impacts events. For instance, before a villain delivers his killing blow he's distracted by an image of his lost love, giving the hero time to escape.",
+      "descriptionTranslations": {
+        "en": "A Character is distracted in this Turning Point in such a way that it impacts events. For instance, before a villain delivers his killing blow he's distracted by an image of his lost love, giving the hero time to escape."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [38, 39],
+      "result": "A CHARACTER IS ATTACKED TO ABDUCT",
+      "resultTranslations": { "en": "A CHARACTER IS ATTACKED TO ABDUCT" },
+      "description": "An assailant is attempting to abduct a Character.",
+      "descriptionTranslations": {
+        "en": "An assailant is attempting to abduct a Character."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [40, 40],
+      "result": "SOMETHING EXOTIC",
+      "resultTranslations": { "en": "SOMETHING EXOTIC" },
+      "description": "Whatever is happening in this Turning Point it involves an unusual or exotic element. For instance, if the Turning Point is about someone being attacked by an assassin, the assassin may have a very unusual identity or mode of attack (maybe he's disguised as a clown and attacks with exploding balloons, or he is a martial artist with fantastic moves).",
+      "descriptionTranslations": {
+        "en": "Whatever is happening in this Turning Point it involves an unusual or exotic element. For instance, if the Turning Point is about someone being attacked by an assassin, the assassin may have a very unusual identity or mode of attack (maybe he's disguised as a clown and attacks with exploding balloons, or he is a martial artist with fantastic moves)."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 42],
+      "result": "IMMEDIATELY",
+      "resultTranslations": { "en": "IMMEDIATELY" },
+      "description": "Immediate action is required in this Turning Point, whatever is going on. For instance, if this Turning Point involves engine failure on a starship, the Character doesn't have days to resolve the issue, he may only have an hour. Whatever is going on, it requires immediate action.",
+      "descriptionTranslations": {
+        "en": "Immediate action is required in this Turning Point, whatever is going on. For instance, if this Turning Point involves engine failure on a starship, the Character doesn't have days to resolve the issue, he may only have an hour. Whatever is going on, it requires immediate action."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [43, 44],
+      "result": "CHASE",
+      "resultTranslations": { "en": "CHASE" },
+      "description": "This Turning Point involves a chase, where one Character is pursuing another.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a chase, where one Character is pursuing another."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [45, 46],
+      "result": "ESCAPE",
+      "resultTranslations": { "en": "ESCAPE" },
+      "description": "This Turning Point involves an escape of some sort. For instance, a Character who was captured by brigands in an earlier Turning Point manages to slip away from his captors and escape into the forest.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves an escape of some sort. For instance, a Character who was captured by brigands in an earlier Turning Point manages to slip away from his captors and escape into the forest."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [47, 48],
+      "result": "HEAVILY GUARDED",
+      "resultTranslations": { "en": "HEAVILY GUARDED" },
+      "description": "This Turning Point involves entering a heavily guarded and dangerous location. For instance, this could be needing to infiltrate a high tech security facility to steal information, or breaking into the necromancers lair full of guardian zombies to destroy his magic crystal.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves entering a heavily guarded and dangerous location. For instance, this could be needing to infiltrate a high tech security facility to steal information, or breaking into the necromancers lair full of guardian zombies to destroy his magic crystal."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [49, 50],
+      "result": "RESCUE",
+      "resultTranslations": { "en": "RESCUE" },
+      "description": "A Character needs to be rescued in this Turning Point.",
+      "descriptionTranslations": {
+        "en": "A Character needs to be rescued in this Turning Point."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 52],
+      "result": "PHYSICAL CONTEST OF SKILLS",
+      "resultTranslations": { "en": "PHYSICAL CONTEST OF SKILLS" },
+      "description": "This Turning Point involves Characters squaring off against each other in a physical contest of skills. This can be anything such as combat, a sporting event, duel, arm wrestling contest, etc.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves Characters squaring off against each other in a physical contest of skills. This can be anything such as combat, a sporting event, duel, arm wrestling contest, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [53, 54],
+      "result": "MASS BATTLE",
+      "resultTranslations": { "en": "MASS BATTLE" },
+      "description": "This Turning Point involves a combat between many combatants. This can be a throw down between two teams or a battle in a war, for instance.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a combat between many combatants. This can be a throw down between two teams or a battle in a war, for instance."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [55, 55],
+      "result": "A CRUCIAL LIFE SUPPORT SYSTEM BEGINS TO FAIL",
+      "resultTranslations": {
+        "en": "A CRUCIAL LIFE SUPPORT SYSTEM BEGINS TO FAIL"
+      },
+      "description": "This can be an actual life support system, like the oxygen ventilation of a starship, or a safety system, like the brakes on a car. The failure will constitute an emergency for the Characters involved.",
+      "descriptionTranslations": {
+        "en": "This can be an actual life support system, like the oxygen ventilation of a starship, or a safety system, like the brakes on a car. The failure will constitute an emergency for the Characters involved."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [56, 57],
+      "result": "VICTORY!",
+      "resultTranslations": { "en": "VICTORY!" },
+      "description": "A Character achieves a victory over another Character in this Turning Point. For instance, a band of marauders successfully waylay the king's couriers, or a hacker worms his way into a corporate computer system.",
+      "descriptionTranslations": {
+        "en": "A Character achieves a victory over another Character in this Turning Point. For instance, a band of marauders successfully waylay the king's couriers, or a hacker worms his way into a corporate computer system."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [58, 59],
+      "result": "TAKING CHANCES",
+      "resultTranslations": { "en": "TAKING CHANCES" },
+      "description": "A Character acts in a very risky way. For instance, a Character may suddenly show no regard for their life as they walk out across a narrow beam above a valley to save a friend. Or, the villain you are fighting takes a drug that makes him go into a battle frenzy where he loses all caution.",
+      "descriptionTranslations": {
+        "en": "A Character acts in a very risky way. For instance, a Character may suddenly show no regard for their life as they walk out across a narrow beam above a valley to save a friend. Or, the villain you are fighting takes a drug that makes him go into a battle frenzy where he loses all caution."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [60, 61],
+      "result": "SOLE SURVIVOR",
+      "resultTranslations": { "en": "SOLE SURVIVOR" },
+      "description": "This Turning Point involves some kind of process of elimination where there is only one left. This can be a battle, but doesn't have to be. For instance, maybe a sinking ship has a single survivor who washes up on shore, or a group of crewmen from a starship playing chess with an alien intelligence is down to their last crewmember who is now chosen for the alien's ultimate challenge.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves some kind of process of elimination where there is only one left. This can be a battle, but doesn't have to be. For instance, maybe a sinking ship has a single survivor who washes up on shore, or a group of crewmen from a starship playing chess with an alien intelligence is down to their last crewmember who is now chosen for the alien's ultimate challenge."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [62, 63],
+      "result": "STOP THAT",
+      "resultTranslations": { "en": "STOP THAT" },
+      "description": "A Character takes action to stop something from happening in this Turning Point. The action could be expected, such as a hero putting an arrow through the executioner before he drops his axe. Or, it could be unexpected, like a Character suddenly shooting a captured villain right before he was about to reveal crucial details.",
+      "descriptionTranslations": {
+        "en": "A Character takes action to stop something from happening in this Turning Point. The action could be expected, such as a hero putting an arrow through the executioner before he drops his axe. Or, it could be unexpected, like a Character suddenly shooting a captured villain right before he was about to reveal crucial details."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [64, 65],
+      "result": "DEFEND OR NOT TO DEFEND",
+      "resultTranslations": { "en": "DEFEND OR NOT TO DEFEND" },
+      "description": "This Turning Point involves a confrontation between two Characters, where another Character views it and has the option to intervene or not. The observing Character is not directly part of the confrontation, but will become so if they step in. This Plot Point calls for three Characters to be Invoked.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a confrontation between two Characters, where another Character views it and has the option to intervene or not. The observing Character is not directly part of the confrontation, but will become so if they step in. This Plot Point calls for three Characters to be Invoked."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [66, 67],
+      "result": "CRASH",
+      "resultTranslations": { "en": "CRASH" },
+      "description": "This Turning Point involves a vehicle carrying a Character to crash or threaten to crash. The Character(s) involved must either mitigate the damage of the crash, prevent the crash in the first place, and/or survive the crash. The vehicle can be anything from a plane to a car to a snow sled ... anything that can transport a Character and its crashing would be dangerous.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a vehicle carrying a Character to crash or threaten to crash. The Character(s) involved must either mitigate the damage of the crash, prevent the crash in the first place, and/or survive the crash. The vehicle can be anything from a plane to a car to a snow sled ... anything that can transport a Character and its crashing would be dangerous."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 69],
+      "result": "PHYSICAL BARRIER TO OVERCOME",
+      "resultTranslations": { "en": "PHYSICAL BARRIER TO OVERCOME" },
+      "description": "A Character faces a physical barrier of some sort that must be overcome. It could be a cliff that needs to be climbed, a rickety bridge to cross, a door that needs to be knocked down, etc. Whatever the barrier is, it will require physical action to get past.",
+      "descriptionTranslations": {
+        "en": "A Character faces a physical barrier of some sort that must be overcome. It could be a cliff that needs to be climbed, a rickety bridge to cross, a door that needs to be knocked down, etc. Whatever the barrier is, it will require physical action to get past."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [70, 71],
+      "result": "DOUBLE DOWN",
+      "resultTranslations": { "en": "DOUBLE DOWN" },
+      "description": "Whatever is happening in this Turning Point, those events will intensify. For instance, if a ship is leaking on the high seas during a storm, maybe torrential winds tear down the sails.",
+      "descriptionTranslations": {
+        "en": "Whatever is happening in this Turning Point, those events will intensify. For instance, if a ship is leaking on the high seas during a storm, maybe torrential winds tear down the sails."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [72, 73],
+      "result": "THEFT",
+      "resultTranslations": { "en": "THEFT" },
+      "description": "This Turning Point involves a theft, whether attempted or successful. What is being stolen is an object of some kind, or information, or anything that can be taken. This Turning Point involves the actual activity and action of the theft or attempted theft. For instance, the Character is strolling through a museum when a group of men burst in to steal a ritual mask.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a theft, whether attempted or successful. What is being stolen is an object of some kind, or information, or anything that can be taken. This Turning Point involves the actual activity and action of the theft or attempted theft. For instance, the Character is strolling through a museum when a group of men burst in to steal a ritual mask."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [74, 75],
+      "result": "DEALING WITH A CALAMITY",
+      "resultTranslations": { "en": "DEALING WITH A CALAMITY" },
+      "description": "This Turning Point involves a Character having to \"fight\" a calamity of some kind. For instance, maybe the Character is battling a fire to put it out, or he must fight his way through an ancient stone temple as it collapses around him.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves a Character having to \"fight\" a calamity of some kind. For instance, maybe the Character is battling a fire to put it out, or he must fight his way through an ancient stone temple as it collapses around him."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 77],
+      "result": "SUDDEN CESSATION",
+      "resultTranslations": { "en": "SUDDEN CESSATION" },
+      "description": "Whatever is happening in this Turning Point, it will suddenly cease. This could occur at any time and the causes may be unknown. For instance, if Characters are attacked by a group, the group may suddenly break off and run away.",
+      "descriptionTranslations": {
+        "en": "Whatever is happening in this Turning Point, it will suddenly cease. This could occur at any time and the causes may be unknown. For instance, if Characters are attacked by a group, the group may suddenly break off and run away."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [78, 78],
+      "result": "USED AGAINST THEM",
+      "resultTranslations": { "en": "USED AGAINST THEM" },
+      "description": "A resource owned or aligned with one Character is somehow turned against them in this Turning Point. For instance, a small starship is being pursued by three massive battle cruisers. By skillful piloting, the smaller ship causes the larger ships to collide with each other, using their size against them. Or, a wizard may command a powerful golem, but another wizard casts a spell to make the golem attack its master.",
+      "descriptionTranslations": {
+        "en": "A resource owned or aligned with one Character is somehow turned against them in this Turning Point. For instance, a small starship is being pursued by three massive battle cruisers. By skillful piloting, the smaller ship causes the larger ships to collide with each other, using their size against them. Or, a wizard may command a powerful golem, but another wizard casts a spell to make the golem attack its master."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [79, 79],
+      "result": "TRAVEL SETTING",
+      "resultTranslations": { "en": "TRAVEL SETTING" },
+      "description": "This Turning Point takes place in a traveling vehicle. For instance, a ship at sea, a train, a ship hurtling through space, etc.",
+      "descriptionTranslations": {
+        "en": "This Turning Point takes place in a traveling vehicle. For instance, a ship at sea, a train, a ship hurtling through space, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [80, 81],
+      "result": "FRENETIC ACTIVITY",
+      "resultTranslations": { "en": "FRENETIC ACTIVITY" },
+      "description": "This Turning Point involves action coming fast and furious at a Character. It should be a rapid fire succession of action, for instance a series of attackers, an out of control boat rocketing down a rapids approaching peril after peril, running a gauntlet of some kind through a series of traps, etc.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves action coming fast and furious at a Character. It should be a rapid fire succession of action, for instance a series of attackers, an out of control boat rocketing down a rapids approaching peril after peril, running a gauntlet of some kind through a series of traps, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [82, 83],
+      "result": "SNEAKY BARRIER",
+      "resultTranslations": { "en": "SNEAKY BARRIER" },
+      "description": "A barrier needs to be overcome through stealth or dexterity. For instance, a monster lives in a cave that is only accessible by climbing a high, treacherous cliffside. Or, there are too many ninjas guarding the villain to fight your way through, but you can slip past them unseen if you are skilled enough.",
+      "descriptionTranslations": {
+        "en": "A barrier needs to be overcome through stealth or dexterity. For instance, a monster lives in a cave that is only accessible by climbing a high, treacherous cliffside. Or, there are too many ninjas guarding the villain to fight your way through, but you can slip past them unseen if you are skilled enough."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [84, 85],
+      "result": "A MOMENT OF PEACE",
+      "resultTranslations": { "en": "A MOMENT OF PEACE" },
+      "description": "Whatever else is going on in this Turning Point, it should overall be a peaceful time for a Character. For instance, there is a lull in the war where the combatants have a chance to enjoy a drink together and relax before they must fight again.",
+      "descriptionTranslations": {
+        "en": "Whatever else is going on in this Turning Point, it should overall be a peaceful time for a Character. For instance, there is a lull in the war where the combatants have a chance to enjoy a drink together and relax before they must fight again."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [86, 87],
+      "result": "BEAT YOU TO IT",
+      "resultTranslations": { "en": "BEAT YOU TO IT" },
+      "description": "Whatever is happening in this Turning Point that involves arriving at a location for some purpose, a Character discovers that someone else has arrived before them. For instance, a Character goes to the morgue to check out a clue and learns that another investigator already showed up and took the body.",
+      "descriptionTranslations": {
+        "en": "Whatever is happening in this Turning Point that involves arriving at a location for some purpose, a Character discovers that someone else has arrived before them. For instance, a Character goes to the morgue to check out a clue and learns that another investigator already showed up and took the body."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [88, 89],
+      "result": "CONFRONTATION",
+      "resultTranslations": { "en": "CONFRONTATION" },
+      "description": "This Turning Point involves Characters meeting in a confrontation that may turn physical if things don't go well. For instance, a Character meets the leader of a street gang to get information, but the gang is notoriously twitchy and violent.",
+      "descriptionTranslations": {
+        "en": "This Turning Point involves Characters meeting in a confrontation that may turn physical if things don't go well. For instance, a Character meets the leader of a street gang to get information, but the gang is notoriously twitchy and violent."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [90, 91],
+      "result": "PROTECTOR",
+      "resultTranslations": { "en": "PROTECTOR" },
+      "description": "A Character must protect someone or something in this Turning Point. If this is an Action Plot Point, the Character must actively protect in this Turning Point from a threat. If it is a Personal Plot Point, then the Character receives the protection duty in this Turning Point.",
+      "descriptionTranslations": {
+        "en": "A Character must protect someone or something in this Turning Point. If this is an Action Plot Point, the Character must actively protect in this Turning Point from a threat. If it is a Personal Plot Point, then the Character receives the protection duty in this Turning Point."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [92, 93],
+      "result": "CRESCENDO",
+      "resultTranslations": { "en": "CRESCENDO" },
+      "description": "A series of events that has taken place in this Adventure culminates in this Turning Point. If this is early in the Adventure or in this Plotline, then instead the Adventure or Plotline gets off to a fiery start. For instance, Characters following clues to track a cult finally discover their lair, resulting in a mass battle. Or, a Plotline about retrieving a stolen gem begins with a very elaborate theft.",
+      "descriptionTranslations": {
+        "en": "A series of events that has taken place in this Adventure culminates in this Turning Point. If this is early in the Adventure or in this Plotline, then instead the Adventure or Plotline gets off to a fiery start. For instance, Characters following clues to track a cult finally discover their lair, resulting in a mass battle. Or, a Plotline about retrieving a stolen gem begins with a very elaborate theft."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [94, 95],
+      "result": "DESTROY THE THING",
+      "resultTranslations": { "en": "DESTROY THE THING" },
+      "description": "A Character must destroy or try to destroy something in this Turning Point. Maybe a party of dungeon delvers reaches the heart of the cavern where they must break a mystic seal.",
+      "descriptionTranslations": {
+        "en": "A Character must destroy or try to destroy something in this Turning Point. Maybe a party of dungeon delvers reaches the heart of the cavern where they must break a mystic seal."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [96, 100],
+      "result": "META",
+      "resultTranslations": { "en": "META" },
+      "description": "This is a special Plot Point category with Plot Points that change the Characters List or combine Plotlines. Go to the Meta Plot Points Table and roll 1d100 on it for your Plot Point.",
+      "descriptionTranslations": {
+        "en": "This is a special Plot Point category with Plot Points that change the Characters List or combine Plotlines. Go to the Meta Plot Points Table and roll 1d100 on it for your Plot Point."
+      },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_meta_plot_points"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

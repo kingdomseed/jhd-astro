@@ -1,0 +1,130 @@
+{
+  "id": "number_of_backstory_events",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Number of Backstory Events",
+  "displayNameTranslations": {
+    "en": "Number of Backstory Events"
+  },
+  "description": "Determines how many events to generate when creating a character's backstory using the Backstory Crafter system.",
+  "descriptionTranslations": {
+    "en": "Determines how many events to generate when creating a character's backstory using the Backstory Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Variations 1",
+  "tags": [
+    "character",
+    "backstory",
+    "identity",
+    "backstory-crafter"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        8
+      ],
+      "result": "1",
+      "resultTranslations": {
+        "en": "1"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        25
+      ],
+      "result": "2",
+      "resultTranslations": {
+        "en": "2"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        51
+      ],
+      "result": "3",
+      "resultTranslations": {
+        "en": "3"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        52,
+        71
+      ],
+      "result": "4",
+      "resultTranslations": {
+        "en": "4"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        86
+      ],
+      "result": "5",
+      "resultTranslations": {
+        "en": "5"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        96
+      ],
+      "result": "6",
+      "resultTranslations": {
+        "en": "6"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        100
+      ],
+      "result": "7",
+      "resultTranslations": {
+        "en": "7"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

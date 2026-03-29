@@ -1,0 +1,312 @@
+{
+  "id": "spell_effects_control",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Control",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Control"
+  },
+  "description": "Determines the specific effect for Control spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Control spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Enhance control of something already being manually controlled, such as guiding a fired arrow or swung sword",
+      "resultTranslations": {
+        "en": "Enhance control of something already being manually controlled, such as guiding a fired arrow or swung sword"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Disrupt someone else's control of something",
+      "resultTranslations": {
+        "en": "Disrupt someone else's control of something"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Put a target to sleep or similarly make them blank out",
+      "resultTranslations": {
+        "en": "Put a target to sleep or similarly make them blank out"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Control a target by entangling or snaring with something that holds them",
+      "resultTranslations": {
+        "en": "Control a target by entangling or snaring with something that holds them"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Animate and move something commonplace and light, such as a broom",
+      "resultTranslations": {
+        "en": "Animate and move something commonplace and light, such as a broom"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Control a creature with animal intelligence",
+      "resultTranslations": {
+        "en": "Control a creature with animal intelligence"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Light control of a person's mind, such as a suggestion",
+      "resultTranslations": {
+        "en": "Light control of a person's mind, such as a suggestion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Control magic, such as augmenting another's spells or countering them",
+      "resultTranslations": {
+        "en": "Control magic, such as augmenting another's spells or countering them"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Change something in a fundamental way, such as turning a door into glass",
+      "resultTranslations": {
+        "en": "Change something in a fundamental way, such as turning a door into glass"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Command and control something associated with you, such as a summoned demon or a personal cloak",
+      "resultTranslations": {
+        "en": "Command and control something associated with you, such as a summoned demon or a personal cloak"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Cause fear, rage, or other very strong emotion",
+      "resultTranslations": {
+        "en": "Cause fear, rage, or other very strong emotion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Animate and move something large, such as controlling a car",
+      "resultTranslations": {
+        "en": "Animate and move something large, such as controlling a car"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Fully control a target's mind",
+      "resultTranslations": {
+        "en": "Fully control a target's mind"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Control something that would be very strange or bizarre to control",
+      "resultTranslations": {
+        "en": "Control something that would be very strange or bizarre to control"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Take control of an already occurring large scale natural force, such as a storm",
+      "resultTranslations": {
+        "en": "Take control of an already occurring large scale natural force, such as a storm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Create, animate, and move something enormous or powerful, such as a tidal wave",
+      "resultTranslations": {
+        "en": "Create, animate, and move something enormous or powerful, such as a tidal wave"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Control a fundamental aspect of the universe, such as time",
+      "resultTranslations": {
+        "en": "Control a fundamental aspect of the universe, such as time"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

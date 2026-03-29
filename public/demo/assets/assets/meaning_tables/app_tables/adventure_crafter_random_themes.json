@@ -1,0 +1,70 @@
+{
+  "id": "adventure_crafter_random_themes",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Random Themes",
+  "displayNameTranslations": {
+    "en": "Random Themes"
+  },
+  "description": "",
+  "descriptionTranslations": { "en": "" },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Adventure Crafter",
+  "tags": ["adventure-crafter", "themes", "setup"],
+  "entries": [
+    {
+      "range": [1, 2],
+      "result": "ACTION",
+      "resultTranslations": { "en": "ACTION" },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_plot_points_action"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [3, 4],
+      "result": "TENSION",
+      "resultTranslations": { "en": "TENSION" },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_plot_points_tension"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [5, 6],
+      "result": "MYSTERY",
+      "resultTranslations": { "en": "MYSTERY" },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_plot_points_mystery"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [7, 8],
+      "result": "SOCIAL",
+      "resultTranslations": { "en": "SOCIAL" },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_plot_points_social"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 10],
+      "result": "PERSONAL",
+      "resultTranslations": { "en": "PERSONAL" },
+      "weight": 1,
+      "entryRollOn": ["adventure_crafter_plot_points_personal"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 10,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

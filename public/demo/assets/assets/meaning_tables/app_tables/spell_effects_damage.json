@@ -1,0 +1,312 @@
+{
+  "id": "spell_effects_damage",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Damage",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Damage"
+  },
+  "description": "Determines the specific effect for Damage spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Damage spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Detect the presence of damage or harm to someone or something",
+      "resultTranslations": {
+        "en": "Detect the presence of damage or harm to someone or something"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Cause non-lethal pain to stun or distract",
+      "resultTranslations": {
+        "en": "Cause non-lethal pain to stun or distract"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Cause light, non-lethal harm to a target",
+      "resultTranslations": {
+        "en": "Cause light, non-lethal harm to a target"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Cause a commonplace object to break",
+      "resultTranslations": {
+        "en": "Cause a commonplace object to break"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Repair small amounts of damage in objects",
+      "resultTranslations": {
+        "en": "Repair small amounts of damage in objects"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Augment the harm done by an existing harmful thing, such as adding flame to a sword",
+      "resultTranslations": {
+        "en": "Augment the harm done by an existing harmful thing, such as adding flame to a sword"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Protect against damage that is lethal to humans",
+      "resultTranslations": {
+        "en": "Protect against damage that is lethal to humans"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Cause potentially lethal harm to a human target directly with magic",
+      "resultTranslations": {
+        "en": "Cause potentially lethal harm to a human target directly with magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Cause pain that doesn't inflict actual damage or it can be reversed",
+      "resultTranslations": {
+        "en": "Cause pain that doesn't inflict actual damage or it can be reversed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Cause harm over a long period of time, such as a curse that doesn't kick in for years",
+      "resultTranslations": {
+        "en": "Cause harm over a long period of time, such as a curse that doesn't kick in for years"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Turn something that isn't harmful into something damaging, such as causing a fog to become acidic and corrosive",
+      "resultTranslations": {
+        "en": "Turn something that isn't harmful into something damaging, such as causing a fog to become acidic and corrosive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Cause some form of non-physical harm, such as damaging a ghost on an ethereal plane or causing psychic damage",
+      "resultTranslations": {
+        "en": "Cause some form of non-physical harm, such as damaging a ghost on an ethereal plane or causing psychic damage"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Cause severe structural harm, such as blasting down a concrete wall",
+      "resultTranslations": {
+        "en": "Cause severe structural harm, such as blasting down a concrete wall"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Protect against damage that can cause massive harm",
+      "resultTranslations": {
+        "en": "Protect against damage that can cause massive harm"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Cause massive damage in an area, such as fireballs that level a city block",
+      "resultTranslations": {
+        "en": "Cause massive damage in an area, such as fireballs that level a city block"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Cause damage to reality, such as weakening dimensional barriers in an area or poisoning nature",
+      "resultTranslations": {
+        "en": "Cause damage to reality, such as weakening dimensional barriers in an area or poisoning nature"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Cause catastrophic wide scale damage, such as destroying a town or creating a devastating earthquake",
+      "resultTranslations": {
+        "en": "Cause catastrophic wide scale damage, such as destroying a town or creating a devastating earthquake"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

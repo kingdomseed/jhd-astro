@@ -1,0 +1,314 @@
+{
+  "id": "spell_effects_travel",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Travel",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Travel"
+  },
+  "description": "Determines the specific effect for Travel & Movement spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Travel & Movement spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "travel",
+    "movement"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Cause someone or something to move faster",
+      "resultTranslations": {
+        "en": "Cause someone or something to move faster"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Climb walls and surfaces with ease",
+      "resultTranslations": {
+        "en": "Climb walls and surfaces with ease"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Cause someone or something else to stop moving, immobilizing or slowing it",
+      "resultTranslations": {
+        "en": "Cause someone or something else to stop moving, immobilizing or slowing it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Swim in water as fast as any natural sea creature",
+      "resultTranslations": {
+        "en": "Swim in water as fast as any natural sea creature"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Receive magical guidance on which way to go",
+      "resultTranslations": {
+        "en": "Receive magical guidance on which way to go"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Create a temporary magical mount, such as a horse, to ride",
+      "resultTranslations": {
+        "en": "Create a temporary magical mount, such as a horse, to ride"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Drift or float as if light as a cloud",
+      "resultTranslations": {
+        "en": "Drift or float as if light as a cloud"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Give yourself or others flight",
+      "resultTranslations": {
+        "en": "Give yourself or others flight"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Pass through solid objects",
+      "resultTranslations": {
+        "en": "Pass through solid objects"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Travel through someone's thoughts, memories, or dreams",
+      "resultTranslations": {
+        "en": "Travel through someone's thoughts, memories, or dreams"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Create a magical shortcut between two distant places. The shortcut must still be traveled, and it may be perilous in its own way",
+      "resultTranslations": {
+        "en": "Create a magical shortcut between two distant places. The shortcut must still be traveled, and it may be perilous in its own way"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Teleport short distances",
+      "resultTranslations": {
+        "en": "Teleport short distances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Facilitate inconvenient travel by changing reality, such as making an elevator larger inside to hold a hundred people or allowing a plane to keep flying even when it's run out of fuel",
+      "resultTranslations": {
+        "en": "Facilitate inconvenient travel by changing reality, such as making an elevator larger inside to hold a hundred people or allowing a plane to keep flying even when it's run out of fuel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Travel on or through something that normally would be impossible, such as riding on a cloud or walking on water",
+      "resultTranslations": {
+        "en": "Travel on or through something that normally would be impossible, such as riding on a cloud or walking on water"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Teleport vast distances",
+      "resultTranslations": {
+        "en": "Teleport vast distances"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Move between dimensions or realities",
+      "resultTranslations": {
+        "en": "Move between dimensions or realities"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Travel through time",
+      "resultTranslations": {
+        "en": "Travel through time"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

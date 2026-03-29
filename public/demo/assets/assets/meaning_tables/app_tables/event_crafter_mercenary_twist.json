@@ -1,0 +1,392 @@
+{
+  "id": "event_crafter_mercenary_twist",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Mercenary Missions: Twist",
+  "displayNameTranslations": {
+    "en": "Mercenary Missions: Twist"
+  },
+  "description": "Structured Category for the Mercenary Missions Event Crafter Situation. Roll directly on this list. Most of the time there is no twist, but sometimes an extra challenge appears. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Structured Category for the Mercenary Missions Event Crafter Situation. Roll directly on this list. Most of the time there is no twist, but sometimes an extra challenge appears. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "mercenary-missions",
+    "twist",
+    "structured"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Not going alone",
+      "resultTranslations": {
+        "en": "Not going alone"
+      },
+      "description": "You must work with others on this mission. This could be allies, strangers, or people you don't trust.",
+      "descriptionTranslations": {
+        "en": "You must work with others on this mission. This could be allies, strangers, or people you don't trust."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the twist.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the twist."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Hard to get there",
+      "resultTranslations": {
+        "en": "Hard to get there"
+      },
+      "description": "Getting to the mission location is a challenge in itself. The journey may be dangerous, complicated, or require special means.",
+      "descriptionTranslations": {
+        "en": "Getting to the mission location is a challenge in itself. The journey may be dangerous, complicated, or require special means."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "Fewer resources",
+      "resultTranslations": {
+        "en": "Fewer resources"
+      },
+      "description": "You have fewer resources available than expected. Equipment, allies, or funding may be limited.",
+      "descriptionTranslations": {
+        "en": "You have fewer resources available than expected. Equipment, allies, or funding may be limited."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the twist.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the twist."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Random",
+      "resultTranslations": {
+        "en": "Random"
+      },
+      "description": "Roll on Meaning Tables to interpret the twist.",
+      "descriptionTranslations": {
+        "en": "Roll on Meaning Tables to interpret the twist."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Competition to target",
+      "resultTranslations": {
+        "en": "Competition to target"
+      },
+      "description": "Someone else is competing for the same objective. You may encounter rivals or opposition trying to complete the same mission.",
+      "descriptionTranslations": {
+        "en": "Someone else is competing for the same objective. You may encounter rivals or opposition trying to complete the same mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Combat a must",
+      "resultTranslations": {
+        "en": "Combat a must"
+      },
+      "description": "This mission will definitely involve combat. There is no way to avoid a fight.",
+      "descriptionTranslations": {
+        "en": "This mission will definitely involve combat. There is no way to avoid a fight."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "Very dangerous",
+      "resultTranslations": {
+        "en": "Very dangerous"
+      },
+      "description": "This mission is significantly more dangerous than usual. The threat level is high.",
+      "descriptionTranslations": {
+        "en": "This mission is significantly more dangerous than usual. The threat level is high."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No twist for this mission.",
+      "descriptionTranslations": {
+        "en": "No twist for this mission."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 20,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

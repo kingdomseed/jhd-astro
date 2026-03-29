@@ -1,0 +1,89 @@
+{
+  "id": "creature_crafter_number_of_creatures",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Number of Creatures",
+  "displayNameTranslations": { "en": "Number of Creatures" },
+  "description": "Determines how many creatures appear and provides a Potency modifier. Apply the negative modifier when creatures appear in groups, or the positive modifier to scale a solo creature to match a larger group.",
+  "descriptionTranslations": { "en": "Determines how many creatures appear and provides a Potency modifier. Apply the negative modifier when creatures appear in groups, or the positive modifier to scale a solo creature to match a larger group." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "quantity", "core-mechanic"],
+  "entries": [
+    {
+      "range": [1, 50],
+      "result": "1",
+      "resultTranslations": { "en": "1" },
+      "description": "Potency Modifier: 0. A single creature with no modifier to Potency rolls.",
+      "descriptionTranslations": { "en": "Potency Modifier: 0. A single creature with no modifier to Potency rolls." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 70],
+      "result": "2",
+      "resultTranslations": { "en": "2" },
+      "description": "Potency Modifier: -2/+2. Two creatures appear. Apply -2 to Potency when in a group, or +2 to scale a solo creature.",
+      "descriptionTranslations": { "en": "Potency Modifier: -2/+2. Two creatures appear. Apply -2 to Potency when in a group, or +2 to scale a solo creature." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 80],
+      "result": "3",
+      "resultTranslations": { "en": "3" },
+      "description": "Potency Modifier: -2/+2. Three creatures appear. Apply -2 to Potency when in a group, or +2 to scale a solo creature.",
+      "descriptionTranslations": { "en": "Potency Modifier: -2/+2. Three creatures appear. Apply -2 to Potency when in a group, or +2 to scale a solo creature." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 90],
+      "result": "4",
+      "resultTranslations": { "en": "4" },
+      "description": "Potency Modifier: -4/+4. Four creatures appear. Apply -4 to Potency when in a group, or +4 to scale a solo creature.",
+      "descriptionTranslations": { "en": "Potency Modifier: -4/+4. Four creatures appear. Apply -4 to Potency when in a group, or +4 to scale a solo creature." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 95],
+      "result": "5",
+      "resultTranslations": { "en": "5" },
+      "description": "Potency Modifier: -4/+4. Five creatures appear. Apply -4 to Potency when in a group, or +4 to scale a solo creature.",
+      "descriptionTranslations": { "en": "Potency Modifier: -4/+4. Five creatures appear. Apply -4 to Potency when in a group, or +4 to scale a solo creature." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [96, 100],
+      "result": "6 OR MORE",
+      "resultTranslations": { "en": "6 OR MORE" },
+      "description": "Potency Modifier: -5/+5. Six or more creatures appear. Apply -5 to Potency when in a group, or +5 to scale a solo creature.",
+      "descriptionTranslations": { "en": "Potency Modifier: -5/+5. Six or more creatures appear. Apply -5 to Potency when in a group, or +5 to scale a solo creature." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

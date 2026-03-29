@@ -1,0 +1,312 @@
+{
+  "id": "spell_effects_conjure",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Conjure",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Conjure"
+  },
+  "description": "Determines the specific effect for Create or Summon spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Create or Summon spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Conjure a light, ephemeral effect, such as distant voices or a soft scent",
+      "resultTranslations": {
+        "en": "Conjure a light, ephemeral effect, such as distant voices or a soft scent"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Conjure a harmless amount of material, such as light mist or a pinch of salt",
+      "resultTranslations": {
+        "en": "Conjure a harmless amount of material, such as light mist or a pinch of salt"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Conjure a harmless form of energy, such as light or some heat",
+      "resultTranslations": {
+        "en": "Conjure a harmless form of energy, such as light or some heat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Conjure a commonplace object",
+      "resultTranslations": {
+        "en": "Conjure a commonplace object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Conjure something that isn't real, an illusion",
+      "resultTranslations": {
+        "en": "Conjure something that isn't real, an illusion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Conjure something that is badly needed right now",
+      "resultTranslations": {
+        "en": "Conjure something that is badly needed right now"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Conjure something that looks like something else",
+      "resultTranslations": {
+        "en": "Conjure something that looks like something else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Conjure something that can actively help you, like a ball of light that shows you to an exit",
+      "resultTranslations": {
+        "en": "Conjure something that can actively help you, like a ball of light that shows you to an exit"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Conjure a valuable or useful amount of material, such as thick mist or a gold nugget",
+      "resultTranslations": {
+        "en": "Conjure a valuable or useful amount of material, such as thick mist or a gold nugget"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Conjure tentacles or something equally creepy",
+      "resultTranslations": {
+        "en": "Conjure tentacles or something equally creepy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Conjure something uncommon and maybe unnatural",
+      "resultTranslations": {
+        "en": "Conjure something uncommon and maybe unnatural"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Conjure a harmful level of energy, such as blinding light or burning heat",
+      "resultTranslations": {
+        "en": "Conjure a harmful level of energy, such as blinding light or burning heat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Conjure something that counteracts something else",
+      "resultTranslations": {
+        "en": "Conjure something that counteracts something else"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Conjure a large material object that is valuable or useful, such as a car",
+      "resultTranslations": {
+        "en": "Conjure a large material object that is valuable or useful, such as a car"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Bring forth something truly strange and bizarre",
+      "resultTranslations": {
+        "en": "Bring forth something truly strange and bizarre"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Conjure a devastating level of energy, such as blistering light or metal melting heat",
+      "resultTranslations": {
+        "en": "Conjure a devastating level of energy, such as blistering light or metal melting heat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Conjure something truly potent and awe-inspiring",
+      "resultTranslations": {
+        "en": "Conjure something truly potent and awe-inspiring"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,173 @@
+{
+  "id": "cyber_dystopia_world_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Cyber Dystopia World Focus",
+  "displayNameTranslations": {
+    "en": "Cyber Dystopia World Focus"
+  },
+  "description": "Determines the primary focus or theme for a cyberpunk dystopia setting.",
+  "descriptionTranslations": {
+    "en": "Determines the primary focus or theme for a cyberpunk dystopia setting."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "cyberpunk",
+    "sci-fi",
+    "world-building",
+    "dystopia",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "result": "Mega-Corps: The setting is dominated by powerful corporations",
+      "resultTranslations": {
+        "en": "Mega-Corps: The setting is dominated by powerful corporations"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        28
+      ],
+      "result": "AI Dominance: Artificial intelligence is at the top of the social hierarchy, controlling all",
+      "resultTranslations": {
+        "en": "AI Dominance: Artificial intelligence is at the top of the social hierarchy, controlling all"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        36
+      ],
+      "result": "Military: The setting is heavily military focused; perhaps there is a war going on",
+      "resultTranslations": {
+        "en": "Military: The setting is heavily military focused; perhaps there is a war going on"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        50
+      ],
+      "result": "Robots Rising: Robotic or synthetic life is common and becoming an issue with humans",
+      "resultTranslations": {
+        "en": "Robots Rising: Robotic or synthetic life is common and becoming an issue with humans"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        58
+      ],
+      "result": "Drugs: It's not just cyber technology but high tech enhancement drugs that are sought by many",
+      "resultTranslations": {
+        "en": "Drugs: It's not just cyber technology but high tech enhancement drugs that are sought by many"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        62
+      ],
+      "result": "Aliens: The setting includes the presence of aliens who have visited Earth, bringing tech and trouble",
+      "resultTranslations": {
+        "en": "Aliens: The setting includes the presence of aliens who have visited Earth, bringing tech and trouble"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        66
+      ],
+      "result": "Post-Apocalypse: The world has either fallen or effectively has. This is a place of chaos and little order",
+      "resultTranslations": {
+        "en": "Post-Apocalypse: The world has either fallen or effectively has. This is a place of chaos and little order"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        74
+      ],
+      "result": "Spy Thriller: The focus of cybertechnology is on espionage and the creation of super spies",
+      "resultTranslations": {
+        "en": "Spy Thriller: The focus of cybertechnology is on espionage and the creation of super spies"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        86
+      ],
+      "result": "Investigative: The Player Character is an investigator of some sort, whether private or law enforcement",
+      "resultTranslations": {
+        "en": "Investigative: The Player Character is an investigator of some sort, whether private or law enforcement"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        100
+      ],
+      "result": "No Focus: Roll on the Cyber Dystopia World Meaning table without additional Context from this table",
+      "resultTranslations": {
+        "en": "No Focus: Roll on the Cyber Dystopia World Meaning table without additional Context from this table"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

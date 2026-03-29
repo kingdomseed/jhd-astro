@@ -1,0 +1,269 @@
+{
+  "id": "star_system_exploration_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Star System Exploration Focus",
+  "displayNameTranslations": {
+    "en": "Star System Exploration Focus"
+  },
+  "description": "Provides a general reason for why you're exploring a star system. Use with Action Meaning tables for additional inspiration.",
+  "descriptionTranslations": {
+    "en": "Provides a general reason for why you're exploring a star system. Use with Action Meaning tables for additional inspiration."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 46",
+  "tags": [
+    "sci-fi",
+    "space",
+    "exploration",
+    "adventure",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "result": "Lost In Space: Somehow, you're lost. Really lost. Hopefully something here can help you",
+      "resultTranslations": {
+        "en": "Lost In Space: Somehow, you're lost. Really lost. Hopefully something here can help you"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        15
+      ],
+      "result": "A Beacon In The Black: You're following a beacon of some kind. Maybe it's a distress call, maybe it's an unidentifiable transmission",
+      "resultTranslations": {
+        "en": "A Beacon In The Black: You're following a beacon of some kind. Maybe it's a distress call, maybe it's an unidentifiable transmission"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        25
+      ],
+      "result": "Following The Bread Crumbs: You're on a mission to find something, and clues have led you to this star system",
+      "resultTranslations": {
+        "en": "Following The Bread Crumbs: You're on a mission to find something, and clues have led you to this star system"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        35
+      ],
+      "result": "Exploration: You're exploring, looking for new worlds. This is all about discovery",
+      "resultTranslations": {
+        "en": "Exploration: You're exploring, looking for new worlds. This is all about discovery"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "Desperate Circumstances: You're looking for something you desperately need, such as resources for your ship or escape from someone",
+      "resultTranslations": {
+        "en": "Desperate Circumstances: You're looking for something you desperately need, such as resources for your ship or escape from someone"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "result": "We Come In Peace: You're here to meet someone or something, and this system is their home",
+      "resultTranslations": {
+        "en": "We Come In Peace: You're here to meet someone or something, and this system is their home"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        60
+      ],
+      "result": "A Pitstop Gone Wrong: You've arrived at this star system for a routine reason. Something goes wrong, however, flinging you into an adventure",
+      "resultTranslations": {
+        "en": "A Pitstop Gone Wrong: You've arrived at this star system for a routine reason. Something goes wrong, however, flinging you into an adventure"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        65
+      ],
+      "result": "Business Trip: You have traveled to this star system as part of your line of work. Maybe you're an interstellar trader or ambassador",
+      "resultTranslations": {
+        "en": "Business Trip: You have traveled to this star system as part of your line of work. Maybe you're an interstellar trader or ambassador"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "A Spacecation: You've arrived in this solar system for purely personal, recreational reasons. It's a vacation",
+      "resultTranslations": {
+        "en": "A Spacecation: You've arrived in this solar system for purely personal, recreational reasons. It's a vacation"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "result": "Coerced Exploration: You are not here by choice. Perhaps your PC has been abducted, or a naturally occurring anomaly transported you here",
+      "resultTranslations": {
+        "en": "Coerced Exploration: You are not here by choice. Perhaps your PC has been abducted, or a naturally occurring anomaly transported you here"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "result": "Space Force: You are here for a military reason. Perhaps you are part of an invading force, or setting up a defensive station",
+      "resultTranslations": {
+        "en": "Space Force: You are here for a military reason. Perhaps you are part of an invading force, or setting up a defensive station"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "result": "Oops, Wrong Star: You're not lost, per se, there's a star system you were heading for but this one is not it",
+      "resultTranslations": {
+        "en": "Oops, Wrong Star: You're not lost, per se, there's a star system you were heading for but this one is not it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        93
+      ],
+      "result": "Crash Landing",
+      "resultTranslations": {
+        "en": "Crash Landing"
+      },
+      "description": "Something went seriously wrong and you ended up here by accident. Roll on Action tables for what went wrong",
+      "descriptionTranslations": {
+        "en": "Something went seriously wrong and you ended up here by accident. Roll on Action tables for what went wrong"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        94,
+        96
+      ],
+      "result": "A New Home: You're looking for a new home, fleeing disaster or seeking expansion",
+      "resultTranslations": {
+        "en": "A New Home: You're looking for a new home, fleeing disaster or seeking expansion"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        97,
+        98
+      ],
+      "result": "Hiding",
+      "resultTranslations": {
+        "en": "Hiding"
+      },
+      "description": "You're here because you don't want to be found. Roll on Action tables for what you're hiding from",
+      "descriptionTranslations": {
+        "en": "You're here because you don't want to be found. Roll on Action tables for what you're hiding from"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with any other Meaning words rolled",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with any other Meaning words rolled"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

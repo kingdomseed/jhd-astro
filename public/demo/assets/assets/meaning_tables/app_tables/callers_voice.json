@@ -1,0 +1,285 @@
+{
+  "id": "callers_voice",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Caller's Voice",
+  "displayNameTranslations": {
+    "en": "Caller's Voice"
+  },
+  "description": "Determines what a caller's voice sounds like in the Moonlight Radio scenario. Helps characterize the caller and give their dialogue additional context.",
+  "descriptionTranslations": {
+    "en": "Determines what a caller's voice sounds like in the Moonlight Radio scenario. Helps characterize the caller and give their dialogue additional context."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 58",
+  "tags": [
+    "moonlight-radio",
+    "radio",
+    "npc",
+    "voice",
+    "scenario"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        8
+      ],
+      "result": "High: The caller has a high pitched, melodic voice",
+      "resultTranslations": {
+        "en": "High: The caller has a high pitched, melodic voice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        22
+      ],
+      "result": "Deep: The caller has a deep, baritone voice",
+      "resultTranslations": {
+        "en": "Deep: The caller has a deep, baritone voice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        24
+      ],
+      "result": "Child: The caller sounds like a very young child",
+      "resultTranslations": {
+        "en": "Child: The caller sounds like a very young child"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Older: The caller sounds very old",
+      "resultTranslations": {
+        "en": "Older: The caller sounds very old"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        32
+      ],
+      "result": "Bright: The caller has a bright, cheerful voice",
+      "resultTranslations": {
+        "en": "Bright: The caller has a bright, cheerful voice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        33,
+        42
+      ],
+      "result": "Tired: The caller sounds exhausted",
+      "resultTranslations": {
+        "en": "Tired: The caller sounds exhausted"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        43,
+        44
+      ],
+      "result": "Energetic: The caller is excited or is high energy",
+      "resultTranslations": {
+        "en": "Energetic: The caller is excited or is high energy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        50
+      ],
+      "result": "Raspy: The caller has a raspy, hoarse voice",
+      "resultTranslations": {
+        "en": "Raspy: The caller has a raspy, hoarse voice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        58
+      ],
+      "result": "Shy: The caller sounds extremely shy",
+      "resultTranslations": {
+        "en": "Shy: The caller sounds extremely shy"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        66
+      ],
+      "result": "Intellectual: The caller likes to expound and focus on facts and details",
+      "resultTranslations": {
+        "en": "Intellectual: The caller likes to expound and focus on facts and details"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        72
+      ],
+      "result": "Scared: The caller sounds worried or frightened",
+      "resultTranslations": {
+        "en": "Scared: The caller sounds worried or frightened"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        80
+      ],
+      "result": "Casual: The caller speaks casually and comfortably",
+      "resultTranslations": {
+        "en": "Casual: The caller speaks casually and comfortably"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        88
+      ],
+      "result": "Jokey: The caller tries to make a joke of whatever they're talking about",
+      "resultTranslations": {
+        "en": "Jokey: The caller tries to make a joke of whatever they're talking about"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        89,
+        90
+      ],
+      "result": "Vocal Fry: The caller's voice is low pitched, with a rough, creaky quality to it",
+      "resultTranslations": {
+        "en": "Vocal Fry: The caller's voice is low pitched, with a rough, creaky quality to it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        92
+      ],
+      "result": "Confused: The caller sounds confused about something",
+      "resultTranslations": {
+        "en": "Confused: The caller sounds confused about something"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        93,
+        94
+      ],
+      "result": "Unexpected: The caller's voice is unexpected in some way. For instance, they speak incredibly slowly, or in a clipped three-words-at-a-time tempo",
+      "resultTranslations": {
+        "en": "Unexpected: The caller's voice is unexpected in some way. For instance, they speak incredibly slowly, or in a clipped three-words-at-a-time tempo"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        98
+      ],
+      "result": "Bad Connection: It's difficult to hear the caller's voice to determine anything about them",
+      "resultTranslations": {
+        "en": "Bad Connection: It's difficult to hear the caller's voice to determine anything about them"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        99,
+        100
+      ],
+      "result": "Buzzy: There is an almost electrical buzz to the voice. You can't tell if they're doing it intentionally, there's phone interference, or they just have an odd voice",
+      "resultTranslations": {
+        "en": "Buzzy: There is an almost electrical buzz to the voice. You can't tell if they're doing it intentionally, there's phone interference, or they just have an odd voice"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

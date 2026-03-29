@@ -1,0 +1,56 @@
+{
+  "id": "creature_crafter_ability_limited_use_extent",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Limited Use: Extent of Limit",
+  "displayNameTranslations": { "en": "Limited Use: Extent of Limit" },
+  "description": "Determines the extent of the limitation on the creature's abilities. Roll once and apply to all limited abilities, or roll for each.",
+  "descriptionTranslations": { "en": "Determines the extent of the limitation on the creature's abilities. Roll once and apply to all limited abilities, or roll for each." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "limited-use"],
+  "entries": [
+    {
+      "range": [1, 33],
+      "result": "PER ROUND",
+      "resultTranslations": { "en": "PER ROUND" },
+      "description": "The ability is limited to use once every few rounds (GM decides how many).",
+      "descriptionTranslations": { "en": "The ability is limited to use once every few rounds (GM decides how many)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 67],
+      "result": "PER DAY",
+      "resultTranslations": { "en": "PER DAY" },
+      "description": "The ability is limited to a certain number of times per day (GM decides how much).",
+      "descriptionTranslations": { "en": "The ability is limited to a certain number of times per day (GM decides how much)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 100],
+      "result": "FINITE USES",
+      "resultTranslations": { "en": "FINITE USES" },
+      "description": "The ability is limited by having only a finite number of uses before it must be recharged somehow. For instance, maybe the monster can breathe fire, but only three times before it needs to consume lava rocks to recharge.",
+      "descriptionTranslations": { "en": "The ability is limited by having only a finite number of uses before it must be recharged somehow. For instance, maybe the monster can breathe fire, but only three times before it needs to consume lava rocks to recharge." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

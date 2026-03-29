@@ -1,0 +1,177 @@
+{
+  "id": "magic_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Magic Focus",
+  "displayNameTranslations": {
+    "en": "Magic Focus"
+  },
+  "description": "Determines the role and perception of magic in a fantasy world.",
+  "descriptionTranslations": {
+    "en": "Determines the role and perception of magic in a fantasy world."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "magic",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Common and Everyday: Magic is everywhere in this world and is just a part of daily life for all",
+      "resultTranslations": {
+        "en": "Common and Everyday: Magic is everywhere in this world and is just a part of daily life for all"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Rare and Mysterious: Magic is known, but it is rare and widely misunderstood",
+      "resultTranslations": {
+        "en": "Rare and Mysterious: Magic is known, but it is rare and widely misunderstood"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        35
+      ],
+      "result": "Powerful and Controlled: Magic is powerful in this world, but is strictly controlled in most places through legal and social means. Existing power structures try to keep it in their own hands",
+      "resultTranslations": {
+        "en": "Powerful and Controlled: Magic is powerful in this world, but is strictly controlled in most places through legal and social means. Existing power structures try to keep it in their own hands"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        50
+      ],
+      "result": "Powerful and Elite: Magic is known and powerful, but very few are capable of wielding it",
+      "resultTranslations": {
+        "en": "Powerful and Elite: Magic is known and powerful, but very few are capable of wielding it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "result": "Rare and Disbelieved: Magic exists but it is so rare that most people don't believe in it",
+      "resultTranslations": {
+        "en": "Rare and Disbelieved: Magic exists but it is so rare that most people don't believe in it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        65
+      ],
+      "result": "Magic is Revered: Those who can control and cast magic are viewed with awe by most",
+      "resultTranslations": {
+        "en": "Magic is Revered: Those who can control and cast magic are viewed with awe by most"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "Magic is Feared: Those who can control and cast magic are feared by most, who dread the chaotic and corrupting influence of dark powers (whether that is true or not)",
+      "resultTranslations": {
+        "en": "Magic is Feared: Those who can control and cast magic are feared by most, who dread the chaotic and corrupting influence of dark powers (whether that is true or not)"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Bestowed: Those who can wield magic have had the power bestowed upon them. This may be through birth, hereditary lineage, through a special process, etc.",
+      "resultTranslations": {
+        "en": "Bestowed: Those who can wield magic have had the power bestowed upon them. This may be through birth, hereditary lineage, through a special process, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "result": "Religious: Magic and religion are intertwined, with most believing magical power is gifted from the gods",
+      "resultTranslations": {
+        "en": "Religious: Magic and religion are intertwined, with most believing magical power is gifted from the gods"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        100
+      ],
+      "result": "Adventure Tone",
+      "resultTranslations": {
+        "en": "Adventure Tone"
+      },
+      "description": "Roll one more Keyword from the Adventure Tone Meaning table for a total of three Keywords to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll one more Keyword from the Adventure Tone Meaning table for a total of three Keywords to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["adventure_tone"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

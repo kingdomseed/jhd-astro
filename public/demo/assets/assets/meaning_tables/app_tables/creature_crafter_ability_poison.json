@@ -1,0 +1,111 @@
+{
+  "id": "creature_crafter_ability_poison",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Poison Properties",
+  "displayNameTranslations": { "en": "Poison Properties" },
+  "description": "Determines the properties of the creature's poison.",
+  "descriptionTranslations": { "en": "Determines the properties of the creature's poison." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "poison"],
+  "entries": [
+    {
+      "range": [1, 16],
+      "result": "DAMAGING",
+      "resultTranslations": { "en": "DAMAGING" },
+      "description": "The poison does damage if a resistance roll is failed.",
+      "descriptionTranslations": { "en": "The poison does damage if a resistance roll is failed." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 32],
+      "result": "FATAL",
+      "resultTranslations": { "en": "FATAL" },
+      "description": "The poison is fatal if a resistance roll is failed.",
+      "descriptionTranslations": { "en": "The poison is fatal if a resistance roll is failed." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [33, 48],
+      "result": "IMMEDIATE EFFECT",
+      "resultTranslations": { "en": "IMMEDIATE EFFECT" },
+      "description": "The poison takes effect immediately.",
+      "descriptionTranslations": { "en": "The poison takes effect immediately." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [49, 54],
+      "result": "DELAYED (HOUR)",
+      "resultTranslations": { "en": "DELAYED (HOUR)" },
+      "description": "There is a delayed effect to the poison, taking effect within the hour.",
+      "descriptionTranslations": { "en": "There is a delayed effect to the poison, taking effect within the hour." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [55, 59],
+      "result": "DELAYED (DAY)",
+      "resultTranslations": { "en": "DELAYED (DAY)" },
+      "description": "There is a delayed effect, taking effect within the day.",
+      "descriptionTranslations": { "en": "There is a delayed effect, taking effect within the day." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [60, 64],
+      "result": "DELAYED (WEEK)",
+      "resultTranslations": { "en": "DELAYED (WEEK)" },
+      "description": "There is a delayed effect, taking effect within the week.",
+      "descriptionTranslations": { "en": "There is a delayed effect, taking effect within the week." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [65, 80],
+      "result": "UNUSUAL EFFECT",
+      "resultTranslations": { "en": "UNUSUAL EFFECT" },
+      "description": "The poison has an unusual effect on the target other than damage, such as putting the victim to sleep or causing paralysis. The target likely still gets a resistance roll to avoid the effect.",
+      "descriptionTranslations": { "en": "The poison has an unusual effect on the target other than damage, such as putting the victim to sleep or causing paralysis. The target likely still gets a resistance roll to avoid the effect." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 100],
+      "result": "ROLL TWICE",
+      "resultTranslations": { "en": "ROLL TWICE" },
+      "description": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate.",
+      "descriptionTranslations": { "en": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

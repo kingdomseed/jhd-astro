@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "scene_adjustment",
+    "displayName": "Tabela de Ajuste de Cena",
+    "category": "Scene Adjustments",
+    "isPremium": false,
+    "jsonKey": "entries",
+    "description": "Tabela principal usada para determinar como uma cena se altera quando é necessário um ajuste",
+    "source": "Mythic GME 2e core rulebook"
+  },
+  "entries": [
+    {
+      "range": [1, 1],
+      "result": "Remova Uma Personagem",
+      "description": "Uma personagem sai ou é removida da cena"
+    },
+    {
+      "range": [2, 2],
+      "result": "Adicione Uma Personagem",
+      "description": "Uma nova personagem entra ou é adicionada à cena"
+    },
+    {
+      "range": [3, 3],
+      "result": "Reduza/Remova Uma Atividade",
+      "description": "Uma atividade corrente tem a escala reduzida ou é completamente removida"
+    },
+    {
+      "range": [4, 4],
+      "result": "Aumente Uma Atividade",
+      "description": "Uma atividade contínua tem a escala ou intensidade aumentada"
+    },
+    {
+      "range": [5, 5],
+      "result": "Remova Um Objeto",
+      "description": "Um objeto é removido da cena"
+    },
+    {
+      "range": [6, 6],
+      "result": "Adicione Um Objeto",
+      "description": "Um novo objeto é adicionado à cena"
+    },
+    {
+      "range": [7, 10],
+      "result": "Faça 2 Ajustes",
+      "description": "Role outras duas vezes nesta tabela e aplique ambos os resultados"
+    }
+  ]
+}

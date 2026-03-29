@@ -1,0 +1,240 @@
+{
+  "id": "detail_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "scene-adjustments",
+  "defaultLanguage": "en",
+  "displayName": "Detail Focus",
+  "displayNameTranslations": {
+    "en": "Detail Focus"
+  },
+  "description": "Provides emotional context before rolling on Meaning tables. Lower results are positive for the PC, higher results are negative.",
+  "descriptionTranslations": {
+    "en": "Provides emotional context before rolling on Meaning tables. Lower results are positive for the PC, higher results are negative."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 56",
+  "tags": [
+    "context",
+    "detail",
+    "discovery",
+    "emotion"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "result": "Courage: The detail is something practical that makes the PC feel brave and hopeful",
+      "resultTranslations": {
+        "en": "Courage: The detail is something practical that makes the PC feel brave and hopeful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        10
+      ],
+      "result": "Good: The detail is useful or helpful for the PC",
+      "resultTranslations": {
+        "en": "Good: The detail is useful or helpful for the PC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        15
+      ],
+      "result": "Calm: The detail makes the PC feel safe, even if it's not directly useful",
+      "resultTranslations": {
+        "en": "Calm: The detail makes the PC feel safe, even if it's not directly useful"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Reassured: The detail isn't useful, but it makes the PC feel reassured",
+      "resultTranslations": {
+        "en": "Reassured: The detail isn't useful, but it makes the PC feel reassured"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "result": "PC Focus: The detail has a connection with the PC",
+      "resultTranslations": {
+        "en": "PC Focus: The detail has a connection with the PC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Thread Focus: The detail has a connection with a Thread",
+      "resultTranslations": {
+        "en": "Thread Focus: The detail has a connection with a Thread"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        45
+      ],
+      "result": "Describe",
+      "resultTranslations": {
+        "en": "Describe"
+      },
+      "description": "The detail is mainly descriptive, roll on the Description Meaning tables",
+      "descriptionTranslations": {
+        "en": "The detail is mainly descriptive, roll on the Description Meaning tables"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "description_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        60
+      ],
+      "result": "No Extra Context: This detail has no additional context",
+      "resultTranslations": {
+        "en": "No Extra Context: This detail has no additional context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        75
+      ],
+      "result": "Active",
+      "resultTranslations": {
+        "en": "Active"
+      },
+      "description": "The detail is mainly active, roll on the Action Meaning tables",
+      "descriptionTranslations": {
+        "en": "The detail is mainly active, roll on the Action Meaning tables"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "result": "NPC Focus: The detail has a connection with an NPC",
+      "resultTranslations": {
+        "en": "NPC Focus: The detail has a connection with an NPC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "result": "Wary: The detail makes the PC wary although it does not represent a direct threat",
+      "resultTranslations": {
+        "en": "Wary: The detail makes the PC wary although it does not represent a direct threat"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        90
+      ],
+      "result": "Anxious: The detail makes the PC anxious, a clear sign of trouble",
+      "resultTranslations": {
+        "en": "Anxious: The detail makes the PC anxious, a clear sign of trouble"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        95
+      ],
+      "result": "Bad: The detail is something bad for the PC",
+      "resultTranslations": {
+        "en": "Bad: The detail is something bad for the PC"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        100
+      ],
+      "result": "Fear: The detail is something harmful that makes the PC afraid",
+      "resultTranslations": {
+        "en": "Fear: The detail is something harmful that makes the PC afraid"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,394 @@
+{
+  "id": "event_crafter_fantasy_treasure_major",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Fantasy Treasure: Major",
+  "displayNameTranslations": {
+    "en": "Fantasy Treasure: Major"
+  },
+  "description": "Structured Category for the Fantasy Treasure Event Crafter Situation. Major Treasures won't appear until later as Progress Points accumulate, scaling from nothing to powerful artifacts. From Mythic Magazine #62.",
+  "descriptionTranslations": {
+    "en": "Structured Category for the Fantasy Treasure Event Crafter Situation. Major Treasures won't appear until later as Progress Points accumulate, scaling from nothing to powerful artifacts. From Mythic Magazine #62."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine #62",
+  "tags": [
+    "event-crafter",
+    "fantasy-treasure",
+    "loot",
+    "structured"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Major magic item",
+      "resultTranslations": {
+        "en": "Major magic item"
+      },
+      "description": "A significant magical item. Consider the Context of your adventure when interpreting what it is and what it does.",
+      "descriptionTranslations": {
+        "en": "A significant magical item. Consider the Context of your adventure when interpreting what it is and what it does."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Roll twice",
+      "resultTranslations": {
+        "en": "Roll twice"
+      },
+      "description": "Roll again twice in this Category and use both results. If you get Roll Twice again, ignore it and roll again.",
+      "descriptionTranslations": {
+        "en": "Roll again twice in this Category and use both results. If you get Roll Twice again, ignore it and roll again."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Special",
+      "resultTranslations": {
+        "en": "Special"
+      },
+      "description": "Roll on the Special Elements table.",
+      "descriptionTranslations": {
+        "en": "Roll on the Special Elements table."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "event_crafter_special_elements"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        16
+      ],
+      "result": "Major magic item",
+      "resultTranslations": {
+        "en": "Major magic item"
+      },
+      "description": "A significant magical item. Consider the Context of your adventure when interpreting what it is and what it does.",
+      "descriptionTranslations": {
+        "en": "A significant magical item. Consider the Context of your adventure when interpreting what it is and what it does."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        17
+      ],
+      "result": "Major treasure horde",
+      "resultTranslations": {
+        "en": "Major treasure horde"
+      },
+      "description": "A large stash of major treasure. Roll 3 additional times in this Category and combine all results.",
+      "descriptionTranslations": {
+        "en": "A large stash of major treasure. Roll 3 additional times in this Category and combine all results."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "result": "None",
+      "resultTranslations": {
+        "en": "None"
+      },
+      "description": "No Major Treasure found.",
+      "descriptionTranslations": {
+        "en": "No Major Treasure found."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "result": "Cursed magic item",
+      "resultTranslations": {
+        "en": "Cursed magic item"
+      },
+      "description": "A magic item with a curse. It may seem beneficial at first but has a hidden drawback or malicious effect.",
+      "descriptionTranslations": {
+        "en": "A magic item with a curse. It may seem beneficial at first but has a hidden drawback or malicious effect."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "result": "Powerful magic artifact",
+      "resultTranslations": {
+        "en": "Powerful magic artifact"
+      },
+      "description": "Unique (U). A powerful and unique magical artifact. This is a one-of-a-kind item of great significance.",
+      "descriptionTranslations": {
+        "en": "Unique (U). A powerful and unique magical artifact. This is a one-of-a-kind item of great significance."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 20,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

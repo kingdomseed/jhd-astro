@@ -1,0 +1,111 @@
+{
+  "id": "creature_crafter_ability_resist_damage",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Resist Damage Types",
+  "displayNameTranslations": { "en": "Resist Damage Types" },
+  "description": "Determines what types of damage the creature can resist.",
+  "descriptionTranslations": { "en": "Determines what types of damage the creature can resist." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "resist-damage"],
+  "entries": [
+    {
+      "range": [1, 16],
+      "result": "ALL FORMS",
+      "resultTranslations": { "en": "ALL FORMS" },
+      "description": "Resistant to all forms of damage.",
+      "descriptionTranslations": { "en": "Resistant to all forms of damage." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 28],
+      "result": "PHYSICAL ONLY",
+      "resultTranslations": { "en": "PHYSICAL ONLY" },
+      "description": "Only physical damage, not mental or psychic damage.",
+      "descriptionTranslations": { "en": "Only physical damage, not mental or psychic damage." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [29, 40],
+      "result": "PHYSICAL (NOT ENERGY)",
+      "resultTranslations": { "en": "PHYSICAL (NOT ENERGY)" },
+      "description": "Only physical damage, except for energy damage (fire, lightning, etc.).",
+      "descriptionTranslations": { "en": "Only physical damage, except for energy damage (fire, lightning, etc.)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 52],
+      "result": "PIERCING ONLY",
+      "resultTranslations": { "en": "PIERCING ONLY" },
+      "description": "Only resistant to piercing attacks (arrows, bullets, etc.).",
+      "descriptionTranslations": { "en": "Only resistant to piercing attacks (arrows, bullets, etc.)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [53, 64],
+      "result": "BLUNT ONLY",
+      "resultTranslations": { "en": "BLUNT ONLY" },
+      "description": "Only resistant to blunt attacks (clubs, fists, etc.).",
+      "descriptionTranslations": { "en": "Only resistant to blunt attacks (clubs, fists, etc.)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [65, 76],
+      "result": "SPECIAL ATTACKS",
+      "resultTranslations": { "en": "SPECIAL ATTACKS" },
+      "description": "Only resistant to a special form of attack such as psychic abilities or magic.",
+      "descriptionTranslations": { "en": "Only resistant to a special form of attack such as psychic abilities or magic." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [77, 88],
+      "result": "ALL EXCEPT SPECIAL",
+      "resultTranslations": { "en": "ALL EXCEPT SPECIAL" },
+      "description": "Resistant to all damage, except a certain type of special damage (such as magical attacks, or a certain substance, like silver weapons).",
+      "descriptionTranslations": { "en": "Resistant to all damage, except a certain type of special damage (such as magical attacks, or a certain substance, like silver weapons)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [89, 100],
+      "result": "ROLL TWICE",
+      "resultTranslations": { "en": "ROLL TWICE" },
+      "description": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate.",
+      "descriptionTranslations": { "en": "Roll twice on this table. If you get a duplicate result, ignore it and roll again. If you get a contradictory result, take the two results and use the one that seems most appropriate." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

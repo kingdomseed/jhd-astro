@@ -1,0 +1,313 @@
+{
+  "id": "spell_effects_life",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Effects: Life",
+  "displayNameTranslations": {
+    "en": "Spell Effects: Life"
+  },
+  "description": "Determines the specific effect for Life spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results.",
+  "descriptionTranslations": {
+    "en": "Determines the specific effect for Life spell types. Roll 1d10, 2d10, or 3d10 based on Powerful results."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "healing"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "result": "Detect the proximity of living things",
+      "resultTranslations": {
+        "en": "Detect the proximity of living things"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "result": "Conceal the signature of life from things that can detect life",
+      "resultTranslations": {
+        "en": "Conceal the signature of life from things that can detect life"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "result": "Enhance a living thing with life force, making them temporarily stronger, faster, etc.",
+      "resultTranslations": {
+        "en": "Enhance a living thing with life force, making them temporarily stronger, faster, etc."
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "result": "Heal light wounds and illnesses like cuts and the common cold",
+      "resultTranslations": {
+        "en": "Heal light wounds and illnesses like cuts and the common cold"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "result": "Give life to plants and make them instantly grow and thrive",
+      "resultTranslations": {
+        "en": "Give life to plants and make them instantly grow and thrive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "result": "Sense what ails a living thing",
+      "resultTranslations": {
+        "en": "Sense what ails a living thing"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "result": "Hurt the undead by projecting radiant life force",
+      "resultTranslations": {
+        "en": "Hurt the undead by projecting radiant life force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "result": "Heal serious wounds and diseases like broken bones and pneumonia",
+      "resultTranslations": {
+        "en": "Heal serious wounds and diseases like broken bones and pneumonia"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "result": "Choose the most dramatic effect from 1-8 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-8 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        11
+      ],
+      "result": "Damage the living by restricting their life force",
+      "resultTranslations": {
+        "en": "Damage the living by restricting their life force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "result": "Destroy lesser undead such as zombies by overwhelming them with life force",
+      "resultTranslations": {
+        "en": "Destroy lesser undead such as zombies by overwhelming them with life force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        13,
+        13
+      ],
+      "result": "Heal unhealable wounds and lethal diseases like regrowing a lost limb or removing cancer",
+      "resultTranslations": {
+        "en": "Heal unhealable wounds and lethal diseases like regrowing a lost limb or removing cancer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        14,
+        14
+      ],
+      "result": "Suspend the life force of a living target to place them in a type of unliving stasis",
+      "resultTranslations": {
+        "en": "Suspend the life force of a living target to place them in a type of unliving stasis"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        15,
+        15
+      ],
+      "result": "Transfer the life force and soul of a living target into another vessel",
+      "resultTranslations": {
+        "en": "Transfer the life force and soul of a living target into another vessel"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Choose the most dramatic effect from 1-15 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-15 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        21
+      ],
+      "result": "Maintain the life force in a target that should die, keeping them alive",
+      "resultTranslations": {
+        "en": "Maintain the life force in a target that should die, keeping them alive"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        22,
+        22
+      ],
+      "result": "Raise the dead",
+      "resultTranslations": {
+        "en": "Raise the dead"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        23,
+        23
+      ],
+      "result": "Imbue a non-living thing with life and sentience, such as a book or sword",
+      "resultTranslations": {
+        "en": "Imbue a non-living thing with life and sentience, such as a book or sword"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        24,
+        24
+      ],
+      "result": "Acquire immortality through an unlimited life force",
+      "resultTranslations": {
+        "en": "Acquire immortality through an unlimited life force"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        30
+      ],
+      "result": "Choose the most dramatic effect from 1-24 for this context",
+      "resultTranslations": {
+        "en": "Choose the most dramatic effect from 1-24 for this context"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 30,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

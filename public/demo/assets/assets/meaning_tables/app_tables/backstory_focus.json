@@ -1,0 +1,113 @@
+{
+  "id": "backstory_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Backstory Focus",
+  "displayNameTranslations": {
+    "en": "Backstory Focus"
+  },
+  "description": "Determines the focus of a backstory event when creating a character's history. Roll on the Action Meaning tables to interpret each result.",
+  "descriptionTranslations": {
+    "en": "Determines the focus of a backstory event when creating a character's history. Roll on the Action Meaning tables to interpret each result."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Variations 1",
+  "tags": [
+    "character",
+    "backstory",
+    "identity",
+    "backstory-crafter",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        44
+      ],
+      "result": "New PC Character",
+      "resultTranslations": {
+        "en": "New PC Character"
+      },
+      "description": "A new character is introduced in the PC's backstory. Roll on Action Meaning tables for context.",
+      "descriptionTranslations": {
+        "en": "A new character is introduced in the PC's backstory. Roll on Action Meaning tables for context."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        68
+      ],
+      "result": "New PC Thread",
+      "resultTranslations": {
+        "en": "New PC Thread"
+      },
+      "description": "A new plot thread begins in the PC's backstory. Roll on Action Meaning tables for context.",
+      "descriptionTranslations": {
+        "en": "A new plot thread begins in the PC's backstory. Roll on Action Meaning tables for context."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        84
+      ],
+      "result": "PC Negative",
+      "resultTranslations": {
+        "en": "PC Negative"
+      },
+      "description": "Something negative happened to the PC. Roll on Action Meaning tables for context.",
+      "descriptionTranslations": {
+        "en": "Something negative happened to the PC. Roll on Action Meaning tables for context."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        100
+      ],
+      "result": "PC Positive",
+      "resultTranslations": {
+        "en": "PC Positive"
+      },
+      "description": "Something positive happened to the PC. Roll on Action Meaning tables for context.",
+      "descriptionTranslations": {
+        "en": "Something positive happened to the PC. Roll on Action Meaning tables for context."
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

@@ -1,0 +1,924 @@
+{
+  "id": "location_crafter_action_1",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "location-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Action 1",
+  "displayNameTranslations": { "en": "Action 1" },
+  "description": "Location Crafter Complex Question table (Action 1).",
+  "descriptionTranslations": { "en": "Location Crafter Complex Question table (Action 1)." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Location Crafter",
+  "tags": ["location-crafter", "complex-question", "actions"],
+  "entries": [
+    {
+      "range": [1, 1],
+      "result": "Attainment",
+      "resultTranslations": { "en": "Attainment" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [2, 2],
+      "result": "Starting",
+      "resultTranslations": { "en": "Starting" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [3, 3],
+      "result": "Neglect",
+      "resultTranslations": { "en": "Neglect" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [4, 4],
+      "result": "Fight",
+      "resultTranslations": { "en": "Fight" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [5, 5],
+      "result": "Recruit",
+      "resultTranslations": { "en": "Recruit" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [6, 6],
+      "result": "Triumph",
+      "resultTranslations": { "en": "Triumph" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [7, 7],
+      "result": "Violate",
+      "resultTranslations": { "en": "Violate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [8, 8],
+      "result": "Oppose",
+      "resultTranslations": { "en": "Oppose" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [9, 9],
+      "result": "Malice",
+      "resultTranslations": { "en": "Malice" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [10, 10],
+      "result": "Communicate",
+      "resultTranslations": { "en": "Communicate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [11, 11],
+      "result": "Persecute",
+      "resultTranslations": { "en": "Persecute" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [12, 12],
+      "result": "Increase",
+      "resultTranslations": { "en": "Increase" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [13, 13],
+      "result": "Decrease",
+      "resultTranslations": { "en": "Decrease" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [14, 14],
+      "result": "Abandon",
+      "resultTranslations": { "en": "Abandon" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [15, 15],
+      "result": "Gratify",
+      "resultTranslations": { "en": "Gratify" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [16, 16],
+      "result": "Inquire",
+      "resultTranslations": { "en": "Inquire" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [17, 17],
+      "result": "Antagonize",
+      "resultTranslations": { "en": "Antagonize" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [18, 18],
+      "result": "Move",
+      "resultTranslations": { "en": "Move" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [19, 19],
+      "result": "Waste",
+      "resultTranslations": { "en": "Waste" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [20, 20],
+      "result": "Truce",
+      "resultTranslations": { "en": "Truce" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [21, 21],
+      "result": "Release",
+      "resultTranslations": { "en": "Release" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [22, 22],
+      "result": "Befriend",
+      "resultTranslations": { "en": "Befriend" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [23, 23],
+      "result": "Judge",
+      "resultTranslations": { "en": "Judge" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [24, 24],
+      "result": "Desert",
+      "resultTranslations": { "en": "Desert" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [25, 25],
+      "result": "Dominate",
+      "resultTranslations": { "en": "Dominate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [26, 26],
+      "result": "Procrastinate",
+      "resultTranslations": { "en": "Procrastinate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [27, 27],
+      "result": "Praise",
+      "resultTranslations": { "en": "Praise" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [28, 28],
+      "result": "Separate",
+      "resultTranslations": { "en": "Separate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [29, 29],
+      "result": "Take",
+      "resultTranslations": { "en": "Take" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [30, 30],
+      "result": "Break",
+      "resultTranslations": { "en": "Break" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [31, 31],
+      "result": "Heal",
+      "resultTranslations": { "en": "Heal" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [32, 32],
+      "result": "Delay",
+      "resultTranslations": { "en": "Delay" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [33, 33],
+      "result": "Stop",
+      "resultTranslations": { "en": "Stop" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [34, 34],
+      "result": "Lie",
+      "resultTranslations": { "en": "Lie" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [35, 35],
+      "result": "Return",
+      "resultTranslations": { "en": "Return" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [36, 36],
+      "result": "Imitate",
+      "resultTranslations": { "en": "Imitate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [37, 37],
+      "result": "Struggle",
+      "resultTranslations": { "en": "Struggle" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [38, 38],
+      "result": "Inform",
+      "resultTranslations": { "en": "Inform" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [39, 39],
+      "result": "Bestow",
+      "resultTranslations": { "en": "Bestow" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [40, 40],
+      "result": "Postpone",
+      "resultTranslations": { "en": "Postpone" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [41, 41],
+      "result": "Expose",
+      "resultTranslations": { "en": "Expose" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [42, 42],
+      "result": "Haggle",
+      "resultTranslations": { "en": "Haggle" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [43, 43],
+      "result": "Imprison",
+      "resultTranslations": { "en": "Imprison" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [44, 44],
+      "result": "Release",
+      "resultTranslations": { "en": "Release" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [45, 45],
+      "result": "Celebrate",
+      "resultTranslations": { "en": "Celebrate" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [46, 46],
+      "result": "Develop",
+      "resultTranslations": { "en": "Develop" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [47, 47],
+      "result": "Travel",
+      "resultTranslations": { "en": "Travel" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [48, 48],
+      "result": "Block",
+      "resultTranslations": { "en": "Block" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [49, 49],
+      "result": "Harm",
+      "resultTranslations": { "en": "Harm" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [50, 50],
+      "result": "Debase",
+      "resultTranslations": { "en": "Debase" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [51, 51],
+      "result": "Overindulge",
+      "resultTranslations": { "en": "Overindulge" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [52, 52],
+      "result": "Adjourn",
+      "resultTranslations": { "en": "Adjourn" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [53, 53],
+      "result": "Adversity",
+      "resultTranslations": { "en": "Adversity" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [54, 54],
+      "result": "Kill",
+      "resultTranslations": { "en": "Kill" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [55, 55],
+      "result": "Disrupt",
+      "resultTranslations": { "en": "Disrupt" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [56, 56],
+      "result": "Usurp",
+      "resultTranslations": { "en": "Usurp" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [57, 57],
+      "result": "Create",
+      "resultTranslations": { "en": "Create" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [58, 58],
+      "result": "Betray",
+      "resultTranslations": { "en": "Betray" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [59, 59],
+      "result": "Agree",
+      "resultTranslations": { "en": "Agree" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [60, 60],
+      "result": "Abuse",
+      "resultTranslations": { "en": "Abuse" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [61, 61],
+      "result": "Oppress",
+      "resultTranslations": { "en": "Oppress" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [62, 62],
+      "result": "Inspect",
+      "resultTranslations": { "en": "Inspect" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [63, 63],
+      "result": "Ambush",
+      "resultTranslations": { "en": "Ambush" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [64, 64],
+      "result": "Spy",
+      "resultTranslations": { "en": "Spy" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [65, 65],
+      "result": "Attach",
+      "resultTranslations": { "en": "Attach" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [66, 66],
+      "result": "Carry",
+      "resultTranslations": { "en": "Carry" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [67, 67],
+      "result": "Open",
+      "resultTranslations": { "en": "Open" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 68],
+      "result": "Carelessness",
+      "resultTranslations": { "en": "Carelessness" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [69, 69],
+      "result": "Ruin",
+      "resultTranslations": { "en": "Ruin" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [70, 70],
+      "result": "Extravagance",
+      "resultTranslations": { "en": "Extravagance" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [71, 71],
+      "result": "Trick",
+      "resultTranslations": { "en": "Trick" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [72, 72],
+      "result": "Arrive",
+      "resultTranslations": { "en": "Arrive" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [73, 73],
+      "result": "Propose",
+      "resultTranslations": { "en": "Propose" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [74, 74],
+      "result": "Divide",
+      "resultTranslations": { "en": "Divide" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [75, 75],
+      "result": "Refuse",
+      "resultTranslations": { "en": "Refuse" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [76, 76],
+      "result": "Mistrust",
+      "resultTranslations": { "en": "Mistrust" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [77, 77],
+      "result": "Deceive",
+      "resultTranslations": { "en": "Deceive" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [78, 78],
+      "result": "Cruelty",
+      "resultTranslations": { "en": "Cruelty" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [79, 79],
+      "result": "Intolerance",
+      "resultTranslations": { "en": "Intolerance" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [80, 80],
+      "result": "Trust",
+      "resultTranslations": { "en": "Trust" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [81, 81],
+      "result": "Excitement",
+      "resultTranslations": { "en": "Excitement" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [82, 82],
+      "result": "Activity",
+      "resultTranslations": { "en": "Activity" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [83, 83],
+      "result": "Assist",
+      "resultTranslations": { "en": "Assist" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [84, 84],
+      "result": "Care",
+      "resultTranslations": { "en": "Care" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [85, 85],
+      "result": "Negligence",
+      "resultTranslations": { "en": "Negligence" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [86, 86],
+      "result": "Passion",
+      "resultTranslations": { "en": "Passion" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [87, 87],
+      "result": "Work",
+      "resultTranslations": { "en": "Work" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [88, 88],
+      "result": "Control",
+      "resultTranslations": { "en": "Control" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [89, 89],
+      "result": "Attract",
+      "resultTranslations": { "en": "Attract" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [90, 90],
+      "result": "Failure",
+      "resultTranslations": { "en": "Failure" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [91, 91],
+      "result": "Pursue",
+      "resultTranslations": { "en": "Pursue" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [92, 92],
+      "result": "Vengeance",
+      "resultTranslations": { "en": "Vengeance" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [93, 93],
+      "result": "Proceedings",
+      "resultTranslations": { "en": "Proceedings" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [94, 94],
+      "result": "Dispute",
+      "resultTranslations": { "en": "Dispute" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [95, 95],
+      "result": "Punish",
+      "resultTranslations": { "en": "Punish" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [96, 96],
+      "result": "Guide",
+      "resultTranslations": { "en": "Guide" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [97, 97],
+      "result": "Transform",
+      "resultTranslations": { "en": "Transform" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [98, 98],
+      "result": "Overthrow",
+      "resultTranslations": { "en": "Overthrow" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [99, 99],
+      "result": "Oppress",
+      "resultTranslations": { "en": "Oppress" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [100, 100],
+      "result": "Change",
+      "resultTranslations": { "en": "Change" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}
+

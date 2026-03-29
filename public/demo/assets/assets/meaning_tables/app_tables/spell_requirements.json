@@ -1,0 +1,229 @@
+{
+  "id": "spell_requirements",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "supernatural-magic",
+  "defaultLanguage": "en",
+  "displayName": "Spell Requirements",
+  "displayNameTranslations": {
+    "en": "Spell Requirements"
+  },
+  "description": "Determines what is required to cast a spell. Roll d10 for number of requirements, then d100 for each requirement type.",
+  "descriptionTranslations": {
+    "en": "Determines what is required to cast a spell. Roll d10 for number of requirements, then d100 for each requirement type."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "spell-crafter",
+    "magic",
+    "spells",
+    "fantasy",
+    "requirements"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        16
+      ],
+      "result": "Verbal: Words or sounds must be uttered to cast the spell",
+      "resultTranslations": {
+        "en": "Verbal: Words or sounds must be uttered to cast the spell"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        17,
+        28
+      ],
+      "result": "Motion: The spell is cast through physical motion, such as hand waving or dance",
+      "resultTranslations": {
+        "en": "Motion: The spell is cast through physical motion, such as hand waving or dance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        40
+      ],
+      "result": "Common Materials: Easily found materials, like dirt or water, are required",
+      "resultTranslations": {
+        "en": "Common Materials: Easily found materials, like dirt or water, are required"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        52
+      ],
+      "result": "Less Common Materials: Materials that will need to be sought for are required, such as feathers or quartz. They are still easy to obtain",
+      "resultTranslations": {
+        "en": "Less Common Materials: Materials that will need to be sought for are required, such as feathers or quartz. They are still easy to obtain"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        53,
+        58
+      ],
+      "result": "Rare Materials: Rare or unusual materials are required that are difficult to obtain, such as a valuable gem or a sword once wielded by a saint",
+      "resultTranslations": {
+        "en": "Rare Materials: Rare or unusual materials are required that are difficult to obtain, such as a valuable gem or a sword once wielded by a saint"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        62
+      ],
+      "result": "Unique Materials: A unique, one of a kind item is required to cast the spell. Without it the spell won't work",
+      "resultTranslations": {
+        "en": "Unique Materials: A unique, one of a kind item is required to cast the spell. Without it the spell won't work"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        63,
+        70
+      ],
+      "result": "Focus: The spell requires a focusing element, such as a holy symbol or wand. The same focus may be used for other spells by this caster as well",
+      "resultTranslations": {
+        "en": "Focus: The spell requires a focusing element, such as a holy symbol or wand. The same focus may be used for other spells by this caster as well"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        74
+      ],
+      "result": "Ritual: The spell takes a long time to cast and requires a ritual. This needs a dedicated area that is prepared, and the ritual cannot be interrupted",
+      "resultTranslations": {
+        "en": "Ritual: The spell takes a long time to cast and requires a ritual. This needs a dedicated area that is prepared, and the ritual cannot be interrupted"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        75,
+        78
+      ],
+      "result": "Runes: Designs or shapes must be drawn to cast this spell, such as chalking a circle on the floor or writing mathematical equations",
+      "resultTranslations": {
+        "en": "Runes: Designs or shapes must be drawn to cast this spell, such as chalking a circle on the floor or writing mathematical equations"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        79,
+        82
+      ],
+      "result": "Presence: The spell must be cast in the presence of something specific, such as under the light of the moon or near someone who is in love",
+      "resultTranslations": {
+        "en": "Presence: The spell must be cast in the presence of something specific, such as under the light of the moon or near someone who is in love"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        83,
+        86
+      ],
+      "result": "Sacrifice: The spell requires a sacrifice of some kind, commensurate with the power of the spell. This can be anything that can be construed as a cost, such as cutting one's hand or destroying a valuable object",
+      "resultTranslations": {
+        "en": "Sacrifice: The spell requires a sacrifice of some kind, commensurate with the power of the spell. This can be anything that can be construed as a cost, such as cutting one's hand or destroying a valuable object"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        94
+      ],
+      "result": "Time: The spell takes longer to cast than most spells",
+      "resultTranslations": {
+        "en": "Time: The spell takes longer to cast than most spells"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        97
+      ],
+      "result": "Laboratory: The spell requires careful and precise ingredients that must be fashioned in a prepared lab",
+      "resultTranslations": {
+        "en": "Laboratory: The spell requires careful and precise ingredients that must be fashioned in a prepared lab"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        98,
+        100
+      ],
+      "result": "Strange: Think of the strangest, most dramatic requirement you can for this spell",
+      "resultTranslations": {
+        "en": "Strange: Think of the strangest, most dramatic requirement you can for this spell"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

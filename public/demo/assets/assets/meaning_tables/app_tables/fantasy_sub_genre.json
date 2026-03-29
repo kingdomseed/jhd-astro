@@ -1,0 +1,177 @@
+{
+  "id": "fantasy_sub_genre",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Fantasy Sub-Genre Focus",
+  "displayNameTranslations": {
+    "en": "Fantasy Sub-Genre Focus"
+  },
+  "description": "Determines the sub-genre style for a fantasy world setting.",
+  "descriptionTranslations": {
+    "en": "Determines the sub-genre style for a fantasy world setting."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 60",
+  "tags": [
+    "world-crafter",
+    "fantasy",
+    "world-building",
+    "genre",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "High Fantasy: This is a fantasy world where fantasy elements are common. There is plenty of magic, monsters, myths, quests, kings and queens, nations and wars. Epic stuff",
+      "resultTranslations": {
+        "en": "High Fantasy: This is a fantasy world where fantasy elements are common. There is plenty of magic, monsters, myths, quests, kings and queens, nations and wars. Epic stuff"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "Dark Fantasy: This is fantasy combined with horror. Stories told here should often tend toward the frightening and threatening",
+      "resultTranslations": {
+        "en": "Dark Fantasy: This is fantasy combined with horror. Stories told here should often tend toward the frightening and threatening"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        35
+      ],
+      "result": "Sword & Sorcery: This is a variety of High Fantasy with an emphasis on thrilling battles, danger, adventure, and heroic individual achievement",
+      "resultTranslations": {
+        "en": "Sword & Sorcery: This is a variety of High Fantasy with an emphasis on thrilling battles, danger, adventure, and heroic individual achievement"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "Historical Fantasy: This is fantasy couched in an era of the real world of the past, or at least adjacent to it. It may actually be the historical real world, but with magic or other fantasy elements",
+      "resultTranslations": {
+        "en": "Historical Fantasy: This is fantasy couched in an era of the real world of the past, or at least adjacent to it. It may actually be the historical real world, but with magic or other fantasy elements"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        45
+      ],
+      "result": "Modern: It's our current, contemporary world, or even one in the future, with fantasy elements combined with it",
+      "resultTranslations": {
+        "en": "Modern: It's our current, contemporary world, or even one in the future, with fantasy elements combined with it"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        55
+      ],
+      "result": "Grimdark: These are dystopian and dark fantasy settings with plenty of violence and ambiguous morality",
+      "resultTranslations": {
+        "en": "Grimdark: These are dystopian and dark fantasy settings with plenty of violence and ambiguous morality"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        70
+      ],
+      "result": "Low Fantasy: These fantasy worlds favor realism with just a touch of fantasy. Magic and monsters tend to be rare but of great consequence",
+      "resultTranslations": {
+        "en": "Low Fantasy: These fantasy worlds favor realism with just a touch of fantasy. Magic and monsters tend to be rare but of great consequence"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "result": "Steampunk: This is similar to Modern, but set in a Victorian era style world where clockwork technology combines with magic",
+      "resultTranslations": {
+        "en": "Steampunk: This is similar to Modern, but set in a Victorian era style world where clockwork technology combines with magic"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "result": "Fairy-Tale: This fantasy world is based on an actual fairy-tale or its fantasy is fairy-tale-like, relying on folklore and mythology",
+      "resultTranslations": {
+        "en": "Fairy-Tale: This fantasy world is based on an actual fairy-tale or its fantasy is fairy-tale-like, relying on folklore and mythology"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled to make your interpretation"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

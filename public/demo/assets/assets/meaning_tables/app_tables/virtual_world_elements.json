@@ -1,0 +1,145 @@
+{
+  "id": "virtual_world_elements",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Virtual World Elements",
+  "displayNameTranslations": {
+    "en": "Virtual World Elements"
+  },
+  "description": "Elements for exploring digital networks and virtual worlds. Use for cyberpunk dungeon crawls through computer systems.",
+  "descriptionTranslations": {
+    "en": "Elements for exploring digital networks and virtual worlds. Use for cyberpunk dungeon crawls through computer systems."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "cyber-dystopia",
+    "cyberpunk",
+    "sci-fi",
+    "digital",
+    "network"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "result": "Abstract: The virtual world is abstracted into geometric shapes. All digital elements are represented as abstract forms - a vault may appear as a giant neon square wall",
+      "resultTranslations": {
+        "en": "Abstract: The virtual world is abstracted into geometric shapes. All digital elements are represented as abstract forms - a vault may appear as a giant neon square wall"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        28
+      ],
+      "result": "Realistic: The virtual world seems like a real world. All digital elements are represented in the context of simulated reality - ICE countermeasures may look like police officers",
+      "resultTranslations": {
+        "en": "Realistic: The virtual world seems like a real world. All digital elements are represented in the context of simulated reality - ICE countermeasures may look like police officers"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        29,
+        48
+      ],
+      "result": "Streamway: A conduit in the virtual world, a path along which information flows. Allows you to reach other places, but also where information on the move can be intercepted",
+      "resultTranslations": {
+        "en": "Streamway: A conduit in the virtual world, a path along which information flows. Allows you to reach other places, but also where information on the move can be intercepted"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        60
+      ],
+      "result": "Vault: A secured area of the network where sensitive information or data is stored. Tough to enter without authorization and attempting to do so is likely to trigger countermeasures",
+      "resultTranslations": {
+        "en": "Vault: A secured area of the network where sensitive information or data is stored. Tough to enter without authorization and attempting to do so is likely to trigger countermeasures"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        64
+      ],
+      "result": "AI: You have attracted the attention of an administrative AI that manages this network. They do not usually take kindly to intruders, although they may listen to a good argument",
+      "resultTranslations": {
+        "en": "AI: You have attracted the attention of an administrative AI that manages this network. They do not usually take kindly to intruders, although they may listen to a good argument"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        72
+      ],
+      "result": "Hunter/Killer: A subroutine of Black ICE designed to seek out and destroy intruders in the net. Once they lock on to an intruder they are relentless until the intrusion is over",
+      "resultTranslations": {
+        "en": "Hunter/Killer: A subroutine of Black ICE designed to seek out and destroy intruders in the net. Once they lock on to an intruder they are relentless until the intrusion is over"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        73,
+        84
+      ],
+      "result": "ICE: Intrusion Countermeasure Electronics are implanted defenses to trip up, expel, or kill net jackers. Sometimes disguised as enticing Vaults, sometimes triggered by presence in a Streamway",
+      "resultTranslations": {
+        "en": "ICE: Intrusion Countermeasure Electronics are implanted defenses to trip up, expel, or kill net jackers. Sometimes disguised as enticing Vaults, sometimes triggered by presence in a Streamway"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        100
+      ],
+      "result": "Access Point: A place in the digital world that connects with real world objects - cameras, vehicles, doors, military hardware. May allow the Net Jacker to control something in the real world",
+      "resultTranslations": {
+        "en": "Access Point: A place in the digital world that connects with real world objects - cameras, vehicles, doors, military hardware. May allow the Net Jacker to control something in the real world"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

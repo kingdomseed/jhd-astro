@@ -1,0 +1,61 @@
+{
+  "id": "adventure_crafter_plot_point_theme",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Plot Point Theme",
+  "displayNameTranslations": {
+    "en": "Plot Point Theme"
+  },
+  "description": "",
+  "descriptionTranslations": { "en": "" },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Adventure Crafter",
+  "tags": ["adventure-crafter", "themes", "plot-points"],
+  "entries": [
+    {
+      "range": [1, 4],
+      "result": "FIRST PRIORITY - 1",
+      "resultTranslations": { "en": "FIRST PRIORITY - 1" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [5, 7],
+      "result": "SECOND PRIORITY - 2",
+      "resultTranslations": { "en": "SECOND PRIORITY - 2" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [8, 9],
+      "result": "THIRD PRIORITY - 3",
+      "resultTranslations": { "en": "THIRD PRIORITY - 3" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [10, 10],
+      "result": "FOURTH/FIFTH PRIORITY - 4/5",
+      "resultTranslations": { "en": "FOURTH/FIFTH PRIORITY - 4/5" },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 10,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

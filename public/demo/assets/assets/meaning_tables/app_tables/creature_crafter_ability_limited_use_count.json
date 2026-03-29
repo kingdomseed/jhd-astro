@@ -1,0 +1,56 @@
+{
+  "id": "creature_crafter_ability_limited_use_count",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "creature-crafter",
+  "defaultLanguage": "en",
+  "displayName": "Limited Use: Abilities Affected",
+  "displayNameTranslations": { "en": "Limited Use: Abilities Affected" },
+  "description": "Determines how many of the creature's abilities are limited in use.",
+  "descriptionTranslations": { "en": "Determines how many of the creature's abilities are limited in use." },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "The Creature Crafter",
+  "tags": ["creature-crafter", "abilities", "limited-use"],
+  "entries": [
+    {
+      "range": [1, 34],
+      "result": "ONE ABILITY",
+      "resultTranslations": { "en": "ONE ABILITY" },
+      "description": "Only one ability is limited.",
+      "descriptionTranslations": { "en": "Only one ability is limited." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [35, 67],
+      "result": "SOME ABILITIES",
+      "resultTranslations": { "en": "SOME ABILITIES" },
+      "description": "Some of the creature's abilities are limited (more than 1, but not all, if possible).",
+      "descriptionTranslations": { "en": "Some of the creature's abilities are limited (more than 1, but not all, if possible)." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [68, 100],
+      "result": "ALL ABILITIES",
+      "resultTranslations": { "en": "ALL ABILITIES" },
+      "description": "All of the creature's special abilities are limited.",
+      "descriptionTranslations": { "en": "All of the creature's special abilities are limited." },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

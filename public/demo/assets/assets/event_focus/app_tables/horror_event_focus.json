@@ -1,0 +1,241 @@
+{
+  "id": "horror_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Horror Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Horror Event Focus Table",
+    "pt": "Tabela de Foco de Evento de Horror"
+  },
+  "description": "A horror-themed event focus table. MM Compilation 4.",
+  "descriptionTranslations": {
+    "en": "A horror-themed event focus table. MM Compilation 4.",
+    "pt": "Uma tabela de foco de evento com temática de horror. Mythic Magazine Compilado 4."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 4",
+  "tags": [
+    "event-focus",
+    "horror",
+    "thriller",
+    "suspense"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        30
+      ],
+      "result": "SHIVER!",
+      "resultTranslations": {
+        "en": "SHIVER!",
+        "pt": "TREMA!"
+      },
+      "tags": [],
+      "data": {
+        "isSpecialEvent": true
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        34
+      ],
+      "result": "REMOTE EVENT",
+      "resultTranslations": {
+        "en": "REMOTE EVENT",
+        "pt": "EVENTO REMOTO"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        35,
+        38
+      ],
+      "result": "AMBIGUOUS EVENT",
+      "resultTranslations": {
+        "en": "AMBIGUOUS EVENT",
+        "pt": "EVENTO AMBÍGUO"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        39,
+        44
+      ],
+      "result": "NEW NPC",
+      "resultTranslations": {
+        "en": "NEW NPC",
+        "pt": "NOVA PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        45,
+        58
+      ],
+      "result": "NPC ACTION",
+      "resultTranslations": {
+        "en": "NPC ACTION",
+        "pt": "AÇÃO DE PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        59,
+        66
+      ],
+      "result": "NPC NEGATIVE",
+      "resultTranslations": {
+        "en": "NPC NEGATIVE",
+        "pt": "NEGATIVO PARA PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        67,
+        71
+      ],
+      "result": "NPC POSITIVE",
+      "resultTranslations": {
+        "en": "NPC POSITIVE",
+        "pt": "POSITIVO PARA PNJ"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        72,
+        79
+      ],
+      "result": "MOVE TOWARD A THREAD",
+      "resultTranslations": {
+        "en": "MOVE TOWARD A THREAD",
+        "pt": "AVANÇAR A TRAMA"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        80,
+        84
+      ],
+      "result": "MOVE AWAY FROM A THREAD",
+      "resultTranslations": {
+        "en": "MOVE AWAY FROM A THREAD",
+        "pt": "RECUAR A TRAMA"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        85,
+        86
+      ],
+      "result": "CLOSE A THREAD",
+      "resultTranslations": {
+        "en": "CLOSE A THREAD",
+        "pt": "ENCERRAR A TRAMA"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        94
+      ],
+      "result": "PC NEGATIVE",
+      "resultTranslations": {
+        "en": "PC NEGATIVE",
+        "pt": "NEGATIVO PARA PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        95,
+        100
+      ],
+      "result": "PC POSITIVE",
+      "resultTranslations": {
+        "en": "PC POSITIVE",
+        "pt": "POSITIVO PARA PJ"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

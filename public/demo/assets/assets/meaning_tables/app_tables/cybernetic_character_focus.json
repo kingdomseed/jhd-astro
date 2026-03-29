@@ -1,0 +1,159 @@
+{
+  "id": "cybernetic_character_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "character-identity",
+  "defaultLanguage": "en",
+  "displayName": "Cybernetic Character Focus",
+  "displayNameTranslations": {
+    "en": "Cybernetic Character Focus"
+  },
+  "description": "Determines the focus of a cybernetically enhanced character's augmentations. Part of the Mythic Cyber Dystopia system.",
+  "descriptionTranslations": {
+    "en": "Determines the focus of a cybernetically enhanced character's augmentations. Part of the Mythic Cyber Dystopia system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "cyber-dystopia",
+    "cyberpunk",
+    "characters",
+    "focus",
+    "sci-fi"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        8
+      ],
+      "result": "Covert Cyberware: The presence of bio enhancements is not immediately obvious. Everything is under the skin",
+      "resultTranslations": {
+        "en": "Covert Cyberware: The presence of bio enhancements is not immediately obvious. Everything is under the skin"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        9,
+        24
+      ],
+      "result": "Obvious Cyberware: The Character is very clearly and heavily augmented, with visible parts of their body replaced or enhanced with cyberware",
+      "resultTranslations": {
+        "en": "Obvious Cyberware: The Character is very clearly and heavily augmented, with visible parts of their body replaced or enhanced with cyberware"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        25,
+        36
+      ],
+      "result": "Weaponization: The cybernetic Character's enhancements are geared toward combat. This includes weapons, defensive measures, and sensors to aid in survival",
+      "resultTranslations": {
+        "en": "Weaponization: The cybernetic Character's enhancements are geared toward combat. This includes weapons, defensive measures, and sensors to aid in survival"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        37,
+        48
+      ],
+      "result": "Clandestine: The cybernetic Character's enhancements are designed for stealth and intrusion. That can include equipment to bypass security systems, access computers, and other tools that allow slipping past people unnoticed",
+      "resultTranslations": {
+        "en": "Clandestine: The cybernetic Character's enhancements are designed for stealth and intrusion. That can include equipment to bypass security systems, access computers, and other tools that allow slipping past people unnoticed"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        49,
+        56
+      ],
+      "result": "Athletic: The cybernetic Character's enhancements focus on physical capabilities. This includes enhanced speed, agility, strength, or endurance",
+      "resultTranslations": {
+        "en": "Athletic: The cybernetic Character's enhancements focus on physical capabilities. This includes enhanced speed, agility, strength, or endurance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        57,
+        64
+      ],
+      "result": "Net Jacker: The cybernetic Character's enhancements are designed to allow them to plug their nervous system directly into the digital net. This includes activities like searching computer databases and entering virtual reality as if they were physical places",
+      "resultTranslations": {
+        "en": "Net Jacker: The cybernetic Character's enhancements are designed to allow them to plug their nervous system directly into the digital net. This includes activities like searching computer databases and entering virtual reality as if they were physical places"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        65,
+        68
+      ],
+      "result": "Mnemonic: The cybernetic Character's enhancements are mostly cranial, enhancing the brain. This includes technology for perfect memory, downloaded skills, and anything that makes them a human computer",
+      "resultTranslations": {
+        "en": "Mnemonic: The cybernetic Character's enhancements are mostly cranial, enhancing the brain. This includes technology for perfect memory, downloaded skills, and anything that makes them a human computer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        69,
+        86
+      ],
+      "result": "Double: Roll two results on this table and combine them. The Character is less specialized in each, but combines elements of both. If you roll Double or No Focus, roll again until you get two distinct types",
+      "resultTranslations": {
+        "en": "Double: Roll two results on this table and combine them. The Character is less specialized in each, but combines elements of both. If you roll Double or No Focus, roll again until you get two distinct types"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        87,
+        100
+      ],
+      "result": "No Focus: Roll on the Cybernetic Character Meaning table without additional Context from this table",
+      "resultTranslations": {
+        "en": "No Focus: Roll on the Cybernetic Character Meaning table without additional Context from this table"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

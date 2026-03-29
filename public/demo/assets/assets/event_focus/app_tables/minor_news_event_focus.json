@@ -1,0 +1,189 @@
+{
+  "id": "minor_news_event_focus",
+  "schemaVersion": 3,
+  "tableType": "event-focus",
+  "categoryId": "event-focus",
+  "defaultLanguage": "en",
+  "displayName": "Minor News Event Focus Table",
+  "displayNameTranslations": {
+    "en": "Minor News Event Focus Table",
+    "pt": "Tabela de Foco de Evento de Notícias Menores"
+  },
+  "description": "A table for determining the focus of minor news events. MM Compilation 6.",
+  "descriptionTranslations": {
+    "en": "A table for determining the focus of minor news events. MM Compilation 6.",
+    "pt": "Uma tabela para determinar o foco de eventos de notícias menores. Mythic Magazine Compilado 6."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine Compilation 6",
+  "tags": [
+    "event-focus",
+    "news",
+    "current-events",
+    "world-building"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "result": "Rumored Event",
+      "resultTranslations": {
+        "en": "Rumored Event",
+        "pt": "Evento dos Rumores"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        30
+      ],
+      "result": "Character Action",
+      "resultTranslations": {
+        "en": "Character Action",
+        "pt": "Ação de Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "Character Positive",
+      "resultTranslations": {
+        "en": "Character Positive",
+        "pt": "Positivo para Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "Character Negative",
+      "resultTranslations": {
+        "en": "Character Negative",
+        "pt": "Negativo para Personagem"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Characters"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "result": "Move Toward A Thread",
+      "resultTranslations": {
+        "en": "Move Toward A Thread",
+        "pt": "Avançar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        60
+      ],
+      "result": "Move Away From A Thread",
+      "resultTranslations": {
+        "en": "Move Away From A Thread",
+        "pt": "Recuar a Trama"
+      },
+      "tags": [],
+      "data": {},
+      "entryRollOn": [
+        "Threads"
+      ],
+      "weight": 1,
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "result": "Current Context",
+      "resultTranslations": {
+        "en": "Current Context",
+        "pt": "Contexto Atual"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "result": "Roll Two Minor Events",
+      "resultTranslations": {
+        "en": "Roll Two Minor Events",
+        "pt": "Role Dois Eventos Menores"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "result": "Roll One Major Event",
+      "resultTranslations": {
+        "en": "Roll One Major Event",
+        "pt": "Role um Evento Maior"
+      },
+      "tags": [],
+      "data": {},
+      "weight": 1,
+      "entryRollOn": [],
+      "disabled": false
+    }
+  ],
+  "data": {},
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [],
+  "replacement": false,
+  "displayRoll": true
+}

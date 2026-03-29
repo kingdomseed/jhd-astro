@@ -1,0 +1,141 @@
+{
+  "id": "flourish_focus",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "world-building",
+  "defaultLanguage": "en",
+  "displayName": "Flourish Focus",
+  "displayNameTranslations": {
+    "en": "Flourish Focus"
+  },
+  "description": "Provides context for how a Society grew and flourished. Use with History and Society Growth Meaning tables for additional inspiration. Part of the Society Crafter system.",
+  "descriptionTranslations": {
+    "en": "Provides context for how a Society grew and flourished. Use with History and Society Growth Meaning tables for additional inspiration. Part of the Society Crafter system."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 49",
+  "tags": [
+    "society",
+    "society-crafter",
+    "world-building",
+    "history",
+    "growth",
+    "focus"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        25
+      ],
+      "result": "Organic Growth: The place simply continued to grow, investing in what got it established in the first place. There is no critical catalyst that helped",
+      "resultTranslations": {
+        "en": "Organic Growth: The place simply continued to grow, investing in what got it established in the first place. There is no critical catalyst that helped"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        35
+      ],
+      "result": "Crisis: A crisis struck that threatened the Society's existence. They rose to meet the challenge, succeeded, and experienced new growth",
+      "resultTranslations": {
+        "en": "Crisis: A crisis struck that threatened the Society's existence. They rose to meet the challenge, succeeded, and experienced new growth"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "Hero: An individual is responsible for their growth. This hero might have been a visionary leader, inventor, industrialist, or great artist",
+      "resultTranslations": {
+        "en": "Hero: An individual is responsible for their growth. This hero might have been a visionary leader, inventor, industrialist, or great artist"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        60
+      ],
+      "result": "Opportunity: Something happened that unexpectedly placed whatever the Society produced into great demand",
+      "resultTranslations": {
+        "en": "Opportunity: Something happened that unexpectedly placed whatever the Society produced into great demand"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        80
+      ],
+      "result": "Discovery: A discovery of some kind helped propel the Society forward. Maybe it was scientific or one of exploration",
+      "resultTranslations": {
+        "en": "Discovery: A discovery of some kind helped propel the Society forward. Maybe it was scientific or one of exploration"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "result": "Community: Something about the population itself helped the Society grow. Perhaps a cultural movement or an influx of immigrants",
+      "resultTranslations": {
+        "en": "Community: Something about the population itself helped the Society grow. Perhaps a cultural movement or an influx of immigrants"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled",
+      "descriptionTranslations": {
+        "en": "Roll on Mythic's Action Meaning tables and include them with the other Meaning words rolled"
+      },
+      "weight": 1,
+      "entryRollOn": [
+        "action_meaning_1"
+      ],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "history",
+    "society_growth"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}

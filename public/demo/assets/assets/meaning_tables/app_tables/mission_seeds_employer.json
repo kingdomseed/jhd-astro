@@ -1,0 +1,319 @@
+{
+  "id": "mission_seeds_employer",
+  "schemaVersion": 3,
+  "tableType": "meaning-table",
+  "categoryId": "adventure-elements",
+  "defaultLanguage": "en",
+  "displayName": "Mission Seeds: Employer",
+  "displayNameTranslations": {
+    "en": "Mission Seeds: Employer"
+  },
+  "description": "Who hires your character for a cyberpunk mission. Automatically rolls on Mission Seeds: Objective for the complete mission.",
+  "descriptionTranslations": {
+    "en": "Who hires your character for a cyberpunk mission. Automatically rolls on Mission Seeds: Objective for the complete mission."
+  },
+  "isPremium": true,
+  "isBuiltIn": true,
+  "isUserCreated": false,
+  "source": "Mythic Magazine 59",
+  "tags": [
+    "cyber-dystopia",
+    "cyberpunk",
+    "sci-fi",
+    "adventure",
+    "mission"
+  ],
+  "entries": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "result": "Yourself - this is a job with personal significance",
+      "resultTranslations": {
+        "en": "Yourself - this is a job with personal significance"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        6,
+        10
+      ],
+      "result": "A mega corp",
+      "resultTranslations": {
+        "en": "A mega corp"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        11,
+        15
+      ],
+      "result": "The military",
+      "resultTranslations": {
+        "en": "The military"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "result": "A private and very wealthy individual",
+      "resultTranslations": {
+        "en": "A private and very wealthy individual"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "result": "A criminal organization",
+      "resultTranslations": {
+        "en": "A criminal organization"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "result": "Law enforcement",
+      "resultTranslations": {
+        "en": "Law enforcement"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "result": "A government official",
+      "resultTranslations": {
+        "en": "A government official"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "result": "A street level criminal gang",
+      "resultTranslations": {
+        "en": "A street level criminal gang"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        41,
+        45
+      ],
+      "result": "A popular entertainer",
+      "resultTranslations": {
+        "en": "A popular entertainer"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "result": "An individual client",
+      "resultTranslations": {
+        "en": "An individual client"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "result": "Action Tables",
+      "resultTranslations": {
+        "en": "Action Tables"
+      },
+      "description": "Roll on Action Meaning tables to interpret who",
+      "descriptionTranslations": {
+        "en": "Roll on Action Meaning tables to interpret who"
+      },
+      "weight": 1,
+      "entryRollOn": ["action_meaning_1"],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        56,
+        60
+      ],
+      "result": "Yourself - you came across a lucrative opportunity",
+      "resultTranslations": {
+        "en": "Yourself - you came across a lucrative opportunity"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        61,
+        65
+      ],
+      "result": "Corrupt officials",
+      "resultTranslations": {
+        "en": "Corrupt officials"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        66,
+        70
+      ],
+      "result": "Corporate executives",
+      "resultTranslations": {
+        "en": "Corporate executives"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "result": "Another cybernetic operative who wants help with their job",
+      "resultTranslations": {
+        "en": "Another cybernetic operative who wants help with their job"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "result": "A friend, family member, or lover",
+      "resultTranslations": {
+        "en": "A friend, family member, or lover"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "result": "A business owner",
+      "resultTranslations": {
+        "en": "A business owner"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        86,
+        90
+      ],
+      "result": "An artificial intelligence or robot",
+      "resultTranslations": {
+        "en": "An artificial intelligence or robot"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        91,
+        95
+      ],
+      "result": "A child or innocent person you are sympathetic to",
+      "resultTranslations": {
+        "en": "A child or innocent person you are sympathetic to"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    },
+    {
+      "range": [
+        96,
+        100
+      ],
+      "result": "A genius or visionary",
+      "resultTranslations": {
+        "en": "A genius or visionary"
+      },
+      "weight": 1,
+      "entryRollOn": [],
+      "tags": [],
+      "disabled": false
+    }
+  ],
+  "rangeStart": 1,
+  "rangeEnd": 100,
+  "tableRollOn": [
+    "mission_seeds_objective"
+  ],
+  "replacement": false,
+  "displayRoll": true
+}
