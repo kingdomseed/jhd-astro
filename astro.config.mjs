@@ -23,6 +23,10 @@ export default defineConfig({
   ],
 
   redirects: {
+    '/demo': {
+      status: 302,
+      destination: 'https://mythicgme.app',
+    },
     '/privacy-policy': '/privacy',
   },
 
