@@ -1,0 +1,92 @@
+---
+import V2Layout from "../../../layouts/V2Layout.astro";
+import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
+import V2Header from "../../../components/v2/layout/V2Header.astro";
+import V2Footer from "../../../components/v2/layout/V2Footer.astro";
+import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import { getBlogPostsByLang } from "../../../lib/collections";
+import { formatDate } from "../../../lib/format-date";
+
+const posts = await getBlogPostsByLang("en");
+const featuredEntry = posts[0];
+const listEntries = posts.slice(1, 7);
+---
+
+<V2Layout
+  title="Jason Holt Digital - V2 Blog Preview"
+  description="Preview of the V2 editorial blog surface."
+  theme="refined"
+>
+  <V2UtilBar />
+  <V2Header />
+
+  <main>
+    <V2PageHeader
+      badge="Blog preview"
+      title="An editorial shell for release notes, process, and community writing."
+      intro="The source theme already leans editorial. This route tests how that visual language behaves when the content is a stream of real posts instead of product sections."
+    />
+
+    {
+      featuredEntry && (
+        <section class="v2-blog-feature-wrap">
+          <div class="v2-wrap">
+            <article class="v2-blog-feature">
+              <div class="v2-blog-feature__flag">Latest</div>
+              <div class="v2-blog-feature__body">
+                <p class="v2-card__kicker">{featuredEntry.data.category}</p>
+                <h2>
+                  <a href={`/blog/${featuredEntry.id}/`}>{featuredEntry.data.title}</a>
+                </h2>
+                <p class="v2-blog-feature__summary">{featuredEntry.data.summary}</p>
+                <div class="v2-blog-feature__meta">
+                  <span>{formatDate(featuredEntry.data.date)}</span>
+                  <span>{featuredEntry.data.readTime}</span>
+                  {featuredEntry.data.isSample && <span>Sample</span>}
+                </div>
+                <p class="v2-blog-feature__cta">
+                  <a class="v2-btn v2-btn--ghost" href={`/blog/${featuredEntry.id}/`}>
+                    Read the current post
+                  </a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      )
+    }
+
+    <section class="v2-section v2-section--tight" aria-labelledby="v2-blog-grid-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Recent posts</p>
+          <h2 id="v2-blog-grid-title" class="v2-section__title">A calmer grid for the rest of the writing.</h2>
+          <p class="v2-section__intro">
+            This keeps the visual language from the new theme while making sure
+            release notes and process posts stay easy to scan.
+          </p>
+        </header>
+
+        <div class="v2-blog-grid">
+          {
+            listEntries.map((entry) => (
+              <article class="v2-blog-card">
+                <p class="v2-blog-card__eyebrow">{entry.data.category}</p>
+                <h3>
+                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                </h3>
+                <p>{entry.data.summary}</p>
+                <div class="v2-blog-card__meta">
+                  <span>{formatDate(entry.data.date)}</span>
+                  <span>{entry.data.readTime}</span>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <V2Footer />
+</V2Layout>

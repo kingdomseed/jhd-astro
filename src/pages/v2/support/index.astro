@@ -1,0 +1,144 @@
+---
+import V2Layout from "../../../layouts/V2Layout.astro";
+import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
+import V2Header from "../../../components/v2/layout/V2Header.astro";
+import V2Footer from "../../../components/v2/layout/V2Footer.astro";
+import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+
+const quickPaths = [
+  {
+    title: "Discord",
+    body: "The fastest route for community tips, feature requests, and quick answers.",
+    href: "https://discord.gg/PEDHrhzcnk",
+    label: "Open Discord",
+    external: true,
+  },
+  {
+    title: "Email support",
+    body: "Use direct support when you need more detail, screenshots, or a private conversation.",
+    href: "mailto:support@jasonholtdigital.com",
+    label: "Email support",
+    external: false,
+  },
+  {
+    title: "Documentation",
+    body: "Keep search and docs as the self-serve path for setup, formulas, tables, and troubleshooting.",
+    href: "/v2/resources/",
+    label: "Open resources preview",
+    external: false,
+  },
+];
+
+const faqPreview = [
+  {
+    question: "What is Mythic GME Mobile / Digital?",
+    answer:
+      "The officially licensed companion for Mythic Game Master Emulator 2e, built to streamline Fate checks, scenes, events, lists, journals, and supporting tools across platforms.",
+  },
+  {
+    question: "Do I need the Mythic GME 2e rulebook?",
+    answer:
+      "Yes, functionally. The app accelerates the system, but the book teaches the method, variants, and examples that make the tool valuable.",
+  },
+  {
+    question: "Where should Command+K point in V2?",
+    answer:
+      "Primarily to resources, support, release notes, and later app/support destinations rather than homepage marketing copy.",
+  },
+];
+---
+
+<V2Layout
+  title="Jason Holt Digital - V2 Support Preview"
+  description="Preview of the V2 support and help surface."
+  theme="refined"
+>
+  <V2UtilBar />
+  <V2Header />
+
+  <main>
+    <V2PageHeader
+      badge="Support preview"
+      title="Support should feel helpful and direct, not buried under the marketing layer."
+      intro="This route tests how the V2 shell handles quick-help flows, Command+K handoff, and FAQ content without inheriting too much homepage drama."
+    />
+
+    <section class="v2-support-band">
+      <div class="v2-wrap">
+        <article class="v2-support-band__panel">
+          <p class="v2-card__kicker">Command+K handoff</p>
+          <h2>Keep the shortcut, but make support and docs easier to reach visually too.</h2>
+          <p>
+            Keyboard search stays important, but the redesigned support page
+            should still surface the fastest paths at a glance.
+          </p>
+          <div class="v2-search-prompt">
+            <span>Search resources and blog</span>
+            <kbd>Cmd / Ctrl + K</kbd>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="v2-section v2-section--tight" aria-labelledby="v2-support-fast-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Quick help</p>
+          <h2 id="v2-support-fast-title" class="v2-section__title">The first screen should answer: where do I go right now?</h2>
+          <p class="v2-section__intro">
+            These cards give the support page a more intentional front door
+            while preserving the utility-first purpose of the route.
+          </p>
+        </header>
+
+        <div class="v2-card-grid">
+          {
+            quickPaths.map((item) => (
+              <article class="v2-card">
+                <p class="v2-card__kicker">Support path</p>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <p class="v2-support-card__cta">
+                  <a
+                    class="v2-btn v2-btn--ghost"
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" aria-labelledby="v2-support-faq-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">FAQ preview</p>
+          <h2 id="v2-support-faq-title" class="v2-section__title">A calmer shell for dense FAQ content.</h2>
+          <p class="v2-section__intro">
+            The real support page has a lot of content. This preview checks that
+            the V2 system can still make long help content feel structured.
+          </p>
+        </header>
+
+        <div class="v2-faq-list">
+          {
+            faqPreview.map((item) => (
+              <article class="v2-faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <V2Footer />
+</V2Layout>

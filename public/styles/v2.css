@@ -6,3 +6,5 @@
 @import url("/styles/v2/home.css") layer(components);
 @import url("/styles/v2/docs.css") layer(components);
 @import url("/styles/v2/apps.css") layer(components);
+@import url("/styles/v2/blog.css") layer(components);
+@import url("/styles/v2/support.css") layer(components);
