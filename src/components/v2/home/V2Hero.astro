@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import mobileShot from "../../../assets/mobile/mobile-1.png";
+import desktopShot from "../../../assets/desktop/desktop-1.png";
+---
+
+<section id="home" class="v2-hero" aria-labelledby="v2-hero-title">
+  <div class="v2-wrap v2-hero__grid">
+    <div class="v2-hero__copy">
+      <p class="v2-eyebrow">Whole-site redesign</p>
+      <h1 id="v2-hero-title" class="v2-hero__title">
+        Bring the refined theme over <em>wholesale</em>, then tune the last 20%.
+      </h1>
+      <p class="v2-hero__lead">
+        The V2 direction keeps Astro, adopts the richer art direction you like,
+        and rebuilds the site around a homepage that can market Mythic now and
+        support a broader official app line later.
+      </p>
+      <div class="v2-hero__actions">
+        <a class="v2-btn v2-btn--primary" href="#app-family">See app-family structure</a>
+        <a class="v2-btn v2-btn--ghost" href="#docs-handoff">See docs handoff</a>
+      </div>
+      <ul class="v2-stat-list" role="list">
+        <li><strong>Astro</strong><span>stays</span></li>
+        <li><strong>Whole-site</strong><span>redesign scope</span></li>
+        <li><strong>Close fidelity</strong><span>to the source theme</span></li>
+      </ul>
+    </div>
+
+    <div class="v2-stage" aria-hidden="true">
+      <div class="v2-stage__slab"></div>
+      <article class="v2-stage__card v2-stage__card--front">
+        <span class="v2-stage__label">Flagship now</span>
+        <div class="v2-stage__image">
+          <Image src={mobileShot} alt="" widths={[320]} sizes="320px" loading="eager" />
+        </div>
+        <h2>Mythic GME Mobile</h2>
+        <p>Fast solo play on the go, kept front-and-center while the site grows into a broader studio surface.</p>
+      </article>
+      <article class="v2-stage__card v2-stage__card--back">
+        <span class="v2-stage__label">Portfolio later</span>
+        <div class="v2-stage__image v2-stage__image--wide">
+          <Image src={desktopShot} alt="" widths={[480]} sizes="(max-width: 900px) 100vw, 480px" loading="eager" />
+        </div>
+        <h2>Mythic GME Digital and beyond</h2>
+        <p>The new homepage structure, cards, and app rails are being planned for a broader official line.</p>
+      </article>
+    </div>
+  </div>
+</section>

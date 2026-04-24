@@ -1,0 +1,52 @@
+:root {
+  --v2-bg: #ffffff;
+  --v2-bg-warm: #fbf7ee;
+  --v2-surface: #ffffff;
+  --v2-surface-2: #f9f9f9;
+  --v2-surface-3: #efefef;
+
+  --v2-ink: #0a0a0a;
+  --v2-ink-soft: #1a1a1a;
+  --v2-ink-muted: #444444;
+  --v2-ink-faint: #6b6b6b;
+
+  --v2-primary: #0066ff;
+  --v2-primary-ink: #004fcc;
+  --v2-primary-tint: #e5efff;
+
+  --v2-accent: #ffd700;
+  --v2-accent-ink: #7a6500;
+  --v2-accent-tint: #fff7cc;
+
+  --v2-brand-coral: #ff6b5c;
+  --v2-brand-teal: #2fb6a8;
+  --v2-brand-plum: #5b3a8f;
+
+  --v2-border-subtle: 1px solid var(--v2-ink);
+  --v2-border-base: 2px solid var(--v2-ink);
+  --v2-border-thick: 3px solid var(--v2-ink);
+  --v2-border-heavy: 4px solid var(--v2-ink);
+
+  --v2-shadow-base: 6px 6px 0 0 rgba(0, 0, 0, 0.12);
+  --v2-shadow-lift: 10px 10px 0 0 rgba(0, 0, 0, 0.18);
+  --v2-shadow-press: 3px 3px 0 0 rgba(0, 0, 0, 0.12);
+  --v2-shadow-primary: 6px 6px 0 0 var(--v2-primary);
+
+  --v2-space-1: 4px;
+  --v2-space-2: 8px;
+  --v2-space-3: 12px;
+  --v2-space-4: 16px;
+  --v2-space-6: 24px;
+  --v2-space-8: 32px;
+  --v2-space-10: 40px;
+  --v2-space-12: 48px;
+  --v2-space-16: 64px;
+
+  --v2-font-display: "Archivo", "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  --v2-font-body: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --v2-font-editorial: "Fraunces", Georgia, serif;
+  --v2-font-mythic: "Bitter", Georgia, serif;
+
+  --v2-wrap: 1240px;
+  --v2-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

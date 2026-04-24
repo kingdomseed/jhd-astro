@@ -1,0 +1,225 @@
+---
+import { Image } from "astro:assets";
+import V2Layout from "../../../layouts/V2Layout.astro";
+import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
+import V2Header from "../../../components/v2/layout/V2Header.astro";
+import V2Footer from "../../../components/v2/layout/V2Footer.astro";
+import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import mobileOne from "../../../assets/mobile/mobile-1.png";
+import mobileFive from "../../../assets/mobile/mobile-5.png";
+import desktopOne from "../../../assets/desktop/desktop-1.png";
+import desktopSix from "../../../assets/desktop/desktop-6.png";
+
+const appCards = [
+  {
+    status: "Live now",
+    title: "Mythic GME Mobile",
+    summary:
+      "The fastest path into Mythic on iPhone, iPad, Android, and Amazon devices.",
+    copy:
+      "Built for quick solo play, journaling, custom tables, and portable reference without sacrificing the official Mythic flow.",
+    image: mobileOne,
+    imageAlt: "Mythic GME Mobile Fate Chart screen",
+    platforms: ["iOS", "Android", "Amazon"],
+    cta: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
+    ctaLabel: "Open mobile app listing",
+  },
+  {
+    status: "Live now",
+    title: "Mythic GME Digital",
+    summary:
+      "Desktop Mythic for longer sessions, denser workflows, and a more spacious play surface.",
+    copy:
+      "The desktop product deserves equal weight in the new design, with its own layout story instead of living as a secondary detail on the current site.",
+    image: desktopOne,
+    imageAlt: "Mythic GME Digital desktop workspace",
+    platforms: ["Windows", "macOS", "Linux"],
+    cta: "https://jasonholtdigital.itch.io/mythic-gme-digital",
+    ctaLabel: "Open desktop app listing",
+  },
+];
+
+const futureApps = [
+  {
+    label: "Next in line",
+    title: "Adventure Crafter",
+    body:
+      "A natural future addition to the portfolio section, with room for coming-soon states that still feel intentional.",
+  },
+  {
+    label: "Portfolio model",
+    title: "Official Word Mill app line",
+    body:
+      "The V2 app page should be able to grow into a studio catalog without throwing away the flagship Mythic story.",
+  },
+  {
+    label: "System need",
+    title: "Shared app data",
+    body:
+      "This page is also the clearest argument for a future apps content collection that feeds homepage rails and compare surfaces.",
+  },
+];
+---
+
+<V2Layout
+  title="Jason Holt Digital - V2 Apps Preview"
+  description="Preview of the V2 portfolio-style apps page."
+  theme="refined"
+>
+  <V2UtilBar />
+  <V2Header />
+
+  <main>
+    <V2PageHeader
+      badge="Apps preview"
+      title="A portfolio-style apps page for the official app line."
+      intro="This route tests the shift from a Mythic-only sales page to a clearer product surface that can represent current apps, upcoming releases, and the broader Word Mill ecosystem."
+    />
+
+    <section class="v2-apps-hero-band">
+      <div class="v2-wrap">
+        <article class="v2-apps-hero-band__panel">
+          <div>
+            <p class="v2-card__kicker">Design goal</p>
+            <h2>Keep Mythic as the flagship, but stop hiding the product family.</h2>
+          </div>
+          <p>
+            The new homepage can sell the flagship experience, while this page
+            becomes the cleaner compare-and-discover surface for the whole
+            official line.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="v2-section" aria-labelledby="v2-app-cards-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Current apps</p>
+          <h2 id="v2-app-cards-title" class="v2-section__title">Two live products, one shared studio story.</h2>
+          <p class="v2-section__intro">
+            These cards use real screenshots and a consistent structure so the
+            V2 system can scale when more official apps arrive.
+          </p>
+        </header>
+
+        <div class="v2-app-grid">
+          {
+            appCards.map((app) => (
+              <article class="v2-app-card">
+                <div class="v2-app-card__media">
+                  <Image
+                    src={app.image}
+                    alt={app.imageAlt}
+                    widths={[720]}
+                    sizes="(max-width: 900px) 100vw, 720px"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="v2-app-card__body">
+                  <p class="v2-app-card__status">{app.status}</p>
+                  <h3>{app.title}</h3>
+                  <p class="v2-app-card__summary">{app.summary}</p>
+                  <p>{app.copy}</p>
+                  <ul class="v2-app-card__platforms" role="list">
+                    {app.platforms.map((platform) => <li>{platform}</li>)}
+                  </ul>
+                  <p class="v2-app-card__cta">
+                    <a class="v2-btn v2-btn--ghost" href={app.cta} target="_blank" rel="noopener noreferrer">
+                      {app.ctaLabel}
+                    </a>
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section v2-section--tight" aria-labelledby="v2-compare-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Compare</p>
+          <h2 id="v2-compare-title" class="v2-section__title">The page should make the differences obvious at a glance.</h2>
+          <p class="v2-section__intro">
+            Even a light compare table helps the V2 system act like a real
+            product site instead of an art-directed mockup.
+          </p>
+        </header>
+
+        <div class="v2-compare">
+          <div class="v2-compare__row v2-compare__row--head">
+            <span>Focus</span>
+            <span>Mobile</span>
+            <span>Desktop</span>
+          </div>
+          <div class="v2-compare__row">
+            <span>Session style</span>
+            <span>Fast, portable, touch-first</span>
+            <span>Long-form, spacious, keyboard-friendly</span>
+          </div>
+          <div class="v2-compare__row">
+            <span>Best fit</span>
+            <span>On-the-go solo play</span>
+            <span>Focused campaign sessions</span>
+          </div>
+          <div class="v2-compare__row">
+            <span>Position in V2</span>
+            <span>Flagship mobile offer</span>
+            <span>Flagship desktop counterpart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" aria-labelledby="v2-future-apps-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Coming next</p>
+          <h2 id="v2-future-apps-title" class="v2-section__title">Future apps need a designed place to land.</h2>
+          <p class="v2-section__intro">
+            This is the future-facing part of the redesign: the site should
+            already know how to present planned work, not just live releases.
+          </p>
+        </header>
+
+        <div class="v2-card-grid">
+          {
+            futureApps.map((item) => (
+              <article class="v2-card">
+                <p class="v2-card__kicker">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section v2-section--tight" aria-labelledby="v2-gallery-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Gallery</p>
+          <h2 id="v2-gallery-title" class="v2-section__title">The design should support both product detail and visual rhythm.</h2>
+          <p class="v2-section__intro">
+            A small gallery band lets this page feel visually rich without
+            depending on the homepage to do all of the heavy lifting.
+          </p>
+        </header>
+
+        <div class="v2-gallery">
+          <article class="v2-gallery__item">
+            <Image src={mobileFive} alt="Mythic GME Mobile journaling screen" widths={[560]} sizes="(max-width: 900px) 100vw, 560px" loading="lazy" />
+          </article>
+          <article class="v2-gallery__item v2-gallery__item--wide">
+            <Image src={desktopSix} alt="Mythic GME Digital desktop panel layout" widths={[960]} sizes="(max-width: 900px) 100vw, 960px" loading="lazy" />
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <V2Footer />
+</V2Layout>

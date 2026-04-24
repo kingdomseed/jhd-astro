@@ -1,0 +1,73 @@
+---
+import V2Layout from "../../../layouts/V2Layout.astro";
+import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
+import V2Header from "../../../components/v2/layout/V2Header.astro";
+import V2Footer from "../../../components/v2/layout/V2Footer.astro";
+import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import { getResourcesByLang } from "../../../lib/collections";
+import { formatDate } from "../../../lib/format-date";
+
+const entries = (await getResourcesByLang("en")).slice(0, 6);
+---
+
+<V2Layout
+  title="Jason Holt Digital - V2 Resources Preview"
+  description="Preview of the calmer V2 documentation shell."
+  theme="refined"
+>
+  <V2UtilBar />
+  <V2Header />
+
+  <main>
+    <V2PageHeader
+      badge="Resources preview"
+      title="A calmer V2 shell for documentation-heavy pages."
+      intro="The homepage can carry most of the marketing weight, but documentation pages need better scanning, lower visual noise, and strong links into search and support."
+    />
+
+    <section class="v2-docs-band">
+      <div class="v2-wrap">
+        <article class="v2-docs-band__panel">
+          <p class="v2-card__kicker">Design principle</p>
+          <h2>Keep Command+K and deep-link docs as fast paths, not afterthoughts.</h2>
+          <p>
+            This preview uses real resource entries to test how the redesigned
+            shell behaves when the job is helping someone find an answer
+            quickly, not converting them on the homepage.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="v2-section" aria-labelledby="v2-resource-grid-title">
+      <div class="v2-wrap">
+        <header class="v2-section__head">
+          <p class="v2-eyebrow">Real content</p>
+          <h2 id="v2-resource-grid-title" class="v2-section__title">Existing guides in the new shell.</h2>
+          <p class="v2-section__intro">
+            This is where the redesign proves whether it can support the real
+            site architecture instead of just a single landing page.
+          </p>
+        </header>
+
+        <div class="v2-docs-grid">
+          {
+            entries.map((entry) => (
+              <a class="v2-doc-card" href={`/resources/${entry.id}/`}>
+                <span class="v2-doc-card__eyebrow">{entry.data.category}</span>
+                <h3>{entry.data.title}</h3>
+                <p>{entry.data.summary}</p>
+                <span class="v2-doc-card__meta">
+                  {entry.data.duration && <span>{entry.data.duration}</span>}
+                  {entry.data.updated && <span>Updated {formatDate(entry.data.updated)}</span>}
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <V2Footer />
+</V2Layout>

@@ -1,0 +1,8 @@
+@layer tokens, base, components;
+@import url("/styles/v2/tokens.css") layer(tokens);
+@import url("/styles/v2/themes.css") layer(tokens);
+@import url("/styles/v2/primitives.css") layer(base);
+@import url("/styles/v2/layout.css") layer(components);
+@import url("/styles/v2/home.css") layer(components);
+@import url("/styles/v2/docs.css") layer(components);
+@import url("/styles/v2/apps.css") layer(components);

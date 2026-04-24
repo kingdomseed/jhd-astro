@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import V2SectionShell from "../primitives/V2SectionShell.astro";
+import headshot from "../../../assets/people/jason-school.jpg";
+---
+
+<V2SectionShell
+  id="maker-note"
+  badge="Studio note"
+  title="The redesign should still feel like it was built by a real person."
+  intro="The source theme has a strong maker section. That maps well to your site because the studio story, licensing context, and long-term product care are part of the trust layer."
+>
+  <div class="v2-maker">
+    <div class="v2-maker__photo">
+      <Image src={headshot} alt="Jason Holt" widths={[320]} sizes="320px" loading="lazy" />
+    </div>
+    <div class="v2-maker__body">
+      <blockquote>
+        I want the new site to feel warmer, clearer, and more inviting while
+        still making room for serious tools and long-term product work.
+      </blockquote>
+      <p>
+        The homepage can do most of the marketing work, while resources,
+        support, and blog pages stay focused on helping people find what they
+        need quickly.
+      </p>
+      <p>
+        That lets the visual system carry the same voice across the whole site
+        without turning every page into a landing page.
+      </p>
+      <p class="v2-maker__cta">
+        <a class="v2-btn v2-btn--ghost" href="/about/">Read the current about page</a>
+      </p>
+    </div>
+  </div>
+</V2SectionShell>

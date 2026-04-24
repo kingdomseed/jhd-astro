@@ -1,0 +1,103 @@
+.v2-page-header {
+  padding: clamp(56px, 8vw, 88px) 0 var(--v2-space-12);
+}
+
+.v2-page-header__title {
+  max-width: 18ch;
+  margin: 0 0 var(--v2-space-4);
+  color: var(--v2-ink);
+  font-family: var(--v2-font-display);
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.v2-page-header__intro {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--v2-ink-muted);
+  font-size: 1.08rem;
+}
+
+.v2-docs-band {
+  padding-bottom: var(--v2-space-12);
+}
+
+.v2-docs-band__panel {
+  padding: var(--v2-space-8);
+  border: var(--v2-border-base);
+  background: var(--v2-surface);
+  box-shadow: var(--v2-shadow-lift);
+}
+
+.v2-docs-band__panel h2 {
+  max-width: 22ch;
+  margin: 0 0 var(--v2-space-4);
+  color: var(--v2-ink);
+  font-family: var(--v2-font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  line-height: 1;
+}
+
+.v2-docs-band__panel p:last-child {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--v2-ink-muted);
+}
+
+.v2-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--v2-space-6);
+}
+
+.v2-doc-card {
+  display: grid;
+  gap: var(--v2-space-3);
+  padding: var(--v2-space-6);
+  border: var(--v2-border-base);
+  background: var(--v2-surface);
+  box-shadow: var(--v2-shadow-base);
+  transition: transform 180ms var(--v2-ease), box-shadow 180ms var(--v2-ease);
+}
+
+.v2-doc-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--v2-shadow-lift);
+}
+
+.v2-doc-card__eyebrow {
+  color: var(--v2-ink-faint);
+  font-family: var(--v2-font-display);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.v2-doc-card h3 {
+  margin: 0;
+  color: var(--v2-ink);
+  font-family: var(--v2-font-display);
+  font-size: 1.35rem;
+  line-height: 1.08;
+}
+
+.v2-doc-card p {
+  margin: 0;
+  color: var(--v2-ink-muted);
+}
+
+.v2-doc-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--v2-ink-faint);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 900px) {
+  .v2-docs-grid {
+    grid-template-columns: 1fr;
+  }
+}

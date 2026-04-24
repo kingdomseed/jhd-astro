@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import V2SectionShell from "../primitives/V2SectionShell.astro";
+import mobileOne from "../../../assets/mobile/mobile-1.png";
+import mobileFour from "../../../assets/mobile/mobile-4.png";
+import desktopThree from "../../../assets/desktop/desktop-3.png";
+---
+
+<V2SectionShell
+  id="feature-tour"
+  badge="Flagship spotlight"
+  title="The flagship story should feel richer and more editorial, not just more decorative."
+  intro="This section starts to replace the old billboard with a fuller feature-tour surface that still feels modular. It can later become a carousel, but the card structure already matches the V2 system."
+>
+  <div class="v2-feature-grid">
+    <article class="v2-feature-card">
+      <div class="v2-feature-card__media">
+        <Image src={mobileOne} alt="Mythic GME Mobile Fate Chart screen" widths={[420]} sizes="(max-width: 900px) 100vw, 420px" loading="lazy" />
+      </div>
+      <div class="v2-feature-card__body">
+        <p class="v2-card__kicker">Mobile</p>
+        <h3>Fate Chart in context</h3>
+        <p>Lead with the core loop first so the flagship value proposition lands immediately.</p>
+      </div>
+    </article>
+
+    <article class="v2-feature-card">
+      <div class="v2-feature-card__media">
+        <Image src={desktopThree} alt="Mythic GME Digital scenes workspace" widths={[640]} sizes="(max-width: 900px) 100vw, 640px" loading="lazy" />
+      </div>
+      <div class="v2-feature-card__body">
+        <p class="v2-card__kicker">Desktop</p>
+        <h3>Long-session workspace</h3>
+        <p>Desktop deserves explicit representation in the new design instead of staying tucked away behind the apps page.</p>
+      </div>
+    </article>
+
+    <article class="v2-feature-card">
+      <div class="v2-feature-card__media">
+        <Image src={mobileFour} alt="Mythic GME Mobile dice roller screen" widths={[420]} sizes="(max-width: 900px) 100vw, 420px" loading="lazy" />
+      </div>
+      <div class="v2-feature-card__body">
+        <p class="v2-card__kicker">Utility</p>
+        <h3>Tools that support the story</h3>
+        <p>Dice, tables, and journaling should feel like part of one coherent product system across the site.</p>
+      </div>
+    </article>
+  </div>
+</V2SectionShell>

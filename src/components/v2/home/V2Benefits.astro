@@ -1,0 +1,50 @@
+---
+import V2SectionShell from "../primitives/V2SectionShell.astro";
+
+const items = [
+  {
+    icon: "fa-solid fa-bolt",
+    title: "Ask and roll fast",
+    body: "Keep the Fate Chart, scenes, and core solo flow close at hand instead of scattering them across notes and tables.",
+  },
+  {
+    icon: "fa-solid fa-shield-halved",
+    title: "Trust official content",
+    body: "Lead with the official licensing story clearly so players understand what is authoritative and why the tools fit the books.",
+  },
+  {
+    icon: "fa-solid fa-book-open",
+    title: "Track your stories",
+    body: "Show journals, threads, characters, and campaign continuity as part of the value proposition, not an afterthought.",
+  },
+  {
+    icon: "fa-solid fa-layer-group",
+    title: "Grow into a product family",
+    body: "Use reusable section patterns so the homepage can expand from Mythic-first to a wider official app portfolio cleanly.",
+  },
+];
+---
+
+<V2SectionShell
+  id="benefits"
+  badge="Why this structure"
+  title="Bring over the source theme's organization, then adapt it to your real business shape."
+  intro="The original redesign's benefits grid is a good fit for the new homepage because it turns product strengths, trust signals, and future growth into reusable cards."
+>
+  <div class="v2-benefits">
+    {
+      items.map((item, index) => (
+        <article class="v2-benefit">
+          <div class="v2-benefit__meta">
+            <span class="v2-benefit__num">{String(index + 1).padStart(2, "0")}</span>
+            <span class="v2-benefit__icon" aria-hidden="true">
+              <i class={item.icon}></i>
+            </span>
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
+      ))
+    }
+  </div>
+</V2SectionShell>

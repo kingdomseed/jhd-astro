@@ -1,0 +1,94 @@
+---
+import V2Layout from "../../layouts/V2Layout.astro";
+import V2UtilBar from "../../components/v2/layout/V2UtilBar.astro";
+import V2Header from "../../components/v2/layout/V2Header.astro";
+import V2Footer from "../../components/v2/layout/V2Footer.astro";
+import V2Hero from "../../components/v2/home/V2Hero.astro";
+import V2Benefits from "../../components/v2/home/V2Benefits.astro";
+import V2FeatureShowcase from "../../components/v2/home/V2FeatureShowcase.astro";
+import V2MakerNote from "../../components/v2/home/V2MakerNote.astro";
+import V2SectionShell from "../../components/v2/primitives/V2SectionShell.astro";
+---
+
+<V2Layout
+  title="Jason Holt Digital - V2 Preview"
+  description="Preview scaffold for the next Jason Holt Digital site design."
+  theme="refined"
+>
+  <V2UtilBar />
+  <V2Header />
+
+  <main>
+    <V2Hero />
+    <V2Benefits />
+
+    <V2SectionShell
+      id="app-family"
+      badge="App family"
+      title="The homepage should market a growing app line, not a single app forever."
+      intro="Mythic remains the flagship story today, but V2 should already have a place for multiple official apps, upcoming releases, and platform-specific paths."
+    >
+      <div class="v2-card-grid">
+        <article class="v2-card">
+          <p class="v2-card__kicker">Live now</p>
+          <h3>Mythic GME Mobile</h3>
+          <p>Fast solo play on mobile with Fate Chart, scenes, journals, and custom tables.</p>
+        </article>
+        <article class="v2-card">
+          <p class="v2-card__kicker">Live now</p>
+          <h3>Mythic GME Digital</h3>
+          <p>Desktop layout for longer sessions, denser workflows, and a stronger documentation loop.</p>
+        </article>
+        <article class="v2-card">
+          <p class="v2-card__kicker">Planned</p>
+          <h3>Future official apps</h3>
+          <p>V2 should have a reusable section model that can absorb more Word Mill products without redesigning the homepage again.</p>
+        </article>
+      </div>
+    </V2SectionShell>
+
+    <V2FeatureShowcase />
+
+    <V2SectionShell
+      id="docs-handoff"
+      badge="Content model"
+      title="Marketing belongs on the homepage. Search, docs, and support stay deep-link friendly."
+      intro="The current site already has a good Command+K and documentation/search structure. V2 should preserve that strength while moving more of the persuasive landing-page work onto the homepage itself."
+    >
+      <div class="v2-card-grid">
+        <article class="v2-card">
+          <p class="v2-card__kicker">Keep</p>
+          <h3>Resources</h3>
+          <p>Documentation hub with the V2 shell, but tuned for scanning, not spectacle.</p>
+        </article>
+        <article class="v2-card">
+          <p class="v2-card__kicker">Keep</p>
+          <h3>Support + Command K</h3>
+          <p>Search stays focused on help content, release notes, and later app/support destinations.</p>
+        </article>
+        <article class="v2-card">
+          <p class="v2-card__kicker">Extend later</p>
+          <h3>Apps collection</h3>
+          <p>A shared app model should eventually drive homepage rails, the apps page, and future product surfaces.</p>
+        </article>
+      </div>
+    </V2SectionShell>
+
+    <V2MakerNote />
+
+    <V2SectionShell
+      id="rollout"
+      badge="Rollout"
+      title="Build V2 beside the live site until the new shell is ready."
+      intro="This route is the safe place to transplant the theme, shape shared primitives, and then move page-by-page into the new system."
+    >
+      <ol class="v2-rollout">
+        <li>Create the V2 shell, tokens, themes, and base section patterns.</li>
+        <li>Rebuild the homepage around the new design and future app-family structure.</li>
+        <li>Extend the shell to resources, support, blog, apps, and legal pages.</li>
+      </ol>
+    </V2SectionShell>
+  </main>
+
+  <V2Footer />
+</V2Layout>
