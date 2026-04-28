@@ -1,0 +1,175 @@
+/* ─────────────────────────────────────────────────────────
+ * JHD — Three refined theme variants
+ * Each theme overrides base tokens from tokens.css via a data-theme attr.
+ * ───────────────────────────────────────────────────────── */
+
+/* ===== THEME 1 · REFINED ========================================
+ * Brutalism grown up. Deeper ink (near-black w/ slight cool cast),
+ * warmer paper, a more premium blue with restrained yellow accent.
+ * Subtle grain, clean rules, tighter type.
+ * ================================================================ */
+[data-theme="refined"] {
+  --jhd-bg:           #f6f3ec;   /* warm paper */
+  --jhd-bg-warm:      #efeadd;
+  --jhd-surface:      #ffffff;
+  --jhd-surface-2:    #faf7f0;
+  --jhd-surface-3:    #e8e3d4;
+
+  --jhd-ink:          #0d1117;   /* slate-black */
+  --jhd-ink-soft:     #1a1f28;
+  --jhd-ink-muted:    #4a5260;
+  --jhd-ink-faint:    #8a8f9a;
+
+  --jhd-primary:      #1a3ae0;   /* deeper confident blue */
+  --jhd-primary-ink:  #1530b8;
+  --jhd-primary-tint: #e6ebff;
+
+  --jhd-accent:       #f5cd19;   /* slightly warmer mustard-gold */
+  --jhd-accent-ink:   #5a4800;
+  --jhd-accent-tint:  #fdf3b8;
+
+  --jhd-brand-coral:  #e55a3c;
+  --jhd-brand-teal:   #0e7a6f;
+  --jhd-brand-plum:   #3a2d5b;
+
+  --border-subtle:    1px solid var(--jhd-ink);
+  --border-base:      1.5px solid var(--jhd-ink);
+  --border-thick:     2.5px solid var(--jhd-ink);
+  --border-heavy:     3.5px solid var(--jhd-ink);
+
+  --shadow-base:      4px 4px 0 0 var(--jhd-ink);
+  --shadow-lift:      8px 8px 0 0 var(--jhd-ink);
+  --shadow-press:     2px 2px 0 0 var(--jhd-ink);
+  --shadow-primary:   4px 4px 0 0 var(--jhd-primary);
+  --shadow-accent:    4px 4px 0 0 var(--jhd-accent);
+
+  --radius-soft:      3px;
+
+  --font-display: "Archivo", "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ===== THEME 2 · EDITORIAL ======================================
+ * Magazine brutalism. Big serif display, newsprint paper,
+ * numbered indices, deep ink, restrained accent pops, generous whitespace.
+ * ================================================================ */
+[data-theme="editorial"] {
+  --jhd-bg:           #f1ede3;   /* newsprint cream */
+  --jhd-bg-warm:      #e9e3d3;
+  --jhd-surface:      #fbf8f0;
+  --jhd-surface-2:    #ebe6d7;
+  --jhd-surface-3:    #d8d2c0;
+
+  --jhd-ink:          #11100c;   /* warm near-black */
+  --jhd-ink-soft:     #1f1d17;
+  --jhd-ink-muted:    #55504a;
+  --jhd-ink-faint:    #8c867d;
+
+  --jhd-primary:      #1d2dd4;   /* ultramarine */
+  --jhd-primary-ink:  #1728a8;
+  --jhd-primary-tint: #dde1fa;
+
+  --jhd-accent:       #f2c200;   /* rich gold */
+  --jhd-accent-ink:   #5a4600;
+  --jhd-accent-tint:  #fbeaa3;
+
+  --jhd-brand-coral:  #d6482e;
+  --jhd-brand-teal:   #176b63;
+  --jhd-brand-plum:   #2a1e52;
+
+  --border-subtle:    1px solid var(--jhd-ink);
+  --border-base:      1.5px solid var(--jhd-ink);
+  --border-thick:     2px solid var(--jhd-ink);
+  --border-heavy:     3px solid var(--jhd-ink);
+
+  --shadow-base:      5px 5px 0 0 var(--jhd-ink);
+  --shadow-lift:      10px 10px 0 0 var(--jhd-ink);
+  --shadow-press:     2px 2px 0 0 var(--jhd-ink);
+  --shadow-primary:   5px 5px 0 0 var(--jhd-primary);
+  --shadow-accent:    5px 5px 0 0 var(--jhd-accent);
+
+  --radius-soft:      0px;
+
+  --font-display: "Fraunces", "Playfair Display", Georgia, serif;
+  --font-body:    "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ===== THEME 3 · MUÑOZ ==========================================
+ * Mythic art DNA. Dark teal/ink base, ochre + coral accents lifted
+ * directly from Jorge Muñoz's panels. Halftone textures.
+ * The big swing — world-building as brand.
+ * ================================================================ */
+[data-theme="munoz"] {
+  --jhd-bg:           #ede6d5;   /* aged paper */
+  --jhd-bg-warm:      #e3dac4;
+  --jhd-surface:      #f5efdf;
+  --jhd-surface-2:    #e0d8c3;
+  --jhd-surface-3:    #c8bfa6;
+
+  --jhd-ink:          #0f1c22;   /* inky teal-black */
+  --jhd-ink-soft:     #1b2a31;
+  --jhd-ink-muted:    #4a5960;
+  --jhd-ink-faint:    #7d8b92;
+
+  --jhd-primary:      #1e6b78;   /* muñoz teal */
+  --jhd-primary-ink:  #0e4751;
+  --jhd-primary-tint: #c9dee1;
+
+  --jhd-accent:       #e8a32a;   /* ochre gold */
+  --jhd-accent-ink:   #6a4900;
+  --jhd-accent-tint:  #f3d892;
+
+  --jhd-brand-coral:  #d0503a;   /* panel coral */
+  --jhd-brand-teal:   #1e6b78;
+  --jhd-brand-plum:   #3a1f1f;
+
+  --border-subtle:    1.5px solid var(--jhd-ink);
+  --border-base:      2.5px solid var(--jhd-ink);
+  --border-thick:     3.5px solid var(--jhd-ink);
+  --border-heavy:     5px solid var(--jhd-ink);
+
+  --shadow-base:      5px 5px 0 0 var(--jhd-ink);
+  --shadow-lift:      9px 9px 0 0 var(--jhd-ink);
+  --shadow-press:     3px 3px 0 0 var(--jhd-ink);
+  --shadow-primary:   5px 5px 0 0 var(--jhd-primary);
+  --shadow-accent:    5px 5px 0 0 var(--jhd-brand-coral);
+
+  --radius-soft:      0px;
+
+  --font-display: "Bitter", "Fraunces", Georgia, serif;
+  --font-body:    "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ───────────── Shared textural utilities ───────────── */
+
+/* Halftone dot panel (used as page atmosphere and behind hero art) */
+.tex-dots {
+  background-image: radial-gradient(var(--jhd-ink) 1px, transparent 1.4px);
+  background-size: 10px 10px;
+}
+.tex-dots-loose {
+  background-image: radial-gradient(var(--jhd-ink) 1px, transparent 1.4px);
+  background-size: 16px 16px;
+}
+.tex-lines {
+  background-image: repeating-linear-gradient(
+    45deg, var(--jhd-ink) 0 1px, transparent 1px 7px
+  );
+}
+.tex-grain {
+  background-image:
+    radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+/* Subtle noise overlay for all themes — adds the 'printed' feel */
+.noise-overlay {
+  position: fixed; inset: 0; pointer-events: none; z-index: 100;
+  opacity: .035; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}

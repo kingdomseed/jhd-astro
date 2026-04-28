@@ -1,73 +1,593 @@
 ---
-import V2Layout from "../../../layouts/V2Layout.astro";
-import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
-import V2Header from "../../../components/v2/layout/V2Header.astro";
-import V2Footer from "../../../components/v2/layout/V2Footer.astro";
-import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import type { CollectionEntry } from "astro:content";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 import { getResourcesByLang } from "../../../lib/collections";
 import { formatDate } from "../../../lib/format-date";
+import { v2DiscordUrl, v2SupportUrl } from "../../../lib/v2Links";
 
-const entries = (await getResourcesByLang("en")).slice(0, 6);
+type ResourceEntry = CollectionEntry<"resources">;
+type ResourceCategory = ResourceEntry["data"]["category"];
+
+const entries = await getResourcesByLang("en");
+
+const sortByOrder = (items: ResourceEntry[]) =>
+  [...items].sort((a, b) =>
+    a.data.order === b.data.order
+      ? a.data.title.localeCompare(b.data.title)
+      : a.data.order - b.data.order,
+  );
+
+const categoryMeta: Record<
+  ResourceCategory,
+  {
+    label: string;
+    shortLabel: string;
+    title: string;
+    summary: string;
+    icon: string;
+  }
+> = {
+  "start-here": {
+    label: "Start Here",
+    shortLabel: "Start",
+    title: "Open the table without losing momentum.",
+    summary:
+      "Install the apps, set up your first journal, and learn the core Mythic rhythm.",
+    icon: "fa-solid fa-compass",
+  },
+  "adventure-journals": {
+    label: "Adventure Journals",
+    shortLabel: "Journals",
+    title: "Keep the story legible between sessions.",
+    summary:
+      "Capture scenes, protect exports, and recover quickly when something feels off.",
+    icon: "fa-solid fa-book-journal-whills",
+  },
+  "dice-roller": {
+    label: "Dice Roller",
+    shortLabel: "Dice",
+    title: "Turn dice syntax into repeatable tools.",
+    summary:
+      "Save formulas, import collections, and shape rolls around the system at your table.",
+    icon: "fa-solid fa-dice-d20",
+  },
+  "custom-tables": {
+    label: "Custom Tables",
+    shortLabel: "Tables",
+    title: "Build your own oracle shelves.",
+    summary:
+      "Create, organize, link, import, and export tables for improvising on the fly.",
+    icon: "fa-solid fa-table-list",
+  },
+  advanced: {
+    label: "Schemas & Deep Dives",
+    shortLabel: "Schemas",
+    title: "Reference shapes for exports and integrations.",
+    summary:
+      "JSON structures, registry notes, and implementation details for deeper tooling.",
+    icon: "fa-solid fa-code-branch",
+  },
+};
+
+const guideCategories = [
+  "start-here",
+  "adventure-journals",
+  "dice-roller",
+  "custom-tables",
+] satisfies ResourceCategory[];
+
+const guideSections = guideCategories
+  .map((category) => ({
+    category,
+    ...categoryMeta[category],
+    items: sortByOrder(entries.filter((entry) => entry.data.category === category)),
+  }))
+  .filter((section) => section.items.length > 0);
+
+const advancedItems = sortByOrder(
+  entries.filter((entry) => entry.data.category === "advanced"),
+);
+
+const guideCount = entries.length - advancedItems.length;
+const updatedEntries = entries
+  .filter((entry) => entry.data.updated)
+  .sort(
+    (a, b) =>
+      (b.data.updated?.getTime() ?? 0) - (a.data.updated?.getTime() ?? 0),
+  );
+const latestUpdated = updatedEntries[0]?.data.updated;
+
+const firstResourceByCategory = (category: ResourceCategory) =>
+  sortByOrder(entries.filter((entry) => entry.data.category === category))[0];
+
+const featuredResources: Array<{
+  label: string;
+  note: string;
+  icon: string;
+  entry: ResourceEntry;
+}> = [];
+
+const addFeaturedResource = (
+  category: ResourceCategory,
+  label: string,
+  note: string,
+  icon: string,
+) => {
+  const entry = firstResourceByCategory(category);
+  if (entry) {
+    featuredResources.push({ label, note, icon, entry });
+  }
+};
+
+addFeaturedResource(
+  "start-here",
+  "First session",
+  "Begin with the core Mythic flow.",
+  "fa-solid fa-route",
+);
+addFeaturedResource(
+  "dice-roller",
+  "Dice syntax",
+  "Turn formulas into saved tools.",
+  "fa-solid fa-dice",
+);
+addFeaturedResource(
+  "custom-tables",
+  "Table building",
+  "Shape custom oracle content.",
+  "fa-solid fa-layer-group",
+);
+
+const searchEntries = sortByOrder(entries).map((entry) => ({
+  id: entry.id,
+  title: entry.data.title,
+  summary: entry.data.summary,
+  category: categoryMeta[entry.data.category].label,
+  duration: entry.data.duration ?? null,
+  updated: entry.data.updated ?? null,
+  searchText: [
+    entry.data.title,
+    entry.data.summary,
+    categoryMeta[entry.data.category].label,
+    entry.data.duration ?? "",
+    ...(entry.data.tags ?? []),
+    ...(entry.data.keywords ?? []),
+  ].join(" "),
+}));
 ---
 
-<V2Layout
-  title="Jason Holt Digital - V2 Resources Preview"
-  description="Preview of the calmer V2 documentation shell."
-  theme="refined"
+<V2RefinedLayout
+  title="Resources - Jason Holt Digital"
+  description="Guides and reference docs for the official Mythic GME 2e companion apps."
+  canonicalPath="/v2/resources/"
+  mainClass="resources-page"
+  theme="munoz"
 >
-  <V2UtilBar />
-  <V2Header />
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/resources.css" />
+  </Fragment>
 
-  <main>
-    <V2PageHeader
-      badge="Resources preview"
-      title="A calmer V2 shell for documentation-heavy pages."
-      intro="The homepage can carry most of the marketing weight, but documentation pages need better scanning, lower visual noise, and strong links into search and support."
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="resources-hero" id="resources" aria-labelledby="resources-hero-title">
+    <img
+      class="resources-hero__art resources-hero__art--map"
+      src="/v2/assets/stamp-art10.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="resources-hero__art resources-hero__art--figure"
+      src="/v2/assets/stamp-beast.png"
+      alt=""
+      aria-hidden="true"
     />
 
-    <section class="v2-docs-band">
-      <div class="v2-wrap">
-        <article class="v2-docs-band__panel">
-          <p class="v2-card__kicker">Design principle</p>
-          <h2>Keep Command+K and deep-link docs as fast paths, not afterthoughts.</h2>
-          <p>
-            This preview uses real resource entries to test how the redesigned
-            shell behaves when the job is helping someone find an answer
-            quickly, not converting them on the homepage.
-          </p>
-        </article>
+    <div class="wrap resources-hero__grid">
+      <div class="resources-hero__copy">
+        <p class="eyebrow hero-eyebrow">
+          <span class="eyebrow-num">01</span>
+          Mythic field index
+        </p>
+        <h1 id="resources-hero-title" class="hero-title resources-hero__title">
+          Guides for keeping solo play <em>moving</em>.
+        </h1>
+        <p class="hero-lead resources-hero__lead">
+          Real support docs for the official Mythic GME apps: first-session
+          setup, journals, dice formulas, custom tables, and export references.
+        </p>
+        <div class="cta-row resources-hero__actions" aria-label="Primary resource actions">
+          <a class="btn btn--primary btn--lg" href="/resources/getting-started-with-the-mythic-apps/">
+            <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
+            Start reading
+          </a>
+          <a class="btn btn--accent btn--lg" href="/v2/resources/#guide-index">
+            <i class="fa-solid fa-map" aria-hidden="true"></i>
+            Browse index
+          </a>
+        </div>
+        <ul class="stats resources-proof" aria-label="Resource library highlights">
+          <li class="stat">
+            <span class="stat-n">{guideCount}</span>
+            <span class="stat-l">Guides</span>
+          </li>
+          <li class="stat">
+            <span class="stat-n">{advancedItems.length}</span>
+            <span class="stat-l">References</span>
+          </li>
+          <li class="stat">
+            <span class="stat-n">{latestUpdated ? formatDate(latestUpdated) : "Current"}</span>
+            <span class="stat-l">Latest update</span>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <section class="v2-section" aria-labelledby="v2-resource-grid-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Real content</p>
-          <h2 id="v2-resource-grid-title" class="v2-section__title">Existing guides in the new shell.</h2>
-          <p class="v2-section__intro">
-            This is where the redesign proves whether it can support the real
-            site architecture instead of just a single landing page.
-          </p>
-        </header>
+      <aside
+        class="resources-finder"
+        aria-label="Search resource guides"
+        data-resource-search-root
+      >
+        <div class="resources-finder__stamp" aria-hidden="true">Docs desk</div>
+        <div class="resources-finder__head">
+          <p class="resources-finder__kicker">Find the right page</p>
+          <h2>Search the field notes.</h2>
+        </div>
+        <div class="resources-search">
+          <label class="resources-search__label" for="resource-search-input">
+            Resource search
+          </label>
+          <div class="resources-search__control">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input
+              id="resource-search-input"
+              class="resources-search__input"
+              type="search"
+              name="resource-search"
+              placeholder="Search formulas, journals, tables..."
+              autocomplete="off"
+              aria-autocomplete="list"
+              aria-controls="resource-search-dropdown"
+              aria-expanded="false"
+              data-resource-search-input
+            />
+          </div>
+          <div
+            id="resource-search-dropdown"
+            class="resources-search__dropdown"
+            role="listbox"
+            aria-label="Resource search results"
+            hidden
+            data-resource-search-dropdown
+          >
+            <ul class="resources-search__results" role="presentation">
+              {
+                searchEntries.map((entry, index) => (
+                  <li
+                    id={`resource-search-option-${index}`}
+                    role="option"
+                    aria-selected="false"
+                    data-resource-search-item
+                    data-search={entry.searchText}
+                    hidden
+                  >
+                    <a href={`/resources/${entry.id}/`} tabindex="-1">
+                      <span class="resources-search__result-title">{entry.title}</span>
+                      <span class="resources-search__result-summary">
+                        {entry.summary}
+                      </span>
+                      <span class="resources-search__result-meta">
+                        {entry.category}
+                        {entry.duration && <> / {entry.duration}</>}
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="resources-search__empty" data-resource-search-empty hidden>
+              No matching field notes.
+            </p>
+            <p
+              class="resources-search__status"
+              role="status"
+              aria-live="polite"
+              data-resource-search-status
+            >
+            </p>
+          </div>
+        </div>
 
-        <div class="v2-docs-grid">
-          {
-            entries.map((entry) => (
-              <a class="v2-doc-card" href={`/resources/${entry.id}/`}>
-                <span class="v2-doc-card__eyebrow">{entry.data.category}</span>
-                <h3>{entry.data.title}</h3>
-                <p>{entry.data.summary}</p>
-                <span class="v2-doc-card__meta">
-                  {entry.data.duration && <span>{entry.data.duration}</span>}
-                  {entry.data.updated && <span>Updated {formatDate(entry.data.updated)}</span>}
+        {
+          featuredResources.length > 0 && (
+            <nav class="resources-fast" aria-label="Fast resource paths">
+              {featuredResources.map((item) => (
+                <a href={`/resources/${item.entry.id}/`}>
+                  <i class={item.icon} aria-hidden="true"></i>
+                  <span>
+                    <strong>{item.label}</strong>
+                    <small>{item.note}</small>
+                  </span>
+                </a>
+              ))}
+            </nav>
+          )
+        }
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec resources-map" id="guide-index" aria-labelledby="guide-index-title">
+    <div class="wrap resources-map__head">
+      <div>
+        <p class="eyebrow">
+          <span class="eyebrow-num">02</span>
+          Guide index
+        </p>
+        <h2 id="guide-index-title" class="sec-title">
+          Read by job, not by release date.
+        </h2>
+      </div>
+      <p class="sec-sub resources-map__intro">
+        Each shelf pulls from the live English resource collection and points to
+        the current production guide.
+      </p>
+    </div>
+
+    <div class="wrap resources-index">
+      {
+        guideSections.map((section, sectionIndex) => (
+          <section class="resources-index__section" aria-labelledby={`${section.category}-title`}>
+            <div class="resources-index__label">
+              <span class="resources-index__number">
+                {String(sectionIndex + 2).padStart(2, "0")}
+              </span>
+              <i class={section.icon} aria-hidden="true"></i>
+              <p>{section.label}</p>
+            </div>
+            <div class="resources-index__body">
+              <header>
+                <h3 id={`${section.category}-title`}>{section.title}</h3>
+                <p>{section.summary}</p>
+              </header>
+              <ol class="resources-list">
+                {section.items.map((item, itemIndex) => (
+                  <li>
+                    <a class="resources-list__link" href={`/resources/${item.id}/`}>
+                      <span class="resources-list__ix">
+                        {String(itemIndex + 1).padStart(2, "0")}
+                      </span>
+                      <span class="resources-list__copy">
+                        <span class="resources-list__title">{item.data.title}</span>
+                        <span class="resources-list__summary">{item.data.summary}</span>
+                        <span class="resources-list__meta">
+                          {item.data.duration && <span>{item.data.duration}</span>}
+                          <span>{categoryMeta[item.data.category].shortLabel}</span>
+                          {item.data.updated && <span>Updated {formatDate(item.data.updated)}</span>}
+                        </span>
+                      </span>
+                      <span class="resources-list__arrow" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    advancedItems.length > 0 && (
+      <section class="resources-schemas" id="schemas" aria-labelledby="schemas-title">
+        <img
+          class="resources-schemas__art"
+          src="/v2/assets/art-18.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="wrap resources-schemas__grid">
+          <div class="resources-schemas__intro">
+            <p class="eyebrow">
+              <span class="eyebrow-num">06</span>
+              Schema shelf
+            </p>
+            <h2 id="schemas-title" class="sec-title">
+              Export references for the tinkerers.
+            </h2>
+            <p class="sec-sub">
+              The deep-dive pages stay close to the data shapes: formulas,
+              journals, categories, and custom tables.
+            </p>
+          </div>
+          <div class="resources-schemas__list">
+            {advancedItems.map((item) => (
+              <a class="resources-schema-row" href={`/resources/${item.id}/`}>
+                <span>
+                  <strong>{item.data.title}</strong>
+                  <small>{item.data.summary}</small>
+                </span>
+                <span class="resources-schema-row__meta">
+                  {item.data.duration ?? categoryMeta.advanced.shortLabel}
                 </span>
               </a>
-            ))
-          }
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    )
+  }
 
-  <V2Footer />
-</V2Layout>
+  <section class="sec resources-support" aria-labelledby="resources-support-title">
+    <img
+      class="resources-support__art"
+      src="/v2/assets/stamp-wastelander.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="wrap resources-support__grid">
+      <div>
+        <p class="eyebrow">
+          <span class="eyebrow-num">07</span>
+          Still stuck
+        </p>
+        <h2 id="resources-support-title" class="sec-title">
+          Bring the odd case to support.
+        </h2>
+        <p class="sec-sub">
+          Screenshots, exports, and edge cases are easier to solve in a direct
+          thread than in a generic docs page.
+        </p>
+      </div>
+      <div class="resources-support__actions">
+        <a class="btn btn--primary btn--lg" href={v2SupportUrl}>
+          <i class="fa-solid fa-life-ring" aria-hidden="true"></i>
+          Support hub
+        </a>
+        <a
+          class="btn btn--ghost btn--lg"
+          href={v2DiscordUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-discord" aria-hidden="true"></i>
+          Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const resourceSearchRoot = document.querySelector("[data-resource-search-root]");
+
+    if (resourceSearchRoot) {
+      const input = resourceSearchRoot.querySelector("[data-resource-search-input]");
+      const dropdown = resourceSearchRoot.querySelector("[data-resource-search-dropdown]");
+      const items = [
+        ...resourceSearchRoot.querySelectorAll("[data-resource-search-item]"),
+      ];
+      const empty = resourceSearchRoot.querySelector("[data-resource-search-empty]");
+      const status = resourceSearchRoot.querySelector("[data-resource-search-status]");
+      let activeIndex = -1;
+
+      const visibleItems = () => items.filter((item) => !item.hidden);
+
+      const closeDropdown = () => {
+        dropdown?.setAttribute("hidden", "");
+        input?.setAttribute("aria-expanded", "false");
+        input?.removeAttribute("aria-activedescendant");
+        activeIndex = -1;
+        items.forEach((item) => item.setAttribute("aria-selected", "false"));
+      };
+
+      const setActiveItem = (index) => {
+        const visible = visibleItems();
+        items.forEach((item) => item.setAttribute("aria-selected", "false"));
+
+        if (!visible.length) {
+          activeIndex = -1;
+          input?.removeAttribute("aria-activedescendant");
+          return;
+        }
+
+        activeIndex = ((index % visible.length) + visible.length) % visible.length;
+        const active = visible[activeIndex];
+        active?.setAttribute("aria-selected", "true");
+        if (active?.id) {
+          input?.setAttribute("aria-activedescendant", active.id);
+        }
+        active?.scrollIntoView({ block: "nearest" });
+      };
+
+      const filterResources = () => {
+        const query = (input?.value ?? "").trim().toLowerCase();
+
+        if (!query) {
+          items.forEach((item) => {
+            item.hidden = true;
+          });
+          empty?.setAttribute("hidden", "");
+          if (status) status.textContent = "";
+          closeDropdown();
+          return;
+        }
+
+        let matchCount = 0;
+        items.forEach((item) => {
+          const haystack = (item.dataset.search ?? "").toLowerCase();
+          const matches = haystack.includes(query);
+          item.hidden = !matches;
+          if (matches) matchCount += 1;
+        });
+
+        dropdown?.removeAttribute("hidden");
+        input?.setAttribute("aria-expanded", "true");
+        empty?.toggleAttribute("hidden", matchCount > 0);
+        if (status) {
+          status.textContent =
+            matchCount === 1 ? "1 resource found" : `${matchCount} resources found`;
+        }
+        setActiveItem(matchCount > 0 ? 0 : -1);
+      };
+
+      input?.addEventListener("input", filterResources);
+      input?.addEventListener("keydown", (event) => {
+        const visible = visibleItems();
+
+        if (event.key === "ArrowDown" && visible.length) {
+          event.preventDefault();
+          setActiveItem(activeIndex + 1);
+        }
+
+        if (event.key === "ArrowUp" && visible.length) {
+          event.preventDefault();
+          setActiveItem(activeIndex - 1);
+        }
+
+        if (event.key === "Enter" && visible[activeIndex]) {
+          event.preventDefault();
+          visible[activeIndex].querySelector("a")?.click();
+        }
+
+        if (event.key === "Escape") {
+          input.value = "";
+          closeDropdown();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const index = visibleItems().indexOf(item);
+          if (index >= 0) setActiveItem(index);
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!resourceSearchRoot.contains(event.target)) {
+          closeDropdown();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        const activeElement = document.activeElement;
+        const isTyping =
+          activeElement?.matches?.("input, textarea, select, [contenteditable='true']");
+
+        if (event.key === "/" && !isTyping) {
+          event.preventDefault();
+          input?.focus();
+        }
+      });
+    }
+  </script>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

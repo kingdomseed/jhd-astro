@@ -1,225 +1,537 @@
 ---
-import { Image } from "astro:assets";
-import V2Layout from "../../../layouts/V2Layout.astro";
-import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
-import V2Header from "../../../components/v2/layout/V2Header.astro";
-import V2Footer from "../../../components/v2/layout/V2Footer.astro";
-import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
-import mobileOne from "../../../assets/mobile/mobile-1.png";
-import mobileFive from "../../../assets/mobile/mobile-5.png";
-import desktopOne from "../../../assets/desktop/desktop-1.png";
-import desktopSix from "../../../assets/desktop/desktop-6.png";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 
-const appCards = [
+const storeLinks = {
+  apple: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
+  google:
+    "https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e",
+  amazon:
+    "https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9",
+  microsoft: "https://apps.microsoft.com/detail/9n39b8hj3cdg",
+  itch: "https://jasonholtdigital.itch.io/mythic-gme-digital",
+};
+
+const mobileApp = {
+  title: "Mythic GME Mobile",
+  label: "Mobile app",
+  whoItsFor:
+    "Solo role-players who want less lookup and more story, anywhere.",
+  summary:
+    "The phone-first companion keeps the official Mythic flow close at hand: fate checks, scenes, adventure journaling, custom tables, and dice without the table-spread sprawl.",
+  features: [
+    "Fate Chart & streamlined Fate Check",
+    "Ask Your Fate Question: write first, then roll",
+    "Characters, Threads, Features, & Scenes",
+    "Adventure log with markdown & spell check",
+    "Custom tables: create, import, link, export",
+    "Customizable dice roller with saved formulas",
+    "Accessibility-first: screen reader, color-blind, left-hand modes",
+  ],
+  officialContent: [
+    "50 core tables from Mythic GME 2e",
+    "Expanded Features unlock grows the library to 160+ tables",
+    "Random & Prepared Adventure Event Focus tables",
+    "New official content added with major releases",
+  ],
+  note:
+    "IAP unlocks are permanent, not subscription. Features you unlock plus any new pro features added within 12 months stay unlocked forever.",
+  screenshots: [
+    {
+      src: "/v2/assets/mobile-1.png",
+      alt: "Mythic GME Mobile Fate Chart screen",
+      label: "Fate Chart",
+    },
+    {
+      src: "/v2/assets/mobile-5.png",
+      alt: "Mythic GME Mobile adventure log screen",
+      label: "Adventure Log",
+    },
+    {
+      src: "/v2/assets/mobile-7.png",
+      alt: "Mythic GME Mobile custom tables screen",
+      label: "Custom Tables",
+    },
+  ],
+  links: [
+    {
+      label: "Apple App Store",
+      href: storeLinks.apple,
+      icon: "fa-brands fa-apple",
+    },
+    {
+      label: "Google Play",
+      href: storeLinks.google,
+      icon: "fa-brands fa-google-play",
+    },
+    {
+      label: "Amazon Appstore",
+      href: storeLinks.amazon,
+      icon: "fa-brands fa-amazon",
+    },
+  ],
+};
+
+const desktopApp = {
+  title: "Mythic GME Digital",
+  label: "Desktop app",
+  whoItsFor:
+    "PC/Mac/Linux players who want a focused, extended-session layout.",
+  summary:
+    "The desktop edition opens the Mythic table into a wider working surface, built for long sessions, keyboard flow, panel layouts, and all-in purchase clarity.",
+  features: [
+    "All mobile features and systems",
+    "Customizable panel layout: drag, resize, arrange",
+    "Undo with Cmd/Ctrl+Z for any action",
+    "In-app Help Center with searchable guides",
+    "Full desktop layout for extended sessions",
+    "Everything included: no unlocks, no subscriptions",
+  ],
+  officialContent: [
+    "All official content spanning the Mythic-verse",
+    "No in-app purchases or subscriptions",
+    "All tables and features unlocked up front",
+  ],
+  note:
+    "Mac App Store version is a mobile + desktop bundle and includes in-app unlocks for additional content and features.",
+  screenshots: [
+    {
+      src: "/v2/assets/desktop-1.png",
+      alt: "Mythic GME Digital desktop workspace",
+      label: "Workspace",
+    },
+    {
+      src: "/v2/assets/desktop-6.png",
+      alt: "Mythic GME Digital desktop panel layout",
+      label: "Panels",
+    },
+    {
+      src: "/v2/assets/desktop-7.png",
+      alt: "Mythic GME Digital desktop journal and oracle layout",
+      label: "Long Sessions",
+    },
+  ],
+  links: [
+    {
+      label: "itch.io DRM-free",
+      href: storeLinks.itch,
+      icon: "fa-brands fa-itch-io",
+    },
+    {
+      label: "Microsoft Store",
+      href: storeLinks.microsoft,
+      icon: "fa-brands fa-windows",
+    },
+  ],
+};
+
+const bookLinks = [
   {
-    status: "Live now",
-    title: "Mythic GME Mobile",
-    summary:
-      "The fastest path into Mythic on iPhone, iPad, Android, and Amazon devices.",
-    copy:
-      "Built for quick solo play, journaling, custom tables, and portable reference without sacrificing the official Mythic flow.",
-    image: mobileOne,
-    imageAlt: "Mythic GME Mobile Fate Chart screen",
-    platforms: ["iOS", "Android", "Amazon"],
-    cta: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
-    ctaLabel: "Open mobile app listing",
+    title: "Mythic GME 2e",
+    body: "The complete solo RPG system that started it all.",
+    href:
+      "https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition",
   },
   {
-    status: "Live now",
-    title: "Mythic GME Digital",
-    summary:
-      "Desktop Mythic for longer sessions, denser workflows, and a more spacious play surface.",
-    copy:
-      "The desktop product deserves equal weight in the new design, with its own layout story instead of living as a secondary detail on the current site.",
-    image: desktopOne,
-    imageAlt: "Mythic GME Digital desktop workspace",
-    platforms: ["Windows", "macOS", "Linux"],
-    cta: "https://jasonholtdigital.itch.io/mythic-gme-digital",
-    ctaLabel: "Open desktop app listing",
+    title: "Adventure Crafter",
+    body: "Adventure generation system for dynamic storylines.",
+    href: "https://www.drivethrurpg.com/product/261479/The-Adventure-Crafter",
   },
 ];
 
-const futureApps = [
+const sourceLinks = [
   {
-    label: "Next in line",
-    title: "Adventure Crafter",
+    title: "icloud_storage_plus",
     body:
-      "A natural future addition to the portfolio section, with room for coming-soon states that still feel intentional.",
+      "Flutter plugin for iCloud document storage with coordinated file access.",
+    href: "https://github.com/kingdomseed/icloud_storage_plus",
   },
   {
-    label: "Portfolio model",
-    title: "Official Word Mill app line",
-    body:
-      "The V2 app page should be able to grow into a studio catalog without throwing away the flagship Mythic story.",
-  },
-  {
-    label: "System need",
-    title: "Shared app data",
-    body:
-      "This page is also the clearest argument for a future apps content collection that feeds homepage rails and compare surfaces.",
+    title: "mythic_dice_parser",
+    body: "Dart library for parsing dice notation that powers the app roller.",
+    href: "https://github.com/kingdomseed/mythic-dice-parser",
   },
 ];
 ---
 
-<V2Layout
-  title="Jason Holt Digital - V2 Apps Preview"
-  description="Preview of the V2 portfolio-style apps page."
-  theme="refined"
+<V2RefinedLayout
+  title="Mythic GME Apps — Jason Holt Digital"
+  description="Official licensed Mythic GME 2e companion apps for mobile and desktop."
+  canonicalPath="/v2/apps/"
+  theme="munoz"
 >
-  <V2UtilBar />
-  <V2Header />
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/apps.css" />
+  </Fragment>
 
-  <main>
-    <V2PageHeader
-      badge="Apps preview"
-      title="A portfolio-style apps page for the official app line."
-      intro="This route tests the shift from a Mythic-only sales page to a clearer product surface that can represent current apps, upcoming releases, and the broader Word Mill ecosystem."
-    />
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
 
-    <section class="v2-apps-hero-band">
-      <div class="v2-wrap">
-        <article class="v2-apps-hero-band__panel">
-          <div>
-            <p class="v2-card__kicker">Design goal</p>
-            <h2>Keep Mythic as the flagship, but stop hiding the product family.</h2>
-          </div>
-          <p>
-            The new homepage can sell the flagship experience, while this page
-            becomes the cleaner compare-and-discover surface for the whole
-            official line.
+  <div id="apps" class="apps-page">
+    <section class="hero apps-hero" id="home" aria-labelledby="apps-hero-title">
+      <img
+        class="apps-hero__art"
+        src="/v2/assets/stamp-art20.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="wrap hero-grid apps-hero__grid">
+        <div class="apps-hero__copy">
+          <p class="eyebrow hero-eyebrow">
+            <span class="eyebrow-num">01</span>
+            Official licensed companion apps
           </p>
+          <h1 id="apps-hero-title" class="hero-title">
+            Mythic GME <em>Apps</em>
+          </h1>
+          <p class="hero-lead">
+            Mobile and desktop companions for Mythic GME 2e, built for solo
+            play that stays in motion instead of getting buried in lookup.
+          </p>
+          <div class="cta-row" aria-label="Primary app actions">
+            <a
+              class="btn btn--primary btn--lg"
+              href={storeLinks.apple}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              Get mobile
+            </a>
+            <a
+              class="btn btn--accent btn--lg"
+              href={storeLinks.itch}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+              Get desktop
+            </a>
+          </div>
+          <ul class="stats apps-proof" aria-label="App highlights">
+            <li class="stat">
+              <span class="stat-n">2</span>
+              <span class="stat-l">Live app formats</span>
+            </li>
+            <li class="stat">
+              <span class="stat-n">160+</span>
+              <span class="stat-l">Expandable tables</span>
+            </li>
+            <li class="stat">
+              <span class="stat-n">0</span>
+              <span class="stat-l">Subscriptions</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-stage apps-stage" aria-label="Mobile app screenshots">
+          <div class="stage-plate" aria-hidden="true"></div>
+          <div class="stage-slab" aria-hidden="true"></div>
+          <div class="stage-badge">Mobile / Fate</div>
+          <div class="phone-carousel">
+            {
+              mobileApp.screenshots.map((shot, index) => (
+                <figure class={`phone-slide${index === 0 ? " on" : ""}`}>
+                  <img
+                    src={shot.src}
+                    alt={shot.alt}
+                    data-label={shot.label}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </figure>
+              ))
+            }
+            <div class="phone-steps" id="phoneSteps" aria-label="Hero screenshots"></div>
+            <p class="phone-caption" aria-live="polite">
+              <span class="ix" id="captIx">01 / 03</span>
+              <span id="captLabel">Fate Chart</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee apps-marquee" aria-label="Available platforms">
+      <div class="marquee-track" id="marq"></div>
+    </section>
+
+    <section class="sec app-product" aria-labelledby="mobile-title">
+      <div class="wrap app-product__grid">
+        <div class="app-product__media">
+          <p class="app-product__stamp">{mobileApp.label}</p>
+          <div class="app-product__phone-stack" aria-label="Mobile screenshots">
+            {
+              mobileApp.screenshots.map((shot, index) => (
+                <img
+                  class={`app-product__phone app-product__phone--${index + 1}`}
+                  src={shot.src}
+                  alt={shot.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))
+            }
+          </div>
+        </div>
+        <article class="app-product__body">
+          <p class="eyebrow">
+            <span class="eyebrow-num">02</span>
+            {mobileApp.label}
+          </p>
+          <h2 id="mobile-title" class="sec-title">{mobileApp.title}</h2>
+          <p class="app-product__for">{mobileApp.whoItsFor}</p>
+          <p class="app-product__summary">{mobileApp.summary}</p>
+          <div class="app-product__details">
+            <section aria-labelledby="mobile-features-title">
+              <h3 id="mobile-features-title">What it does</h3>
+              <ul>
+                {mobileApp.features.map((feature) => <li>{feature}</li>)}
+              </ul>
+            </section>
+            <section aria-labelledby="mobile-content-title">
+              <h3 id="mobile-content-title">Official content</h3>
+              <ul>
+                {mobileApp.officialContent.map((item) => <li>{item}</li>)}
+              </ul>
+            </section>
+          </div>
+          <p class="app-product__note">{mobileApp.note}</p>
+          <nav class="store-strip" aria-label={`${mobileApp.title} stores`}>
+            {
+              mobileApp.links.map((link) => (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <i class={link.icon} aria-hidden="true"></i>
+                  {link.label}
+                </a>
+              ))
+            }
+          </nav>
         </article>
       </div>
     </section>
 
-    <section class="v2-section" aria-labelledby="v2-app-cards-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Current apps</p>
-          <h2 id="v2-app-cards-title" class="v2-section__title">Two live products, one shared studio story.</h2>
-          <p class="v2-section__intro">
-            These cards use real screenshots and a consistent structure so the
-            V2 system can scale when more official apps arrive.
+    <section class="billboard apps-billboard" aria-labelledby="apps-workspace-title">
+      <img class="bb-art-bg" src="/v2/assets/art-15.png" alt="" aria-hidden="true" />
+      <div class="wrap bb-grid">
+        <div class="bb-head">
+          <p class="eyebrow bb-eyebrow">
+            <span class="eyebrow-num">03</span>
+            Product rhythm
           </p>
-        </header>
-
-        <div class="v2-app-grid">
+          <h2 id="apps-workspace-title" class="bb-title">
+            The apps share one Mythic table, then change shape for the device.
+          </h2>
+          <p class="bb-lead">
+            Keep the same oracle, meaning tables, journaling, and dice logic;
+            shift the surface from touch-first portability to desktop campaign
+            focus.
+          </p>
+          <ul class="bb-list">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Fate checks stay fast</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Custom tables travel with the workflow</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Desktop opens up the long-session surface</li>
+          </ul>
+        </div>
+        <div class="bb-viewer" aria-label="App screenshot carousel">
           {
-            appCards.map((app) => (
-              <article class="v2-app-card">
-                <div class="v2-app-card__media">
-                  <Image
-                    src={app.image}
-                    alt={app.imageAlt}
-                    widths={[720]}
-                    sizes="(max-width: 900px) 100vw, 720px"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="v2-app-card__body">
-                  <p class="v2-app-card__status">{app.status}</p>
-                  <h3>{app.title}</h3>
-                  <p class="v2-app-card__summary">{app.summary}</p>
-                  <p>{app.copy}</p>
-                  <ul class="v2-app-card__platforms" role="list">
-                    {app.platforms.map((platform) => <li>{platform}</li>)}
-                  </ul>
-                  <p class="v2-app-card__cta">
-                    <a class="v2-btn v2-btn--ghost" href={app.cta} target="_blank" rel="noopener noreferrer">
-                      {app.ctaLabel}
-                    </a>
-                  </p>
-                </div>
-              </article>
-            ))
+            [...mobileApp.screenshots.slice(0, 1), ...desktopApp.screenshots].map(
+              (shot, index) => (
+                <article
+                  class={`bb-slide${index === 0 ? " on" : ""}`}
+                  data-orient={shot.src.includes("desktop") ? "wide" : "phone"}
+                >
+                  <div class="bb-slide-phone">
+                    <span class="bb-slide-platform">{shot.label}</span>
+                    <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+                  </div>
+                  <div class="bb-slide-body">
+                    <span class="bb-slide-ix">
+                      {String(index + 1).padStart(2, "0")} / 04
+                    </span>
+                    <h3>{shot.label}</h3>
+                    <p>
+                      {shot.src.includes("desktop")
+                        ? "A wider Mythic surface for arranging panels, reading context, and keeping a campaign session open."
+                        : "A compact Mythic surface for quick questions, fast lookup, and play that fits anywhere."}
+                    </p>
+                  </div>
+                </article>
+              ),
+            )
           }
+          <div class="bb-controls" aria-label="Screenshot controls">
+            <button class="bb-ctrl" id="bbPrev" type="button" aria-label="Previous screenshot">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="bb-ctrl" id="bbNext" type="button" aria-label="Next screenshot">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="v2-section v2-section--tight" aria-labelledby="v2-compare-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Compare</p>
-          <h2 id="v2-compare-title" class="v2-section__title">The page should make the differences obvious at a glance.</h2>
-          <p class="v2-section__intro">
-            Even a light compare table helps the V2 system act like a real
-            product site instead of an art-directed mockup.
+    <section class="sec app-product app-product--desktop" aria-labelledby="desktop-title">
+      <div class="wrap app-product__grid">
+        <article class="app-product__body">
+          <p class="eyebrow">
+            <span class="eyebrow-num">04</span>
+            {desktopApp.label}
           </p>
-        </header>
-
-        <div class="v2-compare">
-          <div class="v2-compare__row v2-compare__row--head">
-            <span>Focus</span>
-            <span>Mobile</span>
-            <span>Desktop</span>
+          <h2 id="desktop-title" class="sec-title">{desktopApp.title}</h2>
+          <p class="app-product__for">{desktopApp.whoItsFor}</p>
+          <p class="app-product__summary">{desktopApp.summary}</p>
+          <div class="app-product__details">
+            <section aria-labelledby="desktop-features-title">
+              <h3 id="desktop-features-title">What it does</h3>
+              <ul>
+                {desktopApp.features.map((feature) => <li>{feature}</li>)}
+              </ul>
+            </section>
+            <section aria-labelledby="desktop-content-title">
+              <h3 id="desktop-content-title">Official content</h3>
+              <ul>
+                {desktopApp.officialContent.map((item) => <li>{item}</li>)}
+              </ul>
+            </section>
           </div>
-          <div class="v2-compare__row">
-            <span>Session style</span>
-            <span>Fast, portable, touch-first</span>
-            <span>Long-form, spacious, keyboard-friendly</span>
-          </div>
-          <div class="v2-compare__row">
-            <span>Best fit</span>
-            <span>On-the-go solo play</span>
-            <span>Focused campaign sessions</span>
-          </div>
-          <div class="v2-compare__row">
-            <span>Position in V2</span>
-            <span>Flagship mobile offer</span>
-            <span>Flagship desktop counterpart</span>
+          <p class="app-product__note">{desktopApp.note}</p>
+          <nav class="store-strip" aria-label={`${desktopApp.title} stores`}>
+            {
+              desktopApp.links.map((link) => (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <i class={link.icon} aria-hidden="true"></i>
+                  {link.label}
+                </a>
+              ))
+            }
+            <span class="store-strip__soon">
+              <i class="fa-brands fa-steam" aria-hidden="true"></i>
+              Steam planned
+            </span>
+          </nav>
+        </article>
+        <div class="app-product__media app-product__media--desktop">
+          <p class="app-product__stamp">{desktopApp.label}</p>
+          <div class="app-product__desktop-stack" aria-label="Desktop screenshots">
+            {
+              desktopApp.screenshots.map((shot, index) => (
+                <img
+                  class={`app-product__desktop app-product__desktop--${index + 1}`}
+                  src={shot.src}
+                  alt={shot.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))
+            }
           </div>
         </div>
       </div>
     </section>
 
-    <section class="v2-section" aria-labelledby="v2-future-apps-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Coming next</p>
-          <h2 id="v2-future-apps-title" class="v2-section__title">Future apps need a designed place to land.</h2>
-          <p class="v2-section__intro">
-            This is the future-facing part of the redesign: the site should
-            already know how to present planned work, not just live releases.
+    <section class="sec apps-source" id="resources" aria-labelledby="resources-title">
+      <div class="wrap apps-source__grid">
+        <div class="apps-source__intro">
+          <p class="eyebrow">
+            <span class="eyebrow-num">05</span>
+            Sources and companions
           </p>
-        </header>
-
-        <div class="v2-card-grid">
-          {
-            futureApps.map((item) => (
-              <article class="v2-card">
-                <p class="v2-card__kicker">{item.label}</p>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="v2-section v2-section--tight" aria-labelledby="v2-gallery-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Gallery</p>
-          <h2 id="v2-gallery-title" class="v2-section__title">The design should support both product detail and visual rhythm.</h2>
-          <p class="v2-section__intro">
-            A small gallery band lets this page feel visually rich without
-            depending on the homepage to do all of the heavy lifting.
+          <h2 id="resources-title" class="sec-title">
+            Built around the books, the community, and a few useful libraries.
+          </h2>
+          <p class="sec-sub">
+            The apps are companions, not replacements: the original books carry
+            the system, while app updates and open-source tools keep the digital
+            table moving.
           </p>
-        </header>
-
-        <div class="v2-gallery">
-          <article class="v2-gallery__item">
-            <Image src={mobileFive} alt="Mythic GME Mobile journaling screen" widths={[560]} sizes="(max-width: 900px) 100vw, 560px" loading="lazy" />
-          </article>
-          <article class="v2-gallery__item v2-gallery__item--wide">
-            <Image src={desktopSix} alt="Mythic GME Digital desktop panel layout" widths={[960]} sizes="(max-width: 900px) 100vw, 960px" loading="lazy" />
-          </article>
+        </div>
+        <div class="apps-source__shelves">
+          <section aria-labelledby="books-title">
+            <h3 id="books-title">Original books</h3>
+            {
+              bookLinks.map((book) => (
+                <a
+                  class="source-row"
+                  href={book.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <strong>{book.title}</strong>
+                    <small>{book.body}</small>
+                  </span>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              ))
+            }
+          </section>
+          <section aria-labelledby="source-title">
+            <h3 id="source-title">Open source</h3>
+            {
+              sourceLinks.map((source) => (
+                <a
+                  class="source-row"
+                  href={source.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <strong>{source.title}</strong>
+                    <small>{source.body}</small>
+                  </span>
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+              ))
+            }
+          </section>
         </div>
       </div>
     </section>
-  </main>
 
-  <V2Footer />
-</V2Layout>
+    <section class="sec apps-next" aria-labelledby="next-title">
+      <div class="wrap apps-next__grid">
+        <div>
+          <p class="eyebrow">
+            <span class="eyebrow-num">06</span>
+            Coming soon
+          </p>
+          <h2 id="next-title" class="sec-title">Adventure Crafter</h2>
+          <p class="sec-sub">
+            Solo players who want guided adventure creation with hooks and
+            twists: stay tuned for updates.
+          </p>
+        </div>
+        <div class="apps-next__panel">
+          <p>
+            Regular updates come from release notes, support conversations, and
+            feature requests. More than 60% of app improvements come directly
+            from community suggestions.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn--ghost" href="/v2/support/">
+              <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+              Support
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="http://feedback.jasonholtdigital.com/board"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+              Feature board
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

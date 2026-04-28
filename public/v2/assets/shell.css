@@ -1,0 +1,31 @@
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 999;
+  transform: translateY(-140%);
+  background: var(--jhd-ink);
+  color: var(--jhd-bg);
+  border: var(--border-base);
+  box-shadow: var(--shadow-hard);
+  padding: 10px 14px;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  transition: transform .18s var(--ease-standard);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+body.has-refined-drawer-open {
+  overflow: hidden;
+}
+
+.drawer-overlay {
+  pointer-events: none;
+}
+
+.drawer-overlay.open {
+  pointer-events: auto;
+}

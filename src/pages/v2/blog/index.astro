@@ -1,92 +1,306 @@
 ---
-import V2Layout from "../../../layouts/V2Layout.astro";
-import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
-import V2Header from "../../../components/v2/layout/V2Header.astro";
-import V2Footer from "../../../components/v2/layout/V2Footer.astro";
-import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 import { getBlogPostsByLang } from "../../../lib/collections";
 import { formatDate } from "../../../lib/format-date";
+import type { CollectionEntry } from "astro:content";
+
+type BlogEntry = CollectionEntry<"blog">;
+type CategoryName = BlogEntry["data"]["category"];
 
 const posts = await getBlogPostsByLang("en");
 const featuredEntry = posts[0];
-const listEntries = posts.slice(1, 7);
+const secondaryEntries = posts.slice(1, 3);
+const archiveEntries = posts.slice(3);
+const sampleCount = posts.filter((post) => post.data.isSample).length;
+const latestDate = featuredEntry ? formatDate(featuredEntry.data.date) : "Pending";
+
+const slugify = (value: string) => value.toLowerCase().replace(/\s+/g, "-");
+
+const categoryMeta: Partial<
+  Record<CategoryName, { description: string; icon: string }>
+> = {
+  "Release Notes": {
+    description: "Version notes, app changes, and what players can expect next.",
+    icon: "fa-solid fa-newspaper",
+  },
+  "Behind the Scenes": {
+    description: "Design process, tradeoffs, and the work behind the table.",
+    icon: "fa-solid fa-pen-nib",
+  },
+  Guides: {
+    description: "Practical walkthroughs for Mythic workflows and app systems.",
+    icon: "fa-solid fa-compass",
+  },
+  Community: {
+    description: "Player feedback, roadmap signals, and shared table stories.",
+    icon: "fa-solid fa-people-group",
+  },
+  Announcement: {
+    description: "Important product and publishing updates.",
+    icon: "fa-solid fa-bullhorn",
+  },
+};
+
+const categories = [...new Set(posts.map((post) => post.data.category))]
+  .sort()
+  .map((category) => ({
+    name: category,
+    count: posts.filter((post) => post.data.category === category).length,
+    description:
+      categoryMeta[category]?.description ?? `Posts filed under ${category}.`,
+    href: `/blog/category/${slugify(category)}/`,
+    icon: categoryMeta[category]?.icon ?? "fa-solid fa-folder-open",
+  }));
 ---
 
-<V2Layout
-  title="Jason Holt Digital - V2 Blog Preview"
-  description="Preview of the V2 editorial blog surface."
-  theme="refined"
+<V2RefinedLayout
+  title="Blog - Jason Holt Digital V2"
+  description="Release notes, build notes, and behind-the-scenes writing from Jason Holt Digital."
+  canonicalPath="/v2/blog/"
+  mainClass="blog-v2-main"
+  theme="munoz"
 >
-  <V2UtilBar />
-  <V2Header />
-
-  <main>
-    <V2PageHeader
-      badge="Blog preview"
-      title="An editorial shell for release notes, process, and community writing."
-      intro="The source theme already leans editorial. This route tests how that visual language behaves when the content is a stream of real posts instead of product sections."
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/blog.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Jason Holt Digital Blog"
     />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <div id="blog" class="blog-page">
+    <section class="blog-hero" aria-labelledby="blog-hero-title">
+      <img
+        class="blog-hero__stamp blog-hero__stamp--one"
+        src="/v2/assets/stamp-art15.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        class="blog-hero__stamp blog-hero__stamp--two"
+        src="/v2/assets/art-20.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="wrap blog-hero__grid">
+        <div class="blog-hero__copy">
+          <p class="eyebrow">
+            <span class="eyebrow-num">01</span>
+            Field notes from the Mythic table
+          </p>
+          <h1 id="blog-hero-title" class="blog-hero__title">
+            Blog <em>dispatches</em>
+          </h1>
+          <p class="blog-hero__lead">
+            Release notes first, then process notes, community signals, and the
+            occasional life update from the workbench.
+          </p>
+          <div class="blog-hero__actions" aria-label="Blog actions">
+            <a class="btn btn--primary btn--lg" href="/rss.xml">
+              <i class="fa-solid fa-rss" aria-hidden="true"></i>
+              RSS feed
+            </a>
+            <a class="btn btn--accent btn--lg" href="/blog/">
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              Public blog
+            </a>
+          </div>
+        </div>
+
+        <aside class="blog-ledger" aria-label="Blog archive summary">
+          <p class="blog-ledger__label">Archive ledger</p>
+          <dl>
+            <div>
+              <dt>Posts</dt>
+              <dd>{posts.length}</dd>
+            </div>
+            <div>
+              <dt>Latest</dt>
+              <dd>{latestDate}</dd>
+            </div>
+            <div>
+              <dt>Topics</dt>
+              <dd>{categories.length}</dd>
+            </div>
+            <div>
+              <dt>Samples</dt>
+              <dd>{sampleCount}</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
 
     {
-      featuredEntry && (
-        <section class="v2-blog-feature-wrap">
-          <div class="v2-wrap">
-            <article class="v2-blog-feature">
-              <div class="v2-blog-feature__flag">Latest</div>
-              <div class="v2-blog-feature__body">
-                <p class="v2-card__kicker">{featuredEntry.data.category}</p>
-                <h2>
-                  <a href={`/blog/${featuredEntry.id}/`}>{featuredEntry.data.title}</a>
-                </h2>
-                <p class="v2-blog-feature__summary">{featuredEntry.data.summary}</p>
-                <div class="v2-blog-feature__meta">
-                  <span>{formatDate(featuredEntry.data.date)}</span>
-                  <span>{featuredEntry.data.readTime}</span>
-                  {featuredEntry.data.isSample && <span>Sample</span>}
-                </div>
-                <p class="v2-blog-feature__cta">
-                  <a class="v2-btn v2-btn--ghost" href={`/blog/${featuredEntry.id}/`}>
-                    Read the current post
-                  </a>
-                </p>
+      featuredEntry ? (
+        <section class="blog-feature sec" aria-labelledby="blog-feature-title">
+          <div class="wrap blog-feature__grid">
+            <div class="blog-feature__index" aria-hidden="true">
+              <span>Latest</span>
+              <strong>01</strong>
+            </div>
+            <article class="blog-feature__story">
+              <div class="blog-meta-line">
+                <span>{featuredEntry.data.category}</span>
+                <span>{formatDate(featuredEntry.data.date)}</span>
+                <span>{featuredEntry.data.readTime}</span>
+                {featuredEntry.data.isSample && (
+                  <span class="blog-sample">Sample</span>
+                )}
               </div>
+              <h2 id="blog-feature-title">
+                <a href={`/blog/${featuredEntry.id}/`}>
+                  {featuredEntry.data.title}
+                </a>
+              </h2>
+              <p>{featuredEntry.data.summary}</p>
+              <a class="blog-feature__link" href={`/blog/${featuredEntry.id}/`}>
+                Read the latest dispatch
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+            <div class="blog-feature__plate" aria-hidden="true">
+              <img src="/v2/assets/stamp-redhair.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </section>
+      ) : (
+        <section class="blog-feature sec" aria-labelledby="blog-feature-title">
+          <div class="wrap">
+            <article class="blog-feature__story blog-feature__story--empty">
+              <p class="eyebrow">
+                <span class="eyebrow-num">02</span>
+                Archive pending
+              </p>
+              <h2 id="blog-feature-title">Blog posts are coming soon.</h2>
+              <p>Add English posts to the blog collection to populate this preview.</p>
             </article>
           </div>
         </section>
       )
     }
 
-    <section class="v2-section v2-section--tight" aria-labelledby="v2-blog-grid-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Recent posts</p>
-          <h2 id="v2-blog-grid-title" class="v2-section__title">A calmer grid for the rest of the writing.</h2>
-          <p class="v2-section__intro">
-            This keeps the visual language from the new theme while making sure
-            release notes and process posts stay easy to scan.
-          </p>
-        </header>
+    {
+      secondaryEntries.length > 0 && (
+        <section class="blog-broadsheet" aria-labelledby="blog-broadsheet-title">
+          <div class="wrap">
+            <div class="blog-section-kicker">
+              <p class="eyebrow">
+                <span class="eyebrow-num">02</span>
+                On the desk
+              </p>
+              <h2 id="blog-broadsheet-title">
+                Recent writing with the ink still drying.
+              </h2>
+            </div>
+            <div class="blog-broadsheet__grid">
+              {secondaryEntries.map((entry, index) => (
+                <article class="blog-broadsheet__story">
+                  <span class="blog-broadsheet__number" aria-hidden="true">
+                    {String(index + 2).padStart(2, "0")}
+                  </span>
+                  <div class="blog-meta-line">
+                    <span>{entry.data.category}</span>
+                    <span>{formatDate(entry.data.date)}</span>
+                    <span>{entry.data.readTime}</span>
+                    {entry.data.isSample && <span class="blog-sample">Sample</span>}
+                  </div>
+                  <h3>
+                    <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                  </h3>
+                  <p>{entry.data.summary}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
 
-        <div class="v2-blog-grid">
+    <section class="blog-archive sec" aria-labelledby="blog-archive-title">
+      <div class="wrap blog-archive__grid">
+        <div class="blog-archive__intro">
+          <p class="eyebrow">
+            <span class="eyebrow-num">03</span>
+            Archive stream
+          </p>
+          <h2 id="blog-archive-title" class="sec-title">
+            The running record.
+          </h2>
+          <p class="sec-sub">
+            Chronological release notes and longer notes stay together here so
+            players can trace how the apps have changed over time.
+          </p>
+        </div>
+
+        <div class="blog-archive__list">
           {
-            listEntries.map((entry) => (
-              <article class="v2-blog-card">
-                <p class="v2-blog-card__eyebrow">{entry.data.category}</p>
-                <h3>
-                  <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
-                </h3>
-                <p>{entry.data.summary}</p>
-                <div class="v2-blog-card__meta">
-                  <span>{formatDate(entry.data.date)}</span>
-                  <span>{entry.data.readTime}</span>
+            archiveEntries.map((entry, index) => (
+              <article class="blog-entry">
+                <span class="blog-entry__number" aria-hidden="true">
+                  {String(index + 4).padStart(2, "0")}
+                </span>
+                <div class="blog-entry__body">
+                  <div class="blog-meta-line">
+                    <span>{entry.data.category}</span>
+                    <span>{formatDate(entry.data.date)}</span>
+                    <span>{entry.data.readTime}</span>
+                    {entry.data.isSample && <span class="blog-sample">Sample</span>}
+                  </div>
+                  <h3>
+                    <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                  </h3>
+                  <p>{entry.data.summary}</p>
                 </div>
+                <a class="blog-entry__link" href={`/blog/${entry.id}/`}>
+                  Read
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
               </article>
             ))
           }
         </div>
       </div>
     </section>
-  </main>
 
-  <V2Footer />
-</V2Layout>
+    {
+      categories.length > 0 && (
+        <section class="blog-topics" aria-labelledby="blog-topics-title">
+          <div class="wrap blog-topics__grid">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-num">04</span>
+                Browse by topic
+              </p>
+              <h2 id="blog-topics-title">Find the right shelf.</h2>
+            </div>
+            <nav class="blog-topic-list" aria-label="Blog categories">
+              {categories.map((category) => (
+                <a class="blog-topic" href={category.href}>
+                  <i class={category.icon} aria-hidden="true"></i>
+                  <span>
+                    <strong>{category.name}</strong>
+                    <small>{category.description}</small>
+                  </span>
+                  <em>{category.count}</em>
+                </a>
+              ))}
+            </nav>
+          </div>
+        </section>
+      )
+    }
+  </div>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

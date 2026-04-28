@@ -1,0 +1,198 @@
+<script is:inline>
+/*EDITMODE-BEGIN*/
+const TWEAKS = {"primary":"default","secondary":"default","paper":"default","density":"default","round":"hard"};
+/*EDITMODE-END*/
+
+// ─── Carousel: hero phone ───
+const slides = [...document.querySelectorAll('.phone-slide')];
+const steps = document.getElementById('phoneSteps');
+const captLabel = document.getElementById('captLabel');
+const captIx = document.getElementById('captIx');
+let i = 0;
+if (slides.length && steps && captLabel && captIx) {
+  steps.innerHTML = slides.map((_, n) => `<button class="phone-step${n===0?' on':''}" data-i="${n}" aria-label="Slide ${n+1}"></button>`).join('');
+  const stepBtns = [...steps.querySelectorAll('.phone-step')];
+  function goHero(n){
+    i = ((n % slides.length) + slides.length) % slides.length;
+    slides.forEach((s,k)=>s.classList.toggle('on', k===i));
+    stepBtns.forEach((s,k)=>s.classList.toggle('on', k===i));
+    const img = slides[i]?.querySelector('img');
+    captLabel.textContent = img?.dataset.label || '';
+    captIx.textContent = `${String(i+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
+  }
+  stepBtns.forEach((b,n)=>b.addEventListener('click',()=>{goHero(n); resetHeroTimer();}));
+  let heroTimer = setInterval(()=>goHero(i+1), 4500);
+  function resetHeroTimer(){ clearInterval(heroTimer); heroTimer = setInterval(()=>goHero(i+1), 4500); }
+}
+
+// ─── Carousel: billboard ───
+const bbSlides = [...document.querySelectorAll('.bb-slide')];
+let bi = 0;
+const bbPrev = document.getElementById('bbPrev');
+const bbNext = document.getElementById('bbNext');
+if (bbSlides.length && bbPrev && bbNext) {
+  function goBB(n){
+    bi = ((n % bbSlides.length) + bbSlides.length) % bbSlides.length;
+    bbSlides.forEach((s,k)=>s.classList.toggle('on', k===bi));
+  }
+  bbPrev.addEventListener('click', ()=>{goBB(bi-1); resetBBTimer();});
+  bbNext.addEventListener('click', ()=>{goBB(bi+1); resetBBTimer();});
+  let bbTimer = setInterval(()=>goBB(bi+1), 5500);
+  function resetBBTimer(){ clearInterval(bbTimer); bbTimer = setInterval(()=>goBB(bi+1), 5500); }
+}
+
+// ─── Nav dropdown ───
+const ctaBtn = document.getElementById('ctaBtn');
+const menu = document.getElementById('menu');
+if (ctaBtn && menu) {
+  const menuItems = [...menu.querySelectorAll('a')];
+  function closeMenu(restoreFocus = false) {
+    menu.classList.remove('open');
+    ctaBtn.setAttribute('aria-expanded','false');
+    if (restoreFocus) ctaBtn.focus();
+  }
+  ctaBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = menu.classList.toggle('open');
+    ctaBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', e => {
+    if (!menu.contains(e.target) && !ctaBtn.contains(e.target)) closeMenu();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu(true);
+  });
+  menu.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const activeIndex = menuItems.indexOf(document.activeElement);
+    const nextIndex = e.key === 'ArrowDown'
+      ? (activeIndex + 1) % menuItems.length
+      : (activeIndex - 1 + menuItems.length) % menuItems.length;
+    menuItems[nextIndex]?.focus();
+  });
+}
+
+// ─── Mobile drawer ───
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+const drawerOv = document.getElementById('drawerOverlay');
+const drawerClose = document.getElementById('drawerClose');
+if (burger && drawer && drawerOv && drawerClose) {
+  let lastDrawerFocus = null;
+  const drawerLinks = [...drawer.querySelectorAll('a')];
+  const focusableDrawerItems = () => [...drawer.querySelectorAll('a, button')].filter((el) => !el.hasAttribute('disabled'));
+  function setDrawerState(open){
+    drawer.classList.toggle('open', open);
+    drawerOv.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    drawerOv.setAttribute('aria-hidden', String(!open));
+    drawer.inert = !open;
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('has-refined-drawer-open', open);
+  }
+  function openDrawer(){
+    lastDrawerFocus = document.activeElement instanceof HTMLElement ? document.activeElement : burger;
+    setDrawerState(true);
+    drawerClose.focus();
+  }
+  function closeDrawer(restoreFocus = true){
+    setDrawerState(false);
+    if (restoreFocus) (lastDrawerFocus || burger).focus();
+  }
+  function trapDrawerFocus(e) {
+    if (e.key !== 'Tab') return;
+    const items = focusableDrawerItems();
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (!first || !last) return;
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+  burger.addEventListener('click', openDrawer);
+  drawerOv.addEventListener('click', () => closeDrawer());
+  drawerClose.addEventListener('click', () => closeDrawer());
+  drawerLinks.forEach((link) => link.addEventListener('click', () => closeDrawer(false)));
+  document.addEventListener('keydown', e => {
+    if (!drawer.classList.contains('open')) return;
+    if (e.key === 'Escape') {
+      closeDrawer();
+      return;
+    }
+    trapDrawerFocus(e);
+  });
+}
+
+// ─── Scroll state ───
+const nav = document.getElementById('nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 20);
+  }, { passive: true });
+}
+
+// ─── Marquee content ───
+const marqItems = [
+  ['fa-brands fa-apple','iOS App Store'],
+  ['fa-brands fa-google-play','Google Play'],
+  ['fa-brands fa-amazon','Amazon Fire'],
+  ['fa-brands fa-windows','Microsoft Store'],
+  ['fa-brands fa-itch-io','itch.io Desktop'],
+  ['fa-solid fa-star','4.7 avg rating'],
+  ['fa-solid fa-users','2,000+ community'],
+  ['fa-solid fa-bolt','5,000+ installs'],
+];
+const renderMarq = () => marqItems.map(([ic,l])=>`<span class="marquee-item"><i class="${ic}"></i>${l}</span><span class="marquee-dot"></span>`).join('');
+const marq = document.getElementById('marq');
+if (marq) marq.innerHTML = renderMarq() + renderMarq();
+
+// ─── Tweaks ───
+const tweaksEl = document.getElementById('tweaks');
+function applyTweaks(t){
+  document.body.setAttribute('data-round', t.round || 'hard');
+  if (t.primary && t.primary !== 'default') document.body.style.setProperty('--jhd-primary', t.primary);
+  else document.body.style.removeProperty('--jhd-primary');
+  if (t.secondary && t.secondary !== 'default') document.body.style.setProperty('--jhd-brand-coral', t.secondary);
+  else document.body.style.removeProperty('--jhd-brand-coral');
+  if (t.paper && t.paper !== 'default') document.body.style.setProperty('--jhd-bg', t.paper);
+  else document.body.style.removeProperty('--jhd-bg');
+  if (t.density === 'cozy') document.body.style.setProperty('--space-mul', '.85');
+  else if (t.density === 'airy') document.body.style.setProperty('--space-mul','1.15');
+  else document.body.style.removeProperty('--space-mul');
+  document.querySelectorAll('#tweaks .pills').forEach(g => {
+    const k = g.dataset.set;
+    g.querySelectorAll('.pill').forEach(p => p.classList.toggle('on', p.dataset.val === String(t[k])));
+  });
+}
+if (tweaksEl) applyTweaks(TWEAKS);
+
+if (tweaksEl) {
+  document.querySelectorAll('#tweaks .pills').forEach(g => {
+    g.addEventListener('click', e => {
+      const btn = e.target.closest('.pill'); if (!btn) return;
+      const key = g.dataset.set;
+      TWEAKS[key] = btn.dataset.val;
+      applyTweaks(TWEAKS);
+      window.parent.postMessage({type:'__edit_mode_set_keys', edits: {[key]: btn.dataset.val}}, '*');
+    });
+  });
+
+  // Tweaks host handshake
+  window.addEventListener('message', e => {
+    const d = e.data || {};
+    if (d.type === '__activate_edit_mode') tweaksEl.classList.add('show');
+    else if (d.type === '__deactivate_edit_mode') tweaksEl.classList.remove('show');
+  });
+  window.parent.postMessage({type: '__edit_mode_available'}, '*');
+
+  // Command/Ctrl+. toggle
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey||e.ctrlKey) && e.key === '.') { tweaksEl.classList.toggle('show'); e.preventDefault(); }
+  });
+}
+</script>

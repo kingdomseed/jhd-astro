@@ -1,144 +1,537 @@
 ---
-import V2Layout from "../../../layouts/V2Layout.astro";
-import V2UtilBar from "../../../components/v2/layout/V2UtilBar.astro";
-import V2Header from "../../../components/v2/layout/V2Header.astro";
-import V2Footer from "../../../components/v2/layout/V2Footer.astro";
-import V2PageHeader from "../../../components/v2/primitives/V2PageHeader.astro";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 
-const quickPaths = [
+type QuickPath = {
+  title: string;
+  label: string;
+  body: string;
+  href: string;
+  icon: string;
+  external?: boolean;
+};
+
+type FaqEntry = {
+  question: string;
+  paragraphs?: string[];
+  items?: string[];
+};
+
+type FaqSection = {
+  title: string;
+  deck: string;
+  entries: FaqEntry[];
+};
+
+const discordUrl = "https://discord.gg/PEDHrhzcnk";
+const supportEmail = "support@jasonholtdigital.com";
+const generalEmail = "jason@jasonholtdigital.com";
+
+const quickPaths: QuickPath[] = [
   {
-    title: "Discord",
-    body: "The fastest route for community tips, feature requests, and quick answers.",
-    href: "https://discord.gg/PEDHrhzcnk",
-    label: "Open Discord",
+    title: "Community help",
+    label: "Join Discord",
+    body:
+      "Fastest for quick questions, player tips, feature requests, and shared troubleshooting.",
+    href: discordUrl,
+    icon: "fa-brands fa-discord",
     external: true,
   },
   {
-    title: "Email support",
-    body: "Use direct support when you need more detail, screenshots, or a private conversation.",
-    href: "mailto:support@jasonholtdigital.com",
+    title: "Private support",
     label: "Email support",
-    external: false,
+    body:
+      "Best for purchase questions, screenshots, account details, or anything that should not be public.",
+    href: `mailto:${supportEmail}`,
+    icon: "fa-solid fa-envelope",
   },
   {
-    title: "Documentation",
-    body: "Keep search and docs as the self-serve path for setup, formulas, tables, and troubleshooting.",
+    title: "Self-serve guides",
+    label: "Open resources",
+    body:
+      "Browse setup notes, custom tables, formulas, journals, and practical app guides.",
     href: "/v2/resources/",
-    label: "Open resources preview",
-    external: false,
+    icon: "fa-solid fa-book-open",
+  },
+  {
+    title: "Known changes",
+    label: "Read release notes",
+    body:
+      "Check recent updates, known issues, and fixes before filing a bug report.",
+    href: "/blog/category/release-notes/",
+    icon: "fa-solid fa-newspaper",
   },
 ];
 
-const faqPreview = [
+const faqSections: FaqSection[] = [
   {
-    question: "What is Mythic GME Mobile / Digital?",
-    answer:
-      "The officially licensed companion for Mythic Game Master Emulator 2e, built to streamline Fate checks, scenes, events, lists, journals, and supporting tools across platforms.",
+    title: "General & Platforms",
+    deck: "What the app is, who builds it, and where it ships.",
+    entries: [
+      {
+        question: "What is Mythic GME Mobile / Digital?",
+        paragraphs: [
+          "The officially licensed companion for Mythic Game Master Emulator 2e by Word Mill Creative. It streamlines Fate Chart and Fate Check, Random Events, Scene Checks, Meaning Tables, lists, scenes, and more offline-first on every platform we ship.",
+        ],
+      },
+      {
+        question: "Who makes it?",
+        paragraphs: [
+          "Built by Jason Holt, the solo developer of Jason Holt Digital under an exclusive mobile and desktop partnership with Word Mill Creative.",
+        ],
+      },
+      {
+        question: "Where can I get it?",
+        items: [
+          "Apple App Store: iPhone, iPad, and macOS through Universal Purchase.",
+          "Google Play: Android phones and tablets.",
+          "Amazon Appstore: Fire tablets.",
+          "Microsoft Store: Windows 10 and 11.",
+          "itch.io: Windows, macOS, and Linux DRM-free desktop builds through one purchase.",
+          "Steam: planned.",
+        ],
+      },
+      {
+        question: "Is it available worldwide?",
+        paragraphs: [
+          "Yes. Availability and pricing vary by store and region.",
+        ],
+      },
+      {
+        question:
+          "If I purchased the app on one platform, do I need to purchase it on another?",
+        paragraphs: [
+          "Yes. Each platform requires its own development costs and time investment. Apple App Store Universal Purchase and itch.io are the exceptions where one purchase can cover multiple supported downloads in that store.",
+        ],
+      },
+      {
+        question: "Do I need the Mythic GME 2e rulebook?",
+        paragraphs: [
+          "The app is a companion to the book, so the book is highly recommended and effectively required. The app implements and accelerates Mythic, but the book teaches the system, variants, examples, and alternative rules that make the tool valuable.",
+        ],
+      },
+    ],
   },
   {
-    question: "Do I need the Mythic GME 2e rulebook?",
-    answer:
-      "Yes, functionally. The app accelerates the system, but the book teaches the method, variants, and examples that make the tool valuable.",
+    title: "Features & Data",
+    deck: "Core tools, accessibility, language support, and where your material lives.",
+    entries: [
+      {
+        question: "Core features",
+        items: [
+          "Fate Chart and Fate Check with Chaos Factor.",
+          "Random Events and Event Focus rolls, including independent rolls when desired.",
+          "Scene Checks and Scene Adjustments as written.",
+          "Meaning Tables, including official core tables and additional tables through the Expanded Features unlock.",
+          "Adventure Lists for Characters, Threads, and Features integrated with events.",
+          "Scenes with titles, summaries, chaos, and unlimited scene tracking.",
+          "Dice Roller with common notation support and saved formulas.",
+          "Logs and Journal System for tracking games and switching between adventures.",
+          "Import and export for adventures, including JSON and Markdown journal exports.",
+          "iCloud Sync for Apple devices, with selectable storage locations on other platforms.",
+          "Mythic Magazine content and Custom Tables through the Expanded Features unlock.",
+        ],
+      },
+      {
+        question: "Accessibility",
+        items: [
+          "Screen reader support across major platforms.",
+          "Color-blind friendly palettes for improved contrast.",
+          "Large and very-large text options that scale key UI.",
+          "Left-handed mode for comfortable one-hand use.",
+        ],
+      },
+      {
+        question: "Languages",
+        paragraphs: [
+          "The app includes the official Brazilian Portuguese localization from RetroPunk Publicacoes and unofficial translations in Italian, French, German, and Spanish.",
+          "Only the Portuguese meaning and event focus tables are localized out of the box. With the custom tables editor, you can localize other language tables yourself.",
+        ],
+      },
+    ],
   },
   {
-    question: "Where should Command+K point in V2?",
-    answer:
-      "Primarily to resources, support, release notes, and later app/support destinations rather than homepage marketing copy.",
+    title: "Purchases, Pricing & Upgrades",
+    deck: "Plain-English purchase rules, unlocks, and cross-platform expectations.",
+    entries: [
+      {
+        question: "Why a new app listing?",
+        paragraphs: [
+          "The original developer closed their business and stopped work on the legacy app. Jason Holt Digital restarted development under a new account and rebuilt the codebase, so Apple, Google, and Amazon treat this as a new product rather than a free update to the old listing.",
+        ],
+      },
+      {
+        question: "Pricing by store",
+        items: [
+          "Apple App Store: base app plus a one-time Expanded Features unlock. Universal Purchase covers iOS, iPadOS, and macOS.",
+          "Google Play and Amazon Appstore: base app plus a one-time Expanded Features unlock.",
+          "Microsoft Store: one-time desktop purchase with no in-app purchases.",
+          "itch.io: one-time DRM-free desktop purchase with supported desktop downloads.",
+          "Prices convert to local currency and may vary by region, taxes, and store policy.",
+        ],
+      },
+      {
+        question: "Is this a subscription?",
+        paragraphs: [
+          "No. Mobile stores use a one-time Expanded Features unlock. Desktop stores are one-time purchases with no in-app purchases.",
+        ],
+      },
+      {
+        question: "How the Expanded Features unlock works",
+        items: [
+          "When you buy the unlock, you keep all current expanded features forever.",
+          "For the next 12 months, any new expanded features added during that window are also yours permanently.",
+          "After 12 months, the app continues receiving bug fixes and improvements, but brand-new expanded features may appear locked until you choose to buy a new unlock.",
+          "Existing unlocked features never expire.",
+        ],
+      },
+      {
+        question: "What's included today in Expanded Features?",
+        items: [
+          "50+ additional Meaning Tables from Mythic Magazines and Variations.",
+          "12+ extra Event Focus tables from Magazines and Variations.",
+          "Custom Tables toolkit for building, linking, tagging, categorizing, importing, exporting, and modifying oracles.",
+        ],
+      },
+      {
+        question: "Planned premium additions",
+        items: [
+          "Progress Tracks and Keyed Scenes.",
+          "Custom Lists.",
+          "Hybrid Play for using real dice.",
+          "Advanced journaling and note-taking.",
+        ],
+      },
+      {
+        question: "Questions about the old app vs this one?",
+        paragraphs: [
+          "If you have questions about your original purchase or how it relates to this new version, reach out by email or Discord. I am happy to answer questions and concerns directly.",
+        ],
+      },
+      {
+        question: "Cross-platform note",
+        paragraphs: [
+          "Purchases generally do not transfer between stores because each platform is separate. Apple is an exception through Universal Purchase, and itch.io provides multi-platform desktop downloads under a single purchase.",
+        ],
+      },
+    ],
   },
+  {
+    title: "Getting Help",
+    deck: "Bug reports, diagnostics, and what to include so the reply is useful.",
+    entries: [
+      {
+        question: "How do I report a bug?",
+        paragraphs: [
+          "Use in-app feedback through Settings > Report an Issue, email support, or post in Discord bug reports. Include your platform, app version, what happened, what you expected, and any screenshots or export files that make the issue easier to reproduce.",
+        ],
+      },
+    ],
+  },
+];
+
+const contactRoutes = [
+  {
+    title: "Support",
+    body: "Bugs, purchases, app questions, and private screenshots.",
+    href: `mailto:${supportEmail}`,
+    label: supportEmail,
+    icon: "fa-solid fa-life-ring",
+  },
+  {
+    title: "General",
+    body: "Business questions, licensing, writing, and studio contact.",
+    href: `mailto:${generalEmail}`,
+    label: generalEmail,
+    icon: "fa-solid fa-envelope-open-text",
+  },
+  {
+    title: "Discord",
+    body: "Community conversation, quick checks, and feature requests.",
+    href: discordUrl,
+    label: "Open community",
+    icon: "fa-brands fa-discord",
+    external: true,
+  },
+  {
+    title: "Consulting",
+    body: "Limited freelance and development availability each quarter.",
+    href: "https://www.upwork.com/fl/~01e352937913645264?mp_source=share",
+    label: "Hire me on Upwork",
+    icon: "fa-solid fa-briefcase",
+    external: true,
+  },
+];
+
+const messageChecklist = [
+  "Platform and store: iOS, Android, Fire, Windows, macOS, Linux, itch.io, or Microsoft Store.",
+  "App version and device or operating system version.",
+  "What you were doing, what happened, and what you expected instead.",
+  "Screenshots, export files, or exact error text when available.",
 ];
 ---
 
-<V2Layout
-  title="Jason Holt Digital - V2 Support Preview"
-  description="Preview of the V2 support and help surface."
-  theme="refined"
+<V2RefinedLayout
+  title="Support & Contact - Jason Holt Digital"
+  description="Quick answers, Discord, FAQ, and direct contact options for Mythic GME Mobile and Digital."
+  canonicalPath="/v2/support/"
+  mainClass="support-page"
+  theme="munoz"
 >
-  <V2UtilBar />
-  <V2Header />
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/support.css" />
+  </Fragment>
 
-  <main>
-    <V2PageHeader
-      badge="Support preview"
-      title="Support should feel helpful and direct, not buried under the marketing layer."
-      intro="This route tests how the V2 shell handles quick-help flows, Command+K handoff, and FAQ content without inheriting too much homepage drama."
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="support-hero" aria-labelledby="support-hero-title">
+    <img
+      class="support-hero__stamp support-hero__stamp--beast"
+      src="/v2/assets/stamp-beast.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="support-hero__stamp support-hero__stamp--mark"
+      src="/v2/assets/stamp-art10.png"
+      alt=""
+      aria-hidden="true"
     />
 
-    <section class="v2-support-band">
-      <div class="v2-wrap">
-        <article class="v2-support-band__panel">
-          <p class="v2-card__kicker">Command+K handoff</p>
-          <h2>Keep the shortcut, but make support and docs easier to reach visually too.</h2>
-          <p>
-            Keyboard search stays important, but the redesigned support page
-            should still surface the fastest paths at a glance.
-          </p>
-          <div class="v2-search-prompt">
-            <span>Search resources and blog</span>
-            <kbd>Cmd / Ctrl + K</kbd>
-          </div>
-        </article>
+    <div class="wrap support-hero__grid">
+      <div class="support-hero__copy">
+        <p class="eyebrow hero-eyebrow">
+          <span class="eyebrow-num">04</span>
+          Support desk
+        </p>
+        <h1 id="support-hero-title" class="hero-title">
+          Get help without digging through the whole site.
+        </h1>
+        <p class="hero-lead">
+          Start with the fastest route: community help for quick questions,
+          email for private details, resources for guides, and the FAQ for the
+          rules of the road.
+        </p>
+        <div class="cta-row" aria-label="Primary support actions">
+          <a class="btn btn--primary btn--lg" href={`mailto:${supportEmail}`}>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Email support
+          </a>
+          <a class="btn btn--accent btn--lg" href="#contact-panel">
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            Contact options
+          </a>
+        </div>
       </div>
-    </section>
 
-    <section class="v2-section v2-section--tight" aria-labelledby="v2-support-fast-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">Quick help</p>
-          <h2 id="v2-support-fast-title" class="v2-section__title">The first screen should answer: where do I go right now?</h2>
-          <p class="v2-section__intro">
-            These cards give the support page a more intentional front door
-            while preserving the utility-first purpose of the route.
+      <aside class="support-hero__ledger" aria-label="Support routing summary">
+        <p class="support-ledger__stamp">Open desk</p>
+        <dl class="support-ledger">
+          <div>
+            <dt>Fastest reply</dt>
+            <dd>Discord community</dd>
+          </div>
+          <div>
+            <dt>Private issue</dt>
+            <dd>Email support</dd>
+          </div>
+          <div>
+            <dt>Self-serve</dt>
+            <dd>Resources and FAQ</dd>
+          </div>
+          <div>
+            <dt>Best bug report</dt>
+            <dd>Platform, version, steps, screenshots</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="support-routes sec" aria-labelledby="support-routes-title">
+    <div class="wrap">
+      <header class="sec-head support-section-head">
+        <div class="sec-head-left">
+          <p class="eyebrow">
+            <span class="eyebrow-num">01</span>
+            Quick paths
           </p>
-        </header>
+          <h2 id="support-routes-title" class="sec-title">
+            Pick the route that matches the kind of help you need.
+          </h2>
+        </div>
+        <p class="sec-sub">
+          No maze, no support theater. These are the working doors.
+        </p>
+      </header>
 
-        <div class="v2-card-grid">
-          {
-            quickPaths.map((item) => (
-              <article class="v2-card">
-                <p class="v2-card__kicker">Support path</p>
+      <ol class="support-paths" aria-label="Quick support paths">
+        {
+          quickPaths.map((item, index) => (
+            <li class="support-path">
+              <span class="support-path__num">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span class="support-path__icon" aria-hidden="true">
+                <i class={item.icon}></i>
+              </span>
+              <div class="support-path__copy">
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <p class="v2-support-card__cta">
-                  <a
-                    class="v2-btn v2-btn--ghost"
-                    href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
-                  >
-                    {item.label}
-                  </a>
-                </p>
-              </article>
-            ))
-          }
-        </div>
+              </div>
+              <a
+                class="support-path__action"
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
+              >
+                {item.label}
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="support-faq sec" aria-labelledby="support-faq-title">
+    <div class="wrap support-faq__grid">
+      <div class="support-faq__intro">
+        <p class="eyebrow">
+          <span class="eyebrow-num">02</span>
+          FAQ
+        </p>
+        <h2 id="support-faq-title" class="sec-title">
+          The practical answers, grouped by the questions people actually ask.
+        </h2>
+        <p class="sec-sub">
+          Open the topic you need. The first section starts open so the page
+          stays useful even before you touch anything.
+        </p>
       </div>
-    </section>
 
-    <section class="v2-section" aria-labelledby="v2-support-faq-title">
-      <div class="v2-wrap">
-        <header class="v2-section__head">
-          <p class="v2-eyebrow">FAQ preview</p>
-          <h2 id="v2-support-faq-title" class="v2-section__title">A calmer shell for dense FAQ content.</h2>
-          <p class="v2-section__intro">
-            The real support page has a lot of content. This preview checks that
-            the V2 system can still make long help content feel structured.
-          </p>
-        </header>
+      <div class="support-faq__shelves" aria-label="Support FAQ sections">
+        {
+          faqSections.map((section, sectionIndex) => (
+            <details
+              class="support-faq-section"
+              open={sectionIndex === 0 ? true : undefined}
+            >
+              <summary>
+                <span>
+                  <span class="support-faq-section__num">
+                    {String(sectionIndex + 1).padStart(2, "0")}
+                  </span>
+                  <span class="support-faq-section__title">
+                    {section.title}
+                  </span>
+                </span>
+                <span class="support-faq-section__deck">{section.deck}</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </summary>
 
-        <div class="v2-faq-list">
+              <div class="support-faq-section__body">
+                {section.entries.map((entry) => (
+                  <details class="support-question">
+                    <summary>{entry.question}</summary>
+                    <div class="support-question__answer">
+                      {entry.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+                      {entry.items && (
+                        <ul>
+                          {entry.items.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="contact-panel"
+    class="support-contact sec"
+    aria-labelledby="support-contact-title"
+  >
+    <div class="wrap support-contact__grid">
+      <div class="support-contact__copy">
+        <p class="eyebrow">
+          <span class="eyebrow-num">03</span>
+          Contact
+        </p>
+        <h2 id="support-contact-title" class="sec-title">
+          Send the useful details once, and I can spend the reply on the fix.
+        </h2>
+        <p class="sec-sub">
+          This V2 preview keeps contact static and safe. Use email or Discord
+          for real messages; the checklist below tells you what to include.
+        </p>
+      </div>
+
+      <div class="support-contact__panel">
+        <div class="support-contact__routes" aria-label="Contact routes">
           {
-            faqPreview.map((item) => (
-              <article class="v2-faq-item">
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
-              </article>
+            contactRoutes.map((route) => (
+              <a
+                class="contact-route"
+                href={route.href}
+                target={route.external ? "_blank" : undefined}
+                rel={route.external ? "noopener noreferrer" : undefined}
+              >
+                <i class={route.icon} aria-hidden="true"></i>
+                <span>
+                  <strong>{route.title}</strong>
+                  <small>{route.body}</small>
+                  <em>{route.label}</em>
+                </span>
+              </a>
             ))
           }
         </div>
-      </div>
-    </section>
-  </main>
 
-  <V2Footer />
-</V2Layout>
+        <aside class="support-brief" aria-labelledby="support-brief-title">
+          <h3 id="support-brief-title">Before you send a bug report</h3>
+          <ul>
+            {
+              messageChecklist.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const scrollToSupportHash = () => {
+      if (window.location.hash !== "#contact-panel") return;
+      const contactPanel = document.getElementById("contact-panel");
+      const scrollContactIntoView = () =>
+        contactPanel?.scrollIntoView({
+          block: "start",
+        });
+
+      scrollContactIntoView();
+      window.requestAnimationFrame(scrollContactIntoView);
+      window.setTimeout(scrollContactIntoView, 150);
+    };
+
+    window.addEventListener("load", scrollToSupportHash);
+    window.addEventListener("hashchange", scrollToSupportHash);
+  </script>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>
