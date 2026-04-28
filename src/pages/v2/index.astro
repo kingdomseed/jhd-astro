@@ -1,6 +1,6 @@
 ---
 import V2RefinedBenefits from "../../components/v2/refined/V2RefinedBenefits.astro";
-import V2RefinedBillboard from "../../components/v2/refined/V2RefinedBillboard.astro";
+import V2RefinedAppsSections from "../../components/v2/refined/V2RefinedAppsSections.astro";
 import V2RefinedFooter from "../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../components/v2/refined/V2RefinedHeader.astro";
 import V2RefinedHero from "../../components/v2/refined/V2RefinedHero.astro";
@@ -11,13 +11,20 @@ import V2RefinedUtilBar from "../../components/v2/refined/V2RefinedUtilBar.astro
 import V2RefinedLayout from "../../layouts/V2RefinedLayout.astro";
 ---
 
-<V2RefinedLayout>
+<V2RefinedLayout
+  title="Jason Holt Digital - Official Mythic GME Apps"
+  description="Official licensed Mythic GME companion apps for mobile and desktop, plus guides, release notes, and support from Jason Holt Digital."
+  canonicalPath="/v2/"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/apps.css" />
+  </Fragment>
   <V2RefinedUtilBar slot="before-main" />
   <V2RefinedHeader slot="before-main" />
   <V2RefinedHero />
   <V2RefinedMarquee />
   <V2RefinedBenefits />
-  <V2RefinedBillboard />
+  <V2RefinedAppsSections />
   <V2RefinedMakerNote />
   <V2RefinedFooter slot="after-main" />
   <V2RefinedTweaksPanel slot="after-main" />

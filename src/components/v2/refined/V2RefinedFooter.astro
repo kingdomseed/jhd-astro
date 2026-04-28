@@ -1,6 +1,7 @@
 ---
 import {
   v2AssetPath,
+  v2AppsAnchorUrl,
   v2ContactUrl,
   v2DiscordUrl,
   v2ReleaseNotesUrl,
@@ -23,7 +24,7 @@ import {
       </div>
       <div class="foot-col">
         <h4>Product</h4>
-        <a href="/v2/apps/">Apps</a>
+        <a href={v2AppsAnchorUrl}>Apps</a>
         <a href="/v2/resources/">Resources</a>
         <a href="/v2/blog/">Blog</a>
         <a href={v2SupportUrl}>Support</a>
@@ -39,9 +40,9 @@ import {
       </div>
       <div class="foot-col">
         <h4>Company</h4>
-        <a href="/about/">About</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
+        <a href="/v2/about/">About</a>
+        <a href="/v2/privacy/">Privacy</a>
+        <a href="/v2/terms/">Terms</a>
         <a href={v2ContactUrl}>Contact</a>
         <a href={v2DiscordUrl} target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord" aria-hidden="true"></i>Discord</a>
       </div>

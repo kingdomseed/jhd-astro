@@ -38,7 +38,7 @@ export const ui = {
     "hero.stats.installs": "5k+ installs",
     "hero.stats.community": "2k+ community",
     "util.official_partner": "OFFICIAL PARTNER",
-    "billboard.aria_label": "App preview",
+    "billboard.aria_label": "App showcase",
     "billboard.screenshots_label": "Billboard screenshots",
     "billboard.alt_text":
       "Mythic GME Digital — desktop layout showing panels and log",

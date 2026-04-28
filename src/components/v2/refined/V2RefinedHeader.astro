@@ -1,6 +1,7 @@
 ---
 import {
   v2AssetPath,
+  v2AppsAnchorUrl,
   v2NavLinks,
   v2StoreLinks,
   v2SupportUrl,
@@ -13,7 +14,7 @@ const isActive = (href: string) =>
 
 <header class="nav" id="nav">
   <div class="wrap nav-row">
-    <a class="brand" href="/v2/" aria-label="Jason Holt Digital V2 home">
+    <a class="brand" href="/v2/" aria-label="Jason Holt Digital home">
       <span class="brand-mark"><img src={v2AssetPath("logo-munoz.svg")} alt="JHD" /></span>
       <div>
         <span class="brand-title">Jason Holt Digital</span>
@@ -80,5 +81,5 @@ const isActive = (href: string) =>
     </a>
   ))}
   <a href={v2SupportUrl}><i class="fa-solid fa-life-ring" aria-hidden="true"></i>Support</a>
-  <a href="/v2/apps/" style="margin-top:20px; background: var(--jhd-ink); color: var(--jhd-bg); padding: 16px; border-bottom: none;">Get the App →</a>
+  <a href={v2AppsAnchorUrl} style="margin-top:20px; background: var(--jhd-ink); color: var(--jhd-bg); padding: 16px; border-bottom: none;">Get the App →</a>
 </aside>

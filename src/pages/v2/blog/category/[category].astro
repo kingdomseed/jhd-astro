@@ -1,0 +1,135 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import V2RefinedFooter from "../../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../../layouts/V2RefinedLayout.astro";
+import { formatDate } from "../../../../lib/format-date";
+import {
+  slugifyCategory,
+  v2BlogCategoryMeta,
+  type V2BlogCategoryName,
+} from "../../../../lib/v2ContentMeta";
+
+type BlogEntry = CollectionEntry<"blog">;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return data.lang === "en" || data.lang === undefined;
+  });
+  const uniqueCategories = [
+    ...new Set<V2BlogCategoryName>(posts.map((post) => post.data.category)),
+  ];
+
+  return uniqueCategories.map((category) => ({
+    params: { category: slugifyCategory(category) },
+    props: { originalCategory: category },
+  }));
+}
+
+const { category } = Astro.params as { category: string };
+const { originalCategory } = Astro.props as {
+  originalCategory: V2BlogCategoryName;
+};
+
+const allPosts = await getCollection("blog", ({ data }) => {
+  return data.lang === "en" || data.lang === undefined;
+});
+const categoryPosts = allPosts
+  .filter((post: BlogEntry) => post.data.category === originalCategory)
+  .sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime());
+
+const currentMeta = v2BlogCategoryMeta[originalCategory];
+const otherCategories = Object.entries(v2BlogCategoryMeta).filter(
+  ([name]) => name !== originalCategory,
+);
+const canonicalPath = `/v2/blog/category/${category}/`;
+---
+
+<V2RefinedLayout
+  title={`${originalCategory} - Jason Holt Digital Blog`}
+  description={currentMeta.description}
+  canonicalPath={canonicalPath}
+  mainClass="v2-detail-main"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/detail.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Jason Holt Digital Blog"
+    />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="v2-page-hero" aria-labelledby="category-title">
+    <div class="wrap v2-page-hero__grid">
+      <div class="v2-page-hero__copy">
+        <p class="eyebrow"><span class="eyebrow-num">Blog</span>Topic shelf</p>
+        <h1 id="category-title" class="v2-page-title">{originalCategory}</h1>
+        <p class="v2-page-lead">{currentMeta.description}</p>
+        <ul class="v2-page-meta" aria-label="Category details">
+          <li class="v2-page-pill">
+            {categoryPosts.length} {categoryPosts.length === 1 ? "post" : "posts"}
+          </li>
+          <li class="v2-page-pill">RSS available</li>
+        </ul>
+      </div>
+      <aside class="v2-page-card">
+        <strong>Browse by topic</strong>
+        <p>Release notes, guides, process notes, community updates, and announcements stay on their own shelves.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-section" aria-labelledby="category-posts-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">01</span>{originalCategory}</p>
+        <h2 id="category-posts-title" class="sec-title">Posts on this shelf.</h2>
+        <p class="sec-sub"><a class="btn btn--ghost" href="/v2/blog/">Back to all posts</a></p>
+      </div>
+      <ol class="v2-list">
+        {categoryPosts.map((entry) => (
+          <li>
+            <a class="v2-list-row" href={`/v2/blog/${entry.id}/`}>
+              <span>
+                <strong>{entry.data.title}</strong>
+                <small>{entry.data.summary}</small>
+              </span>
+              <span class="v2-page-pill">{formatDate(entry.data.date)}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="v2-section v2-section--ink" aria-labelledby="other-categories-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">02</span>Browse</p>
+        <h2 id="other-categories-title" class="sec-title">Other shelves.</h2>
+      </div>
+      <ul class="v2-grid-list">
+        {otherCategories.map(([name, meta]) => (
+          <li>
+            <a class="v2-grid-card" href={`/v2/blog/category/${slugifyCategory(name)}/`}>
+              <i class={meta.icon} aria-hidden="true"></i>
+              <h3>{name}</h3>
+              <p>{meta.description}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

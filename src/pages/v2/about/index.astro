@@ -1,0 +1,132 @@
+---
+import { getEntry } from "astro:content";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { v2ContactUrl, v2DiscordUrl } from "../../../lib/v2Links";
+
+const aboutEntry = await getEntry("pages", "about");
+if (!aboutEntry) throw new Error("Could not find about entry in pages collection");
+
+const {
+  title,
+  subtitle,
+  description,
+  backgroundHighlights = [],
+  mythicHighlights = [],
+} = aboutEntry.data;
+---
+
+<V2RefinedLayout
+  title={`About - ${title}`}
+  description={description}
+  canonicalPath="/v2/about/"
+  mainClass="v2-about-main"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/detail.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="v2-page-hero" aria-labelledby="about-title">
+    <div class="wrap v2-page-hero__grid">
+      <div class="v2-page-hero__copy">
+        <p class="eyebrow"><span class="eyebrow-num">01</span>{subtitle}</p>
+        <h1 id="about-title" class="v2-page-title">Hi, I'm <em>Jason</em>.</h1>
+        <p class="v2-page-lead">{description}</p>
+        <ul class="v2-page-meta" aria-label="About highlights">
+          <li class="v2-page-pill">Licensed with Word Mill Games</li>
+          <li class="v2-page-pill">Indie developer</li>
+          <li class="v2-page-pill">Computational linguistics student</li>
+        </ul>
+      </div>
+      <figure class="v2-page-card">
+        <img src="/v2/assets/jason.jpg" alt="Jason Holt" loading="eager" decoding="async" />
+        <figcaption>
+          <strong>{title}</strong>
+          <span>Founder, builder, and support inbox reader.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="v2-section" aria-labelledby="about-overview-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">02</span>Profile</p>
+        <h2 id="about-overview-title" class="sec-title">I build tools for play that stays in motion.</h2>
+      </div>
+      <div class="v2-prose">
+        <p>I wrote my first program at twelve: a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally building a real app after dreaming about it since I ran Hour of Code with my students in 2013.</p>
+        <p>I maintain two products under license from Word Mill Games: <strong>Mythic GME Mobile</strong> for iOS and Android, and <strong>Mythic GME Digital</strong> for Windows, macOS, and Linux.</p>
+        <p>I'm also pursuing an M.Sc. in Computational Linguistics: part curiosity about how language and software can work together for solo play, and part the same pattern that has driven every fresh start in my career. Someone had a need, and I wanted to help meet it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-section v2-section--ink" aria-labelledby="about-mythic-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">03</span>Official</p>
+        <h2 id="about-mythic-title" class="sec-title">Licensed Mythic apps, shaped with the community.</h2>
+        <p class="sec-sub">Less flipping through tables, more time in the story.</p>
+      </div>
+      <ul class="v2-grid-list">
+        {mythicHighlights.map((item) => (
+          <li class="v2-grid-card">
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+            <h3>{item.label}</h3>
+            <p>{item.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="v2-section" aria-labelledby="about-approach-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">04</span>Approach</p>
+        <h2 id="about-approach-title" class="sec-title">Small, frequent updates. Real support conversations.</h2>
+        <p class="sec-sub">The work improves because players keep telling me where the table gets stuck.</p>
+      </div>
+      <ul class="v2-grid-list">
+        {backgroundHighlights.map((item) => (
+          <li class="v2-grid-card">
+            <i class={item.icon} aria-hidden="true"></i>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="v2-section v2-section--ink" aria-labelledby="about-connect-title">
+    <div class="wrap v2-split">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-num">05</span>Connect</p>
+        <h2 id="about-connect-title" class="sec-title">I read every message.</h2>
+        <p class="sec-sub">Bug reports, feature ideas, or a story about your last session: send it over.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href={v2ContactUrl}>
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          Contact
+        </a>
+        <a class="btn btn--accent btn--lg" href={v2DiscordUrl} target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-discord" aria-hidden="true"></i>
+          Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

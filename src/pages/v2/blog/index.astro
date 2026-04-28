@@ -6,10 +6,7 @@ import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.as
 import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 import { getBlogPostsByLang } from "../../../lib/collections";
 import { formatDate } from "../../../lib/format-date";
-import type { CollectionEntry } from "astro:content";
-
-type BlogEntry = CollectionEntry<"blog">;
-type CategoryName = BlogEntry["data"]["category"];
+import { slugifyCategory, v2BlogCategoryMeta } from "../../../lib/v2ContentMeta";
 
 const posts = await getBlogPostsByLang("en");
 const featuredEntry = posts[0];
@@ -18,47 +15,20 @@ const archiveEntries = posts.slice(3);
 const sampleCount = posts.filter((post) => post.data.isSample).length;
 const latestDate = featuredEntry ? formatDate(featuredEntry.data.date) : "Pending";
 
-const slugify = (value: string) => value.toLowerCase().replace(/\s+/g, "-");
-
-const categoryMeta: Partial<
-  Record<CategoryName, { description: string; icon: string }>
-> = {
-  "Release Notes": {
-    description: "Version notes, app changes, and what players can expect next.",
-    icon: "fa-solid fa-newspaper",
-  },
-  "Behind the Scenes": {
-    description: "Design process, tradeoffs, and the work behind the table.",
-    icon: "fa-solid fa-pen-nib",
-  },
-  Guides: {
-    description: "Practical walkthroughs for Mythic workflows and app systems.",
-    icon: "fa-solid fa-compass",
-  },
-  Community: {
-    description: "Player feedback, roadmap signals, and shared table stories.",
-    icon: "fa-solid fa-people-group",
-  },
-  Announcement: {
-    description: "Important product and publishing updates.",
-    icon: "fa-solid fa-bullhorn",
-  },
-};
-
 const categories = [...new Set(posts.map((post) => post.data.category))]
   .sort()
   .map((category) => ({
     name: category,
     count: posts.filter((post) => post.data.category === category).length,
     description:
-      categoryMeta[category]?.description ?? `Posts filed under ${category}.`,
-    href: `/blog/category/${slugify(category)}/`,
-    icon: categoryMeta[category]?.icon ?? "fa-solid fa-folder-open",
+      v2BlogCategoryMeta[category]?.description ?? `Posts filed under ${category}.`,
+    href: `/v2/blog/category/${slugifyCategory(category)}/`,
+    icon: v2BlogCategoryMeta[category]?.icon ?? "fa-solid fa-folder-open",
   }));
 ---
 
 <V2RefinedLayout
-  title="Blog - Jason Holt Digital V2"
+  title="Blog - Jason Holt Digital"
   description="Release notes, build notes, and behind-the-scenes writing from Jason Holt Digital."
   canonicalPath="/v2/blog/"
   mainClass="blog-v2-main"
@@ -109,9 +79,9 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
               <i class="fa-solid fa-rss" aria-hidden="true"></i>
               RSS feed
             </a>
-            <a class="btn btn--accent btn--lg" href="/blog/">
+            <a class="btn btn--accent btn--lg" href="/v2/blog/#blog-topics-title">
               <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-              Public blog
+              Browse topics
             </a>
           </div>
         </div>
@@ -131,10 +101,14 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
               <dt>Topics</dt>
               <dd>{categories.length}</dd>
             </div>
-            <div>
-              <dt>Samples</dt>
-              <dd>{sampleCount}</dd>
-            </div>
+            {
+              sampleCount > 0 && (
+                <div>
+                  <dt>Samples</dt>
+                  <dd>{sampleCount}</dd>
+                </div>
+              )
+            }
           </dl>
         </aside>
       </div>
@@ -158,12 +132,12 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
                 )}
               </div>
               <h2 id="blog-feature-title">
-                <a href={`/blog/${featuredEntry.id}/`}>
+                <a href={`/v2/blog/${featuredEntry.id}/`}>
                   {featuredEntry.data.title}
                 </a>
               </h2>
               <p>{featuredEntry.data.summary}</p>
-              <a class="blog-feature__link" href={`/blog/${featuredEntry.id}/`}>
+              <a class="blog-feature__link" href={`/v2/blog/${featuredEntry.id}/`}>
                 Read the latest dispatch
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
@@ -182,7 +156,7 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
                 Archive pending
               </p>
               <h2 id="blog-feature-title">Blog posts are coming soon.</h2>
-              <p>Add English posts to the blog collection to populate this preview.</p>
+              <p>Add English posts to the blog collection to populate this page.</p>
             </article>
           </div>
         </section>
@@ -215,7 +189,7 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
                     {entry.data.isSample && <span class="blog-sample">Sample</span>}
                   </div>
                   <h3>
-                    <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                    <a href={`/v2/blog/${entry.id}/`}>{entry.data.title}</a>
                   </h3>
                   <p>{entry.data.summary}</p>
                 </article>
@@ -257,11 +231,11 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
                     {entry.data.isSample && <span class="blog-sample">Sample</span>}
                   </div>
                   <h3>
-                    <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+                    <a href={`/v2/blog/${entry.id}/`}>{entry.data.title}</a>
                   </h3>
                   <p>{entry.data.summary}</p>
                 </div>
-                <a class="blog-entry__link" href={`/blog/${entry.id}/`}>
+                <a class="blog-entry__link" href={`/v2/blog/${entry.id}/`}>
                   Read
                   <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>

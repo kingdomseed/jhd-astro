@@ -1,0 +1,213 @@
+---
+import { Image } from "astro:assets";
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { formatDate } from "../../../lib/format-date";
+import { v2ResourceCategoryMeta } from "../../../lib/v2ContentMeta";
+
+type ResourceEntry = CollectionEntry<"resources">;
+type ResourceStep = ResourceEntry["data"]["steps"][number];
+
+export async function getStaticPaths() {
+  const entries = await getCollection("resources", ({ data }) => {
+    return data.lang === "en" || data.lang === undefined;
+  });
+
+  return entries.map((entry: ResourceEntry) => ({
+    params: { slug: entry.id },
+  }));
+}
+
+const { slug } = Astro.params;
+
+if (!slug || Array.isArray(slug)) {
+  throw new Error("Invalid resource slug");
+}
+
+const entry = await getEntry("resources", slug);
+
+if (!entry) {
+  throw new Error(`Resource not found for slug: ${slug}`);
+}
+
+const { Content } = await render(entry);
+const resource = entry.data;
+const category = v2ResourceCategoryMeta[resource.category];
+const canonicalPath = `/v2/resources/${entry.id}/`;
+const allResources = await getCollection("resources", ({ data }) => {
+  return data.lang === "en" || data.lang === undefined;
+});
+const resolveResource = (id: string) => allResources.find((item) => item.id === id);
+const explicitRelated = Array.isArray(resource.related)
+  ? resource.related
+      .map((id: string) => resolveResource(id))
+      .filter((item): item is ResourceEntry => Boolean(item && item.id !== entry.id))
+  : [];
+const relatedEntries =
+  explicitRelated.length > 0
+    ? explicitRelated.slice(0, 3)
+    : allResources
+        .filter((item) => item.id !== entry.id && item.data.category === resource.category)
+        .sort((a, b) => a.data.order - b.data.order)
+        .slice(0, 3);
+const downloads = Array.isArray(resource.downloads) ? resource.downloads : [];
+const backHref = `/v2/resources/${category.anchor}`;
+---
+
+<V2RefinedLayout
+  title={`${resource.title} - Mythic Resources`}
+  description={resource.summary}
+  canonicalPath={canonicalPath}
+  mainClass="v2-detail-main"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/detail.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="v2-page-hero" aria-labelledby="resource-detail-title">
+    <div class="wrap v2-page-hero__grid">
+      <div class="v2-page-hero__copy">
+        <p class="eyebrow"><span class="eyebrow-num">Guide</span>{category.label}</p>
+        <h1 id="resource-detail-title" class="v2-page-title">{resource.title}</h1>
+        <p class="v2-page-lead">{resource.summary}</p>
+        <ul class="v2-page-meta" aria-label="Resource details">
+          <li class="v2-page-pill">{category.label}</li>
+          {resource.duration && <li class="v2-page-pill">{resource.duration}</li>}
+          {resource.updated && <li class="v2-page-pill">Updated {formatDate(resource.updated)}</li>}
+        </ul>
+      </div>
+      <aside class="v2-page-card">
+        <strong>{category.shortLabel}</strong>
+        <p>{category.summary}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-article-shell">
+    <div class="wrap v2-article-grid">
+      <article class="v2-article-panel">
+        <div class="v2-article-inner">
+          <p>
+            <a class="btn btn--ghost" href={backHref}>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              Back to resources
+            </a>
+          </p>
+          {
+            resource.externalUrl && (
+              <p>
+                <a
+                  class="btn btn--accent"
+                  href={resource.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  Open schema / download
+                </a>
+              </p>
+            )
+          }
+          {
+            resource.hero && (
+              <figure class="v2-hero-image">
+                <Image
+                  src={resource.hero}
+                  alt={resource.heroAlt ?? ""}
+                  widths={[480, 768, 1024, 1440]}
+                  sizes="(max-width: 768px) 92vw, 900px"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                {resource.heroAlt && <figcaption>{resource.heroAlt}</figcaption>}
+              </figure>
+            )
+          }
+          <div class="v2-prose">
+            <Content />
+          </div>
+          {
+            downloads.length > 0 && (
+              <section aria-labelledby="resource-downloads-title">
+                <h2 id="resource-downloads-title">Downloads</h2>
+                <div class="v2-download-grid">
+                  {downloads.map((download) => (
+                    <a class="v2-download-card" href={download.href} download>
+                      <strong>{download.label}</strong>
+                      <small>
+                        {[download.format, download.size].filter(Boolean).join(" / ")}
+                      </small>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )
+          }
+          {
+            Array.isArray(resource.steps) && resource.steps.length > 0 && (
+              <section aria-labelledby="resource-steps-title">
+                <h2 id="resource-steps-title">Step-by-step</h2>
+                <ol class="v2-steps">
+                  {resource.steps.map((step: ResourceStep) => (
+                    <li class="v2-step">
+                      <h3>{step.title}</h3>
+                      {step.body && <p>{step.body}</p>}
+                      {step.image && (
+                        <figure class="v2-step-image">
+                          <Image
+                            src={step.image}
+                            alt={step.imageAlt ?? ""}
+                            widths={[480, 768, 1024]}
+                            sizes="(max-width: 768px) 92vw, 800px"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          {step.imageAlt && <figcaption>{step.imageAlt}</figcaption>}
+                        </figure>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            )
+          }
+        </div>
+      </article>
+
+      <aside class="v2-article-aside" aria-label="Related resources">
+        <div class="v2-aside-card">
+          <h2>Guide shelf</h2>
+          <p><a href={backHref}>{category.label}</a></p>
+        </div>
+        {
+          relatedEntries.length > 0 && (
+            <div class="v2-aside-card">
+              <h2>Related</h2>
+              <ul class="v2-list">
+                {relatedEntries.map((related) => (
+                  <li>
+                    <a href={`/v2/resources/${related.id}/`}>
+                      {related.data.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+      </aside>
+    </div>
+  </section>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

@@ -8,11 +8,6 @@ export const v2NavLinks = [
     icon: "fa-solid fa-house",
   },
   {
-    href: "/v2/apps/",
-    label: "Apps",
-    icon: "fa-solid fa-mobile-screen",
-  },
-  {
     href: "/v2/resources/",
     label: "Resources",
     icon: "fa-solid fa-book-open",
@@ -64,5 +59,8 @@ export const v2StoreLinks = [
 
 export const v2SupportUrl = "/v2/support/";
 export const v2ContactUrl = "/v2/support/#contact-panel";
-export const v2ReleaseNotesUrl = "/blog/category/release-notes/";
+export const v2AppsAnchorUrl = "/v2/#apps";
+export const v2MobileAppAnchorUrl = "/v2/#mobile-title";
+export const v2DesktopAppAnchorUrl = "/v2/#desktop-title";
+export const v2ReleaseNotesUrl = "/v2/blog/category/release-notes/";
 export const v2DiscordUrl = "https://discord.gg/PEDHrhzcnk";

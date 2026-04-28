@@ -1,0 +1,164 @@
+---
+import { Image } from "astro:assets";
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { formatDate } from "../../../lib/format-date";
+import { slugifyCategory, v2BlogCategoryMeta } from "../../../lib/v2ContentMeta";
+
+type BlogEntry = CollectionEntry<"blog">;
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog", ({ data }) => {
+    return data.lang === "en" || data.lang === undefined;
+  });
+
+  return entries.map((entry: BlogEntry) => ({
+    params: { slug: entry.id },
+  }));
+}
+
+const { slug } = Astro.params;
+
+if (!slug || Array.isArray(slug)) {
+  throw new Error("Invalid blog slug");
+}
+
+const entry = await getEntry("blog", slug);
+
+if (!entry) {
+  throw new Error(`Blog post not found for slug: ${slug}`);
+}
+
+const { Content } = await render(entry);
+const post = entry.data;
+const downloads = Array.isArray(post.downloads) ? post.downloads : [];
+const categoryHref = `/v2/blog/category/${slugifyCategory(post.category)}/`;
+const canonicalPath = `/v2/blog/${entry.id}/`;
+const canonicalUrl = new URL(
+  canonicalPath,
+  Astro.site ?? "https://jasonholtdigital.com",
+).toString();
+const shareText = encodeURIComponent(`${post.title} ${canonicalUrl}`);
+---
+
+<V2RefinedLayout
+  title={`${post.title} - Jason Holt Digital Blog`}
+  description={post.summary}
+  canonicalPath={canonicalPath}
+  mainClass="v2-detail-main"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/detail.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="/rss.xml"
+      title="Jason Holt Digital Blog"
+    />
+    {post.date && <meta property="article:published_time" content={post.date.toISOString()} />}
+    {post.tags.map((tag) => <meta property="article:tag" content={tag} />)}
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="v2-page-hero" aria-labelledby="blog-detail-title">
+    <div class="wrap v2-page-hero__grid">
+      <div class="v2-page-hero__copy">
+        <p class="eyebrow"><span class="eyebrow-num">Blog</span>{post.category}</p>
+        <h1 id="blog-detail-title" class="v2-page-title">{post.title}</h1>
+        <p class="v2-page-lead">{post.summary}</p>
+        <ul class="v2-page-meta" aria-label="Post details">
+          <li class="v2-page-pill">{formatDate(post.date)}</li>
+          <li class="v2-page-pill">{post.readTime}</li>
+          <li class="v2-page-pill">{v2BlogCategoryMeta[post.category].description}</li>
+          {post.isSample && <li class="v2-page-pill">Sample</li>}
+        </ul>
+      </div>
+      <aside class="v2-page-card">
+        <strong>Dispatch</strong>
+        <p>Release notes, build notes, and behind-the-scenes writing from the Mythic table.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-article-shell">
+    <div class="wrap v2-article-grid">
+      <article class="v2-article-panel">
+        <div class="v2-article-inner">
+          <p>
+            <a class="btn btn--ghost" href="/v2/blog/">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              Back to blog
+            </a>
+          </p>
+          {
+            post.hero && (
+              <figure class="v2-hero-image">
+                <Image
+                  src={post.hero}
+                  alt={post.heroAlt ?? ""}
+                  widths={[480, 768, 1024, 1440]}
+                  sizes="(max-width: 768px) 92vw, 900px"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                {post.heroAlt && <figcaption>{post.heroAlt}</figcaption>}
+              </figure>
+            )
+          }
+          <div class="v2-prose">
+            <Content />
+          </div>
+          {
+            downloads.length > 0 && (
+              <section aria-labelledby="blog-downloads-title">
+                <h2 id="blog-downloads-title">Downloads</h2>
+                <div class="v2-download-grid">
+                  {downloads.map((download) => (
+                    <a class="v2-download-card" href={download.href} download>
+                      <strong>{download.label}</strong>
+                      <small>
+                        {[download.format, download.size].filter(Boolean).join(" / ")}
+                      </small>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )
+          }
+        </div>
+      </article>
+
+      <aside class="v2-article-aside" aria-label="Post navigation">
+        <div class="v2-aside-card">
+          <h2>Filed under</h2>
+          <p><a href={categoryHref}>{post.category}</a></p>
+        </div>
+        <div class="v2-aside-card">
+          <h2>Share</h2>
+          <div class="v2-share">
+            <a href={`mailto:?subject=${encodeURIComponent(post.title)}&body=${shareText}`} aria-label="Share by email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href={`https://www.reddit.com/submit?url=${encodeURIComponent(canonicalUrl)}&title=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit">
+              <i class="fa-brands fa-reddit" aria-hidden="true"></i>
+            </a>
+            <a href={`https://bsky.app/intent/compose?text=${shareText}`} target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+              <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

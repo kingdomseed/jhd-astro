@@ -7,6 +7,7 @@ import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.as
 import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
 import { getResourcesByLang } from "../../../lib/collections";
 import { formatDate } from "../../../lib/format-date";
+import { v2ResourceCategoryMeta } from "../../../lib/v2ContentMeta";
 import { v2DiscordUrl, v2SupportUrl } from "../../../lib/v2Links";
 
 type ResourceEntry = CollectionEntry<"resources">;
@@ -21,57 +22,7 @@ const sortByOrder = (items: ResourceEntry[]) =>
       : a.data.order - b.data.order,
   );
 
-const categoryMeta: Record<
-  ResourceCategory,
-  {
-    label: string;
-    shortLabel: string;
-    title: string;
-    summary: string;
-    icon: string;
-  }
-> = {
-  "start-here": {
-    label: "Start Here",
-    shortLabel: "Start",
-    title: "Open the table without losing momentum.",
-    summary:
-      "Install the apps, set up your first journal, and learn the core Mythic rhythm.",
-    icon: "fa-solid fa-compass",
-  },
-  "adventure-journals": {
-    label: "Adventure Journals",
-    shortLabel: "Journals",
-    title: "Keep the story legible between sessions.",
-    summary:
-      "Capture scenes, protect exports, and recover quickly when something feels off.",
-    icon: "fa-solid fa-book-journal-whills",
-  },
-  "dice-roller": {
-    label: "Dice Roller",
-    shortLabel: "Dice",
-    title: "Turn dice syntax into repeatable tools.",
-    summary:
-      "Save formulas, import collections, and shape rolls around the system at your table.",
-    icon: "fa-solid fa-dice-d20",
-  },
-  "custom-tables": {
-    label: "Custom Tables",
-    shortLabel: "Tables",
-    title: "Build your own oracle shelves.",
-    summary:
-      "Create, organize, link, import, and export tables for improvising on the fly.",
-    icon: "fa-solid fa-table-list",
-  },
-  advanced: {
-    label: "Schemas & Deep Dives",
-    shortLabel: "Schemas",
-    title: "Reference shapes for exports and integrations.",
-    summary:
-      "JSON structures, registry notes, and implementation details for deeper tooling.",
-    icon: "fa-solid fa-code-branch",
-  },
-};
+const categoryMeta = v2ResourceCategoryMeta;
 
 const guideCategories = [
   "start-here",
@@ -202,7 +153,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           setup, journals, dice formulas, custom tables, and export references.
         </p>
         <div class="cta-row resources-hero__actions" aria-label="Primary resource actions">
-          <a class="btn btn--primary btn--lg" href="/resources/getting-started-with-the-mythic-apps/">
+          <a class="btn btn--primary btn--lg" href="/v2/resources/getting-started-with-the-mythic-apps/">
             <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
             Start reading
           </a>
@@ -275,7 +226,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                     data-search={entry.searchText}
                     hidden
                   >
-                    <a href={`/resources/${entry.id}/`} tabindex="-1">
+                    <a href={`/v2/resources/${entry.id}/`} tabindex="-1">
                       <span class="resources-search__result-title">{entry.title}</span>
                       <span class="resources-search__result-summary">
                         {entry.summary}
@@ -306,7 +257,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           featuredResources.length > 0 && (
             <nav class="resources-fast" aria-label="Fast resource paths">
               {featuredResources.map((item) => (
-                <a href={`/resources/${item.entry.id}/`}>
+                <a href={`/v2/resources/${item.entry.id}/`}>
                   <i class={item.icon} aria-hidden="true"></i>
                   <span>
                     <strong>{item.label}</strong>
@@ -334,7 +285,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
       </div>
       <p class="sec-sub resources-map__intro">
         Each shelf pulls from the live English resource collection and points to
-        the current production guide.
+        the full guide page.
       </p>
     </div>
 
@@ -357,7 +308,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
               <ol class="resources-list">
                 {section.items.map((item, itemIndex) => (
                   <li>
-                    <a class="resources-list__link" href={`/resources/${item.id}/`}>
+                    <a class="resources-list__link" href={`/v2/resources/${item.id}/`}>
                       <span class="resources-list__ix">
                         {String(itemIndex + 1).padStart(2, "0")}
                       </span>
@@ -409,7 +360,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           </div>
           <div class="resources-schemas__list">
             {advancedItems.map((item) => (
-              <a class="resources-schema-row" href={`/resources/${item.id}/`}>
+              <a class="resources-schema-row" href={`/v2/resources/${item.id}/`}>
                 <span>
                   <strong>{item.data.title}</strong>
                   <small>{item.data.summary}</small>

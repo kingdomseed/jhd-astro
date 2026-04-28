@@ -1,0 +1,69 @@
+---
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { extractLegalArticle } from "../../../lib/v2Legal";
+import privacySource from "../../privacy.astro?raw";
+
+const legalArticle = extractLegalArticle(privacySource, "privacy.astro");
+---
+
+<V2RefinedLayout
+  title="Privacy Policy - Jason Holt Digital"
+  description="Learn how Mythic GME Apps handles privacy: minimal data collection, local-first storage, optional analytics, and clear controls."
+  canonicalPath="/v2/privacy/"
+  mainClass="v2-legal-main"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/detail.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="v2-page-hero" aria-labelledby="privacy-title">
+    <div class="wrap v2-page-hero__grid">
+      <div class="v2-page-hero__copy">
+        <p class="eyebrow"><span class="eyebrow-num">01</span>Privacy</p>
+        <h1 id="privacy-title" class="v2-page-title">Privacy <em>Policy</em>.</h1>
+        <p class="v2-page-lead">
+          Minimal data collection, local-first storage, and clear controls.
+          Last updated: August 27, 2025.
+        </p>
+        <ul class="v2-page-meta" aria-label="Privacy highlights">
+          <li class="v2-page-pill">Analytics opt-in</li>
+          <li class="v2-page-pill">Local-first game data</li>
+          <li class="v2-page-pill">No data sales</li>
+        </ul>
+      </div>
+      <aside class="v2-page-card">
+        <strong>Plain promise</strong>
+        <p>I built these apps for the community. Your game content stays yours.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="v2-article-shell">
+    <div class="wrap v2-article-grid">
+      <article class="v2-article-panel">
+        <div class="v2-article-inner" set:html={legalArticle} />
+      </article>
+      <aside class="v2-article-aside" aria-label="Privacy actions">
+        <div class="v2-aside-card">
+          <h2>Privacy questions</h2>
+          <p><a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a></p>
+        </div>
+        <div class="v2-aside-card">
+          <h2>Controls</h2>
+          <p>Analytics and diagnostics controls live in app settings.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>
