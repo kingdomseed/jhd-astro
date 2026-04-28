@@ -36,13 +36,17 @@ const { originalCategory } = Astro.props as {
 const allPosts = await getCollection("blog", ({ data }) => {
   return data.lang === "en" || data.lang === undefined;
 });
+const categoryCounts = allPosts.reduce((counts, post) => {
+  counts.set(post.data.category, (counts.get(post.data.category) ?? 0) + 1);
+  return counts;
+}, new Map<V2BlogCategoryName, number>());
 const categoryPosts = allPosts
   .filter((post: BlogEntry) => post.data.category === originalCategory)
   .sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime());
 
 const currentMeta = v2BlogCategoryMeta[originalCategory];
 const otherCategories = Object.entries(v2BlogCategoryMeta).filter(
-  ([name]) => name !== originalCategory,
+  ([name]) => name !== originalCategory && categoryCounts.has(name as V2BlogCategoryName),
 );
 const canonicalPath = `/v2/blog/category/${category}/`;
 ---
@@ -77,7 +81,7 @@ const canonicalPath = `/v2/blog/category/${category}/`;
           <li class="v2-page-pill">
             {categoryPosts.length} {categoryPosts.length === 1 ? "post" : "posts"}
           </li>
-          <li class="v2-page-pill">RSS available</li>
+          <li><a class="v2-page-pill" href="/rss.xml">RSS available</a></li>
         </ul>
       </div>
       <aside class="v2-page-card">
@@ -88,13 +92,15 @@ const canonicalPath = `/v2/blog/category/${category}/`;
   </section>
 
   <section class="v2-section" aria-labelledby="category-posts-title">
-    <div class="wrap v2-split">
-      <div>
-        <p class="eyebrow"><span class="eyebrow-num">01</span>{originalCategory}</p>
-        <h2 id="category-posts-title" class="sec-title">Posts on this shelf.</h2>
-        <p class="sec-sub"><a class="btn btn--ghost" href="/v2/blog/">Back to all posts</a></p>
+    <div class="wrap v2-category-flow">
+      <div class="v2-category-head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-num">01</span>{originalCategory}</p>
+          <h2 id="category-posts-title" class="sec-title">Posts on this shelf.</h2>
+        </div>
+        <a class="btn btn--ghost" href="/v2/blog/">Back to all posts</a>
       </div>
-      <ol class="v2-list">
+      <ol class="v2-list v2-list--archive">
         {categoryPosts.map((entry) => (
           <li>
             <a class="v2-list-row" href={`/v2/blog/${entry.id}/`}>
@@ -110,25 +116,27 @@ const canonicalPath = `/v2/blog/category/${category}/`;
     </div>
   </section>
 
-  <section class="v2-section v2-section--ink" aria-labelledby="other-categories-title">
-    <div class="wrap v2-split">
-      <div>
-        <p class="eyebrow"><span class="eyebrow-num">02</span>Browse</p>
-        <h2 id="other-categories-title" class="sec-title">Other shelves.</h2>
+  {otherCategories.length > 0 && (
+    <section class="v2-section v2-section--ink" aria-labelledby="other-categories-title">
+      <div class="wrap v2-split">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-num">02</span>Browse</p>
+          <h2 id="other-categories-title" class="sec-title">Other shelves.</h2>
+        </div>
+        <ul class="v2-grid-list">
+          {otherCategories.map(([name, meta]) => (
+            <li>
+              <a class="v2-grid-card" href={`/v2/blog/category/${slugifyCategory(name)}/`}>
+                <i class={meta.icon} aria-hidden="true"></i>
+                <h3>{name}</h3>
+                <p>{meta.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul class="v2-grid-list">
-        {otherCategories.map(([name, meta]) => (
-          <li>
-            <a class="v2-grid-card" href={`/v2/blog/category/${slugifyCategory(name)}/`}>
-              <i class={meta.icon} aria-hidden="true"></i>
-              <h3>{name}</h3>
-              <p>{meta.description}</p>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+    </section>
+  )}
 
   <V2RefinedFooter slot="after-main" />
   <V2RefinedTweaksPanel slot="after-main" />
