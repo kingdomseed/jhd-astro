@@ -25,10 +25,25 @@ related:
 ## Onde importar/exportar
 
 - Abra a funcionalidade Tabelas Personalizadas no app (não em Configurações).
-- Use Importar para adicionar tabelas de arquivos; use Exportar para salvar suas tabelas para compartilhamento/backups.
+- Para importar uma tabela nova, use a aba **Arquivos** em Tabelas Personalizadas. A dica da aba pode dizer **Importar/Exportar**.
+- No desktop e no tablet, Arquivos é a quarta aba à esquerda. Em celulares, é a quarta aba na barra inferior.
 - Nota de desbloqueio: no Google Play, Amazon e na Apple App Store, Tabelas Personalizadas requerem uma IAP; Itch.io e Microsoft Store incluem isso com uma compra de preço maior.
 
-## Importando dentro do editor de tabela
+![Aba Arquivos de Tabelas Personalizadas com opções para importar Tabelas Oracle e Tabelas de Foco de Evento](/images/resources/custom-tables/custom-tables-files-tab.png)
+
+## Importando uma nova tabela de um arquivo
+
+Use este fluxo quando quiser adicionar uma nova tabela personalizada a partir de CSV, TXT, PSV, JSON ou JSON do Foundry.
+
+1. Abra **Tabelas Personalizadas**.
+2. Escolha a aba **Arquivos**.
+3. Escolha **Tabelas Oracle** para uma tabela de significado, ou **Tabelas de Foco de Evento** para uma tabela de foco de evento.
+4. Selecione um arquivo `.csv`, `.txt`, `.psv` ou `.json`.
+5. O app salva a tabela importada e a abre no editor de tabela para revisão.
+
+A aba Arquivos importa arquivos. Ela não tem uma caixa de colagem para texto bruto. A caixa de colagem fica no fluxo de edição de uma tabela existente abaixo.
+
+## Substituindo entradas dentro do editor de tabela
 
 Ao editar uma tabela existente, a aba Importar do editor de tabela tem dois caminhos:
 
@@ -37,7 +52,9 @@ Ao editar uma tabela existente, a aba Importar do editor de tabela tem dois cami
 - Arquivos JSON podem ser mesclados quando o ID da tabela importada corresponde à tabela que você está editando. Se os IDs não coincidirem, escolha Substituir tudo para sobrescrever a tabela.
 - Arquivos CSV, TXT e PSV substituem as entradas atuais no editor. A alteração fica preparada até você escolher Criar ou Atualizar.
 
-Essa caixa de colagem serve para substituir entradas em uma tabela que você já está editando. Para criar uma nova tabela a partir de um arquivo, use a tela de importação/exportação de Tabelas Personalizadas e escolha a opção de importar Tabelas Oracle ou Tabelas de Foco de Evento.
+![Aba Arquivos do editor de tabela existente com a caixa de colagem Substituir todas as entradas](/images/resources/custom-tables/editor-files-paste.png)
+
+Essa caixa de colagem serve para substituir entradas em uma tabela que você já está editando. Ela não é o fluxo de importação de uma tabela nova.
 
 ## Regras rápidas (TL;DR)
 

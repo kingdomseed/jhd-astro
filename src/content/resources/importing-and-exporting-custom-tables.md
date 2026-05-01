@@ -24,10 +24,25 @@ related:
 ## Where to import/export
 
 - Open the Custom Tables feature in the app (not in Settings).
-- Use Import to add tables from files; use Export to save your tables for sharing/backups.
+- To import a brand-new table, use the **Files** tab in Custom Tables. The tooltip may say **Import/Export**.
+- On desktop and tablet, Files is the fourth tab on the left. On phones, it is the fourth tab in the bottom tab bar.
 - Unlocking note: on Google Play, Amazon, and the Apple App Store, Custom Tables requires an IAP; Itch.io and Microsoft Store include it with a higher‑priced purchase.
 
-## Importing inside the table editor
+![Custom Tables Files tab with Oracle Tables and Event Focus Tables import options](/images/resources/custom-tables/custom-tables-files-tab.png)
+
+## Importing a new table from a file
+
+Use this flow when you want to add a new custom table from CSV, TXT, PSV, JSON, or Foundry JSON.
+
+1. Open **Custom Tables**.
+2. Choose the **Files** tab.
+3. Choose **Oracle Tables** for a meaning table, or **Event Focus Tables** for an event focus table.
+4. Pick a `.csv`, `.txt`, `.psv`, or `.json` file.
+5. The app saves the imported table and opens it in the table editor for review.
+
+The Files tab imports files. It does not have a paste box for raw text. The paste box is in the existing-table editing flow below.
+
+## Replacing entries inside the table editor
 
 When you edit an existing table, the table editor's Import tab has two import paths:
 
@@ -36,7 +51,9 @@ When you edit an existing table, the table editor's Import tab has two import pa
 - JSON files can merge when the imported table ID matches the table you are editing. If the IDs do not match, choose Replace All to overwrite the table.
 - CSV, TXT, and PSV files replace the current entries in the editor. The change is staged until you choose Create or Update.
 
-This paste box is for replacing entries in a table you are already editing. To create a new table from a file instead, use the Custom Tables import/export screen and choose the Oracle Tables or Event Focus Tables import option.
+![Existing table editor Files tab with the Replace All Entries paste box](/images/resources/custom-tables/editor-files-paste.png)
+
+This paste box is for replacing entries in a table you are already editing. It is not the brand-new-table import flow.
 
 ## Quick rules (TL;DR)
 
