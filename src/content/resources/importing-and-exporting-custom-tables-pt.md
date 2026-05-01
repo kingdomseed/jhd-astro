@@ -113,11 +113,12 @@ Amostras
 - Modelo de Significado (PSV): [Download](/downloads/meaning_table_template.psv)
 - Modelo de Foco de Evento (PSV): [Download](/downloads/event_focus_template.psv)
 
-## JSON (Tabela Unificada v3)
+## Formato JSON
 
-- Campos de fidelidade total (traduções, `tags`, `data`, `tableRollOn`, `entryRollOn`)
-- `tableType` é parte do JSON; valores válidos: `meaning-table` ou `event-focus`
-- IDs de tabela gerados pelo app usam snake_case; IDs de categoria gerados pelo app usam kebab-case
+- Use JSON quando quiser mover uma tabela completa entre instalações do app ou compartilhar uma tabela pronta para o app com outra pessoa.
+- JSON preserva mais da tabela do que os formatos de texto curtos, incluindo traduções, tags e links para outras tabelas.
+- O arquivo informa se é uma Tabela de Significado ou uma Tabela de Foco de Evento com `tableType`: `meaning-table` ou `event-focus`.
+- Para escrever uma tabela simples manualmente, CSV, TXT ou PSV costuma ser mais fácil.
 
 Amostras
 - Modelo de Significado (JSON): [Download](/downloads/meaning_table_template.json)

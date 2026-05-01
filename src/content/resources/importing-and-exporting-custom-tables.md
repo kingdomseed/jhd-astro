@@ -112,11 +112,12 @@ Samples
 - Meaning Template (PSV): [Download](/downloads/meaning_table_template.psv)
 - Event Focus Template (PSV): [Download](/downloads/event_focus_template.psv)
 
-## JSON (Unified Table v3)
+## JSON format
 
-- Full‑fidelity fields (translations, `tags`, `data`, `tableRollOn`, `entryRollOn`)
-- `tableType` is part of JSON; valid values: `meaning-table` or `event-focus`
-- App-generated table IDs use snake_case; app-generated category IDs use kebab‑case
+- Use JSON when you want to move a complete table between app installs or share an app-ready table with someone else.
+- JSON keeps more of the table than the short text formats, including translations, tags, and links to other tables.
+- The file says whether it is a Meaning Table or Event Focus table with `tableType`: `meaning-table` or `event-focus`.
+- For writing a simple table by hand, CSV, TXT, or PSV is usually easier.
 
 Samples
 - Meaning Template (JSON): [Download](/downloads/meaning_table_template.json)

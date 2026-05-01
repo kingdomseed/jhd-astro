@@ -554,6 +554,17 @@ const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigi
     margin-top: 0.5rem;
     text-align: center;
   }
+  :global(.resource-detail__content > p:has(img)) {
+    margin: 1.5rem 0;
+  }
+  :global(.resource-detail__content > p > img) {
+    display: block;
+    width: min(100%, 780px);
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: var(--border-base);
+  }
 
   .resource-steps {
     display: grid;
