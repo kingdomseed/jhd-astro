@@ -26,4 +26,4 @@ Tips
 - Unsure about odds? Start with Likely or 50/50 and refine over time.
 - If you feel stuck mid‑scene, roll on Meaning Tables and write a quick interpretation.
 
-Full guide: https://www.jasonholtdigital.com/resources/getting-started-with-the-mythic-apps/
+Full guide: https://jasonholtdigital.com/resources/getting-started-with-the-mythic-apps/

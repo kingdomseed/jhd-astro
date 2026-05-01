@@ -34,7 +34,7 @@ Deep dives (Resources on the site)
 - Saving & Managing Dice Formulas — import/export, backups, best practices
 - Formula Schema — field names for tooling and integrations
 
-More help and downloads: https://www.jasonholtdigital.com/resources/dice-formulas-and-customization/
+More help and downloads: https://jasonholtdigital.com/resources/dice-formulas-and-customization/
 
 Credit: Syntax powered by Adventuresmith’s dart_dice_parser — grammar and docs:
 https://pub.dev/packages/dart_dice_parser

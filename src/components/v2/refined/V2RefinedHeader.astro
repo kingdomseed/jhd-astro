@@ -4,7 +4,6 @@ import {
   v2AppsAnchorUrl,
   v2NavLinks,
   v2StoreLinks,
-  v2SupportUrl,
 } from "../../../lib/v2Links";
 
 const pathname = Astro.url.pathname;
@@ -80,6 +79,5 @@ const isActive = (href: string) =>
       <i class={link.icon} aria-hidden="true"></i>{link.label}
     </a>
   ))}
-  <a href={v2SupportUrl}><i class="fa-solid fa-life-ring" aria-hidden="true"></i>Support</a>
   <a href={v2AppsAnchorUrl} style="margin-top:20px; background: var(--jhd-ink); color: var(--jhd-bg); padding: 16px; border-bottom: none;">Get the App →</a>
 </aside>

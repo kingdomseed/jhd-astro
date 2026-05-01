@@ -42,7 +42,7 @@
     transition: background .3s, box-shadow .3s;
   }
   header.nav.is-scrolled { box-shadow: 0 1px 0 var(--jhd-ink), 0 8px 24px rgba(0,0,0,.08); }
-  .nav-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; }
   .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 900; letter-spacing: 0; }
   .brand-mark { width: 48px; height: 48px; display: block; overflow: hidden; transition: transform .2s var(--ease-standard); position: relative; border-radius: var(--r-sm, 0); }
   .brand:hover .brand-mark { transform: translate(-1px,-1px); }

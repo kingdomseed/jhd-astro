@@ -29,11 +29,11 @@ Import/Export
 - Export your creations to share with friends or back up.
 
 Deep dives (site guides)
-- Getting Started with Custom Tables: https://www.jasonholtdigital.com/resources/getting-started-with-custom-tables/
-- Custom Table Schema (JSON fields): https://www.jasonholtdigital.com/resources/custom-table-schema/
-- Categories Schema: https://www.jasonholtdigital.com/resources/categories-schema/
-- Importing & Exporting: https://www.jasonholtdigital.com/resources/importing-and-exporting-custom-tables/
-- Organizing Custom Tables: https://www.jasonholtdigital.com/resources/organizing-custom-tables/
-- Linking & Nesting Tables: https://www.jasonholtdigital.com/resources/linking-and-nesting-tables/
+- Getting Started with Custom Tables: https://jasonholtdigital.com/resources/getting-started-with-custom-tables/
+- Custom Table Schema (JSON fields): https://jasonholtdigital.com/resources/custom-table-schema/
+- Categories Schema: https://jasonholtdigital.com/resources/categories-schema/
+- Importing & Exporting: https://jasonholtdigital.com/resources/importing-and-exporting-custom-tables/
+- Organizing Custom Tables: https://jasonholtdigital.com/resources/organizing-custom-tables/
+- Linking & Nesting Tables: https://jasonholtdigital.com/resources/linking-and-nesting-tables/
 
 Templates will be posted below and on the site.

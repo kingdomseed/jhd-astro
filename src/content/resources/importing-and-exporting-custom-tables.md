@@ -1,11 +1,11 @@
 ---
 title: "Importing & Exporting Custom Tables"
-summary: "Prepare CSV, TXT, PSV, and JSON tables for import—range-based only for now—then export clean bundles for sharing."
+summary: "Prepare CSV, TXT, PSV, and JSON tables for import, then export clean bundles for sharing."
 category: "custom-tables"
 order: 4
 icon: "fa-slab fa-regular fa-exchange"
 duration: "7 min read"
-updated: "2025-09-21"
+updated: "2026-05-01"
 tags: ["custom-tables", "import", "export", "csv", "json", "foundry"]
 keywords:
   - Import custom tables
@@ -27,34 +27,51 @@ related:
 - Use Import to add tables from files; use Export to save your tables for sharing/backups.
 - Unlocking note: on Google Play, Amazon, and the Apple App Store, Custom Tables requires an IAP; Itch.io and Microsoft Store include it with a higher‑priced purchase.
 
+## Importing inside the table editor
+
+When you edit an existing table, the table editor's Import tab has two import paths:
+
+- **Replace All Entries:** paste TXT, PSV, or CSV content into the text box, then choose Replace All Entries.
+- **Import from File:** choose a `.json`, `.csv`, `.txt`, or `.psv` table file.
+- JSON files can merge when the imported table ID matches the table you are editing. If the IDs do not match, choose Replace All to overwrite the table.
+- CSV, TXT, and PSV files replace the current entries in the editor. The change is staged until you choose Create or Update.
+
+This paste box is for replacing entries in a table you are already editing. To create a new table from a file instead, use the Custom Tables import/export screen and choose the Oracle Tables or Event Focus Tables import option.
+
 ## Quick rules (TL;DR)
 
 - File encoding: UTF‑8 (CRLF or LF line endings are OK)
 - Table types: `meaning-table` or `event-focus`
-- Range coverage: Your entries must fully cover 1 → N without gaps/overlaps
+- Range coverage: Your entries must fully cover the table range without gaps/overlaps; the templates start at 1
 - Formats:
-  - CSV: requires `range_start, range_end, result` (range‑based only for now)
+  - CSV: ranged tables use `range_start, range_end, result`; meaning tables can also use `result, weight`
   - TXT: one entry per line (+ optional table_type line)
   - PSV: `endpoint|result` with endpoints that produce 1..N ranges
   - JSON v3: full‑fidelity schema, including translations and links
-- Weighted tables: Not supported yet. Use explicit ranges instead
+- Weighted CSV: supported for meaning tables; use explicit ranges for event focus tables
 
-## CSV format (range‑based)
+## CSV format
 
-Required columns:
-- `range_start`, `range_end`, `result`
+Ranged CSV:
+- The first three columns must be `range_start`, `range_end`, `result`
 
-Optional columns (order doesn’t matter):
-- `description`, `tags` (semicolon‑separated), `entryRollOn`, `id`, `table_description`, `table_type`
+Weighted meaning-table CSV:
+- Use `result`, `weight`
+
+Optional columns:
+- `description`, `tags` (semicolon‑separated), `entryRollOn`, `table_description`, `table_type`
+- Ranged meaning-table CSV also accepts `id`
 
 Notes
 - Header names are case‑insensitive
 - `table_type` is optional; if used, only the first data row should contain a value
+- In the editor paste box, CSV must be pasted as CSV with its header row; it should not be entered as plain TXT rows
 - Conflicting or invalid values are rejected with a clear error message
 
 Samples
 - Meaning Template (CSV): [Download](/downloads/meaning_table_template.csv)
 - Meaning Example (CSV): [Download](/downloads/meaning_table_example.csv)
+- Meaning Weighted Template (CSV): [Download](/downloads/meaning_table_weighted_template.csv)
 - Event Focus Template (CSV): [Download](/downloads/event_focus_template.csv)
 - Event Focus Example (CSV): [Download](/downloads/event_focus_example.csv)
 
@@ -62,6 +79,7 @@ Samples
 
 - One entry per line. Simple and fast for short lists.
 - Optional `table_type: meaning-table` (or `event-focus`) line may appear on the first or last non‑empty line.
+- The editor paste box also accepts short comma-separated lists such as `Self, Allies, Foes`.
 
 Samples
 - Meaning Template (TXT): [Download](/downloads/meaning_table_template.txt)
@@ -69,8 +87,8 @@ Samples
 
 ## PSV format (pipe‑separated endpoints)
 
-- Each line: `endpoint|result`
-- Endpoints must ascend; first range starts at 1; last endpoint becomes the table’s rangeEnd
+- Each line: `endpoint|result`; optional descriptions use `endpoint|result|description`
+- Keep endpoints unique and ascending for readability; first range starts at 1 and the highest endpoint becomes the table’s rangeEnd
 - Optional table_type line may appear at the beginning or end
 
 Samples
@@ -81,7 +99,7 @@ Samples
 
 - Full‑fidelity fields (translations, `tags`, `data`, `tableRollOn`, `entryRollOn`)
 - `tableType` is part of JSON; valid values: `meaning-table` or `event-focus`
-- IDs: table IDs are snake_case; category IDs are kebab‑case
+- App-generated table IDs use snake_case; app-generated category IDs use kebab‑case
 
 Samples
 - Meaning Template (JSON): [Download](/downloads/meaning_table_template.json)
@@ -91,14 +109,14 @@ Samples
 
 ## Foundry VTT JSON (auto‑mapping)
 
-Detected automatically when a JSON includes a `results` array with entries that contain `_id`, `text`, and a `range` array.
+Detected automatically when a JSON includes a `name` and a `results` array whose entries contain `text`. `range` arrays are used when present.
 
 Mapping highlights
 - `name` → `displayName`
 - `description` → `description`
 - `results[].text` → `entries[].result`
 - `results[].range` → `entries[].range` (e.g., `[min, max]`)
-- Unknowns preserved under `data.foundry`
+- Foundry metadata is preserved under `data.foundry`
 - Event Focus imports enforce `categoryId = "event-focus"`
 
 Samples
@@ -107,10 +125,10 @@ Samples
 
 ## Validation & troubleshooting
 
-- Range coverage: 1 → N with no gaps or overlaps
+- Range coverage: full table range with no gaps or overlaps
 - Headers spelled correctly (case‑insensitive)
 - No blank required fields (`result`, etc.)
-- If a file is invalid, the app shows an exact error and refuses to save, so your data stays safe
+- If a file is invalid, the app shows an error and refuses to save, so your data stays safe
 
 ## Next steps
 

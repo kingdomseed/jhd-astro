@@ -1,11 +1,11 @@
 ---
 title: "Importando & Exportando Tabelas Personalizadas"
-summary: "Prepare tabelas em CSV, TXT, PSV e JSON para importação—apenas baseadas em intervalo por enquanto—então exporte pacotes limpos para compartilhamento."
+summary: "Prepare tabelas em CSV, TXT, PSV e JSON para importação, então exporte pacotes limpos para compartilhamento."
 category: "custom-tables"
 order: 4
 icon: "fa-slab fa-regular fa-exchange"
 duration: "7 min de leitura"
-updated: "2025-09-21"
+updated: "2026-05-01"
 lang: "pt"
 tags: ["custom-tables", "import", "export", "csv", "json", "foundry"]
 keywords:
@@ -28,34 +28,51 @@ related:
 - Use Importar para adicionar tabelas de arquivos; use Exportar para salvar suas tabelas para compartilhamento/backups.
 - Nota de desbloqueio: no Google Play, Amazon e na Apple App Store, Tabelas Personalizadas requerem uma IAP; Itch.io e Microsoft Store incluem isso com uma compra de preço maior.
 
+## Importando dentro do editor de tabela
+
+Ao editar uma tabela existente, a aba Importar do editor de tabela tem dois caminhos:
+
+- **Substituir todas as entradas:** cole conteúdo TXT, PSV ou CSV na caixa de texto e escolha Substituir todas as entradas.
+- **Importar de arquivo:** escolha um arquivo de tabela `.json`, `.csv`, `.txt` ou `.psv`.
+- Arquivos JSON podem ser mesclados quando o ID da tabela importada corresponde à tabela que você está editando. Se os IDs não coincidirem, escolha Substituir tudo para sobrescrever a tabela.
+- Arquivos CSV, TXT e PSV substituem as entradas atuais no editor. A alteração fica preparada até você escolher Criar ou Atualizar.
+
+Essa caixa de colagem serve para substituir entradas em uma tabela que você já está editando. Para criar uma nova tabela a partir de um arquivo, use a tela de importação/exportação de Tabelas Personalizadas e escolha a opção de importar Tabelas Oracle ou Tabelas de Foco de Evento.
+
 ## Regras rápidas (TL;DR)
 
 - Codificação de arquivo: UTF‑8 (quebras de linha CRLF ou LF são OK)
 - Tipos de tabela: `meaning-table` ou `event-focus`
-- Cobertura de intervalo: Suas entradas devem cobrir totalmente 1 → N sem lacunas/sobreposições
+- Cobertura de intervalo: Suas entradas devem cobrir totalmente o intervalo da tabela sem lacunas/sobreposições; os modelos começam em 1
 - Formatos:
-  - CSV: requer `range_start, range_end, result` (apenas baseado em intervalo por enquanto)
+  - CSV: tabelas por intervalo usam `range_start, range_end, result`; tabelas de significado também podem usar `result, weight`
   - TXT: uma entrada por linha (+ linha opcional table_type)
   - PSV: `endpoint|result` com extremidades que produzem intervalos 1..N
   - JSON v3: esquema de fidelidade total, incluindo traduções e links
-- Tabelas com peso: Não suportado ainda. Use intervalos explícitos em vez disso
+- CSV com pesos: suportado para tabelas de significado; use intervalos explícitos para tabelas de foco de evento
 
-## Formato CSV (baseado em intervalo)
+## Formato CSV
 
-Colunas obrigatórias:
-- `range_start`, `range_end`, `result`
+CSV por intervalo:
+- As três primeiras colunas devem ser `range_start`, `range_end`, `result`
 
-Colunas opcionais (ordem não importa):
-- `description`, `tags` (separadas por ponto e vírgula), `entryRollOn`, `id`, `table_description`, `table_type`
+CSV com pesos para tabelas de significado:
+- Use `result`, `weight`
+
+Colunas opcionais:
+- `description`, `tags` (separadas por ponto e vírgula), `entryRollOn`, `table_description`, `table_type`
+- CSV por intervalo para tabelas de significado também aceita `id`
 
 Notas
 - Nomes de cabeçalho são insensíveis a maiúsculas/minúsculas
 - `table_type` é opcional; se usado, apenas a primeira linha de dados deve conter um valor
+- Na caixa de colagem do editor, o CSV deve ser colado como CSV com a linha de cabeçalho; ele não deve ser inserido como linhas TXT simples
 - Valores conflitantes ou inválidos são rejeitados com uma mensagem de erro clara
 
 Amostras
 - Modelo de Significado (CSV): [Download](/downloads/meaning_table_template.csv)
 - Exemplo de Significado (CSV): [Download](/downloads/meaning_table_example.csv)
+- Modelo de Significado com Pesos (CSV): [Download](/downloads/meaning_table_weighted_template.csv)
 - Modelo de Foco de Evento (CSV): [Download](/downloads/event_focus_template.csv)
 - Exemplo de Foco de Evento (CSV): [Download](/downloads/event_focus_example.csv)
 
@@ -63,6 +80,7 @@ Amostras
 
 - Uma entrada por linha. Simples e rápido para listas curtas.
 - Linha opcional `table_type: meaning-table` (ou `event-focus`) pode aparecer na primeira ou última linha não vazia.
+- A caixa de colagem do editor também aceita listas curtas separadas por vírgula, como `Self, Allies, Foes`.
 
 Amostras
 - Modelo de Significado (TXT): [Download](/downloads/meaning_table_template.txt)
@@ -70,8 +88,8 @@ Amostras
 
 ## Formato PSV (extremidades separadas por pipe)
 
-- Cada linha: `endpoint|result`
-- Extremidades devem ascender; primeira faixa começa em 1; última extremidade torna-se o rangeEnd da tabela
+- Cada linha: `endpoint|result`; descrições opcionais usam `endpoint|result|description`
+- Mantenha as extremidades únicas e em ordem crescente para facilitar a leitura; a primeira faixa começa em 1 e a maior extremidade torna-se o rangeEnd da tabela
 - Linha opcional table_type pode aparecer no início ou no fim
 
 Amostras
@@ -82,7 +100,7 @@ Amostras
 
 - Campos de fidelidade total (traduções, `tags`, `data`, `tableRollOn`, `entryRollOn`)
 - `tableType` é parte do JSON; valores válidos: `meaning-table` ou `event-focus`
-- IDs: IDs de tabela são snake_case; IDs de categoria são kebab-case
+- IDs de tabela gerados pelo app usam snake_case; IDs de categoria gerados pelo app usam kebab-case
 
 Amostras
 - Modelo de Significado (JSON): [Download](/downloads/meaning_table_template.json)
@@ -92,14 +110,14 @@ Amostras
 
 ## Foundry VTT JSON (mapeamento automático)
 
-Detectado automaticamente quando um JSON inclui um array `results` com entradas que contêm `_id`, `text`, e um array `range`.
+Detectado automaticamente quando um JSON inclui `name` e um array `results` cujas entradas contêm `text`. Arrays `range` são usados quando presentes.
 
 Destaques do mapeamento
 - `name` → `displayName`
 - `description` → `description`
 - `results[].text` → `entries[].result`
 - `results[].range` → `entries[].range` (ex., `[min, max]`)
-- Desconhecidos preservados sob `data.foundry`
+- Metadados do Foundry são preservados sob `data.foundry`
 - Importações de Foco de Evento forçam `categoryId = "event-focus"`
 
 Amostras
@@ -108,10 +126,10 @@ Amostras
 
 ## Validação & solução de problemas
 
-- Cobertura de intervalo: 1 → N sem lacunas ou sobreposições
+- Cobertura de intervalo: intervalo completo da tabela sem lacunas ou sobreposições
 - Cabeçalhos escritos corretamente (insensível a maiúsculas/minúsculas)
 - Sem campos obrigatórios em branco (`result`, etc.)
-- Se um arquivo for inválido, o app mostra um erro exato e recusa salvar, então seus dados ficam seguros
+- Se um arquivo for inválido, o app mostra um erro e recusa salvar, então seus dados ficam seguros
 
 ## Próximos passos
 

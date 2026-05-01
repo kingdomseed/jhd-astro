@@ -17,6 +17,11 @@ export const v2NavLinks = [
     label: "Blog",
     icon: "fa-solid fa-newspaper",
   },
+  {
+    href: "/v2/support/",
+    label: "Support",
+    icon: "fa-solid fa-life-ring",
+  },
 ] as const;
 
 export const v2StoreLinks = [

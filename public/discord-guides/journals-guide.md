@@ -8,4 +8,4 @@ Each adventure's data is self-contained. You can create new adventures by going 
 
 For those who want to build or modify journal data outside of the app, I am including the schema, template, and example files below. You could also use these to build an integration for another app if you are into that kind of thing. 
 
-The resources section of my new website has more information and deatil! Feel free to stop by anytime: https://www.jasonholtdigital.com
+The resources section of my new website has more information and deatil! Feel free to stop by anytime: https://jasonholtdigital.com
