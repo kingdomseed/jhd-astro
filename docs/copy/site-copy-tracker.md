@@ -84,9 +84,13 @@ approved section so we do not reopen finished work or lose the next decision.
 | Support contact form copy | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Removes the 2-business-day promise, makes app-support submissions more useful, and cuts the overly cute error tone. |
 | Support page | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Production English Support page copy pass is complete. Do not reopen unless explicitly requested. |
 | Copy context sync | Done | `CONTEXT.md`, `docs/copy/*flow-inventory.md` | Approved copy directions, resume-derived voice rules, and the full Mythic GME app glossary are captured for future site copy work. |
+| SEO/social metadata inventory | Done | `docs/copy/seo-social-metadata-inventory.md` | Current metadata behavior, page titles/descriptions, OG/social gaps, JSON-LD drift risk, and hreflang constraints are captured. |
+| SEO/social metadata mechanics | Done | `src/layouts/BaseLayout.astro`, top-level EN/PT pages, `public/social/og-default.jpg`, `public/apple-touch-icon.png` | Uses a 1200x630 galaxy social card, adds OG/Twitter image alt support, restores the Apple touch icon, removes stale structured-data price/rating fields, and uses explicit EN/PT alternate paths instead of guessed routes. |
+| SEO/social title patterns | Done | `src/pages/about.astro`, `src/pages/blog/index.astro`, `src/pages/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/pages/resources/[slug].astro` | Removes duplicated About title wording and strengthens Blog/Resource title suffixes around Mythic GME Apps. |
+| SEO/social detail-page hreflang | Done | `src/layouts/BaseLayout.astro`, `src/pages/blog/[slug].astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/resources/[slug].astro`, `src/pages/pt/resources/[slug].astro` | Uses explicit EN/PT slug mapping for Blog and Resource detail pages, verified against content collection entries before emitting translated alternates. |
 | Header | Done | `src/components/layout/Header.astro`, `src/i18n/ui.ts` | Keep current header, CTA, mobile label, and store labels. |
 | Footer | Done | `src/components/layout/Footer.astro`, `src/i18n/ui.ts` | Keep footer copy as-is. |
-| SEO/social metadata beyond home | Pending | Page frontmatter/layout props outside the homepage | Review with each remaining page rather than as a separate homepage task. |
+| SEO/social metadata beyond home | Done | `docs/copy/seo-social-metadata-inventory.md`, page frontmatter/layout props | Sitewide mechanics, title-pattern cleanup, and translated detail-page hreflang mapping are implemented. Portuguese metadata remains a separate pass. |
 
 ## Later Or Separate Passes
 
@@ -100,6 +104,6 @@ approved section so we do not reopen finished work or lose the next decision.
 
 ## Next Grill Question
 
-Production English copy passes are complete for About, Homepage, Apps,
-Resources index, and Support. Next copy work should start with a fresh inventory
-for the selected page or surface.
+SEO/social metadata mechanics, title-pattern cleanup, and detail-page hreflang
+mapping are implemented. Next decision: whether to do a Portuguese metadata
+pass now or leave it for the broader Portuguese copy pass.

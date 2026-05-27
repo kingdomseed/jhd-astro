@@ -11,9 +11,10 @@ if (!aboutEntry) throw new Error("Could not find about entry in pages collection
 const { title, subtitle, description, pageHeader } = aboutEntry.data;
 ---
 <BaseLayout
-  title={`About — ${title} & Official Partnership`}
+  title="About Jason Holt | Mythic GME Apps"
   description={description}
   canonicalPath="/about/"
+  alternatePath="/pt/about/"
   mainClass="about-main"
 >
   <PageHeader

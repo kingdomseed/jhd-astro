@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import { formatDate } from "../../lib/format-date"; // Consistent date rendering
-import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image fallback
 import ShareBar from '../../components/blog/ShareBar.astro';
 import { getCollection, render, getEntry, type CollectionEntry } from "astro:content";
 
@@ -55,24 +54,28 @@ const productLabel =
         : "Mythic GME Apps";
 
 const canonicalPath = `/blog/${entry.id}/`;
-// Compute absolute OG image URL with fallbacks: socialImage -> hero -> default site image
-const ogSrcPath = post.socialImage?.src ?? post.hero?.src ?? defaultOg;
-const ogImageUrl = new URL(
-  ogSrcPath,
-  Astro.site ?? "https://jasonholtdigital.com",
-).toString();
+const translatedEntry = await getEntry("blog", `${entry.id}-pt`);
+const alternatePath = translatedEntry?.data.lang === "pt"
+  ? `/pt/blog/${translatedEntry.id}/`
+  : null;
+// Use a post-specific social image when available; otherwise BaseLayout uses the site default.
+const ogSrcPath = post.socialImage?.src ?? post.hero?.src;
+const ogImageUrl = ogSrcPath
+  ? new URL(ogSrcPath, Astro.site ?? "https://jasonholtdigital.com").toString()
+  : undefined;
 const ogImageAlt = post.socialImageAlt ?? post.heroAlt ?? post.title;
 const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigital.com").toString();
 ---
 <BaseLayout
-  title={`${post.title} — Mythic Blog`}
+  title={`${post.title} — Mythic GME Apps Blog`}
   description={post.summary}
   canonicalPath={canonicalPath}
-  noAlternate
+  alternatePath={alternatePath}
   ogTitle={post.title}
   ogDescription={post.summary}
   ogType="article"
   ogImage={ogImageUrl}
+  ogImageAlt={ogImageAlt}
   mainClass="blog-detail-main"
 >
   <Fragment slot="head">
@@ -82,7 +85,6 @@ const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigi
       href="/rss.xml"
       title="Mythic Blog"
     />
-    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
     {
       post.date && (
         <meta

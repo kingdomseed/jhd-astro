@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 import { Image } from "astro:assets";
 import { formatDate } from "../../lib/format-date";
-import defaultOg from "../../assets/logo/logo.jpg?url"; // Default site OG image
 import { getEntry, render, getCollection, type CollectionEntry } from "astro:content";
 import ShareBar from '../../components/blog/ShareBar.astro';
 
@@ -107,27 +106,27 @@ const sectionAnchors = {
 const parentAnchor = sectionAnchors[resource.category] ?? "";
 const backHref = `/resources${parentAnchor}`;
 const canonicalPath = `/resources/${entry.id}/`;
-// Compute absolute OG image URL using resource hero or default site image
-const ogSrcPath = resource.hero?.src ?? defaultOg;
-const ogImageUrl = new URL(
-  ogSrcPath,
-  Astro.site ?? "https://jasonholtdigital.com",
-).toString();
+const translatedEntry = await getEntry("resources", `${entry.id}-pt`);
+const alternatePath = translatedEntry?.data.lang === "pt"
+  ? `/pt/resources/${translatedEntry.id}/`
+  : null;
+// Use a resource hero image when available; otherwise BaseLayout uses the site default.
+const ogSrcPath = resource.hero?.src;
+const ogImageUrl = ogSrcPath
+  ? new URL(ogSrcPath, Astro.site ?? "https://jasonholtdigital.com").toString()
+  : undefined;
 const ogImageAlt = resource.heroAlt ?? resource.title;
 const canonicalUrl = new URL(canonicalPath, Astro.site ?? "https://jasonholtdigital.com").toString();
 ---
 <BaseLayout
-  title={`${resource.title} — Mythic Resources`}
+  title={`${resource.title} — Mythic GME Apps Guide`}
   description={resource.summary}
   canonicalPath={canonicalPath}
-  noAlternate
+  alternatePath={alternatePath}
   ogImage={ogImageUrl}
+  ogImageAlt={ogImageAlt}
   mainClass="resource-detail-main"
 >
-  <Fragment slot="head">
-    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
-  </Fragment>
-
   <PageHeader
     title={resource.title}
     subtitle={categoryLabels[resource.category]}
