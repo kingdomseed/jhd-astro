@@ -86,6 +86,42 @@ evidence has given them meaning.
 _Avoid_: Role label in the H1, role label in the page subtitle, title-first
 positioning.
 
+### Homepage language
+
+**GM-Less Doorway**:
+The broad homepage entry point for players who do not know Mythic yet: the apps
+help them understand that Mythic makes it possible to play without a GM.
+Approved H1 direction: "GM-less Play At Your Fingertips."
+_Avoid_: Replacing this with Mythic-only language that assumes the visitor
+already knows what Mythic does.
+
+**Mythic Flow Promise**:
+The sharper homepage product promise for players who know or are learning
+Mythic: the apps help keep play moving by making common Mythic actions fast and
+close to the story.
+Approved H1 direction for alternate use: "Keep Mythic play moving."
+Approved lead direction: "Ask Fate Questions, roll on Meaning Tables, track
+your scenes, and stay close to the story."
+_Avoid_: Generic speed claims, feature inventory without the play outcome,
+language that makes the app sound like the point instead of the aid.
+
+**Official Companion Lead**:
+The older homepage lead direction that establishes trust first: "Official,
+licensed companion to the original oracle-style solo RPG."
+Use this idea when the copy needs a compact trust signal, but prefer the
+**Mythic Flow Promise** when the section already has official/license context.
+_Avoid_: Repeating official/licensed so often that the homepage forgets to say
+what changes for the player in play.
+
+**Homepage Proof Chips**:
+Short trust cues in the hero should use clean, defensible claims that fit the
+privacy-focused posture of the apps.
+Approved current direction: "4.8 App Store rating", "Mobile + desktop", and
+"No subscriptions."
+_Avoid_: Fuzzy install totals, unclear community counts, MAU/session claims
+from private analytics, or blended rating claims that depend on uneven store
+data.
+
 ### About page
 
 **Maker Trust Story**:
@@ -98,6 +134,17 @@ _Avoid_: Full biography, portfolio pitch, employer-facing case study.
 A short first-person introduction that humanizes the product without pulling
 the page away from player outcomes.
 _Avoid_: Founder manifesto, resume summary, technical process essay.
+
+**Homepage Maker's Note**:
+The approved homepage maker note should be more about Jason's active presence in
+the product loop than a compressed retelling of the About page. It may name
+code, support messages, Discord, and the feature board as the places Jason moves
+between while looking for ways the apps can make real sessions smoother.
+Approved direction: "I want the apps to make Mythic feel ready to play in one
+place, without pulling attention away from the story."
+_Avoid_: Treating Mythic as something happening outside the app that the app
+has to keep up with, listing mechanics as a soup of features, or restating the
+full About story.
 
 **Player-Listening Builder**:
 The About-page framing that Jason's authority comes from building and
