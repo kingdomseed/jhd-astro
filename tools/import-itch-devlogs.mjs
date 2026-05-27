@@ -88,7 +88,7 @@ function getIdFromUrl(url) {
   return m ? m[1] : '';
 }
 
-async function generateMarkdown({ title, summary, category, date, readTime, bodyHtml, url, id }) {
+async function generateMarkdown({ title, summary, category, date, readTime, bodyHtml, id }) {
   const safeTitle = title.replace(/"/g, '\\"');
   const fm = [
     '---',
@@ -150,5 +150,4 @@ run()
     console.error(err);
     process.exit(1);
   });
-
 

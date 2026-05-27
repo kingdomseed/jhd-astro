@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 // -- Shared schema fragments ---------------------------------------------------
 const langField = z.enum(['en', 'pt']).default('en');
@@ -29,7 +30,7 @@ const resources = defineCollection({
       order: z.number().int().nonnegative(),
       icon: z.string().default("fa-slab fa-regular fa-book-open"),
       duration: z.string().optional(),
-      externalUrl: z.string().url().optional(),
+      externalUrl: z.url().optional(),
       updated: z.coerce.date().optional(),
       keywords: keywordsField,
       tags: tagsField,

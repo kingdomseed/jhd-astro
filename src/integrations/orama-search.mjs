@@ -114,7 +114,7 @@ export default function oramaSearch(options) {
           const db = await buildDB(dbConfig, pages, dir, logger);
           if (!db) continue;
 
-          const serialized = JSON.stringify(await save(db));
+          const serialized = JSON.stringify(save(db));
           const outPath = path.join(assetsDir, `oramaDB_${dbName}.json`);
           writeFileSync(outPath, serialized, 'utf-8');
 

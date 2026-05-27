@@ -14,25 +14,26 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.1.4",
+    "@astrojs/cloudflare": "^13.5.5",
     "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "^3.7.3",
     "@orama/orama": "^3.1.18",
     "@orama/plugin-match-highlight": "^3.1.18",
-    "astro": "^6.1.1",
+    "astro": "^6.3.8",
     "html-to-text": "^9.0.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
+    "@astrojs/check": "^0.9.9",
     "esbuild": "^0.25.10",
     "prettier": "3.6.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vitest": "^4.1.2",
-    "wrangler": "^4.38.0"
+    "wrangler": "^4.95.0"
   },
   "overrides": {
     "prettier": "3.6.2",
-    "undici": "^7.18.2"
+    "undici": "^7.18.2",
+    "yaml": "^2.8.3"
   }
 }
