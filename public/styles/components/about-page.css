@@ -52,7 +52,8 @@
     line-height: 1.6;
   }
 
-  .about-license {
+  .about-license,
+  .about-process {
     background: #fff;
     border: var(--border-base);
     box-shadow: var(--shadow-base);
@@ -61,12 +62,14 @@
     gap: 1.25rem;
   }
 
-  .about-license__summary {
+  .about-license__summary,
+  .about-process__summary {
     margin: 0;
     color: #333;
     line-height: 1.6;
   }
-  .about-license__summary p { margin: 0; }
+  .about-license__summary p,
+  .about-process__summary p { margin: 0; }
 
   .about-license__list {
     margin: 0;

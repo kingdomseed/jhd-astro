@@ -2,6 +2,20 @@
 
 This file is the canonical, detailed playbook for this repository. The previous VERDENT.md has been merged here and will be removed.
 
+## Agent skills
+
+### Issue tracker
+
+Issues are tracked in Linear on team `JAD`; use project `jhd-astro` once it exists. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the default five triage labels: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repo: read root `CONTEXT.md`; use `docs/adr/` only when ADRs exist. See `docs/agents/domain.md`.
+
 ## Scope & assumptions
 
 - This repository folder is `astro_project/`.

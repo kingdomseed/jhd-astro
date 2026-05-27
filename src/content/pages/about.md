@@ -1,7 +1,7 @@
 ---
-title: Hi, I'm Jason
-subtitle: Teacher turned developer, building tools for the Mythic community
-description: I build the official Mythic GME 2e apps with Word Mill Games. I got here through nine years of teaching, a lot of code, and a community that showed me what to build.
+title: About Jason
+subtitle: I build the official Mythic GME apps and keep them close to the people who play them.
+description: I build and maintain the officially licensed Mythic GME 2e apps in partnership with Word Mill Creative. The work stays tied to real sessions, player feedback, and the parts of play where the app can help without getting in the way.
 pageHeader:
   accent: About
   layout: left
@@ -55,47 +55,40 @@ tags:
 
 ## Profile
 
-### Hi, I'm Jason
+### How I got here
 
-I wrote my first program at twelve — a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally (after dreaming about it since I ran Hour of Code with my students in 2013) building a real app. What stayed the same across all of it was the people: I kept ending up where someone needed something built.
+My brother and I grew up playing games of imagination, creating characters from our heads and from Legos, and sending them through whatever worlds we could dream up. We read Redwall, The Lord of the Rings, The Black Cauldron, and a lot of other fantasy. Star Wars was in there too, with heroes and villains, strange places, big adventures, and last-minute rescues. All of that gave us a lot to play with.
 
-I maintain two products under licence from Word Mill Games: **Mythic GME Mobile** (iOS, Android) and **Mythic GME Digital** (Windows, macOS, Linux).
+When I was twelve, I got hold of an old laptop with a black-and-white screen. It could not do much, but it had BASIC, and I found an old high school textbook that taught me how to use it. I started tinkering by putting words on the screen, making choices, and seeing what the computer would do next.
 
-I'm also pursuing an M.Sc. in Computational Linguistics. Part curiosity about how language and software can work together for solo play, and part (if I'm honest) the same pattern that's driven every fresh start in my career — someone had a need, and I wanted to help meet it.
+The first program I made was a game. I was reading Redwall constantly then, so I built a little choose-your-own-adventure in BASIC. You made choices, tried to get through the adventure, and hopefully reached a good ending. My family and friends could play it.
 
-## Official
+Years later, after I moved to Germany and was figuring out what came after teaching, I started setting up a small software business. I was looking at practical work like Shopify development, but I still wanted to build apps.
 
-### Licensed with Word Mill Games
+My brother was more plugged into the TTRPG community, and he knew I still wanted to build apps. He sent me a note that Tana Pigeon was looking for someone to build an app for Mythic. I had not heard of Mythic before, and I was cautious about getting too excited. The more I looked into it, the more I could see why players cared about it.
 
-Word Mill Games needed a developer for Mythic GME 2e, and I was looking for what to build after teaching. The timing worked. That became a licence in 2024, and I've been working directly with Word Mill ever since.
+Mythic felt connected to the kind of play I had always loved. You make a character, explore a world, and find out what happens next. It was also a chance to build a product experience I wanted to make. I wanted the app to help with the parts that slow play down, feel good to use, and stay quiet enough to get out of the way while people tell their stories.
 
-* **Core 2e fidelity.** Fate Chart, Fate Check, Random Events, and Scene adjustments implemented with care.
-* **Platforms.** Two apps: **Mythic GME Mobile** (iOS, Android) and **Mythic GME Digital** (Windows, macOS, Linux).
-* **Portable by design.** Offline‑first, JSON journals, and Markdown exports so your campaigns travel well.
-* **Accessible.** Screen‑reader friendly, adjustable type, left‑hand mode, and color‑blind aware palettes.
+Today I build and maintain two officially licensed Mythic GME 2e apps. **Mythic GME Mobile** runs on iOS and Android. **Mythic GME Digital** runs on Windows, macOS, and Linux.
 
-## Product
+The Mythic community welcomed me with open arms, and that encourages me more than I can say. I am still building with that community, listening to what helps in real play and working to make the apps one of the best ways to play RPGs with Mythic.
 
-### Why Mythic players choose the apps
+Today I am still working on the apps, improving them, planning what comes next, supporting players, and listening to feedback while I finish my M.Sc. in Computational Linguistics.
 
-I built these apps for the Mythic community — less time flipping through tables, more time in the story. Solo play, GM-less sessions, creative spark on the go — however you use Mythic, the apps are built to keep up.
+## How The Apps Get Better
 
-What I ship next comes from what players tell me — join the Discord to talk with me or head to the [Feature Board](http://feedback.jasonholtdigital.com/board) to request features and vote on priorities.
+The work has to stay close to real sessions, not just a feature list.
 
-## Approach
+Players tell me when something saves time, when something is confusing, when something is too slow, and when the app is missing something from the way they actually play. That feedback helps me understand the direction the app should move, what the experience needs to feel like, and where the next round of work should focus.
 
-### What shapes the work
+Most of that conversation happens through Discord, email, and the feature board at feedback.jasonholtdigital.com. I keep an eye on Discord, respond to feature requests, and ask questions when I need to understand how something is affecting real play.
 
-When I started building the Mythic app, I knew I needed the community — their feedback, their play styles, their patience while I figured things out. Every version has been a fresh start — better architecture, new UX patterns, and a lot more listening. That's how "build in public" went from something I admired to the way I actually work.
+Sometimes the answer is a quick fix. Sometimes it is a small design change. Sometimes it is "I need to think about that more."
 
-I share what I ship each day in the Discord #daily-wrap. Bug reports come in, feature requests come in, and sometimes a player catches something I missed (happens more often than I'd like to admit). Small, frequent updates.
+I share progress updates when I can, and I want to do more of that. I am still active in the community and still working to keep the app moving forward.
 
 ## Connect
 
-### I'd love to keep the conversation going
+If you use the apps, I want to hear how they fit into your real sessions. Send a bug report, a feature idea, a question, or just a story about what happened in your last session.
 
-I read every message. Whether it's a bug report, a feature idea, or just a story about your last session — I want to hear it.
-
-* **Try the Mythic GME apps** — App Store, Google Play, Microsoft Store, Amazon Appstore, itch.io
-* **Get support** — Quick FAQ and contact form
-* **Submit a feature request** — Vote and suggest ideas
+I read every message.
