@@ -23,7 +23,7 @@ Seguindo o lançamento do Mythic GME Mobile para Android e iOS, e inspirado pelo
 - Layouts nítidos para monitores & teclados
 - Locais de salvamento personalizados (incluindo iCloud Drive para usuários de macOS)
 
-- Conteúdo completo de Variações Mythic + Revistas (100+ tabelas!)
+- Conteúdo completo de Mythic Variations + Mythic Magazines (100+ tabelas!)
 - Suporte completo e oficial ao idioma Português (obrigado https://retropunk.com.br/ )!
 
 🎮 Uma Compra, Três Plataformas
@@ -33,8 +33,8 @@ Seguindo o lançamento do Mythic GME Mobile para Android e iOS, e inspirado pelo
 
 - macOS: Binário universal (M1+ recomendado)
 
-🔒 Sem Assinaturas, Sem IAPs
-Pague uma vez ($XX.XX) na nossa página do itch.io e receba:
+🔒 Sem assinaturas, sem compras internas
+Compre uma vez na página do itch.io e receba:
 
 - Todos os recursos atuais desbloqueados
 - Atualizações gratuitas para sempre
@@ -42,12 +42,12 @@ Pague uma vez ($XX.XX) na nossa página do itch.io e receba:
 - Downloads multiplataforma
 ## 🛠️ Construído Com Você, Para Você
 
-> *"Mais da metade de nossas melhorias vêm direto do Discord do Mythic. Este não é o meu app – é o* nosso *app."* – Jason Holt, Desenvolvedor
+> *"Muitas melhorias vêm direto do Discord do Mythic. Este não é o meu app – é o* nosso *app."* – Jason Holt, Desenvolvedor
 
 Um dos aspectos mais empolgantes de desenvolver *Mythic GME Digital* tem sido o feedback e sugestões incríveis da comunidade Mythic. Muitas funcionalidades no app hoje—e ainda mais chegando em breve—são diretamente inspiradas pela sua contribuição. Veja como suas ideias moldaram este projeto:
 
 - Suporte Extensivo a Acessibilidade: Da compatibilidade com leitores de tela a tamanhos de fonte ajustáveis, modo daltônico e operação para canhotos, recursos de acessibilidade foram priorizados graças aos pedidos da comunidade por inclusão.
-- Tabelas de Significado Expandidas: O app agora inclui uma coleção massiva de tabelas de significado d100 e tabelas de foco de evento originadas de *Variações Mythic* e *Revistas Mythic*, atendendo pedidos por mais ferramentas para inspirar narrativas criativas.
+- Tabelas de Significado Expandidas: O app agora inclui uma coleção massiva de tabelas de significado d100 e tabelas de foco de evento originadas de *Mythic Variations* e *Mythic Magazines*, atendendo pedidos por mais ferramentas para inspirar narrativas criativas.
 
 - Escolhas de Design Baseadas no Feedback dos Jogadores: Cada aspecto do app, do layout à navegação, reflete decisões influenciadas pelo feedback dos Mythicers. Suas sugestões me ajudaram a refinar a experiência do usuário para melhor atender jogadores solo, grupos sem Mestre e contadores de histórias.
 - Funcionalidades Futuras no Roadmap: A versão 1.5 introduzirá a criação de tabelas personalizadas—um recurso altamente solicitado que permitirá que você adapte sua experiência ainda mais. Esta é apenas uma das muitas atualizações empolgantes inspiradas pela contribuição da comunidade.
@@ -105,4 +105,4 @@ Pegue sua cópia em jasonholtdigital.itch.io/mythic-gme-digital e me diga:
 
 *Ainda tem perguntas? Responda abaixo ou me encontre no Discord do Mythic!*
 
-*Mythic GME Digital é um produto oficial licenciado criado em parceria com Tana Pigeon. Mythic Game Master Emulator 2nd Edition é &copy;2025 Word Mill Games.*
+*Mythic GME Digital é um produto oficial licenciado criado em parceria com Tana Pigeon. Mythic Game Master Emulator 2nd Edition é &copy;2025 Word Mill Creative LLC.*

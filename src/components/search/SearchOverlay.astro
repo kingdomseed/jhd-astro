@@ -3,8 +3,30 @@
 // Opens via Cmd/Ctrl+K or "/" key. Uses native <dialog> for modal behavior
 // (focus trapping, backdrop, Escape to close — all built in).
 // Loads Orama indexes lazily on first open.
+import { useTranslations } from "../../i18n/utils";
+
+interface Props {
+  lang?: "en" | "pt";
+}
+
+const { lang = "en" } = Astro.props;
+const t = useTranslations(lang);
+const resourcesDbName = lang === "pt" ? "resources_pt" : "resources";
+const blogDbName = lang === "pt" ? "blog_pt" : "blog";
 ---
-<dialog id="search-dialog" class="search-overlay__dialog">
+<dialog
+  id="search-dialog"
+  class="search-overlay__dialog"
+  data-search-resources-db={resourcesDbName}
+  data-search-blog-db={blogDbName}
+  data-search-empty={t("search.empty")}
+  data-search-loading={t("search.loading")}
+  data-search-no-results={t("search.no_results")}
+  data-search-resources={t("search.resources")}
+  data-search-blog={t("search.blog")}
+  data-search-also-resources={t("search.also_resources")}
+  data-search-also-blog={t("search.also_blog")}
+>
   <div class="search-overlay__panel">
     <div class="search-overlay__header">
       <i class="fa-slab fa-regular fa-magnifying-glass search-overlay__icon" aria-hidden="true"></i>
@@ -12,13 +34,13 @@
         id="search-input"
         class="search-overlay__input"
         type="search"
-        placeholder="Search resources and blog..."
+        placeholder={t("search.placeholder")}
         autocomplete="off"
       />
       <kbd class="search-overlay__esc">Esc</kbd>
     </div>
     <div class="search-overlay__body" id="search-results">
-      <p class="search-overlay__empty">Type to search across resources and blog posts.</p>
+      <p class="search-overlay__empty">{t("search.empty")}</p>
     </div>
   </div>
 </dialog>
@@ -27,13 +49,26 @@
   const dialog = document.getElementById('search-dialog') as HTMLDialogElement;
   const input = document.getElementById('search-input') as HTMLInputElement;
   const resultsContainer = document.getElementById('search-results')!;
+	  const searchCopy = {
+	    empty: dialog.dataset.searchEmpty || 'Type to search across resources and blog posts.',
+	    loading: dialog.dataset.searchLoading || 'Search is loading...',
+	    noResults: dialog.dataset.searchNoResults || 'No results for',
+    resources: dialog.dataset.searchResources || 'Resources',
+    blog: dialog.dataset.searchBlog || 'Blog',
+	    alsoResources: dialog.dataset.searchAlsoResources || 'Also in Resources',
+	    alsoBlog: dialog.dataset.searchAlsoBlog || 'Also in Blog',
+	  };
+	  const searchDbNames = {
+	    resources: dialog.dataset.searchResourcesDb || 'resources',
+	    blog: dialog.dataset.searchBlogDb || 'blog',
+	  };
 
   // ── Open / Close ──────────────────────────────────────────────────────
   function openSearch() {
     dialog.showModal();
     input.value = '';
     clearResults();
-    showEmpty('Type to search across resources and blog posts.');
+    showEmpty(searchCopy.empty);
     requestAnimationFrame(() => input.focus());
     ensureDBs();
   }
@@ -77,14 +112,14 @@
   let blogDB: Awaited<ReturnType<typeof getOramaDB>> | null = null;
   let debounceTimer: ReturnType<typeof setTimeout>;
 
-  async function ensureDBs() {
-    if (resourcesDB && blogDB) return;
-    try {
-      if (!resourcesDB) resourcesDB = await getOramaDB('resources');
-      if (!blogDB) blogDB = await getOramaDB('blog');
-    } catch (err) {
-      console.error('Failed to load search indexes:', err);
-    }
+	  async function ensureDBs() {
+	    if (resourcesDB && blogDB) return;
+	    try {
+	      if (!resourcesDB) resourcesDB = await getOramaDB(searchDbNames.resources);
+	      if (!blogDB) blogDB = await getOramaDB(searchDbNames.blog);
+	    } catch (err) {
+	      console.error('Failed to load search indexes:', err);
+	    }
   }
 
   function clearResults() {
@@ -169,13 +204,13 @@
 
   async function doSearch(term: string) {
     if (!term.trim()) {
-      showEmpty('Type to search across resources and blog posts.');
+      showEmpty(searchCopy.empty);
       return;
     }
 
     await ensureDBs();
     if (!resourcesDB || !blogDB) {
-      showEmpty('Search is loading...');
+      showEmpty(searchCopy.loading);
       return;
     }
 
@@ -188,15 +223,17 @@
     const blogHits = (blogResults?.hits ?? []) as SearchHit[];
 
     if (!resHits.length && !blogHits.length) {
-      showEmpty(`No results for \u201c${term}\u201d`);
+      showEmpty(`${searchCopy.noResults} \u201c${term}\u201d`);
       return;
     }
 
     clearResults();
 
-    const onBlog = location.pathname.startsWith('/blog/');
-    const primaryTitle = onBlog ? 'Blog' : 'Resources';
-    const secondaryTitle = onBlog ? 'Also in Resources' : 'Also in Blog';
+    const onBlog =
+      location.pathname.startsWith('/blog/') ||
+      location.pathname.startsWith('/pt/blog/');
+    const primaryTitle = onBlog ? searchCopy.blog : searchCopy.resources;
+    const secondaryTitle = onBlog ? searchCopy.alsoResources : searchCopy.alsoBlog;
     const primaryHits = onBlog ? blogHits : resHits;
     const secondaryHits = onBlog ? resHits : blogHits;
 

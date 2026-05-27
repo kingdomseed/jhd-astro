@@ -8,11 +8,11 @@ const entries = await getResourcesByLang('pt');
 type ResourceEntry = CollectionEntry<"resources">;
 
 const categoryLabels = {
-    "start-here": "Comece Aqui",
+    "start-here": "Comece aqui",
     "adventure-journals": "Diários de Aventura",
     "dice-roller": "Rolador de Dados",
     "custom-tables": "Tabelas Personalizadas",
-    advanced: "Esquemas e Aprofundamentos",
+    advanced: "Referência",
 };
 
 const sortByOrder = (items: ResourceEntry[]) =>
@@ -25,34 +25,34 @@ const sortByOrder = (items: ResourceEntry[]) =>
 const sectionBlueprint = [
     {
         id: "start-here",
-        badge: "Comece Aqui",
-        title: "Comece Rapidamente",
+        badge: "Comece aqui",
+        title: "Comece com os apps",
         description:
-            "Instale os aplicativos, aprenda o espaço de trabalho e fique confortável com o fluxo Mythic.",
+            "Instale os apps, aprenda as principais ferramentas e fique à vontade usando Mythic durante o jogo.",
         category: "start-here",
     },
     {
         id: "adventure-journals",
         badge: "Diários",
-        title: "Compartilhe e Proteja seus Diários",
+        title: "Gerencie seus Diários",
         description:
-            "Capture histórias, compartilhe exportações e corrija problemas rapidamente quando algo parecer errado.",
+            "Mantenha seu registro de jogo claro, exporte seus dados e encontre ajuda quando algo der errado.",
         category: "adventure-journals",
     },
     {
         id: "dice-roller",
         badge: "Dados",
-        title: "Domine o Kit de Rolador de Dados",
+        title: "Use o Rolador de Dados",
         description:
-            "Role de forma mais inteligente com predefinições, fórmulas personalizadas e coleções portáteis.",
+            "Crie, salve, importe e reutilize as fórmulas de dados que você usa em jogo.",
         category: "dice-roller",
     },
     {
         id: "custom-tables",
         badge: "Tabelas",
-        title: "Construa Tabelas Personalizadas Poderosas",
+        title: "Crie Tabelas Personalizadas",
         description:
-            "Construa, organize e compartilhe tabelas poderosas para improvisar na hora.",
+            "Crie, organize, importe, exporte e compartilhe tabelas que combinam com o seu jogo.",
         category: "custom-tables",
     },
 ];
@@ -86,17 +86,17 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
 ---
 
 <BaseLayout
-  title="Recursos — Guias e Docs para Apps Mythic GME 2e"
-  description="Guias para Apps Mythic: introdução, fórmulas de dados, tabelas personalizadas, referências de esquema e solução de problemas."
+  title="Recursos — Guias para apps Mythic GME 2e"
+  description="Guias para apps Mythic GME 2e: primeiros passos, Diários, fórmulas de dados, Tabelas Personalizadas, referências de esquema e solução de problemas."
   canonicalPath="/pt/resources/"
   lang="pt"
   alternatePath="/resources/"
   mainClass="resources-main"
 >
   <PageHeader
-    title="Guias e Documentação"
-    subtitle="Aprenda, crie e solucione problemas"
-    description="Guias focados em tarefas para cada ferramenta Mythic: introdução, diários, dados, tabelas personalizadas e referências de esquema."
+    title="Guias e Recursos"
+    subtitle="Aprenda os apps, personalize suas ferramentas e resolva problemas"
+    description="Guias práticos para Mythic GME Mobile e Mythic GME Digital: primeiros passos, Diários, fórmulas de dados, Tabelas Personalizadas e referências de esquema."
     accent="Recursos"
     layout="left"
     icon="fa-solid fa-book-open"
@@ -119,8 +119,8 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                     class="resource-search-input"
                                     type="search"
                                     name="resource-search"
-                                    placeholder="Pesquisar recursos..."
-                                    aria-label="Pesquisar recursos"
+                                    placeholder="Pesquisar guias..."
+                                    aria-label="Pesquisar guias"
                                     aria-autocomplete="list"
                                     aria-controls="resource-search-dropdown"
                                     aria-expanded="false"
@@ -188,7 +188,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                     <i
                                         class="fa-slab fa-regular fa-search-minus"
                                         aria-hidden="true"></i>
-                                    <p>Nenhuma correspondência encontrada</p>
+                                    <p>Nenhum guia encontrado</p>
                                 </div>
                                 <div
                                     class="resource-search-status"
@@ -272,6 +272,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                                                 {formatDate(
                                                                     item.data
                                                                         .updated,
+                                                                    "pt-BR",
                                                                 )}
                                                             </span>
                                                         )}
@@ -306,7 +307,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                         aria-hidden="true"
                                     />
                                     <span class="badge-text">
-                                        Aprofundamentos
+                                        Referência
                                     </span>
                                 </header>
                                 <div class="resource-section-heading">
@@ -314,12 +315,12 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                         id="schemas-title"
                                         class="section-title"
                                     >
-                                        Esquemas e Aprofundamentos
+                                        Esquemas e Referências
                                     </h2>
                                     <p class="resource-section-summary">
-                                        Documentos de referência, exportações
-                                        JSON e notas de esquema para ferramentas
-                                        e integrações.
+                                        Referências JSON para Diários, Fórmulas
+                                        Salvas, Tabelas Personalizadas e
+                                        categorias.
                                     </p>
                                 </div>
                                 <ul class="resource-list" role="list">
@@ -365,6 +366,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                                                 {formatDate(
                                                                     item.data
                                                                         .updated,
+                                                                    "pt-BR",
                                                                 )}
                                                             </span>
                                                         )}
@@ -404,9 +406,8 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                     Não encontrou o que procura?
                                 </h2>
                                 <p class="resource-support__summary">
-                                    Envie-me uma nota ou entre no Discord —
-                                    humanos reais estão prontos para ajudar a
-                                    manter suas aventuras rolando.
+                                    Envie uma mensagem de suporte ou pergunte
+                                    no Discord, e eu respondo assim que puder.
                                 </p>
                             </div>
                             <div class="resource-support__actions">
@@ -414,7 +415,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                     class="btn btn--shadow-primary"
                                     href="/pt/support"
                                 >
-                                    Contatar Suporte
+                                    Contatar suporte
                                     <i
                                         class="fa-slab fa-regular fa-arrow-right"
                                         aria-hidden="true"></i>

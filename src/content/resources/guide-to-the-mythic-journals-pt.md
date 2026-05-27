@@ -1,6 +1,6 @@
 ---
-title: "Um Guia para os Diários Mythic"
-summary: "Crie, importe e exporte diários; entenda como Fator Caos, Cenas, Listas e Entradas de Log mapeiam para Mythic."
+title: "Guia dos Diários Mythic"
+summary: "Crie, importe e exporte Diários; entenda como Fator de Caos, Cenas, Listas e entradas do Diário de Aventura se conectam."
 category: "adventure-journals"
 order: 0
 icon: "fa-slab fa-regular fa-book-open"
@@ -37,7 +37,7 @@ O diário de aventura é seu jogo salvo — um lugar único onde você registra 
 
 - Linha do tempo do Fator Caos: o mostrador (1–9) em momentos chave; capture no início de cada cena
 - Cenas: títulos curtos + resumos que marcam os ritmos de jogo
-- Log do Oráculo: Perguntas do Destino (probabilidades, rolagem, resultado) e resultados da Tabela de Significados (Palavras de Descrição) com sua interpretação
+- Diário de Aventura: perguntas ao Destino (probabilidades, rolagem, resultado) e resultados das Tabelas de Significado (Palavras de Descrição) com sua interpretação
 - Listas de Aventura: Personagens, Tramas e Características que você referencia e atualiza entre cenas
 - Contabilidade: ajustes de fim de cena (FC para cima/baixo) e quaisquer mudanças de lista
 
@@ -77,7 +77,7 @@ Contabilidade de fim de cena
 - Mudanças de Listas: +Personagem …, +Trama …, −Característica …
 ```
 
-## Organização de arquivos & backups
+## Organização de arquivos e backups
 
 - Um arquivo por campanha ou aventura
 - Nomes que você pode escanear: `minha-aventura-2025-09.md` ou `diario-elderspire.md`
@@ -93,7 +93,7 @@ Contabilidade de fim de cena
 ## Gerencie diários no app
 
 - Crie, importe e exporte diários da seção Configurações → Arquivos.
-- Cada diário é independente: mantém seu próprio Fator Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características), Notas de Lista e Entradas de Log.
+- Cada diário é independente: mantém seu próprio Fator Caos, Cenas, Listas de Aventura (Personagens/Tramas/Características), Notas de Lista e entradas do Diário de Aventura.
 - Use múltiplos diários para manter diferentes campanhas/sessões separadas; trocar diários não mistura suas listas ou logs.
 
 ## Como mapeia para Mythic
@@ -105,7 +105,7 @@ Contabilidade de fim de cena
   - Personagens: NPCs, facções, personas que podem aparecer em eventos.
   - Tramas: Lista de Tramas/objetivos que podem ser avançados/fechados ou referenciados por eventos.
   - Características: Lugares, objetos ou conceitos que dão cor e contexto aos eventos.
-- Entradas de Log: Registro ordenado por tempo de oráculos e verificações: Respostas da Tabela de Destino/Verificação, Verificações de Cena, Eventos Aleatórios (Foco do Evento + Palavras de Descrição), etc.
+- Entradas do Diário de Aventura: registro ordenado por tempo de oráculos e verificações, incluindo respostas da Tabela de Destino/Verificação, Verificações de Cena, Eventos Aleatórios (Foco do Evento + Palavras de Descrição) e outros resultados.
 
 ## Fluxo de trabalho básico
 
@@ -113,7 +113,7 @@ Contabilidade de fim de cena
    - Mantenha a extensão `.json`—isso ajuda o app e seu sistema a reconhecer o arquivo.
    - Dica: Adicione uma data ou nome de campanha para evitar sobrescrever backups antigos.
 2) Preencha `JournalName`, mantenha `ChaosFactor` em 1–9, e adicione Cenas/Listas conforme joga.
-3) Adicione Entradas de Log conforme faz rolagens de Tabela de Destino/Verificação, Verificações de Cena e Eventos Aleatórios.
+3) Adicione entradas ao Diário de Aventura conforme faz rolagens de Tabela de Destino/Verificação, Verificações de Cena e Eventos Aleatórios.
 4) Quando uma cena começa, capture o FC atual em `SceneChaosFactor`. Registre resultados de tipo de cena (Esperada/Alterada/Interrompida) via uma entrada de log de Verificação de Cena.
 5) Exporte seu diário atual de Configurações → Arquivos (JSON para ida e volta, Markdown para compartilhamento/leitura).
 

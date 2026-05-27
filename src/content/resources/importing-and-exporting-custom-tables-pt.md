@@ -1,5 +1,5 @@
 ---
-title: "Importando & Exportando Tabelas Personalizadas"
+title: "Importando e Exportando Tabelas Personalizadas"
 summary: "Prepare tabelas em CSV, TXT, PSV e JSON para importação, então exporte pacotes limpos para compartilhamento."
 category: "custom-tables"
 order: 4
@@ -27,9 +27,9 @@ related:
 - Abra a funcionalidade Tabelas Personalizadas no app (não em Configurações).
 - Para importar uma tabela nova, use a aba **Arquivos** em Tabelas Personalizadas. A dica da aba pode dizer **Importar/Exportar**.
 - No desktop e no tablet, Arquivos é a quarta aba à esquerda. Em celulares, é a quarta aba na barra inferior.
-- Nota de desbloqueio: no Google Play, Amazon e na Apple App Store, Tabelas Personalizadas requerem uma IAP; Itch.io e Microsoft Store incluem isso com uma compra de preço maior.
+- Nota de desbloqueio: no Google Play, Amazon e Apple App Store, Tabelas Personalizadas fazem parte do desbloqueio único de Recursos Expandidos. No itch.io e na Microsoft Store, elas fazem parte da compra única do app desktop.
 
-![Aba Arquivos de Tabelas Personalizadas com opções para importar Tabelas Oracle e Tabelas de Foco de Evento](/images/resources/custom-tables/custom-tables-files-tab.png)
+![Aba Arquivos de Tabelas Personalizadas com opções para importar Tabelas Oráculo e Tabelas de Foco de Evento](/images/resources/custom-tables/custom-tables-files-tab.png)
 
 ## Importando uma nova tabela de um arquivo
 
@@ -87,11 +87,11 @@ Notas
 - Valores conflitantes ou inválidos são rejeitados com uma mensagem de erro clara
 
 Amostras
-- Modelo de Significado (CSV): [Download](/downloads/meaning_table_template.csv)
-- Exemplo de Significado (CSV): [Download](/downloads/meaning_table_example.csv)
-- Modelo de Significado com Pesos (CSV): [Download](/downloads/meaning_table_weighted_template.csv)
-- Modelo de Foco de Evento (CSV): [Download](/downloads/event_focus_template.csv)
-- Exemplo de Foco de Evento (CSV): [Download](/downloads/event_focus_example.csv)
+- Modelo de Significado (CSV): [Baixar](/downloads/meaning_table_template.csv)
+- Exemplo de Significado (CSV): [Baixar](/downloads/meaning_table_example.csv)
+- Modelo de Significado com Pesos (CSV): [Baixar](/downloads/meaning_table_weighted_template.csv)
+- Modelo de Foco de Evento (CSV): [Baixar](/downloads/event_focus_template.csv)
+- Exemplo de Foco de Evento (CSV): [Baixar](/downloads/event_focus_example.csv)
 
 ## Formato TXT (um por linha)
 
@@ -100,8 +100,8 @@ Amostras
 - A caixa de colagem do editor também aceita listas curtas separadas por vírgula, como `Self, Allies, Foes`.
 
 Amostras
-- Modelo de Significado (TXT): [Download](/downloads/meaning_table_template.txt)
-- Modelo de Foco de Evento (TXT): [Download](/downloads/event_focus_template.txt)
+- Modelo de Significado (TXT): [Baixar](/downloads/meaning_table_template.txt)
+- Modelo de Foco de Evento (TXT): [Baixar](/downloads/event_focus_template.txt)
 
 ## Formato PSV (extremidades separadas por pipe)
 
@@ -110,8 +110,8 @@ Amostras
 - Linha opcional table_type pode aparecer no início ou no fim
 
 Amostras
-- Modelo de Significado (PSV): [Download](/downloads/meaning_table_template.psv)
-- Modelo de Foco de Evento (PSV): [Download](/downloads/event_focus_template.psv)
+- Modelo de Significado (PSV): [Baixar](/downloads/meaning_table_template.psv)
+- Modelo de Foco de Evento (PSV): [Baixar](/downloads/event_focus_template.psv)
 
 ## Formato JSON
 
@@ -121,10 +121,10 @@ Amostras
 - Para escrever uma tabela simples manualmente, CSV, TXT ou PSV costuma ser mais fácil.
 
 Amostras
-- Modelo de Significado (JSON): [Download](/downloads/meaning_table_template.json)
-- Exemplo de Significado (JSON): [Download](/downloads/meaning_table_sample.json)
-- Modelo de Foco de Evento (JSON): [Download](/downloads/event_focus_template.json)
-- Exemplo de Foco de Evento (JSON): [Download](/downloads/event_focus_sample.json)
+- Modelo de Significado (JSON): [Baixar](/downloads/meaning_table_template.json)
+- Exemplo de Significado (JSON): [Baixar](/downloads/meaning_table_sample.json)
+- Modelo de Foco de Evento (JSON): [Baixar](/downloads/event_focus_template.json)
+- Exemplo de Foco de Evento (JSON): [Baixar](/downloads/event_focus_sample.json)
 
 ## Foundry VTT JSON (mapeamento automático)
 
@@ -139,10 +139,10 @@ Destaques do mapeamento
 - Importações de Foco de Evento forçam `categoryId = "event-focus"`
 
 Amostras
-- Exemplo de Significado Foundry (JSON): [Download](/downloads/foundry_meaning_sample.json)
-- Exemplo de Foco de Evento Foundry (JSON): [Download](/downloads/foundry_event_focus_sample.json)
+- Exemplo de Significado Foundry (JSON): [Baixar](/downloads/foundry_meaning_sample.json)
+- Exemplo de Foco de Evento Foundry (JSON): [Baixar](/downloads/foundry_event_focus_sample.json)
 
-## Validação & solução de problemas
+## Validação e solução de problemas
 
 - Cobertura de intervalo: intervalo completo da tabela sem lacunas ou sobreposições
 - Cabeçalhos escritos corretamente (insensível a maiúsculas/minúsculas)

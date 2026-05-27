@@ -25,6 +25,10 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const isPt = lang === "pt";
+const slidePrefix = isPt ? "Imagem" : "Slide";
+const slideJoin = isPt ? "de" : "of";
+const playAutoplayLabel = isPt ? "Retomar reprodução automática" : "Play autoplay";
 
 // Select images based on language
 const [b1, b2, b3, b4, b5, b6, b7] =
@@ -37,11 +41,15 @@ const [b1, b2, b3, b4, b5, b6, b7] =
   class="container section billboard"
   aria-label={t("billboard.aria_label")}
 >
-  <figure
-    class="billboard-plate"
-    aria-roledescription="carousel"
-    aria-label={t("billboard.screenshots_label")}
-  >
+	  <figure
+	    class="billboard-plate"
+	    aria-roledescription="carousel"
+	    aria-label={t("billboard.screenshots_label")}
+	    data-slide-prefix={slidePrefix}
+	    data-slide-join={slideJoin}
+	    data-pause-label={t("billboard.pause")}
+	    data-play-label={playAutoplayLabel}
+	  >
     <div class="bb-stage">
       <!-- Sizing image keeps height without visual output -->
       <Image
@@ -105,7 +113,7 @@ const [b1, b2, b3, b4, b5, b6, b7] =
         decoding="async"
       />
     </div>
-    <p id="bb-status" class="sr-only" aria-live="polite">Slide 1 of 7</p>
+	    <p id="bb-status" class="sr-only" aria-live="polite">{slidePrefix} 1 {slideJoin} 7</p>
     <div class="bb-controls" aria-label={t("billboard.controls_label")}>
       <button type="button" class="bb-prev" aria-label={t("billboard.prev")}>
         <i class="fa-slab fa-regular fa-angle-left" aria-hidden="true"></i>
@@ -126,26 +134,35 @@ const [b1, b2, b3, b4, b5, b6, b7] =
   <script>
     import { createCarousel, type CarouselHandle } from '../../lib/carousel';
 
-    function togglePause(carousel: CarouselHandle, btn: HTMLButtonElement) {
-      if (carousel.isPaused()) {
-        carousel.resume();
-        btn.setAttribute('aria-pressed', 'false');
-        btn.setAttribute('aria-label', 'Pause autoplay');
-        btn.textContent = '\u23F8';
-      } else {
-        carousel.pause();
-        btn.setAttribute('aria-pressed', 'true');
-        btn.setAttribute('aria-label', 'Play autoplay');
-        btn.textContent = '\u25B6';
-      }
-    }
+	    function togglePause(carousel: CarouselHandle, btn: HTMLButtonElement) {
+	      const plate = btn.closest<HTMLElement>('.billboard-plate');
+	      const pauseLabel = plate?.dataset.pauseLabel || 'Pause autoplay';
+	      const playLabel = plate?.dataset.playLabel || 'Play autoplay';
+	      if (carousel.isPaused()) {
+	        carousel.resume();
+	        btn.setAttribute('aria-pressed', 'false');
+	        btn.setAttribute('aria-label', pauseLabel);
+	        btn.textContent = '\u23F8';
+	      } else {
+	        carousel.pause();
+	        btn.setAttribute('aria-pressed', 'true');
+	        btn.setAttribute('aria-label', playLabel);
+	        btn.textContent = '\u25B6';
+	      }
+	    }
+
+	    function getStatusText(plate: HTMLElement, index: number, total: number) {
+	      const prefix = plate.dataset.slidePrefix || 'Slide';
+	      const join = plate.dataset.slideJoin || 'of';
+	      return `${prefix} ${index} ${join} ${total}`;
+	    }
 
     document.querySelectorAll<HTMLElement>('.billboard-plate').forEach((plate) => {
       const stage = plate.querySelector<HTMLElement>('.bb-stage');
       const imgs = stage
         ? Array.from(stage.querySelectorAll<HTMLImageElement>('.billboard-img:not(.bb-sizer)'))
         : [];
-      const statusEl = document.getElementById('bb-status');
+	      const statusEl = plate.querySelector<HTMLElement>('#bb-status');
       const btnPrev = plate.querySelector<HTMLButtonElement>('.bb-prev');
       const btnNext = plate.querySelector<HTMLButtonElement>('.bb-next');
       const btnPause = plate.querySelector<HTMLButtonElement>('.bb-pause');
@@ -156,7 +173,7 @@ const [b1, b2, b3, b4, b5, b6, b7] =
           itemCount: imgs.length,
           onActivate: (index) => {
             imgs.forEach((im, idx) => im.classList.toggle('is-active', idx === index));
-            if (statusEl) statusEl.textContent = `Slide ${index + 1} of ${imgs.length}`;
+	            if (statusEl) statusEl.textContent = getStatusText(plate, index + 1, imgs.length);
           },
           intervalMs: 10000,
           pauseTargets: [plate],

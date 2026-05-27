@@ -1,6 +1,6 @@
 ---
-title: "Começando com os Aplicativos Mythic"
-summary: "Comece na Fate Chart, depois flua pelas Listas, Cenas e Tabelas de Significados. Sem contas, sem internet — apenas jogue."
+title: "Começando com os apps Mythic"
+summary: "Comece com a Tabela de Destino, depois use Listas, Cenas e Tabelas de Significado para iniciar o jogo. Sem contas, sem internet, só jogar."
 category: "start-here"
 order: 1
 icon: "fa-slab fa-regular fa-book-open"
@@ -27,16 +27,16 @@ heroAlt: "Ilustração de uma pessoa com um bot amigável"
 
 # Structured steps (images optional)
 steps:
-  - title: "Instale no seu dispositivo(s)"
+  - title: "Instale no seu dispositivo"
     body: "Baixe e instale o aplicativo para desktop ou celular e inicie — o aplicativo cria seu primeiro jogo salvo: Meu Diário. Renomeie-o na tela de configurações."
   - title: "Defina o Fator Caos"
     body: "Ao iniciar pela primeira vez, você verá a Tabela de Destino. Defina o FC (1–9) para corresponder ao seu cenário; ajuste depois conforme necessário."
   - title: "Pergunte, role e registre"
     body: "Digite uma pergunta sim/não, escolha as probabilidades e role. Registre os resultados nas notas da sua cena para manter a continuidade da história. Você pode ativar a opção de escrever a pergunta antes de rolar nas configurações da tela."
-  - title: "Use Listas, Cenas e Tabelas de Significados"
-    body: "É uma boa ideia adicionar Personagens e Tramas às suas Listas antes de começar seu primeiro jogo. Use Cenas para resumir ou prever, e tabelas de significados para interpretar os resultados."
+  - title: "Use Listas, Cenas e Tabelas de Significado"
+    body: "É uma boa ideia adicionar Personagens e Tramas às suas Listas antes de começar seu primeiro jogo. Use Cenas para resumir ou prever, e Tabelas de Significado para interpretar os resultados."
 ---
-Bem-vindo! Este guia rápido baseia-se no próprio aplicativo: você começa na Fate Chart e se move entre Listas, Cenas e Tabelas de Significados enquanto joga. Não há contas ou servidores — tudo acontece no seu dispositivo.
+Bem-vindo! Este guia rápido parte do próprio app: você começa na Tabela de Destino e se move entre Listas, Cenas e Tabelas de Significado enquanto joga. Não há contas ou servidores; tudo acontece no seu dispositivo.
 
 > O que você precisa: Traga para a mesa
 > - Seu RPG favorito e personagens criados (mantenha as fichas à mão)
@@ -61,7 +61,7 @@ Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alter
 
 > Dica: Alterar Configurações de Tela
 > - Existe uma roda de configurações que permite mudar as configurações de cada tela.
-> - Você pode ativar mais detalhes sobre rolagens na tela da Fate Chart
+> - Você pode ativar mais detalhes sobre rolagens na tela da Tabela de Destino
 > - Você também pode ativar a capacidade de fazer uma pergunta antes de cada rolagem
 
 ### 3) Telas principais que você usará toda sessão
@@ -69,7 +69,7 @@ Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alter
 - Tabela de Destino (e Verificação de Destino): faça perguntas, escolha probabilidades, role e interprete respostas.
 - Listas: rastreie Personagens, Tramas e Características. Essas listas alimentam suas rolagens de eventos e trazem elementos para sua história de maneiras inesperadas.
 - Cenas: anote um título e resumo; capture o Fator Caos no início da cena; adicione notas enquanto joga ou espere até a conclusão de uma cena e resuma.
-- Tabelas de Significados: Tabelas de Ação/Assunto e outras para lhe dar inspiração (Palavras de Descrição) para interpretar seus resultados.
+- Tabelas de Significado: Tabelas de Ação/Assunto e outras para dar inspiração (Palavras de Descrição) ao interpretar seus resultados.
 
 Notas de layout
 - Mobile: cada área é sua própria tela; alterne usando a gaveta de navegação no canto superior esquerdo.
@@ -80,7 +80,7 @@ Notas de layout
 1) Defina o Fator Caos (FC) na Tabela de Destino
 2) Crie uma Cena com um breve resumo; registre o FC inicial da cena
 3) Comece a cena fazendo sua primeira pergunta sim/não na Tabela de Destino e role
-4) Se travar, role nas Tabelas de Significados para inspiração
+4) Se travar, role nas Tabelas de Significado para inspiração
 5) Adicione itens às Listas (Personagens, Tramas, Características) conforme surgirem
 6) Ajuste o FC entre as cenas conforme sua história muda
 

@@ -1,6 +1,6 @@
 ---
 title: "Começando com o Rolador de Dados"
-summary: "Role mais rápido com o rolador de dados agnóstico de sistema."
+summary: "Crie rolagens para vários sistemas e salve fórmulas que você usa durante o jogo."
 category: "dice-roller"
 order: 1
 icon: "fa-slab fa-regular fa-star"

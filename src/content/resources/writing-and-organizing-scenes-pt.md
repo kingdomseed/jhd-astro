@@ -1,6 +1,6 @@
 ---
 title: "Escrevendo e Organizando Cenas"
-summary: "Comece, execute e termine cenas; registre FC e resultados; mantenha notas organizadas."
+summary: "Inicie, jogue e encerre cenas; registre mudanças no Fator de Caos e resultados; mantenha as notas organizadas."
 category: "start-here"
 order: 3
 icon: "fa-slab fa-regular fa-film"
@@ -20,7 +20,7 @@ related:
   - using-meaning-tables-for-inspiration
 ---
 
-A tela de Cenas nos Apps Mythic é o centro da sua aventura. Ela dá a cada pedaço de jogo um contêiner claro para que você possa rastrear cada fase da sua aventura claramente.
+A tela de Cenas dos apps Mythic é o centro da sua aventura. Ela dá a cada trecho de jogo um lugar claro para que você acompanhe o que aconteceu e o que mudou.
 
 ## Desenvolvendo suas cenas no app
 
@@ -73,9 +73,9 @@ Cenas terminam quando a ação principal resolve, ou quando a estrutura da hist�
 ## Dicas de fluxo de trabalho do app
 
 - Mantenha Cenas curtas e focadas — isso torna os resultados de Destino mais fáceis de interpretar e logs mais fáceis de revisar
-- Use Tabelas de Significado direto das notas de cena quando sua intuição travar
+- Use Tabelas de Significado diretamente das notas de cena quando sua intuição travar
 - Ajuste o Fator Caos entre cenas, não durante; tire um instantâneo do FC no início de cada cena
 - Emparelhe um padrão de anotação portátil (marcadores + sub-marcadores) com resultados de Destino inline para uma leitura rápida mais tarde
 
 > ### Muitos Caminhos
-> Mythic é muito flexível. Não há um "jeito errado" de jogar e muitas das variações exploradas nas Revistas, Variações, a comunidade e o blog da Tana incorporam claramente o espírito de jogo que é flexível e atende ao seu estilo. Conforme você joga, descobrirá o que funciona para você e o que não.
+> Mythic é muito flexível. Não há um "jeito errado" de jogar, e muitas das variações exploradas em Mythic Magazines, Mythic Variations, outras publicações Mythic, a comunidade e o blog da Tana incorporam esse espírito de jogo flexível que atende ao seu estilo. Conforme você joga, descobrirá o que funciona para você e o que não.

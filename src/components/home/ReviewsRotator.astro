@@ -4,6 +4,8 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const quotePrefix = lang === "pt" ? "Avaliação" : "Quote";
+const quoteJoin = lang === "pt" ? "de" : "of";
 ---
 
 <section class="strip" aria-label={t("reviews.badge")}>
@@ -15,12 +17,12 @@ const t = useTranslations(lang);
     <h2 id="reviews-title" class="section-title" style="margin-bottom: 6px">
       {t("reviews.title")}
     </h2>
-    <figure class="reviews-rotator" aria-label={t("reviews.badge")}>
-      <div class="rev-stage">
-        <p id="quote" aria-live="polite">{t("reviews.loading")}</p>
-      </div>
-      <p id="rev-status" class="sr-only" aria-live="polite">Quote 1 of 1</p>
-    </figure>
+	    <figure class="reviews-rotator" aria-label={t("reviews.badge")} data-quote-prefix={quotePrefix} data-quote-join={quoteJoin}>
+	      <div class="rev-stage">
+	        <p id="quote" aria-live="polite">{t("reviews.loading")}</p>
+	      </div>
+	      <p id="rev-status" class="sr-only" aria-live="polite">{quotePrefix} 1 {quoteJoin} 1</p>
+	    </figure>
 
     <script>
       import { createCarousel } from '../../lib/carousel';
@@ -58,9 +60,11 @@ const t = useTranslations(lang);
         target.appendChild(src);
       }
 
-      const container = document.querySelector<HTMLElement>('.reviews-rotator');
-      if (container) {
-        const stage = container.querySelector<HTMLElement>('.rev-stage');
+	      const container = document.querySelector<HTMLElement>('.reviews-rotator');
+	      if (container) {
+	        const quotePrefix = container.dataset.quotePrefix || 'Quote';
+	        const quoteJoin = container.dataset.quoteJoin || 'of';
+	        const stage = container.querySelector<HTMLElement>('.rev-stage');
         const statusEl = document.getElementById('rev-status');
         if (stage) {
           const existingQuote = stage.querySelector<HTMLParagraphElement>('#quote');
@@ -99,7 +103,7 @@ const t = useTranslations(lang);
               itemCount: quotes.length,
               onActivate: (index) => {
                 crossFade(index);
-                if (statusEl) statusEl.textContent = `Quote ${index + 1} of ${quotes.length}`;
+	                if (statusEl) statusEl.textContent = `${quotePrefix} ${index + 1} ${quoteJoin} ${quotes.length}`;
               },
               intervalMs: 8000,
               pauseTargets: [container],

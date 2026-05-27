@@ -5,17 +5,19 @@ interface Props {
   officialContent: string[];
   iapInfo?: string;
   disclaimer?: string;
+  lang?: 'en' | 'pt';
 }
 
-const { officialContent, iapInfo, disclaimer } = Astro.props;
+const { officialContent, iapInfo, disclaimer, lang = 'en' } = Astro.props;
+const isPt = lang === 'pt';
 ---
 
-<FeatureCard heading="Official content" features={officialContent} />
+<FeatureCard heading={isPt ? "Conteúdo oficial" : "Official content"} features={officialContent} />
 {iapInfo && (
   <div class="iap-notice collapsed" onclick="this.classList.toggle('collapsed')">
     <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
     <span class="iap-text">
-      <span class="collapsed-text">More details...</span>
+      <span class="collapsed-text">{isPt ? "Mais detalhes..." : "More details..."}</span>
       <span class="full-text">{iapInfo}</span>
     </span>
   </div>
@@ -24,7 +26,7 @@ const { officialContent, iapInfo, disclaimer } = Astro.props;
   <div class="disclaimer-notice collapsed" onclick="this.classList.toggle('collapsed')">
     <i class="fa-slab fa-regular fa-info-circle" aria-hidden="true"></i>
     <span class="disclaimer-text">
-      <span class="collapsed-text">More details...</span>
+      <span class="collapsed-text">{isPt ? "Mais detalhes..." : "More details..."}</span>
       <span class="full-text">{disclaimer}</span>
     </span>
   </div>

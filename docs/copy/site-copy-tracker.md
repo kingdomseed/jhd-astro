@@ -83,27 +83,36 @@ approved section so we do not reopen finished work or lose the next decision.
 | Support contact tab info cards | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Separates community and consulting paths, removes the late-night bug-triage promise, and avoids implying consulting availability. |
 | Support contact form copy | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Removes the 2-business-day promise, makes app-support submissions more useful, and cuts the overly cute error tone. |
 | Support page | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Production English Support page copy pass is complete. Do not reopen unless explicitly requested. |
-| Copy context sync | Done | `CONTEXT.md`, `docs/copy/*flow-inventory.md` | Approved copy directions, resume-derived voice rules, and the full Mythic GME app glossary are captured for future site copy work. |
+| Copy context sync | Done | `CONTEXT.md`, `docs/copy/*flow-inventory.md` | Approved copy directions, resume-derived voice rules, the full Mythic GME app glossary, SEO/social metadata rules, Brazilian Portuguese localization rules, and Portuguese-copy ownership expectations are captured for future site copy work. |
 | SEO/social metadata inventory | Done | `docs/copy/seo-social-metadata-inventory.md` | Current metadata behavior, page titles/descriptions, OG/social gaps, JSON-LD drift risk, and hreflang constraints are captured. |
 | SEO/social metadata mechanics | Done | `src/layouts/BaseLayout.astro`, top-level EN/PT pages, `public/social/og-default.jpg`, `public/apple-touch-icon.png` | Uses a 1200x630 galaxy social card, adds OG/Twitter image alt support, restores the Apple touch icon, removes stale structured-data price/rating fields, and uses explicit EN/PT alternate paths instead of guessed routes. |
 | SEO/social title patterns | Done | `src/pages/about.astro`, `src/pages/blog/index.astro`, `src/pages/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/pages/resources/[slug].astro` | Removes duplicated About title wording and strengthens Blog/Resource title suffixes around Mythic GME Apps. |
 | SEO/social detail-page hreflang | Done | `src/layouts/BaseLayout.astro`, `src/pages/blog/[slug].astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/resources/[slug].astro`, `src/pages/pt/resources/[slug].astro` | Uses explicit EN/PT slug mapping for Blog and Resource detail pages, verified against content collection entries before emitting translated alternates. |
 | Header | Done | `src/components/layout/Header.astro`, `src/i18n/ui.ts` | Keep current header, CTA, mobile label, and store labels. |
 | Footer | Done | `src/components/layout/Footer.astro`, `src/i18n/ui.ts` | Keep footer copy as-is. |
-| SEO/social metadata beyond home | Done | `docs/copy/seo-social-metadata-inventory.md`, page frontmatter/layout props | Sitewide mechanics, title-pattern cleanup, and translated detail-page hreflang mapping are implemented. Portuguese metadata remains a separate pass. |
+| SEO/social metadata beyond home | Done | `docs/copy/seo-social-metadata-inventory.md`, page frontmatter/layout props | Sitewide mechanics, title-pattern cleanup, translated detail-page hreflang mapping, and PT-BR locale metadata are implemented. |
+| Portuguese inventory | Done | `docs/copy/portuguese-page-flow-inventory.md` | PT production surfaces, expert localization findings, and later/non-goal areas are captured. |
+| Portuguese homepage | Done | `src/pages/pt/index.astro`, `src/i18n/ui.ts`, `src/components/home/PopularResources.astro` | Adapted homepage copy to approved English direction, fixed stats/support/resources wording, and mapped resource teaser links to PT slugs. |
+| Portuguese Apps page | Done | `src/components/pages/AppsPage.astro`, `src/components/apps/**` | Reworked product, purchase, support, roadmap, book copy, and shared Apps UI labels around natural PT-BR terms and current Expanded Features. |
+| Portuguese Support page | Done | `src/pages/pt/support.astro` | Removed stale prices, raw `IAP`, speed promises, old partner naming, and outdated Expanded Features lists. |
+| Portuguese About page | Done | `src/pages/pt/about.astro`, `src/content/pages/about-pt.md` | Rebuilt from the approved About story and removed the old career/license-heavy structure. |
+| Portuguese Resources pages | Done | `src/pages/pt/resources/index.astro`, `src/pages/pt/resources/[slug].astro`, `src/content/resources/*-pt.md` | Updated index shell, visible card summaries, stale purchase language, PT links, detail labels, and share labels. |
+| Portuguese Blog and 404 shell | Done | `src/pages/pt/blog/index.astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/content/blog/*-pt.md`, `src/pages/pt/404.astro`, `src/pages/404.astro` | Updated PT shell metadata/copy/date formatting/category behavior, cleaned stale PT blog terminology, and noindexed 404 pages. |
+| Portuguese globalization mechanics | Done | `astro.config.mjs`, `src/layouts/BaseLayout.astro`, `src/components/search/SearchOverlay.astro`, `src/components/home/Billboard.astro`, `src/components/home/ReviewsRotator.astro` | Uses PT-specific search indexes, localized shared labels/status text, PT social image alt text, explicit alternates, and sitemap exclusions for redirect/error routes. |
 
 ## Later Or Separate Passes
 
 | Area | Status | Files | Notes |
 | --- | --- | --- | --- |
-| Portuguese copy | Later | `src/pages/pt/**`, PT entries in `src/i18n/ui.ts`, `src/content/pages/about-pt.md` | Translate/adapt after English copy direction is approved. |
 | v2 copy | Later | `src/pages/v2/**`, `src/components/v2/**`, `src/lib/v2*.ts` | V2 has unrelated in-progress design work. Do not mix with the production copy pass unless Jason asks. |
-| Blog post rewrites | Later | `src/content/blog/**` | Release notes may keep historical voice unless a specific post is selected. |
-| Resource article rewrites | Later | `src/content/resources/**` | Detail docs should be audited after the Resources index direction is approved. |
+| Blog post rewrites | Later | `src/content/blog/**` | Stale PT terminology was cleaned where live; full release-note rewrites may keep historical voice unless a specific post is selected. |
+| Full resource article rewrites | Later | `src/content/resources/**`, `src/content/resources/*-pt.md` | Visible summaries and stale claims were updated; deeper long-form article rewrites should be selected explicitly. |
 | Legal pages | Later | `src/pages/privacy.astro`, `src/pages/terms.astro` | Only edit legal/privacy wording with explicit approval and careful fact checks. |
+| Portuguese legal pages | Later | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro` | Only edit legal/privacy wording with explicit approval and careful fact checks. |
 
 ## Next Grill Question
 
-SEO/social metadata mechanics, title-pattern cleanup, and detail-page hreflang
-mapping are implemented. Next decision: whether to do a Portuguese metadata
-pass now or leave it for the broader Portuguese copy pass.
+Portuguese production copy, PT-BR metadata, explicit translated slug mapping,
+PT-specific search indexes, and durable `CONTEXT.md` rules are implemented.
+Remaining copy work should be selected explicitly: legal pages, full historical
+blog rewrites, full resource article rewrites, or the v2 design/copy pass.

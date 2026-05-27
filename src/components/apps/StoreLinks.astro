@@ -6,9 +6,11 @@ interface Props {
     icon: string;
     available?: boolean;
   }>;
+  lang?: 'en' | 'pt';
 }
 
-const { storeLinks } = Astro.props;
+const { storeLinks, lang = 'en' } = Astro.props;
+const isPt = lang === 'pt';
 
 // Map store names to brand shadow classes
 const getStoreShadowClass = (storeName: string) => {
@@ -17,6 +19,7 @@ const getStoreShadowClass = (storeName: string) => {
     'Google Play': 'btn--shadow-google',
     'Amazon Appstore': 'btn--shadow-amazon',
     'itch.io (DRM\u2011free)': 'btn--shadow-itch',
+    'itch.io (Sem DRM)': 'btn--shadow-itch',
     'Microsoft Store': 'btn--shadow-microsoft',
     'Steam': 'btn--shadow-steam'
   };
@@ -24,12 +27,12 @@ const getStoreShadowClass = (storeName: string) => {
 };
 ---
 
-<h3>{storeLinks.length === 0 ? 'Availability' : 'Download now'}</h3>
+<h3>{storeLinks.length === 0 ? (isPt ? 'Disponibilidade' : 'Availability') : (isPt ? 'Baixar agora' : 'Download now')}</h3>
 <div class="store-links">
   {storeLinks.length === 0 ? (
     <div class="coming-soon-notice">
       <i class="fa-slab fa-regular fa-clock" aria-hidden="true"></i>
-      <span>Coming soon — Stay tuned for updates!</span>
+      <span>{isPt ? 'Em breve — acompanhe as atualizações.' : 'Coming soon — Stay tuned for updates!'}</span>
     </div>
   ) : (
     storeLinks.map(store => (
@@ -41,7 +44,7 @@ const getStoreShadowClass = (storeName: string) => {
       ) : (
         <span class="btn btn--tertiary" aria-disabled="true">
           <i class={store.icon} aria-hidden="true"></i>
-          {store.name} — Coming soon
+          {store.name} — {isPt ? 'Em breve' : 'Coming soon'}
         </span>
       )
     ))

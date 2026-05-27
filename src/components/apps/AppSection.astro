@@ -22,6 +22,7 @@ interface Props {
   imageSrc?: string;
   imageAlt?: string;
   images?: ImageMetadata[];
+  lang?: 'en' | 'pt';
 }
 
 const {
@@ -35,8 +36,23 @@ const {
   reverse = false,
   imageSrc,
   imageAlt = "",
-  images
+  images,
+  lang = 'en',
 } = Astro.props;
+
+const isPt = lang === 'pt';
+const badgeText = title.includes('Mobile')
+  ? (isPt ? 'App mobile' : 'Mobile App')
+  : title.includes('Adventure')
+    ? (isPt ? 'Em breve' : 'Coming Soon')
+    : (isPt ? 'App desktop' : 'Desktop App');
+const carouselLabel = isPt ? `${title} capturas de tela` : `${title} screenshots`;
+const slideLabel = (index: number, total: number) => isPt
+  ? `Imagem ${index} de ${total}`
+  : `Slide ${index} of ${total}`;
+const screenshotAlt = (index: number) => isPt
+  ? `${title} captura de tela ${index}`
+  : `${title} screenshot ${index}`;
 ---
 
 <section class={`app-section ${reverse ? 'app-section--reverse' : ''}`}>
@@ -49,22 +65,22 @@ const {
         <div class="app-content-inner">
           <header class="section-head" aria-hidden="true">
             <span class="accent-line" aria-hidden="true"></span>
-            <span class="badge-text">{title.includes('Mobile') ? 'Mobile App' : title.includes('Adventure') ? 'Coming Soon' : 'Desktop App'}</span>
+            <span class="badge-text">{badgeText}</span>
           </header>
           <h2 class="section-title">{title}</h2>
           <p class="lead-accent" style="text-align: center; margin-bottom: 2rem;">{whoItsFor}</p>
 
           <div class="app-details">
             <div class="detail-block">
-              <FeatureCard heading="What it does" features={features} />
+              <FeatureCard heading={isPt ? "O que o app faz" : "What it does"} features={features} />
             </div>
 
             <div class="detail-block">
-              <OfficialContent officialContent={officialContent} iapInfo={iapInfo} disclaimer={disclaimer} />
+              <OfficialContent officialContent={officialContent} iapInfo={iapInfo} disclaimer={disclaimer} lang={lang} />
             </div>
 
             <div class="detail-block">
-              <StoreLinks storeLinks={storeLinks} />
+              <StoreLinks storeLinks={storeLinks} lang={lang} />
             </div>
           </div>
         </div>
@@ -73,15 +89,15 @@ const {
       <!-- Image/Screenshot Column -->
       <div class="app-visual">
         {Array.isArray(images) && images.length > 0 ? (
-          <figure class="device-carousel" aria-roledescription="carousel" aria-label={`${title} screenshots`}>
+          <figure class="device-carousel" aria-roledescription="carousel" aria-label={carouselLabel} data-close-label={isPt ? "Fechar" : "Close"} data-slide-prefix={isPt ? "Imagem" : "Slide"} data-slide-join={isPt ? "de" : "of"}>
             <div class="device-stage">
               {images.map((img, idx) => (
-                <div class={`device-frame ${idx === 0 ? 'is-active' : ''}`} role="group" aria-roledescription="slide" aria-label={`Slide ${idx + 1} of ${images.length}`}>
-                  <Image class="device-shot" src={img} alt={imageAlt || `${title} screenshot ${idx + 1}`} loading="lazy" decoding="async" fetchpriority="auto" />
+                <div class={`device-frame ${idx === 0 ? 'is-active' : ''}`} role="group" aria-roledescription="slide" aria-label={slideLabel(idx + 1, images.length)}>
+                  <Image class="device-shot" src={img} alt={imageAlt || screenshotAlt(idx + 1)} loading="lazy" decoding="async" fetchpriority="auto" />
                 </div>
               ))}
             </div>
-            <p class="sr-only device-status" aria-live="polite">Slide 1 of {images.length}</p>
+            <p class="sr-only device-status" aria-live="polite">{slideLabel(1, images.length)}</p>
             <script>
               import { createCarousel, type CarouselHandle } from '../../lib/carousel';
 
@@ -116,7 +132,13 @@ const {
                 root.addEventListener('pointercancel', () => { dragging = false; });
               }
 
-              function openLightbox(src: string, alt: string) {
+              function getSlideLabel(root: HTMLElement, index: number, total: number) {
+                const prefix = root.dataset.slidePrefix || 'Slide';
+                const join = root.dataset.slideJoin || 'of';
+                return `${prefix} ${index} ${join} ${total}`;
+              }
+
+              function openLightbox(src: string, alt: string, closeLabel = 'Close') {
                 const ov = document.createElement('div');
                 ov.className = 'lightbox';
                 const inner = document.createElement('div');
@@ -126,7 +148,7 @@ const {
                 inner.appendChild(img);
                 const closeBtn = document.createElement('button');
                 closeBtn.className = 'lb-close';
-                closeBtn.setAttribute('aria-label', 'Close');
+                closeBtn.setAttribute('aria-label', closeLabel);
                 closeBtn.textContent = '\u00d7';
                 inner.appendChild(closeBtn);
                 ov.appendChild(inner);
@@ -150,7 +172,7 @@ const {
                   itemCount: frames.length,
                   onActivate: (index) => {
                     frames.forEach((f, j) => f.classList.toggle('is-active', j === index));
-                    if (status) status.textContent = `Slide ${index + 1} of ${frames.length}`;
+                    if (status) status.textContent = getSlideLabel(root, index + 1, frames.length);
                     setTimeout(() => updateStageHeight(stage), 0);
                   },
                   intervalMs: 6000,
@@ -169,7 +191,7 @@ const {
                   const t = e.target as HTMLElement | null;
                   if (t && t.classList.contains('device-shot')) {
                     const imgEl = t as HTMLImageElement;
-                    openLightbox(imgEl.currentSrc || imgEl.src, imgEl.alt || '');
+                    openLightbox(imgEl.currentSrc || imgEl.src, imgEl.alt || '', root.dataset.closeLabel || 'Close');
                   }
                 });
 
@@ -184,7 +206,7 @@ const {
             ) : (
               <div class="app-placeholder">
                 <i class="fa-solid fa-image placeholder-icon" aria-hidden="true"></i>
-                <p class="placeholder-text">Screenshots<br/>Coming Soon</p>
+                <p class="placeholder-text">{isPt ? <>Capturas de tela<br/>em breve</> : <>Screenshots<br/>Coming Soon</>}</p>
               </div>
             )}
             <!-- Decorative geometric elements -->

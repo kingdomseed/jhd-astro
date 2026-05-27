@@ -1,6 +1,6 @@
 ---
-title: "Vinculando & Aninhando Tabelas"
-summary: "Como encadear tabelas para prompts de múltiplos passos e rolagens diretas (em breve)."
+title: "Vinculando e Aninhando Tabelas"
+summary: "Visualize tabelas vinculadas e aninhadas para prompts em várias etapas e rolagens encadeadas."
 category: "custom-tables"
 order: 3
 icon: "fa-slab fa-regular fa-link"

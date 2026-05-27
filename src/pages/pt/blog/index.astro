@@ -62,15 +62,15 @@ const categories = uniqueCategories.map((category: CategoryName) => {
         originalName: category,
         description: meta?.description || `Posts sobre ${category}`,
         icon: meta?.icon || "fa-slab fa-regular fa-folder",
-        href: `/pt/blog/category/${category.toLowerCase().replace(/\s+/g, "-")}/`,
         slug: category.toLowerCase().replace(/\s+/g, "-"),
+        href: `/pt/blog/?category=${category.toLowerCase().replace(/\s+/g, "-")}#recent-title`,
     };
 });
 ---
 
 <BaseLayout
-  title="Blog — Notas de Lançamento e Bastidores"
-  description="Notas de lançamento, aprofundamentos em design e histórias da comunidade da equipe Mythic Apps."
+  title="Blog dos apps Mythic GME | Notas de lançamento e atualizações"
+  description="Notas de lançamento, atualizações dos apps, guias e bastidores de Mythic GME Mobile e Mythic GME Digital."
   canonicalPath="/pt/blog/"
   lang="pt"
   alternatePath="/blog/"
@@ -86,9 +86,9 @@ const categories = uniqueCategories.map((category: CategoryName) => {
   </Fragment>
 
   <PageHeader
-    title="Notas de Lançamento e Bastidores"
-    subtitle="Atualizações, insights e os bastidores dos apps"
-    description="Notas de lançamento em linguagem simples primeiro. Aprofundamentos ocasionais em design, desenvolvimento e os jogadores moldando o Mythic."
+    title="Notas de lançamento e bastidores"
+    subtitle="Atualizações, notas e bastidores dos apps"
+    description="Notas de lançamento em linguagem simples primeiro. Às vezes, notas sobre design, desenvolvimento e os jogadores que ajudam a moldar Mythic."
     accent="Blog"
     layout="left"
     icon="fa-solid fa-newspaper"
@@ -133,9 +133,9 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                         </p>
                                         {featuredEntry.data.isSample && (
                                             <p class="blog-sample-note">
-                                                Sample placeholder — replace
-                                                with the real article before
-                                                publishing.
+                                                Placeholder de exemplo —
+                                                substitua pelo artigo real
+                                                antes de publicar.
                                             </p>
                                         )}
                                         <div
@@ -151,6 +151,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             <span class="blog-pill">
                                                 {formatDate(
                                                     featuredEntry.data.date,
+                                                    "pt-BR",
                                                 )}
                                             </span>
                                             <span class="blog-pill">
@@ -269,6 +270,7 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                                 <span class="blog-card__date">
                                                     {formatDate(
                                                         entry.data.date,
+                                                        "pt-BR",
                                                     )}
                                                 </span>
                                             </header>
@@ -284,9 +286,9 @@ const categories = uniqueCategories.map((category: CategoryName) => {
                                             </p>
                                             {entry.data.isSample && (
                                                 <p class="blog-sample-note blog-sample-note--card">
-                                                    Sample placeholder — swap in
-                                                    the real article before
-                                                    launch.
+                                                    Placeholder de exemplo —
+                                                    substitua pelo artigo real
+                                                    antes do lançamento.
                                                 </p>
                                             )}
                                             <footer class="blog-card__footer">

@@ -1,6 +1,6 @@
 ---
-title: "v1.4 — Desbloqueio Premium & Qualidade de Vida"
-summary: "IAP de desbloqueio Premium, QoL de Tabela de Destino/Significado, UI de Rolador de Dados moderna e configurações simplificadas"
+title: "v1.4 — Desbloqueio de Recursos Expandidos e Qualidade de Vida"
+summary: "Desbloqueio de Recursos Expandidos, melhorias de Tabela de Destino/Significado, UI de Rolador de Dados moderna e configurações simplificadas"
 category: "Release Notes"
 date: "2024-12-19"
 readTime: "6 min de leitura"
@@ -13,7 +13,7 @@ tags: [
   "product:apps",
   "v1.4",
   "iap",
-  "premium",
+  "expanded-features",
   "meaning-tables",
   "fate",
   "settings",
@@ -31,8 +31,8 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 
 ## Atualizações Principais
 
-### Recursos Premium / IAP
-- Lançado o novo IAP de Desbloqueio de Recursos Premium — desbloqueie todos os recursos premium atuais e novos recursos premium para os próximos 12 meses.
+### Recursos Expandidos
+- Lançado o novo desbloqueio de Recursos Expandidos — desbloqueie todos os Recursos Expandidos atuais e novos Recursos Expandidos para os próximos 12 meses.
 - Primeiro conjunto de recursos com a compra são:
   - 46 Tabelas de Significado adicionais das Mythic Magazines 1–47
   - 12 tabelas de Foco de Evento adicionais das Mythic Magazines 1–47 e Mythic Variations
@@ -63,8 +63,8 @@ Este post faz parte da série Beta → Primeiro Lançamento.
   - Adicionada aba deslizante para Tabelas de Significado na tela de Destino
   - Categorias de Tabela de Significado atualizadas
   - Removida a palavra “personagens” dos botões individuais na categoria Personagens
-- Atualizações de Gráfico de Destino / Verificação:
-  - Gráfico de Destino e Verificação de Destino agora são uma única tela — alterne entre sistemas em Configurações
+- Atualizações de Tabela de Destino / Verificação:
+  - Tabela de Destino e Verificação de Destino agora são uma única tela — alterne entre sistemas em Configurações
   - Tabelas de Foco de Evento selecionáveis com funcionalidade aprimorada
   - Adicionada uma opção gratuita de tabela de Foco de Evento de Aventura Preparada. Selecionar isso faz com que Evento Aleatório e Foco de Evento rolem em Recursos em vez de Tramas. Veja o livro de regras Mythic GME 2e (por volta da pág. 158) para detalhes
 - Atualizações de configurações:

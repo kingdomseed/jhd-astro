@@ -7,7 +7,18 @@ export default defineConfig({
   site: 'https://jasonholtdigital.com',
 
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const pathname = new URL(page).pathname;
+        const redirectOrErrorPaths = new Set([
+          '/404/',
+          '/contact/',
+          '/pt/404/',
+          '/pt/contact/',
+        ]);
+        return !pathname.startsWith('/v2/') && !redirectOrErrorPaths.has(pathname);
+      },
+    }),
     oramaSearch({
       resources: {
         pathMatcher: /^\/resources\/.+/,
@@ -17,11 +28,21 @@ export default defineConfig({
         pathMatcher: /^\/blog\/(?!category|index).+/,
         contentSelectors: ["main"],
       },
+      resources_pt: {
+        pathMatcher: /^\/pt\/resources\/.+/,
+        contentSelectors: ["main"],
+      },
+      blog_pt: {
+        pathMatcher: /^\/pt\/blog\/(?!index).+/,
+        contentSelectors: ["main"],
+      },
     }),
   ],
 
   redirects: {
     '/privacy-policy': '/privacy',
+    '/contact': '/support#contact-panel',
+    '/pt/contact': '/pt/support#contact-panel',
   },
 
   i18n: {

@@ -1,6 +1,6 @@
 ---
 title: "Salvando e Gerenciando Fórmulas de Dados"
-summary: "Salve, carregue, importe e exporte seu arquivo de Fórmulas Salvas—nenhuma codificação necessária."
+summary: "Salve, carregue, importe e exporte Fórmulas Salvas sem escrever código."
 category: "dice-roller"
 order: 2
 icon: "fa-slab fa-regular fa-floppy-disk"
@@ -72,12 +72,12 @@ related:
 ## Usuários avançados
 
 - O app entende algumas formas compatíveis na importação e exporta um formato envolvido canônico.
-- Veja o [Esquema de Fórmulas](/resources/formula-schema/) para nomes de campos e um exemplo mínimo.
+- Veja o [Esquema de Fórmulas](/pt/resources/formula-schema-pt/) para nomes de campos e um exemplo mínimo.
 
 > ##### Motor de sintaxe e docs
 > O rolando é alimentado pelo dart_dice_parser da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
 ## Guias relacionados
 
-- Construa expressões mais complexas e veja iniciais por sistema: [Fórmulas de Dados & Personalização](/resources/dice-formulas-and-customization/)
-- Campos de referência e forma JSON: [Esquema de Fórmulas](/resources/formula-schema/)
+- Construa expressões mais complexas e veja exemplos por sistema: [Fórmulas de Dados e Personalização](/pt/resources/dice-formulas-and-customization-pt/)
+- Campos de referência e forma JSON: [Esquema de Fórmulas](/pt/resources/formula-schema-pt/)

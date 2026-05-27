@@ -1,6 +1,6 @@
 ---
-title: "Importando & Exportando Fórmulas Salvas"
-summary: "Traga favoritos de amigos e faça backup dos seus próprios — sem necessidade de programação."
+title: "Importando e Exportando Fórmulas Salvas"
+summary: "Importe fórmulas de outros jogadores e faça backup das suas."
 category: "dice-roller"
 order: 3
 icon: "fa-slab fa-regular fa-exchange"
@@ -54,23 +54,23 @@ Formatos suportados
 
 Conjuntos de fórmulas prontos para importar para sistemas populares (amigáveis para mesclagem):
 
-- D&D 5e: [Download](/downloads/formulas_dnd5e.json)
-- Pathfinder 2e: [Download](/downloads/formulas_pf2.json)
-- Shadowrun: [Download](/downloads/formulas_shadowrun.json)
-- Blades in the Dark: [Download](/downloads/formulas_blades.json)
-- Savage Worlds: [Download](/downloads/formulas_savage_worlds.json)
-- Year Zero Engine (parcial): [Download](/downloads/formulas_year_zero.json)
-- Vampire V5: [Download](/downloads/formulas_vampire_v5.json)
-- PbtA: [Download](/downloads/formulas_pbta.json)
-- Fate Core: [Download](/downloads/formulas_fate.json)
-- Call of Cthulhu 7e: [Download](/downloads/formulas_coc7e.json)
-- Cypher: [Download](/downloads/formulas_cypher.json)
-- Warhammer (pools de d6): [Download](/downloads/formulas_warhammer_d6.json)
-- Lancer: [Download](/downloads/formulas_lancer.json)
-- Ironsworn: [Download](/downloads/formulas_ironsworn.json)
-- Starforged: [Download](/downloads/formulas_starforged.json)
-- Dungeon Crawl Classics: [Download](/downloads/formulas_dcc.json)
-- The One Ring (aproximação): [Download](/downloads/formulas_one_ring.json)
+- D&D 5e: [Baixar](/downloads/formulas_dnd5e.json)
+- Pathfinder 2e: [Baixar](/downloads/formulas_pf2.json)
+- Shadowrun: [Baixar](/downloads/formulas_shadowrun.json)
+- Blades in the Dark: [Baixar](/downloads/formulas_blades.json)
+- Savage Worlds: [Baixar](/downloads/formulas_savage_worlds.json)
+- Year Zero Engine (parcial): [Baixar](/downloads/formulas_year_zero.json)
+- Vampire V5: [Baixar](/downloads/formulas_vampire_v5.json)
+- PbtA: [Baixar](/downloads/formulas_pbta.json)
+- Fate Core: [Baixar](/downloads/formulas_fate.json)
+- Call of Cthulhu 7e: [Baixar](/downloads/formulas_coc7e.json)
+- Cypher: [Baixar](/downloads/formulas_cypher.json)
+- Warhammer (pools de d6): [Baixar](/downloads/formulas_warhammer_d6.json)
+- Lancer: [Baixar](/downloads/formulas_lancer.json)
+- Ironsworn: [Baixar](/downloads/formulas_ironsworn.json)
+- Starforged: [Baixar](/downloads/formulas_starforged.json)
+- Dungeon Crawl Classics: [Baixar](/downloads/formulas_dcc.json)
+- The One Ring (aproximação): [Baixar](/downloads/formulas_one_ring.json)
 
 Dica: Use Importar para mesclar estes em sua lista atual. A colocação manual requer o nome de arquivo `saved_formulas.json`.
 

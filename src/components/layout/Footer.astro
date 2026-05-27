@@ -8,9 +8,16 @@ import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import LanguageFab from "./LanguageFab.astro";
 
+interface Props {
+  canonicalPath?: string;
+  alternatePath?: string | null;
+}
+
+const { canonicalPath, alternatePath } = Astro.props;
 const year = new Date().getFullYear();
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const contactHref = lang === "pt" ? "/pt/support#contact-panel" : "/support#contact-panel";
 
 function l(path: string) {
   return getRelativeLocaleUrl(lang, path);
@@ -45,7 +52,7 @@ function l(path: string) {
         <span>{t("footer.feature_request")}</span>
       </a>
     </div>
-    <nav class="f-links" aria-label="Footer">
+    <nav class="f-links" aria-label={t("footer.aria.nav")}>
       <ul>
         <li>
           <a href={l("apps")}
@@ -66,7 +73,7 @@ function l(path: string) {
           >
         </li>
         <li>
-          <a href={l("support#contact-panel")}
+          <a href={contactHref}
             ><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"
             ></i><span>{t("footer.contact")}</span></a
           >
@@ -85,7 +92,7 @@ function l(path: string) {
         </li>
       </ul>
     </nav>
-    <div class="f-social" aria-label="Social links">
+    <div class="f-social" aria-label={t("footer.aria.social")}>
       <a
         class="ico ico--discord"
         href="https://discord.gg/PEDHrhzcnk"
@@ -131,7 +138,7 @@ function l(path: string) {
       >
         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
       </a>
-      <a class="ico ico--rss" href="/rss.xml" aria-label="Subscribe via RSS">
+      <a class="ico ico--rss" href="/rss.xml" aria-label={t("footer.aria.rss")}>
         <img src="/icons/rss.svg" alt="" aria-hidden="true" width="20" height="20" class="ico-svg" />
       </a>
       <!-- <a class="ico ico--linkedin" href="https://www.linkedin.com/company/jason-holt-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -150,15 +157,15 @@ function l(path: string) {
         ><i class="fa-slab fa-regular fa-file" aria-hidden="true"></i>
         {t("footer.terms")}</a
       > ·
-      <a href={l("support#contact-panel")}
+      <a href={contactHref}
         ><i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i>
         {t("footer.contact")}</a
       >
     </small>
-    <a class="top-link" href="#site" aria-label="Back to top">
+    <a class="top-link" href="#site" aria-label={t("footer.aria.top")}>
       <i class="fa-slab fa-regular fa-arrow-up" aria-hidden="true"></i>
       <span>{t("footer.top")}</span>
     </a>
   </div>
 </footer>
-<LanguageFab />
+<LanguageFab canonicalPath={canonicalPath} alternatePath={alternatePath} />

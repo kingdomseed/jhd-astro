@@ -119,4 +119,4 @@ Nota: Tabelas com peso aparecem no esquema para compatibilidade futura, mas o ap
 ## Relacionado
 
 - Primeiros passos e melhores práticas: "Começando com Tabelas Personalizadas", "Organizando Tabelas Personalizadas"
-- Formatos de arquivo e mapeamento Foundry: "Importando & Exportando Tabelas Personalizadas"
+- Formatos de arquivo e mapeamento Foundry: "Importando e Exportando Tabelas Personalizadas"

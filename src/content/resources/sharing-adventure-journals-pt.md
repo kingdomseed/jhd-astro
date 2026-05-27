@@ -1,6 +1,6 @@
 ---
 title: "Compartilhando Diários de Aventura"
-summary: "Exporte diários para JSON/Markdown e importe de arquivos (em breve)."
+summary: "Exporte Diários para JSON ou Markdown e prepare-se para importações por arquivo quando elas chegarem."
 category: "adventure-journals"
 order: 1
 icon: "fa-slab fa-regular fa-share-nodes"

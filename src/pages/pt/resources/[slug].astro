@@ -88,11 +88,11 @@ const dlOther = downloads.filter(
 );
 
 const categoryLabels = {
-    "start-here": "Comece Aqui",
+    "start-here": "Comece aqui",
     "adventure-journals": "Diários de Aventura",
     "dice-roller": "Rolador de Dados",
     "custom-tables": "Tabelas Personalizadas",
-    advanced: "Esquemas e Aprofundamentos",
+    advanced: "Referência",
 };
 
 const sectionAnchors = {
@@ -120,7 +120,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
 ---
 
 <BaseLayout
-  title={`${resource.title} — Mythic Resources`}
+  title={`${resource.title} — Recursos Mythic`}
   description={resource.summary}
   canonicalPath={`/pt/resources/${entry.id}/`}
   lang="pt"
@@ -177,7 +177,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                     resource.updated && (
                                         <span class="resource-pill">
                                             Atualizado em{" "}
-                                            {formatDate(resource.updated)}
+                                            {formatDate(resource.updated, "pt-BR")}
                                         </span>
                                     )
                                 }
@@ -205,6 +205,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                             url={canonicalUrl}
                             title={resource.title}
                             summary={resource.summary}
+                            lang="pt"
                         />
                         {
                             /** Optional hero image at the top of the guide. Alt text is enforced by schema when hero is present. */
@@ -255,7 +256,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                         id="resource-related-title"
                                         class="section-title"
                                     >
-                                        Guias Relacionados
+                                        Guias relacionados
                                     </h3>
                                     <ul
                                         class="resource-related__list"
@@ -327,11 +328,11 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                         {dlSchemas.length > 0 && (
                                             <div class="resource-downloads__group">
                                                 <h4 class="resource-downloads__group-title">
-                                                    Schemas
+                                                    Esquemas
                                                 </h4>
                                                 <ul
                                                     class="resource-downloads__list"
-                                                    aria-label="Schema downloads"
+                                                    aria-label="Downloads de esquemas"
                                                 >
                                                     {dlSchemas.map((d) => (
                                                         <li class="resource-downloads__item">
@@ -388,7 +389,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                                 </h4>
                                                 <ul
                                                     class="resource-downloads__list"
-                                                    aria-label="Example downloads"
+                                                    aria-label="Downloads de exemplos"
                                                 >
                                                     {dlExamples.map((d) => (
                                                         <li class="resource-downloads__item">
@@ -445,7 +446,7 @@ const ogImageAlt = resource.heroAlt ?? resource.title;
                                                 </h4>
                                                 <ul
                                                     class="resource-downloads__list"
-                                                    aria-label="Template downloads"
+                                                    aria-label="Downloads de modelos"
                                                 >
                                                     {dlTemplates.map((d) => (
                                                         <li class="resource-downloads__item">

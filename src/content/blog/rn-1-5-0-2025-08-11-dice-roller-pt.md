@@ -33,7 +33,7 @@ v1.5 é nossa maior atualização até agora. Este lançamento foca em Eventos A
 - **Correções de plataforma:** Melhor manuseio de caminho de arquivo no Windows; melhor comportamento de build no Linux; caminho de sincronização iCloud reformulado para builds do ecossistema Apple (somente App Store).
 
 ## Notas para builds do Itch.io
-- **Sem IAP no Itch.io:** Todos os recursos estão incluídos e desbloqueados.
+- **Sem compras internas no itch.io:** Todos os recursos estão incluídos e desbloqueados.
 - **macOS:** Sincronização iCloud não está disponível na build do Itch; você pode selecionar qualquer local de salvamento personalizado (incluindo uma pasta do iCloud Drive).
 - **Hardware mínimo macOS:** Apple Silicon M1 com 8 GB RAM recomendado; Intel macOS 10.15+ suportado (não testado).
 - **Linha de base Linux:** Atualizações chegando para a build Linux em breve

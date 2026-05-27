@@ -1,6 +1,6 @@
 ---
 title: "Configurando e Usando Listas"
-summary: "Construa listas Mythic reutilizáveis usando Personagens, Tramas e Características"
+summary: "Crie Listas reutilizáveis de Personagens, Tramas e Características para manter sua aventura organizada."
 category: "start-here"
 order: 2
 icon: "fa-slab fa-regular fa-list"

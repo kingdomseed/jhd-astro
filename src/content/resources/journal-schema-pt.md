@@ -29,7 +29,7 @@ related:
 ---
 ## Visão Geral
 
-Esta página documenta as chaves canônicas para o formato de exportação do Diário Mythic e como cada campo é usado. Se você está construindo ferramentas ou validando exportações, comece aqui. Para um passo a passo prático de criação e gerenciamento de diários, veja [Um Guia para os Diários Mythic](/resources/guide-to-the-mythic-journals/).
+Esta página documenta as chaves canônicas para o formato de exportação do Diário Mythic e como cada campo é usado. Se você está construindo ferramentas ou validando exportações, comece aqui. Para um passo a passo prático de criação e gerenciamento de diários, veja [Guia dos Diários Mythic](/pt/resources/guide-to-the-mythic-journals-pt/).
 
 Em Português Claro: Você não precisa saber código para usar diários. "JSON" é apenas um arquivo de texto estruturado que o app lê e escreve, e o "esquema" abaixo é um livro de regras para ferramentas validarem esses arquivos. Se você não está construindo ferramentas, pode pular os detalhes aqui com segurança.
 

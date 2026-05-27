@@ -1,6 +1,6 @@
 ---
 title: "Começando com Tabelas Personalizadas"
-summary: "Crie tabelas de Significado e Foco de Evento, adicione traduções e links, e importe modelos prontos—sem programação necessária."
+summary: "Crie Tabelas de Significado e tabelas de Foco de Evento, adicione traduções e links, e importe modelos prontos."
 category: "custom-tables"
 order: 1
 icon: "fa-slab fa-regular fa-newspaper"
@@ -69,7 +69,7 @@ Abra a funcionalidade de Tabelas Personalizadas através da gaveta de navegaçã
 
 > ### Como Desbloquear
 > - Google Play, Amazon e Apple App Store: requer uma compra no aplicativo para desbloquear Tabelas Personalizadas.
-> - Itch.io e Microsoft Store (Windows): incluído com a compra de preço maior.
+> - Itch.io e Microsoft Store (Windows): incluído na compra única do app desktop.
 
 ## Faça sua primeira tabela de Significado
 
@@ -95,7 +95,7 @@ Abra a funcionalidade de Tabelas Personalizadas através da gaveta de navegaçã
 > ### Dica
 > Cada Tabela pode ser vinculada ou aninhada sob outra tabela e cada entrada também pode ser vinculada ou aninhada sob outra tabela para rolar imediatamente em outra tabela. Você também pode vincular Listas dessa maneira.
 
-## Traduções & metadados
+## Traduções e metadados
 
 - Você pode adicionar traduções por tabela e por entrada conforme avança. O idioma padrão é `en`.
 - Adicione tags para ajudar na busca e agrupamento.
@@ -111,6 +111,6 @@ Use estes modelos e exemplos como pontos de partida. Importe-os de Tabelas Perso
 
 ## Próximos passos
 
-- Detalhes de Importar & Exportar: veja "Importando & Exportando Tabelas Personalizadas"
+- Detalhes de importar/exportar: veja "Importando e Exportando Tabelas Personalizadas"
 - Organizar categorias e ícones: veja "Organizando Tabelas Personalizadas"
 - Campos JSON completos: veja "Esquema de Tabela Personalizada" e "Esquema de Categorias"

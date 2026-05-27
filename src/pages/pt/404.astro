@@ -3,17 +3,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 ---
 <BaseLayout
-  title="404 — Página Não Encontrada | Apps Mythic GME"
-  description="Desculpe, não conseguimos encontrar essa página. Tente a página inicial, Apps, Suporte ou Contato."
+  title="404 — Página não encontrada | Apps Mythic GME"
+  description="Não conseguimos encontrar essa página. Tente a página inicial, Apps, Recursos, Suporte ou Contato."
   canonicalPath="/pt/404/"
   lang="pt"
-  alternatePath="/404/"
   mainClass="error-main"
+  noAlternate
+  noindex
 >
   <PageHeader
-    title="404 — Página Não Encontrada"
-    subtitle="Ops! Algo desapareceu"
-    description="A página que você está procurando não existe ou pode ter mudado de lugar. Vamos colocar você de volta nos trilhos."
+    title="404 — Página não encontrada"
+    subtitle="Esta página não existe"
+    description="A página que você está procurando não existe ou pode ter mudado de lugar. Escolha um destino abaixo."
     accent="Erro"
     layout="left"
     icon="fa-solid fa-triangle-exclamation"

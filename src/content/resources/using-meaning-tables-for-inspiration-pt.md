@@ -1,6 +1,6 @@
 ---
 title: "Usando Tabelas de Significado para Inspiração"
-summary: "Use Tabelas de Significado (Ações, Descrições, Elementos) para prompts claros."
+summary: "Use Tabelas de Significado quando precisar de prompts claros para decidir o que acontece em seguida."
 category: "start-here"
 order: 4
 icon: "fa-slab fa-regular fa-lightbulb"
@@ -22,8 +22,8 @@ related:
 O módulo de Tabelas de Significado no app Mythic é sua fonte de acesso rápido para inspiração, projetado para reduzir o atrito de consulta e manter você no fluxo da história. Ele fornece sementes narrativas concretas quando uma simples Pergunta do Destino Sim/Não não é suficiente.
 
 Layout
-- Celular: Tabelas de Significado é sua própria tela. Troque tabelas e role com controles amigáveis ao polegar.
-- Desktop: Tabelas de Significado fica ao lado de outros painéis para que você possa rolar e escrever sem trocar.
+- Celular: a tela de Tabelas de Significado fica separada. Troque tabelas e role com controles amigáveis ao polegar.
+- Desktop: Tabelas de Significado fica ao lado de outros painéis para que você possa rolar e escrever sem alternar de tela.
 
 ## O propósito das Tabelas de Significado
 
@@ -34,9 +34,9 @@ Tabelas de Significado geram prompts descritivos que esclarecem elementos narrat
 
 > Disponibilidade e conteúdo
 > - Conjunto principal: O app inclui as Tabelas de Significado 2e completas para rolagem.
-> - Conjuntos expandidos: 50+ Tabelas de Significado adicionais e 12+ tabelas extras de Foco de Evento de Revistas Mythic, Variações e outras publicações estão disponíveis no app.
-> - Preço por plataforma: Na Apple App Store, Google Play e Amazon Appstore, esses conjuntos expandidos fazem parte de um desbloqueio único "Recursos Expandidos" (não uma assinatura). Na Microsoft Store (Windows) e itch.io (sem DRM), a compra única inclui recursos expandidos; sem IAP.
-> - Para os detalhes mais recentes, veja Suporte → Compras, Preços & Atualizações: /support
+> - Conjuntos expandidos: 50+ Tabelas de Significado adicionais e 12+ tabelas extras de Foco de Evento de Mythic Magazines, Mythic Variations e outras publicações Mythic estão disponíveis no app.
+> - Preço por plataforma: na Apple App Store, Google Play e Amazon Appstore, esses conjuntos expandidos fazem parte do desbloqueio único de Recursos Expandidos. Na Microsoft Store (Windows) e itch.io (sem DRM), a compra única do app inclui esses recursos.
+> - Para os detalhes mais recentes, veja Suporte → Compras, Preços e Atualizações: /pt/support
 
 ## Quando e como usar o módulo
 

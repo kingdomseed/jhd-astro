@@ -1,6 +1,6 @@
 ---
 title: "Solução de Problemas"
-summary: "Correções rápidas para problemas comuns e como relatar bugs."
+summary: "Resolva problemas comuns e saiba o que enviar quando precisar relatar um bug."
 category: "adventure-journals"
 order: 2
 icon: "fa-slab fa-regular fa-life-ring"

@@ -151,7 +151,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                             >
                                 <span class="blog-pill">{displayCategory}</span>
                                 <span class="blog-pill"
-                                    >{formatDate(post.date)}</span
+                                    >{formatDate(post.date, "pt-BR")}</span
                                 >
                                 <span class="blog-pill">{post.readTime}</span>
                                 {
@@ -165,8 +165,8 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                             {
                                 post.isSample && (
                                     <p class="blog-sample-note blog-sample-note--detail">
-                                        Sample placeholder — replace this entry
-                                        before publishing to production.
+                                        Placeholder de exemplo — substitua este
+                                        post antes de publicar em produção.
                                     </p>
                                 )
                             }
@@ -175,6 +175,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                             url={canonicalUrl}
                             title={post.title}
                             summary={post.summary}
+                            lang="pt"
                         />
                         {
                             /* Optional hero image; high priority due to position near top of page */
@@ -235,7 +236,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                                                 </h4>
                                                 <ul
                                                     class="blog-downloads__list"
-                                                    aria-label="Schema downloads"
+                                                    aria-label="Downloads de esquemas"
                                                 >
                                                     {dlSchemas.map((d) => (
                                                         <li class="blog-downloads__item">
@@ -292,7 +293,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                                                 </h4>
                                                 <ul
                                                     class="blog-downloads__list"
-                                                    aria-label="Example downloads"
+                                                    aria-label="Downloads de exemplos"
                                                 >
                                                     {dlExamples.map((d) => (
                                                         <li class="blog-downloads__item">
@@ -349,7 +350,7 @@ const displayCategory = categoryTranslation[post.category] || post.category;
                                                 </h4>
                                                 <ul
                                                     class="blog-downloads__list"
-                                                    aria-label="Template downloads"
+                                                    aria-label="Downloads de modelos"
                                                 >
                                                     {dlTemplates.map((d) => (
                                                         <li class="blog-downloads__item">

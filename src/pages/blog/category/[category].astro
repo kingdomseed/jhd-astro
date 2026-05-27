@@ -9,7 +9,9 @@ type CategoryName = BlogEntry['data']['category'];
 
 // Generate static paths for all unique categories (case-insensitive)
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.lang === 'en' || data.lang === undefined;
+  });
 
   // Get unique categories and normalize to lowercase for URLs
   const uniqueCategories = [...new Set<CategoryName>(posts.map((post: BlogEntry) => post.data.category))];
@@ -28,7 +30,9 @@ const { category } = Astro.params as { category: string };
 const { originalCategory } = Astro.props as { originalCategory: CategoryName };
 
 // Get all posts for this category
-const allPosts = await getCollection('blog');
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.lang === 'en' || data.lang === undefined;
+});
 const categoryPosts = allPosts
   .filter((post: BlogEntry) => post.data.category === originalCategory)
   .sort((a: BlogEntry, b: BlogEntry) => b.data.date.getTime() - a.data.date.getTime());

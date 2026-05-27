@@ -9,6 +9,19 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const l = (path: string) => getRelativeLocaleUrl(lang, path);
+const resourceLinks = lang === "pt"
+  ? {
+      gettingStarted: "resources/getting-started-with-the-mythic-apps-pt/",
+      customTables: "resources/getting-started-with-custom-tables-pt/",
+      tableImport: "resources/importing-and-exporting-custom-tables-pt/",
+      diceGuide: "resources/dice-formulas-and-customization-pt/",
+    }
+  : {
+      gettingStarted: "resources/getting-started-with-the-mythic-apps/",
+      customTables: "resources/getting-started-with-custom-tables/",
+      tableImport: "resources/importing-and-exporting-custom-tables/",
+      diceGuide: "resources/dice-formulas-and-customization/",
+    };
 ---
 
 <section
@@ -23,7 +36,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
   <h2 id="resources-title" class="section-title">{t("resources.title")}</h2>
   <ul class="links">
     <li>
-      <a href={l("resources/getting-started-with-the-mythic-apps/")}>
+      <a href={l(resourceLinks.gettingStarted)}>
         <span class="link-left">
           <i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i>
           <span>{t("resources.link1")}</span>
@@ -34,7 +47,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
       </a>
     </li>
     <li>
-      <a href={l("resources/getting-started-with-custom-tables/")}>
+      <a href={l(resourceLinks.customTables)}>
         <span class="link-left">
           <i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i>
           <span>{t("resources.link2")}</span>
@@ -45,7 +58,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
       </a>
     </li>
     <li>
-      <a href={l("resources/importing-and-exporting-custom-tables/")}>
+      <a href={l(resourceLinks.tableImport)}>
         <span class="link-left">
           <i class="fa-slab fa-regular fa-arrows-rotate" aria-hidden="true"></i>
           <span>{t("resources.link3")}</span>
@@ -56,7 +69,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
       </a>
     </li>
     <li>
-      <a href={l("resources/dice-formulas-and-customization/")}>
+      <a href={l(resourceLinks.diceGuide)}>
         <span class="link-left">
           <i class="fa-slab fa-regular fa-percent" aria-hidden="true"></i>
           <span>{t("resources.link4")}</span>

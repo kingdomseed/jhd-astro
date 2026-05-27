@@ -18,7 +18,7 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 
 - Layouts adequados de paisagem e retrato em todos os dispositivos
 - Rolador de Dados atualizado frente e verso para suportar mais tipos de dados
-- Tabela de Significados de Elementos significativamente melhorada (e todas as tabelas agora totalmente funcionais)
+- Tabela de Significado de Elementos significativamente melhorada (e todas as tabelas agora totalmente funcionais)
 
 ## Correções & Melhorias
 

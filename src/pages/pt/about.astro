@@ -11,17 +11,10 @@ if (!aboutEntry) {
     throw new Error("Could not find about-pt entry in pages collection");
 }
 
-const {
-    title,
-    subtitle,
-    description,
-    pageHeader,
-    backgroundHighlights = [],
-    mythicHighlights = [],
-} = aboutEntry.data;
+const { title, subtitle, description, pageHeader } = aboutEntry.data;
 ---
 <BaseLayout
-  title={`Sobre — ${title} & Parceria Oficial`}
+  title="Sobre Jason Holt | Apps Mythic GME"
   description={description}
   canonicalPath="/pt/about/"
   lang="pt"
@@ -39,289 +32,68 @@ const {
     colorScheme={pageHeader.colorScheme}
   />
 
-  <section
-    class="section"
-    id="about-overview"
-    aria-labelledby="about-overview-title"
-  >
+  <section class="section" id="about-overview" aria-labelledby="about-overview-title">
     <div class="container">
       <div class="about-overview">
         <figure class="about-portrait">
-          <Image
-            src={headshotMain}
-            alt="Jason Holt"
-            class="about-portrait__image"
-            width={320}
-            height={320}
-            loading="lazy"
-            decoding="async"
-          />
+          <Image src={headshotMain} alt="Jason Holt" class="about-portrait__image" width={320} height={320} loading="lazy" decoding="async" />
           <figcaption class="about-portrait__caption">
             <strong>Jason Holt</strong>
-            Desenvolvedor Indie &amp; Fundador
+            Desenvolvedor independente
           </figcaption>
         </figure>
         <div class="about-intro">
-          <header
-            class="section-head section-head--left"
-            aria-hidden="true"
-          >
-            <span class="accent-line" aria-hidden="true"
-            ></span>
+          <header class="section-head section-head--left" aria-hidden="true">
+            <span class="accent-line" aria-hidden="true"></span>
             <span class="badge-text">Perfil</span>
           </header>
-          <h2
-            id="about-overview-title"
-            class="section-title section-title--left"
-          >
-            Olá, eu sou o Jason
-          </h2>
-          <p>
-            Escrevi meu primeiro programa aos doze
-            anos — uma aventura-solo de Redwall em
-            Basic. Depois vieram nove anos ensinando
-            ciência da computação, alguns experimentos
-            com Flutter e, finalmente (depois de sonhar
-            com isso desde que fiz a Hora do Código com
-            meus alunos em 2013), criar um app de
-            verdade. O que não mudou em tudo isso foram
-            as pessoas: eu sempre acabava onde alguém
-            precisava de algo construído.
-          </p>
-          <p>
-            Mantenho dois produtos sob licença da Word
-            Mill Games: <strong
-              >Mythic GME Mobile</strong
-            > (iOS, Android) e <strong
-              >Mythic GME Digital</strong
-            > (Windows, macOS, Linux).
-          </p>
-          <p>
-            Também estou cursando um Mestrado em
-            Linguística Computacional. Em parte
-            curiosidade sobre como linguagem e software
-            podem trabalhar juntos para jogos solo, e em
-            parte (sendo honesto) o mesmo padrão que
-            impulsionou cada recomeço na minha
-            carreira — alguém tinha uma necessidade, e
-            eu queria ajudar a atendê-la.
-          </p>
+          <h2 id="about-overview-title" class="section-title section-title--left">Como cheguei aqui</h2>
+          <p>Meu irmão e eu crescemos brincando com jogos de imaginação, criando personagens da nossa cabeça e com peças de LEGO, e mandando esses personagens para qualquer mundo que conseguíssemos inventar. A gente lia Redwall, O Senhor dos Anéis, O Caldeirão Negro e muita fantasia. Star Wars também fazia parte disso, com heróis e vilões, lugares estranhos, grandes aventuras e resgates de última hora. Tudo isso dava muito material para imaginar.</p>
+          <p>Quando eu tinha doze anos, consegui um laptop antigo com tela em preto e branco. Ele não fazia muita coisa, mas tinha BASIC, e eu encontrei um livro antigo de ensino médio que ensinava a usar a linguagem. Comecei a brincar com isso, colocando palavras na tela, criando escolhas e vendo o que o computador faria em seguida.</p>
+          <p>O primeiro programa que eu fiz foi um jogo. Na época eu lia Redwall sem parar, então construí uma pequena aventura estilo escolha-sua-própria-aventura em BASIC. Você fazia escolhas, tentava atravessar a aventura e, se tudo desse certo, chegava a um bom final. Minha família e meus amigos podiam jogar.</p>
+          <p>Anos depois, quando me mudei para a Alemanha e estava tentando entender o que viria depois da sala de aula, comecei a montar um pequeno negócio de software. Eu estava olhando para trabalhos mais práticos, como desenvolvimento Shopify, mas ainda queria construir apps.</p>
+          <p>Meu irmão estava mais ligado à comunidade de RPGs de mesa, e sabia que eu ainda queria fazer apps. Ele me mandou uma mensagem dizendo que Tana Pigeon estava procurando alguém para construir um app para Mythic. Eu ainda não conhecia Mythic, e fui cauteloso para não me animar demais. Quanto mais eu olhava, mais eu entendia por que os jogadores se importavam com ele.</p>
+          <p>Mythic parecia ligado ao tipo de jogo que eu sempre amei. Você cria um personagem, explora um mundo e descobre o que acontece em seguida. Também era uma chance de construir uma experiência de produto que eu queria fazer. Eu queria que o app ajudasse nas partes que desaceleram o jogo, fosse bom de usar e ficasse quieto o suficiente para sair do caminho enquanto as pessoas contam suas histórias.</p>
+          <p>Hoje eu construo e mantenho dois apps oficiais licenciados Mythic GME 2e. <strong>Mythic GME Mobile</strong> roda em iOS e Android. <strong>Mythic GME Digital</strong> roda em Windows, macOS e Linux.</p>
+          <p>A comunidade Mythic me recebeu de braços abertos, e isso me encoraja mais do que eu consigo dizer. Ainda estou construindo com essa comunidade, ouvindo o que ajuda durante o jogo e trabalhando para fazer dos apps uma das melhores maneiras de jogar RPGs com Mythic.</p>
+          <p>Hoje eu continuo trabalhando nos apps, melhorando, planejando o que vem depois, apoiando jogadores e ouvindo feedback enquanto termino meu M.Sc. em Linguística Computacional.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section
-    class="section section-band"
-    id="about-license"
-    aria-labelledby="about-license-title"
-  >
+  <section class="section section-band" id="about-process" aria-labelledby="about-process-title">
     <div class="container">
       <header class="section-head" aria-hidden="true">
         <span class="accent-line" aria-hidden="true"></span>
-        <span class="badge-text">Oficial</span>
+        <span class="badge-text">Processo</span>
       </header>
-      <div class="about-license">
-        <h2 id="about-license-title" class="section-title">
-          Licenciado pela Word Mill Games
-        </h2>
-        <p class="about-license__summary">
-          A Word Mill Games precisava de um desenvolvedor
-          para o Mythic GME 2e, e eu estava procurando o
-          que construir depois de ensinar. O timing deu
-          certo. Isso se tornou uma licença em 2024, e
-          desde então trabalho diretamente com a Word Mill.
-        </p>
-        <ul class="about-license__list">
-          <li>
-            <strong>Fidelidade ao Core 2e.</strong> Fate
-            Chart, Fate Check, Eventos Aleatórios e ajustes
-            de Cena implementados com cuidado.
-          </li>
-          <li>
-            <strong>Plataformas.</strong> Dois aplicativos:
-            <strong>Mythic GME Mobile</strong> (iOS, Android)
-            e <strong>Mythic GME Digital</strong> (Windows,
-            macOS, Linux).
-          </li>
-          <li>
-            <strong>Portátil por design.</strong> Offline‑first,
-            diários em JSON e exportações em Markdown para
-            que suas campanhas viajem bem.
-          </li>
-          <li>
-            <strong>Acessível.</strong> Amigável para leitores
-            de tela, tipografia ajustável, modo para canhotos
-            e paletas para daltônicos.
-          </li>
-        </ul>
+      <div class="about-process">
+        <h2 id="about-process-title" class="section-title">Como os apps melhoram</h2>
+        <p class="about-process__summary">O trabalho precisa ficar perto das sessões reais, não só de uma lista de recursos.</p>
+        <p class="about-process__summary">Jogadores me dizem quando algo economiza tempo, quando algo confunde, quando algo está lento demais e quando o app ainda não acompanha a forma como eles realmente jogam. Esse feedback me ajuda a entender para onde o app deve ir, como a experiência precisa se sentir e onde a próxima rodada de trabalho deve focar.</p>
+        <p class="about-process__summary">A maior parte dessa conversa acontece pelo Discord, por e-mail e pelo quadro de recursos em <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener noreferrer">feedback.jasonholtdigital.com</a>. Eu acompanho o Discord, respondo a pedidos de recursos e faço perguntas quando preciso entender como algo está afetando o jogo real.</p>
+        <p class="about-process__summary">Às vezes a resposta é uma correção rápida. Às vezes é uma pequena mudança de design. Às vezes é "preciso pensar melhor sobre isso".</p>
+        <p class="about-process__summary">Eu compartilho atualizações de progresso quando consigo, e quero fazer mais disso. Continuo ativo na comunidade e continuo trabalhando para manter o app avançando.</p>
       </div>
     </div>
   </section>
 
-  <section
-    class="section"
-    id="about-mythic"
-    aria-labelledby="about-mythic-title"
-  >
-    <div class="container">
-      <header class="section-head" aria-hidden="true">
-        <span class="accent-line" aria-hidden="true"></span>
-        <span class="badge-text">Produto</span>
-      </header>
-      <h2 id="about-mythic-title" class="section-title">
-        Por que os jogadores de Mythic escolhem os
-        aplicativos
-      </h2>
-      <p class="about-mythic__summary">
-        Construí esses apps para a comunidade Mythic — menos
-        tempo folheando tabelas, mais tempo na história. Jogo
-        solo, sessões sem mestre, faísca criativa em qualquer
-        lugar — não importa como você use o Mythic, os apps
-        foram feitos para acompanhar.
-      </p>
-      <ul class="about-mythic__list">
-        {
-          mythicHighlights.map(
-            (item: {
-              label: string;
-              description: string;
-            }) => (
-              <li>
-                <strong>{item.label}.</strong>{" "}
-                {item.description}
-              </li>
-            ),
-          )
-        }
-      </ul>
-      <p class="about-mythic__note">
-        O que eu lanço a seguir vem do que os jogadores me
-        dizem — entre no Discord para falar comigo ou vá
-        para o <a
-          href="http://feedback.jasonholtdigital.com/board"
-          target="_blank"
-          rel="noopener noreferrer">Quadro de Recursos</a
-        > para solicitar funcionalidades e votar em
-        prioridades.
-      </p>
-    </div>
-  </section>
-
-  <section
-    class="section"
-    id="about-background"
-    aria-labelledby="about-background-title"
-  >
-    <div class="container">
-      <header class="section-head" aria-hidden="true">
-        <span class="accent-line" aria-hidden="true"></span>
-        <span class="badge-text">Abordagem</span>
-      </header>
-      <h2 id="about-background-title" class="section-title">
-        O que molda o trabalho
-      </h2>
-      <p class="about-background__summary">
-        Quando comecei a construir o app Mythic, eu sabia
-        que precisava da comunidade — o feedback deles, seus
-        estilos de jogo, sua paciência enquanto eu ia
-        descobrindo as coisas. Cada versão foi um
-        recomeço — melhor arquitetura, novos padrões de UX
-        e muito mais escuta. Foi assim que "construir em
-        público" deixou de ser algo que eu admirava e
-        passou a ser como eu realmente trabalho.
-      </p>
-      <p class="about-background__summary">
-        Compartilho o que lanço a cada dia no canal
-        #daily-wrap do Discord. Relatórios de bugs chegam,
-        pedidos de funcionalidades chegam, e às vezes um
-        jogador percebe algo que eu deixei passar (acontece
-        mais do que eu gostaria de admitir). Atualizações
-        pequenas e frequentes.
-      </p>
-      <div class="about-background-grid">
-        {
-          backgroundHighlights.map(
-            (item: {
-              icon: string;
-              title: string;
-              description: string;
-            }) => (
-              <article class="about-background-card">
-                <span
-                  class="about-background-card__icon"
-                  aria-hidden="true"
-                >
-                  <i class={item.icon} />
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
-            ),
-          )
-        }
-      </div>
-    </div>
-  </section>
-
-  <section
-    class="section"
-    id="about-connect"
-    aria-labelledby="about-connect-title"
-  >
+  <section class="section" id="about-connect" aria-labelledby="about-connect-title">
     <div class="container">
       <header class="section-head" aria-hidden="true">
         <span class="accent-line" aria-hidden="true"></span>
         <span class="badge-text">Conectar</span>
       </header>
       <div class="about-connect">
-        <h2 id="about-connect-title" class="section-title">
-          Adoraria continuar a conversa
-        </h2>
-        <p class="about-connect__summary">
-          Eu leio todas as mensagens. Seja um relatório de
-          bug, uma ideia de funcionalidade, ou apenas uma
-          história sobre sua última sessão — eu quero
-          ouvir.
-        </p>
+        <h2 id="about-connect-title" class="section-title">Eu leio todas as mensagens</h2>
+        <p class="about-connect__summary">Se você usa os apps, quero saber como eles entram nas suas sessões reais. Envie um bug, uma ideia de recurso, uma pergunta ou só uma história sobre o que aconteceu na sua última sessão.</p>
         <div class="about-social">
-          <a
-            class="ico ico--discord"
-            href="https://discord.gg/PEDHrhzcnk"
-            target="_blank"
-            rel="noopener"
-            aria-label="Entrar no Discord"
-          >
-            <i
-              class="fa-brands fa-discord"
-              aria-hidden="true"></i>
-          </a>
-          <a
-            class="ico ico--github"
-            href="https://github.com/kingdomseed"
-            target="_blank"
-            rel="noopener"
-            aria-label="Seguir no GitHub"
-          >
-            <i
-              class="fa-brands fa-github"
-              aria-hidden="true"></i>
-          </a>
-          <a
-            class="ico ico--blog"
-            href="/blog"
-            aria-label="Ler o Blog"
-          >
-            <i
-              class="fa-slab fa-regular fa-newspaper"
-              aria-hidden="true"></i>
-          </a>
+          <a class="ico ico--discord" href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener" aria-label="Entrar no Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+          <a class="ico ico--github" href="https://github.com/kingdomseed" target="_blank" rel="noopener" aria-label="Seguir no GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a class="ico ico--blog" href="/pt/blog" aria-label="Ler o Blog"><i class="fa-slab fa-regular fa-newspaper" aria-hidden="true"></i></a>
         </div>
-        <p class="about-connect__support">
-          Perguntas? <a href="/pt/support"
-            >Visite a central de suporte</a
-          >
-        </p>
+        <p class="about-connect__support">Perguntas? <a href="/pt/support">Visite a central de suporte</a></p>
       </div>
     </div>
   </section>

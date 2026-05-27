@@ -1,6 +1,6 @@
 ---
-title: Fórmulas de Dados & Personalização
-summary: "Construa as rolagens que você quer: vantagem, limites, explodir/compor, manter/largar e mais—sem programação necessária."
+title: Fórmulas de Dados e Personalização
+summary: "Monte rolagens com vantagem, limites, dados explosivos ou compostos, manter/descartar e mais."
 category: dice-roller
 order: 3
 icon: fa-slab fa-regular fa-sliders
@@ -90,7 +90,7 @@ related:
 
 - Rolar dados: `XdY` (ex., `2d6`, `1d20`, `1d%` para d100)
 - Dados especiais: `1D66` (D maiúsculo), `4dF` (dados Fate), faces personalizadas: `2d[2,3,5,7]`
-- Matemática & agrupamento: `+`, `-`, `*`, parênteses `( )` (divisão não é suportada)
+- Matemática e agrupamento: `+`, `-`, `*`, parênteses `( )` (divisão não é suportada)
 - Manter / Largar: `kh` manter maior, `kl` manter menor, `-H` largar maior, `-L` largar menor (ex., `3d20kh2`, `4d6-L`)
 - Explodir / Compor: `!` (explodir), `!!` (compor), adicione `o` para uma vez: `!o`, `!!o` (ex., `4d6!`, `5d10!!o>=8`)
 - Re-rolar: `r` (re-rolar correspondências), `ro` (re-rolar uma vez) (ex., `4d4r<=2`, `4d4ro<2`)
@@ -135,7 +135,7 @@ Blades in the Dark
 - Conjunto manter maior: `Nd6kh1` (ex., `3d6kh1`)
 - Críticos pontuais (dois 6s): adicione `Nd6#=6` para contar seis ao lado de sua rolagem
 
-Shadowrun (acertos & falhas)
+Shadowrun (acertos e falhas)
 - Acertos: `Nd6#>=5`
 - Rastrear 1s para regras de falha: adicione `Nd6#f=1`
 
@@ -175,7 +175,7 @@ The One Ring 2e (aproximação)
 - Notas: Gandalf/Olho e seis Tengwar são efeitos de símbolo; trate especiais manualmente
 
 Legend of the Five Rings
-- AEG 1e–4e (Rolar & Manter, explodindo 10s): `Xd10!!khY`
+- AEG 1e–4e (Rolar e Manter, explodindo 10s): `Xd10!!khY`
 - FFG/Edge 5e (dados de símbolo): Não suportado
 
 Genesys / FFG Star Wars (dados narrativos)

@@ -28,17 +28,17 @@ const isPt = lang === 'pt';
 const mobileApp = {
   title: "Mythic GME Mobile",
   whoItsFor: isPt
-    ? "Jogadores solo que querem menos consulta e mais história, em qualquer lugar."
+    ? "Jogadores solo que querem menos consulta e mais história onde quer que joguem."
     : "Solo role-players who want less lookup and more story wherever they play.",
   features: isPt
     ? [
-        "Tabela de Destino e Teste de Destino simplificado",
-        "Pergunte ao Destino—escreva primeiro, depois role",
+        "Responda perguntas ao Destino com a Tabela de Destino ou uma Verificação de Destino simplificada",
+        "Escreva sua pergunta ao Destino primeiro, depois role",
         "Personagens, Tramas, Características e Cenas",
-        "Diário de aventura com markdown e corretor ortográfico",
-        "Tabelas personalizadas: criar, importar, vincular, exportar",
-        "Rolador de dados personalizável com fórmulas salvas",
-        "Acessibilidade: leitor de tela, modo daltônico, modo canhoto",
+        "Diário de Aventura com Markdown e corretor ortográfico",
+        "Crie, importe, vincule e exporte Tabelas Personalizadas",
+        "Salve as fórmulas de dados que você mais usa",
+        "Use modos para leitor de tela, daltonismo e uso com a mão esquerda",
       ]
     : [
         "Answer Fate Questions with the Fate Chart or a streamlined Fate Check",
@@ -51,9 +51,9 @@ const mobileApp = {
       ],
   officialContent: isPt
     ? [
-        "50 tabelas principais do Mythic GME 2e (48 de significado + 2 de foco de evento)",
-        "Expanda para 160+ tabelas com Recursos Expandidos (Variations, Magazines 1-61)",
-        "Tabelas de Foco de Evento de Aventura Aleatória e Preparada",
+        "Comece com as 50 tabelas principais do Mythic GME 2e: 48 Tabelas de Significado e 2 tabelas de Foco de Evento",
+        "Expanda para mais de 160 tabelas com Recursos Expandidos, incluindo Variations e Mythic Magazine 1-61",
+        "Use tabelas de Foco de Evento para Eventos Aleatórios e Aventuras Preparadas",
         "Novo conteúdo oficial adicionado com grandes lançamentos",
       ]
     : [
@@ -63,7 +63,7 @@ const mobileApp = {
         "New official content comes with major releases",
       ],
   iapInfo: isPt
-    ? "Os desbloqueios IAP são permanentes (não é assinatura). Recursos que você desbloqueia, mais quaisquer novos recursos pro adicionados dentro de 12 meses, permanecem desbloqueados para sempre. Similar ao modelo do Working Copy."
+    ? "Desbloqueios pagos são permanentes, não assinaturas. Tudo o que você desbloquear continua desbloqueado, incluindo novos Recursos Expandidos adicionados nos 12 meses seguintes à compra."
     : "Paid unlocks are permanent, not subscriptions. Anything you unlock stays unlocked, including new paid features added within 12 months of purchase.",
   storeLinks: [
     {
@@ -87,16 +87,16 @@ const mobileApp = {
 const desktopApp = {
   title: "Mythic GME Digital",
   whoItsFor: isPt
-    ? "Jogadores de PC/Mac/Linux que querem um layout focado para sessões longas."
+    ? "Jogadores de Windows, macOS e Linux que querem mais espaço para sessões Mythic mais longas."
     : "Windows, macOS, and Linux players who want more room for longer Mythic sessions.",
   features: isPt
     ? [
-        "Todos os recursos e sistemas mobile",
-        "Layout de painéis personalizável—arraste, redimensione, organize",
-        "Desfazer com Cmd/Ctrl+Z para qualquer ação",
-        "Central de Ajuda com guias pesquisáveis",
-        "Layout desktop completo para sessões longas",
-        "Tudo incluído—sem desbloqueios, sem assinaturas",
+        "Use todos os recursos e sistemas do Mythic GME Mobile no desktop",
+        "Organize Painéis para combinar com o seu jeito de jogar",
+        "Desfaça muitas ações com Cmd/Ctrl+Z",
+        "Pesquise na Central de Ajuda do app quando precisar de orientação",
+        "Mantenha várias ferramentas visíveis durante sessões mais longas",
+        "Receba tudo incluído desde o início, sem assinaturas",
       ]
     : [
         "Use all Mythic GME Mobile features and systems on desktop",
@@ -108,9 +108,9 @@ const desktopApp = {
       ],
   officialContent: isPt
     ? [
-        "Todo o conteúdo oficial abrangendo o universo Mythic",
-        "Sem compras no app ou assinaturas",
-        "Todas as tabelas e recursos desbloqueados na compra",
+        "Conteúdo oficial Mythic para jogar no desktop",
+        "Tabelas e recursos desbloqueados desde o início",
+        "Sem assinaturas",
       ]
     : [
         "Official Mythic content for desktop play",
@@ -118,7 +118,7 @@ const desktopApp = {
         "No subscriptions",
       ],
   disclaimer: isPt
-    ? "A versão da Mac App Store é um pacote mobile + desktop e inclui desbloqueios no app para conteúdo e recursos adicionais."
+    ? "Observação: a versão da Mac App Store é um pacote mobile + desktop e usa desbloqueios pagos para conteúdo e recursos adicionais."
     : "Note: the Mac App Store version is a mobile + desktop bundle and uses paid unlocks for additional content and features.",
   storeLinks: [
     {
@@ -143,10 +143,10 @@ const desktopApp = {
 ---
 <BaseLayout
   title={isPt
-    ? "Apps — Companheiros Mythic GME 2e | Jason Holt Digital"
+    ? "Apps Mythic GME 2e — Mobile e Desktop | Jason Holt Digital"
     : "Apps — Mythic GME 2e Companions | Jason Holt Digital"}
   description={isPt
-    ? "Compare os apps Mobile e Desktop, veja o conteúdo oficial e baixe na sua plataforma. Apps companheiros oficiais licenciados do Mythic GME 2e."
+    ? "Compare os apps oficiais Mythic GME 2e para mobile e desktop, veja o que cada versão inclui e baixe na sua plataforma."
     : "Compare the official Mythic GME 2e apps for mobile and desktop, see what each version includes, and download on your platform."}
   canonicalPath={isPt ? "/pt/apps/" : "/apps/"}
   lang={lang}
@@ -155,14 +155,14 @@ const desktopApp = {
     ? "Apps Mythic GME 2e — Mobile e Desktop | Jason Holt Digital"
     : "Mythic GME 2e Apps — Mobile & Desktop | Jason Holt Digital"}
   ogDescription={isPt
-    ? "Apps companheiros oficiais licenciados para Mythic GME 2e. Disponível para mobile (iOS, Android) e desktop (Windows, macOS, Linux)."
+    ? "Apps oficiais Mythic GME 2e para mobile e desktop, feitos para manter suas ferramentas por perto enquanto você joga."
     : "Official Mythic GME 2e apps for mobile and desktop, built to keep your tools close while you play."}
 >
   <PageHeader
     title={isPt ? "Apps Mythic GME" : "Mythic GME Apps"}
     subtitle={isPt ? "Mobile e Desktop, com você onde quer que jogue." : "Mobile & Desktop, with you wherever you play."}
     description={isPt
-      ? "Aplicativos companheiros oficiais licenciados para Mythic GME 2ª Edição."
+      ? "Apps oficiais Mythic GME 2e para manter as ferramentas de jogo sempre à mão."
       : "Official Mythic GME 2e apps for keeping the tools of play close at hand."}
     accent="Apps"
     visualElement="grid"
@@ -177,9 +177,10 @@ const desktopApp = {
     iapInfo={mobileApp.iapInfo}
     storeLinks={mobileApp.storeLinks}
     images={[m1, m2, m3, m4, m5, m6, m7]}
-    imageAlt={isPt ? "Screenshots do Mythic GME Mobile" : "Mythic GME Mobile screenshots"}
-    reverse={false}
-  />
+	    imageAlt={isPt ? "Capturas de tela do Mythic GME Mobile" : "Mythic GME Mobile screenshots"}
+	    reverse={false}
+	    lang={lang}
+	  />
 
   <!-- Adventure Crafter Divider Section -->
   <section
@@ -206,7 +207,7 @@ const desktopApp = {
         style="text-align: center; margin-bottom: 0;"
       >
         {isPt
-          ? "Jogadores solo que querem criação guiada de aventuras com ganchos e reviravoltas — Fique ligado nas novidades!"
+          ? "Um futuro app companheiro para criar aventuras com prompts guiados, ganchos e reviravoltas."
           : "A future companion app for creating adventures with guided prompts, hooks, and twists."}
       </p>
     </div>
@@ -221,9 +222,10 @@ const desktopApp = {
     disclaimer={desktopApp.disclaimer}
     storeLinks={desktopApp.storeLinks}
     images={[d1, d2, d3, d4, d5, d6, d7]}
-    imageAlt={isPt ? "Screenshots do Mythic GME Desktop" : "Mythic GME Desktop screenshots"}
-    reverse={true}
-  />
+	    imageAlt={isPt ? "Capturas de tela do Mythic GME Digital" : "Mythic GME Desktop screenshots"}
+	    reverse={true}
+	    lang={lang}
+	  />
 
   <!-- Buy the Books Section -->
   <section class="books-section">
@@ -234,7 +236,7 @@ const desktopApp = {
         aria-hidden="true"
       >
         <span class="accent-line" aria-hidden="true"></span>
-        <span class="badge-text">{isPt ? "Livros Físicos" : "Source Books"}</span>
+        <span class="badge-text">{isPt ? "Livros oficiais" : "Source Books"}</span>
       </header>
       <h2
         class="section-title"
@@ -247,13 +249,13 @@ const desktopApp = {
         style="text-align: center; margin-bottom: 2rem;"
       >
         {isPt
-          ? "Experimente o sistema Mythic completo com os livros físicos oficiais de Tana Pigeon."
+          ? "Os apps são companheiros dos livros oficiais de Mythic, escritos por Tana Pigeon."
           : "The apps are companions to the official Mythic books by Tana Pigeon."}
       </p>
       <div class="books-grid">
         <div class="book-card">
           <h3>Mythic GME 2e</h3>
-          <p>{isPt ? "O sistema de RPG solo completo que começou tudo." : "The core Mythic GME 2e book for solo and GM-less play."}</p>
+          <p>{isPt ? "O livro-base de Mythic GME 2e para jogo solo e sem mestre." : "The core Mythic GME 2e book for solo and GM-less play."}</p>
           <a
             href="https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition"
             target="_blank"
@@ -266,7 +268,7 @@ const desktopApp = {
         </div>
         <div class="book-card">
           <h3>Adventure Crafter</h3>
-          <p>{isPt ? "Sistema de geração de aventuras para histórias dinâmicas." : "A Mythic book for creating adventures with prompts, turning points, and twists."}</p>
+          <p>{isPt ? "Um livro Mythic para criar aventuras com prompts, pontos de virada e reviravoltas." : "A Mythic book for creating adventures with prompts, turning points, and twists."}</p>
           <a
             href="https://www.drivethrurpg.com/product/261479/The-Adventure-Crafter"
             target="_blank"
@@ -292,7 +294,7 @@ const desktopApp = {
           </h3>
           <p>
             {isPt ? (
-              <>Ambos os apps respeitam sua privacidade com coleta mínima de dados. Leia nossa <a href="/pt/privacy">Política de Privacidade</a> completa para detalhes.</>
+              <>Ambos os apps foram criados com coleta mínima de dados. Leia a <a href="/pt/privacy">Política de Privacidade</a> para detalhes.</>
             ) : (
               <>Both apps are built with minimal data collection. Read the <a href="/privacy">Privacy Policy</a> for details.</>
             )}
@@ -306,7 +308,7 @@ const desktopApp = {
           </h3>
           <p>
             {isPt ? (
-              <>Atualizações regulares com novos recursos e melhorias. Confira o <a href="/blog">Blog</a> para notas de lançamento e <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener">Pedidos de Recursos</a> para ver o que está planejado.</>
+              <>Leia as notas de lançamento no <a href="/pt/blog">Blog</a> e acompanhe as <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener">Solicitações de Recursos</a> para ver o que está sendo considerado ou planejado.</>
             ) : (
               <>Read release notes on the <a href="/blog">Blog</a>, and follow <a href="http://feedback.jasonholtdigital.com/board" target="_blank" rel="noopener">Feature Requests</a> to see what is being considered or planned.</>
             )}
@@ -320,7 +322,7 @@ const desktopApp = {
           </h3>
           <p>
             {isPt ? (
-              <>Obtenha ajuda através da nossa <a href="/pt/support">página de Suporte</a> ou junte-se à comunidade no <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a>.</>
+              <>Encontre ajuda no <a href="/pt/support">Suporte</a>, entre no <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a> ou envie feedback pelo quadro de recursos.</>
             ) : (
               <>Get help through <a href="/support">Support</a>, join the <a href="https://discord.gg/PEDHrhzcnk" target="_blank" rel="noopener">Discord</a>, or send feedback through the feature board.</>
             )}
@@ -330,18 +332,18 @@ const desktopApp = {
         <div class="info-card">
           <h3>
             <i class="fa-slab fa-regular fa-users" aria-hidden="true"></i>
-            {isPt ? "Feito pela Comunidade" : "Community-Driven"}
+            {isPt ? "Guiado pelo Feedback" : "Community-Driven"}
           </h3>
           <p>
             {isPt
-              ? "Mais de 60% das melhorias do app vêm diretamente de sugestões da comunidade. Seu feedback molda o roteiro."
+              ? "O feedback dos jogadores ajuda a orientar os apps, de pequenos ajustes de uso a decisões maiores de planejamento."
               : "Player feedback helps guide the direction of the apps, from small usability improvements to larger planning decisions."}
           </p>
         </div>
       </div>
 
       <div class="last-updated">
-        <small>{isPt ? "Última atualização: 15 de Setembro de 2025" : "Last updated: May 27, 2026"}</small>
+        <small>{isPt ? "Última atualização: 27 de maio de 2026" : "Last updated: May 27, 2026"}</small>
       </div>
     </div>
   </section>

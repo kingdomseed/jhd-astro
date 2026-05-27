@@ -17,7 +17,7 @@ function l(path: string) {
 
 <header class="header-nav">
   <div class="container row" style="justify-content: space-between">
-    <a class="brand" href={l("/")} aria-label="Jason Holt Digital home">
+    <a class="brand" href={l("/")} aria-label={t("nav.aria.brand_home")}>
       <img
         class="brand-logo"
         src={brandLogoUrl}
@@ -31,7 +31,7 @@ function l(path: string) {
     </a>
 
     <!-- Desktop Navigation -->
-    <nav id="siteNav" class="nav nav--desktop" aria-label="Primary">
+    <nav id="siteNav" class="nav nav--desktop" aria-label={t("nav.aria.primary")}>
       <a href={l("/")}
         ><i class="fa-slab fa-regular fa-house" aria-hidden="true"></i><span
           >{t("nav.home")}</span
@@ -68,7 +68,7 @@ function l(path: string) {
           id="downloadMenu"
           class="menu"
           role="menu"
-          aria-label="Choose a platform"
+          aria-label={t("nav.aria.download_menu")}
         >
           <a
             role="menuitem"
@@ -122,7 +122,7 @@ function l(path: string) {
     <!-- Mobile Menu Toggle -->
     <button
       class="mobile-toggle"
-      aria-label="Open navigation menu"
+      aria-label={t("nav.aria.mobile_toggle")}
       aria-expanded="false"
       aria-controls="mobileNav"
       data-mobile-toggle
@@ -145,7 +145,7 @@ function l(path: string) {
   <nav
     id="mobileNav"
     class="nav nav--mobile"
-    aria-label="Mobile navigation"
+    aria-label={t("nav.aria.mobile")}
     data-mobile-nav
   >
     <div class="nav-mobile-content">

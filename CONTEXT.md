@@ -186,6 +186,56 @@ The approved production footer keeps the current utilitarian footer copy:
 links, and "Top."
 _Avoid_: Rewriting the footer into a founder bio or broad company pitch.
 
+### SEO and social metadata
+
+**Explicit Metadata Pages**:
+Each production page should own its title, meta description, canonical path,
+social title/description overrides when useful, and language alternate path.
+_Avoid_: Generic inherited titles, duplicated page-title wording, or metadata
+that drifts away from approved page copy.
+
+**Default Social Card**:
+The sitewide default Open Graph/Twitter image is `/social/og-default.jpg`, a
+1200x630 galaxy-style Mythic social card. The default image alt text should
+describe the illustrated galaxy artwork for the official Mythic GME apps.
+_Avoid_: Falling back to the square logo as the main social card or shipping
+social images without useful alt text.
+
+**Detail Page Social Images**:
+Blog and Resource detail pages may use a post/resource-specific social or hero
+image when the content entry supplies one. Otherwise they should fall back to
+the sitewide social card through `BaseLayout`.
+_Avoid_: Duplicated manual `og:image:alt` tags or image fallbacks that bypass
+the shared layout behavior.
+
+**Structured Data Freshness**:
+Do not publish price, rating, install, MAU, session, or community-size claims in
+structured data or metadata unless the number has been freshly verified and the
+source is clear. Current homepage SoftwareApplication JSON-LD should not include
+stale `offers` or `aggregateRating` data.
+_Avoid_: Old prices, blended app-store ratings, fuzzy install totals, or private
+analytics claims in SEO metadata.
+
+**Explicit Alternate Links**:
+`BaseLayout` should emit a cross-language alternate only when the page passes an
+explicit `alternatePath`. It should not guess `/pt/...` or strip `/pt` from the
+canonical path.
+_Avoid_: Guessed `hreflang` links, especially on dynamic pages whose translated
+slugs do not match exactly.
+
+**Translated Detail-Page Mapping**:
+Blog and Resource detail pages should verify the translated content entry before
+emitting a translated alternate. Current English entries use the base slug and
+Portuguese entries use the `-pt` slug, but the page should still check the
+collection entry rather than assume the counterpart exists.
+_Avoid_: String-only alternate URLs that point to missing translated content.
+
+**Category Alternate Discipline**:
+Blog category pages should suppress cross-language alternates until matching
+Portuguese category routes exist.
+_Avoid_: Advertising Portuguese category URLs that the site does not actually
+build.
+
 ### Apps page language
 
 **Official Partner Framing**:
@@ -346,9 +396,64 @@ language that sounds like a subscription.
 
 **Support Localization Language**:
 The apps include the official Brazilian Portuguese localization from RetroPunk
-Publicacoes. Italian, French, German, and Spanish include machine-translated
+Publicações. Italian, French, German, and Spanish include machine-translated
 localizations for Meaning Tables and Event Focus tables.
 _Avoid_: Implying all app UI is officially localized in every language.
+
+**Portuguese Copy Ownership**:
+Jason does not expect to judge Portuguese nuance himself. Future Portuguese
+site-copy work should be handled by the agent with extra care: inventory the
+current Portuguese page, compare it to the approved English direction, adapt for
+natural Brazilian Portuguese where possible, preserve official terminology, and
+surface uncertainty instead of asking Jason to approve subtle language nuance.
+_Avoid_: Literal English-to-Portuguese mirroring, asking Jason to catch grammar
+or tone issues in Portuguese, or treating old Portuguese copy as already aligned
+with the approved English pass.
+
+**Brazilian Portuguese Locale Output**:
+Portuguese public pages should output Brazilian Portuguese metadata and dates:
+`html lang="pt-BR"`, `hreflang="pt-BR"`, `og:locale="pt_BR"`, and
+`formatDate(..., "pt-BR")` for Portuguese-visible dates.
+_Avoid_: Generic `pt` browser metadata, English date formatting, or mixed
+locale signals on Portuguese pages.
+
+**Portuguese Shared UI And Search**:
+Portuguese pages should localize shared UI labels, accessibility/status text,
+social image alt text, and search UI. Sitewide search must load Portuguese
+indexes (`resources_pt`, `blog_pt`) on Portuguese pages instead of returning
+English results behind translated labels.
+_Avoid_: English fallback labels on PT pages such as `What it does`, `Download
+now`, `Slide 1 of 7`, `Quote 1 of 1`, or PT search labels backed by English
+search indexes.
+
+**Portuguese Slug Mapping**:
+Portuguese detail pages use explicit translated-entry mapping instead of route
+guessing. Current Portuguese Blog and Resource content uses `-pt` slugs, and
+language links should point only to verified existing counterparts.
+_Avoid_: Assuming the Portuguese slug matches the English slug, linking PT
+resource teasers to English pages, or advertising translated alternates for
+missing content.
+
+**Portuguese Mythic Terms**:
+Use natural Brazilian Portuguese for player-facing Mythic copy while keeping
+product names in English. Approved direction includes `jogadores`, `sessões`,
+`sem mestre`, `rolar`, `dados`, `Cenas`, `Diários`, `Tabela de Destino`,
+`Verificação de Destino`, `Tabelas de Significado`, `Foco de Evento`,
+`Diário de Aventura`, `Tabelas Personalizadas`, `Recursos Expandidos`, and
+`desbloqueio único`. In Portuguese personal copy, prefer `RPGs de mesa` over
+`TTRPGs`. Keep Mythic publication/product names in English, including `Mythic
+Magazines` and `Mythic Variations`.
+_Avoid_: Raw English mechanic names in translated marketing copy, `IAP`,
+`recursos Pro`, literal app-store jargon, or inconsistent singular/plural forms
+such as `Tabelas de Significados`.
+
+**Portuguese Purchase Language**:
+Portuguese pages should explain mobile purchases as a one-time Expanded
+Features unlock and desktop purchases as an included one-time app purchase
+where applicable.
+_Avoid_: Exact prices unless freshly verified, subscription-like wording,
+internal `IAP`, `Premium`, placeholder price language, or unsupported claims
+that a store purchase transfers between unrelated stores.
 
 **Bug Report Details**:
 Bug-reporting copy should ask for platform, app version, and what happened.
@@ -1044,6 +1149,11 @@ _Avoid_: Opaque app database, app state, cloud-only save.
   agents must preserve.
 - **Homepage CTA Labels**, **Homepage Community And Support Copy**, and
   **Homepage Resources Teaser** are approved homepage copy directions.
+- **Explicit Metadata Pages**, **Default Social Card**, **Structured Data
+  Freshness**, and **Explicit Alternate Links** govern sitewide SEO/social
+  behavior.
+- **Translated Detail-Page Mapping** and **Category Alternate Discipline** keep
+  multilingual metadata honest until the matching route actually exists.
 - **Official Partner Framing** and **Licensed Apps** can both support **Player
   Trust**, but **Official Partner Framing** is warmer and **Licensed Apps** is
   more precise.
@@ -1058,6 +1168,12 @@ _Avoid_: Opaque app database, app state, cloud-only save.
 - **Support And Contact Hub** uses **Support Path Split**, **Bug Report
   Details**, **Contact Card Split**, and **Sustainable Reply Promise** to make
   support useful without overpromising speed.
+- **Portuguese Copy Ownership** applies when adapting the approved English site
+  direction to Portuguese because Jason cannot personally validate Portuguese
+  nuance.
+- **Brazilian Portuguese Locale Output**, **Portuguese Slug Mapping**,
+  **Portuguese Mythic Terms**, and **Portuguese Purchase Language** govern
+  Portuguese public pages.
 - **Role Label Placement** allows **Product Engineer** once on the About page,
   after concrete proof, such as in a portrait caption or lower trust section.
 - The **Maker's Note** points to the fuller **Maker Trust Story**.

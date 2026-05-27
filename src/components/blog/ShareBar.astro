@@ -5,8 +5,43 @@ interface Props {
   url: string;
   title: string;
   summary?: string;
+  lang?: 'en' | 'pt';
 }
-const { url, title, summary = '' } = Astro.props;
+const { url, title, summary = '', lang = 'en' } = Astro.props;
+
+const copy = lang === 'pt'
+  ? {
+      title: 'Compartilhar',
+      share: 'Compartilhar',
+      copy: 'Copiar link',
+      email: 'E-mail',
+      rss: 'Feed RSS',
+      shareLabel: `Compartilhar "${title}"`,
+      copyLabel: `Copiar link de "${title}"`,
+      emailLabel: `Compartilhar "${title}" por e-mail`,
+      redditLabel: `Compartilhar "${title}" no Reddit`,
+      facebookLabel: `Compartilhar "${title}" no Facebook`,
+      blueskyLabel: `Compartilhar "${title}" no Bluesky`,
+      rssLabel: 'Assinar o blog via RSS',
+      copied: 'Link copiado para a área de transferência.',
+      copyFailed: 'Não foi possível copiar. Copie o endereço da barra do navegador.',
+    }
+  : {
+      title: 'Share',
+      share: 'Share',
+      copy: 'Copy link',
+      email: 'Email',
+      rss: 'RSS Feed',
+      shareLabel: `Share "${title}"`,
+      copyLabel: `Copy link to "${title}"`,
+      emailLabel: `Share "${title}" via email`,
+      redditLabel: `Share "${title}" on Reddit`,
+      facebookLabel: `Share "${title}" on Facebook`,
+      blueskyLabel: `Share "${title}" on Bluesky`,
+      rssLabel: 'Subscribe to blog via RSS',
+      copied: 'Link copied to clipboard.',
+      copyFailed: 'Unable to copy. Please copy the address bar.',
+    };
 
 // Build platform share URLs (encode once)
 const e = encodeURIComponent;
@@ -17,49 +52,49 @@ const shareLinks = {
   bluesky: `https://bsky.app/intent/compose?text=${e(title)}%20${e(url)}`,
 };
 ---
-<div class="sharebar" data-share-root aria-labelledby="sharebar-title" data-share-url={url} data-share-title={title} data-share-summary={summary}>
-  <h2 id="sharebar-title" class="sharebar__title sr-only">Share</h2>
+<div class="sharebar" data-share-root aria-labelledby="sharebar-title" data-share-url={url} data-share-title={title} data-share-summary={summary} data-share-copied={copy.copied} data-share-copy-failed={copy.copyFailed}>
+  <h2 id="sharebar-title" class="sharebar__title sr-only">{copy.title}</h2>
   <ul class="sharebar__actions" role="list">
     <li>
-      <button class="sharebar__iconbtn" type="button" data-share-native data-platform="share" aria-label={`Share “${title}”`}>
+      <button class="sharebar__iconbtn" type="button" data-share-native data-platform="share" aria-label={copy.shareLabel}>
         <i class="fa-slab fa-regular fa-share-nodes" aria-hidden="true"></i>
-        <span class="sr-only">Share</span>
+        <span class="sr-only">{copy.share}</span>
       </button>
     </li>
     <li>
-      <button class="sharebar__iconbtn" type="button" data-share-copy data-platform="copy" aria-label={`Copy link to “${title}”`}>
+      <button class="sharebar__iconbtn" type="button" data-share-copy data-platform="copy" aria-label={copy.copyLabel}>
         <i class="fa-slab fa-regular fa-link" aria-hidden="true"></i>
-        <span class="sr-only">Copy link</span>
+        <span class="sr-only">{copy.copy}</span>
       </button>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href={shareLinks.email} data-platform="email" aria-label={`Share “${title}” via email`}>
+      <a class="sharebar__iconbtn" href={shareLinks.email} data-platform="email" aria-label={copy.emailLabel}>
         <i class="fa-slab fa-regular fa-envelope" aria-hidden="true"></i>
-        <span class="sr-only">Email</span>
+        <span class="sr-only">{copy.email}</span>
       </a>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href={shareLinks.reddit} data-platform="reddit" target="_blank" rel="noopener" aria-label={`Share “${title}” on Reddit`}>
+      <a class="sharebar__iconbtn" href={shareLinks.reddit} data-platform="reddit" target="_blank" rel="noopener" aria-label={copy.redditLabel}>
         <i class="fa-brands fa-reddit" aria-hidden="true"></i>
         <span class="sr-only">Reddit</span>
       </a>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href={shareLinks.facebook} data-platform="facebook" target="_blank" rel="noopener" aria-label={`Share “${title}” on Facebook`}>
+      <a class="sharebar__iconbtn" href={shareLinks.facebook} data-platform="facebook" target="_blank" rel="noopener" aria-label={copy.facebookLabel}>
         <i class="fa-brands fa-facebook" aria-hidden="true"></i>
         <span class="sr-only">Facebook</span>
       </a>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href={shareLinks.bluesky} data-platform="bluesky" target="_blank" rel="noopener" aria-label={`Share "${title}" on Bluesky`}>
+      <a class="sharebar__iconbtn" href={shareLinks.bluesky} data-platform="bluesky" target="_blank" rel="noopener" aria-label={copy.blueskyLabel}>
         <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
         <span class="sr-only">Bluesky</span>
       </a>
     </li>
     <li>
-      <a class="sharebar__iconbtn" href="/rss.xml" data-platform="rss" aria-label="Subscribe to blog via RSS">
+      <a class="sharebar__iconbtn" href="/rss.xml" data-platform="rss" aria-label={copy.rssLabel}>
         <img src="/icons/rss.svg" alt="" aria-hidden="true" width="16" height="16" class="ico-svg" />
-        <span class="sr-only">RSS Feed</span>
+        <span class="sr-only">{copy.rss}</span>
       </a>
     </li>
   </ul>
@@ -73,6 +108,8 @@ const shareLinks = {
       const shareTitle = root.getAttribute('data-share-title') || '';
       const shareText = root.getAttribute('data-share-summary') || '';
       const shareUrl = root.getAttribute('data-share-url') || window.location.href;
+      const copiedMessage = root.getAttribute('data-share-copied') || 'Link copied to clipboard.';
+      const copyFailedMessage = root.getAttribute('data-share-copy-failed') || 'Unable to copy. Please copy the address bar.';
 
       if (!('share' in navigator)) {
         nativeBtn?.setAttribute('hidden', '');
@@ -87,9 +124,9 @@ const shareLinks = {
       copyBtn?.addEventListener('click', async () => {
         try {
           await navigator.clipboard.writeText(shareUrl);
-          if (statusEl) statusEl.textContent = 'Link copied to clipboard.';
+          if (statusEl) statusEl.textContent = copiedMessage;
         } catch {
-          if (statusEl) statusEl.textContent = 'Unable to copy. Please copy the address bar.';
+          if (statusEl) statusEl.textContent = copyFailedMessage;
         }
       });
     });
