@@ -5,6 +5,13 @@ official hub for the Mythic GME apps. It exists so product copy, About-page
 copy, resources, support, and future planning use the same terms and do not
 drift back into portfolio, resume, or generic app-marketing language.
 
+It is synchronized with the Mythic app glossary in
+`/Users/jholt/development/jhd-business/mythic_gme_apps/docs/contexts/mythic-gme-app/CONTEXT.md`
+and the refined resume/application voice context under
+`/Users/jholt/Documents/Codex/2026-05-20/i-want-to-apply-for-this`.
+Exact approved page-by-page copy decisions are tracked in `docs/copy/`; this
+file records the durable vocabulary and copy rules those decisions depend on.
+
 ## Language
 
 ### Site role
@@ -40,6 +47,21 @@ Direct, concrete, conversational copy that sounds like Jason after just enough
 editing for grammar, clarity, and length.
 _Avoid_: Corporate gloss, essay openings, over-polish, defensive caveats.
 
+**Jason Spoken-Copy Test**:
+The final check for first-person or maker copy: it should sound like something
+Jason could naturally say out loud after a little editing.
+_Avoid_: Phrases that sound clever but false to Jason's voice, over-shaped
+sentence rhythms, grand claims, or copy that reads like an agent wrote it.
+
+**Resume-Derived Voice Rules**:
+The public-site voice inherits the refined resume/application rules: use short,
+plain sentences; first person singular when Jason is speaking; concrete work
+before abstract positioning; people and community before systems; and direct,
+honest wording before polished slogans.
+_Avoid_: Defensive gap paragraphs, inflated senior/staff claims, long caveats
+before evidence, abstract identity claims, or copy optimized to sound impressive
+instead of true.
+
 **Plainspoken Imagination**:
 The copy mode for personal story moments: honest about imagination, games,
 worlds, and story without sounding poetic or inflated.
@@ -52,12 +74,26 @@ or after the claim.
 _Avoid_: "Mythic was a tool for the kind of play I loved: making a character...",
 "The lesson was this: ...", "The pattern is: claim, colon, explanation."
 
+**No Grammar-Bending Fragments**:
+Do not turn a list or fragment into a sentence by hanging it after a colon,
+dash, or vague setup. If the thought needs a verb or clearer connection, write
+the full sentence plainly.
+_Avoid_: "That kind of play stuck with me: a world, a character, a few rules,
+and enough room to see what happens."
+
 **Say The Actual Thing**:
 Public copy should make a real point in plain language. If a sentence does not
 add a specific claim, evidence, constraint, or decision, cut it or ask what the
 real point is.
 _Avoid_: Impressive-sounding filler, vague value language, abstract polish,
 padded explanations, saying a lot without saying anything.
+
+**No Mechanic Soup**:
+Do not pile up Mythic terms in one sentence just to prove the app has features.
+Use a mechanic list only when the section's job is reference, support, or
+feature comparison.
+_Avoid_: "Fate Questions, Meaning Tables, Scenes, Threads, and the Adventure Log
+feel like one place to play" when the sentence needs a clearer player outcome.
 
 **Cliche Allergy**:
 The copy constraint that popular professional labels must be earned by concrete
@@ -121,6 +157,228 @@ Approved current direction: "4.8 App Store rating", "Mobile + desktop", and
 _Avoid_: Fuzzy install totals, unclear community counts, MAU/session claims
 from private analytics, or blended rating claims that depend on uneven store
 data.
+
+**Homepage CTA Labels**:
+The approved hero CTAs are "See the Apps" for the apps page and "Get Resources"
+for the resources page.
+_Avoid_: "Learn More" when the link target is specifically the apps page.
+
+**Homepage Community And Support Copy**:
+The approved community/support direction names the real paths: talk with Mythic
+players, share feedback, ask questions, find answers, report issues, or send a
+message.
+_Avoid_: Generic community language that hides Jason's active support and
+feedback paths.
+
+**Homepage Resources Teaser**:
+The approved homepage resources heading is "Guides for play."
+_Avoid_: Vague education headings such as "Basics & Beyond" when the section is
+pointing players to practical guides.
+
+**Header Copy Direction**:
+The approved production header keeps the product-first navigation labels:
+"Jason Holt Digital", "Home", "Apps", "Resources", "Blog", and "Get the App."
+_Avoid_: Adding resume or portfolio navigation during the production copy pass.
+
+**Footer Copy Direction**:
+The approved production footer keeps the current utilitarian footer copy:
+"Official Mythic GME 2e Apps", "Submit a feature request", site links, legal
+links, and "Top."
+_Avoid_: Rewriting the footer into a founder bio or broad company pitch.
+
+### Apps page language
+
+**Official Partner Framing**:
+Public marketing copy may use "official partner" when the point is trust and
+relationship. Use "officially licensed" or "licensed" when legal precision
+matters.
+_Avoid_: Repeating license language so often that it crowds out the player
+outcome.
+
+**Mythic GME Mobile**:
+The mobile app for iPhone, iPad, Android, and Fire tablets.
+_Avoid_: Generic mobile app, phone-only app, or hiding tablet availability.
+
+**Mythic GME Digital**:
+The desktop app for Windows, macOS, and Linux.
+_Avoid_: Treating desktop as merely a bigger layout; the approved reason is
+more room for longer Mythic sessions.
+
+**Apps Page Job**:
+The Apps page compares the mobile and desktop apps, explains purchase models,
+points players to official source books, and provides trust/support details.
+_Avoid_: Turning the page into a full feature manual, a legal license page, or a
+generic app-store landing page.
+
+**Mobile Product Lead**:
+The mobile app copy should frame the app as a pocket-ready way to ask Fate
+Questions, roll on Meaning Tables, track Scenes and Lists, and keep play close
+to the story.
+_Avoid_: Feature fragments without the play reason.
+
+**Desktop Product Lead**:
+The desktop app copy should frame desktop as the surface for Windows, macOS,
+and Linux players who want more room for longer Mythic sessions.
+_Avoid_: Layout-only framing or claiming desktop is the superior way to play.
+
+**Permanent Unlock Language**:
+Use plain unlock language for Expanded Features: mobile stores sell a one-time
+Expanded Features unlock, and anything unlocked stays unlocked.
+_Avoid_: Raw IAP wording, subscription-like wording, or implying a purchase can
+be taken away.
+
+**Expanded Features Window**:
+After buying the mobile Expanded Features unlock, players keep the Expanded
+Features available at that time and also permanently keep new Expanded Features
+added in the next 12 months.
+_Avoid_: Calling this a subscription, season pass, or temporary rental.
+
+**Current Expanded Features**:
+The currently shipped Expanded Features include additional Meaning Tables,
+additional Event Focus tables, Custom Tables, Hybrid Play, Progress Tracks,
+Discovery Check, and Keyed Scenes.
+_Avoid_: Treating Progress Tracks, Hybrid Play, Discovery Check, or Keyed
+Scenes as future roadmap items.
+
+**Expanded Features Roadmap**:
+The current premium roadmap language may name Enhanced Note Taking, Character
+Sheets, NPC Actions, Image Support, and Custom Lists as subject-to-change
+roadmap items.
+_Avoid_: Presenting roadmap items as promised dates, already shipped work, or a
+complete roadmap.
+
+**No Subscriptions Claim**:
+"No subscriptions" is an approved public trust cue for the apps.
+_Avoid_: Pricing philosophy arguments or anti-subscription grandstanding.
+
+**Source Books Section**:
+Use "Source Books" and explain that the apps are companions to the official
+Mythic books by Tana Pigeon.
+_Avoid_: Suggesting the apps replace the books or reducing the section to
+physical-book shopping.
+
+**Adventure Crafter Future App**:
+Adventure Crafter copy should describe a future companion app, not imply the
+current Mythic GME apps already include that product.
+_Avoid_: Generic coming-soon hype.
+
+**Open Source Proof**:
+Open-source app copy should name concrete supporting projects such as
+`icloud_storage_plus` and `mythic_dice_parser` without making them the main
+product story.
+_Avoid_: Abstract engineering proof or inflated ecosystem language.
+
+### Resources and support language
+
+**Resources Index Job**:
+The Resources index is a practical guide hub for the apps: onboarding,
+Journals, dice formulas, Custom Tables, schema references, and troubleshooting.
+_Avoid_: Presenting it as complete Mythic system documentation or a generic
+blog index.
+
+**Guide Language**:
+Use "guides" for Resources search, empty states, section copy, and support
+paths.
+_Avoid_: Tutorial-marketing language when the page is helping players find
+task-focused documentation.
+
+**Start Here Resources Frame**:
+The approved Start Here direction is "Get Started With the Apps" and "Install
+the apps, learn the main tools, and get comfortable using Mythic in play."
+_Avoid_: Workspace language or vague "Mythic flow" language.
+
+**Journal Resources Frame**:
+The approved Journal resources direction is "Manage Your Journals" and "Keep
+your play record clear, export your data, and find help when something goes
+wrong."
+_Avoid_: Dramatic backup language such as "safeguard" when the section is
+practical.
+
+**Dice Resources Frame**:
+The approved dice resources direction is "Use the Dice Roller" and "Create,
+save, import, and reuse the dice formulas you need for play."
+_Avoid_: Overexplaining dice notation or presenting the section as a sales
+pitch.
+
+**Custom Tables Resources Frame**:
+The approved Custom Tables resources direction is "Build Custom Tables" and
+"Create, organize, import, export, and share tables that fit your play."
+_Avoid_: Repeated "powerful" language or generic table-file wording.
+
+**Schemas And Reference Frame**:
+The approved technical resources direction is "Schemas & Reference Docs" for
+JSON formats behind Journals, Saved Formulas, Custom Tables, and categories.
+_Avoid_: Calling these broad deep dives when the visible job is reference.
+
+**Resources Support CTA**:
+The approved Resources support line is "Send a support note or ask in Discord,
+and I'll get back to you as soon as I can."
+_Avoid_: Stronger response-time promises unless Jason explicitly recommits to
+them.
+
+**Support And Contact Hub**:
+The Support page routes players to FAQ answers, Discord, email support, direct
+contact, and the contact form.
+_Avoid_: Speed-first support promises such as "get help fast."
+
+**Support Path Split**:
+Discord is for community questions, feedback, and talking with other Mythic
+players. Email support is for detailed issues, account questions, or private
+support requests.
+_Avoid_: Blurring community chat, private support, and consulting into one
+undifferentiated contact path.
+
+**Support Product Description**:
+The approved support FAQ description says the apps are the official Mythic GME
+2e apps, built in partnership with Word Mill Creative, and help players answer
+Fate Questions, roll on Meaning Tables, manage Lists and Scenes, and keep play
+moving offline.
+_Avoid_: Overloading this answer with every feature or repeating license proof
+throughout the page.
+
+**Support Purchase Model**:
+Support copy should explain purchases by store without stale exact prices:
+Apple, Google Play, and Amazon sell the base app with a one-time Expanded
+Features unlock; Microsoft Store and itch.io sell Mythic GME Digital as a
+one-time desktop purchase.
+_Avoid_: Exact prices unless freshly verified, broad transfer promises, or
+language that sounds like a subscription.
+
+**Support Localization Language**:
+The apps include the official Brazilian Portuguese localization from RetroPunk
+Publicacoes. Italian, French, German, and Spanish include machine-translated
+localizations for Meaning Tables and Event Focus tables.
+_Avoid_: Implying all app UI is officially localized in every language.
+
+**Bug Report Details**:
+Bug-reporting copy should ask for platform, app version, and what happened.
+_Avoid_: Relying on exact Discord channel formatting as the only route.
+
+**Release Notes Bridge**:
+Use Release Notes as the path for recent fixes and known issues.
+_Avoid_: Treating release notes as a complete live status board.
+
+**Contact Card Split**:
+Contact tab cards should keep app support, community discussion, and business
+or consulting contact paths clearly separate.
+_Avoid_: "Late-night bug triage" as a public support promise or consulting copy
+that implies more availability than Jason wants to promise.
+
+**Contact Form Prompt**:
+The approved contact-form placeholder is "Tell me what you need help with. For
+app issues, include your platform and app version."
+_Avoid_: "Tell me about your project or question..." when app support is a main
+reason for the form.
+
+**Sustainable Reply Promise**:
+Use "I'll reply as soon as I can" for broad public response promises.
+_Avoid_: "Within 2 business days" unless Jason explicitly wants that public
+commitment.
+
+**Plain Error Tone**:
+Contact-form error copy should say something went wrong and give the direct
+email fallback.
+_Avoid_: Cute error language such as "Oops!" on support forms.
 
 ### About page
 
@@ -468,24 +726,277 @@ The app's persistent play context for one ongoing adventure or campaign by
 default.
 _Avoid_: Campaign when referring to the current in-product term, save slot.
 
+**Adventure Journal**:
+The Mythic record sheet for an adventure, where the player tracks the adventure
+title, Chaos Factor, Scene Summaries, and other important adventure notes.
+_Avoid_: App journal, full digital container.
+
+**Lists**:
+The Mythic lists that track important Threads and Characters in the adventure.
+_Avoid_: Generic list collection, app list system.
+
+**Bookkeeping**:
+The end-of-scene updating of Mythic records such as Lists, Chaos Factor, the
+adventure record, and the Scene Summary.
+_Avoid_: Pure admin, optional cleanup.
+
 **Adventure Log**:
 The chronological record of play inside a Journal.
 _Avoid_: Journal when only the chronology is meant, scene log.
+
+**Log Entry**:
+A timestamped record in the Adventure Log.
+_Avoid_: Event card, post.
+
+**Mechanical Log Entry**:
+A Log Entry created by a Mechanic Activation.
+_Avoid_: Auto entry.
+
+**User-Authored Log Entry**:
+A Log Entry created directly by the player without a mechanic generating it.
+_Avoid_: Manual result.
+
+**Narrative Entry**:
+A user-triggered free-form Log Entry type for entering text.
+_Avoid_: Default entry, fallback entry, automatic narrative.
 
 **Scene Summary**:
 A Mythic record that summarizes or frames a Scene without being the
 chronological source of truth.
 _Avoid_: Scene when precision matters, Adventure Log.
 
+**Scene**:
+A discrete portion of the adventure that encapsulates an important moment or
+event.
+_Avoid_: Scene Summary, UI container.
+
+**Expected Scene**:
+The Scene the player expects to happen next before Mythic tests that
+expectation.
+_Avoid_: Guaranteed scene, written scene.
+
+**Altered Scene**:
+An Expected Scene that still happens, but in a changed form after Mythic alters
+it.
+_Avoid_: Interrupt Scene, canceled scene.
+
+**Interrupt Scene**:
+A new Scene that replaces the Expected Scene entirely.
+_Avoid_: Altered Scene, delayed scene.
+
+**First Scene**:
+The opening Scene that starts the adventure before the normal Expected Scene
+testing cycle begins.
+_Avoid_: Expected Scene, prologue by default.
+
+**Scene Structure**:
+The Mythic procedure that gives scenes order by framing expectations, testing
+them, and determining scene outcomes.
+_Avoid_: UI layout, panel structure.
+
+**Playing**:
+Role-playing through the scene once its structure has been established.
+_Avoid_: Scene setup, bookkeeping.
+
+**Thread**:
+A goal the Player Character is pursuing, recorded on the Threads List.
+_Avoid_: Plotline, open pursuit, generic quest tracker.
+
+**Character**:
+A Character List element: an important character or active element that can
+influence the adventure.
+_Avoid_: NPC only, generic recurring element, character sheet entity, player
+character record.
+
+**Feature**:
+An Adventure Features List element: something special or unique in a prepared
+adventure that can form an encounter during play.
+_Avoid_: Generic tag, flavor only, any special thing, generic
+location/object/system element.
+
+**Player Character**:
+The player's own protagonist or controlled character in play, distinct from the
+Mythic Character List concept.
+_Avoid_: Character List element by default, generic character.
+
+**Non-Player Character**:
+An NPC in the adventure, distinct from both the Player Character and the broader
+Mythic Character List concept.
+_Avoid_: Character when precision matters, Player Character.
+
+**Prepared Adventure**:
+A published adventure used with Mythic, where the prepared material provides
+the adventure framework and Mythic handles uncertainty and unexpected
+developments.
+_Avoid_: Standard Mythic adventure, generic prep.
+
+**Variations**:
+Additional Mythic rule supplements and rule variations that extend the core
+system for different play styles and use cases.
+_Avoid_: Core rules, optional flavor only.
+
+**Character Sheet**:
+The tabletop RPG character sheet concept, implemented digitally in the app as a
+structured record of a character's stats, fields, and tracked state.
+_Avoid_: Mythic Character, Character List element.
+
+**Character Builder**:
+The app workflow or system used to create, configure, and evolve a Character
+Sheet.
+_Avoid_: Character Sheet, Mythic Character.
+
+**Template**:
+A reusable app-defined or user-defined configuration used to create or structure
+app content such as Character Sheets, oracle tables, or other structured
+records.
+_Avoid_: Character Sheet, Mythic list concept, one-off preset.
+
+**Oracle Table**:
+A table that allows the player to roll dice and choose the answer based on the
+value rolled.
+_Avoid_: Meaning Table, Event Focus table, generic list.
+
+**Meaning**:
+Interpretive input generated by Mythic to help decide important details in the
+adventure.
+_Avoid_: Fixed answer, flavor only.
+
 **Fate Question**:
 A yes-or-no question posed to Mythic and answered through the current
 fate-answering system.
 _Avoid_: Prompt, generic question.
 
+**Mechanic Activation**:
+A user-triggered use of a Mythic mechanic that is driven by one or more dice
+Rolls.
+_Avoid_: Action, interaction.
+
+**Roll**:
+A dice resolution step within a Mechanic Activation.
+_Avoid_: Activation.
+
+**Fate Chart Roll**:
+A roll on the Fate Chart used to answer a Fate Question.
+_Avoid_: Generic check.
+
+**Fate Check**:
+A sister fate-answering system to the Fate Chart that offers a simpler way to
+answer a Fate Question on a per-question basis.
+_Avoid_: Fate Chart, generic roll.
+
+**Random Event**:
+A Mythic mechanic that can stand alone for the player or be triggered by a Fate
+Chart Roll.
+_Avoid_: Side effect, sub-event.
+
+**Event Focus**:
+One component of a Random Event that identifies what the event centers on.
+_Avoid_: Separate mechanic.
+
+**Event Meaning**:
+One component of a Random Event that helps determine what happens.
+_Avoid_: Flavor text.
+
+**Context**:
+Everything that has happened in the adventure so far, together with the
+immediate circumstances surrounding the current Interpretation.
+_Avoid_: Background only.
+
+**Chaos Factor**:
+A Mythic control with a value from 1 to 9 that shifts the tempo of the
+adventure by affecting Fate Question answers, Random Events, and scene
+unpredictability.
+_Avoid_: Difficulty, threat meter.
+
+**Scene Check**:
+A Mythic test of the Expected Scene against the Chaos Factor to determine
+whether the Scene proceeds as expected or changes.
+_Avoid_: Generic scene roll, scene summary edit.
+
+**Scene Adjustment**:
+The specific change Mythic applies when altering a Scene; it is related to scene
+structure but is not an automatic sub-result of a Scene Check.
+_Avoid_: Interrupt Scene, random event.
+
+**Odds**:
+The likelihood assigned to a Fate Question before rolling on the Fate Chart or
+making a Fate Check.
+_Avoid_: Outcome, probability result.
+
+**Yes**:
+A Fate Question answer that confirms the player's expectation of what yes would
+mean.
+_Avoid_: Automatic success.
+
+**No**:
+A Fate Question answer that does not confirm the player's expected yes outcome.
+_Avoid_: Failure in every sense.
+
+**Exceptional Yes**:
+A Yes answer intensified to the next logical level.
+_Avoid_: Regular yes.
+
+**Exceptional No**:
+A No answer that is the opposite of a Yes answer, or the opposite of an
+intensified Yes.
+_Avoid_: Regular no.
+
+**Random Event Trigger**:
+The Fate Chart condition that causes a Random Event to occur while answering a
+Fate Question.
+_Avoid_: Random Event itself.
+
 **Meaning Tables**:
 Mythic tables that generate interpretive prompts to help the player decide what
 results mean in context.
 _Avoid_: Fixed result tables, outcome tables.
+
+**Actions Meaning Tables**:
+Meaning Tables that generate word pairs associated with active narrative
+elements.
+_Avoid_: Description table, static detail table.
+
+**Descriptions Meaning Tables**:
+Meaning Tables that generate descriptive word pairs useful for deciding what
+something or someone is like.
+_Avoid_: Action table.
+
+**Elements Meaning Tables**:
+Themed Meaning Tables that give more targeted results for specific subjects.
+_Avoid_: Generic meaning table.
+
+**Interpretation**:
+The act of deciding what Mythic results mean in the current Context of the
+adventure.
+_Avoid_: Fixed decoding, automatic answer.
+
+**Expectation**:
+What the player currently expects to happen next, especially when framing the
+next Scene or interpreting a Fate Question.
+_Avoid_: Guaranteed fact, fixed plan.
+
+**Thread Progress Track**:
+A Mythic track used to measure progress toward concluding a Focus Thread.
+_Avoid_: Generic progress bar, Character track.
+
+**Progress Points**:
+The points marked on a Thread Progress Track to measure Progress and Flashpoints
+toward concluding a Focus Thread.
+_Avoid_: XP, level points.
+
+**Keyed Scene**:
+A special event with a Trigger that is used to steer the adventure toward a
+desired tone, trope, or outcome.
+_Avoid_: Expected Scene, Random Event.
+
+**Discovery Check**:
+A special kind of Fate Question used to make Progress on a Focus Thread when
+the adventure stalls.
+_Avoid_: Generic investigation roll.
+
+**Thread Discovery Check**:
+The table-driven discovery result generated by a successful Discovery Check.
+_Avoid_: Discovery Check itself, Event Focus table.
 
 **Custom Tables**:
 Player-created or imported rollable tables that make personal or third-party
@@ -521,8 +1032,32 @@ _Avoid_: Opaque app database, app state, cloud-only save.
   human without turning it into poetic copy.
 - **No Claim-Colon Explanation Pattern** and **Say The Actual Thing** are voice
   rules that apply to all public site copy, especially personal story bridges.
+- **Jason Spoken-Copy Test**, **Resume-Derived Voice Rules**, and **No
+  Grammar-Bending Fragments** keep website copy aligned with the refined resume
+  voice instead of agent-polished prose.
+- **No Mechanic Soup** keeps Mythic-specific vocabulary useful without turning
+  player-facing sentences into feature piles.
 - **Cliche Allergy** constrains public use of **Product Builder** and
   **Product Engineer**.
+- The exact approved copy trail lives in `docs/copy/`; this `CONTEXT.md`
+  records the durable language rules, glossary, and page-copy directions future
+  agents must preserve.
+- **Homepage CTA Labels**, **Homepage Community And Support Copy**, and
+  **Homepage Resources Teaser** are approved homepage copy directions.
+- **Official Partner Framing** and **Licensed Apps** can both support **Player
+  Trust**, but **Official Partner Framing** is warmer and **Licensed Apps** is
+  more precise.
+- **Apps Page Job** governs **Mythic GME Mobile**, **Mythic GME Digital**,
+  **Permanent Unlock Language**, **Expanded Features Window**, **Source Books
+  Section**, and **Open Source Proof**.
+- **Current Expanded Features** and **Expanded Features Roadmap** must stay
+  separate so shipped features are not described as future work.
+- **No Subscriptions Claim** is a trust cue, not a pricing manifesto.
+- **Resources Index Job** uses **Guide Language** across the Resources search,
+  sections, cards, and support CTA.
+- **Support And Contact Hub** uses **Support Path Split**, **Bug Report
+  Details**, **Contact Card Split**, and **Sustainable Reply Promise** to make
+  support useful without overpromising speed.
 - **Role Label Placement** allows **Product Engineer** once on the About page,
   after concrete proof, such as in a portrait caption or lower trust section.
 - The **Maker's Note** points to the fuller **Maker Trust Story**.
@@ -589,12 +1124,29 @@ _Avoid_: Opaque app database, app state, cloud-only save.
   disclosure, but teaching history does not need to remain on the page.
 - The apps should protect the **Flow Of Play** across each **Surface**.
 - A **Playspace** adapts across **Surfaces** through **Panels**.
-- A **Journal** contains one **Adventure Log** by default.
+- A **Journal** contains one **Adventure Log** by default and is broader than
+  the source-book **Adventure Journal**.
+- The **Adventure Log** contains **Log Entries** and **Scene** records ordered
+  chronologically.
+- A **Log Entry** can be a **Mechanical Log Entry** or **User-Authored Log
+  Entry**; a **Narrative Entry** is user-authored.
 - A **Scene Summary** can summarize play, but the **Adventure Log** is the
   chronology.
-- **Meaning Tables**, **Fate Questions**, and **Custom Tables** support the
-  **Flow Of Play** by reducing lookup friction and creating interpretive
-  prompts.
+- **Scene Structure** gives a **Scene** form through **Expected Scene**, **Scene
+  Check**, **Altered Scene**, **Interrupt Scene**, and **Scene Adjustment**
+  concepts.
+- **Prepared Adventure** play uses **Features** alongside **Threads** and
+  **Characters**.
+- **Meaning Tables**, **Fate Questions**, **Fate Chart Roll**, **Fate Check**,
+  **Random Event**, **Event Focus**, **Event Meaning**, and **Custom Tables**
+  support the **Flow Of Play** by reducing lookup friction and creating
+  interpretive prompts.
+- **Character Sheet**, **Character Builder**, and **Template** are app concepts
+  and should not be collapsed into Mythic **Character**.
+- **Oracle Table** is the broad app term; **Meaning Tables**, Event Focus
+  tables, and **Custom Tables** are more specific public terms.
+- **Thread Progress Track**, **Discovery Check**, and **Keyed Scene** come from
+  **Variations** and may be named as shipped Expanded Features when current.
 - The **Integrated Reference Layer** is an example of **Responsive Product
   Judgment** because it responds to PDF and file requests by protecting the
   **Flow Of Play**.
@@ -697,3 +1249,18 @@ _Avoid_: Opaque app database, app state, cloud-only save.
 - A separate Official section can repeat license proof after the About header
   already establishes it. Resolved: use **License Once Then Move On** and let
   About flow from profile to product and approach.
+- "Official partner" is warmer than "officially licensed," but "officially
+  licensed" is more legally exact. Resolved: use **Official Partner Framing**
+  when the copy is establishing relationship and **Licensed Apps** when legal
+  precision matters.
+- Shipped Expanded Features and roadmap items can drift quickly. Resolved: keep
+  **Current Expanded Features** and **Expanded Features Roadmap** separate and
+  verify against the app repo before changing dated support copy.
+- Support response promises can overcommit Jason during master's work.
+  Resolved: use **Sustainable Reply Promise** unless Jason explicitly approves a
+  stronger time window.
+- Resource copy can drift into tutorial or marketing language. Resolved: use
+  **Guide Language** and page-specific resource frames for the Resources index.
+- Support copy can mix app support, community, and consulting. Resolved: use
+  **Support Path Split** and **Contact Card Split** without moving sections in
+  this production copy pass.

@@ -1,6 +1,6 @@
 ---
 title: "Saving and Managing Dice Formulas"
-summary: "Save, load, import, and export your Saved Formulas file—no coding required."
+summary: "Save, load, import, and export Saved Formulas without writing code."
 category: "dice-roller"
 order: 2
 icon: "fa-slab fa-regular fa-floppy-disk"

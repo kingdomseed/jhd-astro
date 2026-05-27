@@ -1,6 +1,6 @@
 ---
 title: "Importing & Exporting Saved Formulas"
-summary: "Bring in favorites from friends and back up your own — no coding needed."
+summary: "Import formulas from other players and back up your own."
 category: "dice-roller"
 order: 3
 icon: "fa-slab fa-regular fa-exchange"

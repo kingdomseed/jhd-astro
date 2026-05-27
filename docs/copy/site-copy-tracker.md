@@ -16,9 +16,9 @@ approved section so we do not reopen finished work or lose the next decision.
 
 - About and the homepage are done. Do not continue reworking them in this pass
   unless Jason explicitly asks.
-- The current Apps page pass is copy refinement only. Do not move, remove, or
+- The current Support page pass is copy refinement only. Do not move, remove, or
   add sections as part of this pass.
-- Work section by section in the current Apps page order.
+- Work section by section in the current Support page order.
 - After a section is approved, apply it, mark it done, then immediately show the
   next section's current copy and recommended refinement.
 - Keep existing copy when it already does its job and matches `CONTEXT.md`.
@@ -63,8 +63,27 @@ approved section so we do not reopen finished work or lose the next decision.
 | Apps open source section | Done | `src/components/pages/AppsPage.astro`, `docs/copy/apps-page-flow-inventory.md` | Approved. Keeps badge/project links and makes the engineering proof plainer. |
 | Apps page | Done | `src/pages/apps.astro`, `src/components/pages/AppsPage.astro`, `src/components/apps/**`, `docs/copy/apps-page-flow-inventory.md` | Production English Apps page copy pass is complete. Do not reopen unless explicitly requested. |
 | Resources inventory | Done | `docs/copy/resources-index-flow-inventory.md` | Current Resources index order, copy jobs, and copy tensions are captured. Use this before drafting Resources index copy. |
-| Resources index | In review | `src/pages/resources/index.astro`, `src/content/resources/*.md`, `docs/copy/resources-index-flow-inventory.md` | Review section by section in current page order. Next section: metadata and page header. |
-| Support page | Pending | `src/pages/support.astro` | Needs clarity and trust. Be careful with pricing, platform, support, and legal-ish claims. |
+| Resources metadata and page header | Done | `src/pages/resources/index.astro`, `docs/copy/resources-index-flow-inventory.md` | Approved. Keeps the practical docs framing while tightening scope around Mythic GME Mobile, Mythic GME Digital, and app-specific guides. |
+| Resources search copy | Done | `src/pages/resources/index.astro`, `docs/copy/resources-index-flow-inventory.md` | Approved. Uses `guides` in search placeholder, accessible label, empty state, and status text while keeping the keyboard hint. |
+| Resources Start Here section | Done | `src/pages/resources/index.astro`, `docs/copy/resources-index-flow-inventory.md` | Approved. Replaces `workspace` and vague `Mythic flow` language with plain app/play wording. |
+| Resources Start Here cards | Done | `src/content/resources/getting-started-with-the-mythic-apps.md`, `src/content/resources/setting-up-and-using-lists.md`, `src/content/resources/writing-and-organizing-scenes.md`, `src/content/resources/using-meaning-tables-for-inspiration.md`, `src/content/resources/setting-up-a-prepared-adventure.md` | Approved. Keeps titles and refines visible summaries only. |
+| Resources Adventure Journals | Done | `src/pages/resources/index.astro`, `src/content/resources/guide-to-the-mythic-journals.md`, `src/content/resources/sharing-adventure-journals.md`, `src/content/resources/troubleshooting.md` | Approved. Uses a practical Journal management frame and refines visible summaries for clearer export/support wording. |
+| Resources Dice Roller | Done | `src/pages/resources/index.astro`, `src/content/resources/getting-started-with-the-dice-roller.md`, `src/content/resources/saving-and-managing-dice-formulas.md`, `src/content/resources/dice-formulas-and-customization.md`, `src/content/resources/importing-and-exporting-saved-formulas.md` | Approved. Replaces tutorial-marketing language with practical dice-formula actions and cleaner visible summaries. |
+| Resources Custom Tables | Done | `src/pages/resources/index.astro`, `src/content/resources/getting-started-with-custom-tables.md`, `src/content/resources/organizing-custom-tables.md`, `src/content/resources/linking-and-nesting-tables.md`, `src/content/resources/importing-and-exporting-custom-tables.md` | Approved. Uses a practical Custom Tables frame, removes repeated `powerful`, fixes spelling consistency, and refines visible summaries. |
+| Resources Schemas & Reference Docs | Done | `src/pages/resources/index.astro`, `src/content/resources/journal-schema.md`, `src/content/resources/formula-schema.md`, `src/content/resources/custom-table-schema.md`, `src/content/resources/categories-schema.md` | Approved. Keeps technical scope while tightening JSON/reference language. |
+| Resources Support CTA | Done | `src/pages/resources/index.astro`, `docs/copy/resources-index-flow-inventory.md` | Approved. Keeps the support path clear and uses a sustainable public response promise. |
+| Resources index | Done | `src/pages/resources/index.astro`, `src/content/resources/*.md`, `docs/copy/resources-index-flow-inventory.md` | Production English Resources index copy pass is complete. Do not reopen unless explicitly requested. |
+| Support inventory | Done | `docs/copy/support-page-flow-inventory.md` | Current Support page order, copy jobs, and high-risk copy tensions are captured. Use this before drafting Support copy. |
+| Support metadata and page header | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Removes speed promises and names support, Discord, FAQ, and contact paths clearly. |
+| Support intro and help cards | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Clarifies Discord vs email support and removes overly casual/speed-promise language. |
+| Support General & Platforms FAQ | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Clarifies official app description, partner wording, store labels, cross-platform purchases, and source-book framing. |
+| Support Features & Data FAQ | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Tightens feature terms, removes internal unlock labels from feature lists, clarifies accessibility copy, and updates localization wording. |
+| Support Purchases, Pricing & Upgrades FAQ | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Removes stale exact prices, explains store purchase models, clarifies the unlock window, and uses repo-verified shipped/roadmap Expanded Features. |
+| Support Getting Help FAQ | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Adds what to include in bug reports and polishes the release-notes bridge. |
+| Support contact tab info cards | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Separates community and consulting paths, removes the late-night bug-triage promise, and avoids implying consulting availability. |
+| Support contact form copy | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Approved. Removes the 2-business-day promise, makes app-support submissions more useful, and cuts the overly cute error tone. |
+| Support page | Done | `src/pages/support.astro`, `docs/copy/support-page-flow-inventory.md` | Production English Support page copy pass is complete. Do not reopen unless explicitly requested. |
+| Copy context sync | Done | `CONTEXT.md`, `docs/copy/*flow-inventory.md` | Approved copy directions, resume-derived voice rules, and the full Mythic GME app glossary are captured for future site copy work. |
 | Header | Done | `src/components/layout/Header.astro`, `src/i18n/ui.ts` | Keep current header, CTA, mobile label, and store labels. |
 | Footer | Done | `src/components/layout/Footer.astro`, `src/i18n/ui.ts` | Keep footer copy as-is. |
 | SEO/social metadata beyond home | Pending | Page frontmatter/layout props outside the homepage | Review with each remaining page rather than as a separate homepage task. |
@@ -81,7 +100,6 @@ approved section so we do not reopen finished work or lose the next decision.
 
 ## Next Grill Question
 
-With the Apps page approved, the next area is the Resources index.
-
-Inventory the current Resources index first, then review copy section by
-section without changing resource article bodies yet.
+Production English copy passes are complete for About, Homepage, Apps,
+Resources index, and Support. Next copy work should start with a fresh inventory
+for the selected page or surface.

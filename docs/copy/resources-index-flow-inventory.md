@@ -22,20 +22,20 @@ unless Jason explicitly selects them.
 
 | Order | Surface | Current copy / content | Current job | Flow notes |
 | --- | --- | --- | --- | --- |
-| 0 | Metadata | Title: "Resources - Guides & Docs for Mythic GME 2e Apps"; description: "Guides for Mythic Apps: onboarding, dice formulas, custom tables, schema references, and troubleshooting." | Search/social first impression. | Clear and practical. Could be slightly more consistent with the site's `Mythic GME 2e apps` phrasing. |
-| 1 | Page header | Title: "Guides & Documentation"; subtitle: "Learn, create, and troubleshoot"; description: "Task-focused guides for every Mythic tool: onboarding, journals, dice, custom tables, and schema references." | Tell players what kind of help lives here. | Useful, but `every Mythic tool` is too broad because this page is about the apps and their docs, not every Mythic tool in the broader ecosystem. |
-| 2 | Search | Placeholder: "Search resources..."; hint: "Press / to focus"; result label: "Search results"; empty state: "No matches found"; status: "results found" or "No results found". | Help players find a specific guide quickly. | Mostly fine. Search copy is utilitarian and should not be overworked. |
-| 3 | Start Here | Badge: "Start Here"; title: "Get Up and Running Quickly"; description: "Install the apps, learn the workspace, and get comfortable with the Mythic flow." | Onboard new players into app basics. | `workspace` conflicts with the glossary preference for `Playspace` or more direct app language. `Mythic flow` may be okay but can be clearer as actual play. |
-| 4 | Start Here cards | Getting Started with the Mythic Apps; Setting Up and Using Lists; Writing and Organizing Scenes; Using Meaning Tables for Inspiration; Setting Up a Prepared Adventure in Mythic GME Digital. | Offer the first learning path. | Several summaries use good canonical terms. `Scenes` may need a precision check against `Scene Summary`, but public guide titles may stay broad. |
-| 5 | Adventure Journals | Badge: "Journals"; title: "Share and Safeguard Your Journals"; description: "Capture stories, share exports, and fix issues fast when something feels off." | Explain Journal-related guides. | Strong section job. `Capture stories` is a little softer than the app's actual record/export/support work. |
-| 6 | Adventure Journals cards | A Guide to the Mythic Journals; Sharing Adventure Journals; Troubleshooting. | Help players understand, export, and troubleshoot Journals. | `Mythic Journals` is probably acceptable in titles. Summaries should distinguish Journal, Adventure Log, and Log Entries when precision matters. |
-| 7 | Dice Roller | Badge: "Dice"; title: "Master the Dice Roller Toolkit"; description: "Roll smarter with presets, custom formulas, and portable collections." | Group dice-roller guides. | "Master" and "smarter" have a marketing/tutorial tone. The content is useful but could be more plainspoken. |
-| 8 | Dice Roller cards | Getting Started with the Dice Roller; Saving and Managing Dice Formulas; Dice Formulas & Customization; Importing & Exporting Saved Formulas. | Help players roll, save, customize, import, and export formulas. | The visible card summaries are mostly clear. `system-agnostic dice roller` is true but less player-facing than the homepage wording. |
-| 9 | Custom Tables | Badge: "Tables"; title: "Build Powerful Custom Tables"; description: "Build, organise, and share powerful tables for improvising on the fly." | Group Custom Table guides. | Uses British `organise` while the rest of the site generally uses American spelling. `powerful` repeats and feels generic. |
-| 10 | Custom Tables cards | Getting Started with Custom Tables; Organizing Custom Tables; Linking & Nesting Tables; Importing & Exporting Custom Tables. | Help players create, organize, link, import, export, and share Custom Tables. | Strong category. `coming soon` in one summary may need a truth check before publishing changes. |
-| 11 | Schemas & Deep Dives | Badge: "Deep Dives"; title: "Schemas & Deep Dives"; description: "Reference docs, JSON exports, and schema notes for tooling and integrations." | Separate technical/reference docs from player guides. | Clear enough. Could better connect schemas to Portable Player Data and imports/exports without making this too technical. |
-| 12 | Schema cards | Journal Schema; Formula Schema; Custom Table Schema; Categories Schema. | Give technical reference paths. | Titles are plain and useful. Summaries are technical by design. |
-| 13 | Support CTA | Badge: "Need Help?"; title: "Can't find what you're looking for?"; summary: "Send me a note or hop into Discord - I read every message."; buttons: "Contact Support", "Join Discord". | Give a path when docs do not answer the question. | Good human support signal. The exact "I read every message" promise is strong; keep only if it still feels accurate with current capacity. |
+| 0 | Metadata | Title: "Resources - Guides for Mythic GME 2e Apps"; description: "Guides for Mythic GME 2e apps: getting started, Journals, dice formulas, Custom Tables, schema references, and troubleshooting." | Search/social first impression. | Approved. Keeps practical guide/docs framing while tightening app-specific SEO language and canonical casing. |
+| 1 | Page header | Title: "Guides & Documentation"; subtitle: "Learn the apps, customize your tools, and troubleshoot"; description: "Task-focused guides for Mythic GME Mobile and Mythic GME Digital: onboarding, Journals, dice formulas, Custom Tables, and schema references." | Tell players what kind of help lives here. | Approved. Keeps the practical docs framing and avoids overstating the scope as every Mythic tool. |
+| 2 | Search | Placeholder: "Search guides..."; hint: "Press / to focus"; result label: "Search results"; empty state: "No matching guides"; status: "matching guides" or "No matching guides". | Help players find a specific guide quickly. | Approved. Keeps search utilitarian and aligns the microcopy with the page's guide framing. |
+| 3 | Start Here | Badge: "Start Here"; title: "Get Started With the Apps"; description: "Install the apps, learn the main tools, and get comfortable using Mythic in play." | Onboard new players into app basics. | Approved. Replaces `workspace` and vague `Mythic flow` language with plain app/play wording. |
+| 4 | Start Here cards | Getting Started with the Mythic Apps; Setting Up and Using Lists; Writing and Organizing Scenes; Using Meaning Tables for Inspiration; Setting Up a Prepared Adventure in Mythic GME Digital. | Offer the first learning path. | Approved. Summaries now avoid `flow through`, spell out Chaos Factor, use canonical casing, and keep the Prepared Adventure line direct. |
+| 5 | Adventure Journals | Badge: "Journals"; title: "Manage Your Journals"; description: "Keep your play record clear, export your data, and find help when something goes wrong." | Explain Journal-related guides. | Approved. Keeps the section practical and less dramatic than `safeguard`. |
+| 6 | Adventure Journals cards | A Guide to the Mythic Journals; Sharing Adventure Journals; Troubleshooting. | Help players understand, export, and troubleshoot Journals. | Approved. Summaries now use clearer Journal casing, less slash shorthand, and a more useful troubleshooting promise. |
+| 7 | Dice Roller | Badge: "Dice"; title: "Use the Dice Roller"; description: "Create, save, import, and reuse the dice formulas you need for play." | Group dice-roller guides. | Approved. Replaces tutorial-marketing language with direct player actions. |
+| 8 | Dice Roller cards | Getting Started with the Dice Roller; Saving and Managing Dice Formulas; Dice Formulas & Customization; Importing & Exporting Saved Formulas. | Help players roll, save, customize, import, and export formulas. | Approved. Summaries are more direct and preserve the useful mechanics without overexplaining. |
+| 9 | Custom Tables | Badge: "Tables"; title: "Build Custom Tables"; description: "Create, organize, import, export, and share tables that fit your play." | Group Custom Table guides. | Approved. Removes repeated `powerful`, fixes spelling consistency, and keeps the section practical. |
+| 10 | Custom Tables cards | Getting Started with Custom Tables; Organizing Custom Tables; Linking & Nesting Tables; Importing & Exporting Custom Tables. | Help players create, organize, link, import, export, and share Custom Tables. | Approved. Summaries now use clearer Custom Tables language and softer wording for linked/nested table functionality. |
+| 11 | Schemas & Deep Dives | Badge: "Deep Dives"; title: "Schemas & Reference Docs"; description: "Technical references for the JSON formats behind Journals, Saved Formulas, Custom Tables, and categories." | Separate technical/reference docs from player guides. | Approved. Keeps the section technical while making the scope clearer and more concrete. |
+| 12 | Schema cards | Journal Schema; Formula Schema; Custom Table Schema; Categories Schema. | Give technical reference paths. | Approved. Summaries are tighter and name the actual JSON/reference surfaces. |
+| 13 | Support CTA | Badge: "Need Help?"; title: "Can't find what you're looking for?"; summary: "Send a support note or ask in Discord, and I'll get back to you as soon as I can."; buttons: "Contact Support", "Join Discord". | Give a path when docs do not answer the question. | Approved. Keeps the personal support signal while making the public promise more sustainable. |
 
 ## Current Flow In Plain English
 
@@ -90,15 +90,28 @@ The Resources index currently says:
 
 | Section | Status | Decision |
 | --- | --- | --- |
-| Metadata and page header | Pending | Start here. Keep the practical guide/docs framing, but tighten scope around the Mythic GME apps. |
-| Search copy | Pending | Likely keep mostly unchanged. |
-| Start Here section | Pending | Needs `workspace` replacement and possible clearer app/play language. |
-| Start Here cards | Pending | Review visible card summaries only; article bodies are out of scope. |
-| Adventure Journals section and cards | Pending | Review Journal/Adventure Log precision and support tone. |
-| Dice Roller section and cards | Pending | Reduce generic tutorial language if needed. |
-| Custom Tables section and cards | Pending | Remove repeated `powerful`, fix spelling, and check `coming soon`. |
-| Schemas & Deep Dives section and cards | Pending | Keep technical clarity while linking to player-owned exports/imports where helpful. |
-| Support CTA | Pending | Decide whether `I read every message` is still the right public promise. |
+| Metadata and page header | Done | Keep `Guides & Documentation`. Tighten metadata and header copy around the Mythic GME apps, canonical casing, and practical guide scope. |
+| Search copy | Done | Use `guides` in the placeholder, accessible label, empty state, and status text. Keep the keyboard hint and dropdown label unchanged. |
+| Start Here section | Done | Keep badge. Use beginner-friendly app/play wording and avoid `workspace`. |
+| Start Here cards | Done | Keep titles. Refine visible summaries only for clearer terms, punctuation, and more direct player actions. |
+| Adventure Journals section and cards | Done | Use a practical Journal management frame and refine visible card summaries for clearer casing, export wording, and troubleshooting value. |
+| Dice Roller section and cards | Done | Use a practical Dice Roller frame and refine visible card summaries around creating, saving, importing, exporting, and reusing formulas. |
+| Custom Tables section and cards | Done | Use a practical Custom Tables frame, remove repeated `powerful`, fix spelling consistency, and refine visible card summaries. |
+| Schemas & Deep Dives section and cards | Done | Rename to `Schemas & Reference Docs` and tighten visible summaries around JSON/reference surfaces. |
+| Support CTA | Done | Keep badge, title, and buttons. Replace `I read every message` with a sustainable response promise. |
+
+## Current Resources Index Pass Result
+
+Resources index copy refinement is complete for the production English pass.
+
+No sections were moved, removed, or added. The approved changes refined
+metadata, page header copy, search microcopy, section headings, section
+descriptions, visible resource-card summaries, schema/reference wording, and
+the support CTA.
+
+## Next Step
+
+Move to the Support page inventory and review its copy section by section.
 
 ## Next Section
 

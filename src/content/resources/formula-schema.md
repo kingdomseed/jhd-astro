@@ -1,6 +1,6 @@
 ---
 title: "Formula Schema"
-summary: "Reference for the Saved Formulas JSON format with a minimal example and local downloads."
+summary: "Reference for Saved Formulas JSON, with a minimal example and local downloads."
 category: "advanced"
 order: 2
 icon: "fa-slab fa-regular fa-map"

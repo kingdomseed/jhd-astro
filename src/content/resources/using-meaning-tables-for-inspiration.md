@@ -1,6 +1,6 @@
 ---
 title: "Using Meaning Tables for Inspiration"
-summary: "Use Meaning Tables (Actions, Descriptions, Elements) for clear prompts."
+summary: "Use Meaning Tables when you need clear prompts for what happens next."
 category: "start-here"
 order: 4
 icon: "fa-slab fa-regular fa-lightbulb"

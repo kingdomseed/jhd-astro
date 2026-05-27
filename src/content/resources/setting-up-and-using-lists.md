@@ -1,6 +1,6 @@
 ---
 title: "Setting Up and Using Lists"
-summary: "Build reusable Mythic lists using Characters, Threads, and Features"
+summary: "Build reusable Mythic Lists for Characters, Threads, and Features."
 category: "start-here"
 order: 2
 icon: "fa-slab fa-regular fa-list"

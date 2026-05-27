@@ -1,6 +1,6 @@
 ---
 title: "Importing & Exporting Custom Tables"
-summary: "Prepare CSV, TXT, PSV, and JSON tables for import, then export clean bundles for sharing."
+summary: "Prepare CSV, TXT, PSV, and JSON tables for import, then export clean bundles to share."
 category: "custom-tables"
 order: 4
 icon: "fa-slab fa-regular fa-exchange"

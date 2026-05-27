@@ -1,6 +1,6 @@
 ---
 title: "Setting Up a Prepared Adventure in Mythic GME Digital"
-summary: "Configure Mythic for published modules: switch the Event Focus table, populate Features, and use the prepared-adventure scene flow."
+summary: "Configure Mythic for published modules with the Prepared Adventure Event Focus table, Features, and scene flow."
 category: "start-here"
 order: 5
 icon: "fa-slab fa-regular fa-book-open"

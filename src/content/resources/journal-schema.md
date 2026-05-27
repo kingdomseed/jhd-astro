@@ -1,6 +1,6 @@
 ---
 title: Journal Schema
-summary: Field-by-field reference for the Mythic Journal JSON format with a minimal example and local downloads.
+summary: Field-by-field reference for Mythic Journal JSON, with a minimal example and local downloads.
 category: advanced
 order: 1
 icon: fa-slab fa-regular fa-link

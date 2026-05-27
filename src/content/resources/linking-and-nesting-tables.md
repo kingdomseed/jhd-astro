@@ -1,6 +1,6 @@
 ---
 title: "Linking & Nesting Tables"
-summary: "How to chain tables for multi‑step prompts and roll‑ons (coming soon)."
+summary: "Preview linked and nested tables for multi-step prompts and roll-ons."
 category: "custom-tables"
 order: 3
 icon: "fa-slab fa-regular fa-link"

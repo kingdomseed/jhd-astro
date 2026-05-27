@@ -1,6 +1,6 @@
 ---
 title: "Organizing Custom Tables"
-summary: "Use categories, icons, tags, and links to keep your Meaning and Event Focus tables tidy and powerful."
+summary: "Use categories, icons, tags, and links to keep your Custom Tables easy to find and use."
 category: "custom-tables"
 order: 2
 icon: "fa-slab fa-regular fa-list-squares"

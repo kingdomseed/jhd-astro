@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with the Dice Roller"
-summary: "Roll faster with the system‑agnostic dice roller."
+summary: "Start rolling with the app's system-agnostic dice roller."
 category: "dice-roller"
 order: 1
 icon: "fa-slab fa-regular fa-star"

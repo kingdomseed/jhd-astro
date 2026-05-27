@@ -27,33 +27,33 @@ const sectionBlueprint = [
   {
     id: "start-here",
     badge: "Start Here",
-    title: "Get Up and Running Quickly",
+    title: "Get Started With the Apps",
     description:
-      "Install the apps, learn the workspace, and get comfortable with the Mythic flow.",
+      "Install the apps, learn the main tools, and get comfortable using Mythic in play.",
     category: "start-here",
   },
   {
     id: "adventure-journals",
     badge: "Journals",
-    title: "Share and Safeguard Your Journals",
+    title: "Manage Your Journals",
     description:
-      "Capture stories, share exports, and fix issues fast when something feels off.",
+      "Keep your play record clear, export your data, and find help when something goes wrong.",
     category: "adventure-journals",
   },
   {
     id: "dice-roller",
     badge: "Dice",
-    title: "Master the Dice Roller Toolkit",
+    title: "Use the Dice Roller",
     description:
-      "Roll smarter with presets, custom formulas, and portable collections.",
+      "Create, save, import, and reuse the dice formulas you need for play.",
     category: "dice-roller",
   },
   {
     id: "custom-tables",
     badge: "Tables",
-    title: "Build Powerful Custom Tables",
+    title: "Build Custom Tables",
     description:
-      "Build, organise, and share powerful tables for improvising on the fly.",
+      "Create, organize, import, export, and share tables that fit your play.",
     category: "custom-tables",
   },
 ];
@@ -83,15 +83,15 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
 }));
 ---
 <BaseLayout
-  title="Resources — Guides & Docs for Mythic GME 2e Apps"
-  description="Guides for Mythic Apps: onboarding, dice formulas, custom tables, schema references, and troubleshooting."
+  title="Resources — Guides for Mythic GME 2e Apps"
+  description="Guides for Mythic GME 2e apps: getting started, Journals, dice formulas, Custom Tables, schema references, and troubleshooting."
   canonicalPath="/resources/"
   mainClass="resources-main"
 >
   <PageHeader
     title="Guides & Documentation"
-    subtitle="Learn, create, and troubleshoot"
-    description="Task-focused guides for every Mythic tool: onboarding, journals, dice, custom tables, and schema references."
+    subtitle="Learn the apps, customize your tools, and troubleshoot"
+    description="Task-focused guides for Mythic GME Mobile and Mythic GME Digital: onboarding, Journals, dice formulas, Custom Tables, and schema references."
     accent="Resources"
     layout="left"
     icon="fa-solid fa-book-open"
@@ -112,8 +112,8 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
             class="resource-search-input"
             type="search"
             name="resource-search"
-            placeholder="Search resources..."
-            aria-label="Search resources"
+            placeholder="Search guides..."
+            aria-label="Search guides"
             aria-autocomplete="list"
             aria-controls="resource-search-dropdown"
             aria-expanded="false"
@@ -168,7 +168,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
             <i
               class="fa-slab fa-regular fa-search-minus"
               aria-hidden="true"></i>
-            <p>No matches found</p>
+            <p>No matching guides</p>
           </div>
           <div
             class="resource-search-status"
@@ -258,11 +258,11 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
           </header>
           <div class="resource-section-heading">
             <h2 id="schemas-title" class="section-title">
-              Schemas &amp; Deep Dives
+              Schemas &amp; Reference Docs
             </h2>
             <p class="resource-section-summary">
-              Reference docs, JSON exports, and schema notes for tooling
-              and integrations.
+              Technical references for the JSON formats behind Journals,
+              Saved Formulas, Custom Tables, and categories.
             </p>
           </div>
           <ul class="resource-list" role="list">
@@ -326,7 +326,8 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
             Can't find what you're looking for?
           </h2>
           <p class="resource-support__summary">
-            Send me a note or hop into Discord — I read every message.
+            Send a support note or ask in Discord, and I'll get back to you as
+            soon as I can.
           </p>
         </div>
         <div class="resource-support__actions">
@@ -396,12 +397,12 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
         input?.setAttribute("aria-expanded", "true");
         emptyState?.setAttribute("hidden", "");
         statusEl &&
-          (statusEl.textContent = `${visibleItems.length} results found`);
+          (statusEl.textContent = `${visibleItems.length} matching guides`);
       } else {
         dropdown?.removeAttribute("hidden");
         input?.setAttribute("aria-expanded", "true");
         emptyState?.removeAttribute("hidden");
-        statusEl && (statusEl.textContent = "No results found");
+        statusEl && (statusEl.textContent = "No matching guides");
       }
 
       currentIndex = -1;

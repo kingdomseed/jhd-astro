@@ -1,6 +1,6 @@
 ---
 title: "Sharing Adventure Journals"
-summary: "Export journals to JSON/Markdown and import from files (coming soon)."
+summary: "Export Journals to JSON or Markdown, and prepare for file imports when they arrive."
 category: "adventure-journals"
 order: 1
 icon: "fa-slab fa-regular fa-share-nodes"

@@ -1,6 +1,6 @@
 ---
 title: "Custom Table Schema"
-summary: "Unified Table v3 reference for Meaning and Event Focus tables, with minimal examples and downloads."
+summary: "Reference for Table v3 Custom Tables, including Meaning Tables, Event Focus tables, examples, and downloads."
 category: "advanced"
 order: 3
 icon: "fa-slab fa-regular fa-layer-group"

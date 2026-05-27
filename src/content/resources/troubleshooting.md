@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-summary: "Quick fixes for common issues and how to report bugs."
+summary: "Fix common issues and learn what to include when reporting a bug."
 category: "adventure-journals"
 order: 2
 icon: "fa-slab fa-regular fa-life-ring"

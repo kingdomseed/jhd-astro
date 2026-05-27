@@ -1,6 +1,6 @@
 ---
 title: "Categories Schema"
-summary: "Define and extend the category registry for Custom Tables (icons, labels, order)."
+summary: "Reference for category labels, icons, and ordering used by Custom Tables."
 category: "advanced"
 order: 4
 icon: "fa-slab fa-regular fa-sort"

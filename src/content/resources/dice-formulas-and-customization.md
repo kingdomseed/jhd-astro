@@ -1,6 +1,6 @@
 ---
 title: Dice Formulas & Customization
-summary: "Build the rolls you want: advantage, thresholds, exploding/compounding, keep/drop, and more—no programming required."
+summary: "Build rolls for advantage, thresholds, exploding or compounding dice, keep/drop, and more."
 category: dice-roller
 order: 3
 icon: fa-slab fa-regular fa-sliders
