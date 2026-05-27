@@ -492,6 +492,12 @@ Player-created or imported rollable tables that make personal or third-party
 oracle content feel native to the apps.
 _Avoid_: Add-on data, import gimmick, generic table files.
 
+**Mythic-verse**:
+The broader official Mythic ecosystem beyond Mythic GME 2e, including Mythic
+Magazines, Mythic Variations, and other Mythic books.
+_Avoid_: Using it where players need a concrete list of included content or a
+plain purchase-model explanation.
+
 **Integrated Reference Layer**:
 The product interpretation that PDFs, character sheets, maps, rules references,
 and play assets should live close to the playspace rather than as disconnected
