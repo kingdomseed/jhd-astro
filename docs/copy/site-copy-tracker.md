@@ -1,6 +1,6 @@
 # Site Copy Tracker
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This tracker keeps the website copy pass on track. Update it after each
 approved section so we do not reopen finished work or lose the next decision.
@@ -14,16 +14,23 @@ approved section so we do not reopen finished work or lose the next decision.
 
 ## Current Copy Rules
 
-- About and the homepage are done. Do not continue reworking them in this pass
-  unless Jason explicitly asks.
-- The current Support page pass is copy refinement only. Do not move, remove, or
-  add sections as part of this pass.
-- Work section by section in the current Support page order.
+- About, Homepage, Apps, Resources, Support, SEO/social, and Portuguese
+  production copy are done. Do not continue reworking them in this pass unless
+  Jason explicitly asks.
+- The current Legal pages pass is copy and factual alignment only. Do not make
+  substantive legal strategy decisions, restructure the legal model, or treat
+  this as legal advice.
+- Work section by section in the legal page order captured in
+  `docs/copy/legal-page-flow-inventory.md`.
 - After a section is approved, apply it, mark it done, then immediately show the
   next section's current copy and recommended refinement.
 - Keep existing copy when it already does its job and matches `CONTEXT.md`.
 - Use `CONTEXT.md` as the public-site voice and terminology source.
 - Use the Mythic GME app context for precise product terms.
+- Verify current app behavior and current official provider/store policy before
+  changing legal/privacy claims.
+- English legal pages come first. Portuguese legal pages should be adapted only
+  after English legal wording is approved.
 - Keep the site product-first: help players understand, trust, get, and use the
   Mythic apps.
 - Prefer player outcomes before feature inventory.
@@ -99,6 +106,14 @@ approved section so we do not reopen finished work or lose the next decision.
 | Portuguese Resources pages | Done | `src/pages/pt/resources/index.astro`, `src/pages/pt/resources/[slug].astro`, `src/content/resources/*-pt.md` | Updated index shell, visible card summaries, stale purchase language, PT links, detail labels, and share labels. |
 | Portuguese Blog and 404 shell | Done | `src/pages/pt/blog/index.astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/content/blog/*-pt.md`, `src/pages/pt/404.astro`, `src/pages/404.astro` | Updated PT shell metadata/copy/date formatting/category behavior, cleaned stale PT blog terminology, and noindexed 404 pages. |
 | Portuguese globalization mechanics | Done | `astro.config.mjs`, `src/layouts/BaseLayout.astro`, `src/components/search/SearchOverlay.astro`, `src/components/home/Billboard.astro`, `src/components/home/ReviewsRotator.astro` | Uses PT-specific search indexes, localized shared labels/status text, PT social image alt text, explicit alternates, and sitemap exclusions for redirect/error routes. |
+| Legal inventory | Done | `docs/copy/legal-page-flow-inventory.md` | Current legal page structure, local app behavior checks, official provider/store source checks, and legal-copy risk areas are captured. |
+| Legal pages | In review | `src/pages/privacy.astro`, `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Current pass. Edit only with explicit approval and careful fact checks. Start with the Privacy factual core. |
+| Privacy factual core | Done | `src/pages/privacy.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Removes Firebase as an active provider, aligns analytics with the current minimal PostHog daily ping, clarifies Sentry error reporting and optional Session Replay, avoids minor-identification claims, and updates app-store compliance summaries. |
+| Privacy rights/contact/children cleanup | Done | `src/pages/privacy.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Replaces the incomplete US state-law list with broad applicable-rights wording, removes response-speed promises, avoids age-knowledge claims, generalizes device controls, softens future-feature promises, and removes absolute upload/sale phrasing. |
+| Terms intro/products/license | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Updates last-updated date, current product platforms, Word Mill Creative legal attribution, and user-content/local-first license wording. |
+| Terms purchases/refunds | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Removes subscription wording, covers current mobile and desktop purchase surfaces, uses freshly checked official refund paths, and avoids refund-eligibility promises. |
+| Terms third-party/store requirements | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Covers store distribution, purchases, optional analytics, diagnostics, support paths, and all current store terms without overpromising announcements or store-provider support duties. |
+| Portuguese legal pages | Done | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro`, `CONTEXT.md`, `docs/copy/legal-page-flow-inventory.md` | Approved. Rewrites Portuguese Privacy and Terms from the approved English legal pages, with Brazilian Portuguese copy and explicit Brazil/Portugal legal framing for LGPD/ANPD, RGPD/CNPD, and mandatory consumer-rights safeguards. |
 
 ## Later Or Separate Passes
 
@@ -107,12 +122,8 @@ approved section so we do not reopen finished work or lose the next decision.
 | v2 copy | Later | `src/pages/v2/**`, `src/components/v2/**`, `src/lib/v2*.ts` | V2 has unrelated in-progress design work. Do not mix with the production copy pass unless Jason asks. |
 | Blog post rewrites | Later | `src/content/blog/**` | Stale PT terminology was cleaned where live; full release-note rewrites may keep historical voice unless a specific post is selected. |
 | Full resource article rewrites | Later | `src/content/resources/**`, `src/content/resources/*-pt.md` | Visible summaries and stale claims were updated; deeper long-form article rewrites should be selected explicitly. |
-| Legal pages | Later | `src/pages/privacy.astro`, `src/pages/terms.astro` | Only edit legal/privacy wording with explicit approval and careful fact checks. |
-| Portuguese legal pages | Later | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro` | Only edit legal/privacy wording with explicit approval and careful fact checks. |
 
 ## Next Grill Question
 
-Portuguese production copy, PT-BR metadata, explicit translated slug mapping,
-PT-specific search indexes, and durable `CONTEXT.md` rules are implemented.
-Remaining copy work should be selected explicitly: legal pages, full historical
-blog rewrites, full resource article rewrites, or the v2 design/copy pass.
+Production legal copy is updated in English and Portuguese. Next likely step:
+final legal-page review, then publish/commit when approved.

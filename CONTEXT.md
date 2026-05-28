@@ -216,6 +216,55 @@ stale `offers` or `aggregateRating` data.
 _Avoid_: Old prices, blended app-store ratings, fuzzy install totals, or private
 analytics claims in SEO metadata.
 
+### Legal page language
+
+**Legal Precision Without Overpromising**:
+Legal pages should be factual, current, and scoped. Verify app behavior,
+provider policy, store policy, and legal-list claims before changing privacy or
+terms copy. Use phrasing such as "where supported," "where required," "where
+appropriate," "as applicable," and "within the time required by applicable law"
+when exact commitments would overpromise.
+_Avoid_: "Exactly," "always," "never," response-speed promises, partial state
+privacy-law lists, or claims that will drift unless maintained.
+
+**Privacy Data Framing**:
+Privacy copy should describe the apps as local-first, with optional PostHog
+analytics off by default and currently limited to a daily activity ping, basic
+Sentry error reporting in release builds, and Session Replay treated separately:
+off by default, supported only where available, and used for on-error debugging
+rather than continuous recording.
+_Avoid_: Naming Firebase/GA4 as active analytics providers, claiming detailed
+gameplay analytics, or implying journal text, Fate Questions, dice results,
+Scene/List content, or table contents are sent as analytics.
+
+**Children's Privacy Framing**:
+The approved privacy posture is that the apps are not directed to children under
+13, do not require accounts, and do not ask for a birth date, so Jason generally
+does not know a player's age.
+_Avoid_: Saying the app identifies minors, verifies adulthood, or knows a
+player's age. Do not publish exact age-consent claims unless freshly verified
+and intentionally approved for the legal page.
+
+**Local-First Legal Claims**:
+The privacy promise should say core play data is stored locally unless the
+player chooses to export, share, sync, or send it in a support request. For
+server claims, say Jason Holt Digital does not host game content on its own
+servers.
+_Avoid_: Absolute "never uploads" claims, because support requests, platform
+sync, exports, and diagnostic context can make the boundary more specific than
+the slogan.
+
+**Portuguese Legal Adaptation**:
+Portuguese legal pages should adapt the approved English legal meaning for a
+Brazilian Portuguese reader while explicitly acknowledging Brazil's LGPD/ANPD
+and Portugal/EU RGPD/CNPD rights framework. Use controller language that works
+for both contexts, such as `controlador dos dados` and `responsável pelo
+tratamento`, and preserve broad consumer-rights safeguards for Brazil, Portugal,
+and the EU.
+_Avoid_: Mechanical translation from English, US-only privacy-law framing,
+partial US state-law lists, or terms wording that appears to waive mandatory
+consumer or data-protection rights.
+
 **Explicit Alternate Links**:
 `BaseLayout` should emit a cross-language alternate only when the page passes an
 explicit `alternatePath`. It should not guess `/pt/...` or strip `/pt` from the

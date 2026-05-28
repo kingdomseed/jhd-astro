@@ -12,7 +12,7 @@ import PageHeader from '../components/layout/PageHeader.astro';
   <PageHeader
     title="Privacy Policy"
     subtitle="Your privacy, protected"
-    description="Minimal data collection, local-first storage, and clear controls. Last updated: August 27, 2025"
+    description="Minimal data collection, local-first storage, and clear controls. Last updated: May 28, 2026"
     accent="Privacy"
     layout="left"
     icon="fa-solid fa-shield-check"
@@ -28,8 +28,8 @@ import PageHeader from '../components/layout/PageHeader.astro';
       </header>
       <h2 id="privacy-body" class="section-title">What I collect and why</h2>
       <p class="legal-summary">
-        I built the Mythic GME apps for the community, and I want to be straightforward about how they handle your data. This policy lays
-        out exactly what I collect, why, and how you stay in control.
+        I built the Mythic GME apps for the community, and I want to be straightforward about how they handle your data. This policy explains
+        what I collect, why I collect it, and what controls you have.
       </p>
       <article class="legal-article">
         <p>
@@ -40,234 +40,203 @@ import PageHeader from '../components/layout/PageHeader.astro';
         <h2>What Apps This Covers</h2>
         <p>This privacy policy applies to:</p>
         <ul>
-          <li><strong>Mythic GME Mobile</strong> — iOS, Android, macOS, and Web versions</li>
+          <li><strong>Mythic GME Mobile</strong> — iPhone, iPad, Android, and Fire tablets</li>
           <li><strong>Mythic GME Digital</strong> — Windows, macOS, and Linux desktop versions</li>
         </ul>
 
-        <h2>What Data I Actually Collect</h2>
-        <p>I collect minimal data, and only what's necessary to make the apps work better. Here's exactly what I collect by platform:</p>
+        <h2>What Data I Collect</h2>
+        <p>
+          The Mythic GME apps are local-first. Your journals, scenes, custom tables, notes, Fate Questions, dice rolls,
+          table results, and other play content are stored on your device unless you choose to export, share, sync, or
+          send that content in a support request.
+        </p>
 
-        <h3>Mobile Platforms (iOS, Android, macOS, Web)</h3>
-        <ul>
-          <li><strong>Analytics (opt‑in):</strong> PostHog and Firebase capture app usage such as screen views, feature interactions, and events like dice rolls, table searches, list actions, settings changes, and support actions.</li>
-          <li><strong>Technical data:</strong> app_version, platform, locale, build_channel, and current_screen; a pseudonymous per‑install identifier (PostHog distinct_id).</li>
-          <li><strong>Context hashes:</strong> hashed IDs for journal, scene, table, and list context (SHA‑256 with a per‑install salt). No raw journal, scene, or table content is sent.</li>
-          <li><strong>Derived metrics only:</strong> e.g., content length buckets, expression complexity flags, counts. We do not send your actual notes or journal text.</li>
-          <li><strong>Crashes &amp; errors (opt‑in):</strong> Sentry captures crash/error reports and session replays (screen capture) to help debug issues. Text content is obfuscated/redacted, including static UI labels.</li>
-          <li><strong>Country/region inference:</strong> Providers may infer rough location (e.g., country) from IP for product localization; precise GPS location is not collected.</li>
-        </ul>
+        <h3>Optional Analytics</h3>
+        <p>
+          Analytics is optional and off until you choose to enable it. When analytics is enabled, PostHog receives a
+          limited daily activity ping with basic technical information such as app version, build number, platform,
+          operating system, locale, whether Expanded Features access is unlocked, and a pseudonymous install identifier.
+        </p>
+        <p>
+          The apps do not send individual gameplay events, journal text, table contents, Fate Questions, dice results,
+          or Scene and List content as analytics.
+        </p>
 
-        <h3>Desktop Platforms (Windows, Linux)</h3>
-        <ul>
-          <li><strong>Analytics (opt‑in):</strong> Similar pseudonymous usage analytics as mobile when enabled.</li>
-          <li><strong>No advertising IDs:</strong> Desktop builds do not use mobile advertising identifiers.</li>
-          <li><strong>Local‑first:</strong> Journals, scenes, and custom tables remain on your device unless you export/share them.</li>
-        </ul>
+        <h3>Basic Error Reporting</h3>
+        <p>
+          Basic error reporting is enabled in release builds so I can diagnose crashes and serious app problems. Error
+          reports are handled through Sentry and may include technical context such as app version, platform, operating
+          system, current screen, stack traces, and error breadcrumbs. Where supported and enabled by your settings,
+          error reports may also include limited UI diagnostic context. Error reporting is not used for advertising or
+          user profiling.
+        </p>
 
-        <h3>What I DON'T Collect</h3>
+        <h3>Session Replay</h3>
+        <p>
+          Session Replay is separate from analytics. It is off by default and available only on supported mobile
+          platforms. If you turn it on, Sentry may receive a short replay around an error to help diagnose what went
+          wrong. It is configured as an on-error debugging tool, not continuous session recording.
+        </p>
+
+        <h3>What I Do Not Collect for Advertising or Analytics</h3>
         <ul>
-          <li>Personal information (name, email, phone number)</li>
-          <li>Precise location data (GPS coordinates, exact address)</li>
-          <li>Your game content or journal entries</li>
-          <li>Browsing history outside the app</li>
-          <li>Photos, videos, or personal files</li>
+          <li>Personal contact information from the apps, such as your name, email address, or phone number</li>
+          <li>Precise location data, such as GPS coordinates or an exact address</li>
+          <li>Journal text, Scene text, table contents, Fate Questions, dice results, or other play content as analytics</li>
+          <li>Browsing history outside the apps</li>
+          <li>Photos, videos, contacts, or personal files outside files you explicitly import, export, sync, or share</li>
           <li>Social media connections</li>
         </ul>
 
         <h2>Your Analytics Choice</h2>
-        <p>When you first open the app, you'll see a consent dialog that explains analytics and lets you choose. <strong>Analytics is off by default</strong> until you opt in. <strong>Crash and error reporting</strong> is <strong>on by default</strong> to help diagnose issues and keep the app stable. <strong>Session Replay</strong> is treated separately as described below. You can:</p>
+        <p>
+          When you first open the app, you'll see a consent dialog that explains analytics and lets you choose.
+          <strong>Analytics is off by default</strong> until you opt in. Basic crash and error reporting is enabled in
+          release builds to help diagnose issues and keep the app stable. Session Replay is treated separately and is
+          off unless you turn it on.
+        </p>
         <ul>
-          <li>Enable or disable analytics any time in Settings (controls PostHog and Firebase).</li>
-          <li>Disable crash/error reporting any time in Settings.</li>
-          <li><strong>v1.5.3 and later:</strong> Enable or disable Session Replay any time in Settings. Replay sampling and upload follow your preference (off unless you turn it on).</li>
-          <li><strong>Prior versions:</strong> On‑error Session Replay may be on by default; you can disable it in Settings.</li>
-          <li>Keep using all app features even if analytics are off and/or crash reporting is disabled.</li>
+          <li>Enable or disable analytics any time in Settings.</li>
+          <li>Enable or disable Session Replay any time in Settings where that feature is supported.</li>
+          <li>Keep using the app's features even if analytics and Session Replay are off.</li>
         </ul>
 
-        <h2>I Don't Sell Your Data. Ever.</h2>
-        <p>I don't sell your data. I won't sell your data. There's no business model here that involves selling data. The only scenario where your data might be "sold" is if I ever sold the entire business, and your data transferred with it as part of the app's functionality. But I'm not selling data to advertisers, data brokers, or anyone else.</p>
+        <h2>I Don't Sell Your Data</h2>
+        <p>
+          I do not sell personal information, use targeted advertising, or build a business around your data. The
+          providers named below process limited analytics and diagnostics data on my behalf for the purposes described
+          in this policy.
+        </p>
 
         <h2>How Your Data is Processed</h2>
         <h3>Analytics &amp; Diagnostics Providers</h3>
         <ul>
-          <li><strong>PostHog</strong> (product analytics): collects pseudonymous usage events and properties listed above. <em>Session replay is not enabled</em> in PostHog at this time. Data is encrypted in transit. Region: United States. <strong>Retention (Cloud, paid):</strong> events retained up to <strong>7 years</strong>; session replay recordings retained for <strong>3 months</strong> by default (1 month on free). Some replays may be retained for up to <strong>1 year</strong> if pinned to a playlist, shared publicly, or added to a notebook. Sources: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://posthog.com/docs/data/keeping-data" target="_blank" rel="noopener noreferrer">Data retention docs</a>.</li>
-          <li><strong>Firebase Analytics</strong> (Google/GA4): receives mirrored usage events during migration for continuity. No advertising features are used. Region: United States (Google Cloud). <strong>Retention (GA4 default for free):</strong> user- and event-level data retained for <strong>2 months</strong> by default (projects can optionally extend some data to 14 months). <em>Planned removal:</em> GA4 mirroring will be removed after app version <strong>1.5.4</strong>. Source: <a href="https://support.google.com/analytics/answer/7667196" target="_blank" rel="noopener noreferrer">Google Analytics retention</a>.</li>
-          <li><strong>Sentry</strong> (crash/error reporting + session replay): captures error details and short session replays to diagnose issues; text on screen is obfuscated/redacted and not readable. No keystrokes are captured. Crash/error reporting is enabled by default and can be disabled in Settings. <strong>Session Replay</strong>: <em>v1.5.3+</em> sampling follows your preference (off unless enabled). <em>Earlier versions</em> may have on‑error replays on by default; you can disable them in Settings. Region: United States. By default, Sentry SDKs mask all text and images in replays and do not record any sessions unless sampling is explicitly enabled. <strong>Retention:</strong> Sentry retains event data according to your subscription plan's retention window and deletes regular backups after <strong>90 days</strong>. Exact durations vary by plan and data type. Source: <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Sentry Security</a>.</li>
-          <li><strong>Data Retention:</strong> I configure provider-level retention to keep analytics and diagnostics data only as long as needed, then delete or aggregate it. See provider-specific retention above. You can request deletion at any time (see Your Privacy Rights).</li>
+          <li><strong>PostHog</strong> (optional analytics): receives the limited daily activity ping and technical properties described above only when analytics is enabled. PostHog Session Replay, feature flags, surveys, person profiles, lifecycle capture, and error autocapture are not enabled in the apps. Region: United States. Retention depends on the active PostHog plan and settings; PostHog currently lists one-year data retention on Free and seven-year data retention on pay-as-you-go plans. Sources: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Pricing and retention</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Data storage and deletion docs</a>.</li>
+          <li><strong>Sentry</strong> (error reporting and optional Session Replay): receives crash and error diagnostics, technical context, and optional Session Replay data as described above. Region: United States. Sentry retains SaaS error data according to the active plan and event type; Sentry currently lists 30 days for Free error logs, 90 days for self-serve Team/Business error logs, and custom retention for Enterprise plans. Sources: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Security</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data retention</a>.</li>
+          <li><strong>Data Retention:</strong> I use provider retention and deletion tools where available and keep analytics and diagnostics data only as long as needed for the purposes described in this policy. You can request deletion at any time (see Your Privacy Rights).</li>
           <li><strong>International Transfers:</strong> Data is processed in the United States under appropriate safeguards (e.g., SCCs) where required.</li>
-          <li><strong>Data sharing/sale:</strong> Data is not sold. Providers process data on my behalf to improve the app.</li>
+          <li><strong>Data sharing/sale:</strong> Data is not sold. Providers process data on my behalf to keep the apps reliable and improve them.</li>
         </ul>
 
         <p><strong>Provider privacy and retention information:</strong></p>
         <ul>
-          <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://docs.sentry.io/product/explore/session-replay/privacy/" target="_blank" rel="noopener noreferrer">Session Replay Privacy</a> • <a href="https://docs.sentry.io/platforms/flutter/session-replay/" target="_blank" rel="noopener noreferrer">Flutter Replay Docs</a></li>
-          <li>PostHog: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://posthog.com/docs/data/keeping-data" target="_blank" rel="noopener noreferrer">Data Retention &amp; Deletion</a></li>
-          <li>Firebase (Google): <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy &amp; Security</a> • <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+          <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://docs.sentry.io/product/explore/session-replay/" target="_blank" rel="noopener noreferrer">Session Replay</a> • <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data Retention</a></li>
+          <li>PostHog: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Pricing and Retention</a> • <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Data Storage and Deletion</a></li>
         </ul>
 
         <h3>Local Storage</h3>
         <ul>
-          <li><strong>Game Data:</strong> All your journals, custom tables, and game content stay on your device</li>
-          <li><strong>File Access:</strong> I only access files you explicitly import/export (JSON for journals, Markdown for exports)</li>
-          <li><strong>iCloud Sync:</strong> If enabled, your game data syncs through Apple's secure iCloud service</li>
-          <li><strong>No Server Storage:</strong> Your game content never gets uploaded to my servers</li>
+          <li><strong>Game Data:</strong> Your journals, custom tables, and game content are stored locally unless you choose to export, share, sync, or send them in a support request</li>
+          <li><strong>File Access:</strong> The apps access files you explicitly open, save, import, export, sync, or share</li>
+          <li><strong>iCloud Sync:</strong> If enabled, your game data syncs through Apple's iCloud service</li>
+          <li><strong>No Jason Holt Digital server storage:</strong> I do not host your game content on Jason Holt Digital servers</li>
         </ul>
 
         <h3>Legal Basis (GDPR)</h3>
         <p>For users in the EU, my legal basis for processing is:</p>
         <ul>
-          <li><strong>Consent (Art. 6(1)(a)):</strong> Analytics runs only if you opt in; you can withdraw consent any time in Settings.</li>
-          <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Crash/error reporting (including on‑error session replay) to maintain security and stability; and responding to support emails you send. You can disable crash/error reporting in Settings.</li>
+          <li><strong>Consent (Art. 6(1)(a)):</strong> Optional analytics and Session Replay run only if you enable them; you can withdraw consent any time in Settings.</li>
+          <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Basic crash/error reporting to maintain security and stability; and responding to support emails you send.</li>
         </ul>
 
         <h2 id="do-not-sell">Do Not Sell or Share My Personal Information</h2>
-        <p>I do not sell or share your personal information as defined by the CCPA/CPRA. If you still wish to submit a request regarding "Do Not Sell or Share," email <strong>privacy@jasonholtdigital.com</strong>. I will confirm that no sale or sharing occurs and honor any applicable rights.</p>
+        <p>I do not sell or share your personal information as defined by applicable privacy laws, and I do not use targeted advertising. If you submit a "Do Not Sell or Share" request, email <strong>privacy@jasonholtdigital.com</strong>. I will review it and honor any applicable rights.</p>
 
         <h2>Your Privacy Rights</h2>
-        <p>No matter where you live, you have important rights regarding your data:</p>
-
-        <h3>Universal Rights</h3>
-        <ul>
-          <li><strong>Know:</strong> What data I collect and why (it's all in this policy)</li>
-          <li><strong>Access:</strong> Request a copy of any data I have about you</li>
-          <li><strong>Correct:</strong> Fix any incorrect information</li>
-          <li><strong>Delete:</strong> Request deletion of your data</li>
-          <li><strong>Control:</strong> Turn analytics on/off anytime in app settings</li>
-          <li><strong>Export:</strong> Get your game data in portable formats</li>
-        </ul>
-
-        <h3>Regional Privacy Laws</h3>
-        <p>If you live in certain regions, you have additional rights:</p>
-        <h4>European Union (GDPR)</h4>
-        <ul>
-          <li>Withdraw consent for analytics processing</li>
-          <li>Object to data processing based on legitimate interests</li>
-          <li>Request restriction of processing</li>
-          <li>File complaints with your local data protection authority</li>
-        </ul>
-        <h4>California (CCPA/CPRA)</h4>
-        <ul>
-          <li>Detailed disclosure of data collection practices</li>
-          <li>Right to opt-out of data "sales" (though I don't sell data)</li>
-          <li>Non-discrimination for exercising privacy rights</li>
-          <li>Right to limit use of sensitive personal information</li>
-        </ul>
-        <h4>Virginia, Colorado, Connecticut (State Privacy Laws)</h4>
-        <ul>
-          <li>Confirm what personal data I process</li>
-          <li>Access, correct, delete, or port your data</li>
-          <li>Opt-out of targeted advertising (not applicable since I don't do this)</li>
-        </ul>
-        <h4>Brazil (LGPD)</h4>
-        <ul>
-          <li>Confirmation of data processing activities</li>
-          <li>Access, correction, and deletion of personal data</li>
-          <li>Data portability between services</li>
-          <li>Information about data sharing (which I don't do)</li>
-        </ul>
+        <p>
+          Depending on where you live, privacy laws may give you rights to access, correct, delete, export, restrict,
+          or object to certain processing of your personal information. You may also have the right to withdraw consent
+          for optional analytics or Session Replay, appeal a decision, or complain to a privacy regulator.
+        </p>
+        <p>
+          I do not sell personal information or use targeted advertising. If a law gives you an opt-out right for sale,
+          sharing, or targeted advertising, you can still contact me and I will honor any applicable request.
+        </p>
 
         <h3>How to Exercise Your Rights</h3>
-        <p>Email me at <strong><a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a></strong> with your request. I'll respond within:</p>
-        <ul>
-          <li><strong>GDPR:</strong> 30 days</li>
-          <li><strong>CCPA:</strong> 45 days</li>
-          <li><strong>Other laws:</strong> 30–45 days</li>
-          <li><strong>General requests:</strong> 2 business days for acknowledgment</li>
-        </ul>
-        <p><strong>For your local game data:</strong> You already have full control. Export your journals before uninstalling if you want to keep them.</p>
+        <p>
+          Email me at <strong><a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a></strong>
+          with your request. I may need information to verify the request and match it to data I actually hold. I will
+          respond within the time required by applicable law.
+        </p>
+        <p><strong>For local game data:</strong> Your play data is primarily stored on your device or in platform sync services you enable. Export anything you want to keep before uninstalling.</p>
 
         <h2>Privacy Controls</h2>
         <h3>In‑App Controls</h3>
         <ul>
-          <li><strong>Settings → Analytics:</strong> Toggle analytics (PostHog/Firebase) on/off</li>
-          <li><strong>Settings → Diagnostics:</strong>
-            <ul>
-              <li><strong>Crash &amp; Error Reporting:</strong> On/Off (on by default)</li>
-              <li><strong>Session Replay (v1.5.3+):</strong> On/Off (off by default)</li>
-            </ul>
-          </li>
+          <li><strong>Settings → Analytics:</strong> Toggle optional PostHog analytics on/off</li>
+          <li><strong>Settings → Session Replay:</strong> Toggle optional on-error Session Replay on/off where supported</li>
           <li><strong>First‑Run Dialog:</strong> Choose your analytics preference when you first open the app</li>
           <li><strong>Export Data:</strong> Export your game journals as JSON or Markdown files</li>
           <li><strong>Delete Data:</strong> Clear all app data or uninstall to remove everything</li>
         </ul>
 
         <h3>Device‑Level Controls</h3>
-        <h4>iOS/iPadOS</h4>
+        <p>Operating-system privacy controls vary by platform and version. You can use your device or desktop settings to manage app permissions, file access, app analytics sharing, tracking preferences, and other system-level privacy controls where available.</p>
         <ul>
-          <li><strong>App Analytics:</strong> Settings → Privacy → Analytics &amp; Improvements → Share App Analytics</li>
-          <li><strong>App Permissions:</strong> Settings → Privacy → Files and Folders → Mythic GME</li>
-          <li><strong>App Tracking:</strong> Settings → Privacy → Tracking (though I don't track across apps)</li>
-        </ul>
-        <h4>Android</h4>
-        <ul>
-          <li><strong>App Permissions:</strong> Settings → Apps → Mythic GME Mobile → Permissions</li>
-          <li><strong>Usage Data:</strong> Settings → Google → Usage &amp; Diagnostics</li>
-          <li><strong>Advertising:</strong> Settings → Google → Ads (though I don't use ads)</li>
-        </ul>
-        <h4>Desktop (Windows/macOS/Linux)</h4>
-        <ul>
-          <li><strong>Limited Analytics:</strong> Most device‑level controls don't apply</li>
-          <li><strong>File Access:</strong> Desktop versions only access files you explicitly open/save</li>
-          <li><strong>System Privacy:</strong> Standard OS privacy controls apply</li>
+          <li><strong>iPhone, iPad, Android, and Fire tablets:</strong> Manage app permissions, analytics sharing, usage diagnostics, and tracking or advertising preferences in system settings where available.</li>
+          <li><strong>Windows, macOS, and Linux:</strong> Use system privacy and file-permission controls. Desktop versions only access files you explicitly open, save, import, export, sync, or share.</li>
         </ul>
 
         <h2>Platform Differences</h2>
-        <h3>Why Desktop Has Limited Analytics</h3>
+        <h3>Why Data Handling Can Vary by Platform</h3>
         <ul>
-          <li><strong>Windows/Linux:</strong> Firebase and PostHog have limited functionality on these platforms</li>
-          <li><strong>macOS Desktop:</strong> Some analytics work, but less comprehensive than mobile</li>
-          <li><strong>Technical Limitations:</strong> Desktop platforms don't support many mobile analytics features</li>
-          <li><strong>Privacy by Design:</strong> Less data collection means better privacy</li>
+          <li><strong>Analytics:</strong> PostHog analytics is limited to the optional daily activity ping described above.</li>
+          <li><strong>Debug and web builds:</strong> Analytics and Sentry reporting are disabled in current app code for ordinary debug builds and web builds.</li>
+          <li><strong>Session Replay:</strong> Session Replay is supported only on mobile platforms where the Sentry SDK supports it.</li>
+          <li><strong>Desktop:</strong> Desktop builds do not use mobile advertising identifiers and only access files you explicitly open, save, import, export, sync, or share.</li>
         </ul>
 
         <h2>Children's Privacy</h2>
-        <p>Mythic GME is designed for tabletop RPG players, who are typically adults. The apps are not intended for children under 13. Users must be at least 16 to consent to analytics processing in the EU, or have parent/guardian consent where applicable.</p>
-        <p>If you believe a child has used the app and analytics were enabled, please email <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> immediately.</p>
+        <p>The apps are not directed to children under 13. They do not require accounts or ask for a birth date, so I generally do not know a player's age.</p>
+        <p>If you believe a child has provided personal information through the apps or a support request, email <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> so I can review and delete it where appropriate.</p>
 
         <h2>Changes to This Policy</h2>
         <p>When I update this privacy policy:</p>
         <ul>
           <li>The "Last Updated" date will change</li>
-          <li>Major changes will be announced in the app</li>
-          <li>You'll see the consent dialog again if analytics practices change significantly</li>
+          <li>Major privacy changes will be announced in the app or on the site where appropriate</li>
+          <li>The consent dialog may be shown again if analytics practices change significantly</li>
           <li>Continued use after changes means you accept the updated policy</li>
         </ul>
 
         <h2>Future Features</h2>
-        <p>If I ever add cloud save functionality or other features that change data handling:</p>
+        <p>If I add cloud save functionality or other features that materially change data handling:</p>
         <ul>
-          <li>This policy will be updated first</li>
-          <li>You'll be notified of changes</li>
-          <li>New features will have their own privacy controls</li>
-          <li>Existing privacy settings won't change without your consent</li>
+          <li>This policy will be updated as needed</li>
+          <li>I will provide notice where required or appropriate</li>
+          <li>New features will include privacy controls when they need them</li>
+          <li>Optional analytics and Session Replay choices will stay under your control</li>
         </ul>
 
         <h2>Contact Me</h2>
-        <p>For any privacy questions, concerns, or requests:</p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> (fastest response)</li>
-          <li><strong>Mail:</strong> Jason Holt Digital LLC, 1111b S Governors Avenue STE 21904, Dover, DE 19904 US</li>
-          <li><strong>Response Time:</strong> Within 2 business days for acknowledgment</li>
-        </ul>
-        <p>I personally read and respond to every privacy-related email. If you have concerns, questions, or suggestions about how I handle privacy, please reach out.</p>
+        <p>
+          For privacy questions, concerns, or requests, email
+          <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> or write to Jason Holt Digital
+          LLC, 1111b S Governors Avenue STE 21904, Dover, DE 19904 US.
+        </p>
+        <p>
+          I personally review privacy-related messages. If your request involves a legal privacy right, I may need more
+          information to verify it and will respond within the timeframe required by applicable law.
+        </p>
 
         <h2>App Store Compliance</h2>
         <h3>Google Play Data Safety</h3>
         <p>This privacy policy supports Google Play Data Safety requirements by disclosing:</p>
         <ul>
-          <li><strong>Data collected:</strong> App activity (feature interactions, screen views), App info &amp; performance (diagnostics where applicable), and Device or other IDs (pseudonymous per‑install ID). No personal or precise location data is collected.</li>
-          <li><strong>Purposes:</strong> Product analytics and app functionality; no advertising.</li>
-          <li><strong>Data sharing:</strong> Only with analytics providers (Firebase, PostHog) for processing on my behalf. Data is not sold.</li>
+          <li><strong>Data collected:</strong> App activity where optional analytics is enabled, app info and performance data for diagnostics, optional Session Replay where enabled and supported, and device or other identifiers such as a pseudonymous install identifier. No precise location data is collected.</li>
+          <li><strong>Purposes:</strong> Product analytics, app functionality, diagnostics, security, and reliability; no advertising.</li>
+          <li><strong>Data sharing:</strong> Only with analytics and diagnostics providers processing data on my behalf. Data is not sold.</li>
           <li><strong>Security practices:</strong> Data encrypted in transit; minimal collection.</li>
-          <li><strong>User controls:</strong> Analytics is optional and controlled by an in‑app toggle.</li>
+          <li><strong>User controls:</strong> Analytics and Session Replay are optional and controlled by in-app toggles.</li>
         </ul>
         <h3>Apple Privacy Nutrition Labels</h3>
         <p>For App Store compliance, this policy supports Apple's Privacy Nutrition Label requirements:</p>
         <ul>
-          <li><strong>Data not linked to you:</strong> Usage Data (App Interactions, Screen Views) and Diagnostics (including crash reports and session replays with text redaction) where applicable.</li>
+          <li><strong>Data not linked to you:</strong> Usage Data and Diagnostics, including optional analytics, crash reports, and Session Replay where enabled and applicable.</li>
           <li><strong>Tracking across apps/websites:</strong> Not used.</li>
-          <li><strong>Third‑party partners:</strong> Firebase (Google) and PostHog process analytics data as described.</li>
-          <li><strong>User control:</strong> Analytics is opt‑in and can be turned off any time in Settings.</li>
+          <li><strong>Third‑party partners:</strong> PostHog and Sentry process analytics and diagnostics data as described.</li>
+          <li><strong>User control:</strong> Analytics and Session Replay are opt-in and can be turned off any time in Settings.</li>
         </ul>
       </article>
     </div>
