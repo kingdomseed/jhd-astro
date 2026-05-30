@@ -10,15 +10,15 @@ keywords: ["notas de lançamento", "Apps Mythic GME"]
 tags: ["release", "v1.5.5", "product:apps", "stability", "ui", "accessibility"]
 ---
 
-*Lançado em 12 de Setembro de 2025*
+Lançado em 12 de setembro de 2025.
 
 ## O Que Há de Novo
 
 ### Jogo Mais Rápido, Mais Suave
 - **Tabela de Destino Veloz**: Rolagem mais suave e interações mais ágeis
-- **Log de Aventura Mais Rápido**: Renderização mais rápida com seu Markdown preservado
+- **Diário de Aventura Mais Rápido**: Renderização mais rápida com seu Markdown preservado
 ### Compartilhamento Mais Fácil
-- **Copiar Qualquer Entrada de Log**: Cada item do Log de Jogo tem um botão Copiar que cria um resumo limpo e legível
+- **Copiar Qualquer Entrada do Diário de Aventura**: Cada item do Diário de Aventura tem um botão Copiar que cria um resumo limpo e legível
 ### Clareza & Polimento
 - **Rótulo de Fator Caos**: Exibição mais clara em visualizações de Destino
 - **Renovação Visual**: Ícones atualizados e pequenos refinamentos de UI em tudo

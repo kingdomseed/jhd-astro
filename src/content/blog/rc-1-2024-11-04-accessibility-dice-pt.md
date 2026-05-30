@@ -10,11 +10,13 @@ keywords: ["notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "rc1", "product:apps", "accessibility", "dice-roller", "platform"]
 ---
 
-Lançado em 4 de Novembro de 2024
+Lançado em 4 de novembro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-Eu sei que isso é tipo três builds em um fim de semana e uma segunda-feira, mas estou lançando o Release Candidate hoje à noite. Se nada estiver quebrando, esta é a versão que vai para as lojas aguardando cronogramas de aprovação.
+Na época, este era o Release Candidate depois de várias builds beta em um fim de
+semana. Se nada quebrasse, esta era a versão que seguiria para as lojas,
+dependendo dos prazos de aprovação.
 
 ## Aprimoramentos de Acessibilidade
 
@@ -80,11 +82,12 @@ Eu sei que isso é tipo três builds em um fim de semana e uma segunda-feira, ma
 - Documentação e seções de ajuda atualizadas
 
 ## Problemas Conhecidos
-- Nenhum relatado atualmente no RC1
+- Nenhum relatado para o RC1 na época
 
 ## Notas de Instalação
 - Instalação limpa recomendada
 - Faça backup dos dados existentes antes de atualizar
 - Verifique as permissões do app após a atualização
 
-Estou fazendo verificações completas de conformidade e permissões agora para garantir que nenhum dado esteja sendo puxado do seu dispositivo por acidente.
+Na época, eu estava fazendo verificações completas de conformidade e permissões
+para garantir que nenhum dado fosse puxado do seu dispositivo por acidente.

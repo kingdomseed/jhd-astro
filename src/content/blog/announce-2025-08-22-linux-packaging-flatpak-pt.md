@@ -1,6 +1,6 @@
 ---
-title: "Mudanças no Empacotamento Linux — Flatpak Daqui para Frente"
-summary: "Flatpak torna-se primário; AppImage descontinuado; DEB/RPM descontinuados"
+title: "Mudanças no Empacotamento Linux — Flatpak e Builds Portáteis"
+summary: "Flatpak e builds portáteis de Linux daqui para frente; AppImage, DEB e RPM descontinuados"
 category: "Announcement"
 date: "2025-08-22"
 readTime: "4 min de leitura"
@@ -27,12 +27,14 @@ keywords: ["anúncio", "Flatpak", "Linux", "empacotamento", "Steam", "Steam Deck
 ## TL;DR
 - **AppImage:** Descontinuado.
 - **DEB/RPM:** Descontinuados.
-- **Flatpak:** Maneira primária de instalar no Linux daqui para frente.
+- **Flatpak:** Instalação empacotada recomendada no Linux daqui para frente.
+- **Build portátil de Linux:** Ainda disponível pelo itch.io quando fornecida para uma versão.
 
 ## O que está mudando
 - **AppImage foi descartado.** Builds recentes têm sido não confiáveis. v1.4.7 permanecerá disponível como uma opção legada por um tempo, mas novas atualizações não terão AppImage como alvo.
 - **DEB e RPM foram descartados.** Esses formatos frequentemente quebram entre versões de distro e levam tempo extra para manter.
-- **Flatpak é o foco.** Ele roda no Ubuntu/Debian, Fedora/openSUSE/RHEL, Arch e SteamOS com menos problemas de dependência.
+- **Flatpak é o foco para instalação empacotada.** Ele roda no Ubuntu/Debian, Fedora/openSUSE/RHEL, Arch e SteamOS com menos problemas de dependência.
+- **Builds portáteis de Linux ainda podem ser fornecidas.** Elas não são AppImages; são builds portáteis diretas para jogadores que preferem o app do itch ou pastas manuais.
 
 ## Steam
 Quando o jogo chegar no Steam, ele será enviado como uma **build nativa de Linux**. O Steam o executará em seu runtime Linux para que funcione de forma limpa no SteamOS/Deck.

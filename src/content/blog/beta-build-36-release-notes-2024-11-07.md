@@ -9,11 +9,11 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-36", "accessibility", "stability", "ui"]
 ---
 
-Released November 7, 2024
+Released November 7, 2024.
 
 This post is part of the Beta → First Release series.
 
-Build 36 will be posted tomorrow morning.
+At the time, Build 36 was scheduled for the next morning.
 
 ## Accessibility & Usability
 - Better support for larger text sizes

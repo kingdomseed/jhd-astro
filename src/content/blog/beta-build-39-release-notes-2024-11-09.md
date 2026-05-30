@@ -9,7 +9,7 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-39", "accessibility", "logging", "dice-roller", "ui"]
 ---
 
-Released November 9, 2024
+Released November 9, 2024.
 
 This post is part of the Beta → First Release series.
 

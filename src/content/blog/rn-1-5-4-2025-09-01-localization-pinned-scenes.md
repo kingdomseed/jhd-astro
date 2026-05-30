@@ -9,7 +9,7 @@ keywords: ["release notes", "Mythic GME Apps"]
 tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performance", "accessibility"]
 ---
 
-*Released September 1, 2025*
+Released September 1, 2025.
 
 ## What's New
 
@@ -39,7 +39,7 @@ tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performan
 
 ## What's Fixed
 - **Backup Reliability**: Journal backups now have more time to complete, preventing failed backups
-- **Analytics Tracking**: Fixed analytics tracking across all devices
+- **Analytics Handling**: Fixed optional analytics handling across supported devices
 
 - **Scroll Position**: Fixed scroll position jumping when navigating between scenes
 - **Table Translations**: Fixed translation issues in the Custom Table editor

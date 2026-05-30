@@ -10,7 +10,7 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-07", "stability", "ui"]
 ---
 
-Lançado em 5 de Outubro de 2024
+Lançado em 5 de outubro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
@@ -32,4 +32,4 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 ## Notas
 
 - Salvar/Carregar removido de Listas de Aventura (listas salvam automaticamente; os controles não faziam sentido aqui)
-- Trabalhando no Android a seguir — obrigado pela paciência enquanto preparamos essa build
+- Na época, a versão Android ainda estava sendo preparada para uma build beta posterior.

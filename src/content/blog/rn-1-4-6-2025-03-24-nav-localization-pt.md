@@ -1,6 +1,6 @@
 ---
-title: "v1.4.6 — Navegação & Localização"
-summary: "Correções de navegação e localização, esquema de URL de lançador, estabilidade e desempenho"
+title: "v1.4.6 — Navegação e Localização"
+summary: "Correções de navegação e localização, suporte a esquema de URL para lançadores, estabilidade e melhorias de desempenho."
 category: "Release Notes"
 date: "2025-03-24"
 readTime: "3 min de leitura"
@@ -20,40 +20,31 @@ tags: [
 ]
 ---
 
-Lançado em 24 de Março de 2025
+Lançado em 24 de março de 2025.
 
-## Mythic GME 2e v1.4.6 traz melhorias importantes
+A v1.4.6 focou em polimento de navegação, correções de localização, integração
+com lançadores e estabilidade geral no app.
 
-- Validação aprimorada de diários para maior estabilidade
-- Gaveta do aplicativo atualizada para uma experiência de navegação consistente em todos os idiomas
-- Suporte a esquema de URL para Essential Launcher e integração com outros aplicativos de terceiros
-- Correção de problemas de localização que poderiam causar problemas de exibição
-- Correção de problemas de exibição no Gráfico do Destino com certas configurações de idioma
-- Relatórios de erro otimizados para uma experiência mais suave
-- Melhorias gerais de desempenho e estabilidade
-- Android: Suporte para atualizações mais rápidas via tecnologia Shorebird
+## Destaques
 
-### Recursos recentes da v1.4.5 que você pode ter perdido
-- Tradução completa para português com todas as tabelas e elementos da interface
-- Suporte a novos idiomas: Espanhol, Francês e Italiano (somente UI)
-- Novo conteúdo: Tabela de Atos Malignos e conteúdo da Mythic Magazine 49
-- Melhor acessibilidade para leitores de tela
+- A navegação pela gaveta do app ficou mais consistente entre os idiomas
+  suportados.
+- O app passou a oferecer suporte a esquema de URL para o Essential Launcher e
+  outras integrações com lançadores de terceiros.
+- Correções de localização resolveram problemas de exibição em telas traduzidas.
+- Relatórios de erro e desempenho geral foram melhorados.
 
----
+## Alterado
 
-## Mythic GME 2e v1.4.6 traz melhorias importantes (PT‑BR)
+- A validação de diários foi reforçada para melhorar a estabilidade.
+- A exibição da Tabela de Destino ficou mais confiável com diferentes
+  configurações de idioma.
+- Builds de Android ganharam suporte para atualizações mais rápidas pelo
+  Shorebird.
 
-- Validação aprimorada de diários para maior estabilidade
-- Gaveta do aplicativo atualizada para uma experiência de navegação consistente em todos os idiomas
-- Suporte a esquema de URL para Essential Launcher e integração com outros aplicativos de terceiros
-- Correção de problemas de localização que poderiam causar erros de exibição
-- Correção de problemas de exibição no Gráfico do Destino com certas configurações de idioma
-- Relatórios de erro otimizados para uma experiência mais suave
-- Melhorias gerais de desempenho e estabilidade
-- Android: Suporte para atualizações mais rápidas via tecnologia Shorebird
+## Adições Recentes Da v1.4.5
 
-### Recursos recentes da v1.4.5 que você pode ter perdido
-- Tradução completa para português com todas as tabelas e elementos da interface
-- Suporte a novos idiomas: Espanhol, Francês e Italiano (somente UI)
-- Nova tabela de Atos Malignos e conteúdo da Mythic Magazine 49
-- Melhor acessibilidade para leitores de tela
+- Tradução completa para português com tabelas e texto de interface.
+- Suporte a espanhol, francês e italiano apenas na interface.
+- Tabela Evil Deed e conteúdo da Mythic Magazine 49.
+- Melhor suporte de acessibilidade para leitores de tela.

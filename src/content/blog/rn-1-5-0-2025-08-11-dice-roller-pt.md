@@ -33,10 +33,10 @@ v1.5 é nossa maior atualização até agora. Este lançamento foca em Eventos A
 - **Correções de plataforma:** Melhor manuseio de caminho de arquivo no Windows; melhor comportamento de build no Linux; caminho de sincronização iCloud reformulado para builds do ecossistema Apple (somente App Store).
 
 ## Notas para builds do Itch.io
-- **Sem compras internas no itch.io:** Todos os recursos estão incluídos e desbloqueados.
+- **Modelo de compra no itch.io:** Todos os recursos estão incluídos na build de desktop.
 - **macOS:** Sincronização iCloud não está disponível na build do Itch; você pode selecionar qualquer local de salvamento personalizado (incluindo uma pasta do iCloud Drive).
 - **Hardware mínimo macOS:** Apple Silicon M1 com 8 GB RAM recomendado; Intel macOS 10.15+ suportado (não testado).
-- **Linha de base Linux:** Atualizações chegando para a build Linux em breve
-- **macOS e Linux**: Essas builds estão pendentes de lançamento para a versão 1.5. Fique ligado!
+- **Linha de base Linux:** As atualizações do Linux ainda estavam sendo preparadas quando esta nota foi escrita.
+- **macOS e Linux**: Essas builds de desktop seguiram o calendário da versão móvel.
 
 Se você tiver feedback ou encontrar problemas, entre em contato aqui ou via Discord do Mythic. Aproveite a atualização!

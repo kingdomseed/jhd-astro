@@ -10,11 +10,11 @@ keywords: ["notas de lançamento", "Apps Mythic GME"]
 tags: ["pre-release", "series:beta-to-first-release", "product:apps", "v1.2.5", "dice-roller", "journal", "accessibility", "support"]
 ---
 
-Lançado em 12 de Novembro de 2024 (Chegando perto do lançamento!)
+Lançado em 12 de novembro de 2024, durante a preparação final para lançamento.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-# Registro de Mudanças — Build de Lançamento Próxima → v1.2.5
+# Registro de Mudanças — Build Pré-Lançamento → v1.2.5
 
 ## Melhorias do Rolador de Dados
 - Corrigido e validado suporte para notações de dados complexas incluindo:

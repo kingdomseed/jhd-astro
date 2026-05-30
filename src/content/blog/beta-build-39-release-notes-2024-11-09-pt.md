@@ -10,7 +10,7 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-39", "accessibility", "logging", "dice-roller", "ui"]
 ---
 
-Lançado em 9 de Novembro de 2024
+Lançado em 9 de novembro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 

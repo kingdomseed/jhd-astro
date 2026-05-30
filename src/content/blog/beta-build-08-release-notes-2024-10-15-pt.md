@@ -10,7 +10,7 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-08", "fate", "lists", "journal", "settings"]
 ---
 
-Lançado em 15 de Outubro de 2024
+Lançado em 15 de outubro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
@@ -36,9 +36,9 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 - Número da build agora aparece em Sobre Nós
 
 ### Configurações
-- Redesenhado com alternâncias de recursos futuros
-  - Modo daltônico (em breve)
-  - Modo destro/canhoto (em breve)
+- Redesenhado com alternâncias de recursos em estágio beta
+  - Espaço reservado para modo daltônico
+  - Espaço reservado para modo destro/canhoto
   - Seleção de tema (padrão: Sistema)
 
 ## Atualizações Menores

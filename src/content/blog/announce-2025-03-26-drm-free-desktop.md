@@ -32,24 +32,24 @@ Following the release of Mythic GME Mobile for Android and iOS, and inspired by 
 
 - macOS: Universal binary (M1+ recommended)
 
-🔒 No Subscriptions, No IAPs
-Pay once ($XX.XX) at our itch.io page and get:
+🔒 Desktop Purchase
+Buy the desktop app on itch.io and get:
 
-- All current features unlocked
-- Free updates forever
+- All desktop features available in the current build
+- Ongoing app updates
 
 - Cross-platform downloads
 ## 🛠️ Built With You, For You
 
 > *"More than half our improvements come straight from the Mythic Discord. This isn’t my app – it’s* our *app."* – Jason Holt, Developer
 
-One of the most exciting aspects of developing *Mythic GME Digital* has been the incredible feedback and suggestions from the Mythic community. Many features in the app today—and even more coming soon—are directly inspired by your input. Here’s how your ideas have shaped this project:
+One of the most exciting aspects of developing *Mythic GME Digital* has been the incredible feedback and suggestions from the Mythic community. Many features in the app are directly inspired by your input. Here’s how your ideas have shaped this project:
 
 - Extensive Accessibility Support From screen reader compatibility to adjustable font sizes, colorblind mode, and left-handed operation, accessibility features were prioritized thanks to community requests for inclusivity.
 - Expanded Meaning Tables The app now includes a massive collection of d100 meaning tables and event focus tables sourced from *Mythic Variations* and *Mythic Magazines*, fulfilling requests for more tools to inspire creative storytelling.
 
 - Design Choices Based on Player Feedback Every aspect of the app, from layout to navigation, reflects decisions influenced by Mythicers’ feedback. Your suggestions have helped me refine the user experience to better suit solo players, GM-less groups, and storytellers alike.
-- Upcoming Features on the Roadmap Version 1.5 will introduce custom table creation—a highly requested feature that will allow you to tailor your experience even further. This is just one of many exciting updates inspired by community input.
+- Roadmap Work At the time this announcement was written, Custom Tables were the next major roadmap item. They have since shipped, and community feedback continues to guide what gets refined next.
 
 Your feedback has been invaluable in shaping *Mythic GME Digital*. If you have ideas for future features or improvements, let me know through the Mythic Discord or the itch.io community pages. Together, we’re building the ultimate storytelling companion!
 
@@ -79,14 +79,14 @@ Linux Compatibility
 When my wife and I committed to this full-time development journey last year, we set out to create tools that empower storytellers across desktop platforms:
 
 - Your data stays yours – Export adventures, save locally, and integrate with your preferred tools.
-- Lifetime updates for one price – Buy once and enjoy ongoing support and updates across Windows, Linux, and macOS.
+- Ongoing desktop support – Buy the desktop app once and receive ongoing support and updates across Windows, Linux, and macOS.
 
 Thanks to my wife’s support through her job, I’ve been able to dedicate myself fully to developing *Mythic GME Digital*. Every purchase helps sustain this journey and ensures the app continues to grow with new features and improvements inspired by the incredible Mythic community.
 
 Every purchase helps us:
 
 - Keep Linux builds alive
-- Add features like upcoming features like custom tables and hybrid play options
+- Keep improving desktop builds and community-requested play tools
 
 - Support my wife’s patience with my coding marathons 😄
 ## 📖 Required Reading
@@ -104,4 +104,4 @@ Grab your copy at jasonholtdigital.itch.io/mythic-gme-digital and let me know:
 
 *Still have questions? Reply below or find me in the Mythic Discord!*
 
-*Mythic GME Digital is an official licensed product created in partnership with Tana Pigeon. Mythic Game Master Emulator 2nd Edition is &copy;2025 Word Mill Games.*
+*Mythic GME Digital is an official licensed product created in partnership with Tana Pigeon. Mythic Game Master Emulator 2nd Edition is &copy;2025 Word Mill Creative LLC.*

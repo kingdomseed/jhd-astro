@@ -1,6 +1,6 @@
 ---
 title: "Quadro de Pedidos de Recursos + Roadmap"
-summary: "Vote em 42 pedidos de recursos abertos; compartilhe ideias; roadmap preenchendo até o final de Outubro"
+summary: "O quadro de pedidos e o roadmap público foram lançados para jogadores votarem, comentarem e ajudarem a guiar o trabalho futuro nos apps."
 category: "Community"
 date: "2025-09-16"
 readTime: "2 min de leitura"
@@ -10,17 +10,17 @@ tags: ["announcement", "community", "product:apps", "feature-requests", "roadmap
 keywords: ["anúncio", "pedidos de recursos", "roadmap", "comunidade", "Apps Mythic GME"]
 ---
 
-Espero que aqueles de vocês que têm a versão 1.5 com tabelas personalizadas estejam gostando! Eu lancei um **quadro de pedidos de recursos** e um **roadmap público** para o trabalho futuro nos apps.
+Espero que aqueles de vocês que têm a versão 1.5 com Tabelas Personalizadas estejam gostando! Eu lancei um **quadro de pedidos de recursos** e um **roadmap público** para o trabalho futuro nos apps.
 
 ## Vote em recursos
 
-Existem atualmente **42 pedidos de recursos abertos**. O quadro permite que você **vote** no que gostaria de ver a seguir para que eu possa priorizar o trabalho que mais importa.
+No lançamento, o quadro começou com **42 pedidos de recursos**. Ele permite que você **vote** no que gostaria de ver a seguir para que eu possa priorizar o trabalho que mais importa.
 
 - Quadro: [feedback.jasonholtdigital.com/board](http://feedback.jasonholtdigital.com/board)
 
 ## Status do Roadmap
 
-O roadmap ainda não está totalmente preenchido; vou detalhá-lo conforme planejo os próximos lançamentos principais. Espere algo mais concreto até o final de Outubro.
+Quando este post foi escrito, o roadmap ainda estava sendo preenchido. Use o quadro para ver o estado atual dos pedidos e itens do roadmap.
 
 ## Como contribuir
 
@@ -30,4 +30,4 @@ O roadmap ainda não está totalmente preenchido; vou detalhá-lo conforme plane
 
 ## O que vem a seguir
 
-O trabalho continua enquanto avançamos em direção à **versão 1.6**. Obrigado por todo o seu apoio!
+O trabalho continua com o feedback dos jogadores como uma das principais formas de melhorar os apps. Obrigado por todo o seu apoio!

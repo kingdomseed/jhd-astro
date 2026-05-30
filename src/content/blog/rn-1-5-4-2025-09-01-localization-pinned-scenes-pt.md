@@ -10,7 +10,7 @@ keywords: ["notas de lançamento", "Apps Mythic GME"]
 tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performance", "accessibility"]
 ---
 
-*Lançado em 1 de Setembro de 2025*
+Lançado em 1 de setembro de 2025.
 
 ## O Que Há de Novo
 
@@ -40,7 +40,7 @@ tags: ["release", "v1.5.4", "product:apps", "localization", "scenes", "performan
 
 ## O Que Foi Corrigido
 - **Confiabilidade de Backup**: Backups de diário agora têm mais tempo para completar, prevenindo backups falhos
-- **Rastreamento de Analytics**: Rastreamento de analytics corrigido em todos os dispositivos
+- **Analytics**: Tratamento de analytics opcional corrigido nos dispositivos suportados
 
 - **Posição de Rolagem**: Posição de rolagem corrigida pulando ao navegar entre cenas
 - **Traduções de Tabela**: Problemas de tradução corrigidos no editor de Tabela Personalizada

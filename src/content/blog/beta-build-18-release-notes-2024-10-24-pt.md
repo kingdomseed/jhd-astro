@@ -10,11 +10,12 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-18", "create-load", "fate", "lists", "scenes"]
 ---
 
-Lançado em 24 de Outubro de 2024
+Lançado em 24 de outubro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-Importante: Por favor, apague o app e instale o próximo beta do zero.
+Para esta beta, os testadores foram orientados a apagar o app e instalar a
+próxima beta do zero.
 
 ## Atualizações Principais
 
@@ -62,5 +63,5 @@ Importante: Por favor, apague o app e instale o próximo beta do zero.
 - Amplas correções de bugs e polimento de estilo
 
 ## Notas
-- Atualizações do Rolador de Dados ainda estão pendentes
+- Atualizações do Rolador de Dados ainda estavam pendentes nesta build
 - Acessibilidade não foi atualizada nesta build

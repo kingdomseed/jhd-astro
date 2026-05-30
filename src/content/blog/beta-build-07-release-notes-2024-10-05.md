@@ -9,7 +9,7 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-07", "stability", "ui"]
 ---
 
-Released October 5, 2024
+Released October 5, 2024.
 
 This post is part of the Beta → First Release series.
 
@@ -31,4 +31,4 @@ This post is part of the Beta → First Release series.
 ## Notes
 
 - Save/Load removed from Adventure Lists (lists autosave; the controls didn’t make sense here)
-- Working on Android next — thanks for your patience while we get that build ready
+- At the time, Android was still being prepared for a later beta build.

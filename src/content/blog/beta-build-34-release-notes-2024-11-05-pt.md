@@ -10,11 +10,12 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-34", "stability", "privacy", "dice-roller"]
 ---
 
-Lançado em 5 de Novembro de 2024
+Lançado em 5 de novembro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-Uma atualização está saindo agora para iOS e Android. Amazon a seguir amanhã.
+Na época, esta atualização estava saindo para iOS e Android, com Amazon vindo
+separadamente.
 
 ## Melhorias
 - Aprimoramentos de visibilidade de texto em todo o app
@@ -23,7 +24,7 @@ Uma atualização está saindo agora para iOS e Android. Amazon a seguir amanhã
 - Designs de ícone de app atualizados
 - Novas capturas de tela e conteúdo de listagem de loja
 
-## Versão — Lançamento Atual
+## Notas Da Versão
 
 ### Melhorias Principais
 
@@ -54,11 +55,11 @@ Uma atualização está saindo agora para iOS e Android. Amazon a seguir amanhã
 - Validação de dados aprimorada para persistência do estado do jogo
 - Desempenho otimizado durante sessões de jogo estendidas
 
-## Problemas Conhecidos
-- Algumas preocupações de visibilidade de texto ainda sendo abordadas
-- Refinamentos menores de UI pendentes
+## Problemas Conhecidos Na Época
+- Algumas preocupações de visibilidade de texto ainda estavam sendo abordadas
+- Refinamentos menores de interface permaneciam
 - Eventos Aleatórios podem não disparar corretamente em alguns casos extremos
 
 ## Notas
 - Por favor, relate problemas e feedback através do canal de suporte do app
-- Faça backup dos seus jogos salvos regularmente enquanto melhorias no sistema de salvamento continuam
+- Faça backup dos seus jogos salvos regularmente enquanto as melhorias no sistema de salvamento estavam em andamento
