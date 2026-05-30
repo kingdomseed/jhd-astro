@@ -10,7 +10,8 @@ const t = useTranslations(lang);
 const l = (path: string) => getRelativeLocaleUrl(lang, path);
 ---
 
-<section class="container section" id="support" aria-labelledby="support-title">
+<section class="section-block section-block--plain" id="support" aria-labelledby="support-title">
+  <div class="container section">
   <header class="section-head" aria-hidden="true">
     <span class="accent-line" aria-hidden="true"></span>
     <span class="badge-text">{t("community.badge")}</span>
@@ -48,5 +49,6 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
         </a>
       </p>
     </div>
+  </div>
   </div>
 </section>

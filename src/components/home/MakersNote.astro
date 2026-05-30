@@ -13,10 +13,12 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
 ---
 
 <section
-  class="container section note"
+  class="section-block section-block--band"
   id="about"
   aria-labelledby="about-title"
 >
+  <div class="container section">
+  <div class="note">
   <header class="section-head" aria-hidden="true">
     <span class="accent-line" aria-hidden="true"></span>
     <span class="badge-text">{t("makers.badge")}</span>
@@ -48,5 +50,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
         </a>
       </p>
     </div>
+  </div>
+  </div>
   </div>
 </section>

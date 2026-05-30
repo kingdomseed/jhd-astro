@@ -8,7 +8,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="container section" id="apps" aria-labelledby="benefits-title">
+<section class="section-block section-block--plain" id="apps" aria-labelledby="benefits-title">
+  <div class="container section">
   <header class="benefits-head" aria-hidden="false">
     <span class="accent-line" aria-hidden="true"></span>
     <span class="badge-text">{t("benefit.badge")}</span>
@@ -43,5 +44,6 @@ const t = useTranslations(lang);
       <h3>{t("benefit.card4.title")}</h3>
       <p>{t("benefit.card4.desc")}</p>
     </article>
+  </div>
   </div>
 </section>

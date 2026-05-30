@@ -25,11 +25,99 @@
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: saturate(160%) blur(6px);
   }
+
+  /* Homepage: transparent chrome; atmosphere from #bg-atmo only (see hero.css) */
+  html.hero-dock-header header.header-nav {
+    transition:
+      background-color 200ms var(--easing-standard),
+      backdrop-filter 200ms var(--easing-standard),
+      border-color 200ms var(--easing-standard),
+      box-shadow 200ms var(--easing-standard);
+  }
+
+  html.hero-dock-header .brand strong {
+    display: none;
+  }
+
+  /* At top of homepage: no bar chrome; gradient is continuous behind util + nav */
+  html.hero-dock-header header.header-nav:not(.is-scrolled):not(.is-revealed) {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  html.hero-dock-header header.header-nav.is-scrolled,
+  html.hero-dock-header header.header-nav.is-revealed {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: saturate(160%) blur(8px);
+    border-bottom: var(--border-thick);
+    box-shadow: none;
+  }
+
+  /* Homepage header: brand left, nav centered, CTA slot reserved on the right */
+  @media (min-width: 901px) {
+    html.hero-dock-header header.header-nav .header-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      column-gap: 1.25rem;
+    }
+
+    html.hero-dock-header header.header-nav .brand {
+      grid-column: 1;
+      justify-self: start;
+    }
+
+    html.hero-dock-header header.header-nav .nav--desktop {
+      grid-column: 2;
+      justify-self: center;
+      margin-left: 0;
+    }
+
+    html.hero-dock-header header.header-nav .header-cta-slot {
+      grid-column: 3;
+      justify-self: end;
+      min-width: 11.25rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Keep layout stable: hide button but reserve the right column */
+    html.hero-dock-header header.header-nav:not(.is-revealed) .header-cta-slot {
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    html.hero-dock-header header.header-nav.is-revealed .header-cta-slot {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  /* Other pages: brand left, nav + CTA grouped on the right */
+  @media (min-width: 901px) {
+    header.header-nav .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header.header-nav .nav--desktop {
+      margin-left: auto;
+    }
+  }
  
   .brand {
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  /* Inline img baseline gap reads as a hairline under the logo on the left */
+  .brand-logo {
+    display: block;
+    flex-shrink: 0;
   }
   /* Hide the brand wordmark earlier on medium widths to preserve space */
   .brand strong {
@@ -111,21 +199,52 @@
     transform: scale(1);
   }
 
-  /* CTA Download: make it pop a bit more than other nav items */
+  /* Header download CTA: quiet chip (hero owns the loud primary CTA) */
   .cta-download {
     position: relative;
     z-index: 1;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--color-text) 10%, transparent);
   }
-  
-  /* Blue anchored shadow specifically for the header CTA */
-  .cta-download.btn {
-    box-shadow: 6px 6px 0 0 var(--color-primary);
+
+  .cta-download.btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 color-mix(in srgb, var(--color-primary) 28%, transparent);
   }
-  .cta-download.btn:hover { box-shadow: 8px 8px 0 0 var(--color-primary); }
-  .cta-download.btn:active { box-shadow: 7px 7px 0 0 var(--color-primary); }
-  /* Rotate caret when menu is open (aria-expanded=true) */
-  .cta-download[aria-expanded="true"] i { transition: transform 0.18s var(--easing-standard); transform: rotate(180deg); }
-  .cta-download i { transition: transform 0.18s var(--easing-standard); }
+
+  .cta-download.btn:active {
+    transform: none;
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--color-text) 10%, transparent);
+  }
+
+  .cta-download .fa-arrow-down-to-line {
+    font-size: 0.9em;
+    opacity: 0.85;
+  }
+
+  .cta-download-caret {
+    font-size: 0.85em;
+    opacity: 0.7;
+    transition: transform 0.18s var(--easing-standard);
+  }
+
+  .cta-download[aria-expanded="true"] .cta-download-caret {
+    transform: rotate(180deg);
+  }
+
+  html.hero-dock-header header.header-nav:not(.is-scrolled):not(.is-revealed) .cta-download.btn {
+    background: color-mix(in srgb, #ffffff 72%, transparent);
+    backdrop-filter: blur(6px);
+    border-color: color-mix(in srgb, var(--color-text) 22%, transparent);
+    box-shadow: none;
+  }
+
+  html.hero-dock-header header.header-nav:not(.is-scrolled):not(.is-revealed) .cta-download.btn:hover {
+    background: color-mix(in srgb, #ffffff 92%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    box-shadow: 2px 2px 0 color-mix(in srgb, var(--color-primary) 18%, transparent);
+  }
 
   /* Header download menu */
   .cta-download-wrap {
@@ -385,7 +504,8 @@
 
   /* Responsive behavior */
   @media (max-width: 900px) {
-    .nav--desktop {
+    .nav--desktop,
+    .header-cta-slot {
       display: none;
     }
 

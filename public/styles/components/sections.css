@@ -1,0 +1,51 @@
+@layer components {
+  /* Full-bleed sections with clear neo-brutalist dividers between blocks */
+  #main > section + section {
+    border-top: var(--border-heavy);
+  }
+
+  /* Hero stacks above the next section (z-index); draw the divider on the hero bottom */
+  #main > .hero-electric {
+    border-bottom: var(--border-heavy);
+  }
+
+  #main > .hero-electric + section {
+    border-top: none;
+  }
+
+  #main > section:last-of-type {
+    border-bottom: var(--border-heavy);
+  }
+
+  .section-block {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .section-block--plain {
+    background: var(--color-bg);
+  }
+
+  .section-block--band {
+    background: linear-gradient(315deg, var(--color-bg) 0%, var(--color-surface-2) 100%);
+  }
+
+  .section-block--band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--color-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .section-block--band > .container {
+    position: relative;
+    z-index: 1;
+  }
+}

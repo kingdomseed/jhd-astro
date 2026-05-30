@@ -10,6 +10,22 @@
     background: rgba(255, 255, 255, 0.015);
     font-size: 13px;
   }
+
+  /* Homepage: partner strip floats on the same atmosphere as the hero */
+  html.hero-dock-header .util {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  html.hero-dock-header .util .tag {
+    background: color-mix(in srgb, #ffffff 40%, transparent);
+  }
+
+  html.hero-dock-header .util a {
+    color: var(--color-text);
+    border-bottom-color: color-mix(in srgb, var(--color-electric-blue) 45%, transparent);
+    font-weight: 600;
+  }
   .tag {
     position: relative;
     display: inline-flex;

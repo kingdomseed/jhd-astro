@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import UtilBar from '../../components/layout/UtilBar.astro';
 import Hero from '../../components/home/Hero.astro';
-import Billboard from '../../components/home/Billboard.astro';
+import AppWorkspaceShowcase from '../../components/home/AppWorkspaceShowcase.astro';
 import CoreBenefits from '../../components/home/CoreBenefits.astro';
 import CommunitySupport from '../../components/home/CommunitySupport.astro';
 import Partners from '../../components/home/Partners.astro';
@@ -16,6 +16,7 @@ import ReviewsRotator from '../../components/home/ReviewsRotator.astro';
   canonicalPath="/pt/"
   lang="pt"
   alternatePath="/"
+  heroDockHeader
   ogTitle="Apps oficiais Mythic GME 2e — Jason Holt Digital"
   ogDescription="RPG sem mestre na ponta dos dedos. Apps oficiais licenciados para Mythic GME 2e no mobile e no desktop."
 >
@@ -42,9 +43,9 @@ import ReviewsRotator from '../../components/home/ReviewsRotator.astro';
   </Fragment>
 
   <Hero />
-  <Billboard />
   <ReviewsRotator />
   <CoreBenefits />
+  <AppWorkspaceShowcase />
   <CommunitySupport />
   <Partners />
   <PopularResources />

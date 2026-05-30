@@ -1,49 +1,333 @@
 ---
+import { Image } from "astro:assets";
+import m1 from "../../assets/mobile/mobile-1.png";
+import m2 from "../../assets/mobile/mobile-2.png";
+import m3 from "../../assets/mobile/mobile-3.png";
+import m4 from "../../assets/mobile/mobile-4.png";
+import m5 from "../../assets/mobile/mobile-5.png";
+import m6 from "../../assets/mobile/mobile-6.png";
+import m7 from "../../assets/mobile/mobile-7.png";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const l = (path: string) => getRelativeLocaleUrl(lang, path);
+
+/** Pre-rendered phone mockups (device chrome is part of the PNG), same set as v2 hero */
+const slideImages = [m1, m2, m3, m4, m5, m6, m7];
+
+const slideLabels = [
+  t("hero.slide.1"),
+  t("hero.slide.2"),
+  t("hero.slide.3"),
+  t("hero.slide.4"),
+  t("hero.slide.5"),
+  t("hero.slide.6"),
+  t("hero.slide.7"),
+];
+
+const storeLinks = [
+  {
+    href: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
+    icon: "fa-brands fa-apple",
+    label: t("platform.apple"),
+  },
+  {
+    href: "https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e",
+    icon: "fa-brands fa-google-play",
+    label: t("platform.google"),
+  },
+  {
+    href: "https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9",
+    icon: "fa-brands fa-amazon",
+    label: t("platform.amazon"),
+  },
+  {
+    href: "https://apps.microsoft.com/detail/9n39b8hj3cdg",
+    icon: "fa-brands fa-windows",
+    label: t("platform.microsoft"),
+  },
+  {
+    href: "https://jasonholtdigital.itch.io/mythic-gme-digital",
+    icon: "fa-brands fa-itch-io",
+    label: t("platform.itch"),
+  },
+] as const;
 ---
 
-<section class="hero hero-fullwidth" aria-labelledby="hero-title">
-  <!-- Layer reserved for future decoration; hidden by default -->
-  <div class="grid-layer" aria-hidden="true"></div>
+<section class="hero hero-electric" data-hero aria-labelledby="hero-title">
+  <div class="hero-atmo" aria-hidden="true">
+    <div class="hero-orb hero-orb--blue" data-hero-parallax="0.04"></div>
+    <div class="hero-orb hero-orb--gold" data-hero-parallax="0.06"></div>
+    <div class="hero-grid-glow"></div>
+    <div class="hero-scanlines"></div>
+  </div>
+
   <div class="hero-content">
-    <header class="hero-head">
-      <div class="hero-eyebrow" aria-hidden="true">
-        <span class="accent-line" aria-hidden="true"></span>
-        <span class="badge-text">{t("hero.eyebrow")}</span>
+    <div class="hero-grid">
+      <header class="hero-copy">
+        <div class="hero-eyebrow" aria-hidden="true">
+          <span class="accent-line" aria-hidden="true"></span>
+          <span class="badge-text">{t("hero.eyebrow")}</span>
+        </div>
+        <h1 id="hero-title" class="hero-title">
+          {t("hero.headline_prefix")}<span class="hero-highlight">{t("hero.headline_emphasis")}</span>
+        </h1>
+        <p class="hero-lead">{t("hero.lead")}</p>
+
+        <div class="hero-cta-row">
+          <span class="hero-download-wrap">
+            <button
+              type="button"
+              class="btn btn--primary btn--hero-primary"
+              id="heroDownloadBtn"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="heroDownloadMenu"
+            >
+              <i class="fa-slab fa-regular fa-arrow-down-to-line" aria-hidden="true"></i>
+              {t("cta.get_app")}
+              <i class="fa-slab fa-regular fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div
+              id="heroDownloadMenu"
+              class="menu hero-download-menu"
+              role="menu"
+              aria-label={t("hero.aria.download_menu")}
+            >
+              {
+                storeLinks.map((link) => (
+                  <a role="menuitem" href={link.href} target="_blank" rel="noopener noreferrer">
+                    <i class={link.icon} aria-hidden="true"></i>
+                    {link.label}
+                  </a>
+                ))
+              }
+            </div>
+          </span>
+          <a class="btn btn--shadow-accent btn--hero-secondary" href={l("resources")}>
+            <i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i>
+            {t("hero.get_resources")}
+          </a>
+        </div>
+
+        <ul class="hero-proof" role="list">
+          <li class="hero-proof-item">
+            <span class="hero-proof-value">4.8</span>
+            <i class="fa-slab fa-regular fa-star" aria-hidden="true"></i>
+            <span class="hero-proof-label">{t("hero.stats.rating")}</span>
+          </li>
+          <li class="hero-proof-item">
+            <i class="fa-slab fa-regular fa-arrow-down-to-line" aria-hidden="true"></i>
+            <span class="hero-proof-label">{t("hero.stats.installs")}</span>
+          </li>
+          <li class="hero-proof-item">
+            <i class="fa-slab fa-regular fa-users" aria-hidden="true"></i>
+            <span class="hero-proof-label">{t("hero.stats.community")}</span>
+          </li>
+        </ul>
+      </header>
+
+      <div
+        class="hero-stage"
+        data-hero-carousel
+        aria-roledescription="carousel"
+        aria-label={t("hero.aria.phone_carousel")}
+      >
+        <div class="hero-stage-plate" aria-hidden="true"></div>
+        <div class="hero-stage-slab" aria-hidden="true"></div>
+        <p class="hero-stage-badge" aria-hidden="true">{t("hero.stage_badge")}</p>
+
+        <div class="hero-phone-carousel" data-hero-phone>
+          {
+            slideImages.map((src, index) => (
+              <div
+                class:list={["hero-phone-slide", { "is-active": index === 0 }]}
+                data-hero-slide
+                data-label={slideLabels[index]}
+                aria-hidden={index !== 0}
+              >
+                <Image
+                  src={src}
+                  alt={`${slideLabels[index]} — ${t("hero.aria.slide_alt")}`}
+                  widths={[300, 450, 600]}
+                  sizes="(max-width: 980px) 72vw, 300px"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                  decoding="async"
+                />
+              </div>
+            ))
+          }
+          <div class="hero-phone-caption">
+            <span id="heroCaptLabel">{slideLabels[0]}</span>
+            <span class="hero-phone-ix" id="heroCaptIx" aria-hidden="true">01 / 07</span>
+          </div>
+          <div class="hero-phone-steps" id="heroPhoneSteps" aria-label={t("hero.aria.slide_picker")}></div>
+        </div>
+        <p id="heroCarouselStatus" class="sr-only" aria-live="polite"></p>
       </div>
-      <h1 id="hero-title" class="display-title">{t("hero.headline")}</h1>
-      <p class="lead-accent">{t("hero.lead")}</p>
-      <div class="cta-row">
-        <a class="btn btn--shadow-primary" href={l("apps")}>
-          <i class="fa-slab fa-regular fa-circle-info" aria-hidden="true"></i>
-          {t("hero.learn_more")}
-        </a>
-        <a class="btn btn--shadow-accent" href={l("resources")}>
-          <i class="fa-slab fa-regular fa-book-open" aria-hidden="true"></i>
-          {t("hero.get_resources")}
-        </a>
-      </div>
-      <ul class="stats" role="list">
-        <li class="stat-chip">
-          <span class="stat-value">4.8</span>
-          <i class="fa-slab fa-regular fa-star" aria-hidden="true"></i>
-          <span>{t("hero.stats.rating")}</span>
-        </li>
-        <li class="stat-chip">
-          <i class="fa-slab fa-regular fa-arrow-down-to-line" aria-hidden="true"
-          ></i>
-          <span>{t("hero.stats.installs")}</span>
-        </li>
-        <li class="stat-chip">
-          <i class="fa-slab fa-regular fa-users" aria-hidden="true"></i>
-          <span>{t("hero.stats.community")}</span>
-        </li>
-      </ul>
-    </header>
+    </div>
   </div>
 </section>
+
+<script>
+  const heroSection = document.querySelector<HTMLElement>("[data-hero]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // --- Phone carousel ---
+  const carouselRoot = document.querySelector<HTMLElement>("[data-hero-carousel]");
+  if (carouselRoot) {
+    const slides = [...carouselRoot.querySelectorAll<HTMLElement>("[data-hero-slide]")];
+    const stepsHost = document.getElementById("heroPhoneSteps");
+    const captLabel = document.getElementById("heroCaptLabel");
+    const captIx = document.getElementById("heroCaptIx");
+    const status = document.getElementById("heroCarouselStatus");
+    let activeIndex = 0;
+    let timer: ReturnType<typeof setInterval> | undefined;
+
+    const pad = (n: number) => String(n).padStart(2, "0");
+
+    const announce = () => {
+      const label = slides[activeIndex]?.dataset.label ?? "";
+      if (captLabel) captLabel.textContent = label;
+      if (captIx) captIx.textContent = `${pad(activeIndex + 1)} / ${pad(slides.length)}`;
+      if (status) status.textContent = `${label}. ${pad(activeIndex + 1)} of ${pad(slides.length)}.`;
+    };
+
+    const goTo = (index: number) => {
+      if (!slides.length) return;
+      activeIndex = ((index % slides.length) + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        const on = i === activeIndex;
+        slide.classList.toggle("is-active", on);
+        slide.setAttribute("aria-hidden", String(!on));
+      });
+      stepsHost?.querySelectorAll<HTMLButtonElement>("[data-hero-step]").forEach((btn, i) => {
+        btn.classList.toggle("is-active", i === activeIndex);
+        btn.setAttribute("aria-current", i === activeIndex ? "true" : "false");
+      });
+      announce();
+    };
+
+    if (slides.length && stepsHost) {
+      stepsHost.innerHTML = slides
+        .map(
+          (_, i) =>
+            `<button type="button" class="hero-phone-step${i === 0 ? " is-active" : ""}" data-hero-step data-index="${i}" aria-label="Slide ${i + 1}"></button>`,
+        )
+        .join("");
+
+      stepsHost.querySelectorAll<HTMLButtonElement>("[data-hero-step]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = Number(btn.dataset.index);
+          if (!Number.isNaN(i)) {
+            goTo(i);
+            resetTimer();
+          }
+        });
+      });
+
+      announce();
+
+      const resetTimer = () => {
+        if (timer) clearInterval(timer);
+        if (reducedMotion || slides.length < 2) return;
+        timer = setInterval(() => goTo(activeIndex + 1), 4500);
+      };
+
+      resetTimer();
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && timer) clearInterval(timer);
+        else resetTimer();
+      });
+    }
+  }
+
+  // --- Hero download menu ---
+  const heroDownloadBtn = document.getElementById("heroDownloadBtn");
+  const heroDownloadMenu = document.getElementById("heroDownloadMenu");
+  if (heroDownloadBtn && heroDownloadMenu) {
+    const menuItems = [...heroDownloadMenu.querySelectorAll<HTMLAnchorElement>("a[role='menuitem']")];
+    let lastInput: "keyboard" | "pointer" = "pointer";
+
+    const closeHeroMenu = (restoreFocus: boolean) => {
+      heroDownloadMenu.classList.remove("open");
+      heroDownloadBtn.setAttribute("aria-expanded", "false");
+      if (restoreFocus) heroDownloadBtn.focus();
+    };
+
+    heroDownloadBtn.addEventListener("click", (e) => {
+      if (e.detail === 0) lastInput = "keyboard";
+      e.preventDefault();
+      e.stopPropagation();
+      const open = heroDownloadMenu.classList.toggle("open");
+      heroDownloadBtn.setAttribute("aria-expanded", String(open));
+      if (open && lastInput === "keyboard") menuItems[0]?.focus();
+    });
+
+    heroDownloadMenu.addEventListener("keydown", (e) => {
+      lastInput = "keyboard";
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+      e.preventDefault();
+      const active = document.activeElement as HTMLAnchorElement | null;
+      const i = active ? menuItems.indexOf(active) : -1;
+      const next =
+        e.key === "ArrowDown"
+          ? menuItems[(i + 1) % menuItems.length]
+          : menuItems[(i - 1 + menuItems.length) % menuItems.length];
+      next?.focus();
+    });
+
+    document.addEventListener("click", (e) => {
+      const target = e.target as Node | null;
+      if (target && !heroDownloadMenu.contains(target) && !heroDownloadBtn.contains(target)) {
+        closeHeroMenu(false);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && heroDownloadMenu.classList.contains("open")) {
+        closeHeroMenu(true);
+      }
+    });
+  }
+
+  // --- Parallax orbs (pointer only) ---
+  if (heroSection && !reducedMotion) {
+    const parallaxNodes = [...heroSection.querySelectorAll<HTMLElement>("[data-hero-parallax]")];
+    let frame = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    const applyParallax = () => {
+      frame = 0;
+      parallaxNodes.forEach((node) => {
+        const strength = Number(node.dataset.heroParallax) || 0.03;
+        node.style.transform = `translate(${targetX * strength * 40}px, ${targetY * strength * 40}px)`;
+      });
+    };
+
+    heroSection.addEventListener(
+      "pointermove",
+      (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        targetX = (e.clientX - rect.left) / rect.width - 0.5;
+        targetY = (e.clientY - rect.top) / rect.height - 0.5;
+        if (!frame) frame = requestAnimationFrame(applyParallax);
+      },
+      { passive: true },
+    );
+
+    heroSection.addEventListener(
+      "pointerleave",
+      () => {
+        targetX = 0;
+        targetY = 0;
+        if (!frame) frame = requestAnimationFrame(applyParallax);
+      },
+      { passive: true },
+    );
+  }
+</script>
