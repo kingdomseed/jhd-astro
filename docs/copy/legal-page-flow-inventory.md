@@ -242,28 +242,21 @@ Official external source checks:
 5. Portuguese legal adaptation after English approval. Status: Done for
    production Portuguese Privacy and Terms on 2026-05-28.
 
-## First Grill Target
+## Current Status And Outstanding Work
 
-Start with the Privacy page factual core. The current page says Firebase and
-many gameplay events are collected, but the current app appears to collect only
-a minimal opt-in PostHog daily active ping and always-on basic Sentry error
-reporting, with Session Replay separately opt-in on supported mobile platforms.
+English and Portuguese legal-page copy is complete for this production pass.
+The Privacy page has been updated for factual provider behavior, privacy
+rights, contact language, children's privacy wording, device-control drift, and
+overpromise/verified incomplete state-law listing risk. Terms product, license,
+purchase, refund, third-party, store, and change wording has also been updated.
+Portuguese legal pages have been adapted after English approval with
+Brazil/Portugal legal framing.
 
-Recommended direction:
+Remaining work is not copy grilling unless Jason explicitly starts it:
 
-- Remove Firebase/GA4 as an active provider.
-- Replace detailed gameplay event collection with the current minimal daily
-  active analytics model.
-- Say basic error reporting is always enabled in release builds, with sensitive
-  attachments tied to analytics consent where applicable.
-- Keep Session Replay separate from analytics and say it is off unless the
-  player enables it.
-- Keep local-first storage and "play content is not sent as analytics" as the
-  main privacy promise.
-
-Status: Done. The Privacy page has been updated for factual provider behavior,
-privacy rights, contact language, children's privacy wording, device-control
-drift, and remaining overpromise/verified incomplete state-law listing risk.
-Terms product, license, purchase, refund, third-party, store, and change wording
-has also been updated. Portuguese legal pages have been adapted after English
-approval with Brazil/Portugal legal framing.
+- Counsel review if the business needs legal sufficiency rather than factual
+  public copy alignment.
+- Fresh fact checks if app behavior, analytics/error reporting providers, store
+  policies, purchase models, or relevant laws change.
+- A targeted legal metadata refresh only when the legal page copy itself is
+  changed again.

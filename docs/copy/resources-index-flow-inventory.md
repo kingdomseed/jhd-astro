@@ -1,6 +1,6 @@
 # Resources Index Flow Inventory
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This is an inventory of the current production English Resources index. It
 records the page flow before rewriting so we can decide what each section is
@@ -8,7 +8,9 @@ supposed to do.
 
 Scope note: this pass is copy refinement for the Resources index only. Resource
 article bodies, Portuguese copy, and v2 resources pages belong to later passes
-unless Jason explicitly selects them.
+unless Jason explicitly selects them. Resource article body rewrites are
+procedural documentation, not ordinary prose polishing; before rewriting them,
+use Patrol or equivalent app navigation to verify the real in-app workflow.
 
 ## Source Files
 
@@ -109,12 +111,13 @@ metadata, page header copy, search microcopy, section headings, section
 descriptions, visible resource-card summaries, schema/reference wording, and
 the support CTA.
 
-## Next Step
+## Current Status
 
-Move to the Support page inventory and review its copy section by section.
+Resources index copy refinement is complete for the production English pass.
+Do not reopen this page unless Jason explicitly asks. Use
+`docs/copy/site-copy-tracker.md` for the current outstanding copy list.
 
-## Next Section
-
-Start with Resources metadata and page header. Show the current copy, then
-compare it against a recommended refinement that keeps the page practical while
-scoping it to the Mythic GME apps.
+Full Resource article body rewrites should be planned separately from the Blog
+rewrite pass. They need an app-grounded workflow inventory first: navigate the
+current app, confirm the steps, note platform differences, then rewrite the
+article from verified behavior rather than inferred product knowledge.

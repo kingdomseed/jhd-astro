@@ -1,5 +1,7 @@
 # SEO And Social Metadata Inventory
 
+Last updated: 2026-05-28
+
 This inventory covers the production English SEO/social surfaces after the
 approved About, Home, Apps, Resources, and Support copy passes. It is not a v2
 or Portuguese copy pass, except where hreflang behavior depends on Portuguese
@@ -49,12 +51,12 @@ routes.
 
 ## Current SEO/Social Tensions
 
-1. Portuguese top-level metadata remains a separate pass, except for removing
-   stale shared homepage JSON-LD price/rating fields.
-2. Blog category pages still use `noAlternate` because there are no Portuguese
+1. Blog category pages still use `noAlternate` because there are no Portuguese
    category index routes today.
-3. Legal metadata remains a separate pass and should only change with explicit
-   approval.
+2. Legal metadata should continue to move only with approved legal-page edits
+   and fresh fact checks.
+3. Future v2 metadata belongs to the v2 site direction, not this production
+   copy pass.
 
 ## Suggested Review Order
 
@@ -66,11 +68,14 @@ routes.
 4. Hreflang strategy: done for top-level pages, Blog details, and Resource
    details. Category pages intentionally suppress alternates because matching
    Portuguese category routes do not exist today.
-5. Portuguese metadata in a separate pass.
-6. Legal metadata only with explicit approval.
+5. Portuguese metadata and top-level alternates: done as part of the
+   Portuguese production pass.
+6. Legal metadata: done as part of the approved legal-page copy pass; future
+   changes require explicit approval.
 
-## First Recommended Question
+## Current Status
 
-The sitewide metadata mechanics and translated detail-page `hreflang` mapping
-are implemented. The next SEO/social decision is whether to do a Portuguese
-metadata pass or leave Portuguese metadata for the broader Portuguese copy pass.
+SEO/social mechanics are complete for the current production copy pass. The
+main remaining SEO/social work is intentionally separate: future v2 metadata
+once v2 is ready, and targeted metadata refreshes when specific Blog or Resource
+articles are rewritten.
