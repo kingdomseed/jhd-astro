@@ -88,6 +88,7 @@
     .display-title {
       color: var(--color-text);
       background: none;
+      -webkit-text-fill-color: currentColor;
     }
   }
 
