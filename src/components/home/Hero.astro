@@ -60,13 +60,6 @@ const storeLinks = [
 ---
 
 <section class="hero hero-electric" data-hero aria-labelledby="hero-title">
-  <div class="hero-atmo" aria-hidden="true">
-    <div class="hero-orb hero-orb--blue" data-hero-parallax="0.04"></div>
-    <div class="hero-orb hero-orb--gold" data-hero-parallax="0.06"></div>
-    <div class="hero-grid-glow"></div>
-    <div class="hero-scanlines"></div>
-  </div>
-
   <div class="hero-content">
     <div class="hero-grid">
       <header class="hero-copy">
@@ -196,7 +189,6 @@ const storeLinks = [
 </section>
 
 <script>
-  const heroSection = document.querySelector<HTMLElement>("[data-hero]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // --- Phone carousel ---
@@ -242,6 +234,12 @@ const storeLinks = [
     };
 
     if (slides.length && stepsHost) {
+      const resetTimer = () => {
+        if (timer) clearInterval(timer);
+        if (reducedMotion || slides.length < 2) return;
+        timer = setInterval(() => goTo(activeIndex + 1), 4500);
+      };
+
       stepsHost.querySelectorAll<HTMLButtonElement>("[data-hero-step]").forEach((btn) => {
         btn.addEventListener("click", () => {
           const i = Number(btn.dataset.index);
@@ -253,12 +251,6 @@ const storeLinks = [
       });
 
       announce();
-
-      const resetTimer = () => {
-        if (timer) clearInterval(timer);
-        if (reducedMotion || slides.length < 2) return;
-        timer = setInterval(() => goTo(activeIndex + 1), 4500);
-      };
 
       resetTimer();
       document.addEventListener("visibilitychange", () => {
@@ -315,42 +307,5 @@ const storeLinks = [
         closeHeroMenu(true);
       }
     });
-  }
-
-  // --- Parallax orbs (pointer only) ---
-  if (heroSection && !reducedMotion) {
-    const parallaxNodes = [...heroSection.querySelectorAll<HTMLElement>("[data-hero-parallax]")];
-    let frame = 0;
-    let targetX = 0;
-    let targetY = 0;
-
-    const applyParallax = () => {
-      frame = 0;
-      parallaxNodes.forEach((node) => {
-        const strength = Number(node.dataset.heroParallax) || 0.03;
-        node.style.transform = `translate(${targetX * strength * 40}px, ${targetY * strength * 40}px)`;
-      });
-    };
-
-    heroSection.addEventListener(
-      "pointermove",
-      (e) => {
-        const rect = heroSection.getBoundingClientRect();
-        targetX = (e.clientX - rect.left) / rect.width - 0.5;
-        targetY = (e.clientY - rect.top) / rect.height - 0.5;
-        if (!frame) frame = requestAnimationFrame(applyParallax);
-      },
-      { passive: true },
-    );
-
-    heroSection.addEventListener(
-      "pointerleave",
-      () => {
-        targetX = 0;
-        targetY = 0;
-        if (!frame) frame = requestAnimationFrame(applyParallax);
-      },
-      { passive: true },
-    );
   }
 </script>

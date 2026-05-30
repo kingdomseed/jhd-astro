@@ -14,78 +14,6 @@
     box-shadow: none;
   }
 
-  /* Homepage: one sky layer (#bg-atmo). Local orbs caused a darker-blue seam at hero top-left. */
-  html.hero-dock-header .hero-atmo {
-    display: none;
-  }
-
-  .hero-atmo {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(48px);
-    opacity: 0.85;
-    will-change: transform;
-  }
-
-  .hero-orb--blue {
-    width: min(52vw, 520px);
-    height: min(52vw, 520px);
-    top: -12%;
-    left: -8%;
-    background: radial-gradient(
-      circle,
-      color-mix(in srgb, var(--color-electric-blue) 55%, transparent) 0%,
-      transparent 68%
-    );
-    animation: hero-orb-drift-blue 14s var(--hero-ease-out) infinite alternate;
-  }
-
-  .hero-orb--gold {
-    width: min(44vw, 440px);
-    height: min(44vw, 440px);
-    right: -6%;
-    bottom: 4%;
-    background: radial-gradient(
-      circle,
-      color-mix(in srgb, var(--color-electric-yellow) 50%, transparent) 0%,
-      transparent 70%
-    );
-    animation: hero-orb-drift-gold 18s var(--hero-ease-out) infinite alternate;
-  }
-
-  .hero-grid-glow {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(color-mix(in srgb, var(--color-electric-blue) 12%, transparent) 1px, transparent 1px),
-      linear-gradient(90deg, color-mix(in srgb, var(--color-electric-blue) 10%, transparent) 1px, transparent 1px);
-    background-size: 28px 28px;
-    mask-image: radial-gradient(ellipse 80% 70% at 58% 42%, #000 0%, transparent 72%);
-    opacity: 0.35;
-    animation: hero-grid-pulse 8s ease-in-out infinite;
-  }
-
-  .hero-scanlines {
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      180deg,
-      transparent 0,
-      transparent 3px,
-      color-mix(in srgb, var(--color-electric-blue) 4%, transparent) 3px,
-      color-mix(in srgb, var(--color-electric-blue) 4%, transparent) 4px
-    );
-    opacity: 0.12;
-    mix-blend-mode: multiply;
-  }
-
   .hero-content {
     max-width: var(--container-max);
     margin: 0 auto;
@@ -413,34 +341,6 @@
     outline-offset: 2px;
   }
 
-  @keyframes hero-orb-drift-blue {
-    from {
-      transform: translate(0, 0) scale(1);
-    }
-    to {
-      transform: translate(4%, 6%) scale(1.06);
-    }
-  }
-
-  @keyframes hero-orb-drift-gold {
-    from {
-      transform: translate(0, 0) scale(1);
-    }
-    to {
-      transform: translate(-5%, -4%) scale(1.05);
-    }
-  }
-
-  @keyframes hero-grid-pulse {
-    0%,
-    100% {
-      opacity: 0.28;
-    }
-    50% {
-      opacity: 0.42;
-    }
-  }
-
   /* Entrance (content visible by default; motion enhances) */
   @media (prefers-reduced-motion: no-preference) {
     .hero-copy > * {
@@ -544,11 +444,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .hero-orb,
-    .hero-grid-glow {
-      animation: none;
-    }
-
     .hero-phone-slide {
       transition: opacity 0.2s ease;
       transform: none;
@@ -564,11 +459,6 @@
     .hero-highlight {
       box-shadow: none;
       outline: 2px solid var(--color-text);
-    }
-
-    .hero-orb,
-    .hero-scanlines {
-      display: none;
     }
   }
 }
