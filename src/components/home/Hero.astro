@@ -13,6 +13,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const l = (path: string) => getRelativeLocaleUrl(lang, path);
+const isPt = lang === "pt";
+const slidePrefix = isPt ? "Imagem" : "Slide";
+const slideJoin = isPt ? "de" : "of";
 
 /** Pre-rendered phone mockups (device chrome is part of the PNG), same set as v2 hero */
 const slideImages = [m1, m2, m3, m4, m5, m6, m7];
@@ -132,6 +135,8 @@ const storeLinks = [
       <div
         class="hero-stage"
         data-hero-carousel
+        data-slide-prefix={slidePrefix}
+        data-slide-join={slideJoin}
         aria-roledescription="carousel"
         aria-label={t("hero.aria.phone_carousel")}
       >
@@ -164,7 +169,25 @@ const storeLinks = [
             <span id="heroCaptLabel">{slideLabels[0]}</span>
             <span class="hero-phone-ix" id="heroCaptIx" aria-hidden="true">01 / 07</span>
           </div>
-          <div class="hero-phone-steps" id="heroPhoneSteps" aria-label={t("hero.aria.slide_picker")}></div>
+          <div
+            class="hero-phone-steps"
+            id="heroPhoneSteps"
+            role="group"
+            aria-label={t("hero.aria.slide_picker")}
+          >
+            {
+              slideLabels.map((label, index) => (
+                <button
+                  type="button"
+                  class:list={["hero-phone-step", { "is-active": index === 0 }]}
+                  data-hero-step
+                  data-index={index}
+                  aria-label={label}
+                  aria-current={index === 0 ? "true" : undefined}
+                />
+              ))
+            }
+          </div>
         </div>
         <p id="heroCarouselStatus" class="sr-only" aria-live="polite"></p>
       </div>
@@ -189,11 +212,16 @@ const storeLinks = [
 
     const pad = (n: number) => String(n).padStart(2, "0");
 
+    const slidePrefix = carouselRoot.dataset.slidePrefix || "Slide";
+    const slideJoin = carouselRoot.dataset.slideJoin || "of";
+
     const announce = () => {
       const label = slides[activeIndex]?.dataset.label ?? "";
       if (captLabel) captLabel.textContent = label;
       if (captIx) captIx.textContent = `${pad(activeIndex + 1)} / ${pad(slides.length)}`;
-      if (status) status.textContent = `${label}. ${pad(activeIndex + 1)} of ${pad(slides.length)}.`;
+      if (status) {
+        status.textContent = `${label}. ${slidePrefix} ${pad(activeIndex + 1)} ${slideJoin} ${pad(slides.length)}.`;
+      }
     };
 
     const goTo = (index: number) => {
@@ -205,20 +233,15 @@ const storeLinks = [
         slide.setAttribute("aria-hidden", String(!on));
       });
       stepsHost?.querySelectorAll<HTMLButtonElement>("[data-hero-step]").forEach((btn, i) => {
-        btn.classList.toggle("is-active", i === activeIndex);
-        btn.setAttribute("aria-current", i === activeIndex ? "true" : "false");
+        const on = i === activeIndex;
+        btn.classList.toggle("is-active", on);
+        if (on) btn.setAttribute("aria-current", "true");
+        else btn.removeAttribute("aria-current");
       });
       announce();
     };
 
     if (slides.length && stepsHost) {
-      stepsHost.innerHTML = slides
-        .map(
-          (_, i) =>
-            `<button type="button" class="hero-phone-step${i === 0 ? " is-active" : ""}" data-hero-step data-index="${i}" aria-label="Slide ${i + 1}"></button>`,
-        )
-        .join("");
-
       stepsHost.querySelectorAll<HTMLButtonElement>("[data-hero-step]").forEach((btn) => {
         btn.addEventListener("click", () => {
           const i = Number(btn.dataset.index);
