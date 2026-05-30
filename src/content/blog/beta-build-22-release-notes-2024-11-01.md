@@ -9,45 +9,51 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-22", "final-beta", "dice-roller", "journal"]
 ---
 
-Released November 1, 2024
+Released November 1, 2024.
 
 This post is part of the Beta → First Release series.
 
-## Core Improvements
-- Chaos Factor is now a universal value
-- Added Firebase crash reporting for improved stability tracking
-- Database architecture optimized for future NoSQL migration
-- Helper text expanded across screens (via the help button)
+Build 22 was the final beta pass before the first public release. It brought the
+Chaos Factor into one place, improved the Dice Roller and Journal Manager, and
+added release crash reporting so stability issues could be caught before launch.
+
+## Highlights
+- Chaos Factor became a universal value.
+- Dice Roller saved rolls became easier to manage.
+- Journal import, renaming, and basic Markdown export improved journal handling.
+- Left-handed mode was added for Fate Chart and Fate Check play.
+
+## Added
+- Release crash reporting for improved stability tracking.
+- Expanded helper text across screens through the help button.
+- Journal import with conversion support.
+- Basic Markdown export for journals.
+- Left-handed mode for Fate Chart and Fate Check.
 
 ## Dice Roller
-- Improved usability with clearer helper text
-- Swipe‑to‑delete for saved rolls
-- Multiple bug fixes
-- Additional testing underway
+- Clearer helper text.
+- Swipe-to-delete for saved rolls.
+- Multiple bug fixes.
 
 ## Adventure Lists
-- Resolved space‑related bug
-- Redesigned interface with three tabs:
+- Resolved a space-related bug.
+- Redesigned the interface with three tabs:
   - Characters
   - Threads
   - Features (independent rolling)
 
 ## Journal Manager
-- Journal import with conversion support
-- Journal renaming
-- Basic Markdown export
-- Fixed “Don’t show on launch”
-- General UI/UX improvements
+- Journal renaming.
+- Fixed "Don't show on launch."
+- General UI/UX improvements.
 
 ## Accessibility
-- Left‑handed mode for Fate Chart and Fate Check
-- Logging limited to 25 entries with Clear function
+- Logging limited to 25 entries with a Clear function.
 
 ## Scene Management
-- Minor interface improvements and smoother interaction
+- Minor interface improvements and smoother interaction.
 
-## Upcoming Focus
-- Accessibility (semantic labels, colorblind modes, screen reader optimization)
-- Critical bug fixes
-- Launch preparation and optimization
-- Post‑launch feature expansion
+## Launch Prep
+
+At the time, the remaining beta work focused on accessibility, critical bug
+fixes, launch optimization, and post-launch feature expansion.

@@ -1,6 +1,6 @@
 # Portuguese Page Flow Inventory
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This inventory tracks the Portuguese copy pass for the production site. Jason
 does not validate Portuguese nuance, so Portuguese copy should be adapted from
@@ -22,6 +22,9 @@ Brazilian Portuguese localization issues before publishing.
   Recursos Expandidos, desbloqueio único.
 - Avoid raw internal or store jargon such as `IAP`, `recursos Pro`, stale exact
   prices, guessed install/community counts, and unsupported reply-time promises.
+- Portuguese legal pages should adapt the approved English legal meaning in
+  natural Brazilian Portuguese while explicitly preserving Brazil/Portugal
+  legal framing: LGPD/ANPD, RGPD/CNPD, and mandatory consumer-rights safeguards.
 
 ## Expert Findings Applied
 
@@ -59,11 +62,11 @@ Brazilian Portuguese localization issues before publishing.
 | Resource PT cards/details | Done | `src/content/resources/*-pt.md`, `src/pages/pt/resources/[slug].astro` | Updated visible summaries, fixed stale purchase language, PT links, download labels, and share labels. Full long-form article rewrites remain a separate editorial pass. |
 | Blog PT index/detail shell and stale terms | Done | `src/pages/pt/blog/index.astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/content/blog/*-pt.md` | Updated metadata/header shell, PT dates, category links, sample placeholders, share labels, English category filtering, and live stale `IAP`/`Premium`/partner wording in PT posts. |
 | 404 PT | Done | `src/pages/pt/404.astro`, `src/pages/404.astro` | Lightened the page-not-found copy, removed the overly cute `Ops!` phrase, and noindexed 404 pages. |
+| Legal PT pages | Done | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro` | Rewritten from the approved English Privacy and Terms pages with Brazilian Portuguese copy, LGPD/ANPD and RGPD/CNPD rights framing, and consumer-rights safeguards for Brazil, Portugal, and the EU. |
 
 ## Later Or Separate Passes
 
 | Area | Status | Files | Notes |
 | --- | --- | --- | --- |
-| Legal PT pages | Later | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro` | Legal/privacy wording should only be changed with explicit approval and careful fact checks. |
 | Full historical PT blog rewrites | Later | `src/content/blog/*-pt.md` | This pass fixed live stale terminology and risky claims; deeper post-by-post rewrites remain separate. |
 | Full PT resource article rewrites | Later | `src/content/resources/*-pt.md` | This pass fixed visible summaries and stale claims; a deeper article-by-article rewrite can happen separately. |

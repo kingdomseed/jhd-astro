@@ -16,7 +16,7 @@ function l(path: string) {
 ---
 
 <header class="header-nav">
-  <div class="container row" style="justify-content: space-between">
+  <div class="container row header-bar">
     <a class="brand" href={l("/")} aria-label={t("nav.aria.brand_home")}>
       <img
         class="brand-logo"
@@ -52,72 +52,74 @@ function l(path: string) {
           >{t("nav.blog")}</span
         ></a
       >
-
-      <!-- Download call to action: dropdown menu with platform links -->
-      <span class="cta-download-wrap">
-        <button
-          class="btn btn--secondary btn--compact cta-download"
-          aria-haspopup="menu"
-          aria-expanded="false"
-          aria-controls="downloadMenu"
-        >
-          <span>{t("cta.get_app")}</span>
-          <i class="fa-slab fa-regular fa-angle-down" aria-hidden="true"></i>
-        </button>
-        <div
-          id="downloadMenu"
-          class="menu"
-          role="menu"
-          aria-label={t("nav.aria.download_menu")}
-        >
-          <a
-            role="menuitem"
-            href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-apple" aria-hidden="true"></i>
-            {t("platform.apple")}
-          </a>
-          <a
-            role="menuitem"
-            href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-google-play" aria-hidden="true"></i>
-            {t("platform.google")}
-          </a>
-          <a
-            role="menuitem"
-            href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-amazon" aria-hidden="true"></i>
-            {t("platform.amazon")}
-          </a>
-          <a
-            role="menuitem"
-            href="https://apps.microsoft.com/detail/9n39b8hj3cdg"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-windows" aria-hidden="true"></i>
-            {t("platform.microsoft")}
-          </a>
-          <a
-            role="menuitem"
-            href="https://jasonholtdigital.itch.io/mythic-gme-digital"
-            target="_blank"
-            rel="noopener"
-          >
-            <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
-            {t("platform.itch")}
-          </a>
-        </div>
-      </span>
     </nav>
+
+    <!-- Download CTA: separate from nav links (reserved slot on homepage hero) -->
+    <span class="cta-download-wrap header-cta-slot">
+      <button
+        type="button"
+        class="btn btn--tertiary btn--compact cta-download"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-controls="downloadMenu"
+      >
+        <i class="fa-slab fa-regular fa-arrow-down-to-line" aria-hidden="true"></i>
+        <span>{t("cta.get_app")}</span>
+        <i class="fa-slab fa-regular fa-angle-down cta-download-caret" aria-hidden="true"></i>
+      </button>
+      <div
+        id="downloadMenu"
+        class="menu"
+        role="menu"
+        aria-label={t("nav.aria.download_menu")}
+      >
+        <a
+          role="menuitem"
+          href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-apple" aria-hidden="true"></i>
+          {t("platform.apple")}
+        </a>
+        <a
+          role="menuitem"
+          href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+          {t("platform.google")}
+        </a>
+        <a
+          role="menuitem"
+          href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-amazon" aria-hidden="true"></i>
+          {t("platform.amazon")}
+        </a>
+        <a
+          role="menuitem"
+          href="https://apps.microsoft.com/detail/9n39b8hj3cdg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-windows" aria-hidden="true"></i>
+          {t("platform.microsoft")}
+        </a>
+        <a
+          role="menuitem"
+          href="https://jasonholtdigital.itch.io/mythic-gme-digital"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+          {t("platform.itch")}
+        </a>
+      </div>
+    </span>
 
     <!-- Mobile Menu Toggle -->
     <button
@@ -180,7 +182,7 @@ function l(path: string) {
           <a
             href="https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-apple" aria-hidden="true"></i>
             {t("platform.apple")}
@@ -188,7 +190,7 @@ function l(path: string) {
           <a
             href="https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-google-play" aria-hidden="true"></i>
             {t("platform.google")}
@@ -196,7 +198,7 @@ function l(path: string) {
           <a
             href="https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-amazon" aria-hidden="true"></i>
             {t("platform.amazon")}
@@ -204,7 +206,7 @@ function l(path: string) {
           <a
             href="https://apps.microsoft.com/detail/9n39b8hj3cdg"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-windows" aria-hidden="true"></i>
             {t("platform.microsoft")}
@@ -212,7 +214,7 @@ function l(path: string) {
           <a
             href="https://jasonholtdigital.itch.io/mythic-gme-digital"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
             {t("platform.itch")}
@@ -223,8 +225,11 @@ function l(path: string) {
   </nav>
 </header>
 <script>
-  // --- Sticky header ---
+  // --- Sticky header + homepage hero dock ---
   const header = document.querySelector<HTMLElement>('header.header-nav');
+  const heroDock = document.documentElement.classList.contains('hero-dock-header');
+  const heroSection = document.querySelector<HTMLElement>('[data-hero]');
+
   if (header) {
     let ticking = false;
     const onScroll = () => {
@@ -239,6 +244,21 @@ function l(path: string) {
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  if (header && heroDock && heroSection) {
+    const revealHeader = (show: boolean) => {
+      header.classList.toggle('is-revealed', show);
+    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        revealHeader(!entry.isIntersecting);
+      },
+      { root: null, rootMargin: '-72px 0px 0px 0px', threshold: 0 },
+    );
+    observer.observe(heroSection);
+  } else if (header && heroDock) {
+    header.classList.add('is-revealed');
   }
 
   // --- Download dropdown ---
@@ -276,7 +296,12 @@ function l(path: string) {
       else if (!isOpen && lastInput === 'keyboard') dropdownBtn.focus();
     });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { markKeyboard(); closeMenu(dropdownBtn, dropdownMenu, true); return; }
+      if (e.key === 'Escape') {
+        if (!dropdownMenu.classList.contains('open')) return;
+        markKeyboard();
+        closeMenu(dropdownBtn, dropdownMenu, true);
+        return;
+      }
       if (['Tab', 'Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) markKeyboard();
     });
     document.addEventListener('click', (e) => {

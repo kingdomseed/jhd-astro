@@ -10,11 +10,11 @@ keywords: ["beta", "notas de lançamento", "Apps Mythic GME"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-36", "accessibility", "stability", "ui"]
 ---
 
-Lançado em 7 de Novembro de 2024
+Lançado em 7 de novembro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-Build 36 será postada amanhã de manhã.
+Na época, o Build 36 estava agendado para a manhã seguinte.
 
 ## Acessibilidade & Usabilidade
 - Melhor suporte para tamanhos de texto maiores

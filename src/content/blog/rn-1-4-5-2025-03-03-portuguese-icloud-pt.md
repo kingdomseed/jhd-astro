@@ -2,7 +2,7 @@
 title: "v1.4.5 — Português & Sincronização iCloud"
 summary: "Português completo, sincronização iCloud reconstruída, conteúdo da MM49, acessibilidade e estabilidade em todas as plataformas"
 category: "Release Notes"
-date: "2025-03-03"
+date: "2025-03-20"
 readTime: "7 min de leitura"
 isSample: false
 lang: "pt"
@@ -24,7 +24,7 @@ tags: [
 ]
 ---
 
-Lançado em 3 de Março de 2025
+Lançado em 20 de março de 2025.
 
 # Mythic GME Mobile 1.4.5
 

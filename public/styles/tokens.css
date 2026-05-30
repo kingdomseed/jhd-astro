@@ -10,6 +10,8 @@
     --color-border: #000000; /* structural border */
     --color-primary: #0066ff; /* primary blue */
     --color-accent: #ffd700; /* accent yellow (secondary) */
+    --color-electric-blue: #0057ff;
+    --color-electric-yellow: #ffe817;
 
     /* border tokens - strategic thickness */
     --border-subtle: 1px solid var(--color-border); /* for secondary elements */

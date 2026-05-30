@@ -12,7 +12,6 @@ tags: [
   "series:beta-to-first-release",
   "product:apps",
   "v1.4",
-  "iap",
   "expanded-features",
   "meaning-tables",
   "fate",
@@ -23,25 +22,29 @@ tags: [
 ]
 ---
 
-Lançado em 19 de Dezembro de 2024 (v1.4 Planejada)
+Lançado em 19 de dezembro de 2024.
 
 Este post faz parte da série Beta → Primeiro Lançamento.
 
-# Registro de Mudanças de Lançamento da Versão 1.4 Planejada
+Esta versão introduziu o desbloqueio móvel de Recursos Expandidos, adicionou mais tabelas oficiais de Mythic e limpou várias superfícies centrais de jogo antes da primeira linha pública ficar estável.
 
-## Atualizações Principais
+## Destaques
 
-### Recursos Expandidos
-- Lançado o novo desbloqueio de Recursos Expandidos — desbloqueie todos os Recursos Expandidos atuais e novos Recursos Expandidos para os próximos 12 meses.
-- Primeiro conjunto de recursos com a compra são:
+- **Desbloqueio de Recursos Expandidos**: O desbloqueio único no celular liberava os Recursos Expandidos disponíveis na época e incluía novos Recursos Expandidos adicionados durante a janela de 12 meses.
+- **Mais tabelas oficiais de Mythic**: O primeiro conjunto de Recursos Expandidos incluía Tabelas de Significado e tabelas de Foco de Evento adicionais das Mythic Magazines e de Mythic Variations.
+- **Atualizações de Destino e Foco de Evento**: Tabela de Destino e Verificação de Destino passaram a viver em uma tela configurável, com tabelas de Foco de Evento selecionáveis.
+- **Rolador de Dados renovado**: O Rolador de Dados ganhou uma interface mais moderna, fórmulas salvas, resultados em chips e importação/exportação/compartilhamento em JSON.
+- **Configurações e arquivos mais claros**: Configurações passaram a ser organizadas por categorias, com controles de armazenamento de arquivos e Sincronização iCloud em dispositivos Apple.
+
+## Adicionado
+
+- Desbloqueio móvel de Recursos Expandidos:
   - 46 Tabelas de Significado adicionais das Mythic Magazines 1–47
   - 12 tabelas de Foco de Evento adicionais das Mythic Magazines 1–47 e Mythic Variations
-- Recursos planejados para o Q1 sob esta categoria incluem:
+- Na época, os próximos Recursos Expandidos planejados nesta categoria incluíam:
   - Oráculos/Tabelas de Significado Personalizados
   - Tabelas de Foco de Evento Personalizadas
   - Opções de Jogo Híbrido
-
-### Tabelas de Foco de Evento Adicionadas
 - Tabela de Foco de Evento de Aventura: Uma tabela de foco de evento para jogos orientados a aventura, enfatizando ação e interações de personagens.
 - Tabela de Foco de Evento Épico: Uma tabela de foco de evento para jogos de escala épica, enfatizando desenvolvimentos dramáticos de threads e grandes ações de personagens.
 - Tabela de Foco de Evento: A tabela de foco de evento original. Rola em Personagens e Tramas.
@@ -57,7 +60,8 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 - Tabela de Foco de Evento Preparado: Use isso com suas aventuras preparadas. Rola em recursos em vez de tramas.
 - Tabela de Foco de Evento Social: Uma tabela de foco de evento para jogos orientados socialmente, enfatizando revelações dramáticas e interações de personagens.
 
-### Melhorias de Qualidade de Vida
+## Alterado
+
 - Atualizações de tabela de significado:
   - Rolagens de Tabela de Significado agora aparecem no log de Destino
   - Adicionada aba deslizante para Tabelas de Significado na tela de Destino
@@ -75,7 +79,7 @@ Este post faz parte da série Beta → Primeiro Lançamento.
 - Atualizações de menu:
   - Menu de app deslizante reorganizado — sistemas principais Mythic GME 2e sob Core
   - Ferramentas inclui Rolador de Dados (e futuras Notas)
-  - O sistema agrupa Configurações e Suporte. Suporte e Sobre Nós combinados. Recursos premium podem ser comprados em Suporte
+  - O sistema agrupa Configurações e Suporte. Suporte e Sobre Nós foram combinados. Recursos Expandidos podem ser desbloqueados em Suporte
 - Rolador de Dados (atualização extensa):
   - Nova interface moderna permite construir fórmulas usando ícones de dados e botões (não apenas digitação)
   - Último resultado exibido no topo; histórico vive em uma aba separada

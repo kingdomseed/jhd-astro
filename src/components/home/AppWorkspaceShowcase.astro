@@ -1,0 +1,26 @@
+---
+// Desktop workspace carousel: deep product proof after hero (mobile) and benefits.
+import Billboard from "./Billboard.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="app-workspace-showcase section-block section-block--band"
+  id="workspace-showcase"
+  aria-labelledby="workspace-showcase-title"
+>
+  <div class="container section">
+    <header class="section-head section-head--left" aria-hidden="true">
+      <span class="accent-line" aria-hidden="true"></span>
+      <span class="badge-text">{t("workspace.badge")}</span>
+    </header>
+    <h2 id="workspace-showcase-title" class="section-title section-title--left">
+      {t("workspace.title")}
+    </h2>
+    <p class="workspace-lead">{t("workspace.lead")}</p>
+    <Billboard />
+  </div>
+</section>

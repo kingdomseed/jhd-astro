@@ -63,12 +63,76 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    /* Subtle global gradient to unify hero + billboard */
     background: none;
     background-image:
       radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.10) 0%, transparent 55%),
       radial-gradient(circle at 70% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 60%);
   }
+
+  html.hero-dock-header #bg-atmo {
+    background-image:
+      radial-gradient(
+        ellipse 90% 70% at 12% 0%,
+        color-mix(in srgb, var(--color-electric-blue) 28%, transparent) 0%,
+        transparent 62%
+      ),
+      radial-gradient(
+        ellipse 70% 55% at 88% 8%,
+        color-mix(in srgb, var(--color-electric-yellow) 22%, transparent) 0%,
+        transparent 58%
+      ),
+      radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--color-electric-blue) 8%, transparent) 0%, transparent 45%);
+    animation: bg-atmo-shift 16s ease-in-out infinite alternate;
+  }
+
+  @keyframes bg-atmo-shift {
+    from {
+      filter: hue-rotate(0deg) saturate(1);
+    }
+    to {
+      filter: hue-rotate(8deg) saturate(1.08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.hero-dock-header #bg-atmo {
+      animation: none;
+    }
+  }
+
+  /* Homepage: grid from top-left, fades out over hero + chrome (static, no runners) */
+  html.hero-dock-header #bg-electric-grid {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(
+        color-mix(in srgb, var(--color-electric-blue) 20%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-electric-blue) 14%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 32px 32px;
+    background-position: 0 0;
+    -webkit-mask-image: radial-gradient(
+      ellipse 110% 85% at 0% 0%,
+      #000 0%,
+      rgba(0, 0, 0, 0.55) 42%,
+      transparent 72%
+    );
+    mask-image: radial-gradient(
+      ellipse 110% 85% at 0% 0%,
+      #000 0%,
+      rgba(0, 0, 0, 0.55) 42%,
+      transparent 72%
+    );
+    opacity: 0.9;
+  }
+
   #site {
     position: relative;
     /* Remove z-index to avoid creating a stacking context that can place

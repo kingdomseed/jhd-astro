@@ -1,6 +1,6 @@
 # Apps Page Flow Inventory
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This is an inventory of the current production English Apps page. It records the
 page flow before rewriting so we can decide what each section is supposed to do.
@@ -125,14 +125,8 @@ content language, purchase-model notes, Adventure Crafter teaser copy, source
 book copy, additional info cards, the last-updated date, and the Open Source
 section.
 
-## Next Step
+## Current Status
 
-Move to the Resources index inventory and review its copy section by section.
-
-## Next Grill Question
-
-Start with the Apps page metadata and header:
-
-Should this page header stay mostly practical and comparison-oriented, or should
-it more directly echo the homepage promise that the apps make Mythic ready to
-play across mobile and desktop?
+Apps page copy refinement is complete for the production English pass. Do not
+reopen this page unless Jason explicitly asks. Use
+`docs/copy/site-copy-tracker.md` for the current outstanding copy list.

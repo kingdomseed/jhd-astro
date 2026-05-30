@@ -14,23 +14,23 @@ approved section so we do not reopen finished work or lose the next decision.
 
 ## Current Copy Rules
 
-- About, Homepage, Apps, Resources, Support, SEO/social, and Portuguese
-  production copy are done. Do not continue reworking them in this pass unless
-  Jason explicitly asks.
-- The current Legal pages pass is copy and factual alignment only. Do not make
-  substantive legal strategy decisions, restructure the legal model, or treat
-  this as legal advice.
-- Work section by section in the legal page order captured in
-  `docs/copy/legal-page-flow-inventory.md`.
-- After a section is approved, apply it, mark it done, then immediately show the
-  next section's current copy and recommended refinement.
+- About, Homepage, Apps, Resources, Support, SEO/social, Portuguese production
+  copy, and English/Portuguese Legal pages are done for the current production
+  copy pass. Do not continue reworking them unless Jason explicitly asks.
+- Future legal-page edits remain copy and factual-alignment work unless Jason
+  explicitly starts a legal strategy or counsel-review pass. Do not treat these
+  docs as legal advice.
+- If a new copy pass starts, work section by section from the relevant flow
+  inventory. After a section is approved, apply it, mark it done, then
+  immediately show the next section's current copy and recommended refinement.
 - Keep existing copy when it already does its job and matches `CONTEXT.md`.
 - Use `CONTEXT.md` as the public-site voice and terminology source.
 - Use the Mythic GME app context for precise product terms.
 - Verify current app behavior and current official provider/store policy before
   changing legal/privacy claims.
-- English legal pages come first. Portuguese legal pages should be adapted only
-  after English legal wording is approved.
+- For Portuguese legal pages, adapt approved English legal meaning in natural
+  Brazilian Portuguese and preserve the Brazil/Portugal legal framing already
+  recorded in `CONTEXT.md`.
 - Keep the site product-first: help players understand, trust, get, and use the
   Mythic apps.
 - Prefer player outcomes before feature inventory.
@@ -107,23 +107,45 @@ approved section so we do not reopen finished work or lose the next decision.
 | Portuguese Blog and 404 shell | Done | `src/pages/pt/blog/index.astro`, `src/pages/pt/blog/[slug].astro`, `src/pages/blog/category/[category].astro`, `src/content/blog/*-pt.md`, `src/pages/pt/404.astro`, `src/pages/404.astro` | Updated PT shell metadata/copy/date formatting/category behavior, cleaned stale PT blog terminology, and noindexed 404 pages. |
 | Portuguese globalization mechanics | Done | `astro.config.mjs`, `src/layouts/BaseLayout.astro`, `src/components/search/SearchOverlay.astro`, `src/components/home/Billboard.astro`, `src/components/home/ReviewsRotator.astro` | Uses PT-specific search indexes, localized shared labels/status text, PT social image alt text, explicit alternates, and sitemap exclusions for redirect/error routes. |
 | Legal inventory | Done | `docs/copy/legal-page-flow-inventory.md` | Current legal page structure, local app behavior checks, official provider/store source checks, and legal-copy risk areas are captured. |
-| Legal pages | In review | `src/pages/privacy.astro`, `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Current pass. Edit only with explicit approval and careful fact checks. Start with the Privacy factual core. |
+| Legal pages | Done | `src/pages/privacy.astro`, `src/pages/terms.astro`, `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Production English and Portuguese Privacy/Terms pages are complete for this pass. Future edits require explicit approval and fresh fact checks. |
 | Privacy factual core | Done | `src/pages/privacy.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Removes Firebase as an active provider, aligns analytics with the current minimal PostHog daily ping, clarifies Sentry error reporting and optional Session Replay, avoids minor-identification claims, and updates app-store compliance summaries. |
 | Privacy rights/contact/children cleanup | Done | `src/pages/privacy.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Replaces the incomplete US state-law list with broad applicable-rights wording, removes response-speed promises, avoids age-knowledge claims, generalizes device controls, softens future-feature promises, and removes absolute upload/sale phrasing. |
 | Terms intro/products/license | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Updates last-updated date, current product platforms, Word Mill Creative legal attribution, and user-content/local-first license wording. |
 | Terms purchases/refunds | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Removes subscription wording, covers current mobile and desktop purchase surfaces, uses freshly checked official refund paths, and avoids refund-eligibility promises. |
 | Terms third-party/store requirements | Done | `src/pages/terms.astro`, `docs/copy/legal-page-flow-inventory.md` | Approved. Covers store distribution, purchases, optional analytics, diagnostics, support paths, and all current store terms without overpromising announcements or store-provider support duties. |
 | Portuguese legal pages | Done | `src/pages/pt/privacy.astro`, `src/pages/pt/terms.astro`, `CONTEXT.md`, `docs/copy/legal-page-flow-inventory.md` | Approved. Rewrites Portuguese Privacy and Terms from the approved English legal pages, with Brazilian Portuguese copy and explicit Brazil/Portugal legal framing for LGPD/ANPD, RGPD/CNPD, and mandatory consumer-rights safeguards. |
+| Blog and release-note inventory | Done | `docs/copy/blog-release-notes-flow-inventory.md`, `src/content/blog/**` | Captures all 56 EN/PT posts, pairings, categories, route behavior, app source checks, stale-risk buckets, and recommended rewrite order. |
+| Blog writing guide | Done | `docs/copy/blog-writing-guide.md`, `CONTEXT.md` | Starts the reusable Blog/release-note workflow and language rules so future posts can be written consistently with Codex. |
+| Blog and release-note rewrites | Done | `src/content/blog/**`, `docs/copy/blog-release-notes-flow-inventory.md` | Release notes and announcements are cleaned for current terminology, historical framing, purchase/privacy language, mixed EN/PT bodies, Linux packaging facts, and date metadata. Procedural guide rewrites move to the app-verified Resources pass. |
+| v1.6.0-1.6.4 release note rewrite | Done | `src/content/blog/rn-1-6-0-2026-03-25.md`, `src/content/blog/rn-1-6-0-2026-03-25-pt.md` | Rewrites the stale preview/coming-soon post into shipped release-line notes based on the Mythic app repo's 1.6.0-1.6.4 changelog and in-app release notes. |
+| Blog stale-term cleanup | Done | `src/content/blog/**`, `docs/copy/blog-release-notes-flow-inventory.md` | Cleans current-facing stale terms in release notes and announcements: purchase language, Firebase/analytics drift, mixed EN/PT bodies, old partner naming, shipped roadmap claims, and ambiguous date metadata. Older beta notes keep a concise archive feel. |
 
 ## Later Or Separate Passes
 
 | Area | Status | Files | Notes |
 | --- | --- | --- | --- |
 | v2 copy | Later | `src/pages/v2/**`, `src/components/v2/**`, `src/lib/v2*.ts` | V2 has unrelated in-progress design work. Do not mix with the production copy pass unless Jason asks. |
-| Blog post rewrites | Later | `src/content/blog/**` | Stale PT terminology was cleaned where live; full release-note rewrites may keep historical voice unless a specific post is selected. |
-| Full resource article rewrites | Later | `src/content/resources/**`, `src/content/resources/*-pt.md` | Visible summaries and stale claims were updated; deeper long-form article rewrites should be selected explicitly. |
+| Full resource article rewrites | Later, app-verified | `src/content/resources/**`, `src/content/resources/*-pt.md` | Visible summaries and stale claims were updated. Body rewrites should be planned only after using Patrol or equivalent app navigation to verify how each workflow actually works in the app. |
 
-## Next Grill Question
+## Outstanding Copy Work
 
-Production legal copy is updated in English and Portuguese. Next likely step:
-final legal-page review, then publish/commit when approved.
+No production top-level copy page is outstanding in the current grill/docs pass.
+The completed surfaces are About, Homepage, Apps, Resources index, Support,
+SEO/social metadata mechanics, Portuguese production pages, and
+English/Portuguese Legal pages.
+
+Remaining work is intentionally separate:
+
+- v2 copy: wait until the v2 design direction settles.
+- Blog and release-note rewrites: this is the best next grill/docs copy pass.
+  Start with an inventory of all posts, especially release notes, before
+  rewriting.
+- Full Resource article rewrites: visible summaries are done; long-form article
+  bodies need a separate app-verified documentation pass using Patrol or
+  equivalent navigation through the app.
+- Future legal review: use counsel if the business needs legal sufficiency, or
+  re-check facts when app behavior, providers, stores, or laws change.
+
+Next grill target, if continuing copy now: inventory Blog and release-note
+posts, decide which historical details must remain as historical record, and
+then rewrite section by section without reopening completed top-level pages.

@@ -1,6 +1,6 @@
 # Home Page Flow Inventory
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This is an inventory of the current production English homepage. It records the
 page flow before rewriting so we can decide what each section is supposed to do.
@@ -128,7 +128,8 @@ community/support descriptions, resources heading, and Maker's Note. Header,
 utility bar, reviews strip, partners, footer, and metadata were reviewed and
 kept mostly or fully unchanged.
 
-## Next Grill Question
+## Current Status
 
-Move to the Apps page and review copy section by section, keeping the same
-constraint: copy refinement only, no section strategy or v2 redesign decisions.
+Homepage copy refinement is complete for the production English pass. Do not
+reopen this page unless Jason explicitly asks. Use
+`docs/copy/site-copy-tracker.md` for the current outstanding copy list.

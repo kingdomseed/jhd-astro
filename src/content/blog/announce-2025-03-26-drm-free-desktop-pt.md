@@ -33,24 +33,24 @@ Seguindo o lançamento do Mythic GME Mobile para Android e iOS, e inspirado pelo
 
 - macOS: Binário universal (M1+ recomendado)
 
-🔒 Sem assinaturas, sem compras internas
-Compre uma vez na página do itch.io e receba:
+🔒 Compra Desktop
+Compre o app desktop na página do itch.io e receba:
 
-- Todos os recursos atuais desbloqueados
-- Atualizações gratuitas para sempre
+- Todos os recursos desktop disponíveis na versão atual
+- Atualizações contínuas do app
 
 - Downloads multiplataforma
 ## 🛠️ Construído Com Você, Para Você
 
 > *"Muitas melhorias vêm direto do Discord do Mythic. Este não é o meu app – é o* nosso *app."* – Jason Holt, Desenvolvedor
 
-Um dos aspectos mais empolgantes de desenvolver *Mythic GME Digital* tem sido o feedback e sugestões incríveis da comunidade Mythic. Muitas funcionalidades no app hoje—e ainda mais chegando em breve—são diretamente inspiradas pela sua contribuição. Veja como suas ideias moldaram este projeto:
+Um dos aspectos mais empolgantes de desenvolver *Mythic GME Digital* tem sido o feedback e sugestões incríveis da comunidade Mythic. Muitas funcionalidades do app são diretamente inspiradas pela sua contribuição. Veja como suas ideias moldaram este projeto:
 
 - Suporte Extensivo a Acessibilidade: Da compatibilidade com leitores de tela a tamanhos de fonte ajustáveis, modo daltônico e operação para canhotos, recursos de acessibilidade foram priorizados graças aos pedidos da comunidade por inclusão.
 - Tabelas de Significado Expandidas: O app agora inclui uma coleção massiva de tabelas de significado d100 e tabelas de foco de evento originadas de *Mythic Variations* e *Mythic Magazines*, atendendo pedidos por mais ferramentas para inspirar narrativas criativas.
 
 - Escolhas de Design Baseadas no Feedback dos Jogadores: Cada aspecto do app, do layout à navegação, reflete decisões influenciadas pelo feedback dos Mythicers. Suas sugestões me ajudaram a refinar a experiência do usuário para melhor atender jogadores solo, grupos sem Mestre e contadores de histórias.
-- Funcionalidades Futuras no Roadmap: A versão 1.5 introduzirá a criação de tabelas personalizadas—um recurso altamente solicitado que permitirá que você adapte sua experiência ainda mais. Esta é apenas uma das muitas atualizações empolgantes inspiradas pela contribuição da comunidade.
+- Trabalho de Roadmap: Na época em que este anúncio foi escrito, Tabelas Personalizadas eram o próximo grande item do roadmap. Elas já foram lançadas, e o feedback da comunidade continua guiando o que será refinado a seguir.
 
 Seu feedback tem sido inestimável para moldar o *Mythic GME Digital*. Se você tiver ideias para futuros recursos ou melhorias, me avise através do Discord do Mythic ou das páginas da comunidade no itch.io. Juntos, estamos construindo o companheiro de narrativa definitivo!
 
@@ -80,14 +80,14 @@ Compatibilidade Linux
 Quando minha esposa e eu nos comprometemos com essa jornada de desenvolvimento em tempo integral no ano passado, decidimos criar ferramentas que capacitam contadores de histórias em plataformas de desktop:
 
 - Seus dados permanecem seus – Exporte aventuras, salve localmente e integre com suas ferramentas preferidas.
-- Atualizações vitalícias por um preço – Compre uma vez e desfrute de suporte e atualizações contínuas no Windows, Linux e macOS.
+- Suporte contínuo para desktop – Compre o app desktop uma vez e receba suporte e atualizações contínuas no Windows, Linux e macOS.
 
 Graças ao apoio da minha esposa através do trabalho dela, tenho conseguido me dedicar totalmente ao desenvolvimento do *Mythic GME Digital*. Cada compra ajuda a sustentar essa jornada e garante que o app continue a crescer com novos recursos e melhorias inspirados pela incrível comunidade Mythic.
 
 Cada compra nos ajuda a:
 
 - Manter as builds de Linux vivas
-- Adicionar recursos como funcionalidades futuras como tabelas personalizadas e opções de jogo híbrido
+- Continuar melhorando as builds desktop e ferramentas de jogo pedidas pela comunidade
 
 - Apoiar a paciência da minha esposa com minhas maratonas de programação 😄
 ## 📖 Leitura Necessária

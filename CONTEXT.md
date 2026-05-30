@@ -53,6 +53,14 @@ Jason could naturally say out loud after a little editing.
 _Avoid_: Phrases that sound clever but false to Jason's voice, over-shaped
 sentence rhythms, grand claims, or copy that reads like an agent wrote it.
 
+**Conversational Discord Update**:
+When Jason is posting into an ongoing Discord thread, the copy should flow from
+the previous conversation and sound like a person reporting what he found. It
+can start with a direct bridge such as "So here's what I've come up with" and
+then move into plain first-person evidence like "I tested this with Patrol..."
+_Avoid_: Report labels such as "This is a quick note," summary labels such as
+"Takeaway:", and polished conclusions like "this is a real improvement."
+
 **Resume-Derived Voice Rules**:
 The public-site voice inherits the refined resume/application rules: use short,
 plain sentences; first person singular when Jason is speaking; concrete work
@@ -215,6 +223,32 @@ source is clear. Current homepage SoftwareApplication JSON-LD should not include
 stale `offers` or `aggregateRating` data.
 _Avoid_: Old prices, blended app-store ratings, fuzzy install totals, or private
 analytics claims in SEO metadata.
+
+### Blog and release notes language
+
+**Release Notes As Historical Records**:
+Release notes should preserve what shipped in a given version while using the
+site's current public terminology when old wording would confuse players.
+_Avoid_: Freezing public copy around outdated labels such as `Premium`, raw
+`IAP`, stale provider names, or future-tense claims after a feature has shipped.
+
+**Release Note Player Frame**:
+Release notes should explain what changed, what that means in play, and what a
+player should know before updating.
+_Avoid_: Changelog dumps, implementation-first summaries, hype, or release
+notes that only make sense to the developer.
+
+**Historical Detail Note**:
+When an old implementation detail matters, introduce it as historical context
+instead of letting it read as a current claim.
+_Avoid_: Provider names, roadmap promises, or old store language that appears to
+describe the current app when it only described an earlier release.
+
+**Blog Writing Partnership**:
+Blog posts written with Codex should start from source facts, then move through
+Jason's public voice and the approved terminology before publication.
+_Avoid_: Treating the agent draft as final voice, writing from memory when the
+app repo can answer, or letting blog language drift away from the site glossary.
 
 ### Legal page language
 

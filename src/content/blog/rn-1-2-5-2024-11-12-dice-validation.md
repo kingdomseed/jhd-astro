@@ -9,11 +9,11 @@ keywords: ["release notes", "Mythic GME Apps"]
 tags: ["pre-release", "series:beta-to-first-release", "product:apps", "v1.2.5", "dice-roller", "journal", "accessibility", "support"]
 ---
 
-Released November 12, 2024 (Getting close to launch!)
+Released November 12, 2024, during final pre-launch prep.
 
 This post is part of the Beta → First Release series.
 
-# Change Log — Upcoming Release Build → v1.2.5
+# Change Log — Pre-Launch Build → v1.2.5
 
 ## Dice Roller Improvements
 - Fixed and validated support for complex dice notations including:

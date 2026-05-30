@@ -13,40 +13,44 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
 ---
 
 <section
-  class="container section note"
+  class="section-block section-block--band"
   id="about"
   aria-labelledby="about-title"
 >
-  <header class="section-head" aria-hidden="true">
-    <span class="accent-line" aria-hidden="true"></span>
-    <span class="badge-text">{t("makers.badge")}</span>
-  </header>
-  <h2 id="about-title" class="section-title" style="margin-bottom: 10px">
-    {t("makers.title")}
-  </h2>
-  <div class="row" style="align-items: center; justify-content: center">
-    <div class="avatar">
-      <Image
-        class="avatar-img"
-        src={headshot}
-        alt="Jason Holt"
-        width={80}
-        height={80}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-    <div>
-      <p
-        style="margin: .5rem 0; color: var(--muted)"
-        set:html={t("makers.text")}
-      />
-      <p class="cta">
-        <a class="btn btn--shadow-primary btn--compact" href={l("about")}>
-          {t("makers.cta")}
-          <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </p>
+  <div class="container section">
+    <div class="note">
+      <header class="section-head" aria-hidden="true">
+        <span class="accent-line" aria-hidden="true"></span>
+        <span class="badge-text">{t("makers.badge")}</span>
+      </header>
+      <h2 id="about-title" class="section-title" style="margin-bottom: 10px">
+        {t("makers.title")}
+      </h2>
+      <div class="row" style="align-items: center; justify-content: center">
+        <div class="avatar">
+          <Image
+            class="avatar-img"
+            src={headshot}
+            alt="Jason Holt"
+            width={80}
+            height={80}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div>
+          <p
+            style="margin: .5rem 0; color: var(--muted)"
+            set:html={t("makers.text")}
+          />
+          <p class="cta">
+            <a class="btn btn--shadow-primary btn--compact" href={l("about")}>
+              {t("makers.cta")}
+              <i class="fa-slab fa-regular fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
 ---
-title: "Linux Packaging Changes — Flatpak Going Forward"
-summary: "Flatpak becomes primary; AppImage discontinued; DEB/RPM discontinued"
+title: "Linux Packaging Changes — Flatpak and Portable Builds"
+summary: "Flatpak and portable Linux builds going forward; AppImage, DEB, and RPM discontinued"
 category: "Announcement"
 date: "2025-08-22"
 readTime: "4 min read"
@@ -26,18 +26,20 @@ keywords: ["announcement", "Flatpak", "Linux", "packaging", "Steam", "Steam Deck
 ## TL;DR
 - **AppImage:** Discontinued.
 - **DEB/RPM:** Discontinued.
-- **Flatpak:** Primary way to install on Linux going forward.
+- **Flatpak:** Recommended packaged install on Linux going forward.
+- **Portable Linux build:** Still available through itch.io when provided for a release.
 
 ## What’s changing
 - **AppImage is dropped.** Recent builds have been unreliable. v1.4.7 will remain available as a legacy option for a while, but new updates won’t target AppImage.
 - **DEB and RPM are dropped.** These formats often break across distro versions and take extra time to maintain.
-- **Flatpak is the focus.** It runs on Ubuntu/Debian, Fedora/openSUSE/RHEL, Arch, and SteamOS with fewer dependency issues.
+- **Flatpak is the packaged install focus.** It runs on Ubuntu/Debian, Fedora/openSUSE/RHEL, Arch, and SteamOS with fewer dependency issues.
+- **Portable Linux builds may still be provided.** These are not AppImages; they are direct portable builds for players who prefer the itch app or manual folders.
 
 ## Steam
 When the game lands on Steam, it’ll ship as a **native Linux build**. Steam will run it in their Linux runtime so it works cleanly on SteamOS/Deck.
 
 ## If you’re new to Flatpak
-Some distros already include Flatpak. On others (like Ubuntu), there’s a simple one‑time setup. I’ll keep clear install steps on the game page.
+Some distros already include Flatpak. On others (like Ubuntu), there’s a simple one-time setup. I’ll keep clear install steps on the game page.
 
 ### Flatpak Install Guide (Linux)
 Follow the steps for your distro, then install the `.flatpak` file (e.g., `mythicgmedigital.flatpak`).

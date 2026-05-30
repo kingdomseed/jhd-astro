@@ -1,6 +1,6 @@
 ---
-title: "v1.4 — Premium Unlock & QoL"
-summary: "Premium unlock IAP, Fate/Meaning table QoL, modern Dice Roller UI, and streamlined settings"
+title: "v1.4 — Expanded Features Unlock & Quality-of-Life Updates"
+summary: "Expanded Features unlock, Fate and Meaning Table quality-of-life updates, a modern Dice Roller UI, and streamlined settings."
 category: "Release Notes"
 date: "2024-12-19"
 readTime: "6 min read"
@@ -11,8 +11,8 @@ tags: [
   "series:beta-to-first-release",
   "product:apps",
   "v1.4",
-  "iap",
-  "premium",
+  "expanded-features",
+  "one-time-unlock",
   "meaning-tables",
   "fate",
   "settings",
@@ -22,25 +22,29 @@ tags: [
 ]
 ---
 
-Released December 19, 2024 (Planned v1.4)
+Released December 19, 2024.
 
 This post is part of the Beta → First Release series.
 
-# Planned Version 1.4 Launch Changelog
+This release introduced the mobile Expanded Features unlock, added more official Mythic tables, and cleaned up several core play surfaces before the first public release line settled.
 
-## Major Updates
+## Highlights
 
-### Premium Features / IAP
-- Launched the new Premium Features Unlock IAP — unlock all current premium features and new premium features for the next 12 months.
-- First set of features with the purchase are:
+- **Expanded Features unlock**: The one-time mobile unlock made the current Expanded Features available and included new Expanded Features added during the 12-month unlock window.
+- **More official Mythic tables**: The first Expanded Features set included additional Meaning Tables and Event Focus tables from Mythic Magazines and Mythic Variations.
+- **Fate and Event Focus updates**: Fate Chart and Fate Check moved into one configurable screen, with selectable Event Focus tables.
+- **Dice Roller refresh**: The Dice Roller gained a more modern interface, saved formulas, result chips, and JSON import/export/sharing.
+- **Settings and files cleanup**: Settings moved into clearer categories, with file-storage controls and iCloud Sync for Apple devices.
+
+## Added
+
+- Mobile Expanded Features unlock:
   - An additional 46 Meaning Tables from Mythic Magazines 1–47
   - An additional 12 Event Focus tables from Mythic Magazines 1–47 and Mythic Variations
-- Planned features for Q1 under this category include:
+- At the time, the next Expanded Features planned under this category included:
   - Custom Oracles/Meaning Tables
   - Custom Event Focus Tables
   - Hybrid Play options
-
-### Event Focus Tables Added
 - Adventure Event Focus Table: An event focus table for adventure-oriented games, emphasizing action and character interactions.
 - Epic Event Focus Table: An event focus table for epic-scale games, emphasizing dramatic thread developments and grand character actions.
 - Event Focus Table: The original event focus table. Rolls on Characters and Threads.
@@ -56,7 +60,8 @@ This post is part of the Beta → First Release series.
 - Prepared Event Focus Table: Use this with your prepared adventures. Rolls on features instead of threads.
 - Social Event Focus Table: An event focus table for socially-oriented games, emphasizing dramatic revelations and character interactions.
 
-### Quality of Life Improvements
+## Changed
+
 - Meaning table updates:
   - Meaning Table rolls now appear in the Fate log
   - Added slide‑out tab for Meaning Tables in the Fate screen
@@ -74,7 +79,7 @@ This post is part of the Beta → First Release series.
 - Menu updates:
   - Slide‑out app menu reorganized — core Mythic GME 2e systems under Core
   - Tools includes Dice Roller (and future Notes)
-  - System groups Settings and Support. Support and About Us combined. Premium features can be purchased in Support
+  - System groups Settings and Support. Support and About Us combined. Expanded Features can be unlocked from Support
 - Dice Roller (extensive update):
   - New, modern interface lets you build formulas using dice icons and buttons (not just typing)
   - Last result displayed at the top; history lives in a separate tab

@@ -18,6 +18,7 @@
 @import url("/styles/components/hero.css") layer(components);
 @import url("/styles/components/billboard.css") layer(components);
 @import url("/styles/components/strip.css") layer(components);
+@import url("/styles/components/sections.css") layer(components);
 @import url("/styles/components/reviews-rotator.css") layer(components);
 @import url("/styles/components/cards.css") layer(components);
 @import url("/styles/components/utilbar.css") layer(components);

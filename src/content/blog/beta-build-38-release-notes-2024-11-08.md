@@ -9,7 +9,7 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-38", "navigation", "performance", "ui"]
 ---
 
-Released November 8, 2024
+Released November 8, 2024.
 
 This post is part of the Beta → First Release series.
 

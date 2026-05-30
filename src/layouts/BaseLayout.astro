@@ -18,6 +18,8 @@ interface Props {
   mainClass?: string;
   noAlternate?: boolean;
   noindex?: boolean;
+  /** Minimal header over homepage hero; full nav after scroll past hero */
+  heroDockHeader?: boolean;
 }
 
 const {
@@ -34,6 +36,7 @@ const {
   mainClass,
   noAlternate = false,
   noindex = false,
+  heroDockHeader = false,
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString() ?? 'https://jasonholtdigital.com';
@@ -54,7 +57,7 @@ const altUrl = !resolvedAlternatePath
   ? null
   : new URL(resolvedAlternatePath, siteUrl).toString();
 ---
-<html lang={htmlLang}>
+<html lang={htmlLang} class:list={{ 'hero-dock-header': heroDockHeader }}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -88,6 +91,7 @@ const altUrl = !resolvedAlternatePath
   <body>
     <a class="skip" href="#main">{skipText}</a>
     <div id="bg-atmo" aria-hidden="true"></div>
+    {heroDockHeader && <div id="bg-electric-grid" aria-hidden="true"></div>}
     <div id="site">
       <slot name="before-header" />
       <Header />

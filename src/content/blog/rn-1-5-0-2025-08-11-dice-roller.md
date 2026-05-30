@@ -30,9 +30,9 @@ v1.5 is our biggest update yet. This release focuses on smarter Random Events, a
 - **Scenes & Lists:** Autosave when navigating; Markdown notes for lists; optional “never roll *Choose* if the list has entries.”
 - **Platform fixes:** Improved Windows file-path handling; better Linux build behavior; reworked iCloud sync path for Apple ecosystem builds (App Store only).
 ## Notes for Itch.io builds
-- **No IAP on Itch.io:** All features are included and unlocked.
+- **Itch.io purchase model:** All features are included in the desktop build.
 - **macOS:** iCloud Sync is not available on the Itch build; you can select any custom save location (including an iCloud Drive folder).
 - **Minimum macOS hardware:** Apple Silicon M1 with 8 GB RAM recommended; Intel macOS 10.15+ supported (untested).
-- **Linux baseline:** Updates coming to the Linux build soon
-- **macOS and Linux**: These builds are pending release for version 1.5. Stay tuned!
+- **Linux baseline:** Linux updates were still being prepared when this note was written.
+- **macOS and Linux**: These desktop builds followed the mobile release timing.
 If you have feedback or run into issues, reach out here or via the Mythic Discord. Enjoy the update!

@@ -1,9 +1,9 @@
 ---
-title: "v1.5.2–v1.5.3 — Markdown & Descrições"
-summary: "Descrições de entrada nos resultados, Markdown em logs, tabelas personalizadas mais inteligentes, atualizações de localização, recuperação de armazenamento"
+title: "v1.5.2-v1.5.3 — Markdown e Descrições"
+summary: "Descrições de entrada, Markdown no Diário de Aventura, Tabelas Personalizadas mais inteligentes, localização, recuperação de armazenamento e ajustes de privacidade."
 category: "Release Notes"
 date: "2025-08-27"
-readTime: "8 min de leitura"
+readTime: "6 min de leitura"
 isSample: false
 lang: "pt"
 keywords: ["notas de lançamento", "Apps Mythic GME"]
@@ -22,95 +22,70 @@ tags: [
 ]
 ---
 
-Notas de Lançamento Mythic GME 2e v1.5.2-1.5.3
+Lançado em 27 de agosto de 2025.
 
-*Lançado em Agosto de 2025*
+As versões v1.5.2-v1.5.3 focaram em resultados de tabela mais ricos, Tabelas
+Personalizadas mais confiáveis e um caminho de recuperação mais seguro para
+armazenamento no desktop. A atualização também refinou localização,
+acessibilidade, verificação de compra e consentimento de analytics no app.
 
-### O Que Há de Novo
+## Destaques
 
-#### Experiência de Jogo Aprimorada
-- **Descrições de Entradas**: Tabelas de Significado e Foco de Evento agora suportam um campo opcional `description` (schema v3.1) que aparece abaixo dos resultados na interface de rolagem e no Log do Jogo
-- **Suporte Markdown**: O Log de Aventura agora renderiza formatação Markdown para Tabelas de Significado, Foco de Evento e Listas - use **negrito**, *itálico*, `código` e quebras de linha em suas entradas de tabela
+- Tabelas de Significado e Foco de Evento podem mostrar descrições opcionais
+  abaixo de cada resultado.
+- Entradas no Diário de Aventura podem renderizar Markdown vindo de Tabelas de
+  Significado, Foco de Evento e Listas.
+- Tabelas Personalizadas ganharam entradas multilinha, intervalos que se
+  expandem automaticamente e importação/exportação mais forte.
+- Versões desktop receberam um caminho de recuperação mais seguro quando a
+  pasta Documentos está ausente ou indisponível.
 
-- **Melhor Exibição de Resultados**: Resultados de rolagem agora mostram descrições inline abaixo de cada resultado, com formatação adequada preservada de suas entradas de tabela
+## Adicionado
 
-> **Nota sobre Suporte Markdown**: O aplicativo suporta múltiplos níveis de sintaxe Markdown através do pacote `flutter_markdown_plus`. Para referência, existem três especificações principais de Markdown: sintaxe original de John Gruber, CommonMark (que esclarece casos ambíguos), e GitHub Flavored Markdown (um superconjunto estrito do CommonMark). O aplicativo suporta níveis de sintaxe básico, CommonMark, GitHub Flavored e GitHub Web.
+- Campos opcionais `description` para entradas de Tabelas de Significado e Foco
+  de Evento, exibidos nos resultados de rolagem e no Diário de Aventura.
+- Renderização de Markdown para resultados de tabelas e listas no Diário de
+  Aventura.
+- Suporte ao alemão em Tabelas Personalizadas, Configurações, editor, mensagens
+  de erro, rótulos de acessibilidade e dicas de Recursos Expandidos.
+- Opções separadas `es_ES` e `es_MX` para espanhol da Espanha e do México.
+- Consentimento de analytics na primeira execução no iOS e macOS.
 
-#### Tabelas Personalizadas Mais Inteligentes
-- **Entradas Multilinhas**: O editor de tabelas personalizadas agora suporta quebras de linha adequadas e entrada de texto multilinha usando TextField com suporte multilinha
-- **Auto-Expansão**: Tabelas expandem automaticamente seu intervalo de 1-20 para 1-100 quando você adiciona entradas além do intervalo atual, com funcionalidade de desfazer e opção "não auto-expandir novamente"
+## Alterado
 
-- **Importação/Exportação Aprimorada**: CSV: Agora inclui coluna `description` quando presente
-- PSV: Suporta formato `endpoint|result|description`
+- A edição de Tabelas Personalizadas agora aceita quebras de linha e texto em
+  múltiplas linhas.
+- Tabelas podem expandir de 1-20 para 1-100 quando novas entradas passam do
+  intervalo atual, com suporte para desfazer e opção de não expandir
+  automaticamente de novo.
+- Importação/exportação em CSV, PSV, TXT, JSON e Foundry VTT preserva
+  descrições de entrada quando elas existem.
+- Configurações de idioma agora separam traduções oficiais de traduções apenas
+  de interface.
+- Windows, macOS e Linux agora bloqueiam a inicialização quando a pasta
+  Documentos está indisponível e pedem para o jogador escolher uma pasta, em vez
+  de usar um fallback silencioso.
+- Verificações de recibo de compra ficaram mais confiáveis no iOS e macOS.
+- Rastreamento de telas e consentimento de analytics foram ajustados para manter
+  o rastreamento atrás da configuração de analytics.
 
-- TXT: Suporta formato `result|description`
-- JSON: Suporte completo ao campo description via serializers
+## Corrigido
 
-- Foundry VTT JSON: Mapeia campo `result.description`
+- Tabelas de Significado e Tabelas Personalizadas ficaram mais resistentes a
+  intervalos de valor único, intervalos de largura zero, recálculo e dados
+  inválidos.
+- O ícone de copiar reseta corretamente após novas rolagens no iPad.
+- Descrições de Tabelas Personalizadas agora persistem pelo app, pelo
+  armazenamento e pelo caminho de restauração.
+- "Editar Nova Cena Automaticamente" abre o editor de forma mais consistente no
+  iPad.
+- Importações em CSV, PSV e TXT relatam arquivos malformados com mais clareza.
+- Perguntas de Destino restauram com mais confiabilidade ao importar diários do
+  iOS para Android ou Boox.
 
-#### Idioma e Localização
-- **Alemão Adicionado**: Suporte completo ao idioma alemão em Tabelas Personalizadas, Configurações, interface do editor, mensagens de erro, rótulos de acessibilidade e dicas premium
-- **Espanhol Dividido**: Opções de locale separadas `es_ES` (Espanha) e `es_MX` (México) com formatação regional adequada
+## Problemas Conhecidos
 
-- **Grupos de Idioma**: Configurações agora mostram "Oficial" (Inglês, Português) vs "Não Oficial" (traduções apenas de UI) com rotulagem clara
-#### Armazenamento e Recuperação
-- **Porta de Recuperação Desktop**: Windows/macOS/Linux agora bloqueia explicitamente a inicialização quando a pasta Documentos não está disponível (redirecionada/ausente) e solicita seleção de pasta
-- **Integração de Armazenamento Personalizado**: Fluxo de recuperação reutiliza preferências existentes `useCustomStorage`, `customStoragePath` e `securityBookmark`
-
-- **Melhor Backup**: Funcionalidade de backup e restauração aprimorada com operações de diário mais seguras
-#### Melhorias de Plataforma
-- **iOS/macOS**: Diálogo de consentimento de analytics na primeira execução (opt-in por padrão)
-- Verificação de recibo de compra mais confiável
-
-- Chave de conformidade de exportação de criptografia não isenta adicionada
-- **Android**: Melhor relatório de crashes, inicialização mais suave, detecção de loja mais segura
-
-- **Windows/Linux**: Seleção explícita de pasta quando Documentos não está disponível, sem fallbacks silenciosos
-#### Interface e Acessibilidade
-- **Tematização Consistente**: Seletor de Links de Entrada, blocos de ajuda do Assistente de Criação e dicas de tradução agora usam esquema de cor `onPrimary` para melhor contraste
-- **Migração Flutter 3.35**: Atualizado para nova API `RadioGroup` em Configurações → Tema e Idioma
-
-- **Acessibilidade**: Rótulos aprimorados e melhor suporte para leitores de tela em todos os novos recursos
-#### Analytics e Privacidade
-- **Rastreamento de Tela Centralizado**: Observador PostHog rastreia transições de rota sem reconstruções de widget
-- **Porta de Consentimento**: Único toggle `analyticsEnabled` controla tanto PostHog quanto Firebase
-
-- **Cobertura de Plataforma**: PostHog habilitado em Web/iOS/Android/macOS, no-op limpo no Windows/Linux
-### O Que Foi Corrigido
-- **Tabelas de Significado**: Tratamento mais robusto de tabelas personalizadas preserva comportamento esperado de rolagem
-- Menos erros de valor único e melhor validação de intervalo
-
-- Ícone de copiar agora reseta adequadamente após rolagens subsequentes no iPad
-- **Tabelas Personalizadas**: Campo description agora persiste de ponta a ponta através de notifiers, repositório e armazenamento
-
-- Sem mais intervalos de largura zero causando erros de cálculo
-- Recálculo mais seguro e melhor tratamento de tabelas inválidas
-
-- **Detecção de Loja**: Verificações de recibo de compra mais confiáveis no iOS e macOS com melhor tratamento de erros
-- **Problemas de Layout**: Menos instabilidade de layout, posição de rolagem estável, animações mais suaves
-
-- **Suporte iPad**: "Editar Nova Cena Automaticamente" agora funciona consistentemente
-- **Importação/Exportação**: Melhor tratamento de arquivos CSV/PSV/TXT malformados com relatório de erro adequado
-
-- **Importação de Diário**: Perguntas de Destino agora restauram adequadamente após importação iOS → Android/Boox
-### Começando
-
-#### Descrições de Entrada
-- Abra qualquer Tabela de Significado ou Foco de Evento
-- Toque no botão de editar
-
-- Adicione descrições às suas entradas (suporta formatação Markdown)
-- Salve e aproveite resultados mais ricos com descrições exibidas abaixo de cada rolagem
-#### Suporte Multilinha de Tabelas Personalizadas
-- Crie ou edite uma Tabela Personalizada
-- Use o campo de texto multilinha para entradas mais longas
-
-- Adicione quebras de linha e formatação Markdown básica
-- Importação/exportação agora preserva toda a formatação
-### Problemas Conhecidos
-- Algumas tabelas de usuário malformadas podem permanecer em quarentena; corrija o JSON ou re-importe
-- Descrições de entrada requerem o novo schema v3.1; tabelas mais antigas não as mostrarão até serem atualizadas
-
-- Formatos de tabela muito antigos podem precisar de re-importação para acessar novos recursos
-
-Obrigado pelo seu contínuo apoio! Estamos sempre trabalhando para tornar o Mythic GME 2e o melhor companheiro de jogo solo possível.
+- Algumas tabelas de usuário malformadas podem continuar em quarentena até que
+  o JSON seja corrigido ou a tabela seja reimportada.
+- Descrições de entrada exigem o schema de tabela mais recente; tabelas antigas
+  podem precisar ser atualizadas antes que as descrições apareçam.

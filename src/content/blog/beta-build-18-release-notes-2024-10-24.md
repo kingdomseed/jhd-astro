@@ -9,11 +9,12 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-18", "create-load", "fate", "lists", "scenes"]
 ---
 
-Released October 24, 2024
+Released October 24, 2024.
 
 This post is part of the Beta → First Release series.
 
-Important: Please delete the app and install the next beta fresh.
+For this beta, testers were asked to delete the app and install the next beta
+fresh.
 
 ## Major Updates
 
@@ -61,5 +62,5 @@ Important: Please delete the app and install the next beta fresh.
 - Broad bug fixes and style polish
 
 ## Notes
-- Dice Roller updates are still pending
+- Dice Roller updates were still pending in this build
 - Accessibility has not been updated in this build

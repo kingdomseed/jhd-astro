@@ -2,7 +2,7 @@
 title: "v1.4.5 — Portuguese & iCloud Sync"
 summary: "Full Portuguese, iCloud sync rebuilt, content from MM49, accessibility and stability across platforms"
 category: "Release Notes"
-date: "2025-03-03"
+date: "2025-03-20"
 readTime: "7 min read"
 isSample: false
 keywords: ["release notes", "Mythic GME Apps"]
@@ -23,7 +23,7 @@ tags: [
 ]
 ---
 
-Released March 3, 2025
+Released March 20, 2025.
 
 # Mythic GME Mobile 1.4.5
 

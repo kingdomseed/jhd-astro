@@ -9,7 +9,7 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-08", "fate", "lists", "journal", "settings"]
 ---
 
-Released October 15, 2024
+Released October 15, 2024.
 
 This post is part of the Beta → First Release series.
 
@@ -35,9 +35,9 @@ This post is part of the Beta → First Release series.
 - Build number now appears in About Us
 
 ### Settings
-- Redesigned with upcoming feature toggles
-  - Colorblind mode (coming)
-  - Right/left‑hand mode (coming)
+- Redesigned with beta-stage feature toggles
+  - Colorblind mode placeholder
+  - Right/left-hand mode placeholder
   - Theme selection (default: System)
 
 ## Minor Updates

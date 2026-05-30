@@ -9,11 +9,13 @@ keywords: ["release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "rc1", "product:apps", "accessibility", "dice-roller", "platform"]
 ---
 
-Released November 4, 2024
+Released November 4, 2024.
 
 This post is part of the Beta → First Release series.
 
-I know this is like three builds in a weekend and a Monday, but I'm pushing out the Release Candidate tonight. If nothing is breaking, this is the version that goes to the stores pending approval timelines.
+At the time, this was the Release Candidate after several beta builds in one
+weekend. If nothing broke, this was the version headed to the stores pending
+approval timelines.
 
 ## Accessibility Enhancements
 
@@ -79,11 +81,12 @@ I know this is like three builds in a weekend and a Monday, but I'm pushing out 
 - Updated documentation and help sections
 
 ## Known Issues
-- None currently reported in RC1
+- None reported for RC1 at the time
 
 ## Installation Notes
 - Clean installation recommended
 - Back up existing data before updating
 - Check app permissions after update
 
-I'm doing thorough compliance and permissions checks now to ensure no data is being pulled from your device by accident.
+At the time, I was doing thorough compliance and permissions checks to ensure no
+data was being pulled from your device by accident.

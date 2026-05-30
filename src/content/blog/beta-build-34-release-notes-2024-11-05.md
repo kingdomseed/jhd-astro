@@ -9,11 +9,12 @@ keywords: ["beta", "release notes", "Mythic GME Apps"]
 tags: ["beta", "series:beta-to-first-release", "product:apps", "build-34", "stability", "privacy", "dice-roller"]
 ---
 
-Released November 5, 2024
+Released November 5, 2024.
 
 This post is part of the Beta → First Release series.
 
-An update is going out now for iOS and Android. Amazon to follow tomorrow.
+At the time, this update was rolling out for iOS and Android, with Amazon to
+follow separately.
 
 ## Improvements
 - Text visibility enhancements across the app
@@ -22,7 +23,7 @@ An update is going out now for iOS and Android. Amazon to follow tomorrow.
 - Updated app icon designs
 - New screenshots and store listing content
 
-## Version — Current Release
+## Version Notes
 
 ### Major Improvements
 
@@ -53,11 +54,11 @@ An update is going out now for iOS and Android. Amazon to follow tomorrow.
 - Enhanced data validation for game state persistence
 - Optimized performance during extended gameplay sessions
 
-## Known Issues
-- Some text visibility concerns still being addressed
-- Minor UI refinements pending
+## Known Issues At The Time
+- Some text visibility concerns were still being addressed
+- Minor UI refinements remained
 - Random Events may not trigger correctly in some edge cases
 
 ## Notes
 - Please report issues and feedback via the app’s support channel
-- Back up your saved games regularly while enhancements to the save system continue
+- Back up your saved games regularly while save system enhancements were ongoing

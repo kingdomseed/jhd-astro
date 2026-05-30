@@ -1,6 +1,6 @@
 # Support Page Flow Inventory
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 
 This is an inventory of the current production English Support page. It records
 the page flow before rewriting so we can decide what each section is supposed
@@ -98,7 +98,8 @@ The Support page currently says:
 | Contact tab info cards | Done | Separate app support/community/business contact tone without moving sections. |
 | Contact form copy | Done | Clarify placeholder and response-time promise. |
 
-## Next Section
+## Current Status
 
-Support page copy refinement is complete for the production English pass. Move
-to the next page inventory or publish this page when ready.
+Support page copy refinement is complete for the production English pass. Do
+not reopen this page unless Jason explicitly asks. Use
+`docs/copy/site-copy-tracker.md` for the current outstanding copy list.
