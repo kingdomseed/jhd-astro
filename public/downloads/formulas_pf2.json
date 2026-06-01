@@ -1,9 +1,9 @@
 {
   "formulas": [
-    { "name": "Check / Attack", "formula": "1d20+MOD", "description": "Pathfinder 2e core d20 roll. Replace MOD with your total modifier." },
-    { "name": "Fortune (roll twice, take higher)", "formula": "2d20kh+MOD", "description": "PF2e fortune effects. Replace MOD with your modifier." },
-    { "name": "Misfortune (roll twice, take lower)", "formula": "2d20kl+MOD", "description": "PF2e misfortune effects. Replace MOD with your modifier." },
-    { "name": "Damage placeholder", "formula": "2d6+MOD", "description": "Edit die size/count and modifiers for your weapon/spell." }
+    { "name": "Check / Attack", "formula": "1d20+0", "description": "Pathfinder 2e core d20 roll. Edit +0 to your total modifier." },
+    { "name": "Fortune (roll twice, take higher)", "formula": "2d20kh+0", "description": "PF2e fortune effects. Edit +0 to your modifier." },
+    { "name": "Misfortune (roll twice, take lower)", "formula": "2d20kl+0", "description": "PF2e misfortune effects. Edit +0 to your modifier." },
+    { "name": "Damage placeholder", "formula": "2d6+0", "description": "Edit die size/count and +0 modifier for your weapon/spell." }
   ],
   "schemaVersion": 1
 }
