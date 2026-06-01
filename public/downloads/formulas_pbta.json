@@ -1,7 +1,7 @@
 {
   "formulas": [
-    { "name": "Basic Move", "formula": "2d6+0", "description": "Roll 2d6 plus stat. Edit +0 to your stat, then interpret 10+/7–9/6- per your playbook." },
-    { "name": "With +1 Forward", "formula": "2d6+0+1", "description": "+1 forward example. Edit +0 to your stat and adjust the forward bonus as needed." }
+    { "name": "Basic Move", "formula": "2d6+0", "description": "Roll 2d6 plus stat. After importing, replace +0 with your stat, such as +2 or -1, then interpret 10+/7–9/6- per your playbook." },
+    { "name": "With +1 Forward", "formula": "2d6+0+1", "description": "+1 forward example. After importing, replace +0 with your stat, such as +2 or -1, and keep or adjust the +1 bonus." }
   ],
   "schemaVersion": 1
 }

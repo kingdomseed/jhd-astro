@@ -3,7 +3,7 @@
     {
       "name": "Action Roll (1d6 + adds)",
       "formula": "1d6+0",
-      "description": "Roll your action die. Edit +0 to your stat/bonus before rolling. Compare vs two challenge dice (below)."
+      "description": "Roll your action die. After importing, replace +0 with your stat/bonus, such as +2 or -1. Compare vs two challenge dice (below)."
     },
     {
       "name": "Challenge Dice (2d10)",
