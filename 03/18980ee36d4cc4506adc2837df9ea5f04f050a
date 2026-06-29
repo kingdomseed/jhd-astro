@@ -1,0 +1,21 @@
+.agents/skills/patrol-tests-architecture/SKILL.md
+  s_2f16e0e318343c::t_741afdb5b27add 1-398
+.agents/skills/patrol-tests/SKILL.md
+  s_2f16e0e318343c::t_5781f147f955ef 1-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "0318980ee36d4cc4506adc2837df9ea5f04f050a",
+  "prompts": {},
+  "sessions": {
+    "s_2f16e0e318343c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f1210-c2ff-7ab2-af9f-692b82c013b5",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jason Holt <jason@jasonholtdigital.com>"
+    }
+  }
+}
