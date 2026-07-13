@@ -1,0 +1,143 @@
+---
+import SanctuaryFooter from "../../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../../layouts/SanctuaryLayout.astro";
+import { v2StoreLinks } from "../../../lib/v2Links";
+
+const mobileStores = v2StoreLinks.filter((l) =>
+  ["apple", "google", "amazon"].includes(l.className),
+);
+const desktopStores = v2StoreLinks.filter((l) =>
+  ["microsoft", "itch"].includes(l.className),
+);
+---
+
+<SanctuaryLayout
+  title="Apps - Jason Holt Digital"
+  description="Official Mythic GME Mobile and Mythic GME Digital companion apps for solo play on phone, tablet, and desktop."
+  canonicalPath="/v2/apps/"
+>
+  <SanctuaryHeader slot="before-main" />
+
+  <section class="sx-page-hero" aria-labelledby="apps-title">
+    <div class="sx-wrap">
+      <p class="sx-kicker" aria-hidden="true">Product family</p>
+      <h1 id="apps-title" class="sx-page-title">Official Mythic GME apps</h1>
+      <p class="sx-page-lead">
+        Mobile for play on the go. Desktop for longer sessions with more room. Both keep Fate
+        Questions, Meaning Tables, scenes, and lists close to the story.
+      </p>
+    </div>
+  </section>
+
+  <section class="sx-section" id="mobile" aria-labelledby="mobile-title">
+    <div class="sx-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
+      <div>
+        <p class="sx-kicker" aria-hidden="true">Mobile</p>
+        <h2 id="mobile-title" class="sx-sec-title">Mythic GME Mobile</h2>
+        <p class="sx-page-lead">
+          A pocket-ready way to ask Fate Questions, roll Meaning Tables, track Scenes and Lists,
+          and keep play close to the story on iPhone, iPad, Android, and Fire tablets.
+        </p>
+        <ul class="sx-list" style="margin:1.25rem 0">
+          <li><span class="sx-list__meta">Included</span>Fate Chart and Fate Check</li>
+          <li><span class="sx-list__meta">Included</span>Scenes, Threads, Characters, Adventure Log</li>
+          <li><span class="sx-list__meta">Unlock</span>One-time Expanded Features — no subscriptions</li>
+        </ul>
+        <div class="sx-cta-row">
+          {mobileStores.map((link) => (
+            <a
+              class="sx-btn sx-btn--ghost"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class={link.icon} aria-hidden="true"></i> {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div class="sx-phone-row">
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-1.png" alt="Fate Chart" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Fate Chart</figcaption>
+        </figure>
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-2.png" alt="Scenes" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Scenes</figcaption>
+        </figure>
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-5.png" alt="Threads" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Threads</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-section sx-section--band" id="desktop" aria-labelledby="desktop-title">
+    <div class="sx-wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2rem;align-items:center">
+      <div class="sx-media sx-media--landscape">
+        <img src="/v2/assets/desktop-1.png" alt="Mythic GME Digital desktop workspace" width="3944" height="2564" loading="lazy" />
+      </div>
+      <div>
+        <p class="sx-kicker" aria-hidden="true">Desktop</p>
+        <h2 id="desktop-title" class="sx-sec-title">Mythic GME Digital</h2>
+        <p class="sx-page-lead">
+          More room for longer Mythic sessions on Windows, macOS, and Linux. Same Mythic flow,
+          with space to keep more tools visible.
+        </p>
+        <div class="sx-cta-row" style="margin-top:1.25rem">
+          {desktopStores.map((link) => (
+            <a
+              class="sx-btn sx-btn--primary"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class={link.icon} aria-hidden="true"></i> {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-section" aria-labelledby="books-title">
+    <div class="sx-wrap">
+      <p class="sx-kicker" aria-hidden="true">Source books</p>
+      <h2 id="books-title" class="sx-sec-title">Companions to the official Mythic books</h2>
+      <p class="sx-page-lead">
+        The apps are companions to Tana Pigeon’s Mythic books from Word Mill Creative. They help
+        with the parts that slow play down, then get out of the way.
+      </p>
+      <div class="sx-cta-row" style="margin-top:1.25rem">
+        <a
+          class="sx-btn sx-btn--ghost"
+          href="https://www.drivethrurpg.com/en/publisher/1445/word-mill-games"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Browse Word Mill books
+        </a>
+        <a class="sx-btn sx-btn--accent" href="/v2/support/#contact-panel">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>
+
+<style is:global>
+  @media (max-width: 900px) {
+    #mobile > .sx-wrap,
+    #desktop > .sx-wrap {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

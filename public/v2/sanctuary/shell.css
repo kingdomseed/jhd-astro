@@ -50,10 +50,7 @@
 
 .sx button {
   font: inherit;
-  color: inherit;
   cursor: pointer;
-  border: 0;
-  background: none;
 }
 
 .sx-skip {
@@ -166,14 +163,15 @@
   color: var(--sx-sun);
 }
 
-.sx-nav__cta {
+.sx-nav__cta,
+button.sx-nav__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   height: 42px;
   padding: 0 1.1rem;
   background: var(--sx-ink);
-  color: var(--sx-white);
+  color: #ffffff;
   font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.12em;
@@ -183,10 +181,11 @@
   transition: transform 0.2s var(--sx-ease), box-shadow 0.2s var(--sx-ease);
 }
 
-.sx-nav__cta:hover {
+.sx-nav__cta:hover,
+button.sx-nav__cta:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 0 var(--sx-leaf);
-  color: var(--sx-white);
+  color: #ffffff;
 }
 
 .sx-burger {
@@ -353,43 +352,49 @@ body.has-sx-nav-open {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 1px solid var(--sx-ink);
-  transition: transform 0.2s var(--sx-ease), box-shadow 0.2s var(--sx-ease), background 0.2s;
+  transition: transform 0.2s var(--sx-ease), box-shadow 0.2s var(--sx-ease), background 0.2s, color 0.2s;
 }
 
+a.sx-btn--primary,
 .sx-btn--primary {
   background: var(--sx-ink);
-  color: #ffffff;
+  color: #ffffff !important;
   box-shadow: 4px 4px 0 0 var(--sx-sun);
 }
 
+a.sx-btn--primary:hover,
 .sx-btn--primary:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 0 var(--sx-sun);
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
+a.sx-btn--accent,
 .sx-btn--accent {
   background: var(--sx-leaf);
-  color: var(--sx-black);
-  border-color: var(--sx-black);
+  color: #0a0a0a !important;
+  border-color: #0a0a0a;
   box-shadow: 4px 4px 0 0 var(--sx-ink);
 }
 
+a.sx-btn--accent:hover,
 .sx-btn--accent:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 0 var(--sx-ink);
-  color: var(--sx-black);
+  color: #0a0a0a !important;
 }
 
+a.sx-btn--ghost,
 .sx-btn--ghost {
   background: var(--sx-white);
-  color: var(--sx-ink);
+  color: var(--sx-ink) !important;
   border-color: var(--sx-ink);
 }
 
+a.sx-btn--ghost:hover,
 .sx-btn--ghost:hover {
   background: var(--sx-white);
-  color: var(--sx-ink);
+  color: var(--sx-ink) !important;
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 0 var(--sx-ink);
 }
