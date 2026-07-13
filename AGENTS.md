@@ -185,3 +185,13 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 - Do not add analytics or tracking scripts unless explicitly approved.
 - Avoid editing Webflow-generated files unless there is a clear requirement.
 - Favor incremental, small diffs over large structural rewrites.
+
+## Cursor Cloud specific instructions
+
+- Standard commands are in `package.json` and the "Build, Test, and Development Commands" section above. Node 22 is pinned via `.nvmrc`/`engines`.
+- Services: this is a single static Astro 6 site (Cloudflare adapter, but output is prerendered static). There is no backend to run separately.
+  - Dev server: `npm run dev` → serves on `http://localhost:4321/`. Start it in a background/tmux session; the process stays in the foreground otherwise.
+  - Tests: `npm test` (Vitest, `*.test.ts` under `src/`). Lint/type check: `npx astro check`. Build: `npm run build` (outputs to `dist/`).
+- No secrets are required for dev/build/test. `.env` vars (`SENTRY_AUTH_TOKEN`, `PUBLIC_FORMSPARK_FORM_ID`, `PUBLIC_TURNSTILE_SITE_KEY`) are optional; the contact form and Sentry release upload are inert without them, but every page still renders.
+- `.npmrc` contains a Font Awesome registry token, but no `@fortawesome`/`@awesome.me` packages are in `package.json` (icons load via the Font Awesome CDN kit at runtime), so `npm install` does not hit that private registry.
+- Site search is powered by the `orama-search` integration (`src/integrations/orama-search.mjs`); it builds `oramaDB_*.json` indexes during `npm run build` and is queried client-side on the Resources/Blog pages.
