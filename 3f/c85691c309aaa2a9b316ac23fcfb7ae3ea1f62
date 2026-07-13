@@ -1,0 +1,19 @@
+.conductor/settings.local.toml
+  s_bb794bd6a315f1::t_f47fae7c2587d7 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "3fc85691c309aaa2a9b316ac23fcfb7ae3ea1f62",
+  "prompts": {},
+  "sessions": {
+    "s_bb794bd6a315f1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f5b38-c567-7540-a161-fbc1d8720904",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jason Holt <jason@jasonholtdigital.com>"
+    }
+  }
+}
