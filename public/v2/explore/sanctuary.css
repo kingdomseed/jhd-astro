@@ -425,8 +425,9 @@ body.has-sx-nav-open {
 
 .sx-stage {
   position: relative;
-  min-height: 520px;
   isolation: isolate;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
 }
 
 .sx-stage__glow {
@@ -473,12 +474,17 @@ body.has-sx-nav-open {
   animation: sx-rise 1s var(--sx-ease) both;
 }
 
-.sx-stage__frame img {
-  width: 100%;
+.sx-stage__media {
   aspect-ratio: 17 / 22;
-  object-fit: cover;
-  object-position: center top;
+  overflow: hidden;
   background: #111;
+}
+
+.sx-stage__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .sx-stage__caption {
@@ -496,9 +502,9 @@ body.has-sx-nav-open {
 .sx-stage__cutout {
   position: absolute;
   z-index: 3;
-  width: min(52%, 240px);
-  left: -2%;
-  bottom: 4%;
+  width: min(46%, 200px);
+  left: 2%;
+  bottom: 10%;
   filter: drop-shadow(0 14px 24px rgba(15, 51, 97, 0.22));
   animation: sx-float 5.5s ease-in-out infinite;
 }
@@ -506,7 +512,9 @@ body.has-sx-nav-open {
 .sx-stage__cutout img {
   width: 100%;
   height: auto;
+  max-height: 180px;
   object-fit: contain;
+  object-position: center;
 }
 
 @media (max-width: 960px) {
@@ -580,6 +588,7 @@ body.has-sx-nav-open {
 }
 
 .sx-pillar__media {
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #0b1d33;
   border: 1px solid color-mix(in oklab, var(--sx-ink) 18%, transparent);
@@ -587,10 +596,22 @@ body.has-sx-nav-open {
 
 .sx-pillar__media img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   transition: transform 0.5s var(--sx-ease);
+}
+
+.sx-pillar__media--events img {
+  object-position: center 42%;
+}
+
+.sx-pillar__media--journey img {
+  object-position: center 20%;
+}
+
+.sx-pillar__media--interrupt img {
+  object-position: center 30%;
 }
 
 .sx-pillar:hover .sx-pillar__media img {
@@ -832,12 +853,17 @@ body.has-sx-nav-open {
   box-shadow: var(--sx-shadow);
 }
 
-.sx-phone img {
+.sx-phone__media {
+  aspect-ratio: 9 / 19.5;
+  overflow: hidden;
+  background: #0b1220;
+}
+
+.sx-phone__media img {
   width: 100%;
-  aspect-ratio: 9 / 18;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
-  background: #0b1220;
 }
 
 .sx-phone figcaption {

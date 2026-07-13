@@ -126,13 +126,15 @@ const year = new Date().getFullYear();
             <div class="sx-stage__orbit"></div>
             <!-- Portrait 1700×2200: framed gallery hero -->
             <figure class="sx-stage__frame">
-              <img
-                src="/v2/assets/art-3.png"
-                alt=""
-                width="1700"
-                height="2200"
-                fetchpriority="high"
-              />
+              <div class="sx-stage__media">
+                <img
+                  src="/v2/assets/art-3.png"
+                  alt=""
+                  width="1700"
+                  height="2200"
+                  fetchpriority="high"
+                />
+              </div>
               <figcaption class="sx-stage__caption">
                 <span>Rooted in Wonder</span>
                 <span>Jorge Muñoz</span>
@@ -168,7 +170,7 @@ const year = new Date().getFullYear();
           <div class="sx-pillar-grid">
             <article class="sx-pillar">
               <!-- Portrait 1784×2284 — Random Events plate -->
-              <div class="sx-pillar__media">
+              <div class="sx-pillar__media sx-pillar__media--events">
                 <img
                   src="/v2/assets/stamp-art10.png"
                   alt=""
@@ -192,7 +194,7 @@ const year = new Date().getFullYear();
 
             <article class="sx-pillar">
               <!-- Portrait 1634×1825 — explorers / journey -->
-              <div class="sx-pillar__media">
+              <div class="sx-pillar__media sx-pillar__media--journey">
                 <img
                   src="/v2/assets/stamp-art15.png"
                   alt=""
@@ -216,7 +218,7 @@ const year = new Date().getFullYear();
 
             <article class="sx-pillar">
               <!-- Portrait 1784×2284 — interrupt / scene pressure -->
-              <div class="sx-pillar__media">
+              <div class="sx-pillar__media sx-pillar__media--interrupt">
                 <img
                   src="/v2/assets/stamp-art20.png"
                   alt=""
@@ -285,33 +287,39 @@ const year = new Date().getFullYear();
           </div>
           <div class="sx-phone-row">
             <figure class="sx-phone">
-              <img
-                src="/v2/assets/mobile-1.png"
-                alt="Fate Chart screen in Mythic GME Mobile"
-                width="1419"
-                height="2796"
-                loading="lazy"
-              />
+              <div class="sx-phone__media">
+                <img
+                  src="/v2/assets/mobile-1.png"
+                  alt="Fate Chart screen in Mythic GME Mobile"
+                  width="1419"
+                  height="2796"
+                  loading="lazy"
+                />
+              </div>
               <figcaption>Fate Chart</figcaption>
             </figure>
             <figure class="sx-phone">
-              <img
-                src="/v2/assets/mobile-2.png"
-                alt="Scenes screen in Mythic GME Mobile"
-                width="1419"
-                height="2796"
-                loading="lazy"
-              />
+              <div class="sx-phone__media">
+                <img
+                  src="/v2/assets/mobile-2.png"
+                  alt="Scenes screen in Mythic GME Mobile"
+                  width="1419"
+                  height="2796"
+                  loading="lazy"
+                />
+              </div>
               <figcaption>Scenes</figcaption>
             </figure>
             <figure class="sx-phone">
-              <img
-                src="/v2/assets/mobile-4.png"
-                alt="Dice roller screen in Mythic GME Mobile"
-                width="1419"
-                height="2796"
-                loading="lazy"
-              />
+              <div class="sx-phone__media">
+                <img
+                  src="/v2/assets/mobile-4.png"
+                  alt="Dice roller screen in Mythic GME Mobile"
+                  width="1419"
+                  height="2796"
+                  loading="lazy"
+                />
+              </div>
               <figcaption>Dice</figcaption>
             </figure>
           </div>
