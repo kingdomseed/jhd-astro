@@ -1,8 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import SanctuaryFooter from "../../../components/v2/sanctuary/SanctuaryFooter.astro";
 import SanctuaryHeader from "../../../components/v2/sanctuary/SanctuaryHeader.astro";
 import SanctuaryLayout from "../../../layouts/SanctuaryLayout.astro";
 import { v2StoreLinks } from "../../../lib/v2Links";
+import m1 from "../../../assets/mobile/mobile-1.png";
+import m2 from "../../../assets/mobile/mobile-2.png";
+import m4 from "../../../assets/mobile/mobile-4.png";
+import m5 from "../../../assets/mobile/mobile-5.png";
+import m7 from "../../../assets/mobile/mobile-7.png";
+import d1 from "../../../assets/desktop/desktop-1.png";
+import d3 from "../../../assets/desktop/desktop-3.png";
+import d6 from "../../../assets/desktop/desktop-6.png";
 
 const mobileStores = v2StoreLinks.filter((l) =>
   ["apple", "google", "amazon"].includes(l.className),
@@ -10,6 +19,65 @@ const mobileStores = v2StoreLinks.filter((l) =>
 const desktopStores = v2StoreLinks.filter((l) =>
   ["microsoft", "itch"].includes(l.className),
 );
+
+/**
+ * Play moments — portrait phone shots only (1419×2796).
+ * Ordered as a session flow: ask Fate → scenes → dice → threads → tables.
+ */
+const moments = [
+  {
+    image: m1,
+    label: "Fate Chart",
+    title: "Ask the question. Keep the story moving.",
+    body: "Write the Fate Question, set the odds, and roll. The answer lands in the Adventure Log so you stay close to what happens next.",
+  },
+  {
+    image: m2,
+    label: "Scenes",
+    title: "Frame the scene without losing the thread.",
+    body: "Expected, Altered, and Interrupt scenes stay in one place, so bookkeeping does not pull you out of play.",
+  },
+  {
+    image: m4,
+    label: "Dice",
+    title: "Roll the dice you actually use.",
+    body: "Save the formulas you reach for most, then reuse them in the middle of a scene instead of rebuilding them every time.",
+  },
+  {
+    image: m5,
+    label: "Threads",
+    title: "Track what the adventure is chasing.",
+    body: "Threads, Characters, and Features sit beside the oracle tools so the important pieces stay visible while you decide what happens next.",
+  },
+  {
+    image: m7,
+    label: "Custom Tables",
+    title: "Make the table feel like yours.",
+    body: "Create, import, and reuse Custom Tables so personal oracles feel native to the same playspace.",
+  },
+] as const;
+
+/** Landscape desktop shots only (3944×2564). */
+const desktopMoments = [
+  {
+    image: d1,
+    label: "Workspace",
+    title: "More room for longer Mythic sessions",
+    body: "Mythic GME Digital opens the same flow on Windows, macOS, and Linux — Meaning Tables, Adventure Log, Fate actions, and Lists in one wider surface.",
+  },
+  {
+    image: d6,
+    label: "Panels",
+    title: "Arrange the table the way you play",
+    body: "Drag and resize panels so the tools you need stay visible through a long session, without hopping between screens.",
+  },
+  {
+    image: d3,
+    label: "Long sessions",
+    title: "Stay in the story at the desk",
+    body: "Everything included up front. No subscriptions. Built for players who want space to think, roll, and write.",
+  },
+] as const;
 ---
 
 <SanctuaryLayout
@@ -17,83 +85,190 @@ const desktopStores = v2StoreLinks.filter((l) =>
   description="Official Mythic GME Mobile and Mythic GME Digital companion apps for solo play on phone, tablet, and desktop."
   canonicalPath="/v2/apps/"
 >
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/sanctuary/apps.css" />
+  </Fragment>
+
   <SanctuaryHeader slot="before-main" />
 
-  <section class="sx-page-hero" aria-labelledby="apps-title">
-    <div class="sx-wrap">
-      <p class="sx-kicker" aria-hidden="true">Product family</p>
-      <h1 id="apps-title" class="sx-page-title">Official Mythic GME apps</h1>
-      <p class="sx-page-lead">
-        Mobile for play on the go. Desktop for longer sessions with more room. Both keep Fate
-        Questions, Meaning Tables, scenes, and lists close to the story.
-      </p>
-    </div>
-  </section>
-
-  <section class="sx-section" id="mobile" aria-labelledby="mobile-title">
-    <div class="sx-wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
+  <section class="sx-apps-hero" aria-labelledby="apps-title">
+    <div class="sx-wrap sx-apps-hero__grid">
       <div>
-        <p class="sx-kicker" aria-hidden="true">Mobile</p>
-        <h2 id="mobile-title" class="sx-sec-title">Mythic GME Mobile</h2>
-        <p class="sx-page-lead">
-          A pocket-ready way to ask Fate Questions, roll Meaning Tables, track Scenes and Lists,
-          and keep play close to the story on iPhone, iPad, Android, and Fire tablets.
+        <p class="sx-kicker" aria-hidden="true">Official Mythic GME apps</p>
+        <h1 id="apps-title" class="sx-apps-hero__title">
+          Keep Mythic play <em>moving</em>.
+        </h1>
+        <p class="sx-apps-hero__lead">
+          Ask Fate Questions, roll Meaning Tables, and keep scenes, threads, and characters close
+          to the story — on the phone in your pocket or the desk where longer sessions live.
         </p>
-        <ul class="sx-list" style="margin:1.25rem 0">
-          <li><span class="sx-list__meta">Included</span>Fate Chart and Fate Check</li>
-          <li><span class="sx-list__meta">Included</span>Scenes, Threads, Characters, Adventure Log</li>
-          <li><span class="sx-list__meta">Unlock</span>One-time Expanded Features — no subscriptions</li>
-        </ul>
         <div class="sx-cta-row">
-          {mobileStores.map((link) => (
-            <a
-              class="sx-btn sx-btn--ghost"
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class={link.icon} aria-hidden="true"></i> {link.label}
-            </a>
-          ))}
+          <a class="sx-btn sx-btn--primary" href="#mobile">
+            See Mobile <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+          <a class="sx-btn sx-btn--ghost" href="#desktop">See Desktop</a>
         </div>
       </div>
-      <div class="sx-phone-row">
-        <figure class="sx-phone">
-          <div class="sx-phone__media">
-            <img src="/v2/assets/mobile-1.png" alt="Fate Chart" width="1419" height="2796" loading="lazy" />
-          </div>
-          <figcaption>Fate Chart</figcaption>
-        </figure>
-        <figure class="sx-phone">
-          <div class="sx-phone__media">
-            <img src="/v2/assets/mobile-2.png" alt="Scenes" width="1419" height="2796" loading="lazy" />
-          </div>
-          <figcaption>Scenes</figcaption>
-        </figure>
-        <figure class="sx-phone">
-          <div class="sx-phone__media">
-            <img src="/v2/assets/mobile-5.png" alt="Threads" width="1419" height="2796" loading="lazy" />
-          </div>
-          <figcaption>Threads</figcaption>
-        </figure>
+
+      <div class="sx-apps-stage" aria-hidden="true">
+        <div class="sx-apps-stage__wash"></div>
+        <div class="sx-apps-stage__art">
+          <img
+            src="/v2/assets/stamp-art15.png"
+            alt=""
+            width="1634"
+            height="1825"
+            loading="lazy"
+          />
+        </div>
+        <div class="sx-apps-stage__phone">
+          <Image
+            src={m1}
+            alt=""
+            widths={[320, 480, 640]}
+            sizes="(max-width: 960px) 70vw, 300px"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+        <p class="sx-apps-stage__caption">Fate Chart · in play</p>
       </div>
     </div>
   </section>
 
-  <section class="sx-section sx-section--band" id="desktop" aria-labelledby="desktop-title">
-    <div class="sx-wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2rem;align-items:center">
-      <div class="sx-media sx-media--landscape">
-        <img src="/v2/assets/desktop-1.png" alt="Mythic GME Digital desktop workspace" width="3944" height="2564" loading="lazy" />
+  <section class="sx-moments" id="mobile" aria-labelledby="mobile-title">
+    <div class="sx-wrap" style="margin-bottom:1.25rem">
+      <p class="sx-kicker" aria-hidden="true">Mythic GME Mobile</p>
+      <h2 id="mobile-title" class="sx-sec-title">A pocket playspace for solo sessions</h2>
+      <p class="sx-page-lead">
+        iPhone, iPad, Android, and Fire tablets. Built for less lookup and more story wherever you
+        play.
+      </p>
+    </div>
+
+    <div class="sx-wrap">
+      <div class="sx-moments__stage" data-sx-moments>
+        <div class="sx-moments__visual">
+          {
+            moments.map((moment, index) => (
+              <div
+                class:list={["sx-moments__slide", { "is-on": index === 0 }]}
+                data-moment-slide
+                data-label={moment.label}
+              >
+                <div class="sx-moments__device">
+                  <Image
+                    src={moment.image}
+                    alt={`${moment.label} screen in Mythic GME Mobile`}
+                    widths={[360, 560, 720]}
+                    sizes="(max-width: 960px) 70vw, 280px"
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="sx-moments__copy">
+          {
+            moments.map((moment, index) => (
+              <div
+                class:list={["sx-moments__slide", { "is-on": index === 0 }]}
+                data-moment-copy
+              >
+                <p class="sx-moments__label">{moment.label}</p>
+                <h3 class="sx-moments__title">{moment.title}</h3>
+                <p class="sx-moments__body">{moment.body}</p>
+              </div>
+            ))
+          }
+
+          <div class="sx-moments__controls">
+            <div class="sx-moments__nav">
+              <button class="sx-moments__btn" type="button" data-moment-prev aria-label="Previous moment">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              </button>
+              <button class="sx-moments__btn" type="button" data-moment-next aria-label="Next moment">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+            <span class="sx-moments__ix" data-moment-ix>01 / {String(moments.length).padStart(2, "0")}</span>
+          </div>
+          <div class="sx-moments__dots" data-moment-dots aria-hidden="true"></div>
+
+          <div class="sx-cta-row" style="margin-top:1.5rem">
+            {
+              mobileStores.map((link) => (
+                <a
+                  class="sx-btn sx-btn--ghost"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class={link.icon} aria-hidden="true"></i> {link.meta}
+                </a>
+              ))
+            }
+          </div>
+          <p class="sx-page-lead" style="margin-top:1rem;font-size:0.9rem">
+            One-time Expanded Features unlock on mobile stores. No subscriptions. What you unlock
+            stays unlocked.
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="sx-kicker" aria-hidden="true">Desktop</p>
-        <h2 id="desktop-title" class="sx-sec-title">Mythic GME Digital</h2>
-        <p class="sx-page-lead">
-          More room for longer Mythic sessions on Windows, macOS, and Linux. Same Mythic flow,
-          with space to keep more tools visible.
-        </p>
-        <div class="sx-cta-row" style="margin-top:1.25rem">
-          {desktopStores.map((link) => (
+    </div>
+  </section>
+
+  <section class="sx-cinema" id="desktop" aria-labelledby="desktop-title">
+    <div class="sx-wrap" style="margin-bottom:1.25rem">
+      <p class="sx-kicker" aria-hidden="true">Mythic GME Digital</p>
+      <h2 id="desktop-title" class="sx-sec-title" style="margin:0">
+        The wider table for longer sessions
+      </h2>
+    </div>
+
+    <div class="sx-wrap">
+      <div class="sx-cinema__frame" data-sx-cinema>
+        <div class="sx-cinema__slides">
+          {
+            desktopMoments.map((moment, index) => (
+              <div
+                class:list={["sx-cinema__slide", { "is-on": index === 0 }]}
+                data-cinema-slide
+                data-label={moment.label}
+              >
+                <Image
+                  src={moment.image}
+                  alt={moment.title}
+                  widths={[900, 1400, 1800]}
+                  sizes="(max-width: 1180px) 100vw, 1180px"
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+              </div>
+            ))
+          }
+        </div>
+        <div class="sx-cinema__bar">
+          <div>
+            <p class="sx-cinema__label" data-cinema-label>{desktopMoments[0].label}</p>
+            <h2 data-cinema-title>{desktopMoments[0].title}</h2>
+            <p data-cinema-body>{desktopMoments[0].body}</p>
+          </div>
+          <div class="sx-cinema__controls">
+            <button class="sx-moments__btn" type="button" data-cinema-prev aria-label="Previous desktop view">
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="sx-moments__btn" type="button" data-cinema-next aria-label="Next desktop view">
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sx-cta-row" style="margin-top:1.25rem">
+        {
+          desktopStores.map((link) => (
             <a
               class="sx-btn sx-btn--primary"
               href={link.href}
@@ -102,30 +277,73 @@ const desktopStores = v2StoreLinks.filter((l) =>
             >
               <i class={link.icon} aria-hidden="true"></i> {link.label}
             </a>
-          ))}
-        </div>
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <section class="sx-section" aria-labelledby="books-title">
+  <section class="sx-store-band" aria-labelledby="stores-title">
     <div class="sx-wrap">
-      <p class="sx-kicker" aria-hidden="true">Source books</p>
-      <h2 id="books-title" class="sx-sec-title">Companions to the official Mythic books</h2>
-      <p class="sx-page-lead">
-        The apps are companions to Tana Pigeon’s Mythic books from Word Mill Creative. They help
-        with the parts that slow play down, then get out of the way.
-      </p>
-      <div class="sx-cta-row" style="margin-top:1.25rem">
-        <a
-          class="sx-btn sx-btn--ghost"
-          href="https://www.drivethrurpg.com/en/publisher/1445/word-mill-games"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Browse Word Mill books
-        </a>
-        <a class="sx-btn sx-btn--accent" href="/v2/support/#contact-panel">Contact</a>
+      <p class="sx-kicker" aria-hidden="true">Get the apps</p>
+      <h2 id="stores-title" class="sx-sec-title">Choose your surface</h2>
+      <div class="sx-store-band__panel" style="margin-top:1.25rem">
+        <article class="sx-store-card">
+          <h3>Mobile</h3>
+          <p>iPhone, iPad, Android, and Fire. Pocket-ready Mythic flow.</p>
+          <div class="sx-store-card__links">
+            {
+              mobileStores.map((link) => (
+                <a
+                  class="sx-btn sx-btn--ghost"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class={link.icon} aria-hidden="true"></i> {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </article>
+        <article class="sx-store-card">
+          <h3>Desktop</h3>
+          <p>Windows, macOS, and Linux. More room for longer sessions.</p>
+          <div class="sx-store-card__links">
+            {
+              desktopStores.map((link) => (
+                <a
+                  class="sx-btn sx-btn--ghost"
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class={link.icon} aria-hidden="true"></i> {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </article>
+      </div>
+
+      <div style="margin-top:2.5rem">
+        <p class="sx-kicker" aria-hidden="true">Source books</p>
+        <h2 class="sx-sec-title">Companions to the official Mythic books</h2>
+        <p class="sx-page-lead">
+          The apps help with the parts that slow play down, then get out of the way. Browse the
+          Mythic books from Word Mill Creative when you want the full system text.
+        </p>
+        <div class="sx-cta-row" style="margin-top:1rem">
+          <a
+            class="sx-btn sx-btn--ghost"
+            href="https://www.drivethrurpg.com/en/publisher/1445/word-mill-games"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Browse Word Mill books
+          </a>
+          <a class="sx-btn sx-btn--accent" href="/v2/support/#contact-panel">Contact</a>
+        </div>
       </div>
     </div>
   </section>
@@ -133,11 +351,77 @@ const desktopStores = v2StoreLinks.filter((l) =>
   <SanctuaryFooter slot="after-main" />
 </SanctuaryLayout>
 
-<style is:global>
-  @media (max-width: 900px) {
-    #mobile > .sx-wrap,
-    #desktop > .sx-wrap {
-      grid-template-columns: 1fr !important;
+<script is:inline>
+  (function () {
+    var root = document.querySelector("[data-sx-moments]");
+    if (root) {
+      var slides = Array.prototype.slice.call(root.querySelectorAll("[data-moment-slide]"));
+      var copies = Array.prototype.slice.call(root.querySelectorAll("[data-moment-copy]"));
+      var prev = root.querySelector("[data-moment-prev]");
+      var next = root.querySelector("[data-moment-next]");
+      var ix = root.querySelector("[data-moment-ix]");
+      var dotsWrap = root.querySelector("[data-moment-dots]");
+      var i = 0;
+      var total = slides.length;
+
+      function renderDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = slides
+          .map(function (_, n) {
+            return '<button class="sx-moments__dot' + (n === i ? " is-on" : "") + '" type="button" data-i="' + n + '" aria-label="Moment ' + (n + 1) + '"></button>';
+          })
+          .join("");
+        Array.prototype.forEach.call(dotsWrap.querySelectorAll("[data-i]"), function (btn) {
+          btn.addEventListener("click", function () {
+            go(Number(btn.getAttribute("data-i")));
+          });
+        });
+      }
+
+      function go(n) {
+        i = ((n % total) + total) % total;
+        slides.forEach(function (el, k) {
+          el.classList.toggle("is-on", k === i);
+        });
+        copies.forEach(function (el, k) {
+          el.classList.toggle("is-on", k === i);
+        });
+        if (ix) ix.textContent = String(i + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        renderDots();
+      }
+
+      if (prev) prev.addEventListener("click", function () { go(i - 1); });
+      if (next) next.addEventListener("click", function () { go(i + 1); });
+      go(0);
     }
-  }
-</style>
+
+    var cinema = document.querySelector("[data-sx-cinema]");
+    if (cinema) {
+      var cSlides = Array.prototype.slice.call(cinema.querySelectorAll("[data-cinema-slide]"));
+      var label = cinema.querySelector("[data-cinema-label]");
+      var title = cinema.querySelector("[data-cinema-title]");
+      var body = cinema.querySelector("[data-cinema-body]");
+      var cPrev = cinema.querySelector("[data-cinema-prev]");
+      var cNext = cinema.querySelector("[data-cinema-next]");
+      var copy = [
+        { label: "Workspace", title: "More room for longer Mythic sessions", body: "Mythic GME Digital opens the same flow on Windows, macOS, and Linux — Meaning Tables, Adventure Log, Fate actions, and Lists in one wider surface." },
+        { label: "Panels", title: "Arrange the table the way you play", body: "Drag and resize panels so the tools you need stay visible through a long session, without hopping between screens." },
+        { label: "Long sessions", title: "Stay in the story at the desk", body: "Everything included up front. No subscriptions. Built for players who want space to think, roll, and write." }
+      ];
+      var ci = 0;
+
+      function goC(n) {
+        ci = ((n % cSlides.length) + cSlides.length) % cSlides.length;
+        cSlides.forEach(function (el, k) {
+          el.classList.toggle("is-on", k === ci);
+        });
+        if (label) label.textContent = copy[ci].label;
+        if (title) title.textContent = copy[ci].title;
+        if (body) body.textContent = copy[ci].body;
+      }
+
+      if (cPrev) cPrev.addEventListener("click", function () { goC(ci - 1); });
+      if (cNext) cNext.addEventListener("click", function () { goC(ci + 1); });
+    }
+  })();
+</script>
