@@ -1,0 +1,66 @@
+---
+import {
+  v2AssetPath,
+  v2AppsUrl,
+  v2ContactUrl,
+  v2DiscordUrl,
+  v2ReleaseNotesUrl,
+  v2StoreLinks,
+  v2SupportUrl,
+} from "../../../lib/v2Links";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="sx-foot" id="site-footer">
+  <div class="sx-wrap">
+    <div class="sx-foot__grid">
+      <div>
+        <a class="sx-brand" href="/v2/">
+          <span class="sx-brand__mark">
+            <img src={v2AssetPath("logo-munoz.svg")} alt="" width="44" height="44" />
+          </span>
+          <span class="sx-brand__text">
+            <span class="sx-brand__name">Jason Holt Digital</span>
+            <span class="sx-brand__sub">Official Mythic GME Apps</span>
+          </span>
+        </a>
+        <p class="sx-foot__blurb">
+          Official Mythic GME 2e apps. Licensed from Word Mill Creative. Built one careful
+          ship at a time.
+        </p>
+      </div>
+      <div>
+        <h2 class="sx-foot__heading">Product</h2>
+        <a href={v2AppsUrl}>Apps</a>
+        <a href="/v2/resources/">Resources</a>
+        <a href="/v2/blog/">Blog</a>
+        <a href={v2SupportUrl}>Support</a>
+        <a href={v2ReleaseNotesUrl}>Release notes</a>
+      </div>
+      <div>
+        <h2 class="sx-foot__heading">Get the App</h2>
+        {v2StoreLinks.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <i class={link.icon} aria-hidden="true"></i>
+            {link.meta === "Win" ? "Windows" : link.meta}
+          </a>
+        ))}
+      </div>
+      <div>
+        <h2 class="sx-foot__heading">Company</h2>
+        <a href="/v2/about/">About</a>
+        <a href="/v2/privacy/">Privacy</a>
+        <a href="/v2/terms/">Terms</a>
+        <a href={v2ContactUrl}>Contact</a>
+        <a href={v2DiscordUrl} target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-discord" aria-hidden="true"></i> Discord
+        </a>
+      </div>
+    </div>
+    <div class="sx-foot__bottom">
+      <span>© {year} Jason Holt Digital</span>
+      <span>Licensed from Word Mill Creative · Mythic GME 2e</span>
+    </div>
+  </div>
+</footer>

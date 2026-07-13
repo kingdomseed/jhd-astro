@@ -1,69 +1,58 @@
 ---
-import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
-import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
-import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
-import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
-import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import SanctuaryFooter from "../../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../../layouts/SanctuaryLayout.astro";
 import { extractLegalArticle } from "../../../lib/v2Legal";
 import termsSource from "../../terms.astro?raw";
 
 const legalArticle = extractLegalArticle(termsSource, "terms.astro");
 ---
 
-<V2RefinedLayout
+<SanctuaryLayout
   title="Terms of Service - Jason Holt Digital"
   description="Terms of Service for Mythic GME Apps: license, purchases and refunds, acceptable use, disclaimers, and limitations of liability."
   canonicalPath="/v2/terms/"
-  mainClass="v2-legal-main"
-  theme="munoz"
+  mainClass="sx-legal-main"
 >
-  <Fragment slot="head">
-    <link rel="stylesheet" href="/v2/assets/detail.css" />
-  </Fragment>
+  <SanctuaryHeader slot="before-main" />
 
-  <V2RefinedUtilBar slot="before-main" />
-  <V2RefinedHeader slot="before-main" />
-
-  <section class="v2-page-hero" aria-labelledby="terms-title">
-    <div class="wrap v2-page-hero__grid">
-      <div class="v2-page-hero__copy">
-        <p class="eyebrow"><span class="eyebrow-num">01</span>Legal</p>
-        <h1 id="terms-title" class="v2-page-title">Terms of <em>Service</em>.</h1>
-        <p class="v2-page-lead">
+  <section class="sx-page-hero" aria-labelledby="terms-title">
+    <div class="sx-wrap sx-page-hero__grid">
+      <div>
+        <p class="sx-kicker" aria-hidden="true">Legal</p>
+        <h1 id="terms-title" class="sx-page-title">Terms of <em>Service</em>.</h1>
+        <p class="sx-page-lead">
           License terms, purchases and refunds, acceptable use, and limitations.
           Last updated: August 27, 2025.
         </p>
-        <ul class="v2-page-meta" aria-label="Terms highlights">
-          <li class="v2-page-pill">Personal play license</li>
-          <li class="v2-page-pill">Store-managed purchases</li>
-          <li class="v2-page-pill">Word Mill license notice</li>
+        <ul class="sx-proof" aria-label="Terms highlights">
+          <li>Personal play license</li>
+          <li>Store-managed purchases</li>
+          <li>Word Mill license notice</li>
         </ul>
       </div>
-      <aside class="v2-page-card">
-        <strong>Clear terms</strong>
+      <aside class="sx-card">
+        <h3>Clear terms</h3>
         <p>Fair use, official content boundaries, support expectations, and the practical legal bits in one place.</p>
       </aside>
     </div>
   </section>
 
-  <section class="v2-article-shell">
-    <div class="wrap v2-article-grid">
-      <article class="v2-article-panel">
-        <div class="v2-article-inner" set:html={legalArticle} />
-      </article>
-      <aside class="v2-article-aside" aria-label="Legal actions">
-        <div class="v2-aside-card">
-          <h2>Legal questions</h2>
+  <section class="sx-article">
+    <div class="sx-wrap" style="display:grid;grid-template-columns:1.4fr 0.6fr;gap:1.5rem;align-items:start;">
+      <article class="sx-article__body" set:html={legalArticle} />
+      <aside aria-label="Legal actions">
+        <div class="sx-card" style="margin-bottom:1rem;">
+          <h3>Legal questions</h3>
           <p><a href="mailto:legal@jasonholtdigital.com">legal@jasonholtdigital.com</a></p>
         </div>
-        <div class="v2-aside-card">
-          <h2>Privacy</h2>
+        <div class="sx-card">
+          <h3>Privacy</h3>
           <p><a href="/v2/privacy/">Read the Privacy Policy</a></p>
         </div>
       </aside>
     </div>
   </section>
 
-  <V2RefinedFooter slot="after-main" />
-  <V2RefinedTweaksPanel slot="after-main" />
-</V2RefinedLayout>
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>

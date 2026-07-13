@@ -1,0 +1,92 @@
+<script is:inline>
+(function () {
+  var ctaBtn = document.getElementById("ctaBtn");
+  var menu = document.getElementById("menu");
+  if (ctaBtn && menu) {
+    var menuItems = Array.prototype.slice.call(menu.querySelectorAll("a"));
+    function closeMenu(restoreFocus) {
+      menu.hidden = true;
+      menu.classList.remove("is-open");
+      ctaBtn.setAttribute("aria-expanded", "false");
+      if (restoreFocus) ctaBtn.focus();
+    }
+    function openMenu() {
+      menu.hidden = false;
+      menu.classList.add("is-open");
+      ctaBtn.setAttribute("aria-expanded", "true");
+    }
+    ctaBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (menu.hidden) openMenu();
+      else closeMenu(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (!menu.contains(e.target) && !ctaBtn.contains(e.target)) closeMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !menu.hidden) closeMenu(true);
+    });
+    menu.addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+      e.preventDefault();
+      var activeIndex = menuItems.indexOf(document.activeElement);
+      var nextIndex =
+        e.key === "ArrowDown"
+          ? (activeIndex + 1) % menuItems.length
+          : (activeIndex - 1 + menuItems.length) % menuItems.length;
+      if (menuItems[nextIndex]) menuItems[nextIndex].focus();
+    });
+  }
+
+  var burger = document.getElementById("burger");
+  var drawer = document.getElementById("drawer");
+  var drawerOv = document.getElementById("drawerOverlay");
+  var drawerClose = document.getElementById("drawerClose");
+  if (burger && drawer && drawerOv && drawerClose) {
+    var lastFocus = null;
+    function setDrawer(open) {
+      drawer.hidden = !open;
+      drawerOv.hidden = !open;
+      drawer.classList.toggle("is-open", open);
+      drawerOv.classList.toggle("is-open", open);
+      drawer.setAttribute("aria-hidden", open ? "false" : "true");
+      drawerOv.setAttribute("aria-hidden", open ? "false" : "true");
+      drawer.inert = !open;
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("has-sx-nav-open", open);
+    }
+    function openDrawer() {
+      lastFocus = document.activeElement instanceof HTMLElement ? document.activeElement : burger;
+      setDrawer(true);
+      drawerClose.focus();
+    }
+    function closeDrawer(restore) {
+      setDrawer(false);
+      if (restore) (lastFocus || burger).focus();
+    }
+    burger.addEventListener("click", openDrawer);
+    drawerOv.addEventListener("click", function () {
+      closeDrawer(true);
+    });
+    drawerClose.addEventListener("click", function () {
+      closeDrawer(true);
+    });
+    Array.prototype.forEach.call(drawer.querySelectorAll("a"), function (link) {
+      link.addEventListener("click", function () {
+        closeDrawer(false);
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drawer.classList.contains("is-open")) closeDrawer(true);
+    });
+  }
+
+  // Support hash: open contact panel when present
+  var contactPanel = document.getElementById("contact-panel");
+  var contactTab = document.querySelector('[data-sx-tab="contact"]');
+  if (contactPanel && location.hash === "#contact-panel" && contactTab) {
+    contactTab.click();
+    contactPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+})();
+</script>

@@ -1,10 +1,8 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import V2RefinedFooter from "../../../../components/v2/refined/V2RefinedFooter.astro";
-import V2RefinedHeader from "../../../../components/v2/refined/V2RefinedHeader.astro";
-import V2RefinedTweaksPanel from "../../../../components/v2/refined/V2RefinedTweaksPanel.astro";
-import V2RefinedUtilBar from "../../../../components/v2/refined/V2RefinedUtilBar.astro";
-import V2RefinedLayout from "../../../../layouts/V2RefinedLayout.astro";
+import SanctuaryFooter from "../../../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../../../layouts/SanctuaryLayout.astro";
 import { formatDate } from "../../../../lib/format-date";
 import {
   slugifyCategory,
@@ -51,15 +49,13 @@ const otherCategories = Object.entries(v2BlogCategoryMeta).filter(
 const canonicalPath = `/v2/blog/category/${category}/`;
 ---
 
-<V2RefinedLayout
+<SanctuaryLayout
   title={`${originalCategory} - Jason Holt Digital Blog`}
   description={currentMeta.description}
   canonicalPath={canonicalPath}
-  mainClass="v2-detail-main"
-  theme="munoz"
+  mainClass="sx-detail-main"
 >
   <Fragment slot="head">
-    <link rel="stylesheet" href="/v2/assets/detail.css" />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -68,47 +64,45 @@ const canonicalPath = `/v2/blog/category/${category}/`;
     />
   </Fragment>
 
-  <V2RefinedUtilBar slot="before-main" />
-  <V2RefinedHeader slot="before-main" />
+  <SanctuaryHeader slot="before-main" />
 
-  <section class="v2-page-hero" aria-labelledby="category-title">
-    <div class="wrap v2-page-hero__grid">
-      <div class="v2-page-hero__copy">
-        <p class="eyebrow"><span class="eyebrow-num">Blog</span>Topic shelf</p>
-        <h1 id="category-title" class="v2-page-title">{originalCategory}</h1>
-        <p class="v2-page-lead">{currentMeta.description}</p>
-        <ul class="v2-page-meta" aria-label="Category details">
-          <li class="v2-page-pill">
+  <section class="sx-page-hero" aria-labelledby="category-title">
+    <div class="sx-wrap sx-page-hero__grid">
+      <div>
+        <p class="sx-kicker" aria-hidden="true">Topic shelf</p>
+        <h1 id="category-title" class="sx-page-title">{originalCategory}</h1>
+        <p class="sx-page-lead">{currentMeta.description}</p>
+        <ul class="sx-proof" aria-label="Category details">
+          <li>
             {categoryPosts.length} {categoryPosts.length === 1 ? "post" : "posts"}
           </li>
-          <li><a class="v2-page-pill" href="/rss.xml">RSS available</a></li>
+          <li><a href="/rss.xml">RSS available</a></li>
         </ul>
       </div>
-      <aside class="v2-page-card">
-        <strong>Browse by topic</strong>
+      <aside class="sx-card">
+        <h3>Browse by topic</h3>
         <p>Release notes, guides, process notes, community updates, and announcements stay on their own shelves.</p>
       </aside>
     </div>
   </section>
 
-  <section class="v2-section" aria-labelledby="category-posts-title">
-    <div class="wrap v2-category-flow">
-      <div class="v2-category-head">
+  <section class="sx-section" aria-labelledby="category-posts-title">
+    <div class="sx-wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.25rem;">
         <div>
-          <p class="eyebrow"><span class="eyebrow-num">01</span>{originalCategory}</p>
-          <h2 id="category-posts-title" class="sec-title">Posts on this shelf.</h2>
+          <p class="sx-kicker" aria-hidden="true">{originalCategory}</p>
+          <h2 id="category-posts-title" class="sx-sec-title">Posts on this shelf.</h2>
         </div>
-        <a class="btn btn--ghost" href="/v2/blog/">Back to all posts</a>
+        <a class="sx-btn sx-btn--ghost" href="/v2/blog/">Back to all posts</a>
       </div>
-      <ol class="v2-list v2-list--archive">
+      <ol class="sx-list">
         {categoryPosts.map((entry) => (
           <li>
-            <a class="v2-list-row" href={`/v2/blog/${entry.id}/`}>
-              <span>
-                <strong>{entry.data.title}</strong>
-                <small>{entry.data.summary}</small>
-              </span>
-              <span class="v2-page-pill">{formatDate(entry.data.date)}</span>
+            <a href={`/v2/blog/${entry.id}/`}>
+              <strong>{entry.data.title}</strong>
+              {entry.data.isSample && <> <span class="sx-badge">Sample</span></>}
+              <span class="sx-list__meta">{entry.data.summary}</span>
+              <span class="sx-list__meta">{formatDate(entry.data.date)}</span>
             </a>
           </li>
         ))}
@@ -117,18 +111,17 @@ const canonicalPath = `/v2/blog/category/${category}/`;
   </section>
 
   {otherCategories.length > 0 && (
-    <section class="v2-section v2-section--ink" aria-labelledby="other-categories-title">
-      <div class="wrap v2-split">
-        <div>
-          <p class="eyebrow"><span class="eyebrow-num">02</span>Browse</p>
-          <h2 id="other-categories-title" class="sec-title">Other shelves.</h2>
-        </div>
-        <ul class="v2-grid-list">
+    <section class="sx-section sx-section--band" aria-labelledby="other-categories-title">
+      <div class="sx-wrap">
+        <p class="sx-kicker" aria-hidden="true">Browse</p>
+        <h2 id="other-categories-title" class="sx-sec-title">Other shelves.</h2>
+        <ul class="sx-card-grid" style="margin-top:1.5rem;">
           {otherCategories.map(([name, meta]) => (
             <li>
-              <a class="v2-grid-card" href={`/v2/blog/category/${slugifyCategory(name)}/`}>
-                <i class={meta.icon} aria-hidden="true"></i>
-                <h3>{name}</h3>
+              <a class="sx-card" href={`/v2/blog/category/${slugifyCategory(name)}/`}>
+                <h3>
+                  <i class={meta.icon} aria-hidden="true"></i> {name}
+                </h3>
                 <p>{meta.description}</p>
               </a>
             </li>
@@ -138,6 +131,5 @@ const canonicalPath = `/v2/blog/category/${category}/`;
     </section>
   )}
 
-  <V2RefinedFooter slot="after-main" />
-  <V2RefinedTweaksPanel slot="after-main" />
-</V2RefinedLayout>
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>

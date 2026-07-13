@@ -1,31 +1,236 @@
 ---
-import V2RefinedBenefits from "../../components/v2/refined/V2RefinedBenefits.astro";
-import V2RefinedAppsSections from "../../components/v2/refined/V2RefinedAppsSections.astro";
-import V2RefinedFooter from "../../components/v2/refined/V2RefinedFooter.astro";
-import V2RefinedHeader from "../../components/v2/refined/V2RefinedHeader.astro";
-import V2RefinedHero from "../../components/v2/refined/V2RefinedHero.astro";
-import V2RefinedMakerNote from "../../components/v2/refined/V2RefinedMakerNote.astro";
-import V2RefinedMarquee from "../../components/v2/refined/V2RefinedMarquee.astro";
-import V2RefinedTweaksPanel from "../../components/v2/refined/V2RefinedTweaksPanel.astro";
-import V2RefinedUtilBar from "../../components/v2/refined/V2RefinedUtilBar.astro";
-import V2RefinedLayout from "../../layouts/V2RefinedLayout.astro";
+import SanctuaryFooter from "../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../layouts/SanctuaryLayout.astro";
+import { v2AppsUrl, v2ContactUrl, v2SupportUrl } from "../../lib/v2Links";
 ---
 
-<V2RefinedLayout
+<SanctuaryLayout
   title="Jason Holt Digital - Official Mythic GME Apps"
   description="Official licensed Mythic GME companion apps for mobile and desktop, plus guides, release notes, and support from Jason Holt Digital."
   canonicalPath="/v2/"
 >
-  <Fragment slot="head">
-    <link rel="stylesheet" href="/v2/assets/apps.css" />
-  </Fragment>
-  <V2RefinedUtilBar slot="before-main" />
-  <V2RefinedHeader slot="before-main" />
-  <V2RefinedHero />
-  <V2RefinedMarquee />
-  <V2RefinedBenefits />
-  <V2RefinedAppsSections />
-  <V2RefinedMakerNote />
-  <V2RefinedFooter slot="after-main" />
-  <V2RefinedTweaksPanel slot="after-main" />
-</V2RefinedLayout>
+  <SanctuaryHeader slot="before-main" />
+
+  <section class="sx-hero" aria-labelledby="sx-hero-title">
+    <div class="sx-wrap sx-hero__grid">
+      <div class="sx-hero__copy">
+        <p class="sx-kicker" aria-hidden="true">Fate · Story · Imagination</p>
+        <h1 id="sx-hero-title" class="sx-hero__title">
+          GM-less play at <em>your fingertips</em>.
+        </h1>
+        <p class="sx-hero__lead">
+          Official Mythic GME companion apps for mobile and desktop. Ask Fate Questions,
+          roll Meaning Tables, and keep scenes, threads, and characters close to the story.
+        </p>
+        <div class="sx-cta-row">
+          <a class="sx-btn sx-btn--primary" href={v2AppsUrl}>
+            See the Apps <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a class="sx-btn sx-btn--ghost" href="/v2/resources/">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i> Get Resources
+          </a>
+        </div>
+        <ul class="sx-proof">
+          <li><i class="fa-solid fa-star" aria-hidden="true"></i> 4.8 App Store rating</li>
+          <li><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Mobile + desktop</li>
+          <li><i class="fa-solid fa-unlock" aria-hidden="true"></i> No subscriptions</li>
+        </ul>
+      </div>
+
+      <div class="sx-stage" aria-hidden="true">
+        <div class="sx-stage__glow"></div>
+        <div class="sx-stage__orbit"></div>
+        <figure class="sx-stage__frame">
+          <div class="sx-stage__media">
+            <img
+              src="/v2/assets/art-3.png"
+              alt=""
+              width="1700"
+              height="2200"
+              fetchpriority="high"
+            />
+          </div>
+          <figcaption class="sx-stage__caption">
+            <span>Rooted in Wonder</span>
+            <span>Jorge Muñoz</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-pillars" aria-labelledby="sx-pillars-title">
+    <div class="sx-wrap">
+      <div class="sx-section-head">
+        <div>
+          <p class="sx-kicker" aria-hidden="true">Explore the collection</p>
+          <h2 id="sx-pillars-title">Three doors into Mythic play</h2>
+        </div>
+        <p>
+          Clean structure for the work of play, paired with Muñoz art that keeps the hub
+          feeling human instead of clinical.
+        </p>
+      </div>
+
+      <div class="sx-pillar-grid">
+        <article class="sx-pillar">
+          <div class="sx-pillar__media">
+            <img
+              src="/v2/assets/mobile-1.png"
+              alt=""
+              width="1419"
+              height="2796"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="sx-pillar__cat">Oracle tools</p>
+            <h3>Fate Questions</h3>
+            <p>
+              Ask yes/no questions, roll the Fate Chart, and stay close to what happens next
+              without breaking the rhythm of a session.
+            </p>
+            <a class="sx-pillar__link" href={v2AppsUrl}>
+              View apps <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="sx-pillar">
+          <div class="sx-pillar__media sx-pillar__media--journey">
+            <img
+              src="/v2/assets/stamp-art15.png"
+              alt=""
+              width="1634"
+              height="1825"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="sx-pillar__cat">Guides for play</p>
+            <h3>Resources</h3>
+            <p>
+              Practical guides for Journals, dice formulas, Custom Tables, and getting
+              comfortable with Mythic in play.
+            </p>
+            <a class="sx-pillar__link" href="/v2/resources/">
+              Get resources <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="sx-pillar">
+          <div class="sx-pillar__media sx-pillar__media--interrupt">
+            <img
+              src="/v2/assets/stamp-art20.png"
+              alt=""
+              width="1784"
+              height="2284"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="sx-pillar__cat">Scenes &amp; lists</p>
+            <h3>Keep play moving</h3>
+            <p>
+              Track scenes, threads, and characters in one place so bookkeeping stays out of
+              the way when the story turns.
+            </p>
+            <a class="sx-pillar__link" href={v2SupportUrl}>
+              Support &amp; FAQ <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-band" aria-labelledby="sx-band-title">
+    <div class="sx-wrap">
+      <div class="sx-band__panel">
+        <div class="sx-band__copy">
+          <p class="sx-kicker" aria-hidden="true">Mobile + desktop</p>
+          <h2 id="sx-band-title">A playspace that travels with you</h2>
+          <p>
+            Mythic GME Mobile fits in a pocket. Mythic GME Digital gives Windows, macOS, and
+            Linux players more room for longer sessions. Same Mythic flow, different surfaces.
+          </p>
+          <div class="sx-cta-row">
+            <a class="sx-btn sx-btn--primary" href={v2AppsUrl}>Compare the apps</a>
+          </div>
+        </div>
+        <div class="sx-band__media">
+          <img
+            src="/v2/assets/stamp-wastelander.png"
+            alt=""
+            width="1484"
+            height="687"
+            loading="lazy"
+          />
+          <span class="sx-band__tag">Landscape art · Muñoz</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-apps" aria-labelledby="sx-apps-title">
+    <div class="sx-wrap sx-apps__grid">
+      <div class="sx-apps__copy">
+        <p class="sx-kicker" aria-hidden="true">In the apps</p>
+        <h2 id="sx-apps-title">Fate, scenes, and dice where you need them</h2>
+        <p>
+          Portrait device shots stay in portrait frames. The sanctuary shell keeps the UI
+          calm while Muñoz art carries the emotional weight around it.
+        </p>
+        <a class="sx-btn sx-btn--ghost" href={v2AppsUrl}>
+          See the Apps <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="sx-phone-row">
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-1.png" alt="Fate Chart screen" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Fate Chart</figcaption>
+        </figure>
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-2.png" alt="Scenes screen" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Scenes</figcaption>
+        </figure>
+        <figure class="sx-phone">
+          <div class="sx-phone__media">
+            <img src="/v2/assets/mobile-4.png" alt="Dice roller screen" width="1419" height="2796" loading="lazy" />
+          </div>
+          <figcaption>Dice</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sx-quote" aria-label="Maker note">
+    <div class="sx-wrap sx-quote__panel">
+      <div>
+        <div class="sx-quote__mark" aria-hidden="true">“</div>
+        <blockquote>
+          I want the apps to make Mythic feel ready to play in one place, without pulling
+          attention away from the story.
+        </blockquote>
+        <p style="margin:1rem 0 0">
+          <a class="sx-pillar__link" href="/v2/about/">About Jason <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          ·
+          <a class="sx-pillar__link" href={v2ContactUrl}>Contact</a>
+        </p>
+      </div>
+      <ul class="sx-quote__values">
+        <li>Curiosity</li>
+        <li>Clarity</li>
+        <li>Care</li>
+      </ul>
+    </div>
+  </section>
+
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>

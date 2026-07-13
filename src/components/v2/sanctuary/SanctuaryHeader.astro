@@ -1,0 +1,99 @@
+---
+import {
+  v2AssetPath,
+  v2AppsUrl,
+  v2ContactUrl,
+  v2NavLinks,
+  v2StoreLinks,
+} from "../../../lib/v2Links";
+
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/v2/" ? pathname === href || pathname === "/v2" : pathname.startsWith(href);
+---
+
+<header class="sx-nav" id="nav">
+  <div class="sx-wrap sx-nav__row">
+    <a class="sx-brand" href="/v2/" aria-label="Jason Holt Digital home">
+      <span class="sx-brand__mark">
+        <img src={v2AssetPath("logo-munoz.svg")} alt="" width="44" height="44" />
+      </span>
+      <span class="sx-brand__text">
+        <span class="sx-brand__name">Jason Holt Digital</span>
+        <span class="sx-brand__sub">Official Mythic GME Apps</span>
+      </span>
+    </a>
+
+    <nav class="sx-nav__links" aria-label="Primary">
+      {v2NavLinks.map((link) => (
+        <a
+          href={link.href}
+          aria-current={isActive(link.href) ? "page" : undefined}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="sx-nav__actions">
+      <div class="sx-store" data-sx-store>
+        <button
+          class="sx-nav__cta"
+          type="button"
+          id="ctaBtn"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="menu"
+        >
+          Get the App <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="sx-store__menu" id="menu" role="menu" hidden>
+          <div class="sx-store__head">Choose your platform</div>
+          {v2StoreLinks.map((link) => (
+            <a
+              class="sx-store__item"
+              role="menuitem"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class={link.icon} aria-hidden="true"></i>
+              <span>{link.label}</span>
+              <span class="sx-store__meta">{link.meta}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <a class="sx-btn sx-btn--accent sx-nav__contact" href={v2ContactUrl}>
+        Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button
+      class="sx-burger"
+      id="burger"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="drawer"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="sx-drawer-overlay" id="drawerOverlay" aria-hidden="true" hidden></div>
+<aside class="sx-drawer" id="drawer" aria-label="Mobile navigation" aria-hidden="true" hidden inert>
+  <button class="sx-drawer__close" id="drawerClose" type="button" aria-label="Close menu">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <nav aria-label="Mobile">
+    {v2NavLinks.map((link) => (
+      <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>
+        {link.label}
+      </a>
+    ))}
+    <a href={v2AppsUrl}>Get the App</a>
+    <a href={v2ContactUrl}>Contact</a>
+  </nav>
+</aside>

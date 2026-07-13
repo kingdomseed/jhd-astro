@@ -1,0 +1,57 @@
+---
+import SanctuaryInteractions from "../components/v2/sanctuary/SanctuaryInteractions.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  mainClass?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Jason Holt Digital - Official Mythic GME Apps",
+  description = "Official Mythic GME companion apps, resources, release notes, and support from Jason Holt Digital.",
+  canonicalPath = Astro.url.pathname,
+  mainClass,
+  noindex = true,
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL("https://jasonholtdigital.com");
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/v2/assets/logo.svg" />
+    <link rel="stylesheet" href="/v2/sanctuary/shell.css" />
+    <link rel="stylesheet" href="/v2/sanctuary/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="head" />
+  </head>
+  <body class="sx">
+    <a class="sx-skip" href="#main">Skip to main content</a>
+    <slot name="before-main" />
+    <main id="main" class={mainClass}>
+      <slot />
+    </main>
+    <slot name="after-main" />
+    <SanctuaryInteractions />
+  </body>
+</html>

@@ -1,11 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
-import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
-import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
-import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
-import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
-import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import SanctuaryFooter from "../../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../../layouts/SanctuaryLayout.astro";
 import { formatDate } from "../../../lib/format-date";
 import { v2ResourceCategoryMeta } from "../../../lib/v2ContentMeta";
 
@@ -58,141 +56,135 @@ const downloads = Array.isArray(resource.downloads) ? resource.downloads : [];
 const backHref = `/v2/resources/${category.anchor}`;
 ---
 
-<V2RefinedLayout
+<SanctuaryLayout
   title={`${resource.title} - Mythic Resources`}
   description={resource.summary}
   canonicalPath={canonicalPath}
-  mainClass="v2-detail-main"
-  theme="munoz"
+  mainClass="sx-detail-main"
 >
-  <Fragment slot="head">
-    <link rel="stylesheet" href="/v2/assets/detail.css" />
-  </Fragment>
+  <SanctuaryHeader slot="before-main" />
 
-  <V2RefinedUtilBar slot="before-main" />
-  <V2RefinedHeader slot="before-main" />
-
-  <section class="v2-page-hero" aria-labelledby="resource-detail-title">
-    <div class="wrap v2-page-hero__grid">
-      <div class="v2-page-hero__copy">
-        <p class="eyebrow"><span class="eyebrow-num">Guide</span>{category.label}</p>
-        <h1 id="resource-detail-title" class="v2-page-title">{resource.title}</h1>
-        <p class="v2-page-lead">{resource.summary}</p>
-        <ul class="v2-page-meta" aria-label="Resource details">
-          <li class="v2-page-pill">{category.label}</li>
-          {resource.duration && <li class="v2-page-pill">{resource.duration}</li>}
-          {resource.updated && <li class="v2-page-pill">Updated {formatDate(resource.updated)}</li>}
+  <section class="sx-page-hero" aria-labelledby="resource-detail-title">
+    <div class="sx-wrap sx-page-hero__grid">
+      <div>
+        <p class="sx-kicker" aria-hidden="true">{category.label}</p>
+        <h1 id="resource-detail-title" class="sx-page-title">{resource.title}</h1>
+        <p class="sx-page-lead">{resource.summary}</p>
+        <ul class="sx-proof" aria-label="Resource details">
+          <li>{category.label}</li>
+          {resource.duration && <li>{resource.duration}</li>}
+          {resource.updated && <li>Updated {formatDate(resource.updated)}</li>}
         </ul>
       </div>
-      <aside class="v2-page-card">
-        <strong>{category.shortLabel}</strong>
+      <aside class="sx-card">
+        <h3>{category.shortLabel}</h3>
         <p>{category.summary}</p>
       </aside>
     </div>
   </section>
 
-  <section class="v2-article-shell">
-    <div class="wrap v2-article-grid">
-      <article class="v2-article-panel">
-        <div class="v2-article-inner">
-          <p>
-            <a class="btn btn--ghost" href={backHref}>
-              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-              Back to resources
-            </a>
-          </p>
-          {
-            resource.externalUrl && (
-              <p>
-                <a
-                  class="btn btn--accent"
-                  href={resource.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                  Open schema / download
-                </a>
-              </p>
-            )
-          }
-          {
-            resource.hero && (
-              <figure class="v2-hero-image">
-                <Image
-                  src={resource.hero}
-                  alt={resource.heroAlt ?? ""}
-                  widths={[480, 768, 1024, 1440]}
-                  sizes="(max-width: 768px) 92vw, 900px"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                />
-                {resource.heroAlt && <figcaption>{resource.heroAlt}</figcaption>}
-              </figure>
-            )
-          }
-          <div class="v2-prose">
-            <Content />
-          </div>
-          {
-            downloads.length > 0 && (
-              <section aria-labelledby="resource-downloads-title">
-                <h2 id="resource-downloads-title">Downloads</h2>
-                <div class="v2-download-grid">
-                  {downloads.map((download) => (
-                    <a class="v2-download-card" href={download.href} download>
-                      <strong>{download.label}</strong>
-                      <small>
-                        {[download.format, download.size].filter(Boolean).join(" / ")}
-                      </small>
-                    </a>
-                  ))}
-                </div>
-              </section>
-            )
-          }
-          {
-            Array.isArray(resource.steps) && resource.steps.length > 0 && (
-              <section aria-labelledby="resource-steps-title">
-                <h2 id="resource-steps-title">Step-by-step</h2>
-                <ol class="v2-steps">
-                  {resource.steps.map((step: ResourceStep) => (
-                    <li class="v2-step">
-                      <h3>{step.title}</h3>
-                      {step.body && <p>{step.body}</p>}
-                      {step.image && (
-                        <figure class="v2-step-image">
-                          <Image
-                            src={step.image}
-                            alt={step.imageAlt ?? ""}
-                            widths={[480, 768, 1024]}
-                            sizes="(max-width: 768px) 92vw, 800px"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                          {step.imageAlt && <figcaption>{step.imageAlt}</figcaption>}
-                        </figure>
-                      )}
-                    </li>
-                  ))}
-                </ol>
-              </section>
-            )
-          }
+  <section class="sx-article">
+    <div class="sx-wrap" style="display:grid;grid-template-columns:1.4fr 0.6fr;gap:1.5rem;align-items:start;">
+      <article class="sx-article__body">
+        <p>
+          <a class="sx-btn sx-btn--ghost" href={backHref}>
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Back to resources
+          </a>
+        </p>
+        {
+          resource.externalUrl && (
+            <p>
+              <a
+                class="sx-btn sx-btn--accent"
+                href={resource.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                Open schema / download
+              </a>
+            </p>
+          )
+        }
+        {
+          resource.hero && (
+            <figure class="sx-media sx-media--landscape" style="margin:1.25rem 0;">
+              <Image
+                src={resource.hero}
+                alt={resource.heroAlt ?? ""}
+                widths={[480, 768, 1024, 1440]}
+                sizes="(max-width: 768px) 92vw, 900px"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+              {resource.heroAlt && <figcaption>{resource.heroAlt}</figcaption>}
+            </figure>
+          )
+        }
+        <div class="sx-prose">
+          <Content />
         </div>
+        {
+          downloads.length > 0 && (
+            <section aria-labelledby="resource-downloads-title">
+              <h2 id="resource-downloads-title">Downloads</h2>
+              <ul class="sx-list">
+                {downloads.map((download) => (
+                  <li>
+                    <a href={download.href} download>
+                      <strong>{download.label}</strong>
+                      <span class="sx-list__meta">
+                        {[download.format, download.size].filter(Boolean).join(" / ")}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+        {
+          Array.isArray(resource.steps) && resource.steps.length > 0 && (
+            <section aria-labelledby="resource-steps-title">
+              <h2 id="resource-steps-title">Step-by-step</h2>
+              <ol class="sx-list">
+                {resource.steps.map((step: ResourceStep) => (
+                  <li>
+                    <strong>{step.title}</strong>
+                    {step.body && <span class="sx-list__meta">{step.body}</span>}
+                    {step.image && (
+                      <figure class="sx-media sx-media--landscape" style="margin-top:0.75rem;">
+                        <Image
+                          src={step.image}
+                          alt={step.imageAlt ?? ""}
+                          widths={[480, 768, 1024]}
+                          sizes="(max-width: 768px) 92vw, 800px"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        {step.imageAlt && <figcaption>{step.imageAlt}</figcaption>}
+                      </figure>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )
+        }
       </article>
 
-      <aside class="v2-article-aside" aria-label="Related resources">
-        <div class="v2-aside-card">
-          <h2>Guide shelf</h2>
+      <aside aria-label="Related resources">
+        <div class="sx-card" style="margin-bottom:1rem;">
+          <h3>Guide shelf</h3>
           <p><a href={backHref}>{category.label}</a></p>
         </div>
         {
           relatedEntries.length > 0 && (
-            <div class="v2-aside-card">
-              <h2>Related</h2>
-              <ul class="v2-list">
+            <div class="sx-card">
+              <h3>Related</h3>
+              <ul class="sx-list">
                 {relatedEntries.map((related) => (
                   <li>
                     <a href={`/v2/resources/${related.id}/`}>
@@ -208,6 +200,5 @@ const backHref = `/v2/resources/${category.anchor}`;
     </div>
   </section>
 
-  <V2RefinedFooter slot="after-main" />
-  <V2RefinedTweaksPanel slot="after-main" />
-</V2RefinedLayout>
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>

@@ -1,9 +1,7 @@
 ---
-import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
-import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
-import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
-import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
-import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import SanctuaryFooter from "../../../components/v2/sanctuary/SanctuaryFooter.astro";
+import SanctuaryHeader from "../../../components/v2/sanctuary/SanctuaryHeader.astro";
+import SanctuaryLayout from "../../../layouts/SanctuaryLayout.astro";
 
 type QuickPath = {
   title: string;
@@ -29,6 +27,14 @@ type FaqSection = {
 const discordUrl = "https://discord.gg/PEDHrhzcnk";
 const supportEmail = "support@jasonholtdigital.com";
 const generalEmail = "jason@jasonholtdigital.com";
+
+const FORMSPARK_FORM_ID =
+  import.meta.env.PUBLIC_FORMSPARK_FORM_ID || "BrXEDLTap";
+const TURNSTILE_SITE_KEY =
+  import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAABhU6Cccio-kREUw";
+const formAction = FORMSPARK_FORM_ID
+  ? `https://submit-form.com/${FORMSPARK_FORM_ID}`
+  : "#";
 
 const quickPaths: QuickPath[] = [
   {
@@ -61,7 +67,7 @@ const quickPaths: QuickPath[] = [
     label: "Read release notes",
     body:
       "Check recent updates, known issues, and fixes before filing a bug report.",
-    href: "/blog/category/release-notes/",
+    href: "/v2/blog/category/release-notes/",
     icon: "fa-solid fa-newspaper",
   },
 ];
@@ -233,39 +239,6 @@ const faqSections: FaqSection[] = [
   },
 ];
 
-const contactRoutes = [
-  {
-    title: "Support",
-    body: "Bugs, purchases, app questions, and private screenshots.",
-    href: `mailto:${supportEmail}`,
-    label: supportEmail,
-    icon: "fa-solid fa-life-ring",
-  },
-  {
-    title: "General",
-    body: "Business questions, licensing, writing, and studio contact.",
-    href: `mailto:${generalEmail}`,
-    label: generalEmail,
-    icon: "fa-solid fa-envelope-open-text",
-  },
-  {
-    title: "Discord",
-    body: "Community conversation, quick checks, and feature requests.",
-    href: discordUrl,
-    label: "Open community",
-    icon: "fa-brands fa-discord",
-    external: true,
-  },
-  {
-    title: "Consulting",
-    body: "Limited freelance and development availability each quarter.",
-    href: "https://www.upwork.com/fl/~01e352937913645264?mp_source=share",
-    label: "Hire me on Upwork",
-    icon: "fa-solid fa-briefcase",
-    external: true,
-  },
-];
-
 const messageChecklist = [
   "Platform and store: iOS, Android, Fire, Windows, macOS, Linux, itch.io, or Microsoft Store.",
   "App version and device or operating system version.",
@@ -274,264 +247,386 @@ const messageChecklist = [
 ];
 ---
 
-<V2RefinedLayout
+<SanctuaryLayout
   title="Support & Contact - Jason Holt Digital"
   description="Quick answers, Discord, FAQ, and direct contact options for Mythic GME Mobile and Digital."
   canonicalPath="/v2/support/"
-  mainClass="support-page"
-  theme="munoz"
+  mainClass="sx-support-main"
 >
   <Fragment slot="head">
-    <link rel="stylesheet" href="/v2/assets/support.css" />
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </Fragment>
 
-  <V2RefinedUtilBar slot="before-main" />
-  <V2RefinedHeader slot="before-main" />
+  <SanctuaryHeader slot="before-main" />
 
-  <section class="support-hero" aria-labelledby="support-hero-title">
-    <img
-      class="support-hero__stamp support-hero__stamp--beast"
-      src="/v2/assets/stamp-beast.png"
-      alt=""
-      aria-hidden="true"
-    />
-    <img
-      class="support-hero__stamp support-hero__stamp--mark"
-      src="/v2/assets/stamp-art10.png"
-      alt=""
-      aria-hidden="true"
-    />
-
-    <div class="wrap support-hero__grid">
-      <div class="support-hero__copy">
-        <p class="eyebrow hero-eyebrow">
-          <span class="eyebrow-num">04</span>
-          Support desk
-        </p>
-        <h1 id="support-hero-title" class="hero-title">
+  <section class="sx-page-hero" aria-labelledby="support-hero-title">
+    <div class="sx-wrap sx-page-hero__grid">
+      <div>
+        <p class="sx-kicker" aria-hidden="true">Support desk</p>
+        <h1 id="support-hero-title" class="sx-page-title">
           Get help without digging through the whole site.
         </h1>
-        <p class="hero-lead">
+        <p class="sx-page-lead">
           Start with the fastest route: community help for quick questions,
           email for private details, resources for guides, and the FAQ for the
           rules of the road.
         </p>
-        <div class="cta-row" aria-label="Primary support actions">
-          <a class="btn btn--primary btn--lg" href={`mailto:${supportEmail}`}>
+        <div class="sx-cta-row" aria-label="Primary support actions">
+          <a class="sx-btn sx-btn--primary" href={`mailto:${supportEmail}`}>
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             Email support
           </a>
-          <a class="btn btn--accent btn--lg" href="#contact-panel">
+          <a class="sx-btn sx-btn--ghost" href="#contact-panel" data-sx-tab-open="contact">
             <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
-            Contact options
+            Contact form
           </a>
         </div>
       </div>
-
-      <aside class="support-hero__ledger" aria-label="Support routing summary">
-        <p class="support-ledger__stamp">Open desk</p>
-        <dl class="support-ledger">
-          <div>
-            <dt>Fastest reply</dt>
-            <dd>Discord community</dd>
-          </div>
-          <div>
-            <dt>Private issue</dt>
-            <dd>Email support</dd>
-          </div>
-          <div>
-            <dt>Self-serve</dt>
-            <dd>Resources and FAQ</dd>
-          </div>
-          <div>
-            <dt>Best bug report</dt>
-            <dd>Platform, version, steps, screenshots</dd>
-          </div>
-        </dl>
+      <aside class="sx-card" aria-label="Support routing summary">
+        <h3>Open desk</h3>
+        <p><strong>Fastest reply:</strong> Discord community</p>
+        <p><strong>Private issue:</strong> Email support</p>
+        <p><strong>Self-serve:</strong> Resources and FAQ</p>
+        <p><strong>Best bug report:</strong> Platform, version, steps, screenshots</p>
       </aside>
     </div>
   </section>
 
-  <section class="support-routes sec" aria-labelledby="support-routes-title">
-    <div class="wrap">
-      <header class="sec-head support-section-head">
-        <div class="sec-head-left">
-          <p class="eyebrow">
-            <span class="eyebrow-num">01</span>
-            Quick paths
-          </p>
-          <h2 id="support-routes-title" class="sec-title">
-            Pick the route that matches the kind of help you need.
-          </h2>
-        </div>
-        <p class="sec-sub">
-          No maze, no support theater. These are the working doors.
-        </p>
-      </header>
-
-      <ol class="support-paths" aria-label="Quick support paths">
+  <section class="sx-section" aria-labelledby="support-routes-title">
+    <div class="sx-wrap">
+      <p class="sx-kicker" aria-hidden="true">Quick paths</p>
+      <h2 id="support-routes-title" class="sx-sec-title">
+        Pick the route that matches the kind of help you need.
+      </h2>
+      <p class="sx-page-lead">
+        No maze, no support theater. These are the working doors.
+      </p>
+      <ul class="sx-card-grid" style="margin-top:1.5rem;">
         {
-          quickPaths.map((item, index) => (
-            <li class="support-path">
-              <span class="support-path__num">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span class="support-path__icon" aria-hidden="true">
-                <i class={item.icon}></i>
-              </span>
-              <div class="support-path__copy">
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </div>
-              <a
-                class="support-path__action"
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
-              >
-                {item.label}
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
+          quickPaths.map((item) => (
+            <li class="sx-card">
+              <h3>
+                <i class={item.icon} aria-hidden="true"></i> {item.title}
+              </h3>
+              <p>{item.body}</p>
+              <p style="margin-top:0.75rem;">
+                <a
+                  class="sx-btn sx-btn--ghost"
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                >
+                  {item.label}
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </p>
             </li>
           ))
         }
-      </ol>
+      </ul>
     </div>
   </section>
 
-  <section class="support-faq sec" aria-labelledby="support-faq-title">
-    <div class="wrap support-faq__grid">
-      <div class="support-faq__intro">
-        <p class="eyebrow">
-          <span class="eyebrow-num">02</span>
+  <section class="sx-section sx-section--band" aria-labelledby="support-hub-title">
+    <div class="sx-wrap">
+      <p class="sx-kicker" aria-hidden="true">Support hub</p>
+      <h2 id="support-hub-title" class="sx-sec-title">FAQ and contact in one place.</h2>
+
+      <div class="sx-tabs" role="tablist" aria-label="Support sections">
+        <button
+          class="sx-tab"
+          type="button"
+          role="tab"
+          id="faq-tab"
+          aria-selected="true"
+          aria-controls="faq-panel"
+          data-sx-tab="faq"
+        >
           FAQ
-        </p>
-        <h2 id="support-faq-title" class="sec-title">
-          The practical answers, grouped by the questions people actually ask.
-        </h2>
-        <p class="sec-sub">
-          Open the topic you need. The first section starts open so the page
-          stays useful even before you touch anything.
-        </p>
-      </div>
-
-      <div class="support-faq__shelves" aria-label="Support FAQ sections">
-        {
-          faqSections.map((section, sectionIndex) => (
-            <details
-              class="support-faq-section"
-              open={sectionIndex === 0 ? true : undefined}
-            >
-              <summary>
-                <span>
-                  <span class="support-faq-section__num">
-                    {String(sectionIndex + 1).padStart(2, "0")}
-                  </span>
-                  <span class="support-faq-section__title">
-                    {section.title}
-                  </span>
-                </span>
-                <span class="support-faq-section__deck">{section.deck}</span>
-                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-              </summary>
-
-              <div class="support-faq-section__body">
-                {section.entries.map((entry) => (
-                  <details class="support-question">
-                    <summary>{entry.question}</summary>
-                    <div class="support-question__answer">
-                      {entry.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
-                      {entry.items && (
-                        <ul>
-                          {entry.items.map((item) => (
-                            <li>{item}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </details>
-                ))}
-              </div>
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section
-    id="contact-panel"
-    class="support-contact sec"
-    aria-labelledby="support-contact-title"
-  >
-    <div class="wrap support-contact__grid">
-      <div class="support-contact__copy">
-        <p class="eyebrow">
-          <span class="eyebrow-num">03</span>
+        </button>
+        <button
+          class="sx-tab"
+          type="button"
+          role="tab"
+          id="contact-tab"
+          aria-selected="false"
+          aria-controls="contact-panel"
+          data-sx-tab="contact"
+        >
           Contact
-        </p>
-        <h2 id="support-contact-title" class="sec-title">
-          Send the useful details once, and I can spend the reply on the fix.
-        </h2>
-        <p class="sec-sub">
-          This contact page keeps the support path static and safe. Use email or Discord
-          for real messages; the checklist below tells you what to include.
-        </p>
+        </button>
       </div>
 
-      <div class="support-contact__panel">
-        <div class="support-contact__routes" aria-label="Contact routes">
+      <div
+        id="faq-panel"
+        class="sx-tab-panel"
+        role="tabpanel"
+        aria-labelledby="faq-tab"
+        data-sx-tab-panel="faq"
+      >
+        <div class="sx-faq" aria-label="Support FAQ sections">
           {
-            contactRoutes.map((route) => (
-              <a
-                class="contact-route"
-                href={route.href}
-                target={route.external ? "_blank" : undefined}
-                rel={route.external ? "noopener noreferrer" : undefined}
-              >
-                <i class={route.icon} aria-hidden="true"></i>
-                <span>
-                  <strong>{route.title}</strong>
-                  <small>{route.body}</small>
-                  <em>{route.label}</em>
-                </span>
-              </a>
+            faqSections.map((section, sectionIndex) => (
+              <details open={sectionIndex === 0 ? true : undefined}>
+                <summary>
+                  {section.title}
+                  <span class="sx-list__meta" style="display:block;font-weight:500;">
+                    {section.deck}
+                  </span>
+                </summary>
+                <div>
+                  {section.entries.map((entry) => (
+                    <details>
+                      <summary>{entry.question}</summary>
+                      <div class="sx-prose">
+                        {entry.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+                        {entry.items && (
+                          <ul>
+                            {entry.items.map((item) => (
+                              <li>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </details>
             ))
           }
         </div>
+        <p class="sx-page-lead" style="margin-top:1rem;">
+          <small>
+            Check <a href="/v2/blog/category/release-notes/">Release Notes</a> for
+            recent fixes and known issues.
+          </small>
+        </p>
+      </div>
 
-        <aside class="support-brief" aria-labelledby="support-brief-title">
-          <h3 id="support-brief-title">Before you send a bug report</h3>
-          <ul>
-            {
-              messageChecklist.map((item) => (
-                <li>{item}</li>
-              ))
-            }
-          </ul>
-        </aside>
+      <div
+        id="contact-panel"
+        class="sx-tab-panel"
+        role="tabpanel"
+        aria-labelledby="contact-tab"
+        data-sx-tab-panel="contact"
+        hidden
+      >
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem;align-items:start;">
+          <div>
+            <h3 class="sx-sec-title" style="font-size:1.35rem;">Get in touch</h3>
+            <div class="sx-card" style="margin:1rem 0;">
+              <h3>Email</h3>
+              <p>
+                <strong>Support:</strong>
+                <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+              </p>
+              <p>
+                <strong>General:</strong>
+                <a href={`mailto:${generalEmail}`}>{generalEmail}</a>
+              </p>
+            </div>
+            <div class="sx-card" style="margin-bottom:1rem;">
+              <h3>Discord</h3>
+              <p>Ask questions, share feedback, and talk with other Mythic players.</p>
+              <p style="margin-top:0.75rem;">
+                <a
+                  class="sx-btn sx-btn--accent"
+                  href={discordUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-discord" aria-hidden="true"></i>
+                  Join Discord
+                </a>
+              </p>
+            </div>
+            <aside class="sx-card" aria-labelledby="support-brief-title">
+              <h3 id="support-brief-title">Before you send a bug report</h3>
+              <ul>
+                {messageChecklist.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </aside>
+          </div>
+
+          <div>
+            <h3 class="sx-sec-title" style="font-size:1.35rem;">Send a message</h3>
+            <form
+              id="contact-form"
+              class="sx-form"
+              style="margin-top:1rem;"
+              action={formAction}
+              method="post"
+            >
+              <label for="name">
+                Name
+                <input type="text" id="name" name="name" required maxlength="256" placeholder="Your name" />
+              </label>
+              <label for="email">
+                Email
+                <input type="email" id="email" name="email" required maxlength="256" placeholder="your@email.com" />
+              </label>
+              <label for="phone">
+                Phone (optional)
+                <input type="tel" id="phone" name="phone" maxlength="256" placeholder="Your phone number" />
+              </label>
+              <label for="message">
+                Message
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  maxlength="5000"
+                  rows="6"
+                  placeholder="Tell me what you need help with. For app issues, include your platform and app version."
+                ></textarea>
+              </label>
+
+              <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-callback="onTurnstileSuccess"></div>
+
+              <button type="submit" id="submit-btn" disabled class="sx-btn sx-btn--primary">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                Send Message
+              </button>
+
+              <div id="form-success" hidden>
+                <strong>Thank you!</strong> Your message has been sent. I'll reply as soon as I can.
+              </div>
+              <div id="form-error" hidden>
+                <strong>Something went wrong.</strong> Please try again, or email me directly at jason@jasonholtdigital.com.
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <script is:inline>
-    const scrollToSupportHash = () => {
-      if (window.location.hash !== "#contact-panel") return;
-      const contactPanel = document.getElementById("contact-panel");
-      const scrollContactIntoView = () =>
-        contactPanel?.scrollIntoView({
-          block: "start",
+    (function () {
+      const tabs = [...document.querySelectorAll("[data-sx-tab]")];
+      const panels = [...document.querySelectorAll("[data-sx-tab-panel]")];
+
+      const openTab = (name) => {
+        tabs.forEach((tab) => {
+          const selected = tab.getAttribute("data-sx-tab") === name;
+          tab.setAttribute("aria-selected", selected ? "true" : "false");
         });
+        panels.forEach((panel) => {
+          const match = panel.getAttribute("data-sx-tab-panel") === name;
+          panel.hidden = !match;
+        });
+      };
 
-      scrollContactIntoView();
-      window.requestAnimationFrame(scrollContactIntoView);
-      window.setTimeout(scrollContactIntoView, 150);
-    };
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          openTab(tab.getAttribute("data-sx-tab") || "faq");
+        });
+      });
 
-    window.addEventListener("load", scrollToSupportHash);
-    window.addEventListener("hashchange", scrollToSupportHash);
+      document.querySelectorAll("[data-sx-tab-open]").forEach((link) => {
+        link.addEventListener("click", () => {
+          openTab(link.getAttribute("data-sx-tab-open") || "contact");
+        });
+      });
+
+      const syncHash = () => {
+        if (window.location.hash === "#contact-panel") {
+          openTab("contact");
+          const panel = document.getElementById("contact-panel");
+          const scroll = () => panel?.scrollIntoView({ block: "start" });
+          scroll();
+          window.requestAnimationFrame(scroll);
+          window.setTimeout(scroll, 150);
+        } else {
+          openTab("faq");
+        }
+      };
+
+      window.addEventListener("load", syncHash);
+      window.addEventListener("hashchange", syncHash);
+      syncHash();
+
+      window.onTurnstileSuccess = function (token) {
+        const submitBtn = document.getElementById("submit-btn");
+        if (submitBtn) submitBtn.disabled = false;
+        const form = document.getElementById("contact-form");
+        if (!form) return;
+        let tokenInput = document.getElementById("cf-turnstile-response");
+        if (!tokenInput) {
+          tokenInput = document.createElement("input");
+          tokenInput.type = "hidden";
+          tokenInput.name = "cf-turnstile-response";
+          tokenInput.id = "cf-turnstile-response";
+          form.appendChild(tokenInput);
+        }
+        tokenInput.value = token;
+      };
+
+      const form = document.getElementById("contact-form");
+      if (!form) return;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (form.action.endsWith("#") || form.getAttribute("action") === "#") {
+          alert(
+            "Form is not configured yet (dev). Set PUBLIC_FORMSPARK_FORM_ID and PUBLIC_TURNSTILE_SITE_KEY to enable submissions.",
+          );
+          return false;
+        }
+
+        const submitBtn = document.getElementById("submit-btn");
+        const turnstileToken = document.getElementById("cf-turnstile-response");
+        const successDiv = document.getElementById("form-success");
+        const errorDiv = document.getElementById("form-error");
+
+        if (successDiv) successDiv.hidden = true;
+        if (errorDiv) errorDiv.hidden = true;
+
+        if (!turnstileToken || !turnstileToken.value) {
+          alert("Please complete the security verification.");
+          return false;
+        }
+
+        const savedChildren = submitBtn ? Array.from(submitBtn.childNodes) : [];
+        if (submitBtn) {
+          submitBtn.textContent = "";
+          const spinner = document.createElement("i");
+          spinner.className = "fa-solid fa-spinner fa-spin";
+          spinner.setAttribute("aria-hidden", "true");
+          submitBtn.appendChild(spinner);
+          submitBtn.appendChild(document.createTextNode(" Sending..."));
+          submitBtn.disabled = true;
+        }
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            if (successDiv) successDiv.hidden = false;
+            form.reset();
+            window.turnstile?.reset();
+          } else if (errorDiv) {
+            errorDiv.hidden = false;
+          }
+        } catch (error) {
+          console.error("Form submission error:", error);
+          if (errorDiv) errorDiv.hidden = false;
+        } finally {
+          if (submitBtn) {
+            submitBtn.textContent = "";
+            savedChildren.forEach((node) => submitBtn.appendChild(node));
+            submitBtn.disabled = true;
+          }
+        }
+      });
+    })();
   </script>
 
-  <V2RefinedFooter slot="after-main" />
-  <V2RefinedTweaksPanel slot="after-main" />
-</V2RefinedLayout>
+  <SanctuaryFooter slot="after-main" />
+</SanctuaryLayout>

@@ -1,0 +1,21 @@
+/* Sanctuary design tokens — Mythic hub adaptation of hydroponics sanctuary */
+:root {
+  --sx-cloud: #f6f3ec;
+  --sx-paper: #f9f5f0;
+  --sx-ink: #0f3361;
+  --sx-ink-soft: #1a3a5c;
+  --sx-muted: #4f7693;
+  --sx-leaf: #a6c10b;
+  --sx-sun: #d66a3a;
+  --sx-coral: #e07a5f;
+  --sx-peach: #f2c4a8;
+  --sx-white: #fffcf7;
+  --sx-black: #0a0a0a;
+  --sx-line: color-mix(in oklab, var(--sx-ink) 14%, transparent);
+
+  --sx-font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sx-font-ui: "Montserrat", system-ui, sans-serif;
+  --sx-wrap: 1180px;
+  --sx-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sx-shadow: 0 18px 40px rgba(15, 51, 97, 0.08);
+}
