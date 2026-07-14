@@ -1,0 +1,467 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog v2.4" [ref=e8] [cursor=pointer]:
+        - /url: /blog/category/release-notes/
+        - text: Changelog v2.4
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital V2 home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:     
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/apps/
+      - generic [ref=e27]: 
+      - text: Apps
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e29]: 
+      - text: Resources
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e31]: 
+      - text: Blog
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e33]: 
+      - text: Support
+    - link [ref=e34] [cursor=pointer]:
+      - /url: /v2/apps/
+      - text: Get the App →
+  - main [ref=e35]:
+    - region "Guides for keeping solo play moving." [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]:
+            - generic [ref=e40]: "01"
+            - text: Mythic field index
+          - heading "Guides for keeping solo play moving." [level=1] [ref=e41]:
+            - text: Guides for keeping solo play
+            - emphasis [ref=e42]: moving
+            - text: .
+          - paragraph [ref=e43]: "Real support docs for the official Mythic GME apps: first-session setup, journals, dice formulas, custom tables, and export references."
+          - generic "Primary resource actions" [ref=e44]:
+            - link "Start reading" [ref=e45] [cursor=pointer]:
+              - /url: /resources/getting-started-with-the-mythic-apps/
+              - generic [ref=e46]: 
+              - text: Start reading
+            - link "Browse index" [ref=e47] [cursor=pointer]:
+              - /url: /v2/resources/#guide-index
+              - generic [ref=e48]: 
+              - text: Browse index
+          - list "Resource library highlights" [ref=e49]:
+            - listitem [ref=e50]:
+              - generic [ref=e51]: "16"
+              - generic [ref=e52]: Guides
+            - listitem [ref=e53]:
+              - generic [ref=e54]: "4"
+              - generic [ref=e55]: References
+            - listitem [ref=e56]:
+              - generic [ref=e57]: Dec 27, 2025
+              - generic [ref=e58]: Latest update
+        - complementary "Search resource guides" [ref=e59]:
+          - generic [ref=e60]: Docs desk
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: Find the right page
+            - heading "Search the field notes." [level=2] [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]: Resource search
+            - generic [ref=e66]:
+              - generic [ref=e67]: 
+              - searchbox "Resource search" [ref=e68]
+          - navigation "Fast resource paths" [ref=e69]:
+            - link "First session Begin with the core Mythic flow." [ref=e70] [cursor=pointer]:
+              - /url: /resources/getting-started-with-the-mythic-apps/
+              - text: 
+              - generic [ref=e71]:
+                - strong [ref=e72]: First session
+                - generic [ref=e73]: Begin with the core Mythic flow.
+            - link "Dice syntax Turn formulas into saved tools." [ref=e74] [cursor=pointer]:
+              - /url: /resources/getting-started-with-the-dice-roller/
+              - text: 
+              - generic [ref=e75]:
+                - strong [ref=e76]: Dice syntax
+                - generic [ref=e77]: Turn formulas into saved tools.
+            - link "Table building Shape custom oracle content." [ref=e78] [cursor=pointer]:
+              - /url: /resources/getting-started-with-custom-tables/
+              - text: 
+              - generic [ref=e79]:
+                - strong [ref=e80]: Table building
+                - generic [ref=e81]: Shape custom oracle content.
+    - region "Read by job, not by release date." [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - paragraph [ref=e85]:
+            - generic [ref=e86]: "02"
+            - text: Guide index
+          - heading "Read by job, not by release date." [level=2] [ref=e87]
+        - paragraph [ref=e88]: Each shelf pulls from the live English resource collection and points to the current production guide.
+      - generic [ref=e89]:
+        - region "Open the table without losing momentum." [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: "02"
+            - generic [ref=e93]: 
+            - paragraph [ref=e94]: Start Here
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - heading "Open the table without losing momentum." [level=3] [ref=e97]
+              - paragraph [ref=e98]: Install the apps, set up your first journal, and learn the core Mythic rhythm.
+            - list [ref=e99]:
+              - listitem [ref=e100]:
+                - link "Getting Started with the Mythic Apps Start at the Fate Chart, then flow through Lists, Scenes, and Meaning Tables. No accounts, no internet—just play. 8 min read Start Updated Sep 21, 2025" [ref=e101] [cursor=pointer]:
+                  - /url: /resources/getting-started-with-the-mythic-apps/
+                  - generic [ref=e102]:
+                    - generic [ref=e103]: Getting Started with the Mythic Apps
+                    - generic [ref=e104]: Start at the Fate Chart, then flow through Lists, Scenes, and Meaning Tables. No accounts, no internet—just play.
+                    - generic [ref=e105]:
+                      - generic [ref=e106]: 8 min read
+                      - generic [ref=e107]: Start
+                      - generic [ref=e108]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e109]:
+                - link "Setting Up and Using Lists Build reusable Mythic lists using Characters, Threads, and Features 8 min read Start Updated Sep 21, 2025" [ref=e110] [cursor=pointer]:
+                  - /url: /resources/setting-up-and-using-lists/
+                  - generic [ref=e111]:
+                    - generic [ref=e112]: Setting Up and Using Lists
+                    - generic [ref=e113]: Build reusable Mythic lists using Characters, Threads, and Features
+                    - generic [ref=e114]:
+                      - generic [ref=e115]: 8 min read
+                      - generic [ref=e116]: Start
+                      - generic [ref=e117]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e118]:
+                - link "Writing and Organizing Scenes Start, run, and wrap scenes; log CF and results; keep notes tidy. 9 min read Start Updated Feb 1, 2025" [ref=e119] [cursor=pointer]:
+                  - /url: /resources/writing-and-organizing-scenes/
+                  - generic [ref=e120]:
+                    - generic [ref=e121]: Writing and Organizing Scenes
+                    - generic [ref=e122]: Start, run, and wrap scenes; log CF and results; keep notes tidy.
+                    - generic [ref=e123]:
+                      - generic [ref=e124]: 9 min read
+                      - generic [ref=e125]: Start
+                      - generic [ref=e126]: Updated Feb 1, 2025
+                  - text: 
+              - listitem [ref=e127]:
+                - link "Using Meaning Tables for Inspiration Use Meaning Tables (Actions, Descriptions, Elements) for clear prompts. 6 min read Start Updated Feb 1, 2025" [ref=e128] [cursor=pointer]:
+                  - /url: /resources/using-meaning-tables-for-inspiration/
+                  - generic [ref=e129]:
+                    - generic [ref=e130]: Using Meaning Tables for Inspiration
+                    - generic [ref=e131]: Use Meaning Tables (Actions, Descriptions, Elements) for clear prompts.
+                    - generic [ref=e132]:
+                      - generic [ref=e133]: 6 min read
+                      - generic [ref=e134]: Start
+                      - generic [ref=e135]: Updated Feb 1, 2025
+                  - text: 
+              - listitem [ref=e136]:
+                - 'link "Setting Up a Prepared Adventure in Mythic GME Digital Configure Mythic for published modules: switch the Event Focus table, populate Features, and use the prepared-adventure scene flow. 4 min read Start Updated Dec 27, 2025" [ref=e137] [cursor=pointer]':
+                  - /url: /resources/setting-up-a-prepared-adventure/
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: Setting Up a Prepared Adventure in Mythic GME Digital
+                    - generic [ref=e140]: "Configure Mythic for published modules: switch the Event Focus table, populate Features, and use the prepared-adventure scene flow."
+                    - generic [ref=e141]:
+                      - generic [ref=e142]: 4 min read
+                      - generic [ref=e143]: Start
+                      - generic [ref=e144]: Updated Dec 27, 2025
+                  - text: 
+        - region "Keep the story legible between sessions." [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: "03"
+            - generic [ref=e148]: 
+            - paragraph [ref=e149]: Adventure Journals
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - heading "Keep the story legible between sessions." [level=3] [ref=e152]
+              - paragraph [ref=e153]: Capture scenes, protect exports, and recover quickly when something feels off.
+            - list [ref=e154]:
+              - listitem [ref=e155]:
+                - link "A Guide to the Mythic Journals Create, import, and export journals; understand how Chaos Factor, Scenes, Lists, and Log Entries map to Mythic. 6 min read Journals Updated Sep 21, 2025" [ref=e156] [cursor=pointer]:
+                  - /url: /resources/guide-to-the-mythic-journals/
+                  - generic [ref=e157]:
+                    - generic [ref=e158]: A Guide to the Mythic Journals
+                    - generic [ref=e159]: Create, import, and export journals; understand how Chaos Factor, Scenes, Lists, and Log Entries map to Mythic.
+                    - generic [ref=e160]:
+                      - generic [ref=e161]: 6 min read
+                      - generic [ref=e162]: Journals
+                      - generic [ref=e163]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e164]:
+                - link "Sharing Adventure Journals Export journals to JSON/Markdown and import from files (coming soon). 7 min read Journals Updated Feb 1, 2025" [ref=e165] [cursor=pointer]:
+                  - /url: /resources/sharing-adventure-journals/
+                  - generic [ref=e166]:
+                    - generic [ref=e167]: Sharing Adventure Journals
+                    - generic [ref=e168]: Export journals to JSON/Markdown and import from files (coming soon).
+                    - generic [ref=e169]:
+                      - generic [ref=e170]: 7 min read
+                      - generic [ref=e171]: Journals
+                      - generic [ref=e172]: Updated Feb 1, 2025
+                  - text: 
+              - listitem [ref=e173]:
+                - link "Troubleshooting Quick fixes for common issues and how to report bugs. Quick checklist Journals Updated Feb 1, 2025" [ref=e174] [cursor=pointer]:
+                  - /url: /resources/troubleshooting/
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: Troubleshooting
+                    - generic [ref=e177]: Quick fixes for common issues and how to report bugs.
+                    - generic [ref=e178]:
+                      - generic [ref=e179]: Quick checklist
+                      - generic [ref=e180]: Journals
+                      - generic [ref=e181]: Updated Feb 1, 2025
+                  - text: 
+        - region "Turn dice syntax into repeatable tools." [ref=e182]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: "04"
+            - generic [ref=e185]: 
+            - paragraph [ref=e186]: Dice Roller
+          - generic [ref=e187]:
+            - generic [ref=e188]:
+              - heading "Turn dice syntax into repeatable tools." [level=3] [ref=e189]
+              - paragraph [ref=e190]: Save formulas, import collections, and shape rolls around the system at your table.
+            - list [ref=e191]:
+              - listitem [ref=e192]:
+                - link "Getting Started with the Dice Roller Roll faster with the system‑agnostic dice roller. 5 min read Dice Updated Feb 1, 2025" [ref=e193] [cursor=pointer]:
+                  - /url: /resources/getting-started-with-the-dice-roller/
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: Getting Started with the Dice Roller
+                    - generic [ref=e196]: Roll faster with the system‑agnostic dice roller.
+                    - generic [ref=e197]:
+                      - generic [ref=e198]: 5 min read
+                      - generic [ref=e199]: Dice
+                      - generic [ref=e200]: Updated Feb 1, 2025
+                  - text: 
+              - listitem [ref=e201]:
+                - link "Saving and Managing Dice Formulas Save, load, import, and export your Saved Formulas file—no coding required. 5 min read Dice Updated Sep 21, 2025" [ref=e202] [cursor=pointer]:
+                  - /url: /resources/saving-and-managing-dice-formulas/
+                  - generic [ref=e203]:
+                    - generic [ref=e204]: Saving and Managing Dice Formulas
+                    - generic [ref=e205]: Save, load, import, and export your Saved Formulas file—no coding required.
+                    - generic [ref=e206]:
+                      - generic [ref=e207]: 5 min read
+                      - generic [ref=e208]: Dice
+                      - generic [ref=e209]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e210]:
+                - 'link "Dice Formulas & Customization Build the rolls you want: advantage, thresholds, exploding/compounding, keep/drop, and more—no programming required. 12 min read Dice Updated Sep 21, 2025" [ref=e211] [cursor=pointer]':
+                  - /url: /resources/dice-formulas-and-customization/
+                  - generic [ref=e212]:
+                    - generic [ref=e213]: Dice Formulas & Customization
+                    - generic [ref=e214]: "Build the rolls you want: advantage, thresholds, exploding/compounding, keep/drop, and more—no programming required."
+                    - generic [ref=e215]:
+                      - generic [ref=e216]: 12 min read
+                      - generic [ref=e217]: Dice
+                      - generic [ref=e218]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e219]:
+                - link "Importing & Exporting Saved Formulas Bring in favorites from friends and back up your own — no coding needed. 5 min read Dice Updated Sep 21, 2025" [ref=e220] [cursor=pointer]:
+                  - /url: /resources/importing-and-exporting-saved-formulas/
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: Importing & Exporting Saved Formulas
+                    - generic [ref=e223]: Bring in favorites from friends and back up your own — no coding needed.
+                    - generic [ref=e224]:
+                      - generic [ref=e225]: 5 min read
+                      - generic [ref=e226]: Dice
+                      - generic [ref=e227]: Updated Sep 21, 2025
+                  - text: 
+        - region "Build your own oracle shelves." [ref=e228]:
+          - generic [ref=e229]:
+            - generic [ref=e230]: "05"
+            - generic [ref=e231]: 
+            - paragraph [ref=e232]: Custom Tables
+          - generic [ref=e233]:
+            - generic [ref=e234]:
+              - heading "Build your own oracle shelves." [level=3] [ref=e235]
+              - paragraph [ref=e236]: Create, organize, link, import, and export tables for improvising on the fly.
+            - list [ref=e237]:
+              - listitem [ref=e238]:
+                - link "Getting Started with Custom Tables Create Meaning and Event Focus tables, add translations and links, and import ready-made starters—no programming required. 9 min read Tables Updated Sep 21, 2025" [ref=e239] [cursor=pointer]:
+                  - /url: /resources/getting-started-with-custom-tables/
+                  - generic [ref=e240]:
+                    - generic [ref=e241]: Getting Started with Custom Tables
+                    - generic [ref=e242]: Create Meaning and Event Focus tables, add translations and links, and import ready-made starters—no programming required.
+                    - generic [ref=e243]:
+                      - generic [ref=e244]: 9 min read
+                      - generic [ref=e245]: Tables
+                      - generic [ref=e246]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e247]:
+                - link "Organizing Custom Tables Use categories, icons, tags, and links to keep your Meaning and Event Focus tables tidy and powerful. 5 min read Tables Updated Sep 21, 2025" [ref=e248] [cursor=pointer]:
+                  - /url: /resources/organizing-custom-tables/
+                  - generic [ref=e249]:
+                    - generic [ref=e250]: Organizing Custom Tables
+                    - generic [ref=e251]: Use categories, icons, tags, and links to keep your Meaning and Event Focus tables tidy and powerful.
+                    - generic [ref=e252]:
+                      - generic [ref=e253]: 5 min read
+                      - generic [ref=e254]: Tables
+                      - generic [ref=e255]: Updated Sep 21, 2025
+                  - text: 
+              - listitem [ref=e256]:
+                - link "Linking & Nesting Tables How to chain tables for multi‑step prompts and roll‑ons (coming soon). 11 min read Tables Updated Feb 1, 2025" [ref=e257] [cursor=pointer]:
+                  - /url: /resources/linking-and-nesting-tables/
+                  - generic [ref=e258]:
+                    - generic [ref=e259]: Linking & Nesting Tables
+                    - generic [ref=e260]: How to chain tables for multi‑step prompts and roll‑ons (coming soon).
+                    - generic [ref=e261]:
+                      - generic [ref=e262]: 11 min read
+                      - generic [ref=e263]: Tables
+                      - generic [ref=e264]: Updated Feb 1, 2025
+                  - text: 
+              - listitem [ref=e265]:
+                - link "Importing & Exporting Custom Tables Prepare CSV, TXT, PSV, and JSON tables for import—range-based only for now—then export clean bundles for sharing. 7 min read Tables Updated Sep 21, 2025" [ref=e266] [cursor=pointer]:
+                  - /url: /resources/importing-and-exporting-custom-tables/
+                  - generic [ref=e267]:
+                    - generic [ref=e268]: Importing & Exporting Custom Tables
+                    - generic [ref=e269]: Prepare CSV, TXT, PSV, and JSON tables for import—range-based only for now—then export clean bundles for sharing.
+                    - generic [ref=e270]:
+                      - generic [ref=e271]: 7 min read
+                      - generic [ref=e272]: Tables
+                      - generic [ref=e273]: Updated Sep 21, 2025
+                  - text: 
+    - region "Export references for the tinkerers." [ref=e274]:
+      - generic [ref=e275]:
+        - generic [ref=e276]:
+          - paragraph [ref=e277]:
+            - generic [ref=e278]: "06"
+            - text: Schema shelf
+          - heading "Export references for the tinkerers." [level=2] [ref=e279]
+          - paragraph [ref=e280]: "The deep-dive pages stay close to the data shapes: formulas, journals, categories, and custom tables."
+        - generic [ref=e281]:
+          - link "Journal Schema Field-by-field reference for the Mythic Journal JSON format with a minimal example and local downloads. Reference" [ref=e282] [cursor=pointer]:
+            - /url: /resources/journal-schema/
+            - generic [ref=e283]:
+              - strong [ref=e284]: Journal Schema
+              - generic [ref=e285]: Field-by-field reference for the Mythic Journal JSON format with a minimal example and local downloads.
+            - generic [ref=e286]: Reference
+          - link "Formula Schema Reference for the Saved Formulas JSON format with a minimal example and local downloads. Reference" [ref=e287] [cursor=pointer]:
+            - /url: /resources/formula-schema/
+            - generic [ref=e288]:
+              - strong [ref=e289]: Formula Schema
+              - generic [ref=e290]: Reference for the Saved Formulas JSON format with a minimal example and local downloads.
+            - generic [ref=e291]: Reference
+          - link "Custom Table Schema Unified Table v3 reference for Meaning and Event Focus tables, with minimal examples and downloads. Reference" [ref=e292] [cursor=pointer]:
+            - /url: /resources/custom-table-schema/
+            - generic [ref=e293]:
+              - strong [ref=e294]: Custom Table Schema
+              - generic [ref=e295]: Unified Table v3 reference for Meaning and Event Focus tables, with minimal examples and downloads.
+            - generic [ref=e296]: Reference
+          - link "Categories Schema Define and extend the category registry for Custom Tables (icons, labels, order). Reference" [ref=e297] [cursor=pointer]:
+            - /url: /resources/categories-schema/
+            - generic [ref=e298]:
+              - strong [ref=e299]: Categories Schema
+              - generic [ref=e300]: Define and extend the category registry for Custom Tables (icons, labels, order).
+            - generic [ref=e301]: Reference
+    - region "Bring the odd case to support." [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - paragraph [ref=e305]:
+            - generic [ref=e306]: "07"
+            - text: Still stuck
+          - heading "Bring the odd case to support." [level=2] [ref=e307]
+          - paragraph [ref=e308]: Screenshots, exports, and edge cases are easier to solve in a direct thread than in a generic docs page.
+        - generic [ref=e309]:
+          - link "Support hub" [ref=e310] [cursor=pointer]:
+            - /url: /v2/support/
+            - generic [ref=e311]: 
+            - text: Support hub
+          - link "Discord" [ref=e312] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e313]: 
+            - text: Discord
+  - contentinfo [ref=e314]:
+    - img
+    - generic [ref=e315]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e316]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e317]: honestly
+        - text: .
+      - generic [ref=e318]:
+        - generic [ref=e319]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e320] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e322]
+            - generic [ref=e323]:
+              - text: Jason Holt Digital
+              - generic [ref=e324]: Indie · Est. 2023
+          - paragraph [ref=e325]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e326]:
+          - heading "Product" [level=4] [ref=e327]
+          - link "Apps" [ref=e328] [cursor=pointer]:
+            - /url: /v2/apps/
+          - link "Resources" [ref=e329] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e330] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e331] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e332] [cursor=pointer]:
+            - /url: /blog/category/release-notes/
+        - generic [ref=e333]:
+          - heading "Get the App" [level=4] [ref=e334]
+          - link "iOS" [ref=e335] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e336]: 
+            - text: iOS
+          - link "Android" [ref=e337] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e338]: 
+            - text: Android
+          - link "Fire" [ref=e339] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e340]: 
+            - text: Fire
+          - link "Windows" [ref=e341] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e342]: 
+            - text: Windows
+          - link "Desktop" [ref=e343] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e344]: 
+            - text: Desktop
+        - generic [ref=e345]:
+          - heading "Company" [level=4] [ref=e346]
+          - link "About" [ref=e347] [cursor=pointer]:
+            - /url: /about/
+          - link "Privacy" [ref=e348] [cursor=pointer]:
+            - /url: /privacy/
+          - link "Terms" [ref=e349] [cursor=pointer]:
+            - /url: /terms/
+          - link "Contact" [ref=e350] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e351] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e352]: 
+            - text: Discord
+      - generic [ref=e353]:
+        - generic [ref=e354]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e355]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e358]:
+    - button "Menu" [ref=e359]:
+      - img [ref=e361]
+      - generic: Menu
+    - button "Inspect" [ref=e365]:
+      - img [ref=e367]
+      - generic: Inspect
+    - button "Audit" [ref=e369]:
+      - img [ref=e371]
+      - generic: Audit
+    - button "Settings" [ref=e374]:
+      - img [ref=e376]
+      - generic: Settings

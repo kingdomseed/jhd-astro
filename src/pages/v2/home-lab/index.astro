@@ -1,0 +1,180 @@
+---
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedMarquee from "../../../components/v2/refined/V2RefinedMarquee.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2MotionHero from "../../../components/v2/refined/V2MotionHero.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { v2AppsUrl } from "../../../lib/v2Links";
+import {
+  v2MythicDesktop,
+  v2MythicMobile,
+} from "../../../lib/v2Products";
+
+const playLoop = [
+  {
+    step: "Ask",
+    title: "Ask Fate Questions.",
+    body:
+      "Keep the yes-or-no questions close when play reaches a turning point.",
+    image: "/v2/assets/mythic-art/image_eye.jpg",
+  },
+  {
+    step: "Interpret",
+    title: "Roll on Meaning Tables.",
+    body:
+      "Use Mythic prompts to decide what the answer means in the story.",
+    image: "/v2/assets/mythic-art/images_torch.jpg",
+  },
+  {
+    step: "Record",
+    title: "Track the Adventure Log.",
+    body:
+      "Save the moments that matter so the next scene has something to build on.",
+    image: "/v2/assets/mythic-art/image_sword_grip.jpg",
+  },
+];
+
+const resourceLinks = [
+  {
+    href: "/v2/resources/getting-started-with-the-mythic-apps/",
+    title: "Start with the apps",
+    body: "Set up Mythic GME Mobile and Mythic GME Digital for play.",
+  },
+  {
+    href: "/v2/resources/using-meaning-tables-for-inspiration/",
+    title: "Use Meaning Tables",
+    body: "Turn prompts into details that fit the current scene.",
+  },
+  {
+    href: "/v2/resources/guide-to-the-mythic-journals/",
+    title: "Manage Journals",
+    body: "Keep adventures, logs, and exports organized.",
+  },
+];
+---
+
+<V2RefinedLayout
+  title="Homepage Lab - Jason Holt Digital"
+  description="A hidden v2 homepage structure lab for the official Mythic GME apps hub."
+  canonicalPath="/v2/home-lab/"
+  mainClass="home-lab"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/hero-lab.css" />
+    <link rel="stylesheet" href="/v2/assets/home-lab.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <V2MotionHero />
+  <V2RefinedMarquee />
+
+  <section class="home-loop" aria-labelledby="home-loop-title">
+    <div class="home-lab__wrap home-loop__intro">
+      <p class="home-kicker">Core play loop</p>
+      <h2 id="home-loop-title">Ask, interpret, record.</h2>
+      <p>
+        Ask Fate Questions, roll on Meaning Tables, track your scenes, and stay
+        close to the story.
+      </p>
+    </div>
+    <div class="home-loop__plates" aria-label="Core Mythic app actions">
+      {playLoop.map((item) => (
+        <article class="home-loop__plate" style={`--plate-image: url("${item.image}")`}>
+          <div class="home-loop__copy">
+            <span>{item.step}</span>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="home-proof" aria-labelledby="home-proof-title">
+    <div class="home-lab__wrap home-proof__grid">
+      <div class="home-proof__copy">
+        <p class="home-kicker">Mobile + desktop</p>
+        <h2 id="home-proof-title">Use the surface that fits the session.</h2>
+        <p>
+          Mythic GME Mobile keeps common actions close on a phone. Mythic GME
+          Digital gives longer sessions more room on desktop.
+        </p>
+        <a class="home-button" href={v2AppsUrl}>Compare the apps</a>
+      </div>
+      <div class="home-proof__stage" aria-label="Mythic app examples">
+        <figure class="home-proof__phone">
+          <img
+            src={v2MythicMobile.screenshots[0].src}
+            alt={v2MythicMobile.screenshots[0].alt}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>{v2MythicMobile.screenshots[0].label}</figcaption>
+        </figure>
+        <figure class="home-proof__desktop">
+          <span
+            class="home-proof__desktop-image"
+            role="img"
+            aria-label={v2MythicDesktop.screenshots[2].alt}
+          ></span>
+          <figcaption>{v2MythicDesktop.screenshots[2].label}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-learn" aria-labelledby="home-learn-title">
+    <div class="home-lab__wrap home-learn__content">
+      <div class="home-learn__copy">
+        <p class="home-kicker">Resources</p>
+        <h2 id="home-learn-title">Learn the rhythm, then keep playing.</h2>
+        <p>
+          Guides should help players understand the apps, use Mythic terms, and
+          get back to the session.
+        </p>
+      </div>
+      <div class="home-learn__links">
+        {resourceLinks.map((resource) => (
+          <a href={resource.href}>
+            <span>{resource.title}</span>
+            <small>{resource.body}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-maker" aria-labelledby="home-maker-title">
+    <div class="home-lab__wrap home-maker__grid">
+      <figure class="home-maker__portrait" role="img" aria-label="Jason Holt">
+        <figcaption>Jason Holt · Founder and product engineer</figcaption>
+      </figure>
+      <div class="home-maker__copy">
+        <p class="home-kicker">Maker note</p>
+        <h2 id="home-maker-title">Built close to the people who play.</h2>
+        <p>
+          I want the apps to make Mythic feel ready to play in one place,
+          without pulling attention away from the story.
+        </p>
+        <a class="home-button home-button--light" href="/v2/about/">About Jason</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-final" aria-labelledby="home-final-title">
+    <div class="home-lab__wrap home-final__grid">
+      <div>
+        <p class="home-kicker">Ready to play</p>
+        <h2 id="home-final-title">Keep Mythic play moving.</h2>
+        <p>
+          Ask Fate Questions, roll on Meaning Tables, track your scenes, and
+          stay close to the story.
+        </p>
+      </div>
+      <a class="home-button" href={v2AppsUrl}>See the apps</a>
+    </div>
+  </section>
+</V2RefinedLayout>

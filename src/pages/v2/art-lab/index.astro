@@ -1,0 +1,197 @@
+---
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { v2AppsUrl } from "../../../lib/v2Links";
+
+const verticalPlates = [
+  {
+    src: "/v2/assets/mythic-art/image_eye.jpg",
+    label: "Fate Questions",
+    title: "A benefit can feel like a scene, not a feature card.",
+  },
+  {
+    src: "/v2/assets/mythic-art/images_torch.jpg",
+    label: "Meaning Tables",
+    title: "Full art can slow the page down at the right moment.",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_sword_grip.jpg",
+    label: "Adventure Log",
+    title: "The site can feel like Mythic before it explains Mythic.",
+  },
+];
+
+const artVocabulary = [
+  {
+    src: "/v2/assets/mythic-art/image_space_heroes.jpg",
+    label: "Campaign poster",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_temple_hilltop.jpg",
+    label: "Quiet discovery",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_shadow_escape.jpg",
+    label: "Action beat",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_noir_street.jpg",
+    label: "Genre range",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_spiderbot_ruins.jpg",
+    label: "Wide reset",
+  },
+  {
+    src: "/v2/assets/mythic-art/image_space_portrait.jpg",
+    label: "Texture field",
+  },
+];
+
+const proofShots = [
+  {
+    src: "/v2/assets/mobile-1.png",
+    alt: "Mythic GME Mobile Fate Chart",
+    label: "Fate Chart",
+  },
+  {
+    src: "/v2/assets/mobile-5.png",
+    alt: "Mythic GME Mobile Adventure Log",
+    label: "Adventure Log",
+  },
+  {
+    src: "/v2/assets/desktop-1.png",
+    alt: "Mythic GME Digital desktop layout",
+    label: "Desktop",
+  },
+];
+---
+
+<V2RefinedLayout
+  title="Art Lab - Jason Holt Digital"
+  description="A hidden v2 art direction lab for testing full Jorge Munoz illustration treatments with Mythic GME app copy."
+  canonicalPath="/v2/art-lab/"
+  mainClass="art-lab"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/art-lab.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="art-hero" aria-labelledby="art-hero-title">
+    <img class="art-hero__image" src="/v2/assets/art-1.png" alt="" aria-hidden="true" />
+    <div class="art-hero__shade" aria-hidden="true"></div>
+    <div class="art-lab__wrap art-hero__copy">
+      <p class="art-kicker">Art direction lab</p>
+      <h1 id="art-hero-title">Mythic GME Apps</h1>
+      <p>
+        Keep the app close to play, and let the world around it feel strange,
+        illustrated, and worth entering.
+      </p>
+      <div class="art-actions">
+        <a class="art-button art-button--primary" href={v2AppsUrl}>See the Apps</a>
+        <a class="art-button" href="#chapter-plates">Explore treatments</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="art-statement" aria-labelledby="art-statement-title">
+    <div class="art-lab__wrap art-statement__grid">
+      <p class="art-index">01</p>
+      <h2 id="art-statement-title">
+        The benefits section does not need four cards. It needs one thing to
+        remember.
+      </h2>
+      <p>
+        Ask Fate Questions, roll on Meaning Tables, track your scenes, and stay
+        close to the story.
+      </p>
+    </div>
+  </section>
+
+  <section class="art-chapters" id="chapter-plates" aria-labelledby="chapter-plates-title">
+    <div class="art-lab__wrap art-chapters__head">
+      <p class="art-kicker">Chapter plates</p>
+      <h2 id="chapter-plates-title">Use vertical art as a section, not a sticker.</h2>
+    </div>
+    <div class="art-chapter-track">
+      {verticalPlates.map((plate, index) => (
+        <article class="art-chapter" style={`--shift:${index * 56}px`}>
+          <img src={plate.src} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <div class="art-chapter__copy">
+            <span>{String(index + 1).padStart(2, "0")} / {plate.label}</span>
+            <h3>{plate.title}</h3>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="art-panorama" aria-labelledby="art-panorama-title">
+    <img class="art-panorama__image" src="/v2/assets/mythic-art/image_spiderbot_ruins.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+    <div class="art-panorama__copy">
+      <p class="art-kicker">Horizontal plate</p>
+      <h2 id="art-panorama-title">A wide image can reset the page before app proof.</h2>
+      <p>
+        Instead of repeating screenshots in every section, let one panoramic
+        illustration create a new beat.
+      </p>
+    </div>
+  </section>
+
+  <section class="art-vocabulary" aria-labelledby="art-vocabulary-title">
+    <div class="art-lab__wrap art-vocabulary__head">
+      <p class="art-kicker">Art vocabulary</p>
+      <h2 id="art-vocabulary-title">Different images should do different jobs.</h2>
+      <p>
+        The site should not reuse the same screenshots to prove every point.
+        Let illustration carry mood, genre, pacing, and surprise.
+      </p>
+    </div>
+    <div class="art-vocabulary__grid">
+      {artVocabulary.map((item) => (
+        <figure class="art-vocabulary__item">
+          <img src={item.src} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <figcaption>{item.label}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="art-proof" aria-labelledby="art-proof-title">
+    <div class="art-lab__wrap art-proof__grid">
+      <div class="art-proof__copy">
+        <p class="art-kicker">Product proof</p>
+        <h2 id="art-proof-title">Screenshots work harder when they appear less often.</h2>
+        <p>
+          Let the art carry atmosphere. Use app screens as concrete evidence at
+          the exact moment a player needs to believe the product is real.
+        </p>
+      </div>
+      <div class="art-proof__stage" aria-label="Mythic app screenshot examples">
+        {proofShots.map((shot) => (
+          <figure class="art-proof__shot" data-wide={shot.src.includes("desktop")}>
+            <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+            <figcaption>{shot.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="art-editorial" aria-labelledby="art-editorial-title">
+    <img class="art-editorial__image" src="/v2/assets/mythic-art/image_temple_hilltop.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+    <div class="art-editorial__copy">
+      <p class="art-kicker">Editorial break</p>
+      <h2 id="art-editorial-title">Give the page a quiet place to breathe.</h2>
+      <p>
+        A single large illustration can hold a maker note, support cue, or
+        release-note bridge without adding another block of cards.
+      </p>
+    </div>
+  </section>
+</V2RefinedLayout>

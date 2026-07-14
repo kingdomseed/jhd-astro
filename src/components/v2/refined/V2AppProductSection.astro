@@ -1,0 +1,99 @@
+---
+import type { V2AppVariant } from "../../../lib/v2Products";
+
+interface Props {
+  app: V2AppVariant;
+  number: string;
+}
+
+const { app, number } = Astro.props;
+const titleId = `${app.id}-app-title`;
+const sectionClass = [
+  "sec",
+  "app-product",
+  app.id === "desktop" ? "app-product--desktop" : "",
+].filter(Boolean).join(" ");
+const stackClass =
+  app.visual === "phone"
+    ? "app-product__phone-stack"
+    : "app-product__desktop-stack";
+const shotClassBase =
+  app.visual === "phone" ? "app-product__phone" : "app-product__desktop";
+---
+
+<section class={sectionClass} id={`${app.id}-app`} aria-labelledby={titleId}>
+  <div class="wrap app-product__grid">
+    {app.id === "mobile" && (
+      <div class={`app-product__media app-product__media--${app.visual}`}>
+        <p class="app-product__stamp">{app.label}</p>
+        <div class={stackClass} aria-label={`${app.title} screenshots`}>
+          {app.screenshots.map((shot, index) => (
+            <img
+              class={`${shotClassBase} ${shotClassBase}--${index + 1}`}
+              src={shot.src}
+              alt={shot.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          ))}
+        </div>
+      </div>
+    )}
+
+    <article class="app-product__body">
+      <p class="eyebrow">
+        <span class="eyebrow-num">{number}</span>
+        {app.label}
+      </p>
+      <h2 id={titleId} class="sec-title">{app.title}</h2>
+      <p class="app-product__for">{app.whoItsFor}</p>
+      <p class="app-product__summary">{app.summary}</p>
+      <div class="app-product__details">
+        <section aria-labelledby={`${app.id}-features-title`}>
+          <h3 id={`${app.id}-features-title`}>What it does</h3>
+          <ul>
+            {app.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+        </section>
+        <section aria-labelledby={`${app.id}-content-title`}>
+          <h3 id={`${app.id}-content-title`}>Official content</h3>
+          <ul>
+            {app.officialContent.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+      </div>
+      <p class="app-product__note">{app.note}</p>
+      <nav class="store-strip" aria-label={`${app.title} stores`}>
+        {app.storeLinks.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <i class={link.icon} aria-hidden="true"></i>
+            {link.label}
+          </a>
+        ))}
+        {app.id === "desktop" && (
+          <span class="store-strip__soon">
+            <i class="fa-brands fa-steam" aria-hidden="true"></i>
+            Steam planned
+          </span>
+        )}
+      </nav>
+    </article>
+
+    {app.id === "desktop" && (
+      <div class={`app-product__media app-product__media--${app.visual}`}>
+        <p class="app-product__stamp">{app.label}</p>
+        <div class={stackClass} aria-label={`${app.title} screenshots`}>
+          {app.screenshots.map((shot, index) => (
+            <img
+              class={`${shotClassBase} ${shotClassBase}--${index + 1}`}
+              src={shot.src}
+              alt={shot.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>

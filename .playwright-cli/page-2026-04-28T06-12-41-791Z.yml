@@ -1,0 +1,264 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:    
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e27]: 
+      - text: Resources
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e29]: 
+      - text: Blog
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e31]: 
+      - text: Support
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e33]:
+    - region "Terms of Service." [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - generic [ref=e38]: "01"
+            - text: Legal
+          - heading "Terms of Service." [level=1] [ref=e39]:
+            - text: Terms of
+            - emphasis [ref=e40]: Service
+            - text: .
+          - paragraph [ref=e41]: "License terms, purchases and refunds, acceptable use, and limitations. Last updated: August 27, 2025."
+          - list "Terms highlights" [ref=e42]:
+            - listitem [ref=e43]: Personal play license
+            - listitem [ref=e44]: Store-managed purchases
+            - listitem [ref=e45]: Word Mill license notice
+        - complementary [ref=e46]:
+          - strong [ref=e47]: Clear terms
+          - paragraph [ref=e48]: Fair use, official content boundaries, support expectations, and the practical legal bits in one place.
+    - generic [ref=e50]:
+      - article [ref=e51]:
+        - article [ref=e53]:
+          - region "1) Agreement to Terms" [ref=e54]:
+            - heading "1) Agreement to Terms" [level=2] [ref=e55]
+            - paragraph [ref=e56]:
+              - text: These Terms of Service ("Terms") govern your use of the Mythic GME apps and website operated by
+              - strong [ref=e57]: Jason Holt Digital LLC
+              - text: ("JHD", "we", "us"). By downloading, installing, or using the apps, you agree to these Terms. If you do not agree, do not use the apps.
+          - region "2) Products Covered" [ref=e58]:
+            - heading "2) Products Covered" [level=2] [ref=e59]
+            - list [ref=e60]:
+              - listitem [ref=e61]:
+                - strong [ref=e62]: Mythic GME Mobile
+                - text: — iOS, Android, macOS, and web
+              - listitem [ref=e63]:
+                - strong [ref=e64]: Mythic GME Digital
+                - text: — Windows, macOS, and Linux
+            - paragraph [ref=e65]:
+              - emphasis [ref=e66]: Mythic Game Master Emulator 2nd Edition
+              - text: and related names are trademarks of and © Word Mill Creative LLC. Used under license. JHD develops the official licensed digital companions.
+          - region "3) License and Use" [ref=e67]:
+            - heading "3) License and Use" [level=2] [ref=e68]
+            - paragraph [ref=e69]: Subject to these Terms, JHD grants you a limited, non‑exclusive, non‑transferable, revocable license to install and use the apps for personal, non‑commercial tabletop play. You may not copy, distribute, sell, sublicense, modify, reverse engineer, or create derivative works except as permitted by law.
+            - list [ref=e70]:
+              - listitem [ref=e71]:
+                - strong [ref=e72]: "Official content:"
+                - text: Licensed Mythic text and tables are for in‑app use only; do not extract or redistribute.
+              - listitem [ref=e73]:
+                - strong [ref=e74]: "User content:"
+                - text: Your journals, scenes, and custom tables remain yours and stay on your device unless you export/share them.
+              - listitem [ref=e75]:
+                - strong [ref=e76]: "Prohibited use:"
+                - text: No unlawful, infringing, or automated scraping activities.
+          - region "4) Purchases, Subscriptions, and Taxes" [ref=e77]:
+            - heading "4) Purchases, Subscriptions, and Taxes" [level=2] [ref=e78]
+            - paragraph [ref=e79]: Pricing and availability may vary by platform and region. Purchases made through the Apple App Store, Google Play, or itch.io are processed by those stores; their terms and tax/VAT handling apply.
+            - list [ref=e80]:
+              - listitem [ref=e81]:
+                - strong [ref=e82]: "In‑app purchases:"
+                - text: Delivery is immediate once the store confirms your purchase.
+              - listitem [ref=e83]:
+                - strong [ref=e84]: "Taxes/VAT:"
+                - text: Collected and remitted by the storefront as applicable.
+              - listitem [ref=e85]:
+                - strong [ref=e86]: "Receipts:"
+                - text: Provided by the store or by itch.io for direct desktop purchases.
+          - region "5) Refunds" [ref=e87]:
+            - heading "5) Refunds" [level=2] [ref=e88]
+            - paragraph [ref=e89]: Refunds for purchases made via a platform store are handled under that store's policy. If you need help initiating a request, contact us and we'll point you to the correct process.
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - strong [ref=e92]: "Apple App Store:"
+                - text: Request at
+                - link "reportaproblem.apple.com" [ref=e93] [cursor=pointer]:
+                  - /url: https://reportaproblem.apple.com/
+              - listitem [ref=e94]:
+                - strong [ref=e95]: "Google Play:"
+                - text: See
+                - link "Google Play refunds" [ref=e96] [cursor=pointer]:
+                  - /url: https://support.google.com/googleplay/answer/2479637
+              - listitem [ref=e97]:
+                - strong [ref=e98]: "itch.io:"
+                - text: Contact the creator or itch.io support per their refund guidelines
+          - region "6) Third‑Party Services" [ref=e99]:
+            - heading "6) Third‑Party Services" [level=2] [ref=e100]
+            - paragraph [ref=e101]:
+              - text: The apps interface with third‑party services for analytics and diagnostics as described in our
+              - link "Privacy Policy" [ref=e102] [cursor=pointer]:
+                - /url: /v2/privacy/
+              - text: . Use of those services is subject to their terms. No advertising SDKs are used.
+          - region "7) Disclaimers" [ref=e103]:
+            - heading "7) Disclaimers" [level=2] [ref=e104]
+            - paragraph [ref=e105]: THE APPS AND WEBSITE ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT. WE DO NOT WARRANT THAT THE APPS WILL BE ERROR‑FREE OR UNINTERRUPTED.
+          - region "8) Limitation of Liability" [ref=e106]:
+            - heading "8) Limitation of Liability" [level=2] [ref=e107]
+            - paragraph [ref=e108]: TO THE MAXIMUM EXTENT PERMITTED BY LAW, JHD AND ITS LICENSORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR REVENUE, ARISING OUT OF OR RELATED TO YOUR USE OF THE APPS. TOTAL LIABILITY FOR ANY CLAIM SHALL NOT EXCEED THE AMOUNT YOU PAID IN THE 12 MONTHS PRECEDING THE CLAIM.
+          - region "9) Indemnification" [ref=e109]:
+            - heading "9) Indemnification" [level=2] [ref=e110]
+            - paragraph [ref=e111]: You agree to indemnify and hold harmless JHD and its licensors from any claims, losses, and expenses (including reasonable attorneys' fees) arising from your violation of these Terms or misuse of the apps.
+          - region "10) Termination" [ref=e112]:
+            - heading "10) Termination" [level=2] [ref=e113]
+            - paragraph [ref=e114]: We may suspend or terminate access if you breach these Terms. You may uninstall or discontinue use at any time; this does not entitle you to refunds beyond each platform's policies.
+          - region "11) Changes to These Terms" [ref=e115]:
+            - heading "11) Changes to These Terms" [level=2] [ref=e116]
+            - paragraph [ref=e117]: We may update these Terms as the apps evolve. We'll update the "Last Updated" date above and, when needed, announce changes in-app. Continued use after updates means you accept the new Terms.
+          - region "12) Governing Law" [ref=e118]:
+            - heading "12) Governing Law" [level=2] [ref=e119]
+            - paragraph [ref=e120]: These Terms are governed by the laws of the State of Delaware, USA, without regard to its conflict of laws rules. Venue for disputes shall be the state or federal courts located in Delaware, where permissible.
+          - region "13) App Store Requirements" [ref=e121]:
+            - heading "13) App Store Requirements" [level=2] [ref=e122]
+            - paragraph [ref=e123]: If you downloaded the app from the Apple App Store or Google Play, you also agree to their terms. Neither Apple nor Google is responsible for providing maintenance or support for the app.
+          - region "14) Intellectual Property Notice" [ref=e124]:
+            - heading "14) Intellectual Property Notice" [level=2] [ref=e125]
+            - paragraph [ref=e126]: Mythic Game Master Emulator 2nd Edition © Word Mill Creative LLC. Used under license. Mythic GME apps © Jason Holt Digital LLC. All rights reserved.
+          - region "15) Contact" [ref=e127]:
+            - heading "15) Contact" [level=2] [ref=e128]
+            - paragraph [ref=e129]: "If you have questions about these Terms, contact:"
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - strong [ref=e132]: "Email:"
+                - link "legal@jasonholtdigital.com" [ref=e133] [cursor=pointer]:
+                  - /url: mailto:legal@jasonholtdigital.com
+              - listitem [ref=e134]:
+                - strong [ref=e135]: "Mail:"
+                - text: Jason Holt Digital LLC, 1111b S Governors Avenue STE 21904, Dover, DE 19904 US
+      - complementary "Legal actions" [ref=e136]:
+        - generic [ref=e137]:
+          - heading "Legal questions" [level=2] [ref=e138]
+          - paragraph [ref=e139]:
+            - link "legal@jasonholtdigital.com" [ref=e140] [cursor=pointer]:
+              - /url: mailto:legal@jasonholtdigital.com
+        - generic [ref=e141]:
+          - heading "Privacy" [level=2] [ref=e142]
+          - paragraph [ref=e143]:
+            - link "Read the Privacy Policy" [ref=e144] [cursor=pointer]:
+              - /url: /v2/privacy/
+  - contentinfo [ref=e145]:
+    - img
+    - generic [ref=e146]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e147]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e148]: honestly
+        - text: .
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e151] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e153]
+            - generic [ref=e154]:
+              - text: Jason Holt Digital
+              - generic [ref=e155]: Indie · Est. 2023
+          - paragraph [ref=e156]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e157]:
+          - heading "Product" [level=4] [ref=e158]
+          - link "Apps" [ref=e159] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e160] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e161] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e162] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e163] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e164]:
+          - heading "Get the App" [level=4] [ref=e165]
+          - link "iOS" [ref=e166] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e167]: 
+            - text: iOS
+          - link "Android" [ref=e168] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e169]: 
+            - text: Android
+          - link "Fire" [ref=e170] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e171]: 
+            - text: Fire
+          - link "Windows" [ref=e172] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e173]: 
+            - text: Windows
+          - link "Desktop" [ref=e174] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e175]: 
+            - text: Desktop
+        - generic [ref=e176]:
+          - heading "Company" [level=4] [ref=e177]
+          - link "About" [ref=e178] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e179] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e180] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e181] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e182] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e183]: 
+            - text: Discord
+      - generic [ref=e184]:
+        - generic [ref=e185]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e186]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e189]:
+    - button "Menu" [ref=e190]:
+      - img [ref=e192]
+      - generic: Menu
+    - button "Inspect" [ref=e196]:
+      - img [ref=e198]
+      - generic: Inspect
+    - button "Audit" [ref=e200]:
+      - img [ref=e202]
+      - generic: Audit
+    - button "Settings" [ref=e205]:
+      - img [ref=e207]
+      - generic: Settings

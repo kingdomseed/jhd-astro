@@ -1,7 +1,7 @@
 ---
 import {
   v2AssetPath,
-  v2AppsAnchorUrl,
+  v2AppsUrl,
   v2NavLinks,
   v2StoreLinks,
 } from "../../../lib/v2Links";
@@ -79,5 +79,5 @@ const isActive = (href: string) =>
       <i class={link.icon} aria-hidden="true"></i>{link.label}
     </a>
   ))}
-  <a href={v2AppsAnchorUrl} style="margin-top:20px; background: var(--jhd-ink); color: var(--jhd-bg); padding: 16px; border-bottom: none;">Get the App →</a>
+  <a href={v2AppsUrl} style="margin-top:20px; background: var(--jhd-ink); color: var(--jhd-bg); padding: 16px; border-bottom: none;">Get the App →</a>
 </aside>

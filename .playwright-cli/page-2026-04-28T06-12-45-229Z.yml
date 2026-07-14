@@ -1,0 +1,246 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:    
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e27]: 
+      - text: Resources
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e29]: 
+      - text: Blog
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e31]: 
+      - text: Support
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e33]:
+    - region "Getting Started with the Mythic Apps" [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - generic [ref=e38]: Guide
+            - text: Start Here
+          - heading "Getting Started with the Mythic Apps" [level=1] [ref=e39]
+          - paragraph [ref=e40]: Start at the Fate Chart, then flow through Lists, Scenes, and Meaning Tables. No accounts, no internet—just play.
+          - list "Resource details" [ref=e41]:
+            - listitem [ref=e42]: Start Here
+            - listitem [ref=e43]: 8 min read
+            - listitem [ref=e44]: Updated Sep 21, 2025
+        - complementary [ref=e45]:
+          - strong [ref=e46]: Start
+          - paragraph [ref=e47]: Install the apps, set up your first journal, and learn the core Mythic rhythm.
+    - generic [ref=e49]:
+      - article [ref=e50]:
+        - generic [ref=e51]:
+          - paragraph [ref=e52]:
+            - link "Back to resources" [ref=e53] [cursor=pointer]:
+              - /url: /v2/resources/#start-here
+              - generic [ref=e54]: 
+              - text: Back to resources
+          - figure "Illustration of a person with a friendly bot" [ref=e55]:
+            - img "Illustration of a person with a friendly bot" [ref=e56]
+            - generic [ref=e57]: Illustration of a person with a friendly bot
+          - generic [ref=e58]:
+            - paragraph [ref=e59]: "Welcome! This quick guide is based on the app itself: you start at the Fate Chart and move between Lists, Scenes, and Meaning Tables as you play. There are no accounts or servers—everything happens on your device."
+            - blockquote [ref=e60]:
+              - paragraph [ref=e61]: "What you need: Bring these to the table"
+              - list [ref=e62]:
+                - listitem [ref=e63]: Your favorite RPG and character(s) created (keep sheets handy)
+                - listitem [ref=e64]: The Mythic GME 2e book for odds and rules context
+                - listitem [ref=e65]: The desktop or mobile app installed
+            - heading "Before you begin" [level=2] [ref=e66]
+            - list [ref=e67]:
+              - listitem [ref=e68]:
+                - text: A copy of the
+                - link "Mythic Game Master Emulator 2e book" [ref=e69] [cursor=pointer]:
+                  - /url: https://www.drivethrurpg.com/en/product/422929/mythic-game-master-emulator-second-edition
+                - text: (Word Mill Creative) for rules context and guidance
+              - listitem [ref=e70]: Your favorite RPG system and character(s) created and ready to play
+              - listitem [ref=e71]: The desktop or mobile version of the app
+            - heading "Core steps" [level=2] [ref=e72]
+            - heading "1) Install" [level=3] [ref=e73]
+            - paragraph [ref=e74]: Install the desktop app or the mobile app from your platform’s store and launch it. Once launched, the app automatically creates your first journal for you called ‘My Journal’. You can rename this in settings.
+            - heading "2) Start at the Fate Chart (or switch to Fate Check)" [level=3] [ref=e75]
+            - paragraph [ref=e76]: On first launch, the app opens to the Fate Chart. You can switch the default to Fate Check in Settings later if you prefer. Set your Chaos Factor, choose odds, and roll. The app highlights Yes/No/Exceptional results clearly.
+            - blockquote [ref=e77]:
+              - paragraph [ref=e78]: "Tip: Change A Screens Settings"
+              - list [ref=e79]:
+                - listitem [ref=e80]: There’s a settings wheel that let’s you change the settings for each screen.
+                - listitem [ref=e81]: You can enable more details about rolls on the Fate Chart screen
+                - listitem [ref=e82]: You can also turn on the ability to ask a question before each roll
+            - heading "3) Core screens you’ll use every session" [level=3] [ref=e83]
+            - list [ref=e84]:
+              - listitem [ref=e85]: "Fate Chart (and Fate Check): ask questions, choose odds, roll, and interpret answers."
+              - listitem [ref=e86]: "Lists: track Characters, Threads, and Features. These lists feed your event rolls and bring elements into your story in unexpected ways."
+              - listitem [ref=e87]: "Scenes: jot a title and summary; snapshot the Chaos Factor for the scene start; add notes as you play or wait until the conclusion of a scene and summerize."
+              - listitem [ref=e88]: "Meaning Tables: Action/Subject and other tables for giving you the inspiration to interpret your results."
+            - paragraph [ref=e89]: Layout notes
+            - list [ref=e90]:
+              - listitem [ref=e91]: "Mobile: each area is its own screen; switch using the navigation drawer on the top left."
+              - listitem [ref=e92]: "Desktop: all core areas are visible together so you can roll and write without switching."
+            - heading "4) A simple first session flow" [level=3] [ref=e93]
+            - list [ref=e94]:
+              - listitem [ref=e95]: Set Chaos Factor (CF) in the Fate Chart
+              - listitem [ref=e96]: Create a Scene with a short summary; record the scene’s starting CF
+              - listitem [ref=e97]: Begin the scene by asking your first yes/no Fate question in the Fate Chart and roll
+              - listitem [ref=e98]: If you get stuck, roll on Meaning Tables for inspiration
+              - listitem [ref=e99]: Add items to Lists (Characters, Threads, Features) as they emerge
+              - listitem [ref=e100]: Adjust CF between scenes as your story shifts
+            - heading "Tips & troubleshooting" [level=2] [ref=e101]
+            - list [ref=e102]:
+              - listitem [ref=e103]: Unsure about how to start? Keep the book nearby and start with likely/50‑50 early on
+              - listitem [ref=e104]: Chaos factor determines how likely exceptional results occur
+              - listitem [ref=e105]: On mobile, try landscape when you want more context while playing
+            - heading "Next steps" [level=2] [ref=e106]
+            - list [ref=e107]:
+              - listitem [ref=e108]: "Learn formulas and per‑system starters: “Dice Formulas & Customization”"
+              - listitem [ref=e109]: "Build custom tables (optional feature): “Getting Started with Custom Tables”"
+              - listitem [ref=e110]: "Share and safeguard journals: “Sharing Adventure Journals”"
+          - region "Step-by-step" [ref=e111]:
+            - heading "Step-by-step" [level=2] [ref=e112]
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - heading "Install on your device(s)" [level=3] [ref=e115]
+                - paragraph [ref=e116]: Download and install the desktop or mobile app and launch--the app creates your first saved game--My Journal. Rename it on the settings screen.
+              - listitem [ref=e117]:
+                - heading "Set your Chaos Factor" [level=3] [ref=e118]
+                - paragraph [ref=e119]: On first launch you’ll see the Fate Chart. Set CF (1–9) to match your scenario; adjust later as needed.
+              - listitem [ref=e120]:
+                - heading "Ask, roll, and record" [level=3] [ref=e121]
+                - paragraph [ref=e122]: Type a yes/no question, pick odds, and roll. Record outcomes in your scene notes to keep story continuity. You can enable writing your question before the role on the screen settings.
+              - listitem [ref=e123]:
+                - heading "Use Lists, Scenes, and Meaning Tables" [level=3] [ref=e124]
+                - paragraph [ref=e125]: It's a good idea to add Characters and Threads to your Lists before starting your first game. Use Scenes to summerize or predict, and meaning tables for interpreting outcomes.
+      - complementary "Related resources" [ref=e126]:
+        - generic [ref=e127]:
+          - heading "Guide shelf" [level=2] [ref=e128]
+          - paragraph [ref=e129]:
+            - link "Start Here" [ref=e130] [cursor=pointer]:
+              - /url: /v2/resources/#start-here
+        - generic [ref=e131]:
+          - heading "Related" [level=2] [ref=e132]
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - link "Getting Started with the Dice Roller" [ref=e135] [cursor=pointer]:
+                - /url: /v2/resources/getting-started-with-the-dice-roller/
+            - listitem [ref=e136]:
+              - link "Setting Up and Using Lists" [ref=e137] [cursor=pointer]:
+                - /url: /v2/resources/setting-up-and-using-lists/
+            - listitem [ref=e138]:
+              - link "Using Meaning Tables for Inspiration" [ref=e139] [cursor=pointer]:
+                - /url: /v2/resources/using-meaning-tables-for-inspiration/
+  - contentinfo [ref=e140]:
+    - img
+    - generic [ref=e141]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e142]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e143]: honestly
+        - text: .
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e146] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e148]
+            - generic [ref=e149]:
+              - text: Jason Holt Digital
+              - generic [ref=e150]: Indie · Est. 2023
+          - paragraph [ref=e151]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e152]:
+          - heading "Product" [level=4] [ref=e153]
+          - link "Apps" [ref=e154] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e155] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e156] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e157] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e158] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e159]:
+          - heading "Get the App" [level=4] [ref=e160]
+          - link "iOS" [ref=e161] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e162]: 
+            - text: iOS
+          - link "Android" [ref=e163] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e164]: 
+            - text: Android
+          - link "Fire" [ref=e165] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e166]: 
+            - text: Fire
+          - link "Windows" [ref=e167] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e168]: 
+            - text: Windows
+          - link "Desktop" [ref=e169] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e170]: 
+            - text: Desktop
+        - generic [ref=e171]:
+          - heading "Company" [level=4] [ref=e172]
+          - link "About" [ref=e173] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e174] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e175] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e176] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e177] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e178]: 
+            - text: Discord
+      - generic [ref=e179]:
+        - generic [ref=e180]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e181]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e184]:
+    - button "Menu" [ref=e185]:
+      - img [ref=e187]
+      - generic: Menu
+    - button "Inspect" [ref=e191]:
+      - img [ref=e193]
+      - generic: Inspect
+    - button "Audit" [ref=e195]:
+      - generic [ref=e196]:
+        - img [ref=e197]
+        - img [ref=e200]
+      - generic: Audit
+    - button "Settings" [ref=e203]:
+      - img [ref=e205]
+      - generic: Settings

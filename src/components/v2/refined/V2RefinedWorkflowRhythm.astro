@@ -1,0 +1,47 @@
+---
+import { v2AppsUrl } from "../../../lib/v2Links";
+import { v2MythicDesktop, v2MythicMobile } from "../../../lib/v2Products";
+
+const rhythmShots = [
+  v2MythicMobile.screenshots[0],
+  v2MythicDesktop.screenshots[0],
+  v2MythicDesktop.screenshots[2],
+];
+---
+
+<section class="sec apps-rhythm" aria-labelledby="apps-rhythm-title">
+  <img class="apps-rhythm__art" src="/v2/assets/art-15.png" alt="" aria-hidden="true" />
+  <div class="wrap apps-rhythm__grid">
+    <div class="apps-rhythm__copy">
+      <p class="eyebrow">
+        <span class="eyebrow-num">03</span>
+        Product rhythm
+      </p>
+      <h2 id="apps-rhythm-title" class="sec-title">
+        One Mythic table, shaped for the device in your hand.
+      </h2>
+      <p class="sec-sub">
+        The Fate Chart, Meaning Tables, dice, lists, and Journals stay familiar.
+        The surface changes from touch-first portability to more room for longer
+        Mythic sessions on desktop.
+      </p>
+      <ul class="bb-list">
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Fate Questions stay fast</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Custom Tables travel with your play</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Desktop gives long sessions more room</li>
+      </ul>
+      <a class="btn btn--accent" href={v2AppsUrl}>
+        Compare versions
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="apps-rhythm__shots" aria-label="App screenshot highlights">
+      {rhythmShots.map((shot) => (
+        <figure class="apps-rhythm__shot" data-wide={shot.src.includes("desktop")}>
+          <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+          <figcaption>{shot.label}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

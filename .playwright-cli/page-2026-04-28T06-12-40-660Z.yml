@@ -1,0 +1,567 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:    
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e27]: 
+      - text: Resources
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e29]: 
+      - text: Blog
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e31]: 
+      - text: Support
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e33]:
+    - region "Privacy Policy." [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - generic [ref=e38]: "01"
+            - text: Privacy
+          - heading "Privacy Policy." [level=1] [ref=e39]:
+            - text: Privacy
+            - emphasis [ref=e40]: Policy
+            - text: .
+          - paragraph [ref=e41]: "Minimal data collection, local-first storage, and clear controls. Last updated: August 27, 2025."
+          - list "Privacy highlights" [ref=e42]:
+            - listitem [ref=e43]: Analytics opt-in
+            - listitem [ref=e44]: Local-first game data
+            - listitem [ref=e45]: No data sales
+        - complementary [ref=e46]:
+          - strong [ref=e47]: Plain promise
+          - paragraph [ref=e48]: I built these apps for the community. Your game content stays yours.
+    - generic [ref=e50]:
+      - article [ref=e51]:
+        - article [ref=e53]:
+          - paragraph [ref=e54]:
+            - strong [ref=e55]: Jason Holt Digital LLC
+            - text: is the data controller for both Mythic GME Mobile and Mythic GME Digital. For any privacy questions reach me at
+            - link "privacy@jasonholtdigital.com" [ref=e56] [cursor=pointer]:
+              - /url: mailto:privacy@jasonholtdigital.com
+            - text: .
+          - heading "What Apps This Covers" [level=2] [ref=e57]
+          - paragraph [ref=e58]: "This privacy policy applies to:"
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - strong [ref=e61]: Mythic GME Mobile
+              - text: — iOS, Android, macOS, and Web versions
+            - listitem [ref=e62]:
+              - strong [ref=e63]: Mythic GME Digital
+              - text: — Windows, macOS, and Linux desktop versions
+          - heading "What Data I Actually Collect" [level=2] [ref=e64]
+          - paragraph [ref=e65]: "I collect minimal data, and only what's necessary to make the apps work better. Here's exactly what I collect by platform:"
+          - heading "Mobile Platforms (iOS, Android, macOS, Web)" [level=3] [ref=e66]
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - strong [ref=e69]: "Analytics (opt‑in):"
+              - text: PostHog and Firebase capture app usage such as screen views, feature interactions, and events like dice rolls, table searches, list actions, settings changes, and support actions.
+            - listitem [ref=e70]:
+              - strong [ref=e71]: "Technical data:"
+              - text: app_version, platform, locale, build_channel, and current_screen; a pseudonymous per‑install identifier (PostHog distinct_id).
+            - listitem [ref=e72]:
+              - strong [ref=e73]: "Context hashes:"
+              - text: hashed IDs for journal, scene, table, and list context (SHA‑256 with a per‑install salt). No raw journal, scene, or table content is sent.
+            - listitem [ref=e74]:
+              - strong [ref=e75]: "Derived metrics only:"
+              - text: e.g., content length buckets, expression complexity flags, counts. We do not send your actual notes or journal text.
+            - listitem [ref=e76]:
+              - strong [ref=e77]: "Crashes & errors (opt‑in):"
+              - text: Sentry captures crash/error reports and session replays (screen capture) to help debug issues. Text content is obfuscated/redacted, including static UI labels.
+            - listitem [ref=e78]:
+              - strong [ref=e79]: "Country/region inference:"
+              - text: Providers may infer rough location (e.g., country) from IP for product localization; precise GPS location is not collected.
+          - heading "Desktop Platforms (Windows, Linux)" [level=3] [ref=e80]
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - strong [ref=e83]: "Analytics (opt‑in):"
+              - text: Similar pseudonymous usage analytics as mobile when enabled.
+            - listitem [ref=e84]:
+              - strong [ref=e85]: "No advertising IDs:"
+              - text: Desktop builds do not use mobile advertising identifiers.
+            - listitem [ref=e86]:
+              - strong [ref=e87]: "Local‑first:"
+              - text: Journals, scenes, and custom tables remain on your device unless you export/share them.
+          - heading "What I DON'T Collect" [level=3] [ref=e88]
+          - list [ref=e89]:
+            - listitem [ref=e90]: Personal information (name, email, phone number)
+            - listitem [ref=e91]: Precise location data (GPS coordinates, exact address)
+            - listitem [ref=e92]: Your game content or journal entries
+            - listitem [ref=e93]: Browsing history outside the app
+            - listitem [ref=e94]: Photos, videos, or personal files
+            - listitem [ref=e95]: Social media connections
+          - heading "Your Analytics Choice" [level=2] [ref=e96]
+          - paragraph [ref=e97]:
+            - text: When you first open the app, you'll see a consent dialog that explains analytics and lets you choose.
+            - strong [ref=e98]: Analytics is off by default
+            - text: until you opt in.
+            - strong [ref=e99]: Crash and error reporting
+            - text: is
+            - strong [ref=e100]: on by default
+            - text: to help diagnose issues and keep the app stable.
+            - strong [ref=e101]: Session Replay
+            - text: "is treated separately as described below. You can:"
+          - list [ref=e102]:
+            - listitem [ref=e103]: Enable or disable analytics any time in Settings (controls PostHog and Firebase).
+            - listitem [ref=e104]: Disable crash/error reporting any time in Settings.
+            - listitem [ref=e105]:
+              - strong [ref=e106]: "v1.5.3 and later:"
+              - text: Enable or disable Session Replay any time in Settings. Replay sampling and upload follow your preference (off unless you turn it on).
+            - listitem [ref=e107]:
+              - strong [ref=e108]: "Prior versions:"
+              - text: On‑error Session Replay may be on by default; you can disable it in Settings.
+            - listitem [ref=e109]: Keep using all app features even if analytics are off and/or crash reporting is disabled.
+          - heading "I Don't Sell Your Data. Ever." [level=2] [ref=e110]
+          - paragraph [ref=e111]: I don't sell your data. I won't sell your data. There's no business model here that involves selling data. The only scenario where your data might be "sold" is if I ever sold the entire business, and your data transferred with it as part of the app's functionality. But I'm not selling data to advertisers, data brokers, or anyone else.
+          - heading "How Your Data is Processed" [level=2] [ref=e112]
+          - heading "Analytics & Diagnostics Providers" [level=3] [ref=e113]
+          - list [ref=e114]:
+            - listitem [ref=e115]:
+              - strong [ref=e116]: PostHog
+              - text: "(product analytics): collects pseudonymous usage events and properties listed above."
+              - emphasis [ref=e117]: Session replay is not enabled
+              - text: "in PostHog at this time. Data is encrypted in transit. Region: United States."
+              - strong [ref=e118]: "Retention (Cloud, paid):"
+              - text: events retained up to
+              - strong [ref=e119]: 7 years
+              - text: ; session replay recordings retained for
+              - strong [ref=e120]: 3 months
+              - text: by default (1 month on free). Some replays may be retained for up to
+              - strong [ref=e121]: 1 year
+              - text: "if pinned to a playlist, shared publicly, or added to a notebook. Sources:"
+              - link "Privacy Policy" [ref=e122] [cursor=pointer]:
+                - /url: https://posthog.com/privacy
+              - text: ","
+              - link "Data retention docs" [ref=e123] [cursor=pointer]:
+                - /url: https://posthog.com/docs/data/keeping-data
+              - text: .
+            - listitem [ref=e124]:
+              - strong [ref=e125]: Firebase Analytics
+              - text: "(Google/GA4): receives mirrored usage events during migration for continuity. No advertising features are used. Region: United States (Google Cloud)."
+              - strong [ref=e126]: "Retention (GA4 default for free):"
+              - text: user- and event-level data retained for
+              - strong [ref=e127]: 2 months
+              - text: by default (projects can optionally extend some data to 14 months).
+              - emphasis [ref=e128]: "Planned removal:"
+              - text: GA4 mirroring will be removed after app version
+              - strong [ref=e129]: 1.5.4
+              - text: ". Source:"
+              - link "Google Analytics retention" [ref=e130] [cursor=pointer]:
+                - /url: https://support.google.com/analytics/answer/7667196
+              - text: .
+            - listitem [ref=e131]:
+              - strong [ref=e132]: Sentry
+              - text: "(crash/error reporting + session replay): captures error details and short session replays to diagnose issues; text on screen is obfuscated/redacted and not readable. No keystrokes are captured. Crash/error reporting is enabled by default and can be disabled in Settings."
+              - strong [ref=e133]: Session Replay
+              - text: ":"
+              - emphasis [ref=e134]: v1.5.3+
+              - text: sampling follows your preference (off unless enabled).
+              - emphasis [ref=e135]: Earlier versions
+              - text: "may have on‑error replays on by default; you can disable them in Settings. Region: United States. By default, Sentry SDKs mask all text and images in replays and do not record any sessions unless sampling is explicitly enabled."
+              - strong [ref=e136]: "Retention:"
+              - text: Sentry retains event data according to your subscription plan's retention window and deletes regular backups after
+              - strong [ref=e137]: 90 days
+              - text: ". Exact durations vary by plan and data type. Source:"
+              - link "Sentry Security" [ref=e138] [cursor=pointer]:
+                - /url: https://sentry.io/security/
+              - text: .
+            - listitem [ref=e139]:
+              - strong [ref=e140]: "Data Retention:"
+              - text: I configure provider-level retention to keep analytics and diagnostics data only as long as needed, then delete or aggregate it. See provider-specific retention above. You can request deletion at any time (see Your Privacy Rights).
+            - listitem [ref=e141]:
+              - strong [ref=e142]: "International Transfers:"
+              - text: Data is processed in the United States under appropriate safeguards (e.g., SCCs) where required.
+            - listitem [ref=e143]:
+              - strong [ref=e144]: "Data sharing/sale:"
+              - text: Data is not sold. Providers process data on my behalf to improve the app.
+          - paragraph [ref=e145]:
+            - strong [ref=e146]: "Provider privacy and retention information:"
+          - list [ref=e147]:
+            - listitem [ref=e148]:
+              - text: "Sentry:"
+              - link "Privacy Policy" [ref=e149] [cursor=pointer]:
+                - /url: https://sentry.io/privacy/
+              - text: •
+              - link "Session Replay Privacy" [ref=e150] [cursor=pointer]:
+                - /url: https://docs.sentry.io/product/explore/session-replay/privacy/
+              - text: •
+              - link "Flutter Replay Docs" [ref=e151] [cursor=pointer]:
+                - /url: https://docs.sentry.io/platforms/flutter/session-replay/
+            - listitem [ref=e152]:
+              - text: "PostHog:"
+              - link "Privacy Policy" [ref=e153] [cursor=pointer]:
+                - /url: https://posthog.com/privacy
+              - text: •
+              - link "Data Retention & Deletion" [ref=e154] [cursor=pointer]:
+                - /url: https://posthog.com/docs/data/keeping-data
+            - listitem [ref=e155]:
+              - text: "Firebase (Google):"
+              - link "Firebase Privacy & Security" [ref=e156] [cursor=pointer]:
+                - /url: https://firebase.google.com/support/privacy
+              - text: •
+              - link "Google Privacy Policy" [ref=e157] [cursor=pointer]:
+                - /url: https://policies.google.com/privacy
+          - heading "Local Storage" [level=3] [ref=e158]
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - strong [ref=e161]: "Game Data:"
+              - text: All your journals, custom tables, and game content stay on your device
+            - listitem [ref=e162]:
+              - strong [ref=e163]: "File Access:"
+              - text: I only access files you explicitly import/export (JSON for journals, Markdown for exports)
+            - listitem [ref=e164]:
+              - strong [ref=e165]: "iCloud Sync:"
+              - text: If enabled, your game data syncs through Apple's secure iCloud service
+            - listitem [ref=e166]:
+              - strong [ref=e167]: "No Server Storage:"
+              - text: Your game content never gets uploaded to my servers
+          - heading "Legal Basis (GDPR)" [level=3] [ref=e168]
+          - paragraph [ref=e169]: "For users in the EU, my legal basis for processing is:"
+          - list [ref=e170]:
+            - listitem [ref=e171]:
+              - strong [ref=e172]: "Consent (Art. 6(1)(a)):"
+              - text: Analytics runs only if you opt in; you can withdraw consent any time in Settings.
+            - listitem [ref=e173]:
+              - strong [ref=e174]: "Legitimate interests (Art. 6(1)(f)):"
+              - text: Crash/error reporting (including on‑error session replay) to maintain security and stability; and responding to support emails you send. You can disable crash/error reporting in Settings.
+          - heading "Do Not Sell or Share My Personal Information" [level=2] [ref=e175]
+          - paragraph [ref=e176]:
+            - text: I do not sell or share your personal information as defined by the CCPA/CPRA. If you still wish to submit a request regarding "Do Not Sell or Share," email
+            - strong [ref=e177]: privacy@jasonholtdigital.com
+            - text: . I will confirm that no sale or sharing occurs and honor any applicable rights.
+          - heading "Your Privacy Rights" [level=2] [ref=e178]
+          - paragraph [ref=e179]: "No matter where you live, you have important rights regarding your data:"
+          - heading "Universal Rights" [level=3] [ref=e180]
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - strong [ref=e183]: "Know:"
+              - text: What data I collect and why (it's all in this policy)
+            - listitem [ref=e184]:
+              - strong [ref=e185]: "Access:"
+              - text: Request a copy of any data I have about you
+            - listitem [ref=e186]:
+              - strong [ref=e187]: "Correct:"
+              - text: Fix any incorrect information
+            - listitem [ref=e188]:
+              - strong [ref=e189]: "Delete:"
+              - text: Request deletion of your data
+            - listitem [ref=e190]:
+              - strong [ref=e191]: "Control:"
+              - text: Turn analytics on/off anytime in app settings
+            - listitem [ref=e192]:
+              - strong [ref=e193]: "Export:"
+              - text: Get your game data in portable formats
+          - heading "Regional Privacy Laws" [level=3] [ref=e194]
+          - paragraph [ref=e195]: "If you live in certain regions, you have additional rights:"
+          - heading "European Union (GDPR)" [level=4] [ref=e196]
+          - list [ref=e197]:
+            - listitem [ref=e198]: Withdraw consent for analytics processing
+            - listitem [ref=e199]: Object to data processing based on legitimate interests
+            - listitem [ref=e200]: Request restriction of processing
+            - listitem [ref=e201]: File complaints with your local data protection authority
+          - heading "California (CCPA/CPRA)" [level=4] [ref=e202]
+          - list [ref=e203]:
+            - listitem [ref=e204]: Detailed disclosure of data collection practices
+            - listitem [ref=e205]: Right to opt-out of data "sales" (though I don't sell data)
+            - listitem [ref=e206]: Non-discrimination for exercising privacy rights
+            - listitem [ref=e207]: Right to limit use of sensitive personal information
+          - heading "Virginia, Colorado, Connecticut (State Privacy Laws)" [level=4] [ref=e208]
+          - list [ref=e209]:
+            - listitem [ref=e210]: Confirm what personal data I process
+            - listitem [ref=e211]: Access, correct, delete, or port your data
+            - listitem [ref=e212]: Opt-out of targeted advertising (not applicable since I don't do this)
+          - heading "Brazil (LGPD)" [level=4] [ref=e213]
+          - list [ref=e214]:
+            - listitem [ref=e215]: Confirmation of data processing activities
+            - listitem [ref=e216]: Access, correction, and deletion of personal data
+            - listitem [ref=e217]: Data portability between services
+            - listitem [ref=e218]: Information about data sharing (which I don't do)
+          - heading "How to Exercise Your Rights" [level=3] [ref=e219]
+          - paragraph [ref=e220]:
+            - text: Email me at
+            - strong [ref=e221]:
+              - link "privacy@jasonholtdigital.com" [ref=e222] [cursor=pointer]:
+                - /url: mailto:privacy@jasonholtdigital.com
+            - text: "with your request. I'll respond within:"
+          - list [ref=e223]:
+            - listitem [ref=e224]:
+              - strong [ref=e225]: "GDPR:"
+              - text: 30 days
+            - listitem [ref=e226]:
+              - strong [ref=e227]: "CCPA:"
+              - text: 45 days
+            - listitem [ref=e228]:
+              - strong [ref=e229]: "Other laws:"
+              - text: 30–45 days
+            - listitem [ref=e230]:
+              - strong [ref=e231]: "General requests:"
+              - text: 2 business days for acknowledgment
+          - paragraph [ref=e232]:
+            - strong [ref=e233]: "For your local game data:"
+            - text: You already have full control. Export your journals before uninstalling if you want to keep them.
+          - heading "Privacy Controls" [level=2] [ref=e234]
+          - heading "In‑App Controls" [level=3] [ref=e235]
+          - list [ref=e236]:
+            - listitem [ref=e237]:
+              - strong [ref=e238]: "Settings → Analytics:"
+              - text: Toggle analytics (PostHog/Firebase) on/off
+            - listitem [ref=e239]:
+              - strong [ref=e240]: "Settings → Diagnostics:"
+              - list [ref=e241]:
+                - listitem [ref=e242]:
+                  - strong [ref=e243]: "Crash & Error Reporting:"
+                  - text: On/Off (on by default)
+                - listitem [ref=e244]:
+                  - strong [ref=e245]: "Session Replay (v1.5.3+):"
+                  - text: On/Off (off by default)
+            - listitem [ref=e246]:
+              - strong [ref=e247]: "First‑Run Dialog:"
+              - text: Choose your analytics preference when you first open the app
+            - listitem [ref=e248]:
+              - strong [ref=e249]: "Export Data:"
+              - text: Export your game journals as JSON or Markdown files
+            - listitem [ref=e250]:
+              - strong [ref=e251]: "Delete Data:"
+              - text: Clear all app data or uninstall to remove everything
+          - heading "Device‑Level Controls" [level=3] [ref=e252]
+          - heading "iOS/iPadOS" [level=4] [ref=e253]
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - strong [ref=e256]: "App Analytics:"
+              - text: Settings → Privacy → Analytics & Improvements → Share App Analytics
+            - listitem [ref=e257]:
+              - strong [ref=e258]: "App Permissions:"
+              - text: Settings → Privacy → Files and Folders → Mythic GME
+            - listitem [ref=e259]:
+              - strong [ref=e260]: "App Tracking:"
+              - text: Settings → Privacy → Tracking (though I don't track across apps)
+          - heading "Android" [level=4] [ref=e261]
+          - list [ref=e262]:
+            - listitem [ref=e263]:
+              - strong [ref=e264]: "App Permissions:"
+              - text: Settings → Apps → Mythic GME Mobile → Permissions
+            - listitem [ref=e265]:
+              - strong [ref=e266]: "Usage Data:"
+              - text: Settings → Google → Usage & Diagnostics
+            - listitem [ref=e267]:
+              - strong [ref=e268]: "Advertising:"
+              - text: Settings → Google → Ads (though I don't use ads)
+          - heading "Desktop (Windows/macOS/Linux)" [level=4] [ref=e269]
+          - list [ref=e270]:
+            - listitem [ref=e271]:
+              - strong [ref=e272]: "Limited Analytics:"
+              - text: Most device‑level controls don't apply
+            - listitem [ref=e273]:
+              - strong [ref=e274]: "File Access:"
+              - text: Desktop versions only access files you explicitly open/save
+            - listitem [ref=e275]:
+              - strong [ref=e276]: "System Privacy:"
+              - text: Standard OS privacy controls apply
+          - heading "Platform Differences" [level=2] [ref=e277]
+          - heading "Why Desktop Has Limited Analytics" [level=3] [ref=e278]
+          - list [ref=e279]:
+            - listitem [ref=e280]:
+              - strong [ref=e281]: "Windows/Linux:"
+              - text: Firebase and PostHog have limited functionality on these platforms
+            - listitem [ref=e282]:
+              - strong [ref=e283]: "macOS Desktop:"
+              - text: Some analytics work, but less comprehensive than mobile
+            - listitem [ref=e284]:
+              - strong [ref=e285]: "Technical Limitations:"
+              - text: Desktop platforms don't support many mobile analytics features
+            - listitem [ref=e286]:
+              - strong [ref=e287]: "Privacy by Design:"
+              - text: Less data collection means better privacy
+          - heading "Children's Privacy" [level=2] [ref=e288]
+          - paragraph [ref=e289]: Mythic GME is designed for tabletop RPG players, who are typically adults. The apps are not intended for children under 13. Users must be at least 16 to consent to analytics processing in the EU, or have parent/guardian consent where applicable.
+          - paragraph [ref=e290]:
+            - text: If you believe a child has used the app and analytics were enabled, please email
+            - link "privacy@jasonholtdigital.com" [ref=e291] [cursor=pointer]:
+              - /url: mailto:privacy@jasonholtdigital.com
+            - text: immediately.
+          - heading "Changes to This Policy" [level=2] [ref=e292]
+          - paragraph [ref=e293]: "When I update this privacy policy:"
+          - list [ref=e294]:
+            - listitem [ref=e295]: The "Last Updated" date will change
+            - listitem [ref=e296]: Major changes will be announced in the app
+            - listitem [ref=e297]: You'll see the consent dialog again if analytics practices change significantly
+            - listitem [ref=e298]: Continued use after changes means you accept the updated policy
+          - heading "Future Features" [level=2] [ref=e299]
+          - paragraph [ref=e300]: "If I ever add cloud save functionality or other features that change data handling:"
+          - list [ref=e301]:
+            - listitem [ref=e302]: This policy will be updated first
+            - listitem [ref=e303]: You'll be notified of changes
+            - listitem [ref=e304]: New features will have their own privacy controls
+            - listitem [ref=e305]: Existing privacy settings won't change without your consent
+          - heading "Contact Me" [level=2] [ref=e306]
+          - paragraph [ref=e307]: "For any privacy questions, concerns, or requests:"
+          - list [ref=e308]:
+            - listitem [ref=e309]:
+              - strong [ref=e310]: "Email:"
+              - link "privacy@jasonholtdigital.com" [ref=e311] [cursor=pointer]:
+                - /url: mailto:privacy@jasonholtdigital.com
+              - text: (fastest response)
+            - listitem [ref=e312]:
+              - strong [ref=e313]: "Mail:"
+              - text: Jason Holt Digital LLC, 1111b S Governors Avenue STE 21904, Dover, DE 19904 US
+            - listitem [ref=e314]:
+              - strong [ref=e315]: "Response Time:"
+              - text: Within 2 business days for acknowledgment
+          - paragraph [ref=e316]: I personally read and respond to every privacy-related email. If you have concerns, questions, or suggestions about how I handle privacy, please reach out.
+          - heading "App Store Compliance" [level=2] [ref=e317]
+          - heading "Google Play Data Safety" [level=3] [ref=e318]
+          - paragraph [ref=e319]: "This privacy policy supports Google Play Data Safety requirements by disclosing:"
+          - list [ref=e320]:
+            - listitem [ref=e321]:
+              - strong [ref=e322]: "Data collected:"
+              - text: App activity (feature interactions, screen views), App info & performance (diagnostics where applicable), and Device or other IDs (pseudonymous per‑install ID). No personal or precise location data is collected.
+            - listitem [ref=e323]:
+              - strong [ref=e324]: "Purposes:"
+              - text: Product analytics and app functionality; no advertising.
+            - listitem [ref=e325]:
+              - strong [ref=e326]: "Data sharing:"
+              - text: Only with analytics providers (Firebase, PostHog) for processing on my behalf. Data is not sold.
+            - listitem [ref=e327]:
+              - strong [ref=e328]: "Security practices:"
+              - text: Data encrypted in transit; minimal collection.
+            - listitem [ref=e329]:
+              - strong [ref=e330]: "User controls:"
+              - text: Analytics is optional and controlled by an in‑app toggle.
+          - heading "Apple Privacy Nutrition Labels" [level=3] [ref=e331]
+          - paragraph [ref=e332]: "For App Store compliance, this policy supports Apple's Privacy Nutrition Label requirements:"
+          - list [ref=e333]:
+            - listitem [ref=e334]:
+              - strong [ref=e335]: "Data not linked to you:"
+              - text: Usage Data (App Interactions, Screen Views) and Diagnostics (including crash reports and session replays with text redaction) where applicable.
+            - listitem [ref=e336]:
+              - strong [ref=e337]: "Tracking across apps/websites:"
+              - text: Not used.
+            - listitem [ref=e338]:
+              - strong [ref=e339]: "Third‑party partners:"
+              - text: Firebase (Google) and PostHog process analytics data as described.
+            - listitem [ref=e340]:
+              - strong [ref=e341]: "User control:"
+              - text: Analytics is opt‑in and can be turned off any time in Settings.
+      - complementary "Privacy actions" [ref=e342]:
+        - generic [ref=e343]:
+          - heading "Privacy questions" [level=2] [ref=e344]
+          - paragraph [ref=e345]:
+            - link "privacy@jasonholtdigital.com" [ref=e346] [cursor=pointer]:
+              - /url: mailto:privacy@jasonholtdigital.com
+        - generic [ref=e347]:
+          - heading "Controls" [level=2] [ref=e348]
+          - paragraph [ref=e349]: Analytics and diagnostics controls live in app settings.
+  - contentinfo [ref=e350]:
+    - img
+    - generic [ref=e351]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e352]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e353]: honestly
+        - text: .
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e356] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e358]
+            - generic [ref=e359]:
+              - text: Jason Holt Digital
+              - generic [ref=e360]: Indie · Est. 2023
+          - paragraph [ref=e361]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e362]:
+          - heading "Product" [level=4] [ref=e363]
+          - link "Apps" [ref=e364] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e365] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e366] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e367] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e368] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e369]:
+          - heading "Get the App" [level=4] [ref=e370]
+          - link "iOS" [ref=e371] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e372]: 
+            - text: iOS
+          - link "Android" [ref=e373] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e374]: 
+            - text: Android
+          - link "Fire" [ref=e375] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e376]: 
+            - text: Fire
+          - link "Windows" [ref=e377] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e378]: 
+            - text: Windows
+          - link "Desktop" [ref=e379] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e380]: 
+            - text: Desktop
+        - generic [ref=e381]:
+          - heading "Company" [level=4] [ref=e382]
+          - link "About" [ref=e383] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e384] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e385] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e386] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e387] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e388]: 
+            - text: Discord
+      - generic [ref=e389]:
+        - generic [ref=e390]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e391]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e394]:
+    - button "Menu" [ref=e395]:
+      - img [ref=e397]
+      - generic: Menu
+    - button "Inspect" [ref=e401]:
+      - img [ref=e403]
+      - generic: Inspect
+    - button "Audit" [ref=e405]:
+      - img [ref=e407]
+      - generic: Audit
+    - button "Settings" [ref=e410]:
+      - img [ref=e412]
+      - generic: Settings

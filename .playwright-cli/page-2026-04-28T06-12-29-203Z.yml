@@ -1,0 +1,224 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - navigation "Primary" [ref=e19]:
+        - link "Home" [ref=e20] [cursor=pointer]:
+          - /url: /v2/
+          - generic [ref=e21]: 
+          - text: Home
+        - link "Resources" [ref=e22] [cursor=pointer]:
+          - /url: /v2/resources/
+          - generic [ref=e23]: 
+          - text: Resources
+        - link "Blog" [ref=e24] [cursor=pointer]:
+          - /url: /v2/blog/
+          - generic [ref=e25]: 
+          - text: Blog
+        - button "Get the App" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: Get the App
+          - generic [ref=e29]: 
+      - text: 
+  - complementary [ref=e30]:
+    - button [ref=e31] [cursor=pointer]:
+      - generic [ref=e32]: 
+    - link [ref=e33] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e34]: 
+      - text: Home
+    - link [ref=e35] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e36]: 
+      - text: Resources
+    - link [ref=e37] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e38]: 
+      - text: Blog
+    - link [ref=e39] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e40]: 
+      - text: Support
+    - link [ref=e41] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e42]:
+    - region "v1.6.0 Preview — Progress Tracks, Discovery Checks & Keyed Scenes" [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - paragraph [ref=e46]:
+            - generic [ref=e47]: Blog
+            - text: Release Notes
+          - heading "v1.6.0 Preview — Progress Tracks, Discovery Checks & Keyed Scenes" [level=1] [ref=e48]
+          - paragraph [ref=e49]: "Coming soon: three new Mythic GME 2e systems — track thread progress with visual bars, run oracle-style Discovery Checks, and set up triggered Keyed Scenes — all in a new tabbed Game Panel."
+          - list "Post details" [ref=e50]:
+            - listitem [ref=e51]: Mar 25, 2026
+            - listitem [ref=e52]: 5 min read
+            - listitem [ref=e53]: Version notes, app changes, and what players can expect next.
+        - complementary [ref=e54]:
+          - strong [ref=e55]: Dispatch
+          - paragraph [ref=e56]: Release notes, build notes, and behind-the-scenes writing from the Mythic table.
+    - generic [ref=e58]:
+      - article [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]:
+            - link "Back to blog" [ref=e62] [cursor=pointer]:
+              - /url: /v2/blog/
+              - generic [ref=e63]: 
+              - text: Back to blog
+          - generic [ref=e64]:
+            - paragraph [ref=e65]: Coming soon
+            - paragraph [ref=e66]: "This is the biggest feature release since the app launched. Three systems from the Mythic GME 2e rules that players have been requesting — Progress Tracks, Discovery Checks, and Keyed Scenes — are all landing together. The Game Panel is getting a full redesign to hold them: a tabbed layout with Meaning Tables, Event Focus, Tracks, and Discovery each in their own tab."
+            - paragraph [ref=e67]: Each one went through a few design iterations before I was happy with how they felt in play. Here’s what’s coming.
+            - heading "Highlights" [level=2] [ref=e68]
+            - list [ref=e69]:
+              - listitem [ref=e70]:
+                - strong [ref=e71]: Progress Tracks
+                - text: ": Visual progress bars for tracking thread advancement. Set custom point ranges, mark Flashpoints in the Adventure Log, and watch the bar fill as the story moves forward. Controls use a two-tap “armed action” pattern — tap once to arm, tap again to confirm — so you don’t accidentally bump your progress."
+              - listitem [ref=e72]:
+                - strong [ref=e73]: Discovery Checks
+                - text: ": A dedicated panel for the oracle-style Discovery Check mechanic. Roll, get an automated result summary, and (if you have Progress Tracks active) the result auto-applies to the right track. Localized across all 8 languages."
+              - listitem [ref=e74]:
+                - strong [ref=e75]: Keyed Scenes
+                - text: ": Set up scene triggers that fire when conditions are met. Choose count-based targets with a visual stepper, pick one-shot (deactivates after trigger) or recurring (resets and stays active), and let the app auto-trigger when the count reaches the target. Triggered scenes get a badge and a dedicated log entry."
+              - listitem [ref=e76]:
+                - strong [ref=e77]: Tabbed Game Panel
+                - text: ": The old single-panel view is gone. Meaning Tables, Event Focus, Tracks, and Discovery now live in their own tabs — less scrolling, faster switching."
+            - heading "Added" [level=2] [ref=e78]
+            - list [ref=e79]:
+              - listitem [ref=e80]:
+                - strong [ref=e81]: Progress Tracks
+                - text: ": Thread progress tracking with visual progress bars, custom point ranges, and Flashpoint log entry support."
+              - listitem [ref=e82]:
+                - strong [ref=e83]: Discovery Checks
+                - text: ": Dedicated Discovery Check panel with oracle-style outcomes, automated result summaries, and localized strings."
+              - listitem [ref=e84]:
+                - strong [ref=e85]: Keyed Scenes
+                - text: ": Triggered scene badges, inline auto-increment toggles, count-based targets (one-shot and recurring), and dedicated game log builders."
+              - listitem [ref=e86]:
+                - strong [ref=e87]: Game Panel
+                - text: ": Refactored into a tabbed layout housing Meaning Tables, Event Focus, Tracks, and Discovery."
+              - listitem [ref=e88]:
+                - strong [ref=e89]: Architecture
+                - text: ": Lifecycle guards on all major notifiers (Journal, Table, Formula, Event Focus) to harden iCloud operations against app backgrounding."
+            - heading "Changed" [level=2] [ref=e90]
+            - list [ref=e91]:
+              - listitem [ref=e92]: Updated Flutter SDK to 3.41.5 across all build tooling.
+              - listitem [ref=e93]: Progress Track controls use +1/+2/+3 increments with a new FP (Focus Point) modifier button.
+              - listitem [ref=e94]: Regenerated iOS Xcode project with updated CocoaPods references for build consistency.
+      - complementary "Post navigation" [ref=e95]:
+        - generic [ref=e96]:
+          - heading "Filed under" [level=2] [ref=e97]
+          - paragraph [ref=e98]:
+            - link "Release Notes" [ref=e99] [cursor=pointer]:
+              - /url: /v2/blog/category/release-notes/
+        - generic [ref=e100]:
+          - heading "Share" [level=2] [ref=e101]
+          - generic [ref=e102]:
+            - link "Share by email" [ref=e103] [cursor=pointer]:
+              - /url: mailto:?subject=v1.6.0%20Preview%20%E2%80%94%20Progress%20Tracks%2C%20Discovery%20Checks%20%26%20Keyed%20Scenes&body=v1.6.0%20Preview%20%E2%80%94%20Progress%20Tracks%2C%20Discovery%20Checks%20%26%20Keyed%20Scenes%20https%3A%2F%2Fjasonholtdigital.com%2Fv2%2Fblog%2Frn-1-6-0-2026-03-25%2F
+              - generic [ref=e104]: 
+            - link "Share on Reddit" [ref=e105] [cursor=pointer]:
+              - /url: https://www.reddit.com/submit?url=https%3A%2F%2Fjasonholtdigital.com%2Fv2%2Fblog%2Frn-1-6-0-2026-03-25%2F&title=v1.6.0%20Preview%20%E2%80%94%20Progress%20Tracks%2C%20Discovery%20Checks%20%26%20Keyed%20Scenes
+              - generic [ref=e106]: 
+            - link "Share on Bluesky" [ref=e107] [cursor=pointer]:
+              - /url: https://bsky.app/intent/compose?text=v1.6.0%20Preview%20%E2%80%94%20Progress%20Tracks%2C%20Discovery%20Checks%20%26%20Keyed%20Scenes%20https%3A%2F%2Fjasonholtdigital.com%2Fv2%2Fblog%2Frn-1-6-0-2026-03-25%2F
+              - generic [ref=e108]: 
+  - contentinfo [ref=e109]:
+    - img
+    - generic [ref=e110]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e111]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e112]: honestly
+        - text: .
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e115] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e117]
+            - generic [ref=e118]:
+              - text: Jason Holt Digital
+              - generic [ref=e119]: Indie · Est. 2023
+          - paragraph [ref=e120]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e121]:
+          - heading "Product" [level=4] [ref=e122]
+          - link "Apps" [ref=e123] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e124] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e125] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e126] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e127] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e128]:
+          - heading "Get the App" [level=4] [ref=e129]
+          - link "iOS" [ref=e130] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e131]: 
+            - text: iOS
+          - link "Android" [ref=e132] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e133]: 
+            - text: Android
+          - link "Fire" [ref=e134] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e135]: 
+            - text: Fire
+          - link "Windows" [ref=e136] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e137]: 
+            - text: Windows
+          - link "Desktop" [ref=e138] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e139]: 
+            - text: Desktop
+        - generic [ref=e140]:
+          - heading "Company" [level=4] [ref=e141]
+          - link "About" [ref=e142] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e143] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e144] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e145] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e146] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e147]: 
+            - text: Discord
+      - generic [ref=e148]:
+        - generic [ref=e149]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e150]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e153]:
+    - button "Menu" [ref=e154]:
+      - img [ref=e156]
+      - generic: Menu
+    - button "Inspect" [ref=e160]:
+      - img [ref=e162]
+      - generic: Inspect
+    - button "Audit" [ref=e164]:
+      - img [ref=e166]
+      - generic: Audit
+    - button "Settings" [ref=e169]:
+      - img [ref=e171]
+      - generic: Settings

@@ -1,0 +1,310 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:    
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e27]: 
+      - text: Resources
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e29]: 
+      - text: Blog
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e31]: 
+      - text: Support
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e33]:
+    - region "Get help without digging through the whole site." [ref=e34]:
+      - img
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - generic [ref=e38]: "04"
+            - text: Support desk
+          - heading "Get help without digging through the whole site." [level=1] [ref=e39]
+          - paragraph [ref=e40]: "Start with the fastest route: community help for quick questions, email for private details, resources for guides, and the FAQ for the rules of the road."
+          - generic "Primary support actions" [ref=e41]:
+            - link "Email support" [ref=e42] [cursor=pointer]:
+              - /url: mailto:support@jasonholtdigital.com
+              - generic [ref=e43]: 
+              - text: Email support
+            - link "Contact options" [ref=e44] [cursor=pointer]:
+              - /url: "#contact-panel"
+              - generic [ref=e45]: 
+              - text: Contact options
+        - complementary "Support routing summary" [ref=e46]:
+          - paragraph [ref=e47]: Open desk
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - term [ref=e50]: Fastest reply
+              - definition [ref=e51]: Discord community
+            - generic [ref=e52]:
+              - term [ref=e53]: Private issue
+              - definition [ref=e54]: Email support
+            - generic [ref=e55]:
+              - term [ref=e56]: Self-serve
+              - definition [ref=e57]: Resources and FAQ
+            - generic [ref=e58]:
+              - term [ref=e59]: Best bug report
+              - definition [ref=e60]: Platform, version, steps, screenshots
+    - region "Pick the route that matches the kind of help you need." [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - paragraph [ref=e65]:
+              - generic [ref=e66]: "01"
+              - text: Quick paths
+            - heading "Pick the route that matches the kind of help you need." [level=2] [ref=e67]
+          - paragraph [ref=e68]: No maze, no support theater. These are the working doors.
+        - list "Quick support paths" [ref=e69]:
+          - listitem [ref=e70]:
+            - generic [ref=e71]: "01"
+            - generic [ref=e73]: 
+            - generic [ref=e74]:
+              - heading "Community help" [level=3] [ref=e75]
+              - paragraph [ref=e76]: Fastest for quick questions, player tips, feature requests, and shared troubleshooting.
+            - link "Join Discord" [ref=e77] [cursor=pointer]:
+              - /url: https://discord.gg/PEDHrhzcnk
+              - text: Join Discord
+              - generic [ref=e78]: 
+          - listitem [ref=e79]:
+            - generic [ref=e80]: "02"
+            - generic [ref=e82]: 
+            - generic [ref=e83]:
+              - heading "Private support" [level=3] [ref=e84]
+              - paragraph [ref=e85]: Best for purchase questions, screenshots, account details, or anything that should not be public.
+            - link "Email support" [ref=e86] [cursor=pointer]:
+              - /url: mailto:support@jasonholtdigital.com
+              - text: Email support
+              - generic [ref=e87]: 
+          - listitem [ref=e88]:
+            - generic [ref=e89]: "03"
+            - generic [ref=e91]: 
+            - generic [ref=e92]:
+              - heading "Self-serve guides" [level=3] [ref=e93]
+              - paragraph [ref=e94]: Browse setup notes, custom tables, formulas, journals, and practical app guides.
+            - link "Open resources" [ref=e95] [cursor=pointer]:
+              - /url: /v2/resources/
+              - text: Open resources
+              - generic [ref=e96]: 
+          - listitem [ref=e97]:
+            - generic [ref=e98]: "04"
+            - generic [ref=e100]: 
+            - generic [ref=e101]:
+              - heading "Known changes" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Check recent updates, known issues, and fixes before filing a bug report.
+            - link "Read release notes" [ref=e104] [cursor=pointer]:
+              - /url: /blog/category/release-notes/
+              - text: Read release notes
+              - generic [ref=e105]: 
+    - region "The practical answers, grouped by the questions people actually ask." [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - paragraph [ref=e109]:
+            - generic [ref=e110]: "02"
+            - text: FAQ
+          - heading "The practical answers, grouped by the questions people actually ask." [level=2] [ref=e111]
+          - paragraph [ref=e112]: Open the topic you need. The first section starts open so the page stays useful even before you touch anything.
+        - generic "Support FAQ sections" [ref=e113]:
+          - group [ref=e114]:
+            - generic "01 General & Platforms What the app is, who builds it, and where it ships." [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]:
+                - generic [ref=e117]: "01"
+                - generic [ref=e118]: General & Platforms
+              - generic [ref=e119]: What the app is, who builds it, and where it ships.
+              - generic [ref=e120]: 
+            - generic [ref=e121]:
+              - group [ref=e122]:
+                - generic "What is Mythic GME Mobile / Digital? +" [ref=e123] [cursor=pointer]
+              - group [ref=e124]:
+                - generic "Who makes it? +" [ref=e125] [cursor=pointer]
+              - group [ref=e126]:
+                - generic "Where can I get it? +" [ref=e127] [cursor=pointer]
+              - group [ref=e128]:
+                - generic "Is it available worldwide? +" [ref=e129] [cursor=pointer]
+              - group [ref=e130]:
+                - generic "If I purchased the app on one platform, do I need to purchase it on another? +" [ref=e131] [cursor=pointer]
+              - group [ref=e132]:
+                - generic "Do I need the Mythic GME 2e rulebook? +" [ref=e133] [cursor=pointer]
+          - group [ref=e134]:
+            - generic "02 Features & Data Core tools, accessibility, language support, and where your material lives." [ref=e135] [cursor=pointer]:
+              - generic [ref=e136]:
+                - generic [ref=e137]: "02"
+                - generic [ref=e138]: Features & Data
+              - generic [ref=e139]: Core tools, accessibility, language support, and where your material lives.
+              - generic [ref=e140]: 
+            - text: + + +
+          - group [ref=e141]:
+            - generic "03 Purchases, Pricing & Upgrades Plain-English purchase rules, unlocks, and cross-platform expectations." [ref=e142] [cursor=pointer]:
+              - generic [ref=e143]:
+                - generic [ref=e144]: "03"
+                - generic [ref=e145]: Purchases, Pricing & Upgrades
+              - generic [ref=e146]: Plain-English purchase rules, unlocks, and cross-platform expectations.
+              - generic [ref=e147]: 
+            - text: + + + + + + + +
+          - group [ref=e148]:
+            - generic "04 Getting Help Bug reports, diagnostics, and what to include so the reply is useful." [ref=e149] [cursor=pointer]:
+              - generic [ref=e150]:
+                - generic [ref=e151]: "04"
+                - generic [ref=e152]: Getting Help
+              - generic [ref=e153]: Bug reports, diagnostics, and what to include so the reply is useful.
+              - generic [ref=e154]: 
+            - text: +
+    - region "Send the useful details once, and I can spend the reply on the fix." [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - paragraph [ref=e158]:
+            - generic [ref=e159]: "03"
+            - text: Contact
+          - heading "Send the useful details once, and I can spend the reply on the fix." [level=2] [ref=e160]
+          - paragraph [ref=e161]: This contact page keeps the support path static and safe. Use email or Discord for real messages; the checklist below tells you what to include.
+        - generic [ref=e162]:
+          - generic "Contact routes" [ref=e163]:
+            - link "Support Bugs, purchases, app questions, and private screenshots. support@jasonholtdigital.com" [ref=e164] [cursor=pointer]:
+              - /url: mailto:support@jasonholtdigital.com
+              - generic [ref=e165]: 
+              - generic [ref=e166]:
+                - strong [ref=e167]: Support
+                - generic [ref=e168]: Bugs, purchases, app questions, and private screenshots.
+                - emphasis [ref=e169]: support@jasonholtdigital.com
+            - link "General Business questions, licensing, writing, and studio contact. jason@jasonholtdigital.com" [ref=e170] [cursor=pointer]:
+              - /url: mailto:jason@jasonholtdigital.com
+              - generic [ref=e171]: 
+              - generic [ref=e172]:
+                - strong [ref=e173]: General
+                - generic [ref=e174]: Business questions, licensing, writing, and studio contact.
+                - emphasis [ref=e175]: jason@jasonholtdigital.com
+            - link "Discord Community conversation, quick checks, and feature requests. Open community" [ref=e176] [cursor=pointer]:
+              - /url: https://discord.gg/PEDHrhzcnk
+              - generic [ref=e177]: 
+              - generic [ref=e178]:
+                - strong [ref=e179]: Discord
+                - generic [ref=e180]: Community conversation, quick checks, and feature requests.
+                - emphasis [ref=e181]: Open community
+            - link "Consulting Limited freelance and development availability each quarter. Hire me on Upwork" [ref=e182] [cursor=pointer]:
+              - /url: https://www.upwork.com/fl/~01e352937913645264?mp_source=share
+              - generic [ref=e183]: 
+              - generic [ref=e184]:
+                - strong [ref=e185]: Consulting
+                - generic [ref=e186]: Limited freelance and development availability each quarter.
+                - emphasis [ref=e187]: Hire me on Upwork
+          - complementary "Before you send a bug report" [ref=e188]:
+            - heading "Before you send a bug report" [level=3] [ref=e189]
+            - list [ref=e190]:
+              - listitem [ref=e191]: "Platform and store: iOS, Android, Fire, Windows, macOS, Linux, itch.io, or Microsoft Store."
+              - listitem [ref=e192]: App version and device or operating system version.
+              - listitem [ref=e193]: What you were doing, what happened, and what you expected instead.
+              - listitem [ref=e194]: Screenshots, export files, or exact error text when available.
+  - contentinfo [ref=e195]:
+    - img
+    - generic [ref=e196]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e197]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e198]: honestly
+        - text: .
+      - generic [ref=e199]:
+        - generic [ref=e200]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e201] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e203]
+            - generic [ref=e204]:
+              - text: Jason Holt Digital
+              - generic [ref=e205]: Indie · Est. 2023
+          - paragraph [ref=e206]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e207]:
+          - heading "Product" [level=4] [ref=e208]
+          - link "Apps" [ref=e209] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e210] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e211] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e212] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e213] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e214]:
+          - heading "Get the App" [level=4] [ref=e215]
+          - link "iOS" [ref=e216] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e217]: 
+            - text: iOS
+          - link "Android" [ref=e218] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e219]: 
+            - text: Android
+          - link "Fire" [ref=e220] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e221]: 
+            - text: Fire
+          - link "Windows" [ref=e222] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e223]: 
+            - text: Windows
+          - link "Desktop" [ref=e224] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e225]: 
+            - text: Desktop
+        - generic [ref=e226]:
+          - heading "Company" [level=4] [ref=e227]
+          - link "About" [ref=e228] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e229] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e230] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e231] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e232] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e233]: 
+            - text: Discord
+      - generic [ref=e234]:
+        - generic [ref=e235]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e236]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e239]:
+    - button "Menu" [ref=e240]:
+      - img [ref=e242]
+      - generic: Menu
+    - button "Inspect" [ref=e246]:
+      - img [ref=e248]
+      - generic: Inspect
+    - button "Audit" [ref=e250]:
+      - img [ref=e252]
+      - generic: Audit
+    - button "Settings" [ref=e255]:
+      - img [ref=e257]
+      - generic: Settings

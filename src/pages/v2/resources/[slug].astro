@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
 import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
 import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
 import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { rewriteV2InternalLinks } from "../../../lib/v2ContentLinks";
 import { formatDate } from "../../../lib/format-date";
 import { v2ResourceCategoryMeta } from "../../../lib/v2ContentMeta";
 
@@ -34,7 +35,7 @@ if (!entry) {
   throw new Error(`Resource not found for slug: ${slug}`);
 }
 
-const { Content } = await render(entry);
+const articleHtml = rewriteV2InternalLinks(entry.rendered?.html ?? "");
 const resource = entry.data;
 const category = v2ResourceCategoryMeta[resource.category];
 const canonicalPath = `/v2/resources/${entry.id}/`;
@@ -133,7 +134,7 @@ const backHref = `/v2/resources/${category.anchor}`;
             )
           }
           <div class="v2-prose">
-            <Content />
+            <Fragment set:html={articleHtml} />
           </div>
           {
             downloads.length > 0 && (

@@ -1,0 +1,256 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - navigation "Primary" [ref=e19]:
+        - link "Home" [ref=e20] [cursor=pointer]:
+          - /url: /v2/
+          - generic [ref=e21]: 
+          - text: Home
+        - link "Resources" [ref=e22] [cursor=pointer]:
+          - /url: /v2/resources/
+          - generic [ref=e23]: 
+          - text: Resources
+        - link "Blog" [ref=e24] [cursor=pointer]:
+          - /url: /v2/blog/
+          - generic [ref=e25]: 
+          - text: Blog
+        - button "Get the App" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: Get the App
+          - generic [ref=e29]: 
+      - text: 
+  - complementary [ref=e30]:
+    - button [ref=e31] [cursor=pointer]:
+      - generic [ref=e32]: 
+    - link [ref=e33] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e34]: 
+      - text: Home
+    - link [ref=e35] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e36]: 
+      - text: Resources
+    - link [ref=e37] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e38]: 
+      - text: Blog
+    - link [ref=e39] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e40]: 
+      - text: Support
+    - link [ref=e41] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e42]:
+    - region "Hi, I'm Jason." [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - paragraph [ref=e46]:
+            - generic [ref=e47]: "01"
+            - text: Teacher turned developer, building tools for the Mythic community
+          - heading "Hi, I'm Jason." [level=1] [ref=e48]:
+            - text: Hi, I'm
+            - emphasis [ref=e49]: Jason
+            - text: .
+          - paragraph [ref=e50]: I build the official Mythic GME 2e apps with Word Mill Games. I got here through nine years of teaching, a lot of code, and a community that showed me what to build.
+          - list "About highlights" [ref=e51]:
+            - listitem [ref=e52]: Licensed with Word Mill Games
+            - listitem [ref=e53]: Indie developer
+            - listitem [ref=e54]: Computational linguistics student
+        - figure "Hi, I'm Jason Founder, builder, and support inbox reader." [ref=e55]:
+          - img "Jason Holt" [ref=e56]
+          - generic [ref=e57]:
+            - strong [ref=e58]: Hi, I'm Jason
+            - text: Founder, builder, and support inbox reader.
+    - region "I build tools for play that stays in motion." [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - paragraph [ref=e62]:
+            - generic [ref=e63]: "02"
+            - text: Profile
+          - heading "I build tools for play that stays in motion." [level=2] [ref=e64]
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: "I wrote my first program at twelve: a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally building a real app after dreaming about it since I ran Hour of Code with my students in 2013."
+          - paragraph [ref=e67]:
+            - text: "I maintain two products under license from Word Mill Games:"
+            - strong [ref=e68]: Mythic GME Mobile
+            - text: for iOS and Android, and
+            - strong [ref=e69]: Mythic GME Digital
+            - text: for Windows, macOS, and Linux.
+          - paragraph [ref=e70]: "I'm also pursuing an M.Sc. in Computational Linguistics: part curiosity about how language and software can work together for solo play, and part the same pattern that has driven every fresh start in my career. Someone had a need, and I wanted to help meet it."
+    - region "Licensed Mythic apps, shaped with the community." [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]:
+            - generic [ref=e75]: "03"
+            - text: Official
+          - heading "Licensed Mythic apps, shaped with the community." [level=2] [ref=e76]
+          - paragraph [ref=e77]: Less flipping through tables, more time in the story.
+        - list [ref=e78]:
+          - listitem [ref=e79]:
+            - generic [ref=e80]: 
+            - heading "One‑tap oracles" [level=3] [ref=e81]
+            - paragraph [ref=e82]: Fate Chart & Fate Check with adjustable Chaos Factor and Random Events.
+          - listitem [ref=e83]:
+            - generic [ref=e84]: 
+            - heading "Stay organised" [level=3] [ref=e85]
+            - paragraph [ref=e86]: Characters, Threads, and Features lists and unlimited scene creation so nothing falls through the cracks.
+          - listitem [ref=e87]:
+            - generic [ref=e88]: 
+            - heading "Roll your dice" [level=3] [ref=e89]
+            - paragraph [ref=e90]: A customizable dice roller supporting a huge number of RPG systems and mechanics
+          - listitem [ref=e91]:
+            - generic [ref=e92]: 
+            - heading "Bring your tables" [level=3] [ref=e93]
+            - paragraph [ref=e94]: Custom Table builder with CSV/JSON import/export and 3,000+ icons.
+          - listitem [ref=e95]:
+            - generic [ref=e96]: 
+            - heading "Portable logs" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Adventure journals as JSON with Markdown export for notes and reports.
+          - listitem [ref=e99]:
+            - generic [ref=e100]: 
+            - heading "Accessibility first" [level=3] [ref=e101]
+            - paragraph [ref=e102]: Screen readers, adjustable typography, color‑blind and left‑hand modes.
+    - region "Small, frequent updates. Real support conversations." [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - paragraph [ref=e106]:
+            - generic [ref=e107]: "04"
+            - text: Approach
+          - heading "Small, frequent updates. Real support conversations." [level=2] [ref=e108]
+          - paragraph [ref=e109]: The work improves because players keep telling me where the table gets stuck.
+        - list [ref=e110]:
+          - listitem [ref=e111]:
+            - generic [ref=e112]: 
+            - heading "Educator roots" [level=3] [ref=e113]
+            - paragraph [ref=e114]: Nine years of teaching computer science and digital design. I coached teams, explained complex things simply, and watched students build things I never would have thought of.
+          - listitem [ref=e115]:
+            - generic [ref=e116]: 
+            - heading "Formed by service" [level=3] [ref=e117]
+            - paragraph [ref=e118]: A two‑year practicum in leadership and service. Putting others first became a habit. It stuck.
+          - listitem [ref=e119]:
+            - generic [ref=e120]: 
+            - heading "Community‑first" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Hundreds of Mythic players help me figure out what to fix, what to build, and what matters most. They shape the apps as much as I do.
+          - listitem [ref=e123]:
+            - generic [ref=e124]: 
+            - heading "Mobile × NLP next" [level=3] [ref=e125]
+            - paragraph [ref=e126]: Studying computational linguistics at Stuttgart. I'm curious about where language processing and solo RPG tools can meet — and what that might look like in the app.
+    - region "I read every message." [ref=e127]:
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - paragraph [ref=e130]:
+            - generic [ref=e131]: "05"
+            - text: Connect
+          - heading "I read every message." [level=2] [ref=e132]
+          - paragraph [ref=e133]: "Bug reports, feature ideas, or a story about your last session: send it over."
+        - generic [ref=e134]:
+          - link "Contact" [ref=e135] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+            - generic [ref=e136]: 
+            - text: Contact
+          - link "Discord" [ref=e137] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e138]: 
+            - text: Discord
+  - contentinfo [ref=e139]:
+    - img
+    - generic [ref=e140]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e141]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e142]: honestly
+        - text: .
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e145] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e147]
+            - generic [ref=e148]:
+              - text: Jason Holt Digital
+              - generic [ref=e149]: Indie · Est. 2023
+          - paragraph [ref=e150]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e151]:
+          - heading "Product" [level=4] [ref=e152]
+          - link "Apps" [ref=e153] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e154] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e155] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e156] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e157] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e158]:
+          - heading "Get the App" [level=4] [ref=e159]
+          - link "iOS" [ref=e160] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e161]: 
+            - text: iOS
+          - link "Android" [ref=e162] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e163]: 
+            - text: Android
+          - link "Fire" [ref=e164] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e165]: 
+            - text: Fire
+          - link "Windows" [ref=e166] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e167]: 
+            - text: Windows
+          - link "Desktop" [ref=e168] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e169]: 
+            - text: Desktop
+        - generic [ref=e170]:
+          - heading "Company" [level=4] [ref=e171]
+          - link "About" [ref=e172] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e173] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e174] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e175] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e176] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e177]: 
+            - text: Discord
+      - generic [ref=e178]:
+        - generic [ref=e179]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e180]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e183]:
+    - button "Menu" [ref=e184]:
+      - img [ref=e186]
+      - generic: Menu
+    - button "Inspect" [ref=e190]:
+      - img [ref=e192]
+      - generic: Inspect
+    - button "Audit" [ref=e194]:
+      - generic [ref=e195]:
+        - img [ref=e196]
+        - img [ref=e199]
+      - generic: Audit
+    - button "Settings" [ref=e202]:
+      - img [ref=e204]
+      - generic: Settings

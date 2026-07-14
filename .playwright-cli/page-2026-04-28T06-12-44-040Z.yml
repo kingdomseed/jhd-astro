@@ -1,0 +1,347 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog" [ref=e8] [cursor=pointer]:
+        - /url: /v2/blog/category/release-notes/
+        - text: Changelog
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:    
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e27]: 
+      - text: Resources
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e29]: 
+      - text: Blog
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e31]: 
+      - text: Support
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/#apps
+      - text: Get the App →
+  - main [ref=e33]:
+    - region "Release Notes" [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]:
+            - generic [ref=e38]: Blog
+            - text: Topic shelf
+          - heading "Release Notes" [level=1] [ref=e39]
+          - paragraph [ref=e40]: Version notes, app changes, and what players can expect next.
+          - list "Category details" [ref=e41]:
+            - listitem [ref=e42]: 23 posts
+            - listitem [ref=e43]: RSS available
+        - complementary [ref=e44]:
+          - strong [ref=e45]: Browse by topic
+          - paragraph [ref=e46]: Release notes, guides, process notes, community updates, and announcements stay on their own shelves.
+    - region "Posts on this shelf." [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - generic [ref=e51]: "01"
+            - text: Release Notes
+          - heading "Posts on this shelf." [level=2] [ref=e52]
+          - paragraph [ref=e53]:
+            - link "Back to all posts" [ref=e54] [cursor=pointer]:
+              - /url: /v2/blog/
+        - list [ref=e55]:
+          - listitem [ref=e56]:
+            - 'link "v1.6.0 Preview — Progress Tracks, Discovery Checks & Keyed Scenes Coming soon: three new Mythic GME 2e systems — track thread progress with visual bars, run oracle-style Discovery Checks, and set up triggered Keyed Scenes — all in a new tabbed Game Panel. Mar 25, 2026" [ref=e57] [cursor=pointer]':
+              - /url: /v2/blog/rn-1-6-0-2026-03-25/
+              - generic [ref=e58]:
+                - strong [ref=e59]: v1.6.0 Preview — Progress Tracks, Discovery Checks & Keyed Scenes
+                - text: "Coming soon: three new Mythic GME 2e systems — track thread progress with visual bars, run oracle-style Discovery Checks, and set up triggered Keyed Scenes — all in a new tabbed Game Panel."
+              - generic [ref=e60]: Mar 25, 2026
+          - listitem [ref=e61]:
+            - link "v1.5.13 — Performance, Dice Parser v8 & iCloud Hardening iOS first-run setup drops from 166s to 43s, macOS startup hang fixed, new async dice engine, and a round of iCloud reliability work. Mar 23, 2026" [ref=e62] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-13-2026-03-23/
+              - generic [ref=e63]:
+                - strong [ref=e64]: v1.5.13 — Performance, Dice Parser v8 & iCloud Hardening
+                - text: iOS first-run setup drops from 166s to 43s, macOS startup hang fixed, new async dice engine, and a round of iCloud reliability work.
+              - generic [ref=e65]: Mar 23, 2026
+          - listitem [ref=e66]:
+            - link "v1.5.10 — Game Services & Android Fixes Opt-in achievements via Game Center and Google Play Games, plus fixes for Android link handling and import conflict previews. Feb 16, 2026" [ref=e67] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-10-2026-02-16/
+              - generic [ref=e68]:
+                - strong [ref=e69]: v1.5.10 — Game Services & Android Fixes
+                - text: Opt-in achievements via Game Center and Google Play Games, plus fixes for Android link handling and import conflict previews.
+              - generic [ref=e70]: Feb 16, 2026
+          - listitem [ref=e71]:
+            - link "v1.5.9 — Narrative Log Entries, Crafter Table Packs & Achievements Write free-form notes in your adventure log, roll on Adventure/Location/Creature/Event Crafter tables with cascade linking, unlock achievements, and restore journal backups. Feb 15, 2026" [ref=e72] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-9-2026-02-15/
+              - generic [ref=e73]:
+                - strong [ref=e74]: v1.5.9 — Narrative Log Entries, Crafter Table Packs & Achievements
+                - text: Write free-form notes in your adventure log, roll on Adventure/Location/Creature/Event Crafter tables with cascade linking, unlock achievements, and restore journal backups.
+              - generic [ref=e75]: Feb 15, 2026
+          - listitem [ref=e76]:
+            - link "v1.5.8 — 60+ New Premium Tables, Simplified Fate Chart & Custom Layout Massive Mythic Magazine content, simplified Fate Chart, built-in docs, Prepared Adventure mode, Custom Layouts, and Undo. Jan 7, 2026" [ref=e77] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-8-2026-01-07/
+              - generic [ref=e78]:
+                - strong [ref=e79]: v1.5.8 — 60+ New Premium Tables, Simplified Fate Chart & Custom Layout
+                - text: Massive Mythic Magazine content, simplified Fate Chart, built-in docs, Prepared Adventure mode, Custom Layouts, and Undo.
+              - generic [ref=e80]: Jan 7, 2026
+          - listitem [ref=e81]:
+            - link "v1.5.5 — Speed & Copy Faster Fate Chart, copy any log entry, UI polish, and stability Sep 12, 2025" [ref=e82] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-5-2025-09-12-speed-copy/
+              - generic [ref=e83]:
+                - strong [ref=e84]: v1.5.5 — Speed & Copy
+                - text: Faster Fate Chart, copy any log entry, UI polish, and stability
+              - generic [ref=e85]: Sep 12, 2025
+          - listitem [ref=e86]:
+            - link "v1.5.4 — Pinned Scenes & Localization Localization improvements, pinned scenes, backup protection, and performance/stability Sep 1, 2025" [ref=e87] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-4-2025-09-01-localization-pinned-scenes/
+              - generic [ref=e88]:
+                - strong [ref=e89]: v1.5.4 — Pinned Scenes & Localization
+                - text: Localization improvements, pinned scenes, backup protection, and performance/stability
+              - generic [ref=e90]: Sep 1, 2025
+          - listitem [ref=e91]:
+            - link "v1.5.2–v1.5.3 — Markdown & Descriptions Entry descriptions in results, Markdown in logs, smarter custom tables, localization updates, storage recovery Aug 27, 2025" [ref=e92] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-3-2025-08-27-markdown-descriptions/
+              - generic [ref=e93]:
+                - strong [ref=e94]: v1.5.2–v1.5.3 — Markdown & Descriptions
+                - text: Entry descriptions in results, Markdown in logs, smarter custom tables, localization updates, storage recovery
+              - generic [ref=e95]: Aug 27, 2025
+          - listitem [ref=e96]:
+            - link "v1.5 — Dice Roller 2.0 & Custom Tables Random Events rework, Dice Roller 2.0, Custom Tables builder, a11y upgrades, stability, localization Aug 11, 2025" [ref=e97] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-5-0-2025-08-11-dice-roller/
+              - generic [ref=e98]:
+                - strong [ref=e99]: v1.5 — Dice Roller 2.0 & Custom Tables
+                - text: Random Events rework, Dice Roller 2.0, Custom Tables builder, a11y upgrades, stability, localization
+              - generic [ref=e100]: Aug 11, 2025
+          - listitem [ref=e101]:
+            - link "v1.4.6 — Navigation & Localization Navigation and localization fixes, launcher URL scheme, stability, and performance Mar 24, 2025" [ref=e102] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-4-6-2025-03-24-nav-localization/
+              - generic [ref=e103]:
+                - strong [ref=e104]: v1.4.6 — Navigation & Localization
+                - text: Navigation and localization fixes, launcher URL scheme, stability, and performance
+              - generic [ref=e105]: Mar 24, 2025
+          - listitem [ref=e106]:
+            - link "v1.4.5 — Portuguese & iCloud Sync Full Portuguese, iCloud sync rebuilt, content from MM49, accessibility and stability across platforms Mar 3, 2025" [ref=e107] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-4-5-2025-03-03-portuguese-icloud/
+              - generic [ref=e108]:
+                - strong [ref=e109]: v1.4.5 — Portuguese & iCloud Sync
+                - text: Full Portuguese, iCloud sync rebuilt, content from MM49, accessibility and stability across platforms
+              - generic [ref=e110]: Mar 3, 2025
+          - listitem [ref=e111]:
+            - link "v1.4 — Premium Unlock & QoL Premium unlock IAP, Fate/Meaning table QoL, modern Dice Roller UI, and streamlined settings Dec 19, 2024" [ref=e112] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-4-0-2024-12-19-premium-qol/
+              - generic [ref=e113]:
+                - strong [ref=e114]: v1.4 — Premium Unlock & QoL
+                - text: Premium unlock IAP, Fate/Meaning table QoL, modern Dice Roller UI, and streamlined settings
+              - generic [ref=e115]: Dec 19, 2024
+          - listitem [ref=e116]:
+            - link "v1.2.5 — App Relaunch Dice notation validation, journal safety, support options, and clarity pass Nov 12, 2024" [ref=e117] [cursor=pointer]:
+              - /url: /v2/blog/rn-1-2-5-2024-11-12-dice-validation/
+              - generic [ref=e118]:
+                - strong [ref=e119]: v1.2.5 — App Relaunch
+                - text: Dice notation validation, journal safety, support options, and clarity pass
+              - generic [ref=e120]: Nov 12, 2024
+          - listitem [ref=e121]:
+            - 'link "Beta Release Notes — Build 40 Cleanup update: bigger fonts options, semantics polish, and bug fixes Nov 10, 2024" [ref=e122] [cursor=pointer]':
+              - /url: /v2/blog/beta-build-40-release-notes-2024-11-10/
+              - generic [ref=e123]:
+                - strong [ref=e124]: Beta Release Notes — Build 40
+                - text: "Cleanup update: bigger fonts options, semantics polish, and bug fixes"
+              - generic [ref=e125]: Nov 10, 2024
+          - listitem [ref=e126]:
+            - link "Beta Release Notes — Build 39 Core gameplay logging fixes, refined Fate UI, and accessible controls Nov 9, 2024" [ref=e127] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-39-release-notes-2024-11-09/
+              - generic [ref=e128]:
+                - strong [ref=e129]: Beta Release Notes — Build 39
+                - text: Core gameplay logging fixes, refined Fate UI, and accessible controls
+              - generic [ref=e130]: Nov 9, 2024
+          - listitem [ref=e131]:
+            - link "Beta Release Notes — Build 38 Navigation refresh, faster scenes, better text scaling, and stability Nov 8, 2024" [ref=e132] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-38-release-notes-2024-11-08/
+              - generic [ref=e133]:
+                - strong [ref=e134]: Beta Release Notes — Build 38
+                - text: Navigation refresh, faster scenes, better text scaling, and stability
+              - generic [ref=e135]: Nov 8, 2024
+          - listitem [ref=e136]:
+            - link "Beta Release Notes — Build 36 Accessibility and readability upgrades, more reliable saves, and UI polish Nov 7, 2024" [ref=e137] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-36-release-notes-2024-11-07/
+              - generic [ref=e138]:
+                - strong [ref=e139]: Beta Release Notes — Build 36
+                - text: Accessibility and readability upgrades, more reliable saves, and UI polish
+              - generic [ref=e140]: Nov 7, 2024
+          - listitem [ref=e141]:
+            - link "Beta Release Notes — Build 34 Visibility, privacy, and stability polish across platforms Nov 5, 2024" [ref=e142] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-34-release-notes-2024-11-05/
+              - generic [ref=e143]:
+                - strong [ref=e144]: Beta Release Notes — Build 34
+                - text: Visibility, privacy, and stability polish across platforms
+              - generic [ref=e145]: Nov 5, 2024
+          - listitem [ref=e146]:
+            - link "Release Candidate 1 — Release Notes Accessibility overhaul, new dice roller core, safer storage, and platform hardening Nov 4, 2024" [ref=e147] [cursor=pointer]:
+              - /url: /v2/blog/rc-1-2024-11-04-accessibility-dice/
+              - generic [ref=e148]:
+                - strong [ref=e149]: Release Candidate 1 — Release Notes
+                - text: Accessibility overhaul, new dice roller core, safer storage, and platform hardening
+              - generic [ref=e150]: Nov 4, 2024
+          - listitem [ref=e151]:
+            - 'link "Beta Release Notes — Build 22 Final beta: chaos factor unification, dice roller upgrades, journal manager refinements Nov 1, 2024" [ref=e152] [cursor=pointer]':
+              - /url: /v2/blog/beta-build-22-release-notes-2024-11-01/
+              - generic [ref=e153]:
+                - strong [ref=e154]: Beta Release Notes — Build 22
+                - text: "Final beta: chaos factor unification, dice roller upgrades, journal manager refinements"
+              - generic [ref=e155]: Nov 1, 2024
+          - listitem [ref=e156]:
+            - link "Beta Release Notes — Build 18 Consolidated Create/Load, Fate fixes, smoother lists and scenes Oct 24, 2024" [ref=e157] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-18-release-notes-2024-10-24/
+              - generic [ref=e158]:
+                - strong [ref=e159]: Beta Release Notes — Build 18
+                - text: Consolidated Create/Load, Fate fixes, smoother lists and scenes
+              - generic [ref=e160]: Oct 24, 2024
+          - listitem [ref=e161]:
+            - link "Beta Release Notes — Build 8 Fate views redesigned, lists/journal upgrades, and a new Create/Load Oct 15, 2024" [ref=e162] [cursor=pointer]:
+              - /url: /v2/blog/beta-build-08-release-notes-2024-10-15/
+              - generic [ref=e163]:
+                - strong [ref=e164]: Beta Release Notes — Build 8
+                - text: Fate views redesigned, lists/journal upgrades, and a new Create/Load
+              - generic [ref=e165]: Oct 15, 2024
+          - listitem [ref=e166]:
+            - 'link "Beta Release Notes — Build 7 Foundations: stability, theming, and core UX fixes Oct 5, 2024" [ref=e167] [cursor=pointer]':
+              - /url: /v2/blog/beta-build-07-release-notes-2024-10-05/
+              - generic [ref=e168]:
+                - strong [ref=e169]: Beta Release Notes — Build 7
+                - text: "Foundations: stability, theming, and core UX fixes"
+              - generic [ref=e170]: Oct 5, 2024
+    - region "Other shelves." [ref=e171]:
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - paragraph [ref=e174]:
+            - generic [ref=e175]: "02"
+            - text: Browse
+          - heading "Other shelves." [level=2] [ref=e176]
+        - list [ref=e177]:
+          - listitem [ref=e178]:
+            - link "Behind the Scenes Design process, tradeoffs, and the work behind the table." [ref=e179] [cursor=pointer]:
+              - /url: /v2/blog/category/behind-the-scenes/
+              - generic [ref=e180]: 
+              - heading "Behind the Scenes" [level=3] [ref=e181]
+              - paragraph [ref=e182]: Design process, tradeoffs, and the work behind the table.
+          - listitem [ref=e183]:
+            - link "Guides Practical walkthroughs for Mythic workflows and app systems." [ref=e184] [cursor=pointer]:
+              - /url: /v2/blog/category/guides/
+              - generic [ref=e185]: 
+              - heading "Guides" [level=3] [ref=e186]
+              - paragraph [ref=e187]: Practical walkthroughs for Mythic workflows and app systems.
+          - listitem [ref=e188]:
+            - link "Community Player feedback, roadmap signals, and shared table stories." [ref=e189] [cursor=pointer]:
+              - /url: /v2/blog/category/community/
+              - generic [ref=e190]: 
+              - heading "Community" [level=3] [ref=e191]
+              - paragraph [ref=e192]: Player feedback, roadmap signals, and shared table stories.
+          - listitem [ref=e193]:
+            - link "Announcement Important product and publishing updates." [ref=e194] [cursor=pointer]:
+              - /url: /v2/blog/category/announcement/
+              - generic [ref=e195]: 
+              - heading "Announcement" [level=3] [ref=e196]
+              - paragraph [ref=e197]: Important product and publishing updates.
+  - contentinfo [ref=e198]:
+    - img
+    - generic [ref=e199]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e200]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e201]: honestly
+        - text: .
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e204] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e206]
+            - generic [ref=e207]:
+              - text: Jason Holt Digital
+              - generic [ref=e208]: Indie · Est. 2023
+          - paragraph [ref=e209]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e210]:
+          - heading "Product" [level=4] [ref=e211]
+          - link "Apps" [ref=e212] [cursor=pointer]:
+            - /url: /v2/#apps
+          - link "Resources" [ref=e213] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e214] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e215] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e216] [cursor=pointer]:
+            - /url: /v2/blog/category/release-notes/
+        - generic [ref=e217]:
+          - heading "Get the App" [level=4] [ref=e218]
+          - link "iOS" [ref=e219] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e220]: 
+            - text: iOS
+          - link "Android" [ref=e221] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e222]: 
+            - text: Android
+          - link "Fire" [ref=e223] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e224]: 
+            - text: Fire
+          - link "Windows" [ref=e225] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e226]: 
+            - text: Windows
+          - link "Desktop" [ref=e227] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e228]: 
+            - text: Desktop
+        - generic [ref=e229]:
+          - heading "Company" [level=4] [ref=e230]
+          - link "About" [ref=e231] [cursor=pointer]:
+            - /url: /v2/about/
+          - link "Privacy" [ref=e232] [cursor=pointer]:
+            - /url: /v2/privacy/
+          - link "Terms" [ref=e233] [cursor=pointer]:
+            - /url: /v2/terms/
+          - link "Contact" [ref=e234] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e235] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e236]: 
+            - text: Discord
+      - generic [ref=e237]:
+        - generic [ref=e238]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e239]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e242]:
+    - button "Menu" [ref=e243]:
+      - img [ref=e245]
+      - generic: Menu
+    - button "Inspect" [ref=e249]:
+      - img [ref=e251]
+      - generic: Inspect
+    - button "Audit" [ref=e253]:
+      - img [ref=e255]
+      - generic: Audit
+    - button "Settings" [ref=e258]:
+      - img [ref=e260]
+      - generic: Settings

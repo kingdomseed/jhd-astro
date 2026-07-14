@@ -1,0 +1,25 @@
+---
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedMarquee from "../../../components/v2/refined/V2RefinedMarquee.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2MotionHero from "../../../components/v2/refined/V2MotionHero.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+---
+
+<V2RefinedLayout
+  title="Hero Lab - Jason Holt Digital"
+  description="A hidden v2 hero concept lab for the official Mythic GME apps hub."
+  canonicalPath="/v2/hero-lab/"
+  mainClass="hero-lab-page"
+  theme="munoz"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/hero-lab.css" />
+  </Fragment>
+
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <V2MotionHero />
+  <V2RefinedMarquee />
+</V2RefinedLayout>

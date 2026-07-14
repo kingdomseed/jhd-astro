@@ -1,0 +1,70 @@
+---
+import {
+  v2AppsUrl,
+  v2DesktopAppUrl,
+  v2MobileAppUrl,
+} from "../../../lib/v2Links";
+import { v2MythicProduct, v2MythicVariants } from "../../../lib/v2Products";
+
+const [mobileApp, desktopApp] = v2MythicVariants;
+---
+
+<section class="sec apps-preview" id="apps" aria-labelledby="apps-preview-title">
+  <div class="wrap apps-preview__grid">
+    <div class="apps-preview__copy">
+      <p class="eyebrow">
+        <span class="eyebrow-num">02</span>
+        Available now
+      </p>
+      <h2 id="apps-preview-title" class="sec-title">
+        Mythic GME, ready for mobile and desktop play.
+      </h2>
+      <p class="sec-sub">
+        {v2MythicProduct.summary}
+      </p>
+      <ul class="apps-preview__shared">
+        {v2MythicProduct.sharedContent.map((item) => (
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i>{item}</li>
+        ))}
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn--primary" href={v2AppsUrl}>
+          Compare the Apps
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="btn" href={v2MobileAppUrl}>
+          <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+          Mobile
+        </a>
+        <a class="btn" href={v2DesktopAppUrl}>
+          <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+          Desktop
+        </a>
+      </div>
+    </div>
+
+    <div class="apps-preview__matrix" aria-label="Mythic GME app options">
+      {[mobileApp, desktopApp].map((app) => (
+        <article class={`apps-preview__card apps-preview__card--${app.id}`}>
+          <div class="apps-preview__card-copy">
+            <p class="apps-preview__kicker">{app.label}</p>
+            <h3>{app.title}</h3>
+            <p>{app.whoItsFor}</p>
+            <a href={app.id === "mobile" ? v2MobileAppUrl : v2DesktopAppUrl}>
+              See details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          <figure class="apps-preview__shot">
+            <img
+              src={app.screenshots[0].src}
+              alt={app.screenshots[0].alt}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>{app.screenshots[0].label}</figcaption>
+          </figure>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

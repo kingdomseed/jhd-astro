@@ -12,11 +12,51 @@ if (!aboutEntry) throw new Error("Could not find about entry in pages collection
 
 const {
   title,
-  subtitle,
   description,
-  backgroundHighlights = [],
-  mythicHighlights = [],
 } = aboutEntry.data;
+
+const productHighlights = [
+  {
+    label: "Fate Questions",
+    description:
+      "Answer Fate Questions with the Fate Chart or a streamlined Fate Check.",
+  },
+  {
+    label: "Adventure Log",
+    description:
+      "Keep scenes, Characters, Threads, Features, and play notes together.",
+  },
+  {
+    label: "Custom Tables",
+    description:
+      "Create, import, link, and export rollable tables for the way you play.",
+  },
+  {
+    label: "Dice formulas",
+    description: "Save the rolls you use most and keep them close during play.",
+  },
+];
+
+const approachHighlights = [
+  {
+    icon: "fa-solid fa-comments",
+    title: "Support conversations",
+    description:
+      "Players tell me when something saves time, gets confusing, or slows down real play.",
+  },
+  {
+    icon: "fa-solid fa-list-check",
+    title: "Feature request trail",
+    description:
+      "Discord, email, and the feature board help show what is being considered, planned, fixed, or improved.",
+  },
+  {
+    icon: "fa-solid fa-code-branch",
+    title: "Product judgment",
+    description:
+      "Sometimes the answer is a quick fix. Sometimes it is a design change. Sometimes I need to think about it more.",
+  },
+];
 ---
 
 <V2RefinedLayout
@@ -36,20 +76,20 @@ const {
   <section class="v2-page-hero" aria-labelledby="about-title">
     <div class="wrap v2-page-hero__grid">
       <div class="v2-page-hero__copy">
-        <p class="eyebrow"><span class="eyebrow-num">01</span>{subtitle}</p>
-        <h1 id="about-title" class="v2-page-title">Hi, I'm <em>Jason</em>.</h1>
+        <p class="eyebrow"><span class="eyebrow-num">01</span>About</p>
+        <h1 id="about-title" class="v2-page-title">About <em>Jason</em>.</h1>
         <p class="v2-page-lead">{description}</p>
         <ul class="v2-page-meta" aria-label="About highlights">
-          <li class="v2-page-pill">Licensed with Word Mill Games</li>
-          <li class="v2-page-pill">Indie developer</li>
-          <li class="v2-page-pill">Computational linguistics student</li>
+          <li class="v2-page-pill">Word Mill Creative partner</li>
+          <li class="v2-page-pill">Mythic app builder</li>
+          <li class="v2-page-pill">Player feedback loop</li>
         </ul>
       </div>
       <figure class="v2-page-card">
         <img src="/v2/assets/jason.jpg" alt="Jason Holt" loading="eager" decoding="async" />
         <figcaption>
           <strong>{title}</strong>
-          <span>Founder, builder, and support inbox reader.</span>
+          <span>Official Mythic GME apps, kept close to players.</span>
         </figcaption>
       </figure>
     </div>
@@ -59,12 +99,18 @@ const {
     <div class="wrap v2-split">
       <div>
         <p class="eyebrow"><span class="eyebrow-num">02</span>Profile</p>
-        <h2 id="about-overview-title" class="sec-title">I build tools for play that stays in motion.</h2>
+        <h2 id="about-overview-title" class="sec-title">How I got here</h2>
       </div>
       <div class="v2-prose">
-        <p>I wrote my first program at twelve: a Redwall choose-your-own-adventure in Basic. Then nine years of teaching computer science, some Flutter experiments, and finally building a real app after dreaming about it since I ran Hour of Code with my students in 2013.</p>
-        <p>I maintain two products under license from Word Mill Games: <strong>Mythic GME Mobile</strong> for iOS and Android, and <strong>Mythic GME Digital</strong> for Windows, macOS, and Linux.</p>
-        <p>I'm also pursuing an M.Sc. in Computational Linguistics: part curiosity about how language and software can work together for solo play, and part the same pattern that has driven every fresh start in my career. Someone had a need, and I wanted to help meet it.</p>
+        <p>My brother and I grew up playing games of imagination, creating characters from our heads and from Legos, and sending them through whatever worlds we could dream up.</p>
+        <p>When I was twelve, I got hold of an old laptop with a black-and-white screen. It could not do much, but it had BASIC, and I found an old high school textbook that taught me how to use it.</p>
+        <p>The first program I made was a game. I was reading Redwall constantly then, so I built a little choose-your-own-adventure in BASIC.</p>
+        <p>Years later, after I moved to Germany and was figuring out what came after teaching, I started setting up a small software business. I was looking at practical work like Shopify development, but I still wanted to build apps.</p>
+        <p>My brother was more plugged into the TTRPG community, and he knew I still wanted to build apps. He sent me a note that Tana Pigeon was looking for someone to build an app for Mythic.</p>
+        <p>I had not heard of Mythic before, and I was cautious about getting too excited. The more I looked into it, the more I could see why players cared about it.</p>
+        <p>Mythic felt connected to the kind of play I had always loved. You make a character, explore a world, and find out what happens next. I wanted the app to help with the parts that slow play down, feel good to use, and stay quiet enough to get out of the way while people tell their stories.</p>
+        <p>Today I build and maintain two officially licensed Mythic GME 2e apps. <strong>Mythic GME Mobile</strong> runs on iOS and Android. <strong>Mythic GME Digital</strong> runs on Windows, macOS, and Linux.</p>
+        <p>I am still working on the apps, improving them, planning what comes next, supporting players, and listening to feedback while I finish my M.Sc. in Computational Linguistics.</p>
       </div>
     </div>
   </section>
@@ -73,11 +119,11 @@ const {
     <div class="wrap v2-split">
       <div>
         <p class="eyebrow"><span class="eyebrow-num">03</span>Official</p>
-        <h2 id="about-mythic-title" class="sec-title">Licensed Mythic apps, shaped with the community.</h2>
-        <p class="sec-sub">Less flipping through tables, more time in the story.</p>
+        <h2 id="about-mythic-title" class="sec-title">Licensed Mythic apps that stay close to play.</h2>
+        <p class="sec-sub">Less lookup, more time in the story.</p>
       </div>
       <ul class="v2-grid-list">
-        {mythicHighlights.map((item) => (
+        {productHighlights.map((item) => (
           <li class="v2-grid-card">
             <i class="fa-solid fa-check" aria-hidden="true"></i>
             <h3>{item.label}</h3>
@@ -96,7 +142,7 @@ const {
         <p class="sec-sub">The work improves because players keep telling me where the table gets stuck.</p>
       </div>
       <ul class="v2-grid-list">
-        {backgroundHighlights.map((item) => (
+        {approachHighlights.map((item) => (
           <li class="v2-grid-card">
             <i class={item.icon} aria-hidden="true"></i>
             <h3>{item.title}</h3>
@@ -112,7 +158,7 @@ const {
       <div>
         <p class="eyebrow"><span class="eyebrow-num">05</span>Connect</p>
         <h2 id="about-connect-title" class="sec-title">I read every message.</h2>
-        <p class="sec-sub">Bug reports, feature ideas, or a story about your last session: send it over.</p>
+        <p class="sec-sub">Send a bug report, a feature idea, a question, or a story about what happened in your last session.</p>
       </div>
       <div class="cta-row">
         <a class="btn btn--primary btn--lg" href={v2ContactUrl}>

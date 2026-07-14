@@ -1,10 +1,18 @@
-<section class="sec" id="apps">
+---
+import {
+  v2AppResourcesUrl,
+  v2DesktopAppUrl,
+  v2MobileAppUrl,
+} from "../../../lib/v2Links";
+---
+
+<section class="sec" id="why-mythic">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="eyebrow"><span>Benefits</span></span>
         <h2 class="sec-title">Why players choose Mythic GME Apps.</h2>
-        <p class="sec-sub">Four things the apps are built to do better than dog-eared books and spreadsheet hacks. All licensed, all shaped by what the community actually asks for.</p>
+        <p class="sec-sub">The apps keep common Mythic actions close so players can ask, roll, track, and customize without leaving the flow of play.</p>
       </div>
       <span class="sec-head-num">§ 01 / 05</span>
     </div>
@@ -12,29 +20,29 @@
       <article class="benefit" data-num="01">
         <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
         <h3>Ask &amp; Roll Fast</h3>
-        <p>No lookup delays. Tap once, get an oracle answer. The Fate Chart is tuned for one-handed play.</p>
-        <a class="benefit-link" href="/v2/#mobile-title">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        <p>Answer Fate Questions without stopping to search the book.</p>
+        <a class="benefit-link" href={v2MobileAppUrl}>Explore <i class="fa-solid fa-arrow-right"></i></a>
         <img class="benefit-art" src="/v2/assets/stamp-beast.png" alt="" aria-hidden="true" />
       </article>
       <article class="benefit" data-num="02">
         <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
         <h3>Trust Official Content</h3>
-        <p>Licensed Fate Chart and Meaning Tables, reviewed with Word Mill Games. Not a fan copy.</p>
-        <a class="benefit-link" href="/v2/#app-resources">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        <p>Use licensed Fate Chart and Meaning Tables in the flow of play.</p>
+        <a class="benefit-link" href={v2AppResourcesUrl}>Explore <i class="fa-solid fa-arrow-right"></i></a>
         <img class="benefit-art" src="/v2/assets/stamp-redhair.png" alt="" aria-hidden="true" />
       </article>
       <article class="benefit" data-num="03">
         <div class="benefit-icon"><i class="fa-solid fa-book-open"></i></div>
         <h3>Track Your Stories</h3>
-        <p>Scenes, characters, threads, and session logs. Your chronicle, organized the way Mythic expects.</p>
-        <a class="benefit-link" href="/v2/#mobile-title">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        <p>Keep scenes, Characters, Threads, and the Adventure Log together.</p>
+        <a class="benefit-link" href={v2MobileAppUrl}>Explore <i class="fa-solid fa-arrow-right"></i></a>
         <img class="benefit-art" src="/v2/assets/stamp-art10.png" alt="" aria-hidden="true" />
       </article>
       <article class="benefit" data-num="04">
         <div class="benefit-icon"><i class="fa-solid fa-sliders"></i></div>
         <h3>Customize Tools</h3>
-        <p>Custom tables, agnostic dice formulas, chaos factors. Bend the apps to your table's style.</p>
-        <a class="benefit-link" href="/v2/#desktop-title">Explore <i class="fa-solid fa-arrow-right"></i></a>
+        <p>Bring in Custom Tables and save the dice formulas you use most.</p>
+        <a class="benefit-link" href={v2DesktopAppUrl}>Explore <i class="fa-solid fa-arrow-right"></i></a>
         <img class="benefit-art" src="/v2/assets/stamp-wastelander.png" alt="" aria-hidden="true" />
       </article>
     </div>

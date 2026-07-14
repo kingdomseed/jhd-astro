@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
 import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
 import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
 import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { rewriteV2InternalLinks } from "../../../lib/v2ContentLinks";
 import { formatDate } from "../../../lib/format-date";
 import { slugifyCategory, v2BlogCategoryMeta } from "../../../lib/v2ContentMeta";
 
@@ -33,7 +34,7 @@ if (!entry) {
   throw new Error(`Blog post not found for slug: ${slug}`);
 }
 
-const { Content } = await render(entry);
+const articleHtml = rewriteV2InternalLinks(entry.rendered?.html ?? "");
 const post = entry.data;
 const downloads = Array.isArray(post.downloads) ? post.downloads : [];
 const categoryHref = `/v2/blog/category/${slugifyCategory(post.category)}/`;
@@ -114,7 +115,7 @@ const shareText = encodeURIComponent(`${post.title} ${canonicalUrl}`);
             )
           }
           <div class="v2-prose">
-            <Content />
+            <Fragment set:html={articleHtml} />
           </div>
           {
             downloads.length > 0 && (

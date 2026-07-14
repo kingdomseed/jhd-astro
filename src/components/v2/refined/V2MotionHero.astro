@@ -1,0 +1,99 @@
+---
+import { v2AppsUrl } from "../../../lib/v2Links";
+---
+
+<section class="hero-lab" aria-labelledby="hero-lab-title">
+  <div class="hero-lab__art" aria-hidden="true"></div>
+  <div class="hero-lab__wash" aria-hidden="true"></div>
+  <div class="hero-lab__grid">
+    <div class="hero-lab__copy">
+      <p class="hero-lab__eyebrow">
+        <span>Official Mythic GME 2e Apps</span>
+        <span>Licensed</span>
+      </p>
+      <h1 id="hero-lab-title">
+        GM-less play at <em>your fingertips.</em>
+      </h1>
+      <p class="hero-lab__lead">
+        Ask Fate Questions, roll on Meaning Tables, track your scenes, and stay
+        close to the story.
+      </p>
+      <div class="hero-lab__actions">
+        <a class="hero-lab__button hero-lab__button--primary" href={v2AppsUrl}>
+          See the Apps
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="hero-lab__button" href="/v2/resources/">
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          Get Resources
+        </a>
+      </div>
+      <ul class="hero-lab__proof" aria-label="App trust signals">
+        <li>
+          <strong>4.8<i class="fa-solid fa-star" aria-hidden="true"></i></strong>
+          <span>App Store rating</span>
+        </li>
+        <li>
+          <strong>Mobile +</strong>
+          <span>desktop</span>
+        </li>
+        <li>
+          <strong>No</strong>
+          <span>subscriptions</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-lab__stage" aria-label="Mythic app play loop">
+      <div class="stage-plate hero-lab__plate" aria-hidden="true"></div>
+      <div class="stage-slab hero-lab__slab" aria-hidden="true"></div>
+      <div class="stage-badge hero-lab__badge" aria-hidden="true">
+        Ask · Answer · Record
+      </div>
+      <div class="phone-carousel hero-lab__phone-carousel" id="phoneCarousel">
+        <div class="phone-slide on">
+          <img src="/v2/assets/mobile-1.png" alt="Fate Chart" data-label="Fate Chart" />
+        </div>
+        <div class="phone-slide">
+          <img src="/v2/assets/mobile-2.png" alt="Scenes" data-label="Scenes" />
+        </div>
+        <div class="phone-slide">
+          <img src="/v2/assets/mobile-4.png" alt="Dice Roller" data-label="Dice Roller" />
+        </div>
+        <div class="phone-slide">
+          <img src="/v2/assets/mobile-5.png" alt="Threads" data-label="Threads" />
+        </div>
+        <div class="phone-slide">
+          <img src="/v2/assets/mobile-7.png" alt="Custom Tables" data-label="Custom Tables" />
+        </div>
+        <div class="phone-caption">
+          <span id="captLabel">Fate Chart</span>
+          <span class="ix" id="captIx">01 / 05</span>
+        </div>
+        <div class="phone-steps" id="phoneSteps"></div>
+      </div>
+
+      <div class="hero-lab__oracle hero-lab__flow-card" aria-hidden="true">
+        <span>Fate Question</span>
+        <strong>Does the door open?</strong>
+        <small>Yes</small>
+      </div>
+      <div class="hero-lab__meaning hero-lab__flow-card" aria-hidden="true">
+        <span>Meaning Tables</span>
+        <strong>Reveal</strong>
+        <strong>Secret</strong>
+      </div>
+      <div class="hero-lab__log hero-lab__flow-card" aria-hidden="true">
+        <span>Adventure Log</span>
+        <strong>Scene 2</strong>
+        <p>The door opens into a colder room.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-lab__rail" aria-hidden="true">
+    <span>Fate Questions</span>
+    <span>Meaning Tables</span>
+    <span>Scenes</span>
+    <span>Adventure Log</span>
+  </div>
+</section>

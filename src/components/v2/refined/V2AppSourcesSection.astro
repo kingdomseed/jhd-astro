@@ -1,0 +1,58 @@
+---
+import { v2MythicProduct } from "../../../lib/v2Products";
+---
+
+<section class="sec apps-source" id="app-resources" aria-labelledby="app-resources-title">
+  <div class="wrap apps-source__grid">
+    <div class="apps-source__intro">
+      <p class="eyebrow">
+        <span class="eyebrow-num">05</span>
+        Source Books
+      </p>
+      <h2 id="app-resources-title" class="sec-title">
+        Built around the books, the community, and a few useful libraries.
+      </h2>
+      <p class="sec-sub">
+        The apps are companions to Tana Pigeon's books, not replacements. The
+        books carry the system, while app updates and open-source tools keep
+        the digital table moving.
+      </p>
+    </div>
+    <div class="apps-source__shelves">
+      <section aria-labelledby="books-title">
+        <h3 id="books-title">Original books</h3>
+        {v2MythicProduct.bookLinks.map((book) => (
+          <a
+            class="source-row"
+            href={book.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <strong>{book.title}</strong>
+              <small>{book.body}</small>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        ))}
+      </section>
+      <section aria-labelledby="source-title">
+        <h3 id="source-title">Open source</h3>
+        {v2MythicProduct.sourceLinks.map((source) => (
+          <a
+            class="source-row"
+            href={source.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <strong>{source.title}</strong>
+              <small>{source.body}</small>
+            </span>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        ))}
+      </section>
+    </div>
+  </div>
+</section>

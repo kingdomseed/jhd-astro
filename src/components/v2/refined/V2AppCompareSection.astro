@@ -1,0 +1,44 @@
+---
+import { v2MythicProduct, v2MythicVariants } from "../../../lib/v2Products";
+
+const [mobileApp, desktopApp] = v2MythicVariants;
+---
+
+<section class="sec apps-compare" aria-labelledby="apps-compare-title">
+  <div class="wrap apps-compare__grid">
+    <div class="apps-compare__intro">
+      <p class="eyebrow">
+        <span class="eyebrow-num">04</span>
+        Which one should I get?
+      </p>
+      <h2 id="apps-compare-title" class="sec-title">
+        Same Mythic tools. Different places to play.
+      </h2>
+      <p class="sec-sub">
+        Choose by where you play most often. The mobile app keeps the oracle
+        close; the desktop app gives longer sessions more room.
+      </p>
+    </div>
+
+    <div class="apps-compare__choices">
+      {[mobileApp, desktopApp].map((app) => (
+        <article class="apps-compare__choice">
+          <p class="apps-preview__kicker">{app.shortLabel}</p>
+          <h3>{app.title}</h3>
+          <ul>
+            {app.bestFor.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div class="apps-compare__shared">
+      <h3>Both include</h3>
+      <ul>
+        {v2MythicProduct.sharedContent.map((item) => (
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

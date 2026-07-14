@@ -1,0 +1,434 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e4]:
+    - generic [ref=e5]: Official Partner · Word Mill Creative
+    - generic [ref=e7]:
+      - link "Changelog v2.4" [ref=e8] [cursor=pointer]:
+        - /url: /blog/category/release-notes/
+        - text: Changelog v2.4
+        - generic [ref=e9]: 
+      - link "Discord" [ref=e10] [cursor=pointer]:
+        - /url: https://discord.gg/PEDHrhzcnk
+        - text: Discord
+        - generic [ref=e11]: 
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - link "Jason Holt Digital V2 home" [ref=e14] [cursor=pointer]:
+        - /url: /v2/
+        - img "JHD" [ref=e16]
+        - generic [ref=e17]:
+          - text: Jason Holt Digital
+          - generic [ref=e18]: Indie Studio · Est. 2023
+      - text:     
+      - button "Open menu" [ref=e19] [cursor=pointer]:
+        - generic [ref=e20]: 
+  - complementary [ref=e21]:
+    - button [ref=e22] [cursor=pointer]:
+      - generic [ref=e23]: 
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /v2/
+      - generic [ref=e25]: 
+      - text: Home
+    - link [ref=e26] [cursor=pointer]:
+      - /url: /v2/apps/
+      - generic [ref=e27]: 
+      - text: Apps
+    - link [ref=e28] [cursor=pointer]:
+      - /url: /v2/resources/
+      - generic [ref=e29]: 
+      - text: Resources
+    - link [ref=e30] [cursor=pointer]:
+      - /url: /v2/blog/
+      - generic [ref=e31]: 
+      - text: Blog
+    - link [ref=e32] [cursor=pointer]:
+      - /url: /v2/support/
+      - generic [ref=e33]: 
+      - text: Support
+    - link [ref=e34] [cursor=pointer]:
+      - /url: /v2/apps/
+      - text: Get the App →
+  - main [ref=e35]:
+    - generic [ref=e36]:
+      - region "Mythic GME Apps" [ref=e37]:
+        - img
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - paragraph [ref=e40]:
+              - generic [ref=e41]: "01"
+              - text: Official licensed companion apps
+            - heading "Mythic GME Apps" [level=1] [ref=e42]:
+              - text: Mythic GME
+              - emphasis [ref=e43]: Apps
+            - paragraph [ref=e44]: Mobile and desktop companions for Mythic GME 2e, built for solo play that stays in motion instead of getting buried in lookup.
+            - generic "Primary app actions" [ref=e45]:
+              - link "Get mobile" [ref=e46] [cursor=pointer]:
+                - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+                - generic [ref=e47]: 
+                - text: Get mobile
+              - link "Get desktop" [ref=e48] [cursor=pointer]:
+                - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+                - generic [ref=e49]: 
+                - text: Get desktop
+            - list "App highlights" [ref=e50]:
+              - listitem [ref=e51]:
+                - generic [ref=e52]: "2"
+                - generic [ref=e53]: Live app formats
+              - listitem [ref=e54]:
+                - generic [ref=e55]: 160+
+                - generic [ref=e56]: Expandable tables
+              - listitem [ref=e57]:
+                - generic [ref=e58]: "0"
+                - generic [ref=e59]: Subscriptions
+          - generic "Mobile app screenshots" [ref=e60]:
+            - generic [ref=e63]: Mobile / Fate
+            - generic [ref=e64]:
+              - figure [ref=e65]:
+                - img "Mythic GME Mobile Fate Chart screen" [ref=e66]
+              - figure:
+                - img "Mythic GME Mobile adventure log screen"
+              - figure:
+                - img "Mythic GME Mobile custom tables screen"
+              - generic "Hero screenshots" [ref=e67]:
+                - button "Slide 1" [ref=e68] [cursor=pointer]
+                - button "Slide 2" [ref=e69] [cursor=pointer]
+                - button "Slide 3" [ref=e70] [cursor=pointer]
+              - paragraph [ref=e71]:
+                - generic [ref=e72]: 01 / 03
+                - generic [ref=e73]: Fate Chart
+      - region "Available platforms" [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: 
+            - text: iOS App Store
+          - generic [ref=e78]:
+            - generic [ref=e79]: 
+            - text: Google Play
+          - generic [ref=e80]:
+            - generic [ref=e81]: 
+            - text: Amazon Fire
+          - generic [ref=e82]:
+            - generic [ref=e83]: 
+            - text: Microsoft Store
+          - generic [ref=e84]:
+            - generic [ref=e85]: 
+            - text: itch.io Desktop
+          - generic [ref=e86]:
+            - generic [ref=e87]: 
+            - text: 4.7 avg rating
+          - generic [ref=e88]:
+            - generic [ref=e89]: 
+            - text: 2,000+ community
+          - generic [ref=e90]:
+            - generic [ref=e91]: 
+            - text: 5,000+ installs
+          - generic [ref=e92]:
+            - generic [ref=e93]: 
+            - text: iOS App Store
+          - generic [ref=e94]:
+            - generic [ref=e95]: 
+            - text: Google Play
+          - generic [ref=e96]:
+            - generic [ref=e97]: 
+            - text: Amazon Fire
+          - generic [ref=e98]:
+            - generic [ref=e99]: 
+            - text: Microsoft Store
+          - generic [ref=e100]:
+            - generic [ref=e101]: 
+            - text: itch.io Desktop
+          - generic [ref=e102]:
+            - generic [ref=e103]: 
+            - text: 4.7 avg rating
+          - generic [ref=e104]:
+            - generic [ref=e105]: 
+            - text: 2,000+ community
+          - generic [ref=e106]:
+            - generic [ref=e107]: 
+            - text: 5,000+ installs
+      - region "Mythic GME Mobile" [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: Mobile app
+            - generic "Mobile screenshots" [ref=e112]:
+              - img "Mythic GME Mobile Fate Chart screen" [ref=e113]
+              - img "Mythic GME Mobile adventure log screen" [ref=e114]
+              - img "Mythic GME Mobile custom tables screen" [ref=e115]
+          - article [ref=e116]:
+            - paragraph [ref=e117]:
+              - generic [ref=e118]: "02"
+              - text: Mobile app
+            - heading "Mythic GME Mobile" [level=2] [ref=e119]
+            - paragraph [ref=e120]: Solo role-players who want less lookup and more story, anywhere.
+            - paragraph [ref=e121]: "The phone-first companion keeps the official Mythic flow close at hand: fate checks, scenes, adventure journaling, custom tables, and dice without the table-spread sprawl."
+            - generic [ref=e122]:
+              - region "What it does" [ref=e123]:
+                - heading "What it does" [level=3] [ref=e124]
+                - list [ref=e125]:
+                  - listitem [ref=e126]: Fate Chart & streamlined Fate Check
+                  - listitem [ref=e127]: "Ask Your Fate Question: write first, then roll"
+                  - listitem [ref=e128]: Characters, Threads, Features, & Scenes
+                  - listitem [ref=e129]: Adventure log with markdown & spell check
+                  - listitem [ref=e130]: "Custom tables: create, import, link, export"
+                  - listitem [ref=e131]: Customizable dice roller with saved formulas
+                  - listitem [ref=e132]: "Accessibility-first: screen reader, color-blind, left-hand modes"
+              - region "Official content" [ref=e133]:
+                - heading "Official content" [level=3] [ref=e134]
+                - list [ref=e135]:
+                  - listitem [ref=e136]: 50 core tables from Mythic GME 2e
+                  - listitem [ref=e137]: Expanded Features unlock grows the library to 160+ tables
+                  - listitem [ref=e138]: Random & Prepared Adventure Event Focus tables
+                  - listitem [ref=e139]: New official content added with major releases
+            - paragraph [ref=e140]: IAP unlocks are permanent, not subscription. Features you unlock plus any new pro features added within 12 months stay unlocked forever.
+            - navigation "Mythic GME Mobile stores" [ref=e141]:
+              - link "Apple App Store" [ref=e142] [cursor=pointer]:
+                - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+                - generic [ref=e143]: 
+                - text: Apple App Store
+              - link "Google Play" [ref=e144] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+                - generic [ref=e145]: 
+                - text: Google Play
+              - link "Amazon Appstore" [ref=e146] [cursor=pointer]:
+                - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+                - generic [ref=e147]: 
+                - text: Amazon Appstore
+      - region "The apps share one Mythic table, then change shape for the device." [ref=e148]:
+        - img
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - paragraph [ref=e151]:
+              - generic [ref=e152]: "03"
+              - text: Product rhythm
+            - heading "The apps share one Mythic table, then change shape for the device." [level=2] [ref=e153]
+            - paragraph [ref=e154]: Keep the same oracle, meaning tables, journaling, and dice logic; shift the surface from touch-first portability to desktop campaign focus.
+            - list [ref=e155]:
+              - listitem [ref=e156]:
+                - generic [ref=e157]: 
+                - text: Fate checks stay fast
+              - listitem [ref=e158]:
+                - generic [ref=e159]: 
+                - text: Custom tables travel with the workflow
+              - listitem [ref=e160]:
+                - generic [ref=e161]: 
+                - text: Desktop opens up the long-session surface
+          - generic "App screenshot carousel" [ref=e162]:
+            - article [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: Fate Chart
+                - img "Mythic GME Mobile Fate Chart screen" [ref=e166]
+              - generic [ref=e167]:
+                - generic [ref=e168]: 01 / 04
+                - heading "Fate Chart" [level=3] [ref=e169]
+                - paragraph [ref=e170]: A compact Mythic surface for quick questions, fast lookup, and play that fits anywhere.
+            - article [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: Workspace
+                - img "Mythic GME Digital desktop workspace"
+              - generic [ref=e174]:
+                - generic [ref=e175]: 02 / 04
+                - heading "Workspace" [level=3] [ref=e176]
+                - paragraph [ref=e177]: A wider Mythic surface for arranging panels, reading context, and keeping a campaign session open.
+            - article [ref=e178]:
+              - generic [ref=e179]:
+                - generic [ref=e180]: Panels
+                - img "Mythic GME Digital desktop panel layout"
+              - generic [ref=e181]:
+                - generic [ref=e182]: 03 / 04
+                - heading "Panels" [level=3] [ref=e183]
+                - paragraph [ref=e184]: A wider Mythic surface for arranging panels, reading context, and keeping a campaign session open.
+            - article [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: Long Sessions
+                - img "Mythic GME Digital desktop journal and oracle layout"
+              - generic [ref=e188]:
+                - generic [ref=e189]: 04 / 04
+                - heading "Long Sessions" [level=3] [ref=e190]
+                - paragraph [ref=e191]: A wider Mythic surface for arranging panels, reading context, and keeping a campaign session open.
+            - generic "Screenshot controls" [ref=e192]:
+              - button "Previous screenshot" [ref=e193] [cursor=pointer]:
+                - generic [ref=e194]: 
+              - button "Next screenshot" [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]: 
+      - region "Mythic GME Digital" [ref=e197]:
+        - generic [ref=e198]:
+          - article [ref=e199]:
+            - paragraph [ref=e200]:
+              - generic [ref=e201]: "04"
+              - text: Desktop app
+            - heading "Mythic GME Digital" [level=2] [ref=e202]
+            - paragraph [ref=e203]: PC/Mac/Linux players who want a focused, extended-session layout.
+            - paragraph [ref=e204]: The desktop edition opens the Mythic table into a wider working surface, built for long sessions, keyboard flow, panel layouts, and all-in purchase clarity.
+            - generic [ref=e205]:
+              - region "What it does" [ref=e206]:
+                - heading "What it does" [level=3] [ref=e207]
+                - list [ref=e208]:
+                  - listitem [ref=e209]: All mobile features and systems
+                  - listitem [ref=e210]: "Customizable panel layout: drag, resize, arrange"
+                  - listitem [ref=e211]: Undo with Cmd/Ctrl+Z for any action
+                  - listitem [ref=e212]: In-app Help Center with searchable guides
+                  - listitem [ref=e213]: Full desktop layout for extended sessions
+                  - listitem [ref=e214]: "Everything included: no unlocks, no subscriptions"
+              - region "Official content" [ref=e215]:
+                - heading "Official content" [level=3] [ref=e216]
+                - list [ref=e217]:
+                  - listitem [ref=e218]: All official content spanning the Mythic-verse
+                  - listitem [ref=e219]: No in-app purchases or subscriptions
+                  - listitem [ref=e220]: All tables and features unlocked up front
+            - paragraph [ref=e221]: Mac App Store version is a mobile + desktop bundle and includes in-app unlocks for additional content and features.
+            - navigation "Mythic GME Digital stores" [ref=e222]:
+              - link "itch.io DRM-free" [ref=e223] [cursor=pointer]:
+                - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+                - generic [ref=e224]: 
+                - text: itch.io DRM-free
+              - link "Microsoft Store" [ref=e225] [cursor=pointer]:
+                - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+                - generic [ref=e226]: 
+                - text: Microsoft Store
+              - generic [ref=e227]:
+                - generic [ref=e228]: 
+                - text: Steam planned
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: Desktop app
+            - generic "Desktop screenshots" [ref=e231]:
+              - img "Mythic GME Digital desktop workspace" [ref=e232]
+              - img "Mythic GME Digital desktop panel layout" [ref=e233]
+              - img "Mythic GME Digital desktop journal and oracle layout" [ref=e234]
+      - region "Built around the books, the community, and a few useful libraries." [ref=e235]:
+        - generic [ref=e236]:
+          - generic [ref=e237]:
+            - paragraph [ref=e238]:
+              - generic [ref=e239]: "05"
+              - text: Sources and companions
+            - heading "Built around the books, the community, and a few useful libraries." [level=2] [ref=e240]
+            - paragraph [ref=e241]: "The apps are companions, not replacements: the original books carry the system, while app updates and open-source tools keep the digital table moving."
+          - generic [ref=e242]:
+            - region "Original books" [ref=e243]:
+              - heading "Original books" [level=3] [ref=e244]
+              - link "Mythic GME 2e The complete solo RPG system that started it all." [ref=e245] [cursor=pointer]:
+                - /url: https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition
+                - generic [ref=e246]:
+                  - strong [ref=e247]: Mythic GME 2e
+                  - generic [ref=e248]: The complete solo RPG system that started it all.
+                - generic [ref=e249]: 
+              - link "Adventure Crafter Adventure generation system for dynamic storylines." [ref=e250] [cursor=pointer]:
+                - /url: https://www.drivethrurpg.com/product/261479/The-Adventure-Crafter
+                - generic [ref=e251]:
+                  - strong [ref=e252]: Adventure Crafter
+                  - generic [ref=e253]: Adventure generation system for dynamic storylines.
+                - generic [ref=e254]: 
+            - region "Open source" [ref=e255]:
+              - heading "Open source" [level=3] [ref=e256]
+              - link "icloud_storage_plus Flutter plugin for iCloud document storage with coordinated file access." [ref=e257] [cursor=pointer]:
+                - /url: https://github.com/kingdomseed/icloud_storage_plus
+                - generic [ref=e258]:
+                  - strong [ref=e259]: icloud_storage_plus
+                  - generic [ref=e260]: Flutter plugin for iCloud document storage with coordinated file access.
+                - generic [ref=e261]: 
+              - link "mythic_dice_parser Dart library for parsing dice notation that powers the app roller." [ref=e262] [cursor=pointer]:
+                - /url: https://github.com/kingdomseed/mythic-dice-parser
+                - generic [ref=e263]:
+                  - strong [ref=e264]: mythic_dice_parser
+                  - generic [ref=e265]: Dart library for parsing dice notation that powers the app roller.
+                - generic [ref=e266]: 
+      - region "Adventure Crafter" [ref=e267]:
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - paragraph [ref=e270]:
+              - generic [ref=e271]: "06"
+              - text: Coming soon
+            - heading "Adventure Crafter" [level=2] [ref=e272]
+            - paragraph [ref=e273]: "Solo players who want guided adventure creation with hooks and twists: stay tuned for updates."
+          - generic [ref=e274]:
+            - paragraph [ref=e275]: Regular updates come from release notes, support conversations, and feature requests. More than 60% of app improvements come directly from community suggestions.
+            - generic [ref=e276]:
+              - link "Support" [ref=e277] [cursor=pointer]:
+                - /url: /v2/support/
+                - generic [ref=e278]: 
+                - text: Support
+              - link "Feature board" [ref=e279] [cursor=pointer]:
+                - /url: http://feedback.jasonholtdigital.com/board
+                - generic [ref=e280]: 
+                - text: Feature board
+  - contentinfo [ref=e281]:
+    - img
+    - generic [ref=e282]:
+      - heading "Solo play. Shipped honestly." [level=2] [ref=e283]:
+        - text: Solo play.
+        - text: Shipped
+        - emphasis [ref=e284]: honestly
+        - text: .
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - link "JHD Jason Holt Digital Indie · Est. 2023" [ref=e287] [cursor=pointer]:
+            - /url: /v2/
+            - img "JHD" [ref=e289]
+            - generic [ref=e290]:
+              - text: Jason Holt Digital
+              - generic [ref=e291]: Indie · Est. 2023
+          - paragraph [ref=e292]: Official Mythic GME 2e Apps. Licensed by Word Mill Games. Made one ship at a time.
+        - generic [ref=e293]:
+          - heading "Product" [level=4] [ref=e294]
+          - link "Apps" [ref=e295] [cursor=pointer]:
+            - /url: /v2/apps/
+          - link "Resources" [ref=e296] [cursor=pointer]:
+            - /url: /v2/resources/
+          - link "Blog" [ref=e297] [cursor=pointer]:
+            - /url: /v2/blog/
+          - link "Support" [ref=e298] [cursor=pointer]:
+            - /url: /v2/support/
+          - link "Changelog" [ref=e299] [cursor=pointer]:
+            - /url: /blog/category/release-notes/
+        - generic [ref=e300]:
+          - heading "Get the App" [level=4] [ref=e301]
+          - link "iOS" [ref=e302] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147
+            - generic [ref=e303]: 
+            - text: iOS
+          - link "Android" [ref=e304] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+            - generic [ref=e305]: 
+            - text: Android
+          - link "Fire" [ref=e306] [cursor=pointer]:
+            - /url: https://www.amazon.ca/Jason-Holt-Digital-LLC-Mythic/dp/B0DJBPF9L9
+            - generic [ref=e307]: 
+            - text: Fire
+          - link "Windows" [ref=e308] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/detail/9n39b8hj3cdg
+            - generic [ref=e309]: 
+            - text: Windows
+          - link "Desktop" [ref=e310] [cursor=pointer]:
+            - /url: https://jasonholtdigital.itch.io/mythic-gme-digital
+            - generic [ref=e311]: 
+            - text: Desktop
+        - generic [ref=e312]:
+          - heading "Company" [level=4] [ref=e313]
+          - link "About" [ref=e314] [cursor=pointer]:
+            - /url: /about/
+          - link "Privacy" [ref=e315] [cursor=pointer]:
+            - /url: /privacy/
+          - link "Terms" [ref=e316] [cursor=pointer]:
+            - /url: /terms/
+          - link "Contact" [ref=e317] [cursor=pointer]:
+            - /url: /v2/support/#contact-panel
+          - link "Discord" [ref=e318] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+            - generic [ref=e319]: 
+            - text: Discord
+      - generic [ref=e320]:
+        - generic [ref=e321]: © 2026 Jason Holt Digital. All rights reserved.
+        - generic [ref=e322]: Licensed by Word Mill Games · Mythic GME 2e
+  - generic [ref=e325]:
+    - button "Menu" [ref=e326]:
+      - img [ref=e328]
+      - generic: Menu
+    - button "Inspect" [ref=e332]:
+      - img [ref=e334]
+      - generic: Inspect
+    - button "Audit" [ref=e336]:
+      - img [ref=e338]
+      - generic: Audit
+    - button "Settings" [ref=e341]:
+      - img [ref=e343]
+      - generic: Settings

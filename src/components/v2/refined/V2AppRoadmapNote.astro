@@ -1,0 +1,36 @@
+---
+import { v2ReleaseNotesUrl, v2SupportUrl } from "../../../lib/v2Links";
+---
+
+<section class="sec apps-next" aria-labelledby="next-title">
+  <div class="wrap apps-next__grid">
+    <div>
+      <p class="eyebrow">
+        <span class="eyebrow-num">06</span>
+        Future tools
+      </p>
+      <h2 id="next-title" class="sec-title">Mythic stays first.</h2>
+      <p class="sec-sub">
+        More table tools are planned, but this page stays focused on the
+        available Mythic apps. Public updates land in release notes when the
+        next product is ready to talk about clearly.
+      </p>
+    </div>
+    <div class="apps-next__panel">
+      <p>
+        Release notes, support conversations, Discord, and the feature board
+        help show what is being considered, planned, fixed, or improved.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn--ghost" href={v2SupportUrl}>
+          <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+          Support
+        </a>
+        <a class="btn btn--ghost" href={v2ReleaseNotesUrl}>
+          <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+          Release notes
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,114 @@
+---
+import V2AppCompareSection from "../../../components/v2/refined/V2AppCompareSection.astro";
+import V2AppProductSection from "../../../components/v2/refined/V2AppProductSection.astro";
+import V2AppRoadmapNote from "../../../components/v2/refined/V2AppRoadmapNote.astro";
+import V2AppSourcesSection from "../../../components/v2/refined/V2AppSourcesSection.astro";
+import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
+import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
+import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
+import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
+import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
+import { v2MobileAppUrl, v2DesktopAppUrl } from "../../../lib/v2Links";
+import { v2MythicProduct, v2MythicVariants } from "../../../lib/v2Products";
+
+const [mobileApp, desktopApp] = v2MythicVariants;
+---
+
+<V2RefinedLayout
+  title="Apps - Mythic GME Companions"
+  description="Compare the official Mythic GME 2e apps for mobile and desktop, see what each version includes, and download on your platform."
+  canonicalPath="/v2/apps/"
+  mainClass="apps-page apps-page--detail"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/v2/assets/apps.css" />
+  </Fragment>
+  <V2RefinedUtilBar slot="before-main" />
+  <V2RefinedHeader slot="before-main" />
+
+  <section class="sec apps-index-hero" aria-labelledby="apps-title">
+    <img class="apps-index-hero__art" src="/v2/assets/art-18.png" alt="" aria-hidden="true" />
+    <div class="wrap apps-index-hero__grid">
+      <div class="apps-index-hero__copy">
+        <p class="eyebrow">
+          <span class="eyebrow-num">01</span>
+          {v2MythicProduct.eyebrow}
+        </p>
+        <h1 id="apps-title" class="hero-title">Mythic GME Apps</h1>
+        <p class="hero-lead">{v2MythicProduct.summary}</p>
+        <div class="cta-row">
+          <a class="btn btn--primary btn--lg" href={v2MobileAppUrl}>
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+            Mobile
+          </a>
+          <a class="btn btn--lg" href={v2DesktopAppUrl}>
+            <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+            Desktop
+          </a>
+        </div>
+      </div>
+      <div class="apps-index-hero__stage" aria-label="Mythic app screenshots">
+        <figure class="apps-index-hero__shot apps-index-hero__shot--phone">
+          <img
+            src={mobileApp.screenshots[0].src}
+            alt={mobileApp.screenshots[0].alt}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>{mobileApp.shortLabel}</figcaption>
+        </figure>
+        <figure class="apps-index-hero__shot apps-index-hero__shot--desktop">
+          <img
+            src={desktopApp.screenshots[0].src}
+            alt={desktopApp.screenshots[0].alt}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>{desktopApp.shortLabel}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec apps-available" aria-labelledby="available-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-head-left">
+          <span class="eyebrow"><span>Available Now</span></span>
+          <h2 id="available-title" class="sec-title">Mobile and desktop, with you wherever you play.</h2>
+          <p class="sec-sub">
+            Start with the place you actually play. Mobile keeps Mythic close
+            anywhere, and desktop gives longer sessions more room.
+          </p>
+        </div>
+        <span class="sec-head-num">§ 01 / 06</span>
+      </div>
+      <div class="apps-available__grid">
+        {[mobileApp, desktopApp].map((app) => (
+          <article class="apps-available__item">
+            <p class="apps-preview__kicker">{app.label}</p>
+            <h3>{app.title}</h3>
+            <p>{app.whoItsFor}</p>
+            <nav class="store-strip" aria-label={`${app.title} stores`}>
+              {app.storeLinks.map((link) => (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <i class={link.icon} aria-hidden="true"></i>
+                  {link.meta === "Win" ? "Windows" : link.meta}
+                </a>
+              ))}
+            </nav>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <V2AppProductSection app={mobileApp} number="02" />
+  <V2AppProductSection app={desktopApp} number="03" />
+  <V2AppCompareSection />
+  <V2AppSourcesSection />
+  <V2AppRoadmapNote />
+
+  <V2RefinedFooter slot="after-main" />
+  <V2RefinedTweaksPanel slot="after-main" />
+</V2RefinedLayout>

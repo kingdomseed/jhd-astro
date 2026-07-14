@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e3]:
+    - region "Official notice" [ref=e4]:
+      - generic [ref=e5]: OFFICIAL PARTNER
+      - link "Word Mill Creative" [ref=e7] [cursor=pointer]:
+        - /url: https://www.wordmillgames.com/page/mythic-gme.html
+        - text: Word Mill Creative
+    - banner [ref=e9]:
+      - generic [ref=e10]:
+        - link "Jason Holt Digital home" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - img "Jason Holt Digital" [ref=e12]
+        - navigation "Primary" [ref=e13]:
+          - link "Home" [ref=e14] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e16]: Home
+          - link "Apps" [ref=e17] [cursor=pointer]:
+            - /url: /apps/
+            - generic [ref=e19]: Apps
+          - link "Resources" [ref=e20] [cursor=pointer]:
+            - /url: /resources/
+            - generic [ref=e22]: Resources
+          - link "Blog" [ref=e23] [cursor=pointer]:
+            - /url: /blog/
+            - generic [ref=e25]: Blog
+    - main [ref=e26]:
+      - region "GM-less Play At Your Fingertips" [ref=e27]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e33]: Official Mythic GME 2e Apps
+            - heading "GM-less Play At Your Fingertips" [level=1] [ref=e34]
+            - paragraph [ref=e35]: Ask Fate Questions, roll on Meaning Tables, track your scenes, and stay close to the story.
+            - generic [ref=e36]:
+              - button "Get the App" [ref=e38]: Get the App
+              - link "Get Resources" [ref=e41] [cursor=pointer]:
+                - /url: /resources/
+                - text: Get Resources
+            - list [ref=e43]:
+              - listitem [ref=e44]:
+                - generic [ref=e45]: "4.8"
+                - generic [ref=e47]: App Store rating
+              - listitem [ref=e48]:
+                - generic [ref=e50]: Mobile + desktop
+              - listitem [ref=e51]:
+                - generic [ref=e53]: No subscriptions
+          - generic "App screenshots" [ref=e54]:
+            - paragraph [ref=e57]: Est. 2023 · Licensed
+            - generic [ref=e58]:
+              - img "Fate Chart — Mythic GME app" [ref=e60]
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic:
+                - img
+              - generic [ref=e61]:
+                - generic [ref=e62]: Fate Chart
+                - generic [ref=e63]: 01 / 07
+              - generic "Choose screenshot" [ref=e64]:
+                - button "Slide 1" [ref=e65] [cursor=pointer]
+                - button "Slide 2" [ref=e66] [cursor=pointer]
+                - button "Slide 3" [ref=e67] [cursor=pointer]
+                - button "Slide 4" [ref=e68] [cursor=pointer]
+                - button "Slide 5" [ref=e69] [cursor=pointer]
+                - button "Slide 6" [ref=e70] [cursor=pointer]
+                - button "Slide 7" [ref=e71] [cursor=pointer]
+            - paragraph [ref=e72]: Fate Chart. 01 of 07.
+      - region "What players say" [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e77]: What players say
+          - heading "Player reviews" [level=2] [ref=e78]
+          - figure "What players say" [ref=e79]:
+            - generic [ref=e80]:
+              - paragraph [ref=e81]:
+                - text: “
+                - link "It's great, I love mythic 2e, but I think the design could make playing a game with nothing but your phone more streamlined." [ref=e83] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+                - text: ” — Google Play — Steven
+              - paragraph [ref=e84]:
+                - text: “
+                - link "It's great, I love mythic 2e, but I think the design could make playing a game with nothing but your phone more streamlined." [ref=e86] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.jasonholtdigital.mythicgme2e
+                - text: ” — Google Play — Steven
+            - paragraph [ref=e87]: Quote 6 of 20
+      - region "Why players choose Mythic GME Apps" [ref=e88]:
+        - generic [ref=e91]: Benefits
+        - heading "Why players choose Mythic GME Apps" [level=2] [ref=e92]
+        - generic [ref=e93]:
+          - article [ref=e94]:
+            - heading "Ask & Roll Fast" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Answer Fate Questions without stopping to search the book.
+          - article [ref=e99]:
+            - heading "Trust Official Content" [level=3] [ref=e102]
+            - paragraph [ref=e103]: Use licensed Fate Chart and Meaning Tables in the flow of play.
+          - article [ref=e104]:
+            - heading "Track Your Stories" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Keep scenes, Characters, Threads, and the Adventure Log together.
+          - article [ref=e109]:
+            - heading "Customize Tools" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Bring in custom tables and save the dice formulas you use most.
+      - region "Inside the workspace" [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e118]: Desktop app
+          - heading "Inside the workspace" [level=2] [ref=e119]
+          - paragraph [ref=e120]: "Screens from the desktop app: Fate Chart, scenes, dice, tables, and your Adventure Log in one place."
+          - generic "App showcase" [ref=e121]:
+            - figure "Billboard screenshots" [ref=e122]:
+              - generic [ref=e123]:
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e124]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e125]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e126]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e127]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e128]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e129]
+                - img "Mythic GME Digital — desktop layout showing panels and the Adventure Log" [ref=e130]
+              - paragraph [ref=e131]: Slide 1 of 7
+              - generic "Billboard controls" [ref=e132]:
+                - button "Previous screenshot" [ref=e133] [cursor=pointer]
+                - button "Pause autoplay" [ref=e135] [cursor=pointer]
+                - button "Next screenshot" [ref=e137] [cursor=pointer]
+      - region "Join the community" [ref=e139]:
+        - generic [ref=e142]: Help & community
+        - heading "Join the community" [level=2] [ref=e143]
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - heading "Join the Community" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Talk with Mythic players, share feedback, and ask questions.
+            - paragraph [ref=e150]:
+              - link "Discord" [ref=e151] [cursor=pointer]:
+                - /url: https://discord.gg/PEDHrhzcnk
+                - text: Discord
+          - generic [ref=e153]:
+            - heading "Get Help Fast" [level=3] [ref=e156]
+            - paragraph [ref=e157]: Find answers, report issues, or send me a message.
+            - paragraph [ref=e158]:
+              - link "Support & FAQ" [ref=e159] [cursor=pointer]:
+                - /url: /support/
+                - text: Support & FAQ
+      - region "Get the Books" [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e165]: Licensing & publishing
+          - heading "Get the Books" [level=2] [ref=e166]
+          - list "Partners" [ref=e167]:
+            - listitem [ref=e168]:
+              - link "Word Mill Creative" [ref=e169] [cursor=pointer]:
+                - /url: https://www.wordmillgames.com/
+                - generic [ref=e171]: Word Mill Creative
+            - listitem [ref=e172]:
+              - link "Retropunk" [ref=e173] [cursor=pointer]:
+                - /url: https://retropunk.com.br/
+                - generic [ref=e175]: Retropunk
+      - region "Guides for play" [ref=e176]:
+        - generic [ref=e179]: Resources
+        - heading "Guides for play" [level=2] [ref=e180]
+        - list [ref=e181]:
+          - listitem [ref=e182]:
+            - link "Getting Started with Mythic" [ref=e183] [cursor=pointer]:
+              - /url: /resources/getting-started-with-the-mythic-apps/
+              - generic [ref=e186]: Getting Started with Mythic
+          - listitem [ref=e188]:
+            - link "Getting Started with Custom Tables" [ref=e189] [cursor=pointer]:
+              - /url: /resources/getting-started-with-custom-tables/
+              - generic [ref=e192]: Getting Started with Custom Tables
+          - listitem [ref=e194]:
+            - link "Importing & Exporting Tables" [ref=e195] [cursor=pointer]:
+              - /url: /resources/importing-and-exporting-custom-tables/
+              - generic [ref=e198]: Importing & Exporting Tables
+          - listitem [ref=e200]:
+            - link "Dice Roller Formula Guide" [ref=e201] [cursor=pointer]:
+              - /url: /resources/dice-formulas-and-customization/
+              - generic [ref=e204]: Dice Roller Formula Guide
+      - region "Maker’s Note" [ref=e206]:
+        - generic [ref=e209]: About
+        - heading "Maker’s Note" [level=2] [ref=e210]
+        - generic [ref=e211]:
+          - img "Jason Holt" [ref=e213]
+          - generic [ref=e214]:
+            - paragraph [ref=e215]:
+              - text: Hi, I’m Jason. I build and maintain the
+              - strong [ref=e216]: official Mythic GME 2e apps
+              - text: in partnership with Word Mill Creative. Most days that means moving between code, support messages, Discord, and the feature board, looking for places where the apps can make real sessions smoother. I want the apps to make Mythic feel ready to play in one place, without pulling attention away from the story.
+            - paragraph [ref=e217]:
+              - link "Read the full story" [ref=e218] [cursor=pointer]:
+                - /url: /about/
+                - text: Read the full story
+    - contentinfo [ref=e220]:
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - img "Jason Holt Digital" [ref=e224]
+            - generic [ref=e225]:
+              - strong [ref=e226]: Jason Holt Digital
+              - text: Official Mythic GME 2e Apps
+          - link "Submit a feature request" [ref=e227] [cursor=pointer]:
+            - /url: http://feedback.jasonholtdigital.com/board
+            - generic [ref=e229]: Submit a feature request
+        - navigation "Footer" [ref=e230]:
+          - list [ref=e231]:
+            - listitem [ref=e232]:
+              - link "Apps" [ref=e233] [cursor=pointer]:
+                - /url: /apps/
+                - generic [ref=e235]: Apps
+            - listitem [ref=e236]:
+              - link "Resources" [ref=e237] [cursor=pointer]:
+                - /url: /resources/
+                - generic [ref=e239]: Resources
+            - listitem [ref=e240]:
+              - link "Support" [ref=e241] [cursor=pointer]:
+                - /url: /support/
+                - generic [ref=e243]: Support
+            - listitem [ref=e244]:
+              - link "Contact" [ref=e245] [cursor=pointer]:
+                - /url: /support#contact-panel
+                - generic [ref=e247]: Contact
+            - listitem [ref=e248]:
+              - link "Blog" [ref=e249] [cursor=pointer]:
+                - /url: /blog/
+                - generic [ref=e251]: Blog
+            - listitem [ref=e252]:
+              - link "About" [ref=e253] [cursor=pointer]:
+                - /url: /about/
+                - generic [ref=e255]: About
+        - generic "Social links" [ref=e256]:
+          - link "Discord" [ref=e257] [cursor=pointer]:
+            - /url: https://discord.gg/PEDHrhzcnk
+          - link "YouTube" [ref=e259] [cursor=pointer]:
+            - /url: https://www.youtube.com/@JasonHoltDigital
+          - link "GitHub" [ref=e261] [cursor=pointer]:
+            - /url: https://github.com/kingdomseed
+          - link "itch.io" [ref=e263] [cursor=pointer]:
+            - /url: https://itch.io/profile/jasonholtdigital
+          - link "Instagram" [ref=e265] [cursor=pointer]:
+            - /url: https://instagram.com/jasonholtdigital
+          - link "Subscribe via RSS" [ref=e267] [cursor=pointer]:
+            - /url: /rss.xml
+            - img [ref=e268]
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - text: © 2026 Jason Holt Digital ·
+          - link "Privacy" [ref=e271] [cursor=pointer]:
+            - /url: /privacy/
+            - text: Privacy
+          - text: ·
+          - link "Terms" [ref=e273] [cursor=pointer]:
+            - /url: /terms/
+            - text: Terms
+          - text: ·
+          - link "Contact" [ref=e275] [cursor=pointer]:
+            - /url: /support#contact-panel
+            - text: Contact
+        - link "Back to top" [ref=e277] [cursor=pointer]:
+          - /url: "#site"
+          - generic [ref=e279]: Top
+    - 'button "Current language: English. Change language." [ref=e281] [cursor=pointer]':
+      - generic [ref=e283]: EN
+  - generic [ref=e286]:
+    - button "Menu" [ref=e287]:
+      - img [ref=e289]
+      - generic: Menu
+    - button "Inspect" [ref=e293]:
+      - img [ref=e295]
+      - generic: Inspect
+    - button "Audit" [ref=e297]:
+      - img [ref=e299]
+      - generic: Audit
+    - button "Settings" [ref=e302]:
+      - img [ref=e304]
+      - generic: Settings
