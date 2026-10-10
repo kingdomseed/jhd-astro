@@ -1,6 +1,6 @@
 ---
 title: "Escrevendo e Organizando Cenas"
-summary: "Inicie, jogue e encerre cenas e mantenha suas anotações organizadas. Fator de Caos: uma nova Cena assume sozinha o Fator de Caos atual do Diário. Salvar sua Cena mais recente define o Fator de Caos do Diário com o valor dessa Cena, e editar uma Cena anterior não altera o Fator de Caos atual. Anote suas interpretações dos resultados no Resumo de uma Cena, se quiser. De qualquer forma, o resultado do Teste de Cena é salvo no Registro de Aventura como Cena Esperada, Cena Alterada ou Cena de Interrupção. Ele não é adicionado ao Resumo de uma Cena."
+summary: "Inicie, jogue e encerre cenas e mantenha suas anotações organizadas."
 category: "start-here"
 order: 3
 icon: "fa-slab fa-regular fa-film"

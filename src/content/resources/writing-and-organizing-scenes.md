@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Writing and Organizing Scenes"
-summary: "Start, run, and wrap scenes and keep your notes tidy. Chaos Factor: a new Scene takes the Journal's current Chaos Factor by itself. Saving your latest Scene sets the Journal's Chaos Factor to the value on that Scene, and editing an earlier Scene leaves the current Chaos Factor alone. Note your own interpretations of results in a Scene's Summary if you like. Either way, the Scene Check result is saved to the Adventure Log as Expected Scene, Altered Scene, or Interrupt Scene. It is not added to a Scene's Summary."
+summary: "Start, run, and wrap scenes and keep your notes tidy."
 category: "start-here"
 order: 3
 icon: "fa-slab fa-regular fa-film"
@@ -78,4 +78,4 @@ Scenes end when the main action resolves, or when the story’s structure natura
 - Keep Scene notes in a portable notetaking pattern (bullets + sub‑bullets) for a quick skim later, and add your own interpretation of a Fate or Scene Check result if it helps. Either way, the Scene Check result is saved to the Adventure Log as Expected Scene, Altered Scene, or Interrupt Scene. It is not added to a Scene's Summary.
 
 > ### Many Pathways
-> Mythic is very flexible. There's not a "wrong way" to play and many of the variations explored in the Magazines, Variations, the comumunity, and Tana's blog clearly embody the spirit of play which is flexible and caters to your style. As you play, you will discover what works for you and what doesn't. 
+> Mythic is very flexible. There's not a "wrong way" to play and many of the variations explored in the Magazines, Variations, the community, and Tana's blog clearly embody the spirit of play which is flexible and caters to your style. As you play, you will discover what works for you and what doesn't. 
