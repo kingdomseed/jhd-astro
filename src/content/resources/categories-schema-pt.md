@@ -47,16 +47,18 @@ Categorias fornecem nomes e ícones para grupos de tabelas. O app vem com itens 
 
 - `id` (string em kebab-case)
 - `displayName` (string)
-- `iconKey` (string; chave de registro de ícone do app)
-- `sortOrder` (inteiro)
+- iconKey (string). O arquivo incluído usa chaves como dice, user, map, book e question. Uma chave que o app não conhece mostra um ícone de ponto de interrogação.
+- sortOrder (inteiro, números menores primeiro). As categorias criadas no app recebem 900, e você só pode mudar a ordem editando este arquivo.
 - `isBuiltIn` (booleano)
 - Opcional: `description` (string), `displayNameTranslations` (objeto)
 
+Todo item precisa de id, displayName, iconKey, sortOrder e isBuiltIn. Se algum estiver faltando ou tiver o tipo errado, o app não consegue carregar nenhuma categoria do arquivo e tenta salvar uma cópia chamada invalidated-categories com data e hora.
+
 ## Ciclo de vida no app
 
-- Primeira execução: o app copia um `categories.json` base para seus Documentos (meaning_tables/categories.json)
-- Integrados vivem em `defaultCategories` e podem ser restaurados com "Restaurar padrões"
-- Adicione suas próprias categorias apenas ao array `categories`
+- Cópia da base: com premium, o app pode copiar um `categories.json` base para seu local de armazenamento atual (meaning_tables/categories.json), que pode ser a pasta do próprio app, uma pasta personalizada ou o iCloud. Normalmente ele mantém um arquivo existente em vez de sobrescrevê-lo.
+- As categorias embutidas podem ser restauradas com Redefinir categorias para os padrões em Configurações de tabelas. Categorias cujo isBuiltIn é false são mantidas.
+- Defina isBuiltIn como false nas suas próprias categorias. O app se guia por essa marcação, não pelo array, e move cada item para o array correspondente na próxima vez que salvar.
 
 ## Downloads
 

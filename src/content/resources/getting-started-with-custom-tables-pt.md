@@ -65,7 +65,7 @@ related:
 
 ## Onde encontrar Tabelas Personalizadas
 
-Abra a funcionalidade de Tabelas Personalizadas através da gaveta de navegação ou, no desktop, pelo botão de ícone à direita.
+No celular, abra a gaveta de navegação e toque em EDITOR DE TABELAS, em Ferramentas. Em um tablet ou computador, selecione Tabelas Personalizadas no trilho de navegação ou, no Layout clássico de 6 painéis (Desktop), clique no botão de ícone Tabelas Personalizadas no canto inferior direito.
 
 > ### Como Desbloquear
 > - Google Play, Amazon e Apple App Store: requer uma compra no aplicativo para desbloquear Tabelas Personalizadas.
@@ -73,27 +73,27 @@ Abra a funcionalidade de Tabelas Personalizadas através da gaveta de navegaçã
 
 ## Faça sua primeira tabela de Significado
 
-1) Abra Tabelas Personalizadas → Nova → Tabela de Significado
-2) Nomeie-a e escolha (ou crie) uma categoria
+1) No celular, abra a aba Oráculo e toque no botão + para iniciar o assistente Criar Tabela. Em um tablet ou computador, selecione o primeiro ícone da barra lateral esquerda (Tabelas de Significado) e clique no botão + abaixo dos ícones.
+2) Dê um nome e escolha uma categoria na lista. Para adicionar uma categoria sua, crie-a antes com o botão + na aba Categoria.
 3) Defina o intervalo (para uma primeira tabela, tente 1–10 ou 1–20)
-4) Adicione entradas para que o intervalo completo seja coberto sem lacunas ou sobreposições
-5) Polimento opcional: descrição, tags, traduções, ícone
+4) Adicione seus itens. No assistente do celular, o app os distribui igualmente pelo intervalo para você.
+5) Opcional: descrição, tags, traduções. Só as tabelas de Foco do Evento e as categorias têm ícone próprio.
 6) Salve e teste rolando
 
 > ### Dicas
 > - Comece pequeno (1d6/1d10) e expanda mais tarde para 1d100
 > - Mantenha intervalos contínuos (sem lacunas/sobreposições). O app valida isso para você
-> - Use entryRollOn para encadear resultados a outras tabelas ou a Listas de Aventura (Personagens/Tramas/Características)
+> - Use Links de entrada em um item para rolar em outra tabela, em uma Lista de Aventura (Personagens, Tramas ou Aspectos) ou em uma Lista Personalizada quando esse item sair.
 
 ## Faça uma tabela de Foco de Evento
 
-1) Abra Tabelas Personalizadas → Nova → Foco de Evento
+1) No celular, abra a aba Evento e toque no botão +. Em um tablet ou computador, selecione o segundo ícone da barra lateral esquerda (Foco do Evento) e clique no botão + abaixo dos ícones.
 2) O intervalo é tipicamente 1–100 (percentual), mas intervalos menores funcionam também
-3) Adicione entradas que descrevam que tipo de evento acontece (ex., Ação de NPC, Evento de Trama)
+3) Adicione itens que descrevam que tipo de evento acontece (por exemplo, Ação de PNJ ou Avançar em Direção a uma Trama).
 4) Salve e tente algumas rolagens de teste
 
 > ### Dica
-> Cada Tabela pode ser vinculada ou aninhada sob outra tabela e cada entrada também pode ser vinculada ou aninhada sob outra tabela para rolar imediatamente em outra tabela. Você também pode vincular Listas dessa maneira.
+> Depois de criar uma tabela, abra-a e use Tabelas vinculadas na aba Controles para rolar outras Tabelas de Significado sempre que esta tabela for rolada. Use Links de entrada para vincular um único item a uma tabela ou lista.
 
 ## Traduções e metadados
 
@@ -103,11 +103,11 @@ Abra a funcionalidade de Tabelas Personalizadas através da gaveta de navegaçã
 
 ## Downloads iniciais
 
-Use estes modelos e exemplos como pontos de partida. Importe-os de Tabelas Personalizadas → Importar. Veja a seção de Downloads abaixo para arquivos.
+Use estes modelos e exemplos como pontos de partida. Importe-as pela aba Arquivos em Tabelas Personalizadas (o ícone Importação/Exportação em um tablet ou computador). Toque em Tabelas Oracle para um arquivo de Tabela de Significado ou em Tabelas de Foco de Evento para um arquivo de Foco do Evento. Veja a seção de Downloads abaixo para arquivos.
 
 ## O que não é suportado ainda
 
-- Tabelas com peso não são suportadas ainda no app. Construa tabelas baseadas em intervalo (1..N) em vez disso.
+- Ainda não é possível montar manualmente uma tabela com pesos. A opção Ponderado no editor está marcada como Em breve. Você pode importar um CSV de Tabela de Significado com as colunas result e weight, com até 100 linhas. Para montar uma tabela manualmente, use tabelas baseadas em intervalo (1..N).
 
 ## Próximos passos
 

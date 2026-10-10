@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "A Guide to the Mythic Journals"
 summary: "Create, import, and export Journals; understand how Chaos Factor, Scenes, Lists, and Log Entries fit together."
 category: "adventure-journals"
@@ -30,13 +31,13 @@ related:
 ---
 
 # What is an adventure journal
-The adventure journal is your saved game — a single place where you record what happened, why it happened, and what changed. In the app it’s stored as JSON; you can export it as JSON (for round‑trip) or Markdown (for reading and sharing alongside your notes).
+A Journal is the app's saved record of one adventure or campaign: a single place where you record what happened, why it happened, and what changed. In the app it’s stored as JSON; you can export it as JSON (for round‑trip) or Markdown (for reading and sharing alongside your notes). Markdown export is for reading only. It leaves out Custom Lists, Thread Progress Tracks, and Keyed Scenes, and the app cannot import it.
 
 ## What it contains (at a glance)
 
-- Chaos Factor timeline: the dial (1–9) at key moments; snapshot it at the start of each scene
+- Chaos Factor timeline: the dial (1–9) at key moments. The app saves the Journal's current Chaos Factor on each new scene. Editing an earlier scene does not change the Journal's Chaos Factor, and only your latest scene sets it.
 - Scenes: short titles + summaries that mark the beats of play
-- Oracle log: Fate questions (odds, roll, outcome) and Meaning Table results with your interpretation
+- Adventure Log: Fate questions (odds, roll, outcome) and Meaning Table results. To add your own interpretation, tap the add button in the Adventure Log header, write it in the Add Narrative sheet, and tap Add to Log.
 - Adventure Lists: Characters, Threads, and Features you reference and update between scenes
 - Bookkeeping: end‑of‑scene adjustments (CF up/down) and any list changes
 
@@ -80,7 +81,7 @@ End‑of‑scene bookkeeping
 
 - One file per campaign or adventure
 - Names you can scan: `my-adventure-2025-09.md` or `journal-elderspire.md`
-- Backups: the app automatically creates backups; you can also export to your preferred backup location.
+- Backups: Saving a Journal does not make a separate backup of it, so go to Settings, then Files, and use Export journal as JSON to keep your own copy. The app also tries to keep a backup copy when it moves your Journals to another storage location or into or out of iCloud, and, in the iOS, Android, Windows, macOS, and Linux apps, when a restore replaces a Journal. A restore in the web app keeps no copy. Exception: when a successful iCloud save finds unresolved conflicting versions of a Journal, the app tries to copy those versions into backups before marking them resolved. An ordinary save with no conflict makes no backup.
 - Exports: use app → Settings → Files to export JSON (round‑trip) or Markdown (shareable)
 
 ## No programming required
@@ -97,10 +98,10 @@ End‑of‑scene bookkeeping
 
 ## How it maps to Mythic
 
-- Journal: Your campaign/session container. Holds the Chaos Factor, Scenes, Adventure Lists (Characters/Threads/Features), and the game Log.
+- Journal: Your campaign/session container. Holds the Chaos Factor, Scenes, Adventure Lists (Characters/Threads/Features), and the game Log. A Journal also holds your Custom Lists, Thread Progress Tracks, and Keyed Scenes.
 - Chaos Factor (CF): Core Mythic dial (1–9) controlling unpredictability. Updated over time (typically scene-to-scene) and affects Scene Checks and oracles.
 - Scenes: Narrative segments. Scene type (Expected/Altered/Interrupt) is captured as a Log Entry from a Scene Check, not stored on the scene itself.
-- Adventure Lists: The three lists used by Mythic for inspiration and events:
+- Adventure Lists: Characters, Threads, and Features. Threads and Characters are the two Lists in the core Mythic rules, and Features is the third List the rules add for playing a prepared adventure.
   - Characters: NPCs, factions, personas that can appear in events.
   - Threads: Plotlines/objectives that can be advanced/closed or referenced by events.
   - Features: Places, objects, or concepts that color events and context.
@@ -108,23 +109,25 @@ End‑of‑scene bookkeeping
 
 ## Basic workflow
 
-1) Start with the empty template linked above. Make a copy and rename it from `journal_template.json` to something meaningful (for example: `my-adventure-2025.json`).
+1) For ordinary play you don't need the template. Go to Settings, then Files, tap Create New Journal, and type a name. If the name is already in use, the app does not replace that Journal unless you separately confirm the overwrite. If you confirm, it creates an empty Journal with that name and the existing Journal's contents are replaced. As you play, you add Scenes and Lists in the app, and the app records your rolls in the Adventure Log.
+2) The app saves the Journal's current Chaos Factor on each new scene. Editing an earlier scene does not change the Journal's Chaos Factor, and only your latest scene sets it. Fate rolls, Scene Checks, and Random Events are saved to the Adventure Log automatically, so you don't need to record them yourself.
+3) Optional manual JSON editing: the empty template linked above, `journal_template.json`, uses the legacy import format with PascalCase keys. The app can import it, but it is not a sample of the app's current export, which uses different key names. Make a copy and rename it to something meaningful (for example: `my-adventure-2025.json`).
    - Keep the `.json` extension—this helps the app and your system recognize the file.
    - Tip: Add a date or campaign name to avoid overwriting old backups.
-2) Fill in `JournalName`, keep `ChaosFactor` in 1–9, and add Scenes/Lists as you play.
-3) Add Log Entries as you make Fate Chart/Check rolls, Scene Checks, and Random Events.
-4) When a scene begins, snapshot the current CF into `SceneChaosFactor`. Record scene type outcomes (Expected/Altered/Interrupt) via a Scene Check log entry.
-5) Export your current journal from Settings → Files (JSON for round‑trip, Markdown for sharing/readability).
+   - Fill in `JournalName` and keep `ChaosFactor` in 1–9. The import requires both.
+   - If you add Scenes by hand, set each Scene's `SceneChaosFactor` yourself.
+4) Export your current journal from Settings → Files: JSON for a machine-readable copy, Markdown for sharing/readability.
 
 ## Tips
 
 - Each journal typically represents a single adventure.
 - Each journal file includes its own Lists, Scenes, and log data. 
-- Sharing own mobile opens a Share sheet that makes it easy to send to your preferred location or share with friends.
+- On iOS and Android, exporting opens the share sheet so you can send the file where you like. On Windows, macOS, and Linux it opens a save dialog instead.
 - Journals can be exported as Markdown for use in other apps
 
 ### Reassurance for non‑tech folks
 
-- You won’t break anything by trying. If a file doesn’t look right, the app will tell you before importing.
+- When you import a file that holds one Journal, the app shows a review sheet first and lists any problems under Problems found. A file that holds a list of Journals is imported at once with no review, and a Journal whose name is already in use gets a number added to its name.
+- Overwrite existing journal is a choice you make on import. It replaces the Journal already in the app, and this import keeps no copy of it, so export that Journal first if you might want it back.
 - You never need to edit JSON by hand—use the app to create and export.
 - If you do peek inside a JSON file, it’s just readable text. Close it without saving if you’re unsure.

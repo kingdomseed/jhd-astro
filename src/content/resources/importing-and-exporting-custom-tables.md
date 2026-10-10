@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Importing & Exporting Custom Tables"
 summary: "Prepare CSV, TXT, PSV, and JSON tables for import, then export clean bundles to share."
 category: "custom-tables"
@@ -24,8 +25,9 @@ related:
 ## Where to import/export
 
 - Open the Custom Tables feature in the app (not in Settings).
-- To import a brand-new table, use the **Files** tab in Custom Tables. The tooltip may say **Import/Export**.
-- On desktop and tablet, Files is the fourth tab on the left. On phones, it is the fourth tab in the bottom tab bar.
+- To import a brand-new table, use the **Files** tab in Custom Tables.
+- On desktop and tablet, it is the fourth icon in the left sidebar, with the tooltip Import/Export. On phones, it is the Files tab, fourth in the bottom tab bar.
+- To share or back up tables, export one table from its menu, or use an export option on the Files tab and choose Single JSON File. You can import either file from the Files tab, but a ZIP export must be unzipped and its files imported one at a time.
 - Unlocking note: on Google Play, Amazon, and the Apple App Store, Custom Tables requires an IAP; Itch.io and Microsoft Store include it with a higher‑priced purchase.
 
 ![Custom Tables Files tab with Oracle Tables and Event Focus Tables import options](/images/resources/custom-tables/custom-tables-files-tab.png)
@@ -48,10 +50,10 @@ When you edit an existing table, the table editor's Import tab has two import pa
 
 - **Replace All Entries:** paste TXT, PSV, or CSV content into the text box, then choose Replace All Entries.
 - **Import from File:** choose a `.json`, `.csv`, `.txt`, or `.psv` table file.
-- JSON files can merge when the imported table ID matches the table you are editing. If the IDs do not match, choose Replace All to overwrite the table.
+- JSON files can merge when the imported table ID matches the table you are editing. If the IDs do not match, choose Replace All to overwrite the table. Save your changes before you import a JSON file here. A merge or Replace All starts from the saved table, so edits you have not saved are discarded.
 - CSV, TXT, and PSV files replace the current entries in the editor. The change is staged until you choose Create or Update.
 
-![Existing table editor Files tab with the Replace All Entries paste box](/images/resources/custom-tables/editor-files-paste.png)
+![Existing table editor Import tab with the Replace All Entries paste box](/images/resources/custom-tables/editor-files-paste.png)
 
 This paste box is for replacing entries in a table you are already editing. It is not the brand-new-table import flow.
 
@@ -82,8 +84,8 @@ Optional columns:
 Notes
 - Header names are case‑insensitive
 - `table_type` is optional; if used, only the first data row should contain a value
-- In the editor paste box, CSV must be pasted as CSV with its header row; it should not be entered as plain TXT rows
-- Conflicting or invalid values are rejected with a clear error message
+- In the editor paste box, paste CSV with its header row, or as rows that start with two numbers and a result.
+- If a single table cannot be read or imported, the Files tab shows an error. From a file that holds several tables, the app imports the tables it can and skips the others, then shows how many were imported out of the total and names the ones that were not. It may not say which row or value caused the problem.
 
 Samples
 - Meaning Template (CSV): [Download](/downloads/meaning_table_template.csv)
@@ -116,7 +118,7 @@ Samples
 
 - Use JSON when you want to move a complete table between app installs or share an app-ready table with someone else.
 - JSON keeps more of the table than the short text formats, including translations, tags, and links to other tables.
-- The file says whether it is a Meaning Table or Event Focus table with `tableType`: `meaning-table` or `event-focus`.
+- A JSON file can set `tableType` to `meaning-table` or `event-focus`. For a single table, the card you tap on the Files tab sets the table type. In a Single JSON File export that holds several tables, each table keeps its own tableType, a table without one takes the card's type, and a table with an invalid tableType is not accepted.
 - For writing a simple table by hand, CSV, TXT, or PSV is usually easier.
 
 Samples
@@ -127,14 +129,14 @@ Samples
 
 ## Foundry VTT JSON (auto‑mapping)
 
-Detected automatically when a JSON includes a `name` and a `results` array whose entries contain `text`. `range` arrays are used when present.
+With the Oracle Tables card, a JSON file is treated as Foundry VTT when it has a name and a results array whose entries contain text. With the Event Focus Tables card, the name must also contain event, focus, or plot, or a result must contain PC, NPC, or Thread. `range` arrays are used when present.
 
 Mapping highlights
 - `name` → `displayName`
 - `description` → `description`
 - `results[].text` → `entries[].result`
 - `results[].range` → `entries[].range` (e.g., `[min, max]`)
-- Foundry metadata is preserved under `data.foundry`
+- Foundry metadata is preserved under data.foundry when you import through Oracle Tables. An Event Focus Tables import does not keep it.
 - Event Focus imports enforce `categoryId = "event-focus"`
 
 Samples
@@ -145,8 +147,8 @@ Samples
 
 - Range coverage: full table range with no gaps or overlaps
 - Headers spelled correctly (case‑insensitive)
-- No blank required fields (`result`, etc.)
-- If a file is invalid, the app shows an error and refuses to save, so your data stays safe
+- Fill in result on every row. A ranged Meaning Table CSV imports a blank result as an empty entry, and an Event Focus CSV drops the row.
+- If a single table cannot be read or imported, the Files tab shows an error. From a file that holds several tables, the app imports the tables it can and skips the others, then shows how many were imported out of the total and names the ones that were not. It may not say which row or value caused the problem.
 
 ## Next steps
 

@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Getting Started with the Mythic Apps"
 summary: "Start with the Fate Chart, then use Lists, Scenes, and Meaning Tables to begin play. No accounts, no internet, just play."
 category: "start-here"
@@ -27,15 +28,15 @@ heroAlt: "Illustration of a person with a friendly bot"
 # Structured steps (images optional)
 steps:
   - title: "Install on your device(s)"
-    body: "Download and install the desktop or mobile app and launch--the app creates your first saved game--My Journal. Rename it on the settings screen."
+    body: "Download and install the desktop or mobile app and launch it. The app creates your first Journal, called My Journal. To rename it, open SETTINGS, go to Files, tap the menu on the Journal's row, and choose Rename Journal."
   - title: "Set your Chaos Factor"
     body: "On first launch you’ll see the Fate Chart. Set CF (1–9) to match your scenario; adjust later as needed."
   - title: "Ask, roll, and record"
-    body: "Type a yes/no question, pick odds, and roll. Record outcomes in your scene notes to keep story continuity. You can enable writing your question before the role on the screen settings."
+    body: "Pick odds and roll. To type a question with each roll, tap the gear on the Fate screen and turn on Prompt for Question Before Roll, and the app asks for the question when you roll. Pick odds and roll. The app saves every Fate roll, Scene Check, Random Event, and Meaning Table roll to the Adventure Log, so use a Scene's Summary only for your own notes."
   - title: "Use Lists, Scenes, and Meaning Tables"
     body: "It's a good idea to add Characters and Threads to your Lists before starting your first game. Use Scenes to summerize or predict, and meaning tables for interpreting outcomes."
 ---
-Welcome! This quick guide is based on the app itself: you start at the Fate Chart and move between Lists, Scenes, and Meaning Tables as you play. There are no accounts or servers—everything happens on your device.
+Welcome! This quick guide is based on the app itself: you start at the Fate Chart and move between Lists, Scenes, and Meaning Tables as you play. Your Journals are stored on your device. On iPhone, iPad, and the Mac App Store version you can turn on Use iCloud Sync to keep them in iCloud.
 
 > What you need: Bring these to the table
 > - Your favorite RPG and character(s) created (keep sheets handy)
@@ -52,7 +53,7 @@ Welcome! This quick guide is based on the app itself: you start at the Fate Char
 
 ### 1) Install
 
-Install the desktop app or the mobile app from your platform’s store and launch it. Once launched, the app automatically creates your first journal for you called 'My Journal'. You can rename this in settings.
+Download and install the desktop or mobile app and launch it. The app creates your first Journal, called My Journal. To rename it, open SETTINGS, go to Files, tap the menu on the Journal's row, and choose Rename Journal.
 
 ### 2) Start at the Fate Chart (or switch to Fate Check)
 
@@ -60,24 +61,24 @@ On first launch, the app opens to the Fate Chart. You can switch the default to 
 
 > Tip: Change A Screens Settings
 > - There's a settings wheel that let's you change the settings for each screen.
-> - You can enable more details about rolls on the Fate Chart screen
+> - To show more roll detail in the Adventure Log on a phone, open SETTINGS, choose the Game Behavior tab, and open Adventure Log Settings. On a tablet or desktop, tap the gear on the Adventure Log panel.
 > - You can also turn on the ability to ask a question before each roll
 
 ### 3) Core screens you’ll use every session
 
 - Fate Chart (and Fate Check): ask questions, choose odds, roll, and interpret answers.
 - Lists: track Characters, Threads, and Features. These lists feed your event rolls and bring elements into your story in unexpected ways.
-- Scenes: jot a title and summary; snapshot the Chaos Factor for the scene start; add notes as you play or wait until the conclusion of a scene and summerize.
-- Meaning Tables: Action/Subject and other tables for giving you the inspiration to interpret your results.
+- Scenes: jot a title and summary; add notes as you play or wait until the conclusion of a scene and summerize.
+- Meaning Tables: Action Meaning 1, Action Meaning 2, and other tables that give you words to interpret.
 
 Layout notes
 - Mobile: each area is its own screen; switch using the navigation drawer on the top left.
-- Desktop: all core areas are visible together so you can roll and write without switching.
+- Tablet and desktop: Home shows Meaning Tables, the Adventure Log with the Fate controls, and Lists side by side, and Scenes has its own entry in the navigation rail. On a desktop computer you can turn on Classic 6-Panel Layout (Desktop) to see every area on one screen.
 
 ### 4) A simple first session flow
 
 1) Set Chaos Factor (CF) in the Fate Chart
-2) Create a Scene with a short summary; record the scene’s starting CF
+2) Create a Scene with a short summary. The Scene takes the Journal's current Chaos Factor by itself, so there is nothing to record.
 3) Begin the scene by asking your first yes/no Fate question in the Fate Chart and roll
 4) If you get stuck, roll on Meaning Tables for inspiration
 5) Add items to Lists (Characters, Threads, Features) as they emerge
@@ -86,7 +87,7 @@ Layout notes
 ## Tips & troubleshooting
 
 - Unsure about how to start? Keep the book nearby and start with likely/50‑50 early on
-- Chaos factor determines how likely exceptional results occur
+- The Chaos Factor changes how likely a Yes answer is and how often a Random Event happens.
 - On mobile, try landscape when you want more context while playing
 
 ## Next steps

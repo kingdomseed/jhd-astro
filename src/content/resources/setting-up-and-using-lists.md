@@ -1,6 +1,7 @@
 ---
+fullArticleAvailable: true
 title: "Setting Up and Using Lists"
-summary: "Build reusable Mythic Lists for Characters, Threads, and Features."
+summary: "Build Mythic Lists for Characters, Threads, and Features. Each Journal has its own lists."
 category: "start-here"
 order: 2
 icon: "fa-slab fa-regular fa-list"
@@ -21,11 +22,11 @@ This guide distills the essential steps for starting players using the Lists mod
 
 ## 1) The purpose of Lists
 
-Lists are fundamental tools in Mythic GME 2e and act as a creative engine for your narrative.
+Lists are fundamental tools in Mythic GME 2e and act as a creative engine for your narrative. Build Mythic Lists for Characters, Threads, and Features. Each Journal has its own lists.
 
 - Tracking elements: The Threads list records your PC’s goals, missions, quests, or tasks. The Characters list tracks important NPCs and other active elements (factions, places, objects, etc.).
 - Driving Random Events: Lists function as dynamic random tables. When a Random Event occurs, the system selects an entry from a list (e.g., which goal progresses or which character acts).
-- Organized workspace: The app’s Lists module gives you a dedicated space to manage, reference, and update these elements as you play.
+- One place for it all: the Lists screen is where you manage, reference, and update these elements as you play.
 
 ## 2) Getting started: seed your adventure
 
@@ -40,18 +41,18 @@ Tip: Keep names short and specific. You can expand details later in scene notes.
 
 List management typically happens during end‑of‑scene Bookkeeping.
 
-- Weighted entries: To reflect importance, you can add an additional entry for a Thread or Character that was highly relevant in the scene (up to 3 entries total for an element). This increases its chance of being selected in future Random Events.
+- Weighted entries: To reflect importance, you can add an additional entry for a Thread or Character that was highly relevant in the scene. This increases its chance of being selected in future Random Events. Tap the duplicate button on an entry to copy it to the next empty line. The app stops at 3 copies unless you turn off Keep list entry copies limited to 3 in List Settings.
 - Remove elements: Remove Threads that are completed/abandoned or Characters that are no longer relevant.
 
 The app’s Lists module makes these edits quick, and Random Events will automatically use your current list state.
 
 ## 4) Prepared adventures: the Adventure Features list
 
-When using Mythic with a prepared (published) adventure, add a third list (or use instead of Threads): Adventure Features.
+When you use Mythic with a prepared adventure, fill in the Features tab. It is already on the Lists screen next to Threads and Characters.
 
 - Purpose: Track unique elements of the adventure that can become encounters or triggers (e.g., wandering monsters, staged visions, villain hit‑and‑run tactics, special disease/poison progressions).
 - Relationship: A Feature can overlap with Characters (e.g., “Vampire Lord attacks” may coexist with “Vampire Lord” on Characters).
-- Random Events integration: With prepared adventures, use the Prepared Adventure Event Focus table instead of the standard focus. If you roll “Adventure Feature” (e.g., 1–20 on d100 per that table), roll on your Adventure Features list to select the unique element the event concerns. Depending on the feature, you may or may not need further Meaning rolls.
+- Random Events integration: With prepared adventures, use the Prepared Adventure Event Focus table instead of the standard focus. If you roll Adventure Feature, the app rolls your Features list. If Roll Event Meaning automatically is on (it is off by default), it also rolls an Action Meaning 1 and Action Meaning 2 pair, even if the event already brought other linked results. With the standard Action tables this gives one word from each table; if the Action tables are configured with weights or without their pairing, you may get extra words. Use the pair only when the Feature needs more detail.
 
 Summary (lists you’ll use)
 
@@ -64,12 +65,12 @@ All lists share the practical structure of up to 5 sections with 5 lines each (2
 ## 5) Using Lists in play
 
 - Random selection: When a Random Event focuses on Threads/Characters (or Features in prepared play), the app selects an element automatically. This emulates rolling for a section and then a line on a paper list.
-- “Choose” option: If a random pick hits an empty line, treat it as “Choose”. Use context to pick a sensible element from the list or roll again for a surprise.
+- “Choose” option: If a roll lands on an empty line, the app shows Choose and you pick an entry yourself. Turn on Never Roll "Choose" in List Settings if you want the app to reroll its own list rolls until they land on a filled line, as long as the list has one.
 
 ## Tips
 
-- Keep your lists tidy: archive/remove what’s stale; add what matters now
-- Use duplication (up to 3 entries) to nudge focus toward important elements
+- Keep your lists tidy: delete what is stale and use CLEAN UP to close the gaps while keeping copies. CONDENSE LIST is a separate control that also closes the gaps and reduces weighting, because an entry listed three or more times drops to two copies and an entry listed twice drops to one. Add what matters now.
+- Use duplication to nudge focus toward important elements. Tap the duplicate button on an entry to copy it to the next empty line. The app stops at 3 copies unless you turn off Keep list entry copies limited to 3 in List Settings.
 - Update lists during Bookkeeping so they reflect the last scene’s reality
 - Pair lists with Scenes: reference lists in your scene notes so threads and actors remain visible in context
 

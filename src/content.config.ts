@@ -31,6 +31,7 @@ const resources = defineCollection({
       icon: z.string().default("fa-slab fa-regular fa-book-open"),
       duration: z.string().optional(),
       externalUrl: z.url().optional(),
+      fullArticleAvailable: z.boolean().optional(),
       updated: z.coerce.date().optional(),
       keywords: keywordsField,
       tags: tagsField,

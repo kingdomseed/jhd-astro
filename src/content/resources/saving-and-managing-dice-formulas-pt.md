@@ -33,8 +33,8 @@ related:
 
 - Abra o Rolador de Dados.
 - Use os controles na tela:
-  - Desktop: botões "Salvar Fórmulas" e "Gerenciar Fórmulas" no painel do Rolador de Dados.
-  - Celular: botões "Salvar Fórmulas" e "Gerenciar Fórmulas" abaixo do rolador.
+  - Desktop: botões "Salvar Fórmula" e "Gerenciar Fórmulas" no painel do Estúdio de Dados.
+  - Abra o Estúdio de Dados. No celular, Salvar Fórmula e Gerenciar Fórmulas são botões abaixo do campo da fórmula; em um tablet ou computador, ficam acima dele.
 
 ## O que você usará
 
@@ -49,7 +49,7 @@ related:
 ## Ações principais
 
 1) Salve sua(s) fórmula(s) atual(is)
-   - Toque em "Salvar Fórmulas" para adicionar a fórmula atual à sua lista Salva. Dê um nome curto e reconhecível.
+   - Toque em "Salvar Fórmula" para adicionar a fórmula atual à sua lista Salva. Dê um nome curto e reconhecível.
 
 2) Gerencie a lista
    - Toque em "Gerenciar Fórmulas" para reordenar ou remover entradas.
@@ -57,25 +57,25 @@ related:
 
 3) Exportar
    - Toque em "Gerenciar Fórmulas" → Exportar para baixar um arquivo JSON que você pode fazer backup ou compartilhar.
-   - Importante: Não renomeie o arquivo; mantenha-o como `saved_formulas.json`. (Nomes personalizados serão suportados mais tarde com Sacos de Dados.)
+   - Você pode renomear o arquivo exportado. Importar não exige um nome de arquivo específico. Nos apps nativos, o arquivo precisa terminar em .json (com letras maiúsculas ou minúsculas). Na web, o seletor pede arquivos .json, mas o app não confere a extensão separadamente. O nome do arquivo não garante que o conteúdo seja válido.
 
 4) Importar
    - Toque em "Gerenciar Fórmulas" → Importar e escolha um arquivo JSON.
-   - Se você importar uma lista que se sobrepõe às suas entradas existentes, escolha se deseja mesclar ou substituir.
+   - Importar não pergunta nada. Adiciona todas as fórmulas do arquivo ao final da sua lista, inclusive as que você já tem.
 
 ## Dicas
 
 - Mantenha nomes curtos; adicione qualquer contexto extra na descrição.
-- Você pode organizar favoritos em arquivos separados—exporte um conjunto, depois importe outro conjunto quando necessário.
-- Se em dúvida, exporte primeiro para criar um backup.
+- Você pode organizar favoritos em arquivos separados. Importar adiciona à sua lista e nunca a substitui, então importar um segundo conjunto deixa os dois conjuntos na lista. Importar um conjunto que já está na sua lista adiciona uma segunda cópia de cada fórmula. Cada fórmula importada recebe um id novo, então Editar e Excluir em uma cópia afetam só essa cópia.
+- Exporte para guardar uma cópia da sua lista. O app não consegue restaurar essa cópia por cima da lista atual, porque Importar só adiciona itens.
 
 ## Usuários avançados
 
-- O app entende algumas formas compatíveis na importação e exporta um formato envolvido canônico.
+- Importar aceita dois formatos: um objeto com uma lista formulas ou um array de nível superior com objetos de fórmula. Exportar sempre grava o primeiro.
 - Veja o [Esquema de Fórmulas](/pt/resources/formula-schema-pt/) para nomes de campos e um exemplo mínimo.
 
 > ##### Motor de sintaxe e docs
-> O rolando é alimentado pelo dart_dice_parser da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
+> O rolador usa a versão própria do app do dart_dice_parser, do Adventuresmith. A página no pub.dev descreve o pacote original, então teste uma fórmula no app antes de confiar nela. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
 ## Guias relacionados
 

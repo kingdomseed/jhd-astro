@@ -17,16 +17,16 @@ related:
   - saving-and-managing-dice-formulas
 ---
 
-O Rolador de Dados ajuda você a criar expressões rapidamente e ver resultados claros e legíveis. Este guia rápido mostra o básico para que você possa rolar com confiança imediatamente.
+O Estúdio de Dados é onde você monta e testa fórmulas de dados. No celular, abra a gaveta e toque em ESTÚDIO DE DADOS. Este guia rápido mostra o básico para que você possa rolar com confiança imediatamente.
 
 > ##### Motor de sintaxe e documentação
-> O rolador usa o `dart_dice_parser` da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
+> O rolador usa a versão própria do app do dart_dice_parser, do Adventuresmith. A página no pub.dev descreve o pacote original, então teste uma fórmula no app antes de confiar nela. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
 ## O layout em resumo
 - Campo de Fórmula + Botão Rolar: Digite uma fórmula (ex: `1d20+5`) e toque em Rolar.
-- Botões de adição rápida: Ações de um toque para inserir dados (`d2`, `d4`, `d6`, `d8`, `d10`, `d12`, `d20`, `d%`, `dF`), modificadores comuns (vantagem/desvantagem `kh/kl`, manter/descartar `kh/kl/-H/-L`, explodir/compor `!/!!`, rolar novamente `r/ro`, contagem `#`), e operadores (`+`, `-`, `*`, parênteses) no campo de fórmula.
+- Botões de adição rápida: Ações de um toque para inserir dados, modificadores comuns e operadores (`+`, `-`, `*`, parênteses) no campo de fórmula. Os botões de dados são d4, d6, d8, d10, d12, d20, D100, 1D66, d2 e 4dF. Os botões de modificador são Vantagem, Desvantagem, Manter alto, Manter o mais baixo, Dados Explosivos, Composto, Rerrolar Uns, Rolar novamente ≤2, Contagem de Críticos, Limite em X e Piso em X. Digite você mesmo descartar (-H, -L), rolar de novo uma vez (ro) e contar (#).
   - Bônus numéricos são digitados por você após inserir o operador `+` ou `-` (por exemplo: `+2`).
-- Lista de resultados: Mostra seu total e os detalhes importantes (dados mantidos, descartes, explosões, contagens). As entradas são fáceis de visualizar.
+- Feed de rolagens: cada linha mostra a fórmula, os valores finais dos dados e as contagens de sucessos e críticos quando a fórmula os marca. Ela mostra o total, a menos que você desative Mostrar total dos dados, e não lista os dados descartados. As entradas são fáceis de visualizar.
 
 ## Construa suas primeiras rolagens
 1) Toque em um botão de dado (ex: `d20`) e adicione um modificador (ex: `+5`).
@@ -50,15 +50,15 @@ O Rolador de Dados ajuda você a criar expressões rapidamente e ver resultados 
 Dica: Use parênteses para clareza ao misturar pools, ex: `(1d8!!+1d6!!) kh` (Traço Savage Worlds + selvagem, manter o mais alto).
 
 ## Salvando e gerenciando fórmulas
-- Salvar Fórmulas: Salva a expressão atual e permite nomeá-la/descrevê-la.
+- Salvar Fórmula: Salva a expressão atual e permite nomeá-la/descrevê-la.
   - Desktop: botões aparecem acima do campo de fórmula.
-  - Mobile: botões aparecem abaixo do rolador.
+  - Salvar Fórmula salva a fórmula atual e permite dar a ela um nome e uma descrição. No celular, os botões Salvar Fórmula e Gerenciar Fórmulas ficam abaixo do campo da fórmula; em um tablet ou computador, ficam acima dele.
 - Gerenciar Fórmulas: Importar/Exportar, reordenar, renomear e excluir.
-  - Importar mescla um arquivo JSON em sua lista Salva.
-  - Colocação manual requer o nome de arquivo exato `saved_formulas.json`.
+  - Importar adiciona todas as fórmulas do arquivo ao final da sua lista de Fórmulas Salvas. Não há verificação de duplicatas.
+  - Se você colocar um arquivo manualmente, nomeie-o saved_formulas.json e coloque-o na pasta formulas dentro da pasta de armazenamento do app. Esse arquivo passa a ser sua lista inteira.
 
 ## Resultados e legibilidade
-- A lista de resultados destaca o total e detalhes importantes (dados mantidos, dados descartados, explosões, contagens) para que você não precise analisar paredes de texto.
+- A lista de resultados destaca o total e detalhes importantes (dados mantidos, contagens) para que você não precise analisar paredes de texto. Dados descartados não são listados, e os valores mantidos gerados por explosões continuam aparecendo como números comuns, sem destaque específico de explosão.
 - Nomes curtos e modificadores simples mantêm as fórmulas legíveis; adicione contexto na descrição da entrada Salva quando salvar.
 
 ## Guias relacionados
