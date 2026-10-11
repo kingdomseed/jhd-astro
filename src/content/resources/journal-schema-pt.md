@@ -14,7 +14,7 @@ keywords:
   - Download
   - Diário Mythic
 downloads:
-  - label: "Esquema de Diário (JSON)"
+  - label: "Validador Legado do Esquema 1 do Diário (JSON)"
     href: "/downloads/journal.schema.json"
     format: "JSON"
   - label: "Modelo Vazio"
@@ -35,7 +35,7 @@ Em Português Claro: Você não precisa saber código para usar diários. "JSON"
 
 ## Downloads
 
-Veja a seção de Downloads no final desta página para arquivos.
+Veja a seção de Downloads no final desta página para arquivos. O esquema JSON disponível ali é um validador legado do esquema 1 que espera chaves de nível superior em PascalCase, como `JournalName`. Ele não é um validador para os arquivos do esquema 5 em camelCase que o app exporta hoje. Para os nomes de chave atuais, como `journalName`, use a referência de campos do esquema 5 nesta página.
 
 Dica: Após baixar o modelo vazio, faça uma cópia e renomeie de `journal_template.json` para um nome significativo (por exemplo: `minha-aventura-2025.json`). Mantenha a extensão `.json`. O modelo é um arquivo legado do esquema 1 com chaves em PascalCase, então o nome do Diário vem do campo `JournalName` dentro do arquivo, não do nome do arquivo. Defina `JournalName` antes de importar. Os arquivos que o app exporta hoje usam chaves em camelCase, como `journalName`.
 

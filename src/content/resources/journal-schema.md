@@ -14,7 +14,7 @@ keywords:
   - Download
   - Mythic journal
 downloads:
-  - label: "Journal Schema (JSON)"
+  - label: "Legacy Schema 1 Journal Validator (JSON)"
     href: "/downloads/journal.schema.json"
     format: "JSON"
   - label: "Empty Template"
@@ -35,7 +35,7 @@ Plain English: You don’t need to know code to use journals. “JSON” is just
 
 ## Downloads
 
-See the Downloads section at the bottom of this page for files.
+See the Downloads section at the bottom of this page for files. The JSON schema download there is a legacy schema 1 validator that expects PascalCase top-level keys such as `JournalName`. It is not a validator for the camelCase schema 5 files the app exports today. For current key names such as `journalName`, use the schema 5 field reference on this page.
 
 Tip: After downloading the empty template, make a copy and rename it from `journal_template.json` to a meaningful name (for example: `my-adventure-2025.json`). Keep the `.json` extension. The template is a legacy schema 1 file with PascalCase keys, so the Journal's name comes from the `JournalName` field inside the file, not from the file's name. Set `JournalName` before you import. Files the app exports today use camelCase keys such as `journalName`.
 
