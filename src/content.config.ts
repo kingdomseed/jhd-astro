@@ -26,6 +26,7 @@ const resources = defineCollection({
     z.object({
       title: z.string(),
       summary: z.string(),
+      appSummary: z.string().optional(),
       category: z.enum(["start-here", "adventure-journals", "dice-roller", "custom-tables", "advanced"]),
       order: z.number().int().nonnegative(),
       icon: z.string().default("fa-slab fa-regular fa-book-open"),

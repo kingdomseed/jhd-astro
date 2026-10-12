@@ -2,6 +2,7 @@
 fullArticleAvailable: true
 title: "Linking & Nesting Tables"
 summary: "A link makes one roll lead to another."
+appSummary: "How to link tables so that one roll leads to another."
 category: "custom-tables"
 order: 3
 icon: "fa-slab fa-regular fa-link"

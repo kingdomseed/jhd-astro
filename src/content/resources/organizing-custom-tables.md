@@ -2,6 +2,7 @@
 fullArticleAvailable: true
 title: "Organizing Custom Tables"
 summary: "Use categories, icons, tags, and links to keep your Custom Tables easy to find and use."
+appSummary: "Use categories, icons, and tags to organize your Meaning and Event Focus tables."
 category: "custom-tables"
 order: 2
 icon: "fa-slab fa-regular fa-list-squares"
