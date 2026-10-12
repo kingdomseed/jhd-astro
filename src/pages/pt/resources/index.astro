@@ -154,6 +154,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                                                 data-full-article-available={entry.fullArticleAvailable ? "true" : undefined}
                                                 data-title={entry.title}
                                                 data-summary={entry.appSummary ?? entry.summary}
+                                                data-search-summary={entry.summary}
                                                 data-category={
                                                     categoryLabels[
                                                         entry.category
@@ -479,7 +480,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                     // Filter items
                     items.forEach((item) => {
                         const haystack =
-                            `${item.dataset.title ?? ""} ${item.dataset.summary ?? ""} ${item.dataset.category ?? ""}`.toLowerCase();
+                            `${item.dataset.title ?? ""} ${item.dataset.searchSummary} ${item.dataset.category ?? ""}`.toLowerCase();
                         const matches = haystack.includes(query);
                         item.toggleAttribute("hidden", !matches);
                         if (matches) {
