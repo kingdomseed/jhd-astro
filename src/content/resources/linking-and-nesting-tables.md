@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Linking & Nesting Tables"
 summary: "A link makes one roll lead to another."
 category: "custom-tables"

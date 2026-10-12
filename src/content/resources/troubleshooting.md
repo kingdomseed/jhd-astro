@@ -1,6 +1,7 @@
 ---
+fullArticleAvailable: true
 title: "Troubleshooting"
-summary: "Fix common issues and learn what to include when reporting a bug."
+summary: "What to do about backups, import and storage messages, and iCloud sync problems, and how to report a bug."
 category: "adventure-journals"
 order: 2
 icon: "fa-slab fa-regular fa-life-ring"

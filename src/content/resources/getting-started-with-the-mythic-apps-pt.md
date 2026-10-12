@@ -1,6 +1,6 @@
 ---
 title: "Começando com os apps Mythic"
-summary: "Comece com a Tabela de Destino, depois use Listas, Cenas e Tabelas de Significado para iniciar o jogo. Sem contas, sem internet, só jogar."
+summary: "Uma primeira sessão com o app: a Tabela de Destino, as Listas, as Cenas e as Tabelas de Significado."
 category: "start-here"
 order: 1
 icon: "fa-slab fa-regular fa-book-open"

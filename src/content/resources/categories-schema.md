@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Categories Schema"
-summary: "Reference for category labels, icons, and ordering used by Custom Tables."
+summary: "Reference for the table categories JSON file format."
 category: "advanced"
 order: 4
 icon: "fa-slab fa-regular fa-sort"

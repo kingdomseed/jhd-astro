@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Importing & Exporting Saved Formulas"
-summary: "Import formulas from other players and back up your own."
+summary: "How to import and export saved dice formulas."
 category: "dice-roller"
 order: 3
 icon: "fa-slab fa-regular fa-exchange"

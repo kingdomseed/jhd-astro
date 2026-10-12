@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Getting Started with the Mythic Apps"
-summary: "Start with the Fate Chart, then use Lists, Scenes, and Meaning Tables to begin play. No accounts, no internet, just play."
+summary: "A first session with the app: the Fate Chart, Lists, Scenes, and Meaning Tables."
 category: "start-here"
 order: 1
 icon: "fa-slab fa-regular fa-book-open"

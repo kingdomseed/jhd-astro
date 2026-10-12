@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Writing and Organizing Scenes"
-summary: "Start, run, and wrap scenes and keep your notes tidy."
+summary: "How to start, run, and end scenes, with Scene Check and the Chaos Factor."
 category: "start-here"
 order: 3
 icon: "fa-slab fa-regular fa-film"

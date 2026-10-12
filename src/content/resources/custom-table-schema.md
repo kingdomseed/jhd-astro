@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Custom Table Schema"
-summary: "Reference for Table v3 Custom Tables, including Meaning Tables, Event Focus tables, examples, and downloads."
+summary: "Reference for the Custom Tables JSON file format."
 category: "advanced"
 order: 3
 icon: "fa-slab fa-regular fa-layer-group"

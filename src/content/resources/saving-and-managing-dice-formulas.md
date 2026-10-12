@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Saving and Managing Dice Formulas"
-summary: "Save, load, import, and export Saved Formulas without writing code."
+summary: "How to save, load, import, and export saved dice formulas."
 category: "dice-roller"
 order: 2
 icon: "fa-slab fa-regular fa-floppy-disk"

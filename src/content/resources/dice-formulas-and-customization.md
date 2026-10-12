@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: Dice Formulas & Customization
-summary: "Build rolls for advantage, thresholds, exploding or compounding dice, keep/drop, and more."
+summary: "Dice notation, with example formulas for many game systems."
 category: dice-roller
 order: 3
 icon: fa-slab fa-regular fa-sliders
