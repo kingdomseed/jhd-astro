@@ -184,9 +184,9 @@ Ironsworn / Starforged
 
 ## Starter downloads
 
-Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import to merge them into your list. See the Downloads section at the bottom for files.
+Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import. Import adds every formula in the file to the end of your list. It never replaces the list and does not skip formulas you already have. See the Downloads section at the bottom for files.
 
-Important: If you manually drop a file in place rather than importing, name it exactly `saved_formulas.json`. The Import flow does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents a valid formula file.
+Important: If you place a file by hand, name it saved_formulas.json and put it in the formulas folder inside the app's storage folder. That file becomes your whole list. The Import flow does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents a valid formula file.
 
 ## Save, load, import, export (UI recap)
 
@@ -207,7 +207,7 @@ Important: If you manually drop a file in place rather than importing, name it e
 - I need exploding “once”
   - Use `!o` (explode once) or `!!o` (compound once).
 - I want to keep the total but also know successes/failures
-  - Use metadata counters: `#s/#f/#cs/#cf` so rolls remain visible and counts are recorded in metadata.
+  - #s, #f, #cs, and #cf mark dice as successes, failures, critical successes, and critical failures. The dice and their sum stay as rolled, and the roll row lists the counts.
 
 ## Next steps
 
