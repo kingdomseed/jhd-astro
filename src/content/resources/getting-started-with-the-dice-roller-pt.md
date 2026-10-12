@@ -22,16 +22,22 @@ O Estúdio de Dados é onde você monta e testa fórmulas de dados. No celular, 
 > ##### Motor de sintaxe e documentação
 > O rolador usa a versão própria do app do dart_dice_parser, do Adventuresmith. A página no pub.dev descreve o pacote original, então teste uma fórmula no app antes de confiar nela. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
+## Para onde vão as rolagens
+
+- Uma rolagem feita no Estúdio de Dados é uma Rolagem de teste do estúdio. Ela não é escrita no seu diário. O Estúdio de Dados mantém as 20 mais recentes.
+- Uma rolagem feita no modo de dados é escrita no seu diário como "Rolagem de dados geral". Para abrir o modo de dados, toque em **Mudar para o Rolador de Dados**.
+- A lista de rolagens do Estúdio de Dados mostra as duas.
+
 ## O layout em resumo
 - Campo de Fórmula + Botão Rolar: Digite uma fórmula (ex: `1d20+5`) e toque em Rolar.
 - Botões de adição rápida: Ações de um toque para inserir dados, modificadores comuns e operadores (`+`, `-`, `*`, parênteses) no campo de fórmula. Os botões de dados são d4, d6, d8, d10, d12, d20, D100, 1D66, d2 e 4dF. Os botões de modificador são Vantagem, Desvantagem, Manter alto, Manter o mais baixo, Dados Explosivos, Composto, Rerrolar Uns, Rolar novamente ≤2, Contagem de Críticos, Limite em X e Piso em X. Digite você mesmo descartar (-H, -L), rolar de novo uma vez (ro) e contar (#).
   - Bônus numéricos são digitados por você após inserir o operador `+` ou `-` (por exemplo: `+2`).
-- Feed de rolagens: cada linha mostra a fórmula, os valores finais dos dados e as contagens de sucessos e críticos quando a fórmula os marca. Ela mostra o total, a menos que você desative Mostrar total dos dados, e não lista os dados descartados. As entradas são fáceis de visualizar.
+- Feed de rolagens: cada linha mostra a fórmula, os valores finais dos dados e as contagens de sucessos e críticos quando a fórmula os marca. As entradas são fáceis de visualizar.
 
 ## Construa suas primeiras rolagens
 1) Toque em um botão de dado (ex: `d20`) e adicione um modificador (ex: `+5`).
 2) Ou digite diretamente: `1d20+5`
-3) Pressione Rolar — o total aparece no topo do resultado, com um detalhamento útil abaixo.
+3) Para rolar, toque em **Rolar Dados**, o botão com o ícone do d20.
 
 ### Exemplos comuns
 - D20 + bônus: `1d20+3`
@@ -58,7 +64,7 @@ Dica: Use parênteses para clareza ao misturar pools, ex: `(1d8!!+1d6!!) kh` (Tr
   - Se você colocar um arquivo manualmente, nomeie-o saved_formulas.json e coloque-o na pasta formulas dentro da pasta de armazenamento do app. Esse arquivo passa a ser sua lista inteira.
 
 ## Resultados e legibilidade
-- A lista de resultados destaca o total e detalhes importantes (dados mantidos, contagens) para que você não precise analisar paredes de texto. Dados descartados não são listados, e os valores mantidos gerados por explosões continuam aparecendo como números comuns, sem destaque específico de explosão.
+- **Mostrar total dos dados** — Mostra o total de cada rolagem na lista de rolagens do Estúdio de Dados. Quando desativado, uma rolagem lista seus dados sem o total. Uma rolagem sem dados para listar, como uma contagem, ainda mostra seu resultado. O Registro de Aventura sempre mostra o total. Dados descartados não são listados, e os valores mantidos gerados por explosões continuam aparecendo como números comuns, sem destaque específico de explosão.
 - Nomes curtos e modificadores simples mantêm as fórmulas legíveis; adicione contexto na descrição da entrada Salva quando salvar.
 
 ## Guias relacionados

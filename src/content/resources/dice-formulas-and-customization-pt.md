@@ -92,7 +92,7 @@ related:
 - Explodir / Compor: `!` (explodir), `!!` (compor), adicione `o` para uma vez: `!o`, `!!o` (ex., `4d6!`, `5d10!!o>=8`)
 - Re-rolar: `r` (re-rolar correspondências), `ro` (re-rolar uma vez) (ex., `4d4r<=2`, `4d4ro<2`)
 - Contar / Pontuação:
-  - # retorna uma contagem e descarta os resultados individuais dos dados: 6d6#>=5
+  - \# retorna uma contagem e descarta os resultados individuais dos dados: 6d6#>=5
   - #s, #f, #cs e #cf marcam dados como sucessos, falhas, sucessos críticos e falhas críticas. Os dados e a soma continuam como foram rolados, e a linha da rolagem lista as contagens. Por exemplo: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Limitar (cap): `C<` e `C>` (ex., `4d20 C<5`, `4d20 C>15`)
 
@@ -184,9 +184,9 @@ Ironsworn / Starforged
 
 ## Downloads iniciais
 
-Baixe amostras de Fórmulas Salvas para sistemas populares que estão prontas para importar. Use Gerenciar Fórmulas → Importar para mesclá-las em sua lista. Veja a seção de Downloads no final desta página para arquivos.
+Baixe amostras de Fórmulas Salvas para sistemas populares que estão prontas para importar. Use Gerenciar Fórmulas → Importar. Importar adiciona todas as fórmulas do arquivo ao final da sua lista. Nunca substitui a lista e não pula fórmulas que você já tem. Veja a seção de Downloads no final desta página para arquivos.
 
-Importante: Se você soltar manualmente um arquivo no lugar em vez de importar, nomeie-o exatamente `saved_formulas.json`. O fluxo de Importação não exige um nome de arquivo específico. Nos apps nativos, o arquivo precisa terminar em .json (com letras maiúsculas ou minúsculas). Na web, o seletor pede arquivos .json, mas o app não confere a extensão separadamente. O nome do arquivo não garante que o conteúdo seja um arquivo de fórmulas válido.
+Importante: Se você colocar um arquivo manualmente, nomeie-o saved_formulas.json e coloque-o na pasta formulas dentro da pasta de armazenamento do app. Esse arquivo passa a ser sua lista inteira. O fluxo de Importação não exige um nome de arquivo específico. Nos apps nativos, o arquivo precisa terminar em .json (com letras maiúsculas ou minúsculas). Na web, o seletor pede arquivos .json, mas o app não confere a extensão separadamente. O nome do arquivo não garante que o conteúdo seja um arquivo de fórmulas válido.
 
 ## Salvar, carregar, importar, exportar (resumo da UI)
 
@@ -207,7 +207,7 @@ Importante: Se você soltar manualmente um arquivo no lugar em vez de importar, 
 - Eu preciso explodir "uma vez"
   - Use `!o` (explodir uma vez) ou `!!o` (compor uma vez).
 - Eu quero manter o total mas também saber sucessos/falhas
-  - Use contadores de metadados: `#s/#f/#cs/#cf` para que as rolagens permaneçam visíveis e as contagens sejam gravadas em metadados.
+  - #s, #f, #cs e #cf marcam dados como sucessos, falhas, sucessos críticos e falhas críticas. Os dados e a soma continuam como foram rolados, e a linha da rolagem lista as contagens.
 
 ## Próximos passos
 

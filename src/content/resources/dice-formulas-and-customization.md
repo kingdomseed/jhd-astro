@@ -92,7 +92,7 @@ Tip: To save, you only need the formula text—no need to understand every optio
 - Explode / Compound: `!` (explode), `!!` (compound), add `o` for once: `!o`, `!!o` (e.g., `4d6!`, `5d10!!o>=8`)
 - Reroll: `r` (reroll matches), `ro` (reroll once) (e.g., `4d4r<=2`, `4d4ro<2`)
 - Count / Score:
-  - # returns a count and discards the individual dice results: 6d6#>=5
+  - \# returns a count and discards the individual dice results: 6d6#>=5
   - #s, #f, #cs, and #cf mark dice as successes, failures, critical successes, and critical failures. The dice and their sum stay as rolled, and the roll row lists the counts. For example: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Clamp (cap): `C<` and `C>` (e.g., `4d20 C<5`, `4d20 C>15`)
 
@@ -184,9 +184,9 @@ Ironsworn / Starforged
 
 ## Starter downloads
 
-Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import to merge them into your list. See the Downloads section at the bottom for files.
+Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import. Import adds every formula in the file to the end of your list. It never replaces the list and does not skip formulas you already have. See the Downloads section at the bottom for files.
 
-Important: If you manually drop a file in place rather than importing, name it exactly `saved_formulas.json`. The Import flow does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents a valid formula file.
+Important: If you place a file by hand, name it saved_formulas.json and put it in the formulas folder inside the app's storage folder. That file becomes your whole list. The Import flow does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents a valid formula file.
 
 ## Save, load, import, export (UI recap)
 
@@ -207,7 +207,7 @@ Important: If you manually drop a file in place rather than importing, name it e
 - I need exploding “once”
   - Use `!o` (explode once) or `!!o` (compound once).
 - I want to keep the total but also know successes/failures
-  - Use metadata counters: `#s/#f/#cs/#cf` so rolls remain visible and counts are recorded in metadata.
+  - #s, #f, #cs, and #cf mark dice as successes, failures, critical successes, and critical failures. The dice and their sum stay as rolled, and the roll row lists the counts.
 
 ## Next steps
 
