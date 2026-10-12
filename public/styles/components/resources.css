@@ -241,6 +241,7 @@
 
   /* Clear, accessible link styling for resource content */
   .resource-detail__content a {
+    overflow-wrap: anywhere;
     color: #0645AD; /* classic link blue for clarity */
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -316,6 +317,7 @@
 
   .resource-detail__content {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0; /* manual spacing only */
     line-height: 1.6;
     color: #333;
@@ -324,6 +326,7 @@
   /* Callout style for Markdown blockquotes within resource content */
   .resource-detail__content blockquote {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
     margin: 0; /* author controls spacing via surrounding flow */
     padding: 0.75rem 1rem;
