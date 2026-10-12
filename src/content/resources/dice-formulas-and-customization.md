@@ -92,7 +92,7 @@ Tip: To save, you only need the formula text—no need to understand every optio
 - Explode / Compound: `!` (explode), `!!` (compound), add `o` for once: `!o`, `!!o` (e.g., `4d6!`, `5d10!!o>=8`)
 - Reroll: `r` (reroll matches), `ro` (reroll once) (e.g., `4d4r<=2`, `4d4ro<2`)
 - Count / Score:
-  - # returns a count and discards the individual dice results: 6d6#>=5
+  - \# returns a count and discards the individual dice results: 6d6#>=5
   - #s, #f, #cs, and #cf mark dice as successes, failures, critical successes, and critical failures. The dice and their sum stay as rolled, and the roll row lists the counts. For example: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Clamp (cap): `C<` and `C>` (e.g., `4d20 C<5`, `4d20 C>15`)
 

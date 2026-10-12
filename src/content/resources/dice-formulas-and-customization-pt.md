@@ -92,7 +92,7 @@ related:
 - Explodir / Compor: `!` (explodir), `!!` (compor), adicione `o` para uma vez: `!o`, `!!o` (ex., `4d6!`, `5d10!!o>=8`)
 - Re-rolar: `r` (re-rolar correspondências), `ro` (re-rolar uma vez) (ex., `4d4r<=2`, `4d4ro<2`)
 - Contar / Pontuação:
-  - # retorna uma contagem e descarta os resultados individuais dos dados: 6d6#>=5
+  - \# retorna uma contagem e descarta os resultados individuais dos dados: 6d6#>=5
   - #s, #f, #cs e #cf marcam dados como sucessos, falhas, sucessos críticos e falhas críticas. Os dados e a soma continuam como foram rolados, e a linha da rolagem lista as contagens. Por exemplo: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Limitar (cap): `C<` e `C>` (ex., `4d20 C<5`, `4d20 C>15`)
 
