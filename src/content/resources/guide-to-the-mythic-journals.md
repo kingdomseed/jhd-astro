@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "A Guide to the Mythic Journals"
-summary: "Create, import, and export Journals; understand how Chaos Factor, Scenes, Lists, and Log Entries fit together."
+summary: "What a Journal holds, and how to create, import, and export Journals."
 category: "adventure-journals"
 order: 0
 icon: "fa-slab fa-regular fa-book-open"

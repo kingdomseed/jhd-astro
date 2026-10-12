@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Setting Up a Prepared Adventure in the Mythic GME Apps"
-summary: "Configure Mythic for published modules with the Prepared Adventure Event Focus table, Features, and scene flow."
+summary: "How to set the app up for a published adventure with the Prepared Adventure Event Focus Table."
 category: "start-here"
 order: 5
 icon: "fa-slab fa-regular fa-book-open"

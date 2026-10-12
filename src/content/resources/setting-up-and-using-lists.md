@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Setting Up and Using Lists"
-summary: "Build Mythic Lists for Characters, Threads, and Features. Each Journal has its own lists."
+summary: "How to use the Threads, Characters, and Features lists."
 category: "start-here"
 order: 2
 icon: "fa-slab fa-regular fa-list"

@@ -1,6 +1,7 @@
 ---
+fullArticleAvailable: true
 title: "Sharing Adventure Journals"
-summary: "You can save a Journal as a file, send that file to someone, and bring a Journal file into the app."
+summary: "How to export a Journal as JSON or Markdown, and how to import a Journal file."
 category: "adventure-journals"
 order: 1
 icon: "fa-slab fa-regular fa-share-nodes"

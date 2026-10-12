@@ -1,7 +1,7 @@
 ---
 fullArticleAvailable: true
 title: "Getting Started with the Dice Roller"
-summary: "Start rolling with the app's system-agnostic dice roller."
+summary: "A first look at rolling dice in the app."
 category: "dice-roller"
 order: 1
 icon: "fa-slab fa-regular fa-star"
