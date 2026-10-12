@@ -38,35 +38,40 @@ Em Português Claro: Você não precisa saber código para usar isso. "JSON" é 
 
 Veja a seção de Downloads no final desta página para arquivos.
 
-Importante: Por enquanto, não renomeie o arquivo. O app espera que o nome do arquivo seja `saved_formulas.json`. (Sacos de Dados permitirão nomes personalizados mais tarde.)
+Importante: Importar não exige um nome de arquivo específico. Nos apps nativos, o arquivo precisa terminar em .json (com letras maiúsculas ou minúsculas). Na web, o seletor pede arquivos .json, mas o app não confere a extensão separadamente. O nome do arquivo não garante que o conteúdo seja válido. Só o arquivo de armazenamento do próprio app precisa se chamar saved_formulas.json.
 
 ## Formato (canônico)
 
-Fórmulas Salvas são armazenadas como um objeto envolvido:
+Um arquivo exportado é um objeto envolvente. O arquivo de armazenamento do próprio app é um array simples de objetos de fórmula.
+
+Arquivos exportados contêm estes campos:
 
 - `formulas` (array): A lista de fórmulas salvas.
-- `version` (string, opcional): Versão do arquivo que você mantém para seu próprio rastreamento.
-- `schemaVersion` (número): Versão do formato usada pelo app (ex., 1).
+- version (string): Exportar sempre grava "1.0". Importar ignora este campo.
+- schemaVersion (string): Exportar grava "1". Importar ignora este campo.
 
 ### Campos do objeto de fórmula
 
-- `formula` (string obrigatória): Expressão de dados, não vazia.
+- formula (string obrigatória): não pode ser vazia e precisa ser uma notação de dados válida. Se qualquer item do arquivo falhar, nada do arquivo é importado.
 - `name` (string opcional): Rótulo de exibição; padroniza para `formula` se ausente.
 - `description` (string opcional): Contexto extra.
-- `dateAdded` (string ISO8601 opcional): Carimbo de data/hora de quando criado.
-- `id` (string opcional): Identificador único (geralmente gerado pelo app).
+- dateAdded (string ISO 8601 opcional): quando a fórmula foi criada. Na importação, um valor ausente ou ilegível passa a ser o horário da importação.
+- id (string opcional): Exportar grava um id para cada fórmula, mas Importar o ignora e dá um id novo a cada fórmula importada. Importar o mesmo arquivo duas vezes adiciona dois itens separados.
 
-### Esqueleto mínimo
+### Exemplo mínimo de importação
+
+Este é um modelo mínimo de importação, não uma exportação completa capturada. Uma exportação também inclui `description`, `dateAdded` e `id` em cada fórmula. Na importação, o `id` é ignorado e um novo é atribuído.
 
 ```json
 {
+  "version": "1.0",
+  "schemaVersion": "1",
   "formulas": [
     { "formula": "2d6+3", "name": "Sword attack" }
-  ],
-  "schemaVersion": 1
+  ]
 }
 ```
 
 ### Compatibilidade
 
-- Importações aceitam formas mais antigas (um array de nível superior ou um único objeto de fórmula). O app normaliza para o formato envolvido mostrado acima ao exportar.
+- Importar aceita o objeto envolvente mostrado acima ou um array de nível superior com objetos de fórmula. Um único objeto de fórmula sozinho é rejeitado.

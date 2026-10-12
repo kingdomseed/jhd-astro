@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Importing & Exporting Saved Formulas"
 summary: "Import formulas from other players and back up your own."
 category: "dice-roller"
@@ -22,14 +23,14 @@ This page collects the essentials for bringing Saved Formulas into the app and e
 
 - Open the Dice Roller.
 - Use the on‑screen controls:
-  - Desktop: “Save Formulas” and “Manage Formulas” buttons in the Dice Roller panel.
-  - Mobile: “Save Formulas” and “Manage Formulas” buttons below the roller.
+  - Desktop: “Save Formula” and “Manage Formulas” buttons in the Dice Studio panel.
+  - Open Dice Studio. On a phone, Save Formula and Manage Formulas are buttons under the formula field, and on a tablet or desktop they are above it.
 
 ## Import
 
 - Tap “Manage Formulas” → Import and choose a JSON file.
-- Import merges entries into your existing list (if a replace option is offered, choose carefully; merge is safer).
-- File names: Import accepts any filename. If you manually place a file instead of importing, it must be named `saved_formulas.json`.
+- Import adds every entry in the file to the end of your list. There is no replace option and no check for duplicates.
+- File names: Import does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents valid. If you manually place a file instead of importing, it must be named `saved_formulas.json`.
 
 Supported shapes
 - Canonical wrapped file (recommended):
@@ -38,15 +39,17 @@ Supported shapes
   "formulas": [
     { "formula": "2d20kh+5", "name": "Advantage +5", "description": "D&D 5e attack check" }
   ],
-  "schemaVersion": 1
+  "version": "1.0",
+  "schemaVersion": "1"
 }
 ```
-- Compatibility: The app accepts a top‑level array or a single formula object on import and normalizes to the wrapped format when exporting.
+- An exported file has "version": "1.0" and "schemaVersion": "1", both as text. Import ignores both fields.
+- Compatibility: the app also accepts a top-level array of formula objects. A single formula object on its own is rejected, so wrap it in an array. Export always writes the wrapped format.
 
 ## Export
 
 - Tap “Manage Formulas” → Export to download a JSON file you can back up or share.
-- Manual placement: If you don’t use Import/Export and drop a file by hand, keep the exact filename `saved_formulas.json` so the app can find it.
+- Manual placement: If you place a file by hand, name it saved_formulas.json and put it in the formulas folder inside the app's storage folder. That file is your whole list. If the app cannot read it, it may load a readable backup copy instead, when one exists, and loading that copy does not change your file.
 
 ## Starter downloads
 
@@ -75,11 +78,11 @@ Tip: Use Import to merge these into your current list. Manual placement requires
 ## Best practices
 
 - Keep names short and descriptive; add context in descriptions.
-- Back up before large imports so you can roll back easily.
+- Export before a large import to keep a copy of your list. Importing that copy back into the same list adds every formula again as a separate entry, because Import only adds entries and does not skip duplicates.
 - Prefer the canonical wrapped format for sharing (includes `formulas` and `schemaVersion`).
 
 > ##### Syntax engine and docs
-> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+> The roller is powered by mythic_dice_parser 8.1.0, the app's own version derived from Adventuresmith’s dart_dice_parser. For the upstream grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser (that documentation may not exactly match the app's current grammar).
 
 ## Related guides
 

@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Saving and Managing Dice Formulas"
 summary: "Save, load, import, and export Saved Formulas without writing code."
 category: "dice-roller"
@@ -32,8 +33,8 @@ related:
 
 - Open the Dice Roller.
 - Use the on‑screen controls:
-  - Desktop: “Save Formulas” and “Manage Formulas” buttons in the Dice Roller panel.
-  - Mobile: “Save Formulas” and “Manage Formulas” buttons below the roller.
+  - Desktop: “Save Formula” and “Manage Formulas” buttons in the Dice Studio panel.
+  - Open Dice Studio. On a phone, Save Formula and Manage Formulas are buttons under the formula field, and on a tablet or desktop they are above it.
 
 ## What you’ll use
 
@@ -48,7 +49,7 @@ related:
 ## Core actions
 
 1) Save your current formula(s)
-   - Tap “Save Formulas” to add the current formula to your Saved list. Give it a short, recognizable name.
+   - Tap “Save Formula” to add the current formula to your Saved list. Give it a short, recognizable name.
 
 2) Manage the list
    - Tap “Manage Formulas” to reorder or remove entries.
@@ -56,25 +57,25 @@ related:
 
 3) Export
    - Tap “Manage Formulas” → Export to download a JSON file you can back up or share.
-   - Important: Do not rename the file; keep it as `saved_formulas.json`. (Custom names will be supported later with Dice Bags.)
+   - You can rename the exported file. Import does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents valid.
 
 4) Import
    - Tap “Manage Formulas” → Import and pick a JSON file.
-   - If you import a list that overlaps with your existing entries, choose whether to merge or replace.
+   - Import does not ask. It adds every formula in the file to the end of your list, including ones you already have.
 
 ## Tips
 
 - Keep names short; add any extra context in the description.
-- You can organize favorites into separate files—export one set, then import another set when needed.
-- If in doubt, export first to create a backup.
+- You can organize favorites into separate files. Import adds to your list and never replaces it, so importing a second set leaves both sets in the list. Importing a set that is already in your list adds a second copy of each formula. Each imported formula gets its own new id, so Edit and Delete on a copy affect only that copy.
+- Export to keep a copy of your list. The app cannot restore that copy over your current list, because Import only adds entries.
 
 ## Power users
 
-- The app understands a few compatible shapes on import and exports a canonical wrapped format.
+- Import accepts two shapes: an object with a formulas list, or a top-level array of formula objects. Export always writes the first.
 - See the [Formula Schema](/resources/formula-schema/) for field names and a minimal example.
 
 > ##### Syntax engine and docs
-> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+> The roller uses the app's own version of Adventuresmith's dart_dice_parser. The pub.dev page describes the original package, so check a formula in the app before you rely on it. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
 
 ## Related guides
 

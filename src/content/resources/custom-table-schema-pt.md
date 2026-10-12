@@ -32,34 +32,39 @@ Nenhuma programação necessária. Esta página lista nomes de campos usados por
 
 ## Tabela de Significado (v3)
 
-Chaves obrigatórias
+Chaves obrigatórias: id, categoryId, displayName e entries. Elas não têm valor padrão. Se você omitir as chaves opcionais, schemaVersion assume 3, tableType assume meaning-table, rangeStart assume 1 e rangeEnd assume 100.
+
+Detalhes das chaves
 - `id` (string em snake_case)
-- `schemaVersion` = 3
-- `tableType` = "meaning-table"
-- `rangeStart` (int), `rangeEnd` (int)
 - `categoryId` (string em kebab-case)
 - `displayName` (string)
 - `entries` (array)
+- `schemaVersion` (int), `tableType` (string)
+- `rangeStart` (int), `rangeEnd` (int)
 
 Campos de tabela opcionais
 - `description`, `descriptionTranslations`, `displayNameTranslations`
 - `defaultLanguage` (string, ex., `"en"`)
-- `isBuiltIn`, `isUserCreated` (buleanos)
+- isBuiltIn, isUserCreated (booleanos). Na importação, o app define isBuiltIn como false e isUserCreated como true, independentemente do que o arquivo diga.
 - `source` (string), `tags` (array de strings)
-- `tableRollOn` (array de alvos de tabela/lista)
+- tableRollOn (array de ids de Tabelas de Significado). Qualquer outro id ou nome de lista é ignorado.
 - `data` (objeto para extensões)
 - `dice` (legado; ignorado pelo app atual)
 
 Campos de entrada
 - `range` [início, fim] (obrigatório)
 - `result` (string, obrigatório)
-- Opcional: `description`, traduções, `tags`, `entryRollOn`, `disabled`, `data`, `weight` (presente no esquema, não usado pelo app ainda)
+- Opcional: `description`, traduções, `tags`, `entryRollOn`, `disabled`, `data`
+- weight (inteiro opcional). Se algum item de uma Tabela de Significado tiver weight acima de 1, o app escolhe os resultados por peso em vez de por intervalo, e os vínculos tableRollOn da tabela não são rolados. Tabelas de Foco do Evento ignoram weight.
 
 Regras de validação
 - Entradas devem cobrir `[rangeStart..rangeEnd]` exatamente uma vez; sem lacunas/sobreposições
 - Entradas desativadas (ou entradas com `[0,0]`) são ignoradas para cobertura
 
 JSON Mínimo
+
+Use um id de categoria que exista no seu app, por exemplo "categoryId": "custom".
+
 ```json
 {
   "id": "action_basics",
@@ -79,11 +84,12 @@ JSON Mínimo
 ## Tabela de Foco de Evento (v3)
 
 Chaves obrigatórias
-- `id`, `schemaVersion` = 3
-- `tableType` = "event-focus"
-- `rangeStart`, `rangeEnd`
-- `categoryId` = "event-focus"
-- `displayName`, `entries`
+- `id`, `categoryId`, `displayName` (textos não vazios). Na importação, `categoryId` é definido como "event-focus".
+- `entries` (uma lista; cada entrada precisa de `range` e `result`)
+
+Chaves opcionais e padrões
+- `schemaVersion` (padrão 3), `rangeStart` (padrão 1), `rangeEnd` (padrão 100)
+- `tableType`: a importação de arquivo único usa o cartão de Foco de Evento selecionado e define o tipo depois. Em um wrapper `tables`, defina `tableType` = "event-focus" para que a tabela se identifique. Se for omitido, o cartão selecionado decide; um valor desconhecido falha.
 
 Campos de tabela opcionais
 - `displayNameTranslations`, `description`, `descriptionTranslations`
@@ -91,16 +97,20 @@ Campos de tabela opcionais
 
 Campos de entrada
 - `range` [início, fim], `result`
-- Opcional: `description`, traduções, `tags`, `entryRollOn`, `action`, `additionalRolls`, `disabled`, `data`, `weight` (presente no esquema, não usado ainda)
+- Opcional: `description`, traduções, `tags`, `entryRollOn`, `disabled`, `data`, `weight` (ignorado em Tabelas de Foco do Evento)
+- action, additionalRolls (armazenados e exportados, não usados na rolagem)
 
 JSON Mínimo
+
+Este é um exemplo reduzido, não a Tabela de Foco do Evento integrada.
+
 ```json
 {
   "id": "event_focus_core",
   "schemaVersion": 3,
   "tableType": "event-focus",
   "rangeStart": 1,
-  "rangeEnd": 100,
+  "rangeEnd": 20,
   "categoryId": "event-focus",
   "displayName": "Event Focus",
   "entries": [
@@ -114,7 +124,7 @@ JSON Mínimo
 
 Veja a seção de Downloads no final desta página para arquivos de esquema. Modelos/Exemplos estão listados em "Começando com Tabelas Personalizadas".
 
-Nota: Tabelas com peso aparecem no esquema para compatibilidade futura, mas o app não usa pesos ainda.
+Observação: uma Tabela de Significado em que algum item tenha weight acima de 1 é rolada por peso. Omita weight, ou defina 1 em todos os itens, para rolar por intervalo.
 
 ## Relacionado
 

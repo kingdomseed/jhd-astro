@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Categories Schema"
 summary: "Reference for category labels, icons, and ordering used by Custom Tables."
 category: "advanced"
@@ -46,16 +47,18 @@ Categories provide names and icons for table groups. The app ships with built‑
 
 - `id` (kebab‑case string)
 - `displayName` (string)
-- `iconKey` (string; app icon registry key)
-- `sortOrder` (integer)
+- iconKey (string). The bundled file uses keys such as dice, user, map, book, and question. A key the app does not know shows a question-mark icon.
+- sortOrder (integer, lower numbers first). Categories made in the app get 900, and you can change the order only by editing this file.
 - `isBuiltIn` (boolean)
 - Optional: `description` (string), `displayNameTranslations` (object)
 
+Every entry needs id, displayName, iconKey, sortOrder, and isBuiltIn. If one is missing or has the wrong type, the app cannot load any categories from the file and tries to save a copy named invalidated-categories with a timestamp.
+
 ## Lifecycle in the app
 
-- First run: the app copies a baseline `categories.json` into your Documents (meaning_tables/categories.json)
-- Built‑ins live in `defaultCategories` and can be restored with “Reset to defaults”
-- Add your own categories only to the `categories` array
+- Baseline copy: with premium, the app can copy a baseline `categories.json` into your current storage location (meaning_tables/categories.json), which may be the app's own folder, a custom folder, or iCloud. It normally keeps an existing file instead of overwriting it.
+- Built-ins can be restored with Reset Categories to Defaults in Table Settings. Categories whose isBuiltIn is false are kept.
+- Set isBuiltIn to false on your own categories. The app goes by that flag, not by the array, and moves each entry to the matching array the next time it saves.
 
 ## Downloads
 

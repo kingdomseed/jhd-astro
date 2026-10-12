@@ -78,10 +78,7 @@ related:
 ## Leia isso primeiro (Sem programação necessária)
 
 - Fórmulas são expressões simples e legíveis (como `2d6+3`).
-- Você pode digitar uma fórmula, rolá-la e clicar em "Salvar Fórmulas" para mantê-la para mais tarde.
-- Onde encontrar os botões:
-  - Celular: "Salvar Fórmulas" e "Gerenciar Fórmulas" estão abaixo do campo de texto.
-  - Desktop: eles estão acima do campo de texto.
+- Você pode digitar uma fórmula, rolá-la e tocar em Salvar Fórmula para guardá-la. No celular, Salvar Fórmula e Gerenciar Fórmulas ficam abaixo do campo da fórmula; em um tablet ou computador, ficam acima dele.
 - Salvar armazena o que quer que esteja atualmente no campo de texto e permite nomear e adicionar uma descrição. Gerenciar permite importar, exportar, renomear, reordenar e excluir.
 
 > **Dica**: Para salvar, você só precisa do texto da fórmula—não é necessário entender cada opção abaixo. Volte aqui quando quiser fazer algo mais avançado.
@@ -95,12 +92,12 @@ related:
 - Explodir / Compor: `!` (explodir), `!!` (compor), adicione `o` para uma vez: `!o`, `!!o` (ex., `4d6!`, `5d10!!o>=8`)
 - Re-rolar: `r` (re-rolar correspondências), `ro` (re-rolar uma vez) (ex., `4d4r<=2`, `4d4ro<2`)
 - Contar / Pontuação:
-  - `#` retorna uma contagem (descarta resultados de dados individuais): `6d6#>=5`
-  - Contadores de metadados mantêm resultados de dados e gravam contagens em metadados: `#s`, `#f`, `#cs`, `#cf` (ex., `6d6 #f<=2 #s>=5 #cs6 #cf1`)
+  - # retorna uma contagem e descarta os resultados individuais dos dados: 6d6#>=5
+  - #s, #f, #cs e #cf marcam dados como sucessos, falhas, sucessos críticos e falhas críticas. Os dados e a soma continuam como foram rolados, e a linha da rolagem lista as contagens. Por exemplo: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Limitar (cap): `C<` e `C>` (ex., `4d20 C<5`, `4d20 C>15`)
 
 Pegadinhas de ordem e precedência
-- Ordem importa com contadores e manter/largar. Se você fizer `2d20 kh #cf #cs`, o dado baixo é largado antes da contagem. Se você quer contar todos os dados rolados primeiro, escreva `2d20 #cf #cs kh`.
+- A ordem importa com manter e com os contadores de marcação. 2d20 kh #cf #cs descarta primeiro o dado mais baixo; para marcar os dois dados antes de manter, escreva (2d20 #cf #cs) kh, porque 2d20 #cf #cs kh mantém os dois dados.
 - Operadores de Largar/filtrar ligam mais forte que aritmética. `(5d6+5d10)-L2` larga do conjunto combinado; `5d6+5d10-L2` larga apenas dos d10s.
 - Use `D66` maiúsculo (minúsculo `d66` é um dado de 66 lados, não D66).
 
@@ -165,10 +162,10 @@ Lancer (precisão/dificuldade)
 - Dificuldade: `1d20 - (Xd6kh1) + MOD`
 
 Year Zero Engine (Free League: Alien, Forbidden Lands, Vaesen, etc.)
-- Três conjuntos coloridos (base/perícia, stress, equipamento): role cada conjunto separadamente para manter contagens distintas.
+- Três conjuntos coloridos (base/perícia, stress, equipamento): Role as três reservas em uma só fórmula com rótulos, por exemplo "Base": 4d6 #s=6, "Stress": 2d6 #s=6, "Gear": 1d6 #s=6. No Estúdio de Dados, a rolagem mostra cada reserva em sua própria linha, com o rótulo e o total.
 - Sucessos: `Nd6#s=6` em cada conjunto; rastreie 1s em stress/equipamento com `#f=1`.
-- Push (re-rolar uma vez, travar 6s e 1s): adicione `ro<6 ro>1` para re-rolar apenas 2–5 exatamente uma vez, ex., `Nd6 ro<6 ro>1 #s=6`.
-- Limitações: marcação de cor não está codificada em uma única expressão; role cada cor como sua própria linha. Resolução de pânico/quebra permanece na mesa.
+- Para forçar, role a reserva no Estúdio de Dados com uma marca de sucesso, por exemplo 5d6 #s=6, e depois use Forçar nessa rolagem. Forçar mantém os dados marcados como sucessos e rola de novo todos os outros, inclusive os 1.
+- Limitações: resolução de pânico/quebra permanece na mesa.
 
 The One Ring 2e (aproximação)
 - Grosseiramente: `1d12 + Nd6`
@@ -189,22 +186,22 @@ Ironsworn / Starforged
 
 Baixe amostras de Fórmulas Salvas para sistemas populares que estão prontas para importar. Use Gerenciar Fórmulas → Importar para mesclá-las em sua lista. Veja a seção de Downloads no final desta página para arquivos.
 
-Importante: Se você soltar manualmente um arquivo no lugar em vez de importar, nomeie-o exatamente `saved_formulas.json`. O fluxo de Importação aceita qualquer nome de arquivo.
+Importante: Se você soltar manualmente um arquivo no lugar em vez de importar, nomeie-o exatamente `saved_formulas.json`. O fluxo de Importação não exige um nome de arquivo específico. Nos apps nativos, o arquivo precisa terminar em .json (com letras maiúsculas ou minúsculas). Na web, o seletor pede arquivos .json, mas o app não confere a extensão separadamente. O nome do arquivo não garante que o conteúdo seja um arquivo de fórmulas válido.
 
 ## Salvar, carregar, importar, exportar (resumo da UI)
 
-- Celular: "Salvar Fórmulas" e "Gerenciar Fórmulas" estão sob o campo de texto da fórmula.
+- Celular: "Salvar Fórmula" e "Gerenciar Fórmulas" estão sob o campo de texto da fórmula, quando os botões de ação estão ativados.
 - Desktop: ambos aparecem acima do campo de texto.
 - Salvar adiciona a fórmula atual à sua lista Salva e abre um diálogo para nomear/descrever.
 - Gerenciar permite importar, exportar, reordenar, renomear e excluir.
-- Importar permite mesclar ou substituir—exporte primeiro se quiser um backup.
+- Importar adiciona todas as fórmulas do arquivo ao final da sua lista. Nunca substitui a lista e não pula fórmulas que você já tem.
 
 ## Solução de problemas e dicas
 
 - Minhas contagens parecem erradas com vantagem
-  - Coloque contadores antes de manter/largar: `2d20 #cf #cs kh`.
+  - Coloque contadores antes de manter/largar, agrupando-os: `(2d20 #cf #cs) kh`.
 - `4d6-L2+2` não fez o que eu esperava
-  - Largar liga mais forte que `+`. Use parênteses para agregar: `(4d6-L2)+2`.
+  - 4d6-L2+2 e (4d6-L2)+2 são a mesma rolagem: descarte os dois menores de 4d6 e some 2.
 - Meu D66 parece errado
   - Use maiúsculo: `1D66`.
 - Eu preciso explodir "uma vez"
@@ -218,7 +215,7 @@ Importante: Se você soltar manualmente um arquivo no lugar em vez de importar, 
 - Compartilhe e mantenha uma lista portátil: veja "Esquema de Fórmulas".
 
 > ##### Motor de sintaxe e docs
-> O rolando é alimentado pelo dart_dice_parser da Adventuresmith. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
+> O rolador usa a versão própria do app do dart_dice_parser, do Adventuresmith. A página no pub.dev descreve o pacote original, então teste uma fórmula no app antes de confiar nela. Para a gramática completa e exemplos adicionais, veja: https://pub.dev/packages/dart_dice_parser
 
 ## Viu um problema?
 

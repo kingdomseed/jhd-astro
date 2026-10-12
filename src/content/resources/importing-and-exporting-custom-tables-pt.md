@@ -25,8 +25,9 @@ related:
 ## Onde importar/exportar
 
 - Abra a funcionalidade Tabelas Personalizadas no app (não em Configurações).
-- Para importar uma tabela nova, use a aba **Arquivos** em Tabelas Personalizadas. A dica da aba pode dizer **Importar/Exportar**.
-- No desktop e no tablet, Arquivos é a quarta aba à esquerda. Em celulares, é a quarta aba na barra inferior.
+- Para importar uma tabela nova, use a aba **Arquivos** em Tabelas Personalizadas.
+- No computador e no tablet, é o quarto ícone da barra lateral esquerda, com a dica Importação/Exportação. No celular, é a aba Arquivos, a quarta na barra de abas inferior.
+- Para compartilhar ou fazer backup de tabelas, exporte uma tabela pelo menu dela ou use uma opção de exportação na aba Arquivos e escolha Arquivo JSON único. Você pode importar qualquer um desses arquivos pela aba Arquivos, mas uma exportação ZIP precisa ser descompactada e seus arquivos importados um por vez.
 - Nota de desbloqueio: no Google Play, Amazon e Apple App Store, Tabelas Personalizadas fazem parte do desbloqueio único de Recursos Expandidos. No itch.io e na Microsoft Store, elas fazem parte da compra única do app desktop.
 
 ![Aba Arquivos de Tabelas Personalizadas com opções para importar Tabelas Oráculo e Tabelas de Foco de Evento](/images/resources/custom-tables/custom-tables-files-tab.png)
@@ -49,10 +50,10 @@ Ao editar uma tabela existente, a aba Importar do editor de tabela tem dois cami
 
 - **Substituir todas as entradas:** cole conteúdo TXT, PSV ou CSV na caixa de texto e escolha Substituir todas as entradas.
 - **Importar de arquivo:** escolha um arquivo de tabela `.json`, `.csv`, `.txt` ou `.psv`.
-- Arquivos JSON podem ser mesclados quando o ID da tabela importada corresponde à tabela que você está editando. Se os IDs não coincidirem, escolha Substituir tudo para sobrescrever a tabela.
+- Arquivos JSON podem ser mesclados quando o ID da tabela importada corresponde à tabela que você está editando. Se os IDs não coincidirem, escolha Substituir tudo para sobrescrever a tabela. Salve suas alterações antes de importar um arquivo JSON aqui. Uma mesclagem ou Substituir Tudo parte da tabela salva, então as edições não salvas são descartadas.
 - Arquivos CSV, TXT e PSV substituem as entradas atuais no editor. A alteração fica preparada até você escolher Criar ou Atualizar.
 
-![Aba Arquivos do editor de tabela existente com a caixa de colagem Substituir todas as entradas](/images/resources/custom-tables/editor-files-paste.png)
+![Aba Importar do editor de tabela existente com a caixa de colagem Substituir todas as entradas](/images/resources/custom-tables/editor-files-paste.png)
 
 Essa caixa de colagem serve para substituir entradas em uma tabela que você já está editando. Ela não é o fluxo de importação de uma tabela nova.
 
@@ -83,8 +84,8 @@ Colunas opcionais:
 Notas
 - Nomes de cabeçalho são insensíveis a maiúsculas/minúsculas
 - `table_type` é opcional; se usado, apenas a primeira linha de dados deve conter um valor
-- Na caixa de colagem do editor, o CSV deve ser colado como CSV com a linha de cabeçalho; ele não deve ser inserido como linhas TXT simples
-- Valores conflitantes ou inválidos são rejeitados com uma mensagem de erro clara
+- Na caixa de colar do editor, cole um CSV com a linha de cabeçalho ou linhas que começam com dois números e um resultado.
+- Se uma tabela única não puder ser lida ou importada, a aba Arquivos mostra um erro. De um arquivo com várias tabelas, o app importa as que consegue e pula as outras, depois mostra quantas foram importadas do total e nomeia as que não foram. Ele pode não dizer qual linha ou valor causou o problema.
 
 Amostras
 - Modelo de Significado (CSV): [Baixar](/downloads/meaning_table_template.csv)
@@ -117,7 +118,7 @@ Amostras
 
 - Use JSON quando quiser mover uma tabela completa entre instalações do app ou compartilhar uma tabela pronta para o app com outra pessoa.
 - JSON preserva mais da tabela do que os formatos de texto curtos, incluindo traduções, tags e links para outras tabelas.
-- O arquivo informa se é uma Tabela de Significado ou uma Tabela de Foco de Evento com `tableType`: `meaning-table` ou `event-focus`.
+- Um arquivo JSON pode definir `tableType` como `meaning-table` ou `event-focus`. Para uma tabela única, o cartão que você toca na aba Arquivos define o tipo da tabela. Em uma exportação Arquivo JSON único com várias tabelas, cada tabela mantém seu próprio tableType, uma tabela sem esse valor recebe o tipo do cartão e uma tabela com tableType inválido não é aceita.
 - Para escrever uma tabela simples manualmente, CSV, TXT ou PSV costuma ser mais fácil.
 
 Amostras
@@ -128,14 +129,14 @@ Amostras
 
 ## Foundry VTT JSON (mapeamento automático)
 
-Detectado automaticamente quando um JSON inclui `name` e um array `results` cujas entradas contêm `text`. Arrays `range` são usados quando presentes.
+Com o cartão Tabelas Oracle, um arquivo JSON é tratado como Foundry VTT quando tem um nome e um array results cujos itens contêm texto. Com o cartão Tabelas de Foco de Evento, o nome também precisa conter event, focus ou plot, ou um resultado precisa conter PC, NPC ou Thread. Arrays `range` são usados quando presentes.
 
 Destaques do mapeamento
 - `name` → `displayName`
 - `description` → `description`
 - `results[].text` → `entries[].result`
 - `results[].range` → `entries[].range` (ex., `[min, max]`)
-- Metadados do Foundry são preservados sob `data.foundry`
+- Os metadados do Foundry são preservados em data.foundry quando você importa por Tabelas Oracle. Uma importação por Tabelas de Foco de Evento não os mantém.
 - Importações de Foco de Evento forçam `categoryId = "event-focus"`
 
 Amostras
@@ -146,8 +147,8 @@ Amostras
 
 - Cobertura de intervalo: intervalo completo da tabela sem lacunas ou sobreposições
 - Cabeçalhos escritos corretamente (insensível a maiúsculas/minúsculas)
-- Sem campos obrigatórios em branco (`result`, etc.)
-- Se um arquivo for inválido, o app mostra um erro e recusa salvar, então seus dados ficam seguros
+- Preencha result em todas as linhas. Um CSV de Tabela de Significado com intervalos importa um result em branco como item vazio, e um CSV de Foco do Evento descarta a linha.
+- Se uma tabela única não puder ser lida ou importada, a aba Arquivos mostra um erro. De um arquivo com várias tabelas, o app importa as que consegue e pula as outras, depois mostra quantas foram importadas do total e nomeia as que não foram. Ele pode não dizer qual linha ou valor causou o problema.
 
 ## Próximos passos
 

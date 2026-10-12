@@ -1,5 +1,6 @@
 ---
-title: "Setting Up a Prepared Adventure in Mythic GME Digital"
+fullArticleAvailable: true
+title: "Setting Up a Prepared Adventure in the Mythic GME Apps"
 summary: "Configure Mythic for published modules with the Prepared Adventure Event Focus table, Features, and scene flow."
 category: "start-here"
 order: 5
@@ -30,9 +31,8 @@ Playing a prepared adventure (like a published D&D module) with Mythic requires 
 
 The first thing you'll need to do is switch to the **Prepared Adventure Event Focus Table**.
 
-1. Open **Settings** from the sidebar
-2. Tap on **Event Focus Table**
-3. Select **Prepared Adventure Event Focus Table**
+1. On a phone, open the drawer, tap SETTINGS, choose the Game Behavior tab, and find Event Focus Table in the Fate Chart section. You can also tap the gear on the Fate screen, which shows the same Event Focus Table control.
+2. Select **Prepared Adventure Event Focus Table**
 
 This special table removes events that the published adventure already handles (like "Move Toward a Thread" or "New NPC") and adds **Adventure Feature** as a possible Random Event. This keeps Mythic from overriding the adventure's structure while still providing surprises and GM emulation.
 
@@ -54,7 +54,7 @@ Add items like:
 - "Wandering monster"
 - "Weather worsens"
 
-When you roll **Adventure Feature** as a Random Event, you'll pick or roll from this list.
+When you roll Adventure Feature as a Random Event, the app rolls your Features list and shows the entry in the Adventure Log. If the roll lands on an empty line it shows Choose, and you pick an entry yourself.
 
 ## Step 3: Set Up Your Other Lists
 
@@ -71,9 +71,11 @@ This primes Mythic to generate Random Events that feel appropriate to the advent
 - No Altered Scenes
 - No Interrupt Scenes
 - Random Events are added to Expected Scenes (not replacing them)
-- Scene Adjustment is disabled by default
+- The Scene Adjust button is hidden while a prepared table is selected. To show it, turn off Hide Scene Adjust in Prepared Adventures.
 
-When you test an Expected Scene and roll within the Chaos Factor, generate a Random Event but continue with your Expected Scene. The Random Event adds a twist without derailing the prepared adventure.
+These rules apply while the Prepared Adventure Event Focus Table is selected. Select another Event Focus table to get Altered Scene and Interrupt Scene results back.
+
+When you tap Scene Check and the roll is at or under the Chaos Factor, the app adds a Random Event to the same Adventure Log entry. Carry on with your Expected Scene and do not roll another Random Event. The Random Event adds a twist without derailing the prepared adventure.
 
 ---
 

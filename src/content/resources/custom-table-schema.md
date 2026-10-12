@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Custom Table Schema"
 summary: "Reference for Table v3 Custom Tables, including Meaning Tables, Event Focus tables, examples, and downloads."
 category: "advanced"
@@ -31,34 +32,39 @@ No programming needed. This page lists field names used by imports/exports and b
 
 ## Meaning Table (v3)
 
-Required keys
+Required keys: id, categoryId, displayName, and entries. These have no defaults. If you leave out the optional keys, schemaVersion defaults to 3, tableType to meaning-table, rangeStart to 1, and rangeEnd to 100.
+
+Key details
 - `id` (snake_case string)
-- `schemaVersion` = 3
-- `tableType` = "meaning-table"
-- `rangeStart` (int), `rangeEnd` (int)
 - `categoryId` (kebab‑case string)
 - `displayName` (string)
 - `entries` (array)
+- `schemaVersion` (int), `tableType` (string)
+- `rangeStart` (int), `rangeEnd` (int)
 
 Optional table fields
 - `description`, `descriptionTranslations`, `displayNameTranslations`
 - `defaultLanguage` (string, e.g., `"en"`)
-- `isBuiltIn`, `isUserCreated` (booleans)
+- isBuiltIn, isUserCreated (booleans). On import the app sets isBuiltIn to false and isUserCreated to true, whatever the file says.
 - `source` (string), `tags` (array of strings)
-- `tableRollOn` (array of table/list targets)
+- tableRollOn (array of Meaning Table ids). Any other id or a list name is skipped.
 - `data` (object for extensions)
 - `dice` (legacy; ignored by current app)
 
 Entry fields
 - `range` [start, end] (required)
 - `result` (string, required)
-- Optional: `description`, translations, `tags`, `entryRollOn`, `disabled`, `data`, `weight` (present in schema, not used by the app yet)
+- Optional: `description`, translations, `tags`, `entryRollOn`, `disabled`, `data`
+- weight (optional integer). If any entry in a Meaning Table has a weight above 1, the app picks results by weight instead of by range, and the table's tableRollOn links are not rolled. Event Focus tables ignore weight.
 
 Validation rules
 - Entries must cover `[rangeStart..rangeEnd]` exactly once; no gaps/overlaps
 - Disabled entries (or entries with `[0,0]`) are ignored for coverage
 
 Minimal JSON
+
+Use a category id that exists in your app, for example "categoryId": "custom".
+
 ```json
 {
   "id": "action_basics",
@@ -78,11 +84,12 @@ Minimal JSON
 ## Event Focus Table (v3)
 
 Required keys
-- `id`, `schemaVersion` = 3
-- `tableType` = "event-focus"
-- `rangeStart`, `rangeEnd`
-- `categoryId` = "event-focus"
-- `displayName`, `entries`
+- `id`, `categoryId`, `displayName` (non-empty strings). On import, `categoryId` is set to "event-focus".
+- `entries` (a list; each entry needs `range` and `result`)
+
+Optional keys and defaults
+- `schemaVersion` (default 3), `rangeStart` (default 1), `rangeEnd` (default 100)
+- `tableType`: a single-file import uses the selected Event Focus card and sets the type afterward. In a `tables` wrapper, set `tableType` = "event-focus" so the table identifies itself. If it is omitted, the selected card decides; an unknown value fails.
 
 Optional table fields
 - `displayNameTranslations`, `description`, `descriptionTranslations`
@@ -90,16 +97,20 @@ Optional table fields
 
 Entry fields
 - `range` [start, end], `result`
-- Optional: `description`, translations, `tags`, `entryRollOn`, `action`, `additionalRolls`, `disabled`, `data`, `weight` (present in schema, not used yet)
+- Optional: `description`, translations, `tags`, `entryRollOn`, `disabled`, `data`, `weight` (ignored for Event Focus tables)
+- action, additionalRolls (stored and exported, not used when rolling)
 
 Minimal JSON
+
+This is a shortened sample, not the built-in Event Focus table.
+
 ```json
 {
   "id": "event_focus_core",
   "schemaVersion": 3,
   "tableType": "event-focus",
   "rangeStart": 1,
-  "rangeEnd": 100,
+  "rangeEnd": 20,
   "categoryId": "event-focus",
   "displayName": "Event Focus",
   "entries": [
@@ -113,7 +124,7 @@ Minimal JSON
 
 See the Downloads section at the bottom of this page for schema files. Templates/Samples are listed on “Getting Started with Custom Tables”.
 
-Note: Weighted tables appear in schema for future compatibility, but the app does not use weights yet.
+Note: a Meaning Table with any entry weight above 1 is rolled by weight. Leave weight out, or set it to 1 on every entry, to roll by range.
 
 ## Related
 

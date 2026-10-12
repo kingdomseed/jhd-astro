@@ -21,36 +21,36 @@ related:
 
 ## Onde organizar
 
-- Abra a funcionalidade Tabelas Personalizadas através da gaveta de navegação ou, no desktop, pelo botão de ícone à direita.
-- Escolha a aba categorias.
+- No celular, abra a gaveta de navegação e toque em EDITOR DE TABELAS, em Ferramentas. Em um tablet ou computador, selecione Tabelas Personalizadas no trilho de navegação ou, no Layout clássico de 6 painéis (Desktop), clique no botão de ícone Tabelas Personalizadas no canto inferior direito.
+- No celular, escolha a aba Categoria. Em um tablet ou computador, escolha o terceiro ícone da barra lateral esquerda (Categorias).
 - Categorias, ícones e traduções são gerenciados junto com suas tabelas.
 
 > Nota de desbloqueio: no Google Play, Amazon e Apple App Store, Tabelas Personalizadas fazem parte do desbloqueio único de Recursos Expandidos. No itch.io e na Microsoft Store, elas fazem parte da compra única do app desktop.
 
 ## Significado vs Foco de Evento
 
-- Tabelas de Significado: produzem resultados como "Ataque" ou "Local Distante" e frequentemente encadeiam para outras tabelas
+- Tabelas de Significado: oferecem palavras para você interpretar e podem encadear outras tabelas.
 - Tabelas de Foco de Evento: decidem que tipo de evento acontece (ex., Ação de NPC), frequentemente a primeira rolagem em um fluxo de trabalho de evento
 
 ## Categorias e ícones
 
 - Categorias definem ícone, rótulo e comportamento de ordenação para grupos de tabelas
-- O app semeia categorias integradas de um arquivo de recursos; você pode restaurar para padrões se necessário
-- Categorias de usuário vivem ao lado dos padrões; mantenha os integrados intocados e adicione os seus sob a área de categorias de usuário
+- O app semeia categorias integradas de um arquivo de recursos. Você pode restaurar as categorias embutidas com Redefinir categorias para os padrões em Configurações de tabelas. As categorias que você criou são mantidas.
+- Mantenha as categorias embutidas intocadas. Adicione as suas com o botão + na aba Categoria. Elas aparecem na mesma lista que as embutidas, e o app não tem um controle para reordená-las.
 
 Melhores práticas
 - Nomes de exibição curtos; adicione detalhes nas descrições
-- Troque para seu idioma preferido. Português tem suporte oficial no app (obrigado, RetroPunk!) e espero oferecer mais localizações oficiais com o tempo.
+- Troque para seu idioma preferido. O app está disponível em inglês, português, português do Brasil, espanhol, espanhol do México, francês, italiano e alemão. Obrigado, RetroPunk, pelo suporte em português!
 
 ## Tags e busca
 
-- Adicione tags a tabelas e entradas para melhorar a busca e agrupamento
+- Adicione tags às tabelas para melhorar a busca e o agrupamento. Um item só pode ter tags por meio de uma coluna tags em um CSV importado ou por JSON.
 - Use tags consistentes para arcos de aventura, biomas, facções, tons, etc.
 
 ## Vinculando tabelas
 
 - Defina um link em uma entrada específica para rolar imediatamente outra tabela ou uma Lista de Aventura quando esse resultado aparecer.
-- Defina um link para a tabela inteira quando todo resultado deve acionar uma ou mais rolagens de acompanhamento.
+- Use Tabelas vinculadas na aba Controles para rolar uma ou mais Tabelas de Significado sempre que esta tabela for rolada, a menos que a tabela use pesos. Uma lista só pode ser vinculada a partir de um único item.
 - Máximo de rolagens encadeadas está atualmente definido em 10. Deixe-me saber se você acha que isso deve mudar.
 
 ## Arquivos iniciais
@@ -62,7 +62,7 @@ Melhores práticas
 
 ## Não suportado ainda
 
-- Tabelas com peso não são suportadas ainda—use intervalos explícitos (1..N)
+- Ainda não é possível montar manualmente uma tabela com pesos. Você pode importar um CSV de Tabela de Significado com as colunas result e weight, com até 100 linhas. Para tabelas montadas manualmente, use intervalos explícitos (1..N).
 
 ## Próximos passos
 

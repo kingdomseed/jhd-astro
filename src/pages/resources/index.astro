@@ -80,6 +80,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   category: entry.data.category,
   duration: entry.data.duration ?? null,
   updated: entry.data.updated ?? null,
+  fullArticleAvailable: entry.data.fullArticleAvailable === true,
 }));
 ---
 <BaseLayout
@@ -141,6 +142,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                   role="option"
                   aria-selected="false"
                   data-resource-search-item
+                  data-full-article-available={entry.fullArticleAvailable ? "true" : undefined}
                   data-title={entry.title}
                   data-summary={entry.summary}
                   data-category={categoryLabels[entry.category]}

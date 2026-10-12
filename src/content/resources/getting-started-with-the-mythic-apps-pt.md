@@ -28,15 +28,15 @@ heroAlt: "Ilustração de uma pessoa com um bot amigável"
 # Structured steps (images optional)
 steps:
   - title: "Instale no seu dispositivo"
-    body: "Baixe e instale o aplicativo para desktop ou celular e inicie — o aplicativo cria seu primeiro jogo salvo: Meu Diário. Renomeie-o na tela de configurações."
+    body: "Baixe e instale o app para computador ou celular e abra-o. O app cria seu primeiro Diário, chamado My Journal. Para renomeá-lo, abra CONFIGURAÇÕES, vá até Arquivos, toque no menu na linha do Diário e escolha Renomear Diário."
   - title: "Defina o Fator Caos"
     body: "Ao iniciar pela primeira vez, você verá a Tabela de Destino. Defina o FC (1–9) para corresponder ao seu cenário; ajuste depois conforme necessário."
   - title: "Pergunte, role e registre"
-    body: "Digite uma pergunta sim/não, escolha as probabilidades e role. Registre os resultados nas notas da sua cena para manter a continuidade da história. Você pode ativar a opção de escrever a pergunta antes de rolar nas configurações da tela."
+    body: "Escolha as chances e role. Para digitar uma pergunta a cada rolagem, toque na engrenagem da tela de Destino e ative Solicitar pergunta antes de lançar; o app pede a pergunta quando você rola. Escolha as chances e role. O app salva toda rolagem de Destino, Teste de Cena, Evento Aleatório e rolagem de Tabela de Significado no Registro de Aventura, então use o Resumo de uma Cena apenas para suas próprias anotações."
   - title: "Use Listas, Cenas e Tabelas de Significado"
     body: "É uma boa ideia adicionar Personagens e Tramas às suas Listas antes de começar seu primeiro jogo. Use Cenas para resumir ou prever, e Tabelas de Significado para interpretar os resultados."
 ---
-Bem-vindo! Este guia rápido parte do próprio app: você começa na Tabela de Destino e se move entre Listas, Cenas e Tabelas de Significado enquanto joga. Não há contas ou servidores; tudo acontece no seu dispositivo.
+Bem-vindo! Este guia rápido parte do próprio app: você começa na Tabela de Destino e se move entre Listas, Cenas e Tabelas de Significado enquanto joga. Seus Diários ficam armazenados no seu dispositivo. No iPhone, no iPad e na versão da Mac App Store, você pode ativar Sincronização do iCloud para mantê-los no iCloud.
 
 > O que você precisa: Traga para a mesa
 > - Seu RPG favorito e personagens criados (mantenha as fichas à mão)
@@ -53,7 +53,7 @@ Bem-vindo! Este guia rápido parte do próprio app: você começa na Tabela de D
 
 ### 1) Instalar
 
-Instale o aplicativo desktop ou móvel da loja da sua plataforma e inicie-o. Uma vez iniciado, o aplicativo cria automaticamente seu primeiro diário chamado 'Meu Diário'. Você pode renomeá-lo nas configurações.
+Baixe e instale o app para computador ou celular e abra-o. O app cria seu primeiro Diário, chamado My Journal. Para renomeá-lo, abra CONFIGURAÇÕES, vá até Arquivos, toque no menu na linha do Diário e escolha Renomear Diário.
 
 ### 2) Comece na Tabela de Destino (ou mude para Verificação de Destino)
 
@@ -61,33 +61,33 @@ Na primeira execução, o aplicativo abre na Tabela de Destino. Você pode alter
 
 > Dica: Alterar Configurações de Tela
 > - Existe uma roda de configurações que permite mudar as configurações de cada tela.
-> - Você pode ativar mais detalhes sobre rolagens na tela da Tabela de Destino
+> - Para mostrar mais detalhes das rolagens no Registro de Aventura em um celular, abra CONFIGURAÇÕES, escolha a aba Comportamento no jogo e abra Configurações do Registro de Aventura. Em um tablet ou computador, toque na engrenagem do painel Registro de Aventura.
 > - Você também pode ativar a capacidade de fazer uma pergunta antes de cada rolagem
 
 ### 3) Telas principais que você usará toda sessão
 
 - Tabela de Destino (e Verificação de Destino): faça perguntas, escolha probabilidades, role e interprete respostas.
-- Listas: rastreie Personagens, Tramas e Características. Essas listas alimentam suas rolagens de eventos e trazem elementos para sua história de maneiras inesperadas.
-- Cenas: anote um título e resumo; capture o Fator Caos no início da cena; adicione notas enquanto joga ou espere até a conclusão de uma cena e resuma.
-- Tabelas de Significado: Tabelas de Ação/Assunto e outras para dar inspiração (Palavras de Descrição) ao interpretar seus resultados.
+- Listas: rastreie Personagens, Tramas e Aspectos. Essas listas alimentam suas rolagens de eventos e trazem elementos para sua história de maneiras inesperadas.
+- Cenas: anote um título e resumo; adicione notas enquanto joga ou espere até a conclusão de uma cena e resuma.
+- Tabelas de Significado: Significado de Ação 1, Significado de Ação 2 e outras tabelas que oferecem palavras para você interpretar.
 
 Notas de layout
 - Mobile: cada área é sua própria tela; alterne usando a gaveta de navegação no canto superior esquerdo.
-- Desktop: todas as áreas principais são visíveis juntas para que você possa rolar e escrever sem alternar.
+- Tablet e computador: a tela Início mostra Tabelas de Significado, o Registro de Aventura com os controles de Destino e as Listas lado a lado, e Cenas tem sua própria entrada no trilho de navegação. Em um computador, você pode ativar Layout clássico de 6 painéis (Desktop) para ver todas as áreas em uma só tela.
 
 ### 4) Um fluxo simples de primeira sessão
 
 1) Defina o Fator Caos (FC) na Tabela de Destino
-2) Crie uma Cena com um breve resumo; registre o FC inicial da cena
+2) Crie uma Cena com um resumo curto. A Cena assume sozinha o Fator de Caos atual do Diário, então não há nada para registrar.
 3) Comece a cena fazendo sua primeira pergunta sim/não na Tabela de Destino e role
 4) Se travar, role nas Tabelas de Significado para inspiração
-5) Adicione itens às Listas (Personagens, Tramas, Características) conforme surgirem
+5) Adicione itens às Listas (Personagens, Tramas, Aspectos) conforme surgirem
 6) Ajuste o FC entre as cenas conforme sua história muda
 
 ## Dicas e solução de problemas
 
 - Na dúvida de como começar? Mantenha o livro por perto e comece com provável/50‑50 no início
-- O Fator Caos determina a probabilidade de resultados excepcionais ocorrerem
+- O Fator de Caos muda a probabilidade de uma resposta Sim e a frequência com que um Evento Aleatório acontece.
 - No celular, tente o modo paisagem quando quiser mais contexto enquanto joga
 
 ## Próximos passos

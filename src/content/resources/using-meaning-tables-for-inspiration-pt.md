@@ -34,7 +34,7 @@ Tabelas de Significado geram prompts descritivos que esclarecem elementos narrat
 
 > Disponibilidade e conteúdo
 > - Conjunto principal: O app inclui as Tabelas de Significado 2e completas para rolagem.
-> - Conjuntos expandidos: 50+ Tabelas de Significado adicionais e 12+ tabelas extras de Foco de Evento de Mythic Magazines, Mythic Variations e outras publicações Mythic estão disponíveis no app.
+> - Conjuntos expandidos: mais 168 Tabelas de Significado e mais 13 tabelas de Foco de Evento, vindas das Mythic Magazines, das Variations e de outras publicações, estão disponíveis no app com o Expanded Features.
 > - Preço por plataforma: na Apple App Store, Google Play e Amazon Appstore, esses conjuntos expandidos fazem parte do desbloqueio único de Recursos Expandidos. Na Microsoft Store (Windows) e itch.io (sem DRM), a compra única do app inclui esses recursos.
 > - Para os detalhes mais recentes, veja Suporte → Compras, Preços e Atualizações: /pt/support
 
@@ -43,19 +43,19 @@ Tabelas de Significado geram prompts descritivos que esclarecem elementos narrat
 Você pode abrir Tabelas de Significado a qualquer momento para obter um par de palavras para inspiração.
 
 ### 1) Eventos Aleatórios (Significado de Evento)
-- Tempo: Eventos Aleatórios ocorrem de duplos de Verificação de Destino ≤ Fator Caos (FC) ou quando uma Cena Esperada se torna uma Interrupção.
+- Momento: um Evento Aleatório acontece quando uma rolagem da Tabela de Destino ou do Teste do Destino dá um duplo igual ou menor que o Fator de Caos, ou quando um Teste de Cena dá Cena de Interrupção. Enquanto a Tabela de Foco de Eventos Preparados estiver selecionada, o Teste de Cena nunca dá Cena Alterada nem Cena de Interrupção. Ele dá Cena Esperada, e uma rolagem igual ou menor que o Fator de Caos adiciona um Evento Aleatório a ela.
 - Aplicação: Após o Foco de Evento (ex., Novo NPC, Negativo para PJ), role um par de palavras de Significado de Evento (Ações, Descrições ou Elementos). Combine Contexto + Foco + Significado para inventar a reviravolta.
 
 ### 2) Descobrindo Significado (adicionando detalhes)
 - Descrevendo o desconhecido: Defina como um objeto se parece, o passado de um personagem ou qual ação está ocorrendo em uma cena.
 - Criando personagens: Gere primeiras ações, aparência, passado ou identidade para um novo NPC.
-- Começando uma aventura: Para sua Primeira Cena, pule o Foco de Evento e role pares de palavras para iniciar a abertura (muitos usam uma abordagem 4W: Quem/O Que/Onde/Por Que usando tabelas de Elementos).
+- Começando uma aventura: na sua Primeira Cena, você pode rolar pares de palavras sem Foco de Evento. Para uma abertura 4W, role Personagens para Quem (Who), Significado de Localização para Onde (Where), e Significado de Ação 1 e Significado de Ação 2 para O quê (What) e para Por quê (Why).
 - Esclarecendo ambiguidade: Se um resultado de Destino ou evento parecer vago, role novamente em Significado para sugerir um ângulo e estreitar a interpretação.
 - Cenas alteradas: Se sua Cena Esperada for Alterada e você não tiver certeza de como, role um par de palavras para inspirar um ajuste simples ou o próximo resultado mais esperado.
 
 ## Escolhendo a tabela certa
 
-Tabelas de Significado vêm em três variedades. Escolher o melhor ajuste frequentemente produz a interpretação mais clara.
+O livro descreve três tipos de Tabelas de Significado. Em vez disso, o app organiza suas tabelas em categorias, como Tabelas Principais e Personagem e Identidade. Escolher o melhor ajuste frequentemente produz a interpretação mais clara.
 
 1) Ações: Verbos ativos — o que alguém/algo está fazendo ou tendo feito a eles.
 2) Descrições: Adjetivos/qualidades — como alguém/algo se parece ou se sente.
@@ -71,9 +71,9 @@ Tabelas de Significado vêm em três variedades. Escolher o melhor ajuste freque
 
 ## No app
 
-- Troca rápida: Toque no tipo de tabela e tema; role para gerar um par claro de palavras.
-- Copiar para notas: No desktop, mantenha Tabelas de Significado abertas enquanto escreve notas de cena. No celular, troque para frente e para trás — resultados são fáceis de lembrar.
-- Fluxo de Eventos Aleatórios: Quando uma reviravolta atingir, selecione Foco de Evento, depois pule aqui para rolar Significado de Evento; anote sua interpretação na descrição da Cena.
+- Como encontrar uma tabela: pesquise ou percorra a lista e toque em uma tabela para rolá-la. Mantenha uma tabela pressionada para ver seus detalhes e toque no coração para mostrar apenas suas favoritas.
+- Copiar para notas: No desktop, mantenha Tabelas de Significado abertas enquanto escreve notas de cena. No celular, abra o Painel de Jogo na tela de Destino e use a aba Tabelas para rolar sem sair do Registro de Aventura. Toda rolagem é salva no Registro de Aventura.
+- Fluxo dos Eventos Aleatórios: quando surge uma reviravolta, o app rola primeiro a tabela de Foco do Evento. Ele também rola os vínculos dessa tabela com Tabelas de Significado. Se a entrada sorteada estiver vinculada a uma Tabela de Significado, a outra tabela de Foco do Evento, a uma Lista da Aventura ou a uma Lista Personalizada, o app também rola essa tabela ou lista vinculada. Uma segunda tabela de Foco do Evento rola apenas seus vínculos com Listas da Aventura e Listas Personalizadas e não segue vínculos para outras tabelas. Todas essas rolagens são salvas em uma única entrada do Registro de Aventura. Se você ativar Rolar o Significado do Evento automaticamente, que vem desativado por padrão, o app também adiciona palavras de Significado de Ação 1 e Significado de Ação 2, mesmo que o evento já tenha trazido palavras de Significado ou um resultado de Lista Personalizada. Com as tabelas de Ação padrão, isso adiciona uma palavra de cada tabela; se as tabelas de Ação estiverem configuradas com pesos ou sem par, podem aparecer palavras a mais. Leia a entrada e escreva sua interpretação no Resumo da Cena.
 
 ## Dicas
 

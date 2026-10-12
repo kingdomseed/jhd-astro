@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: Dice Formulas & Customization
 summary: "Build rolls for advantage, thresholds, exploding or compounding dice, keep/drop, and more."
 category: dice-roller
@@ -77,10 +78,7 @@ related:
 ## Read this first (no programming required)
 
 - Formulas are simple, readable expressions (like `2d6+3`).
-- You can type a formula, roll it, and click “Save Formulas” to keep it for later.
-- Where to find the buttons:
-  - Mobile: “Save Formulas” and “Manage Formulas” are below the text field.
-  - Desktop: they’re above the text field.
+- You can type a formula, roll it, and tap Save Formula to keep it for later. On a phone, Save Formula and Manage Formulas are under the formula field, and on a tablet or desktop they are above it.
 - Save stores whatever is currently in the text field and lets you name it and add a description. Manage lets you import, export, rename, reorder, and delete.
 
 Tip: To save, you only need the formula text—no need to understand every option below. Come back here when you want to do something more advanced.
@@ -94,12 +92,12 @@ Tip: To save, you only need the formula text—no need to understand every optio
 - Explode / Compound: `!` (explode), `!!` (compound), add `o` for once: `!o`, `!!o` (e.g., `4d6!`, `5d10!!o>=8`)
 - Reroll: `r` (reroll matches), `ro` (reroll once) (e.g., `4d4r<=2`, `4d4ro<2`)
 - Count / Score:
-  - `#` returns a count (discards individual dice results): `6d6#>=5`astro
-  - Metadata counters keep dice results and record counts in metadata: `#s`, `#f`, `#cs`, `#cf` (e.g., `6d6 #f<=2 #s>=5 #cs6 #cf1`)
+  - # returns a count and discards the individual dice results: 6d6#>=5
+  - #s, #f, #cs, and #cf mark dice as successes, failures, critical successes, and critical failures. The dice and their sum stay as rolled, and the roll row lists the counts. For example: `6d6 #f<=2 #s>=5 #cs6 #cf1`
 - Clamp (cap): `C<` and `C>` (e.g., `4d20 C<5`, `4d20 C>15`)
 
 Order and precedence gotchas
-- Order matters with counters and keep/drop. If you do `2d20 kh #cf #cs`, the low die is dropped before counting. If you want to count all rolled dice first, write `2d20 #cf #cs kh`.
+- Order matters with keep and the marking counters. 2d20 kh #cf #cs drops the low die first, and to mark both dice before the keep you must write (2d20 #cf #cs) kh, because 2d20 #cf #cs kh keeps both dice.
 - Drop/filter operators bind tighter than arithmetic. `(5d6+5d10)-L2` drops from the combined pool; `5d6+5d10-L2` drops only from the d10s.
 - Use uppercase `D66` (lowercase `d66` is a 66‑sider, not D66).
 
@@ -164,10 +162,10 @@ Lancer (accuracy/difficulty)
 - Difficulty: `1d20 - (Xd6kh1) + MOD`
 
 Year Zero Engine (Free League: Alien, Forbidden Lands, Vaesen, etc.)
-- Three colored pools (base/skill, stress, gear): roll each pool separately to keep counts distinct.
+- Three colored pools (base/skill, stress, gear): Roll the three pools in one formula with labels, for example "Base": 4d6 #s=6, "Stress": 2d6 #s=6, "Gear": 1d6 #s=6. In Dice Studio the roll shows each pool on its own line with its label and total.
 - Successes: `Nd6#s=6` on each pool; track 1s on stress/gear with `#f=1`.
-- Push (reroll once, lock 6s and 1s): add `ro<6 ro>1` to reroll only 2–5 exactly once, e.g., `Nd6 ro<6 ro>1 #s=6`.
-- Limitations: color tagging isn’t encoded in a single expression; roll each color as its own line. Panic/breakage resolution remains table‑side.
+- To push, roll the pool in Dice Studio with a success mark, for example 5d6 #s=6, then use Push on that roll. Push keeps the dice marked as successes and rolls every other die again, including 1s.
+- Limitations: Panic/breakage resolution remains table‑side.
 
 The One Ring 2e (approximation)
 - Roughly: `1d12 + Nd6`
@@ -188,22 +186,22 @@ Ironsworn / Starforged
 
 Download sample Saved Formulas for popular systems that are ready to import. Use Manage Formulas → Import to merge them into your list. See the Downloads section at the bottom for files.
 
-Important: If you manually drop a file in place rather than importing, name it exactly `saved_formulas.json`. The Import flow accepts any filename.
+Important: If you manually drop a file in place rather than importing, name it exactly `saved_formulas.json`. The Import flow does not require a particular file name. In the native apps, the file must end in .json (in any letter case). On the web, the file picker asks for .json files, but the app does not check the extension separately. A file name does not make the contents a valid formula file.
 
 ## Save, load, import, export (UI recap)
 
-- Mobile: “Save Formulas” and “Manage Formulas” are under the formula text field.
+- Mobile: “Save Formula” and “Manage Formulas” are under the formula text field when action buttons are enabled.
 - Desktop: both appear above the text field.
 - Save adds the current formula to your Saved list and opens a dialog to name/describe it.
 - Manage lets you import, export, reorder, rename, and delete.
-- Import allows merging or replacing—export first if you want a backup.
+- Import adds every formula in the file to the end of your list. It never replaces the list and does not skip formulas you already have.
 
 ## Troubleshooting & gotchas
 
 - My counts look off with advantage
-  - Put counters before keep/drop: `2d20 #cf #cs kh`.
+  - Put counters before keep/drop and group them: `(2d20 #cf #cs) kh`.
 - `4d6-L2+2` didn’t do what I expected
-  - Drop binds tighter than `+`. Use parentheses for aggregate: `(4d6-L2)+2`.
+  - 4d6-L2+2 and (4d6-L2)+2 are the same roll: drop the two lowest of 4d6, then add 2.
 - My D66 looks wrong
   - Use uppercase: `1D66`.
 - I need exploding “once”
@@ -217,7 +215,7 @@ Important: If you manually drop a file in place rather than importing, name it e
 - Share and maintain a portable list: see “Formula Schema”.
 
 > ##### Syntax engine and docs
-> The roller is powered by Adventuresmith’s dart_dice_parser. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
+> The roller uses the app's own version of Adventuresmith's dart_dice_parser. The pub.dev page describes the original package, so check a formula in the app before you rely on it. For the full grammar and additional examples, see: https://pub.dev/packages/dart_dice_parser
 
 ## See a problem?
 

@@ -49,6 +49,12 @@
           "single": true
         },
         {
+          "name": "fullArticleAvailable",
+          "type": "boolean",
+          "single": true,
+          "default": false
+        },
+        {
           "name": "externalUrl",
           "type": "string",
           "single": true
