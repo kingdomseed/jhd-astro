@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Vincular e aninhar tabelas"
 summary: "Um vínculo faz uma rolagem levar a outra."
 category: "custom-tables"

@@ -1,4 +1,5 @@
 ---
+fullArticleAvailable: true
 title: "Compartilhar Diários de aventura"
 summary: "Você pode salvar um Diário como arquivo, enviar esse arquivo para alguém e trazer um arquivo de Diário para o app."
 category: "adventure-journals"
