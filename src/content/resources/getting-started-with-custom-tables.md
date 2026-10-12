@@ -2,6 +2,7 @@
 fullArticleAvailable: true
 title: "Getting Started with Custom Tables"
 summary: "Create Meaning Tables and Event Focus tables, add translations and links, and import ready-made starters."
+appSummary: "Create Meaning and Event Focus tables, add translations and links, and import tables from files."
 category: "custom-tables"
 order: 1
 icon: "fa-slab fa-regular fa-newspaper"

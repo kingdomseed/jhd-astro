@@ -77,6 +77,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   id: entry.id,
   title: entry.data.title,
   summary: entry.data.summary,
+  appSummary: entry.data.appSummary,
   category: entry.data.category,
   duration: entry.data.duration ?? null,
   updated: entry.data.updated ?? null,
@@ -144,7 +145,7 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
                   data-resource-search-item
                   data-full-article-available={entry.fullArticleAvailable ? "true" : undefined}
                   data-title={entry.title}
-                  data-summary={entry.summary}
+                  data-summary={entry.appSummary ?? entry.summary}
                   data-category={categoryLabels[entry.category]}
                   data-index={index}
                 >
