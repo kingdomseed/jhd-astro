@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import art20 from "../../../assets/v2/art-20.png";
+import stampArt15 from "../../../assets/v2/stamp-art15.png";
+import stampRedhair from "../../../assets/v2/stamp-redhair.png";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
 import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
@@ -49,15 +53,15 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
 
   <div id="blog" class="blog-page">
     <section class="blog-hero" aria-labelledby="blog-hero-title">
-      <img
+      <Image
         class="blog-hero__stamp blog-hero__stamp--one"
-        src="/v2/assets/stamp-art15.png"
+        src={stampArt15}
         alt=""
         aria-hidden="true"
       />
-      <img
+      <Image
         class="blog-hero__stamp blog-hero__stamp--two"
-        src="/v2/assets/art-20.png"
+        src={art20}
         alt=""
         aria-hidden="true"
       />
@@ -143,7 +147,7 @@ const categories = [...new Set(posts.map((post) => post.data.category))]
               </a>
             </article>
             <div class="blog-feature__plate" aria-hidden="true">
-              <img src="/v2/assets/stamp-redhair.png" alt="" loading="lazy" />
+              <Image src={stampRedhair} alt="" loading="lazy" />
             </div>
           </div>
         </section>

@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import {
   v2AssetPath,
   v2AppsAnchorUrl,
@@ -14,7 +15,7 @@ const isActive = (href: string) =>
 <header class="nav" id="nav">
   <div class="wrap nav-row">
     <a class="brand" href="/v2/" aria-label="Jason Holt Digital home">
-      <span class="brand-mark"><img src={v2AssetPath("logo-munoz.svg")} alt="JHD" /></span>
+      <span class="brand-mark"><Image src={v2AssetPath("logo-munoz.svg")} alt="JHD" width={258} height={258} /></span>
       <div>
         <span class="brand-title">Jason Holt Digital</span>
         <span class="brand-sub">Indie Studio · Est. 2023</span>

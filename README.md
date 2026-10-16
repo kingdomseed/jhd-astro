@@ -32,7 +32,7 @@ Mythic Game Master Emulator 2nd Edition is a revolutionary oracle system that en
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 22.22.3 or newer in the Node 22 release line (see `.nvmrc`)
 - npm or yarn package manager
 
 ### Installation
@@ -54,12 +54,19 @@ npm run dev
 - `npm run dev` — Start local development server
 - `npm run build` — Build for production (outputs to `dist/`)
 - `npm run preview` — Preview production build locally
+- `npm run check` — Run Astro's type and configuration diagnostics
+- `npm test` — Run the Vitest suite
+- `npm run doctor` — Scan the site with Astro Doctor (telemetry disabled)
+
+Project-local agent skills are in `.agents/skills/`: `migrate`, `docs-lookup`, and
+`astro-best-practices` from [Astro Agent Skills](https://github.com/incluud/astro-agent-skills),
+plus `astro-rules` from [Astro Doctor](https://github.com/santi020k/astro-doctor).
 
 ## 🏗️ Architecture
 
-This is a static Astro 5 website built with component-driven architecture:
+This is a static Astro 7 website built with component-driven architecture:
 
-- **Framework**: Astro v5.13.3
+- **Framework**: Astro v7.4
 - **Styling**: Global CSS with component-specific classes
 - **JavaScript**: TypeScript with minimal vanilla JS for interactive elements
 - **Deployment**: Static site generation (SSG)
@@ -119,7 +126,7 @@ public/
 
 ## 🛠️ Technical Stack
 
-- **Astro 6** — Static site generator
+- **Astro 7.4** — Static site generator
 - **TypeScript** — Type-safe development
 - **Font Awesome Pro** — Icon library (CDN)
 - **Vitest** — Unit testing

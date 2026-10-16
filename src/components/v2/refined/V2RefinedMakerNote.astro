@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import jason from "../../../assets/v2/jason.jpg";
+---
+
 <section class="maker" id="about">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:48px">
@@ -9,7 +14,7 @@
     </div>
     <div class="maker-grid">
       <div class="maker-photo">
-        <img src="/v2/assets/jason.jpg" alt="Jason Holt" />
+        <Image src={jason} alt="Jason Holt" />
         <div class="maker-photo-tag">Jason — Kansas City, MO</div>
       </div>
       <div class="maker-body">

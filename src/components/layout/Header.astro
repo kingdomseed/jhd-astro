@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // Site header containing the logo, primary navigation and an
 // accessible Download dropdown menu with platform links. The sticky
 // behaviour is achieved through CSS defined in the global stylesheet.
@@ -18,12 +19,12 @@ function l(path: string) {
 <header class="header-nav">
   <div class="container row header-bar">
     <a class="brand" href={l("/")} aria-label={t("nav.aria.brand_home")}>
-      <img
+      <Image
         class="brand-logo"
         src={brandLogoUrl}
         alt="Jason Holt Digital"
-        width="48"
-        height="48"
+        width={48}
+        height={48}
         decoding="async"
         loading="lazy"
       />

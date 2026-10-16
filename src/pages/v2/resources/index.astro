@@ -1,4 +1,9 @@
 ---
+import { Image } from "astro:assets";
+import art18 from "../../../assets/v2/art-18.png";
+import stampArt10 from "../../../assets/v2/stamp-art10.png";
+import stampBeast from "../../../assets/v2/stamp-beast.png";
+import stampWastelander from "../../../assets/v2/stamp-wastelander.png";
 import type { CollectionEntry } from "astro:content";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
@@ -126,15 +131,15 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   <V2RefinedHeader slot="before-main" />
 
   <section class="resources-hero" id="resources" aria-labelledby="resources-hero-title">
-    <img
+    <Image
       class="resources-hero__art resources-hero__art--map"
-      src="/v2/assets/stamp-art10.png"
+      src={stampArt10}
       alt=""
       aria-hidden="true"
     />
-    <img
+    <Image
       class="resources-hero__art resources-hero__art--figure"
-      src="/v2/assets/stamp-beast.png"
+      src={stampBeast}
       alt=""
       aria-hidden="true"
     />
@@ -338,9 +343,9 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   {
     advancedItems.length > 0 && (
       <section class="resources-schemas" id="schemas" aria-labelledby="schemas-title">
-        <img
+        <Image
           class="resources-schemas__art"
-          src="/v2/assets/art-18.png"
+          src={art18}
           alt=""
           aria-hidden="true"
         />
@@ -377,9 +382,9 @@ const searchEntries = sortByOrder(entries).map((entry) => ({
   }
 
   <section class="sec resources-support" aria-labelledby="resources-support-title">
-    <img
+    <Image
       class="resources-support__art"
-      src="/v2/assets/stamp-wastelander.png"
+      src={stampWastelander}
       alt=""
       aria-hidden="true"
     />

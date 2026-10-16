@@ -113,8 +113,10 @@ export const ui = {
     "resources.link4": "Dice Roller Formula Guide",
     "makers.badge": "About",
     "makers.title": "Maker’s Note",
-    "makers.text":
-      "Hi, I’m Jason. I build and maintain the <strong>official Mythic GME&nbsp;2e apps</strong> in partnership with Word Mill Creative. Most days that means moving between code, support messages, Discord, and the feature board, looking for places where the apps can make real sessions smoother. I want the apps to make Mythic feel ready to play in one place, without pulling attention away from the story.",
+    "makers.text.before": "Hi, I’m Jason. I build and maintain the ",
+    "makers.text.emphasis": "official Mythic GME\u00a02e apps",
+    "makers.text.after":
+      " in partnership with Word Mill Creative. Most days that means moving between code, support messages, Discord, and the feature board, looking for places where the apps can make real sessions smoother. I want the apps to make Mythic feel ready to play in one place, without pulling attention away from the story.",
     "makers.cta": "Read the full story",
     "reviews.badge": "What players say",
     "reviews.title": "Player reviews",
@@ -228,8 +230,10 @@ export const ui = {
     "resources.link4": "Guia de Fórmulas de Dados",
     "makers.badge": "Sobre",
     "makers.title": "Nota do Criador",
-    "makers.text":
-      "Oi, eu sou o Jason. Eu construo e mantenho os <strong>apps oficiais Mythic GME&nbsp;2e</strong> em parceria com a Word Mill Creative. Na prática, isso significa alternar entre código, mensagens de suporte, Discord e o quadro de recursos, procurando onde os apps podem deixar sessões reais mais fluidas. Quero que os apps deixem Mythic pronto para jogar em um só lugar, sem puxar a atenção para longe da história.",
+    "makers.text.before": "Oi, eu sou o Jason. Eu construo e mantenho os ",
+    "makers.text.emphasis": "apps oficiais Mythic GME\u00a02e",
+    "makers.text.after":
+      " em parceria com a Word Mill Creative. Na prática, isso significa alternar entre código, mensagens de suporte, Discord e o quadro de recursos, procurando onde os apps podem deixar sessões reais mais fluidas. Quero que os apps deixem Mythic pronto para jogar em um só lugar, sem puxar a atenção para longe da história.",
     "makers.cta": "Leia a história completa",
     "reviews.badge": "O que dizem os jogadores",
     "reviews.title": "Avaliações de jogadores",

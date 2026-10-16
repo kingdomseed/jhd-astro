@@ -1,4 +1,6 @@
 ---
+import stampArt15 from "../../../assets/v2/stamp-art15.png";
+import { Image } from "astro:assets";
 import {
   v2AssetPath,
   v2AppsAnchorUrl,
@@ -11,13 +13,13 @@ import {
 ---
 
 <footer class="foot" id="site-footer">
-  <img class="foot-art" src={v2AssetPath("stamp-art15.png")} alt="" aria-hidden="true" />
+  <Image class="foot-art" src={stampArt15} alt="" aria-hidden="true" />
   <div class="wrap" style="position:relative;z-index:2">
     <h2 class="foot-big">Solo play.<br />Shipped <em>honestly</em>.</h2>
     <div class="foot-grid">
       <div class="foot-col">
         <a class="brand" href="/v2/" style="color: var(--jhd-bg); margin-bottom:14px;">
-          <span class="brand-mark" style="background: var(--jhd-bg-warm);"><img src={v2AssetPath("logo-munoz.svg")} alt="JHD" /></span>
+          <span class="brand-mark" style="background: var(--jhd-bg-warm);"><Image src={v2AssetPath("logo-munoz.svg")} alt="JHD" width={258} height={258} /></span>
           <div><span class="brand-title">Jason Holt Digital</span><span class="brand-sub" style="color: color-mix(in oklab, var(--jhd-bg) 55%, transparent);">Indie · Est. 2023</span></div>
         </a>
         <p style="margin:16px 0 0; font-size:13px; color: color-mix(in oklab, var(--jhd-bg) 65%, transparent); max-width: 280px; line-height:1.55;">Official Mythic GME 2e Apps. Licensed from Word Mill Games. Made one ship at a time.</p>

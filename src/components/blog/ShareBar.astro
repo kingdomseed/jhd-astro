@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // Lightweight share bar with Web Share API and platform links
 // Props
 interface Props {
@@ -93,7 +94,7 @@ const shareLinks = {
     </li>
     <li>
       <a class="sharebar__iconbtn" href="/rss.xml" data-platform="rss" aria-label={copy.rssLabel}>
-        <img src="/icons/rss.svg" alt="" aria-hidden="true" width="16" height="16" class="ico-svg" />
+        <Image src="/icons/rss.svg" alt="" aria-hidden="true" width={16} height={16} class="ico-svg" />
         <span class="sr-only">{copy.rss}</span>
       </a>
     </li>
