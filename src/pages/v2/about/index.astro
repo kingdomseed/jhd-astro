@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import jason from "../../../assets/v2/jason.jpg";
 import { getEntry } from "astro:content";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
@@ -46,7 +48,7 @@ const {
         </ul>
       </div>
       <figure class="v2-page-card">
-        <img src="/v2/assets/jason.jpg" alt="Jason Holt" loading="eager" decoding="async" />
+        <Image src={jason} alt="Jason Holt" loading="eager" decoding="async" />
         <figcaption>
           <strong>{title}</strong>
           <span>Founder, builder, and support inbox reader.</span>

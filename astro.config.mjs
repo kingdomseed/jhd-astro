@@ -5,6 +5,7 @@ import oramaSearch from "./src/integrations/orama-search.mjs";
 
 export default defineConfig({
   site: 'https://jasonholtdigital.com',
+  compressHTML: true,
 
   integrations: [
     sitemap({

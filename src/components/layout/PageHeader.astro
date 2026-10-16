@@ -26,12 +26,12 @@ const {
 } = Astro.props;
 ---
 
-<section class={`page-header page-header--${layout} page-header--${visualElement} page-header--${colorScheme} ${className}`}>
+<section class:list={['page-header', `page-header--${layout}`, `page-header--${visualElement}`, `page-header--${colorScheme}`, className]}>
   <div class="container">
     <div class="page-header-content">
       <div class="page-header-badge">
         <span class="accent-line" aria-hidden="true"></span>
-        {icon && <i class={`page-header-icon ${icon}`} aria-hidden="true"></i>}
+        {icon && <i class:list={['page-header-icon', icon]} aria-hidden="true"></i>}
         <span class="badge-text">{accent}</span>
       </div>
       

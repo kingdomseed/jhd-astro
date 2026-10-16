@@ -4,6 +4,12 @@ This file is the canonical, detailed playbook for this repository. The previous 
 
 ## Agent skills
 
+### Astro maintenance
+
+For Astro upgrades, use `.agents/skills/migrate/SKILL.md` and verify breaking
+changes against the target version's official migration guide. For Astro Doctor
+findings, use `.agents/skills/astro-rules/SKILL.md`; run `npm run doctor` to scan.
+
 ### Issue tracker
 
 Issues are tracked in Linear on team `JAD`; use project `jhd-astro` once it exists. See `docs/agents/issue-tracker.md`.
@@ -19,7 +25,7 @@ This is a single-context repo: read root `CONTEXT.md`; use `docs/adr/` only when
 ## Scope & assumptions
 
 - This repository folder is `astro_project/`.
-- Site is a static Astro 6 site (no SSR, no Actions, no islands) unless a PLAN explicitly introduces them.
+- Site is a static Astro 7 site (no SSR, no Actions, no islands) unless a PLAN explicitly introduces them.
 - Goal: small, safe, incremental changes that preserve semantics, a11y, and visual intent.
 
 ## Project Structure & Module Organization
@@ -176,7 +182,7 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 
 ## Security & Configuration Tips
 
-- Node: use active LTS (≥22). Keep `package-lock.json` committed.
+- Node: use the Node 22 version in `.nvmrc`. Keep `package-lock.json` committed.
 - Private registries/tokens are configured via `.npmrc`. Do not commit secrets elsewhere.
 - This site is static; avoid SSR/external data unless explicitly planned and approved.
 
@@ -189,9 +195,9 @@ Bottom line: keep diffs tiny, selectors robust, and behavior accessible. Add Jav
 ## Cursor Cloud specific instructions
 
 - Standard commands are in `package.json` and the "Build, Test, and Development Commands" section above. Node 22 is pinned via `.nvmrc`/`engines`.
-- Services: this is a single static Astro 6 site (Cloudflare adapter, but output is prerendered static). There is no backend to run separately.
+- Services: this is a single static Astro 7 site (Cloudflare adapter, but output is prerendered static). There is no backend to run separately.
   - Dev server: `npm run dev` → serves on `http://localhost:4321/`. Start it in a background/tmux session; the process stays in the foreground otherwise.
   - Tests: `npm test` (Vitest, `*.test.ts` under `src/`). Lint/type check: `npx astro check`. Build: `npm run build` (outputs to `dist/`).
-- No secrets are required for dev/build/test. `.env` vars (`SENTRY_AUTH_TOKEN`, `PUBLIC_FORMSPARK_FORM_ID`, `PUBLIC_TURNSTILE_SITE_KEY`) are optional; the contact form and Sentry release upload are inert without them, but every page still renders.
+- No secrets or custom environment variables are required for dev/build/test. The English and Portuguese support pages contain the public Formspark form ID and Turnstile site key. Sentry release uploads are not configured.
 - `.npmrc` contains a Font Awesome registry token, but no `@fortawesome`/`@awesome.me` packages are in `package.json` (icons load via the Font Awesome CDN kit at runtime), so `npm install` does not hit that private registry.
 - Site search is powered by the `orama-search` integration (`src/integrations/orama-search.mjs`); it builds `oramaDB_*.json` indexes during `npm run build` and is queried client-side on the Resources/Blog pages.

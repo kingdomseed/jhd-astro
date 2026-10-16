@@ -1,3 +1,15 @@
+---
+import { Image } from "astro:assets";
+import mobile1 from "../../../assets/mobile/mobile-1.png";
+import mobile2 from "../../../assets/mobile/mobile-2.png";
+import mobile3 from "../../../assets/mobile/mobile-3.png";
+import mobile4 from "../../../assets/mobile/mobile-4.png";
+import mobile5 from "../../../assets/mobile/mobile-5.png";
+import mobile6 from "../../../assets/mobile/mobile-6.png";
+import mobile7 from "../../../assets/mobile/mobile-7.png";
+import stampAstronaut from "../../../assets/v2/stamp-astronaut.png";
+---
+
 <section class="hero" id="home">
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -23,15 +35,15 @@
       <div class="stage-plate"></div>
       <div class="stage-slab"></div>
       <div class="stage-badge">EST. 2023 · LICENSED</div>
-      <img class="stage-cutout" src="/v2/assets/stamp-astronaut.png" alt="" aria-hidden="true" />
+      <Image class="stage-cutout" src={stampAstronaut} alt="" aria-hidden="true" />
       <div class="phone-carousel" id="phoneCarousel">
-        <div class="phone-slide on"><img src="/v2/assets/mobile-1.png" alt="Fate Chart" data-label="Fate Chart" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-2.png" alt="Scenes" data-label="Scenes" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-3.png" alt="Settings" data-label="Settings" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-4.png" alt="Dice" data-label="Dice Roller" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-5.png" alt="Threads" data-label="Threads" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-6.png" alt="Support" data-label="Support" /></div>
-        <div class="phone-slide"><img src="/v2/assets/mobile-7.png" alt="Tables" data-label="Custom Tables" /></div>
+        <div class="phone-slide on"><Image src={mobile1} loading="eager" fetchpriority="high" alt="Fate Chart" data-label="Fate Chart" /></div>
+        <div class="phone-slide"><Image src={mobile2} alt="Scenes" data-label="Scenes" /></div>
+        <div class="phone-slide"><Image src={mobile3} alt="Settings" data-label="Settings" /></div>
+        <div class="phone-slide"><Image src={mobile4} alt="Dice" data-label="Dice Roller" /></div>
+        <div class="phone-slide"><Image src={mobile5} alt="Threads" data-label="Threads" /></div>
+        <div class="phone-slide"><Image src={mobile6} alt="Support" data-label="Support" /></div>
+        <div class="phone-slide"><Image src={mobile7} alt="Tables" data-label="Custom Tables" /></div>
         <div class="phone-caption">
           <span id="captLabel">Fate Chart</span>
           <span class="ix" id="captIx">01 / 07</span>

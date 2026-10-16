@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import stampArt10 from "../../../assets/v2/stamp-art10.png";
+import stampBeast from "../../../assets/v2/stamp-beast.png";
 import V2RefinedFooter from "../../../components/v2/refined/V2RefinedFooter.astro";
 import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astro";
 import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
@@ -289,15 +292,15 @@ const messageChecklist = [
   <V2RefinedHeader slot="before-main" />
 
   <section class="support-hero" aria-labelledby="support-hero-title">
-    <img
+    <Image
       class="support-hero__stamp support-hero__stamp--beast"
-      src="/v2/assets/stamp-beast.png"
+      src={stampBeast}
       alt=""
       aria-hidden="true"
     />
-    <img
+    <Image
       class="support-hero__stamp support-hero__stamp--mark"
-      src="/v2/assets/stamp-art10.png"
+      src={stampArt10}
       alt=""
       aria-hidden="true"
     />

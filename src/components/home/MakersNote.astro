@@ -39,10 +39,7 @@ const l = (path: string) => getRelativeLocaleUrl(lang, path);
           />
         </div>
         <div>
-          <p
-            style="margin: .5rem 0; color: var(--muted)"
-            set:html={t("makers.text")}
-          />
+          <p style="margin: .5rem 0; color: var(--muted)">{t("makers.text.before")}<strong>{t("makers.text.emphasis")}</strong>{t("makers.text.after")}</p>
           <p class="cta">
             <a class="btn btn--shadow-primary btn--compact" href={l("about")}>
               {t("makers.cta")}

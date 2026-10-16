@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 import { getBlogPostsByLang } from '../../lib/collections';
@@ -337,7 +338,7 @@ const categories = uniqueCategories.map((category: CategoryName) => ({
               aria-hidden="true"></i>
           </a>
           <a class="btn btn--tertiary" href="/rss.xml">
-            <img src="/icons/rss.svg" alt="" aria-hidden="true" width="16" height="16" class="ico-svg" />
+            <Image src="/icons/rss.svg" alt="" aria-hidden="true" width={16} height={16} class="ico-svg" />
             Subscribe via RSS
           </a>
         </div>

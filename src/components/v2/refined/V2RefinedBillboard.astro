@@ -1,5 +1,17 @@
+---
+import { Image } from "astro:assets";
+import desktop1 from "../../../assets/desktop/desktop-1.png";
+import desktop3 from "../../../assets/desktop/desktop-3.png";
+import desktop5 from "../../../assets/desktop/desktop-5.png";
+import mobile1 from "../../../assets/mobile/mobile-1.png";
+import mobile2 from "../../../assets/mobile/mobile-2.png";
+import mobile4 from "../../../assets/mobile/mobile-4.png";
+import mobile7 from "../../../assets/mobile/mobile-7.png";
+import stampArt20 from "../../../assets/v2/stamp-art20.png";
+---
+
 <section class="billboard" id="features">
-  <img class="bb-art-bg" src="/v2/assets/stamp-art20.png" alt="" aria-hidden="true" />
+  <Image class="bb-art-bg" src={stampArt20} alt="" aria-hidden="true" />
   <div class="wrap bb-grid">
     <div class="bb-head">
       <span class="eyebrow bb-eyebrow"><span>Feature Tour</span></span>
@@ -15,7 +27,7 @@
     </div>
     <div class="bb-viewer" id="bbViewer">
       <div class="bb-slide on" data-orient="tall">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><img src="/v2/assets/mobile-1.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><Image src={mobile1} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">01 / 07</span>
           <h3>Fate Chart</h3>
@@ -23,7 +35,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="wide">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><img src="/v2/assets/desktop-1.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><Image src={desktop1} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">02 / 07</span>
           <h3>Fate Chart — Desktop</h3>
@@ -31,7 +43,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="tall">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><img src="/v2/assets/mobile-2.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><Image src={mobile2} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">03 / 07</span>
           <h3>Scenes</h3>
@@ -39,7 +51,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="wide">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><img src="/v2/assets/desktop-3.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><Image src={desktop3} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">04 / 07</span>
           <h3>Scenes — Desktop</h3>
@@ -47,7 +59,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="tall">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><img src="/v2/assets/mobile-4.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><Image src={mobile4} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">05 / 07</span>
           <h3>Dice Roller</h3>
@@ -55,7 +67,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="wide">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><img src="/v2/assets/desktop-5.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Desktop</span><Image src={desktop5} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">06 / 07</span>
           <h3>Threads — Desktop</h3>
@@ -63,7 +75,7 @@
         </div>
       </div>
       <div class="bb-slide" data-orient="tall">
-        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><img src="/v2/assets/mobile-7.png" alt="" /></div>
+        <div class="bb-slide-phone"><span class="bb-slide-platform">Mobile</span><Image src={mobile7} alt="" /></div>
         <div class="bb-slide-body">
           <span class="bb-slide-ix">07 / 07</span>
           <h3>Custom Tables</h3>

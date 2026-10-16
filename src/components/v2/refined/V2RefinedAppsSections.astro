@@ -1,4 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import art15 from "../../../assets/v2/art-15.png";
+import desktop1 from "../../../assets/desktop/desktop-1.png";
+import desktop6 from "../../../assets/desktop/desktop-6.png";
+import desktop7 from "../../../assets/desktop/desktop-7.png";
+import mobile1 from "../../../assets/mobile/mobile-1.png";
+import mobile5 from "../../../assets/mobile/mobile-5.png";
+import mobile7 from "../../../assets/mobile/mobile-7.png";
 const storeLinks = {
   apple: "https://apps.apple.com/us/app/mythic-gme-mobile/id6726999147",
   google:
@@ -35,17 +43,17 @@ const mobileApp = {
     "IAP unlocks are permanent, not subscription. Features you unlock plus any new pro features added within 12 months stay unlocked forever.",
   screenshots: [
     {
-      src: "/v2/assets/mobile-1.png",
+      src: mobile1,
       alt: "Mythic GME Mobile Fate Chart screen",
       label: "Fate Chart",
     },
     {
-      src: "/v2/assets/mobile-5.png",
+      src: mobile5,
       alt: "Mythic GME Mobile adventure log screen",
       label: "Adventure Log",
     },
     {
-      src: "/v2/assets/mobile-7.png",
+      src: mobile7,
       alt: "Mythic GME Mobile custom tables screen",
       label: "Custom Tables",
     },
@@ -93,17 +101,17 @@ const desktopApp = {
     "Mac App Store version is a mobile + desktop bundle and includes in-app unlocks for additional content and features.",
   screenshots: [
     {
-      src: "/v2/assets/desktop-1.png",
+      src: desktop1,
       alt: "Mythic GME Digital desktop workspace",
       label: "Workspace",
     },
     {
-      src: "/v2/assets/desktop-6.png",
+      src: desktop6,
       alt: "Mythic GME Digital desktop panel layout",
       label: "Panels",
     },
     {
-      src: "/v2/assets/desktop-7.png",
+      src: desktop7,
       alt: "Mythic GME Digital desktop journal and oracle layout",
       label: "Long Sessions",
     },
@@ -159,7 +167,7 @@ const sourceLinks = [
         <div class="app-product__phone-stack" aria-label="Mobile screenshots">
           {
             mobileApp.screenshots.map((shot, index) => (
-              <img
+              <Image
                 class={`app-product__phone app-product__phone--${index + 1}`}
                 src={shot.src}
                 alt={shot.alt}
@@ -208,7 +216,7 @@ const sourceLinks = [
   </section>
 
   <section class="sec apps-rhythm" aria-labelledby="apps-rhythm-title">
-    <img class="apps-rhythm__art" src="/v2/assets/art-15.png" alt="" aria-hidden="true" />
+    <Image class="apps-rhythm__art" src={art15} alt="" aria-hidden="true" />
     <div class="wrap apps-rhythm__grid">
       <div class="apps-rhythm__copy">
         <p class="eyebrow">
@@ -236,8 +244,8 @@ const sourceLinks = [
             desktopApp.screenshots[0],
             desktopApp.screenshots[2],
           ].map((shot) => (
-            <figure class="apps-rhythm__shot" data-wide={shot.src.includes("desktop")}>
-              <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+            <figure class="apps-rhythm__shot" data-wide={shot.src.src.includes("desktop")}>
+              <Image src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
               <figcaption>{shot.label}</figcaption>
             </figure>
           ))
@@ -291,7 +299,7 @@ const sourceLinks = [
         <div class="app-product__desktop-stack" aria-label="Desktop screenshots">
           {
             desktopApp.screenshots.map((shot, index) => (
-              <img
+              <Image
                 class={`app-product__desktop app-product__desktop--${index + 1}`}
                 src={shot.src}
                 alt={shot.alt}

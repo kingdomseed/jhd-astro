@@ -4,10 +4,7 @@ import V2RefinedHeader from "../../../components/v2/refined/V2RefinedHeader.astr
 import V2RefinedTweaksPanel from "../../../components/v2/refined/V2RefinedTweaksPanel.astro";
 import V2RefinedUtilBar from "../../../components/v2/refined/V2RefinedUtilBar.astro";
 import V2RefinedLayout from "../../../layouts/V2RefinedLayout.astro";
-import { extractLegalArticle } from "../../../lib/v2Legal";
-import termsSource from "../../terms.astro?raw";
-
-const legalArticle = extractLegalArticle(termsSource, "terms.astro");
+import TermsArticle from "../../../components/legal/TermsArticle.astro";
 ---
 
 <V2RefinedLayout
@@ -49,7 +46,9 @@ const legalArticle = extractLegalArticle(termsSource, "terms.astro");
   <section class="v2-article-shell">
     <div class="wrap v2-article-grid">
       <article class="v2-article-panel">
-        <div class="v2-article-inner" set:html={legalArticle} />
+        <div class="v2-article-inner">
+          <TermsArticle class="v2-prose v2-legal__article" privacyHref="/v2/privacy/" />
+        </div>
       </article>
       <aside class="v2-article-aside" aria-label="Legal actions">
         <div class="v2-aside-card">
