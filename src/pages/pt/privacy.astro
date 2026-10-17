@@ -4,7 +4,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
 ---
 <BaseLayout
   title="Política de Privacidade | Apps Mythic GME"
-  description="Saiba como os Apps Mythic GME lidam com privacidade: coleta mínima de dados, armazenamento local, analytics opcionais e controles claros."
+  description="Saiba como os Apps Mythic GME lidam com privacidade: coleta mínima de dados, armazenamento local, Compartilhamento de dados de uso opcional e controles claros."
   canonicalPath="/pt/privacy/"
   lang="pt"
   alternatePath="/privacy/"
@@ -13,7 +13,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
   <PageHeader
     title="Política de Privacidade"
     subtitle="Sua privacidade, protegida"
-    description="Coleta mínima de dados, armazenamento local e controles claros. Última atualização: 28 de maio de 2026"
+    description="Coleta mínima de dados, armazenamento local e controles claros. Última atualização: 17 de outubro de 2026"
     accent="Privacidade"
     layout="left"
     icon="fa-solid fa-shield-check"
@@ -54,56 +54,76 @@ import PageHeader from '../../components/layout/PageHeader.astro';
           solicitação de suporte.
         </p>
 
-        <h3>Analytics opcionais</h3>
-        <p>
-          Analytics é opcional e fica desligado até você ativar. Quando analytics está ativado, o PostHog recebe um
-          ping diário limitado com informações técnicas básicas, como versão do app, número do build, plataforma,
-          sistema operacional, localidade, se os Recursos Expandidos estão desbloqueados e um identificador pseudônimo
-          da instalação.
-        </p>
-        <p>
-          Os apps não enviam eventos individuais de jogo, texto de Diários, conteúdo de tabelas, Verificações de
-          Destino, resultados de dados ou conteúdo de Cenas e Listas como analytics.
-        </p>
-
-        <h3>Relatórios básicos de erro</h3>
-        <p>
-          Relatórios básicos de erro são ativados em builds de lançamento para que eu possa diagnosticar falhas e
-          problemas sérios do app. Esses relatórios são processados pelo Sentry e podem incluir contexto técnico, como
-          versão do app, plataforma, sistema operacional, tela atual, stack traces e breadcrumbs de erro. Quando
-          suportado e ativado pelas suas configurações, relatórios de erro também podem incluir contexto limitado da
-          interface para diagnóstico. Relatórios de erro não são usados para publicidade nem perfilamento.
-        </p>
-
-        <h3>Replay de Sessão</h3>
-        <p>
-          Replay de Sessão é separado de analytics. Ele fica desligado por padrão e só está disponível em plataformas
-          mobile suportadas. Se você ativar, o Sentry pode receber um replay curto em torno de um erro para ajudar a
-          diagnosticar o que aconteceu. Ele é configurado como ferramenta de depuração em caso de erro, não como
-          gravação contínua de sessão.
-        </p>
-
-        <h3>O que eu não coleto para publicidade ou analytics</h3>
+        <h3>Atividade do app</h3>
+        <p>Quando você abre o app, eu recebo um registro pelo PostHog com:</p>
         <ul>
-          <li>Informações de contato pessoais dentro dos apps, como nome, e-mail ou telefone</li>
-          <li>Localização precisa, como coordenadas GPS ou endereço exato</li>
-          <li>Texto de Diários, texto de Cenas, conteúdo de tabelas, Verificações de Destino, resultados de dados ou outro conteúdo de jogo como analytics</li>
-          <li>Histórico de navegação fora dos apps</li>
-          <li>Fotos, vídeos, contatos ou arquivos pessoais fora dos arquivos que você decide importar, exportar, sincronizar ou compartilhar</li>
-          <li>Conexões de redes sociais</li>
+          <li>um ID de instalação aleatório criado pelo app</li>
+          <li>um ID de sessão</li>
+          <li>a versão e o build do app, e a loja em que você o instalou</li>
+          <li>sua plataforma e a versão do sistema operacional</li>
+          <li>seu país, a partir do seu endereço de rede</li>
+          <li>o layout do app e sua configuração de Jogo Híbrido</li>
+          <li>quais ferramentas opcionais você ativou</li>
+          <li>se os Recursos Expandidos estão desbloqueados</li>
+        </ul>
+        <p>Quando você compra ou restaura os Recursos Expandidos, eu recebo se deu certo e qual loja você usou.</p>
+        <p>Uso isso para contar instalações ativas e verificar se as versões e as compras funcionam.</p>
+        <p>O ID de instalação é aleatório. Eu não associo esses dados a você como pessoa.</p>
+
+        <h3>Compartilhamento de dados de uso (opcional)</h3>
+        <p>
+          Com o Compartilhamento de dados de uso ativado, eu também recebo quais recursos você abre e o tipo de ação
+          que você faz, como uma Pergunta de Destino ou uma rolagem de dados. Ative ou desative em Configurações, em
+          Análises.
+        </p>
+
+        <h3>Lançamento de novos recursos</h3>
+        <p>
+          O app envia o ID de instalação ao PostHog para verificar se um novo recurso ou uma nova versão de uma tela
+          está pronta para o seu dispositivo. Uso isso para lançar mudanças aos poucos.
+        </p>
+
+        <h3>Relatórios de erro</h3>
+        <p>Quando algo dá errado no app, eu recebo um relatório de erro pelo Sentry e pelo PostHog com:</p>
+        <ul>
+          <li>o tipo de erro e onde ele aconteceu no código do app</li>
+          <li>a versão do app, a plataforma e o sistema operacional</li>
+          <li>uma descrição curta que escrevi para esse erro</li>
+          <li>os tipos de passos que o app executou logo antes, como abrir um diálogo</li>
+          <li>o ID de instalação e o número do patch de atualização (somente PostHog)</li>
+        </ul>
+        <p>
+          O Sentry também recebe uma amostra de dados de desempenho. O PostHog também recebe avisos do log do app,
+          identificados pela parte do app de onde vieram, e contagens de como foram os salvamentos de Diários.
+        </p>
+        <p>Uso os relatórios de erro para encontrar e corrigir bugs.</p>
+
+        <h3>Repetição da sessão (opcional)</h3>
+        <p>
+          Com a Repetição da sessão ativada, eu recebo uma gravação curta da tela do app quando ocorre um erro. A
+          gravação mostra os botões e rótulos do app. Tudo o que você escreve ou rola é ocultado. A Repetição da sessão
+          funciona no iPhone, iPad e Android, para adultos. Ative ou desative em Configurações, em Análises.
+        </p>
+
+        <h3>O que eu não coleto</h3>
+        <ul>
+          <li>Diários, Cenas, Tramas, Personagens, listas, Tabelas Personalizadas, notas ou qualquer coisa que você escreva</li>
+          <li>Perguntas de Destino, valores de dados ou resultados</li>
+          <li>Seu nome, e-mail ou telefone</li>
+          <li>Sua cidade ou localização precisa</li>
+          <li>Seu ID de publicidade</li>
+          <li>Preços, números de pedido ou dados da sua conta na loja</li>
         </ul>
 
-        <h2>Sua escolha sobre analytics</h2>
+        <h2>Suas escolhas</h2>
         <p>
-          Na primeira vez que você abre o app, aparece um diálogo de consentimento explicando analytics e deixando você
-          escolher. <strong>Analytics fica desligado por padrão</strong> até você optar por ativar. Relatórios básicos
-          de falhas e erros são ativados em builds de lançamento para ajudar a diagnosticar problemas e manter o app
-          estável. Replay de Sessão é tratado separadamente e fica desligado até você ativar.
+          Na primeira vez que você abre o app, e depois de atualizar para a versão 1.7, você escolhe se quer ativar o
+          Compartilhamento de dados de uso e a Repetição da sessão. Os dois começam desativados.
         </p>
         <ul>
-          <li>Você pode ativar ou desativar analytics a qualquer momento nas Configurações.</li>
-          <li>Você pode ativar ou desativar Replay de Sessão a qualquer momento nas Configurações, onde esse recurso estiver disponível.</li>
-          <li>Você pode continuar usando os recursos do app mesmo com analytics e Replay de Sessão desligados.</li>
+          <li><strong>Compartilhamento de dados de uso:</strong> Configurações, Análises.</li>
+          <li><strong>Repetição da sessão:</strong> Configurações, Análises, no iPhone, iPad e Android.</li>
+          <li><strong>Atividade do app e relatórios de erro:</strong> envie e-mail para <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> para se opor ou para pedir a exclusão dos registros da sua instalação.</li>
         </ul>
 
         <h2>Eu não vendo seus dados</h2>
@@ -116,8 +136,9 @@ import PageHeader from '../../components/layout/PageHeader.astro';
         <h2>Como seus dados são processados</h2>
         <h3>Provedores de analytics e diagnóstico</h3>
         <ul>
-          <li><strong>PostHog</strong> (analytics opcionais): recebe o ping diário limitado e as propriedades técnicas descritas acima somente quando analytics está ativado. Replay de Sessão, feature flags, pesquisas, perfis de pessoa, captura de ciclo de vida e autocaptura de erros do PostHog não estão ativados nos apps. Região: Estados Unidos. A retenção depende do plano e das configurações ativos do PostHog; atualmente, o PostHog informa um ano de retenção no plano Free e sete anos nos planos pay-as-you-go. Fontes: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">preços e retenção</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">armazenamento e exclusão de dados</a>.</li>
-          <li><strong>Sentry</strong> (relatórios de erro e Replay de Sessão opcional): recebe diagnósticos de falhas e erros, contexto técnico e dados opcionais de Replay de Sessão conforme descrito acima. Região: Estados Unidos. O Sentry retém dados de erros em SaaS de acordo com o plano ativo e o tipo de evento; atualmente, o Sentry informa 30 dias para logs de erro no plano Free, 90 dias para planos Team/Business self-service e retenção customizada em planos Enterprise. Fontes: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Segurança</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">retenção de dados</a>.</li>
+          <li><strong>PostHog:</strong> atividade do app, Compartilhamento de dados de uso, lançamento de novos recursos, relatórios de erro, avisos do log e Repetição da sessão. Região: Estados Unidos. A retenção depende do plano e das configurações ativos do PostHog; atualmente, o PostHog informa um ano de retenção no plano Free e sete anos nos planos pay-as-you-go. Fontes: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">preços e retenção</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">armazenamento e exclusão de dados</a>.</li>
+          <li><strong>Sentry:</strong> relatórios de erro e uma amostra de dados de desempenho. Região: Estados Unidos. O Sentry retém dados de erros em SaaS de acordo com o plano ativo e o tipo de evento; atualmente, o Sentry informa 30 dias para logs de erro no plano Free, 90 dias para planos Team/Business self-service e retenção customizada em planos Enterprise. Fontes: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Segurança</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">retenção de dados</a>.</li>
+          <li><strong>RevenueCat:</strong> compras dos Recursos Expandidos. O RevenueCat recebe o ID de instalação para que eu possa associar as compras à atividade do app.</li>
           <li><strong>Retenção de dados:</strong> Uso ferramentas de retenção e exclusão dos provedores quando disponíveis e mantenho dados de analytics e diagnóstico apenas pelo tempo necessário para as finalidades descritas nesta política. Você pode solicitar exclusão a qualquer momento (veja Seus direitos de privacidade).</li>
           <li><strong>Transferências internacionais:</strong> Dados podem ser processados nos Estados Unidos com salvaguardas adequadas, como cláusulas contratuais padrão, quando exigido.</li>
           <li><strong>Compartilhamento/venda:</strong> Dados não são vendidos. Provedores processam dados em meu nome para manter os apps confiáveis e melhorá-los.</li>
@@ -125,8 +146,9 @@ import PageHeader from '../../components/layout/PageHeader.astro';
 
         <p><strong>Informações de privacidade e retenção dos provedores:</strong></p>
         <ul>
-          <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> • <a href="https://docs.sentry.io/product/explore/session-replay/" target="_blank" rel="noopener noreferrer">Replay de Sessão</a> • <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Retenção de dados</a></li>
+          <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> • <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Retenção de dados</a></li>
           <li>PostHog: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> • <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Preços e retenção</a> • <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Armazenamento e exclusão de dados</a></li>
+          <li>RevenueCat: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></li>
         </ul>
 
         <h3>Armazenamento local</h3>
@@ -143,8 +165,8 @@ import PageHeader from '../../components/layout/PageHeader.astro';
           política podem incluir:
         </p>
         <ul>
-          <li><strong>Consentimento:</strong> Analytics opcionais e Replay de Sessão só funcionam se você ativar; você pode retirar esse consentimento a qualquer momento nas Configurações.</li>
-          <li><strong>Legítimo interesse:</strong> Relatórios básicos de falhas e erros para segurança, estabilidade e manutenção dos apps; e resposta a e-mails de suporte que você envia.</li>
+          <li><strong>Consentimento:</strong> Compartilhamento de dados de uso e Repetição da sessão. Retire o consentimento a qualquer momento nas Configurações.</li>
+          <li><strong>Legítimo interesse:</strong> Atividade do app, para contar instalações e verificar versões e compras. Relatórios de erro, para manter os apps estáveis e seguros. Resposta a e-mails de suporte que você envia.</li>
           <li><strong>Execução de contrato ou procedimentos relacionados:</strong> Processamento necessário para disponibilizar os apps, compras, suporte e recursos que você solicita, quando aplicável.</li>
         </ul>
 
@@ -159,7 +181,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
         <p>
           Dependendo de onde você mora, leis de privacidade podem dar a você direitos de acessar, corrigir, excluir,
           portar, limitar ou se opor a certos tratamentos de dados pessoais. Você também pode ter o direito de retirar
-          consentimento para analytics opcionais ou Replay de Sessão, recorrer de uma decisão ou reclamar a uma
+          consentimento para o Compartilhamento de dados de uso ou a Repetição da sessão, recorrer de uma decisão ou reclamar a uma
           autoridade de proteção de dados.
         </p>
         <p>
@@ -180,9 +202,9 @@ import PageHeader from '../../components/layout/PageHeader.astro';
         <h2>Controles de privacidade</h2>
         <h3>Controles no app</h3>
         <ul>
-          <li><strong>Configurações → Analytics:</strong> ativar ou desativar analytics opcionais do PostHog</li>
-          <li><strong>Configurações → Replay de Sessão:</strong> ativar ou desativar Replay de Sessão por erro, onde esse recurso estiver disponível</li>
-          <li><strong>Diálogo de primeira abertura:</strong> escolher sua preferência de analytics quando abrir o app pela primeira vez</li>
+          <li><strong>Configurações → Análises → Compartilhamento de dados de uso:</strong> ativar ou desativar o Compartilhamento de dados de uso</li>
+          <li><strong>Configurações → Análises → Repetição da sessão:</strong> ativar ou desativar a Repetição da sessão</li>
+          <li><strong>Diálogo de primeira abertura:</strong> escolher as duas opções quando abrir o app pela primeira vez e depois de atualizar para a versão 1.7</li>
           <li><strong>Exportar dados:</strong> exportar seus Diários de jogo como arquivos JSON ou Markdown</li>
           <li><strong>Excluir dados:</strong> limpar os dados do app ou desinstalar para remover dados locais</li>
         </ul>
@@ -201,14 +223,15 @@ import PageHeader from '../../components/layout/PageHeader.astro';
         <h2>Diferenças entre plataformas</h2>
         <h3>Por que o tratamento de dados pode variar por plataforma</h3>
         <ul>
-          <li><strong>Analytics:</strong> analytics do PostHog se limita ao ping diário opcional descrito acima.</li>
-          <li><strong>Builds de depuração e web:</strong> analytics e relatórios do Sentry são desativados no código atual para builds comuns de depuração e web.</li>
-          <li><strong>Replay de Sessão:</strong> Replay de Sessão só é suportado em plataformas mobile em que o SDK do Sentry oferece suporte.</li>
+          <li><strong>Atividade do app e Compartilhamento de dados de uso:</strong> iguais em todas as plataformas em que os apps instalados funcionam.</li>
+          <li><strong>Builds de depuração e web:</strong> não enviam nada.</li>
+          <li><strong>Repetição da sessão:</strong> iPhone, iPad e Android.</li>
           <li><strong>Desktop:</strong> builds desktop não usam identificadores de publicidade mobile e só acessam arquivos que você abre, salva, importa, exporta, sincroniza ou compartilha explicitamente.</li>
         </ul>
 
         <h2>Privacidade de crianças</h2>
         <p>Os apps não são direcionados a crianças menores de 13 anos. Eles não exigem contas nem pedem data de nascimento, então eu geralmente não sei a idade do jogador.</p>
+        <p>Se o seu dispositivo informar que você é menor de idade, eu recebo apenas relatórios de erro. Eles levam um novo ID aleatório a cada vez que o app inicia.</p>
         <p>Se você acredita que uma criança forneceu informações pessoais pelos apps ou em uma solicitação de suporte, envie e-mail para <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> para que eu possa revisar e excluir quando apropriado.</p>
 
         <h2>Mudanças nesta política</h2>
@@ -226,7 +249,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
           <li>Esta política será atualizada conforme necessário.</li>
           <li>Fornecerei aviso quando exigido ou apropriado.</li>
           <li>Novos recursos terão controles de privacidade quando precisarem deles.</li>
-          <li>As escolhas opcionais de analytics e Replay de Sessão continuarão sob seu controle.</li>
+          <li>As escolhas de Compartilhamento de dados de uso e Repetição da sessão continuarão sob seu controle.</li>
         </ul>
 
         <h2>Contato</h2>
@@ -243,23 +266,36 @@ import PageHeader from '../../components/layout/PageHeader.astro';
 
         <h2>Conformidade com lojas de apps</h2>
         <h3>Segurança dos Dados do Google Play</h3>
-        <p>Esta política apoia os requisitos de Segurança dos Dados do Google Play ao divulgar:</p>
+        <p>Meu formulário de Segurança dos Dados do Google Play lista estes dados como coletados e não compartilhados:</p>
         <ul>
-          <li><strong>Dados coletados:</strong> atividade do app quando analytics opcionais estão ativados, informações e desempenho do app para diagnósticos, Replay de Sessão opcional quando ativado e suportado, e identificadores de dispositivo ou outros identificadores, como um identificador pseudônimo da instalação. Nenhuma localização precisa é coletada.</li>
-          <li><strong>Finalidades:</strong> analytics de produto, funcionalidade do app, diagnósticos, segurança e confiabilidade; sem publicidade.</li>
-          <li><strong>Compartilhamento de dados:</strong> apenas com provedores de analytics e diagnóstico que processam dados em meu nome. Dados não são vendidos.</li>
-          <li><strong>Práticas de segurança:</strong> dados criptografados em trânsito; coleta mínima.</li>
-          <li><strong>Controles do usuário:</strong> analytics e Replay de Sessão são opcionais e controlados por opções dentro do app.</li>
+          <li><strong>Atividade no app:</strong> interações com o app (obrigatórias) e outras ações (opcionais, com o Compartilhamento de dados de uso)</li>
+          <li><strong>Informações e desempenho do app:</strong> registros de falhas e diagnósticos</li>
+          <li><strong>Dispositivo ou outros IDs:</strong> o ID de instalação aleatório</li>
+          <li><strong>Informações financeiras:</strong> histórico de compras</li>
+          <li><strong>Local aproximado:</strong> seu país</li>
         </ul>
+        <p>
+          Os dados são criptografados em trânsito. Para pedir a exclusão dos registros da sua instalação, envie e-mail
+          para <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a>. Eu não coleto localização
+          precisa.
+        </p>
 
         <h3>Rótulos de Privacidade da Apple</h3>
-        <p>Para conformidade com a App Store, esta política apoia os requisitos dos Rótulos de Privacidade da Apple:</p>
+        <p>Meu rótulo de privacidade da App Store lista estes dados como Dados não vinculados a você:</p>
         <ul>
-          <li><strong>Dados não vinculados a você:</strong> Dados de Uso e Diagnósticos, incluindo analytics opcionais, relatórios de falha e Replay de Sessão quando ativado e aplicável.</li>
-          <li><strong>Rastreamento entre apps/sites:</strong> não usado.</li>
-          <li><strong>Parceiros terceiros:</strong> PostHog e Sentry processam dados de analytics e diagnóstico conforme descrito.</li>
-          <li><strong>Controle do usuário:</strong> analytics e Replay de Sessão são opt-in e podem ser desligados a qualquer momento nas Configurações.</li>
+          <li>Localização aproximada (somente o país)</li>
+          <li>ID do dispositivo</li>
+          <li>Interação com o produto</li>
+          <li>Histórico de compras</li>
+          <li>Dados de falhas</li>
+          <li>Dados de desempenho</li>
+          <li>Outros dados de diagnóstico</li>
         </ul>
+        <p>
+          Uso todos eles para Análises. Também uso Dados de falhas, Dados de desempenho, Outros dados de diagnóstico,
+          Interação com o produto e ID do dispositivo para Funcionalidade do app. Não uso nenhum deles para
+          rastreamento.
+        </p>
       </article>
     </div>
   </section>
