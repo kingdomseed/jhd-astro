@@ -25,54 +25,75 @@ const { class: className = "legal-article" } = Astro.props;
     send that content in a support request.
   </p>
 
-  <h3>Optional Analytics</h3>
-  <p>
-    Analytics is optional and off until you choose to enable it. When analytics is enabled, PostHog receives a
-    limited daily activity ping with basic technical information such as app version, build number, platform,
-    operating system, locale, whether Expanded Features access is unlocked, and a pseudonymous install identifier.
-  </p>
-  <p>
-    The apps do not send individual gameplay events, journal text, table contents, Fate Questions, dice results,
-    or Scene and List content as analytics.
-  </p>
-
-  <h3>Basic Error Reporting</h3>
-  <p>
-    Basic error reporting is enabled in release builds so I can diagnose crashes and serious app problems. Error
-    reports are handled through Sentry and may include technical context such as app version, platform, operating
-    system, current screen, stack traces, and error breadcrumbs. Where supported and enabled by your settings,
-    error reports may also include limited UI diagnostic context. Error reporting is not used for advertising or
-    user profiling.
-  </p>
-
-  <h3>Session Replay</h3>
-  <p>
-    Session Replay is separate from analytics. It is off by default and available only on supported mobile
-    platforms. If you turn it on, Sentry may receive a short replay around an error to help diagnose what went
-    wrong. It is configured as an on-error debugging tool, not continuous session recording.
-  </p>
-
-  <h3>What I Do Not Collect for Advertising or Analytics</h3>
+  <h3>App Activity</h3>
+  <p>When you open the app, I receive a record through PostHog with:</p>
   <ul>
-    <li>Personal contact information from the apps, such as your name, email address, or phone number</li>
-    <li>Precise location data, such as GPS coordinates or an exact address</li>
-    <li>Journal text, Scene text, table contents, Fate Questions, dice results, or other play content as analytics</li>
-    <li>Browsing history outside the apps</li>
-    <li>Photos, videos, contacts, or personal files outside files you explicitly import, export, sync, or share</li>
-    <li>Social media connections</li>
+    <li>a random installation ID the app creates</li>
+    <li>a session ID</li>
+    <li>the app version and build, and the store you installed from</li>
+    <li>your platform and operating system version</li>
+    <li>your country, from your network address</li>
+    <li>your app layout and Hybrid Play setting</li>
+    <li>which optional tools you have turned on</li>
+    <li>whether Expanded Features is unlocked</li>
+  </ul>
+  <p>When you buy or restore Expanded Features, I receive whether it worked and which store you used.</p>
+  <p>I use this to count active installations and to check that releases and purchases work.</p>
+  <p>The installation ID is random. I don't tie this data to you as a person.</p>
+
+  <h3>Usage Sharing (Optional)</h3>
+  <p>
+    With Usage sharing on, I also receive which features you open and the kind of action you take, such as asking a
+    Fate Question or rolling dice. I never receive what you write or the results you roll. Turn it on or off in
+    Settings, under Analytics.
+  </p>
+
+  <h3>New Feature Rollouts</h3>
+  <p>
+    The app sends its installation ID to PostHog to check whether a new feature or a new version of a screen is ready
+    for your device. I use this to release changes gradually.
+  </p>
+
+  <h3>Error Reports</h3>
+  <p>When something goes wrong in the app, I receive an error report through Sentry and PostHog with:</p>
+  <ul>
+    <li>the error type and where it happened in the app's code</li>
+    <li>the app version, platform and operating system</li>
+    <li>a short description I wrote for that error</li>
+    <li>the kinds of steps the app took just before, such as opening a dialog</li>
+    <li>the installation ID and update patch number (PostHog only)</li>
+  </ul>
+  <p>
+    Sentry also receives a sample of performance data. PostHog also receives warnings from the app's log, labelled
+    with the part of the app they came from, and counts of how Journal saves went.
+  </p>
+  <p>I use error reports to find and fix bugs.</p>
+
+  <h3>Session Replay (Optional)</h3>
+  <p>
+    With Session Replay on, I receive a short recording of the app's screen when an error happens. The recording shows
+    the app's buttons and labels. Everything you write or roll is redacted. Session Replay works on iPhone, iPad and
+    Android, for adults. Turn it on or off in Settings, under Analytics.
+  </p>
+
+  <h3>What the App Never Sends</h3>
+  <ul>
+    <li>Journals, Scenes, Threads, Characters, lists, custom tables, notes, or anything you write</li>
+    <li>Fate Questions, dice values, or results</li>
+    <li>Your name, email address, or phone number</li>
+    <li>Your city or precise location</li>
+    <li>Your advertising ID</li>
   </ul>
 
-  <h2>Your Analytics Choice</h2>
+  <h2>Your Choices</h2>
   <p>
-    When you first open the app, you'll see a consent dialog that explains analytics and lets you choose.
-    <strong>Analytics is off by default</strong> until you opt in. Basic crash and error reporting is enabled in
-    release builds to help diagnose issues and keep the app stable. Session Replay is treated separately and is
-    off unless you turn it on.
+    The first time you open the app, and after updating to 1.7, you choose whether to turn on Usage sharing and
+    Session Replay. Both start off.
   </p>
   <ul>
-    <li>Enable or disable analytics any time in Settings.</li>
-    <li>Enable or disable Session Replay any time in Settings where that feature is supported.</li>
-    <li>Keep using the app's features even if analytics and Session Replay are off.</li>
+    <li><strong>Usage sharing:</strong> Settings, Analytics.</li>
+    <li><strong>Session Replay:</strong> Settings, Analytics, on iPhone, iPad and Android.</li>
+    <li><strong>App activity and error reports:</strong> email <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> to object or to have your installation's records deleted.</li>
   </ul>
 
   <h2>I Don't Sell Your Data</h2>
@@ -85,8 +106,9 @@ const { class: className = "legal-article" } = Astro.props;
   <h2>How Your Data is Processed</h2>
   <h3>Analytics &amp; Diagnostics Providers</h3>
   <ul>
-    <li><strong>PostHog</strong> (optional analytics): receives the limited daily activity ping and technical properties described above only when analytics is enabled. PostHog Session Replay, feature flags, surveys, person profiles, lifecycle capture, and error autocapture are not enabled in the apps. Region: United States. Retention depends on the active PostHog plan and settings; PostHog currently lists one-year data retention on Free and seven-year data retention on pay-as-you-go plans. Sources: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Pricing and retention</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Data storage and deletion docs</a>.</li>
-    <li><strong>Sentry</strong> (error reporting and optional Session Replay): receives crash and error diagnostics, technical context, and optional Session Replay data as described above. Region: United States. Sentry retains SaaS error data according to the active plan and event type; Sentry currently lists 30 days for Free error logs, 90 days for self-serve Team/Business error logs, and custom retention for Enterprise plans. Sources: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Security</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data retention</a>.</li>
+    <li><strong>PostHog:</strong> app activity, Usage sharing, feature rollouts, error reports, log warnings and Session Replay. Region: United States. Retention depends on the active PostHog plan and settings; PostHog currently lists one-year data retention on Free and seven-year data retention on pay-as-you-go plans. Sources: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Pricing and retention</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Data storage and deletion docs</a>.</li>
+    <li><strong>Sentry:</strong> error reports and a sample of performance data. Region: United States. Sentry retains SaaS error data according to the active plan and event type; Sentry currently lists 30 days for Free error logs, 90 days for self-serve Team/Business error logs, and custom retention for Enterprise plans. Sources: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Security</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data retention</a>.</li>
+    <li><strong>RevenueCat:</strong> processes Expanded Features purchases, including the store receipt, transaction ID and price. RevenueCat also receives the installation ID so I can match purchases to app activity.</li>
     <li><strong>Data Retention:</strong> I use provider retention and deletion tools where available and keep analytics and diagnostics data only as long as needed for the purposes described in this policy. You can request deletion at any time (see Your Privacy Rights).</li>
     <li><strong>International Transfers:</strong> Data is processed in the United States under appropriate safeguards (e.g., SCCs) where required.</li>
     <li><strong>Data sharing/sale:</strong> Data is not sold. Providers process data on my behalf to keep the apps reliable and improve them.</li>
@@ -94,8 +116,9 @@ const { class: className = "legal-article" } = Astro.props;
 
   <p><strong>Provider privacy and retention information:</strong></p>
   <ul>
-    <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://docs.sentry.io/product/explore/session-replay/" target="_blank" rel="noopener noreferrer">Session Replay</a> • <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data Retention</a></li>
+    <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">Data Retention</a></li>
     <li>PostHog: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> • <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">Pricing and Retention</a> • <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">Data Storage and Deletion</a></li>
+    <li>RevenueCat: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
   </ul>
 
   <h3>Local Storage</h3>
@@ -109,8 +132,8 @@ const { class: className = "legal-article" } = Astro.props;
   <h3>Legal Basis (GDPR)</h3>
   <p>For users in the EU, my legal basis for processing is:</p>
   <ul>
-    <li><strong>Consent (Art. 6(1)(a)):</strong> Optional analytics and Session Replay run only if you enable them; you can withdraw consent any time in Settings.</li>
-    <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Basic crash/error reporting to maintain security and stability; and responding to support emails you send.</li>
+    <li><strong>Consent (Art. 6(1)(a)):</strong> Usage sharing and Session Replay. Withdraw consent any time in Settings.</li>
+    <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> App activity, to count installations and check releases and purchases. Error reports, to keep the apps stable and secure. Replying to support emails you send.</li>
   </ul>
 
   <h2 id="do-not-sell">Do Not Sell or Share My Personal Information</h2>
@@ -120,7 +143,7 @@ const { class: className = "legal-article" } = Astro.props;
   <p>
     Depending on where you live, privacy laws may give you rights to access, correct, delete, export, restrict,
     or object to certain processing of your personal information. You may also have the right to withdraw consent
-    for optional analytics or Session Replay, appeal a decision, or complain to a privacy regulator.
+    for Usage sharing or Session Replay, appeal a decision, or complain to a privacy regulator.
   </p>
   <p>
     I do not sell personal information or use targeted advertising. If a law gives you an opt-out right for sale,
@@ -138,9 +161,9 @@ const { class: className = "legal-article" } = Astro.props;
   <h2>Privacy Controls</h2>
   <h3>In‑App Controls</h3>
   <ul>
-    <li><strong>Settings → Analytics:</strong> Toggle optional PostHog analytics on/off</li>
-    <li><strong>Settings → Session Replay:</strong> Toggle optional on-error Session Replay on/off where supported</li>
-    <li><strong>First‑Run Dialog:</strong> Choose your analytics preference when you first open the app</li>
+    <li><strong>Settings → Analytics → Usage sharing:</strong> turn Usage sharing on or off</li>
+    <li><strong>Settings → Analytics → Session Replay:</strong> turn Session Replay on or off</li>
+    <li><strong>First-run dialog:</strong> choose both when you first open the app, and after updating to 1.7</li>
     <li><strong>Export Data:</strong> Export your game journals as JSON or Markdown files</li>
     <li><strong>Delete Data:</strong> Clear all app data or uninstall to remove everything</li>
   </ul>
@@ -155,14 +178,15 @@ const { class: className = "legal-article" } = Astro.props;
   <h2>Platform Differences</h2>
   <h3>Why Data Handling Can Vary by Platform</h3>
   <ul>
-    <li><strong>Analytics:</strong> PostHog analytics is limited to the optional daily activity ping described above.</li>
-    <li><strong>Debug and web builds:</strong> Analytics and Sentry reporting are disabled in current app code for ordinary debug builds and web builds.</li>
-    <li><strong>Session Replay:</strong> Session Replay is supported only on mobile platforms where the Sentry SDK supports it.</li>
+    <li><strong>App activity and Usage sharing:</strong> the same on every platform the installed apps run on.</li>
+    <li><strong>Debug and web builds:</strong> send nothing.</li>
+    <li><strong>Session Replay:</strong> iPhone, iPad and Android.</li>
     <li><strong>Desktop:</strong> Desktop builds do not use mobile advertising identifiers and only access files you explicitly open, save, import, export, sync, or share.</li>
   </ul>
 
   <h2>Children's Privacy</h2>
   <p>The apps are not directed to children under 13. They do not require accounts or ask for a birth date, so I generally do not know a player's age.</p>
+  <p>On devices whose age signal limits analytics, the app sends error reports only. They carry a new random ID each time the app starts.</p>
   <p>If you believe a child has provided personal information through the apps or a support request, email <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> so I can review and delete it where appropriate.</p>
 
   <h2>Changes to This Policy</h2>
@@ -180,7 +204,7 @@ const { class: className = "legal-article" } = Astro.props;
     <li>This policy will be updated as needed</li>
     <li>I will provide notice where required or appropriate</li>
     <li>New features will include privacy controls when they need them</li>
-    <li>Optional analytics and Session Replay choices will stay under your control</li>
+    <li>Usage sharing and Session Replay choices will stay under your control</li>
   </ul>
 
   <h2>Contact Me</h2>
@@ -196,20 +220,31 @@ const { class: className = "legal-article" } = Astro.props;
 
   <h2>App Store Compliance</h2>
   <h3>Google Play Data Safety</h3>
-  <p>This privacy policy supports Google Play Data Safety requirements by disclosing:</p>
+  <p>My Google Play Data safety form lists this data as collected and not shared:</p>
   <ul>
-    <li><strong>Data collected:</strong> App activity where optional analytics is enabled, app info and performance data for diagnostics, optional Session Replay where enabled and supported, and device or other identifiers such as a pseudonymous install identifier. No precise location data is collected.</li>
-    <li><strong>Purposes:</strong> Product analytics, app functionality, diagnostics, security, and reliability; no advertising.</li>
-    <li><strong>Data sharing:</strong> Only with analytics and diagnostics providers processing data on my behalf. Data is not sold.</li>
-    <li><strong>Security practices:</strong> Data encrypted in transit; minimal collection.</li>
-    <li><strong>User controls:</strong> Analytics and Session Replay are optional and controlled by in-app toggles.</li>
+    <li><strong>App activity:</strong> app interactions (required) and other actions (optional, with Usage sharing)</li>
+    <li><strong>App info and performance:</strong> crash logs and diagnostics</li>
+    <li><strong>Device or other IDs:</strong> the random installation ID</li>
+    <li><strong>Financial info:</strong> purchase history</li>
+    <li><strong>Approximate location:</strong> your country</li>
   </ul>
+  <p>
+    Data is encrypted in transit. To have your installation's records deleted, email
+    <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a>. I don't collect precise location.
+  </p>
   <h3>Apple Privacy Nutrition Labels</h3>
-  <p>For App Store compliance, this policy supports Apple's Privacy Nutrition Label requirements:</p>
+  <p>My App Store privacy label lists this data as Data Not Linked to You:</p>
   <ul>
-    <li><strong>Data not linked to you:</strong> Usage Data and Diagnostics, including optional analytics, crash reports, and Session Replay where enabled and applicable.</li>
-    <li><strong>Tracking across apps/websites:</strong> Not used.</li>
-    <li><strong>Third‑party partners:</strong> PostHog and Sentry process analytics and diagnostics data as described.</li>
-    <li><strong>User control:</strong> Analytics and Session Replay are opt-in and can be turned off any time in Settings.</li>
+    <li>Coarse Location (country only)</li>
+    <li>Device ID</li>
+    <li>Product Interaction</li>
+    <li>Purchase History</li>
+    <li>Crash Data</li>
+    <li>Performance Data</li>
+    <li>Other Diagnostic Data</li>
   </ul>
+  <p>
+    I use all of it for Analytics. I also use Crash Data, Performance Data, Other Diagnostic Data, Product Interaction
+    and Device ID for App Functionality. I don't use any of it for tracking.
+  </p>
 </article>

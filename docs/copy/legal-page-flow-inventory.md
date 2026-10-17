@@ -38,6 +38,18 @@ approved section by section.
 Local app facts checked against
 `/Users/jholt/development/jhd-business/mythicgme2e`:
 
+- Mythic GME 1.7 (October 2026) behavior. The 1.6 notes below this list are history.
+- Always sent from installed apps (not web, not debug, not on devices whose age
+  signal limits analytics): app activity to PostHog with a random installation
+  ID, session ID, app version/build/channel, platform and OS major, country
+  (city-level GeoIP is filtered out in the production project), layout, tools,
+  Expanded Features state, and purchase/restore outcomes; feature-rollout flag
+  checks keyed by the installation ID.
+- Error reports always go to Sentry and PostHog with scrubbed context.
+- Usage sharing (opt-in) adds feature-use events. Session Replay (opt-in,
+  PostHog, iPhone/iPad/Android, adults) records on error with user content
+  redacted.
+- RevenueCat processes purchases and receives the installation ID.
 - Current app version in `pubspec.yaml`: `1.6.4+1117`.
 - Current dependencies include `posthog_flutter` and `sentry_flutter`.
 - Current dependencies do not include Firebase Analytics/Crashlytics packages;
