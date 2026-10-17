@@ -4,7 +4,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
 ---
 <BaseLayout
   title="Política de Privacidade | Apps Mythic GME"
-  description="Saiba como os Apps Mythic GME lidam com privacidade: coleta mínima de dados, armazenamento local, Compartilhamento de dados de uso opcional e controles claros."
+  description="Saiba como os Apps Mythic GME lidam com privacidade: coleta mínima de dados, armazenamento local, analytics opcionais e controles claros."
   canonicalPath="/pt/privacy/"
   lang="pt"
   alternatePath="/privacy/"
@@ -106,14 +106,13 @@ import PageHeader from '../../components/layout/PageHeader.astro';
           funciona no iPhone, iPad e Android, para adultos. Ative ou desative em Configurações, em Análises.
         </p>
 
-        <h3>O que eu não coleto</h3>
+        <h3>O que o app nunca envia</h3>
         <ul>
           <li>Diários, Cenas, Tramas, Personagens, listas, Tabelas Personalizadas, notas ou qualquer coisa que você escreva</li>
           <li>Perguntas de Destino, valores de dados ou resultados</li>
           <li>Seu nome, e-mail ou telefone</li>
           <li>Sua cidade ou localização precisa</li>
           <li>Seu ID de publicidade</li>
-          <li>Preços, números de pedido ou dados da sua conta na loja</li>
         </ul>
 
         <h2>Suas escolhas</h2>
@@ -139,7 +138,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
         <ul>
           <li><strong>PostHog:</strong> atividade do app, Compartilhamento de dados de uso, lançamento de novos recursos, relatórios de erro, avisos do log e Repetição da sessão. Região: Estados Unidos. A retenção depende do plano e das configurações ativos do PostHog; atualmente, o PostHog informa um ano de retenção no plano Free e sete anos nos planos pay-as-you-go. Fontes: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://posthog.com/pricing" target="_blank" rel="noopener noreferrer">preços e retenção</a>, <a href="https://github.com/PostHog/posthog.com/blob/master/contents/docs/privacy/data-storage.mdx" target="_blank" rel="noopener noreferrer">armazenamento e exclusão de dados</a>.</li>
           <li><strong>Sentry:</strong> relatórios de erro e uma amostra de dados de desempenho. Região: Estados Unidos. O Sentry retém dados de erros em SaaS de acordo com o plano ativo e o tipo de evento; atualmente, o Sentry informa 30 dias para logs de erro no plano Free, 90 dias para planos Team/Business self-service e retenção customizada em planos Enterprise. Fontes: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>, <a href="https://sentry.io/security/" target="_blank" rel="noopener noreferrer">Segurança</a>, <a href="https://sentry.zendesk.com/hc/en-us/articles/27118913621019-How-Long-Are-Errors-Events-Stored-in-Sentry" target="_blank" rel="noopener noreferrer">retenção de dados</a>.</li>
-          <li><strong>RevenueCat:</strong> compras dos Recursos Expandidos. O RevenueCat recebe o ID de instalação para que eu possa associar as compras à atividade do app.</li>
+          <li><strong>RevenueCat:</strong> processa as compras dos Recursos Expandidos, incluindo o recibo da loja, o ID da transação e o preço. O RevenueCat também recebe o ID de instalação para que eu possa associar as compras à atividade do app.</li>
           <li><strong>Retenção de dados:</strong> Uso ferramentas de retenção e exclusão dos provedores quando disponíveis e mantenho dados de analytics e diagnóstico apenas pelo tempo necessário para as finalidades descritas nesta política. Você pode solicitar exclusão a qualquer momento (veja Seus direitos de privacidade).</li>
           <li><strong>Transferências internacionais:</strong> Dados podem ser processados nos Estados Unidos com salvaguardas adequadas, como cláusulas contratuais padrão, quando exigido.</li>
           <li><strong>Compartilhamento/venda:</strong> Dados não são vendidos. Provedores processam dados em meu nome para manter os apps confiáveis e melhorá-los.</li>
@@ -232,7 +231,7 @@ import PageHeader from '../../components/layout/PageHeader.astro';
 
         <h2>Privacidade de crianças</h2>
         <p>Os apps não são direcionados a crianças menores de 13 anos. Eles não exigem contas nem pedem data de nascimento, então eu geralmente não sei a idade do jogador.</p>
-        <p>Se o seu dispositivo informar que você é menor de idade, eu recebo apenas relatórios de erro. Eles levam um novo ID aleatório a cada vez que o app inicia.</p>
+        <p>Em dispositivos cujo sinal de idade limita as análises, o app envia apenas relatórios de erro. Eles levam um novo ID aleatório a cada vez que o app inicia.</p>
         <p>Se você acredita que uma criança forneceu informações pessoais pelos apps ou em uma solicitação de suporte, envie e-mail para <a href="mailto:privacy@jasonholtdigital.com">privacy@jasonholtdigital.com</a> para que eu possa revisar e excluir quando apropriado.</p>
 
         <h2>Mudanças nesta política</h2>

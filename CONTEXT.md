@@ -262,11 +262,12 @@ _Avoid_: "Exactly," "always," "never," response-speed promises, partial state
 privacy-law lists, or claims that will drift unless maintained.
 
 **Privacy Data Framing**:
-Privacy copy should describe the apps as local-first, with optional PostHog
-analytics off by default and currently limited to a daily activity ping, basic
-Sentry error reporting in release builds, and Session Replay treated separately:
-off by default, supported only where available, and used for on-error debugging
-rather than continuous recording.
+Privacy copy should describe the apps as local-first. Since Mythic GME 1.7 the
+installed apps always send app activity (a record with a random installation
+ID, app and platform details, country, and purchase outcomes) to PostHog and
+error reports to Sentry and PostHog. Usage sharing (feature use) and Session
+Replay (PostHog, on-error, iPhone/iPad/Android, adults) are optional and off by
+default. Copy is first person and says what is received, without hedging.
 _Avoid_: Naming Firebase/GA4 as active analytics providers, claiming detailed
 gameplay analytics, or implying journal text, Fate Questions, dice results,
 Scene/List content, or table contents are sent as analytics.
